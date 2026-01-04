@@ -26,33 +26,43 @@ function sleep(ms) {
 }
 
 /**
- * Parse a Stooq daily CSV and return the last two rows.
- * Stooq daily CSV columns: Date,Open,High,Low,Close,Volume
+ * Parse Stooq daily CSV and return last close, and optionally prev close.
+ * If only one data row exists, prevClose will be null.
  * @param {string} csv
- * @returns {{date:string, close:number, prevDate:string, prevClose:number}}
+ * @returns {{date:string, close:number, prevDate:(string|null), prevClose:(number|null)}}
  */
-function parseLastTwoCloses(csv) {
+function parseLastCloseMaybePrev(csv) {
   const lines = csv.trim().split("\n").filter(Boolean);
 
-  // Expect header + at least two data rows
-  if (lines.length < 3) {
-    throw new Error("Not enough data rows in CSV");
+  // Expect at least: header + 1 row
+  if (lines.length < 2) {
+    throw new Error("No daily data returned (header-only CSV)");
   }
 
   const last = lines[lines.length - 1].split(",");
-  const prev = lines[lines.length - 2].split(",");
-
   const date = last[0];
   const close = Number(last[4]);
 
-  const prevDate = prev[0];
-  const prevClose = Number(prev[4]);
-
-  if (!Number.isFinite(close) || !Number.isFinite(prevClose)) {
-    throw new Error("Close values are not numeric");
+  if (!Number.isFinite(close)) {
+    throw new Error("Close value is not numeric");
   }
 
-  return { date, close, prevDate, prevClose };
+  // If we have at least two data rows, compute prev
+  if (lines.length >= 3) {
+    const prev = lines[lines.length - 2].split(",");
+    const prevDate = prev[0];
+    const prevClose = Number(prev[4]);
+
+    if (!Number.isFinite(prevClose)) {
+      // Treat as missing rather than failing the whole symbol
+      return { date, close, prevDate: null, prevClose: null };
+    }
+
+    return { date, close, prevDate, prevClose };
+  }
+
+  // Only one data row available
+  return { date, close, prevDate: null, prevClose: null };
 }
 
 /**
@@ -92,8 +102,11 @@ async function main() {
   for (const w of WATCH) {
     try {
       const csv = await fetchStooqDailyCsv(w.sym);
-      const { date, close, prevDate, prevClose } = parseLastTwoCloses(csv);
-      const deltaPct = pctChange(close, prevClose);
+      const { date, close, prevDate, prevClose } = parseLastCloseMaybePrev(csv);
+    const deltaPct =
+    (prevClose === null || prevClose === 0)
+        ? 0
+        : pctChange(close, prevClose);
 
       results.push({
         sym: w.sym,
