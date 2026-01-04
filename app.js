@@ -77,18 +77,6 @@ function chevronSVG(up) {
   `;
 }
 
-/**
- * Compute a "regime" label from deltas.
- * @param {number[]} deltas
- * @returns {string}
- */
-function computeRegime(deltas) {
-  if (!deltas.length) return "Neutral";
-  const avg = deltas.reduce((a, b) => a + b, 0) / deltas.length;
-  if (avg > 0.35) return "Risk-on";
-  if (avg < -0.35) return "Risk-off";
-  return "Neutral";
-}
 
 /**
  * Persist pins to localStorage.
@@ -236,12 +224,6 @@ async function loadTapeFromJson() {
 }
 
 
-async function loadIndicators() {
-  const day = new Date().toISOString().slice(0, 10);
-  const res = await fetch(`/indicators.json?v=${day}`, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to load indicators.json (${res.status})`);
-  return await res.json();
-}
 
 /**
  * Render the tape panel from tape.json.
@@ -278,9 +260,6 @@ async function renderTape() {
     return d && d.ok ? d : { ...w, ok: false };
   });
 
-  const deltas = rows.filter(r => r.ok).map(r => Number(r.deltaPct)).filter(Number.isFinite);
-  const regimeEl = document.getElementById("regime");
-  if (regimeEl) regimeEl.textContent = computeRegime(deltas);
 
   const dateEl = document.getElementById("lastSync");
   const latestDate = rows.filter(r => r.ok).map(r => r.date).sort().pop();
@@ -507,6 +486,74 @@ function renderModalList(posts) {
   `).join(""));
 }
 
+
+/**
+ * Load a CSV and return the latest (last) non-empty numeric row.
+ * Assumes header: date,value and date is YYYY-MM-DD.
+ * @param {string} csvPath
+ * @returns {Promise<{date:string, value:number} | null>}
+ */
+async function loadLatestFromCsv(csvPath) {
+  const day = new Date().toISOString().slice(0, 10);
+  const res = await fetch(`${csvPath}?v=${day}`, { cache: "no-store" });
+  if (!res.ok) return null;
+
+  const text = await res.text();
+  const lines = text.trim().split("\n").filter(Boolean);
+  if (lines.length <= 1) return null;
+
+  // Walk backwards to find the latest valid numeric value
+  for (let i = lines.length - 1; i >= 1; i--) {
+    const [dateRaw, valRaw] = lines[i].split(",");
+    const date = (dateRaw ?? "").trim();
+    const value = Number((valRaw ?? "").trim());
+    if (date && Number.isFinite(value)) return { date, value };
+  }
+  return null;
+}
+
+/**
+ * Render economic indicators in the hero stats from /data CSVs.
+ */
+async function renderHeroIndicators() {
+  const cpiVal = document.getElementById("cpiVal");
+  const unrateVal = document.getElementById("unrateVal");
+  const gdpVal = document.getElementById("gdpVal");
+  const mincVal = document.getElementById("mincVal");
+  const mhouVal = document.getElementById("mhouVal");
+  const ratioVal = document.getElementById("ratioVal");
+
+  const cpiLabel = document.getElementById("cpiLabel");
+  const unrateLabel = document.getElementById("unrateLabel");
+  const gdpLabel = document.getElementById("gdpLabel");
+  const mincLabel = document.getElementById("mincLabel");
+  const mhouLabel = document.getElementById("mhouLabel");
+  const ratioLabel = document.getElementById("ratioLabel");
+
+  const [cpi, unrate, gdp, income, house, ratio] = await Promise.all([
+    loadLatestFromCsv("/data/CPIAUCSL.csv"),
+    loadLatestFromCsv("/data/UNRATE.csv"),
+    loadLatestFromCsv("/data/GDPC1.csv"),
+    loadLatestFromCsv("/data/MEHOINUSA646N.csv"),
+    loadLatestFromCsv("/data/MSPUS.csv"),
+    loadLatestFromCsv("/data/HOUSE_TO_INCOME_RATIO.csv"),
+  ]);
+
+  if (cpiVal) cpiVal.textContent = cpi ? cpi.value.toFixed(3) : "—";
+  if (unrateVal) unrateVal.textContent = unrate ? `${unrate.value.toFixed(1)}%` : "—";
+  if (gdpVal) gdpVal.textContent = gdp ? gdp.value.toFixed(0) : "—";
+  if (mincVal) mincVal.textContent = income ? income.value.toFixed(0) : "—";  
+  if (mhouVal) mhouVal.textContent = house ? house.value.toFixed(0) : "—";
+  if (ratioVal) ratioVal.textContent = ratio ? ratio.value.toFixed(0) : "—";
+  // Optional: keep it minimalist by putting dates in the label
+
+}
+
+
+
+
+
+
 /* ---------------- Init ---------------- */
 
 (function init() {
@@ -514,23 +561,14 @@ function renderModalList(posts) {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  const watchCount = document.getElementById("watchCount");
-  if (watchCount) watchCount.textContent = String(WATCH.length);
 
   // initial renders
   renderTape();
-  loadIndicators()
-  .then(renderIndicators)
-  .catch(() => renderIndicatorsFallback());
+  renderHeroIndicators();
   const initial = selectPosts(state);
   renderPosts(initial, pinSet);
   renderRail(initial, pinSet);
 
-  const readingTime = document.getElementById("readingTime");
-  if (readingTime) {
-    const avg = Math.max(3, Math.round(initial.slice(0, 3).reduce((a, p) => a + p.minutes, 0) / 3));
-    readingTime.textContent = `~${avg} min`;
-  }
 
   // Filter chips
   document.querySelectorAll(".chip").forEach(btn => {

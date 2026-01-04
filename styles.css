@@ -13,7 +13,8 @@
   --accent: var(--c-moss);
   --accent2: var(--c-forest);
   --ink: var(--c-ink);
-
+  --ink2: rgba(52,78,65,.78);
+  
   /* Surfaces */
   --paper: rgba(218,215,205,.72);
   --paper2: rgba(218,215,205,.52);
@@ -64,9 +65,9 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 .icon--mark{ width: 26px; height: 26px; }
 
 .logo{
-  width: 32px;
-  height: 32px;
-  display:block;
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 
 .topbar{
@@ -295,11 +296,22 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
   box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
 }
 .statIcon{
-  width: 34px; height: 34px;
-  border-radius: 14px;
-  border: 1px solid var(--line2);
-  display:flex; align-items:center; justify-content:center;
-  background: rgba(163,177,138,.25);
+  width: 34px;
+  height: 34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Ensure the icon SVG itself fits nicely */
+.statIcon svg{
+  width: 24px;
+  height: 24px;
+  display:block;
+  fill: currentColor;
 }
 .statLabel{ font-size: 11px; opacity: .75; }
 .statValue{ font-weight: 700; font-size: 14px; letter-spacing: .2px; }
@@ -757,7 +769,6 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
 body.compact .postList{ grid-template-columns: 1fr; }
 body.compact .postDesc{ display:none; }
-body.compact .heroMeta{ grid-template-columns: 1fr; }
 body.compact .grid{ grid-template-columns: 320px 1fr; }
 
 @media (max-width: 980px){
