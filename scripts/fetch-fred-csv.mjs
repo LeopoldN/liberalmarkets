@@ -180,7 +180,7 @@ async function main() {
 
     // ---- Derived series: Housing / Income ratio ----
     // Update these filenames to match your two base CSVs:
-    const INCOME_ID = "MEHOINUSA"; // example FRED series id (median household income, annual)
+    const INCOME_ID = "MEHOINUSA646N"; // example FRED series id (median household income, annual)
     const HOUSE_ID = "MSPUS";      // example series id (median sales price, quarterly)
 
     const incomePath = path.join(DATA_DIR, `${INCOME_ID}.csv`);
