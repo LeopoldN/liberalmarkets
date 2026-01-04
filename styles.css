@@ -63,6 +63,12 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 .icon{ width: 18px; height: 18px; }
 .icon--mark{ width: 26px; height: 26px; }
 
+.logo{
+  width: 32px;
+  height: 32px;
+  display:block;
+}
+
 .topbar{
   position: sticky;
   top: 0;
