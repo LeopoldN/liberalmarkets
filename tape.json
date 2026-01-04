@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-01-04T21:10:53.463Z",
+  "source": "stooq",
+  "items": [
+    {
+      "sym": "10yusy.b",
+      "name": "US 10Y Yield",
+      "date": "2026-01-02",
+      "close": 4.196,
+      "prevDate": "2025-12-31",
+      "prevClose": 4.177,
+      "deltaPct": 0.4548719176442395,
+      "ok": true
+    },
+    {
+      "sym": "usdeur",
+      "name": "USD/EUR",
+      "date": "2026-01-02",
+      "close": 0.853417,
+      "prevDate": "2025-12-31",
+      "prevClose": 0.85136,
+      "deltaPct": 0.2416134185303509,
+      "ok": true
+    },
+    {
+      "sym": "cb.f",
+      "name": "Brent",
+      "ok": false,
+      "error": "Not enough data rows in CSV"
+    },
+    {
+      "sym": "^spx",
+      "name": "S&P 500",
+      "date": "2026-01-02",
+      "close": 6858.47,
+      "prevDate": "2025-12-31",
+      "prevClose": 6845.5,
+      "deltaPct": 0.18946753341611,
+      "ok": true
+    },
+    {
+      "sym": "xauusd",
+      "name": "Gold",
+      "date": "2026-01-02",
+      "close": 4331.505,
+      "prevDate": "2025-12-31",
+      "prevClose": 4318.59,
+      "deltaPct": 0.299055941869919,
+      "ok": true
+    },
+    {
+      "sym": "asts.us",
+      "name": "ASTS",
+      "date": "2026-01-02",
+      "close": 83.47,
+      "prevDate": "2025-12-31",
+      "prevClose": 72.63,
+      "deltaPct": 14.924962136858056,
+      "ok": true
+    }
+  ]
+}
