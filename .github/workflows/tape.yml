@@ -29,6 +29,11 @@ jobs:
       - name: Generate tape.json
         run: node scripts/fetch-tape.mjs
 
+      - name: Debug list files
+        run: |
+          ls -la
+          test -f tape.json && echo "tape.json exists" || echo "tape.json missing"
+
       - name: Commit changes
         run: |
           if git diff --quiet; then
