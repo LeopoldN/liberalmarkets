@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-04T21:20:59.164Z",
+  "generatedAt": "2026-01-04T21:28:37.897Z",
   "source": "stooq",
   "items": [
     {
@@ -24,9 +24,13 @@
     },
     {
       "sym": "cb.f",
-      "name": "Brent",
-      "ok": false,
-      "error": "No daily data returned (header-only CSV)"
+      "name": "Brent Oil",
+      "date": "2026-01-02",
+      "close": 60.75,
+      "prevDate": null,
+      "prevClose": null,
+      "deltaPct": 0,
+      "ok": true
     },
     {
       "sym": "^spx",
