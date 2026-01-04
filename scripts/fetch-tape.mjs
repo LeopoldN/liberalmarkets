@@ -10,7 +10,7 @@ import fs from "node:fs/promises";
 const WATCH = [
   { sym: "10yusy.b", name: "US 10Y Yield" },
   { sym: "usdeur", name: "USD/EUR" },
-  { sym: "cb.f", name: "Brent" },
+  { sym: "cb.f", name: "Brent Oil" },
   { sym: "^spx", name: "S&P 500" },
   { sym: "xauusd", name: "Gold" },
   { sym: "asts.us", name: "ASTS" },
@@ -96,19 +96,77 @@ function pctChange(close, prevClose) {
   return ((close / prevClose) - 1) * 100;
 }
 
+/**
+ * Fetch a single quote row from Stooq (works even when daily history is missing).
+ * @param {string} sym
+ * @returns {Promise<{date:string, close:number}>}
+ */
+async function fetchStooqQuote(sym) {
+  // f=sd2t2c = symbol, date, time, close (simple)
+  const url = `https://stooq.com/q/l/?s=${encodeURIComponent(sym)}&f=sd2t2c&h&e=csv`;
+  const res = await fetch(url, {
+    headers: {
+      "user-agent": "LiberalMarketsTapeBot/1.0 (GitHub Actions)",
+      "accept": "text/csv,*/*",
+    },
+  });
+  if (!res.ok) throw new Error(`Quote HTTP ${res.status}`);
+
+  const text = await res.text();
+  const lines = text.trim().split("\n").filter(Boolean);
+  if (lines.length < 2) throw new Error("No quote data returned");
+
+  // header: Symbol,Date,Time,Close
+  const row = lines[1].split(",");
+  const date = row[1];
+  const close = Number(row[3]);
+  if (!Number.isFinite(close)) throw new Error("Quote close not numeric");
+
+  return { date, close };
+}
+
 async function main() {
   const results = [];
 
   for (const w of WATCH) {
     try {
-      const csv = await fetchStooqDailyCsv(w.sym);
-      const { date, close, prevDate, prevClose } = parseLastCloseMaybePrev(csv);
-    const deltaPct =
-    (prevClose === null || prevClose === 0)
-        ? 0
-        : pctChange(close, prevClose);
+    const csv = await fetchStooqDailyCsv(w.sym);
 
-      results.push({
+    // Detect header-only CSV quickly
+    const lines = csv.trim().split("\n").filter(Boolean);
+
+    let date, close, prevDate = null, prevClose = null, deltaPct = 0;
+
+    if (lines.length >= 2) {
+        // Try to parse daily last close (and maybe prev)
+        const parsed = parseLastCloseMaybePrev(csv);
+        date = parsed.date;
+        close = parsed.close;
+        prevDate = parsed.prevDate;
+        prevClose = parsed.prevClose;
+
+        if (prevClose !== null && prevClose !== 0) {
+        deltaPct = pctChange(close, prevClose);
+        }
+    } else {
+        // Truly empty: fallback to quote
+        const q = await fetchStooqQuote(w.sym);
+        date = q.date;
+        close = q.close;
+        deltaPct = 0;
+    }
+
+    // If header-only daily (lines length == 1), fallback to quote
+    if (lines.length === 1) {
+        const q = await fetchStooqQuote(w.sym);
+        date = q.date;
+        close = q.close;
+        prevDate = null;
+        prevClose = null;
+        deltaPct = 0;
+    }
+
+    results.push({
         sym: w.sym,
         name: w.name,
         date,
@@ -117,14 +175,14 @@ async function main() {
         prevClose,
         deltaPct,
         ok: true,
-      });
+    });
     } catch (err) {
-      results.push({
+    results.push({
         sym: w.sym,
         name: w.name,
         ok: false,
         error: err instanceof Error ? err.message : String(err),
-      });
+    });
     }
 
     // Be polite: tiny delay between hits
