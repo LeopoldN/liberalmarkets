@@ -28,39 +28,38 @@ async function ensureDir(dir) {
 }
 
 /**
- * Fetch the latest non-missing observation for a FRED series.
+ * Fetch observations for a series (ascending).
  * @param {string} seriesId
  * @param {string} apiKey
- * @returns {Promise<{date: string, value: string}>}
+ * @param {string} observationStart
+ * @returns {Promise<Array<{date:string, value:string}>>}
  */
-async function fetchLatestObservation(seriesId, apiKey) {
+async function fetchObservations(seriesId, apiKey, observationStart = "1970-01-01") {
   const url = new URL("https://api.stlouisfed.org/fred/series/observations");
   url.searchParams.set("series_id", seriesId);
   url.searchParams.set("api_key", apiKey);
   url.searchParams.set("file_type", "json");
-  url.searchParams.set("sort_order", "desc");
-  url.searchParams.set("limit", "10"); // grab a few in case newest is "."
+  url.searchParams.set("sort_order", "asc");
+  url.searchParams.set("observation_start", observationStart);
+  url.searchParams.set("limit", "100000");
 
   const res = await fetch(url.toString(), {
     headers: { "user-agent": "LiberalMarketsFREDBot/1.0 (GitHub Actions)" },
   });
-
-  if (!res.ok) {
-    throw new Error(`${seriesId}: HTTP ${res.status}`);
-  }
+  if (!res.ok) throw new Error(`${seriesId}: HTTP ${res.status}`);
 
   const data = await res.json();
   const obs = Array.isArray(data.observations) ? data.observations : [];
 
-  // FRED uses "." for missing values sometimes
-  const latest = obs.find(o => o && typeof o.value === "string" && o.value !== ".");
-
-  if (!latest || typeof latest.date !== "string") {
-    throw new Error(`${seriesId}: No usable observations returned`);
-  }
-
-  return { date: latest.date, value: latest.value };
+  return obs
+    .filter(o => o && typeof o.date === "string" && typeof o.value === "string" && o.value !== ".")
+    .map(o => ({ date: o.date, value: o.value }));
 }
+
+
+
+
+
 
 /**
  * Parse a CSV of shape: date,value
@@ -163,25 +162,30 @@ async function main() {
   await ensureDir(DATA_DIR);
 
   for (const s of SERIES) {
-    const { date, value } = await fetchLatestObservation(s.id, apiKey);
+    const observations = await fetchObservations(s.id, apiKey, "1970-01-01");
 
     const filePath = path.join(DATA_DIR, `${s.id}.csv`);
     const existing = await readIfExists(filePath);
     const map = parseCsvToMap(existing);
 
-    const had = map.has(date);
-    map.set(date, value); // append or update (revision-safe)
+    let changed = 0;
+    for (const o of observations) {
+    const prev = map.get(o.date);
+    if (prev !== o.value) {
+        map.set(o.date, o.value); // append or revision-update
+        changed++;
+    }
+    }
 
-    const out = mapToCsv(map);
-    await fs.writeFile(filePath, out, "utf8");
+    await fs.writeFile(filePath, mapToCsv(map), "utf8");
+    console.log(`${s.id}: merged ${observations.length} obs (${changed} new/updated)`);
+    
+  }
 
-    console.log(`${s.id}: ${had ? "updated" : "added"} ${date} = ${value}`);
-
-
-    // ---- Derived series: Housing / Income ratio ----
-    // Update these filenames to match your two base CSVs:
-    const INCOME_ID = "MEHOINUSA646N"; // example FRED series id (median household income, annual)
-    const HOUSE_ID = "MSPUS";      // example series id (median sales price, quarterly)
+    // ---- Derived series: House price to income ratio ----
+    {
+    const INCOME_ID = "MEHOINUSA646N";
+    const HOUSE_ID = "MSPUS";
 
     const incomePath = path.join(DATA_DIR, `${INCOME_ID}.csv`);
     const housePath = path.join(DATA_DIR, `${HOUSE_ID}.csv`);
@@ -189,31 +193,28 @@ async function main() {
     const income = await readSeriesCsv(incomePath);
     const house = await readSeriesCsv(housePath);
 
-    // If either is missing, skip without failing the whole run
-    if (income.length && house.length) {
-    const ratioMap = new Map();
+    if (!income.length || !house.length) {
+        console.log("Derived: ratio skipped (missing income or housing series data)");
+    } else {
+        const ratioMap = new Map();
 
-    for (const inc of income) {
+        // Build ratio on income dates (annual), using latest house value as-of that date
+        for (const inc of income) {
         const h = asOf(house, inc.date);
         if (!Number.isFinite(inc.value) || !Number.isFinite(h) || inc.value === 0) continue;
 
-        // ratio = house price / income
         const ratio = h / inc.value;
+        ratioMap.set(inc.date, String(ratio));
+        }
 
-        // store on the income date
-        ratioMap.set(inc.date, ratio.toString());
+        const ratioOutPath = path.join(DATA_DIR, "HOUSE_TO_INCOME_RATIO.csv");
+        await fs.writeFile(ratioOutPath, mapToCsv(ratioMap), "utf8");
+
+        console.log(`Derived: HOUSE_TO_INCOME_RATIO.csv (${ratioMap.size} rows)`);
+    }
     }
 
-    const ratioCsv = mapToCsv(ratioMap);
-    const ratioOutPath = path.join(DATA_DIR, `HOUSE_TO_INCOME_RATIO.csv`);
-    await fs.writeFile(ratioOutPath, ratioCsv, "utf8");
 
-    console.log(`Derived: HOUSE_TO_INCOME_RATIO.csv (${ratioMap.size} rows)`);
-    } else {
-    console.log("Derived: ratio skipped (missing income or housing series data)");
-    }
-
-  }
 }
 
 main().catch((e) => {
