@@ -112,8 +112,10 @@ const POSTS = [
  * Load static tape.json.
  */
 async function loadTapeFromJson() {
-  const res = await fetch("/tape.json", { cache: "no-store" });
-  if (!res.ok) throw new Error("tape.json missing");
+  const day = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+  const res = await fetch(`/tape.json?v=${day}`, { cache: "no-store" });
+
+  if (!res.ok) throw new Error(`Failed to load tape.json (${res.status})`);
   const data = await res.json();
   return Array.isArray(data.items) ? data.items : [];
 }
