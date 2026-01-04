@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-04T21:10:53.463Z",
+  "generatedAt": "2026-01-04T21:20:59.164Z",
   "source": "stooq",
   "items": [
     {
@@ -26,7 +26,7 @@
       "sym": "cb.f",
       "name": "Brent",
       "ok": false,
-      "error": "Not enough data rows in CSV"
+      "error": "No daily data returned (header-only CSV)"
     },
     {
       "sym": "^spx",
