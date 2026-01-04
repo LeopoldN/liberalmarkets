@@ -1,0 +1,235 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liberal Markets — Minimal Finance Notes</title>
+  <meta name="description" content="Minimalist finance blog with wireframe iconography and calm, earthy palette." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">
+        <!-- Wireframe cube mark -->
+        <svg viewBox="0 0 24 24" class="icon icon--mark" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2 3.5 6.5 12 11 20.5 6.5 12 2Z"></path>
+          <path d="M3.5 6.5V17.5L12 22V11"></path>
+          <path d="M20.5 6.5V17.5L12 22"></path>
+          <path d="M7.8 8.7 16.2 4.3"></path>
+        </svg>
+      </div>
+      <div class="brandText">
+        <div class="brandName">Liberal Markets</div>
+        <div class="brandTag">minimal finance notes</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="chip is-active" data-filter="all" type="button" aria-pressed="true">
+        <span class="chipDot" aria-hidden="true"></span> All
+      </button>
+      <button class="chip" data-filter="macro" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Macro
+      </button>
+      <button class="chip" data-filter="markets" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Markets
+      </button>
+      <button class="chip" data-filter="accounting" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Accounting
+      </button>
+      <button class="chip" data-filter="tools" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Tools
+      </button>
+    </nav>
+
+    <div class="actions">
+      <label class="search" aria-label="Search posts">
+        <span class="searchIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.2-3.2"></path>
+          </svg>
+        </span>
+        <input id="q" type="search" placeholder="Search… (e.g., “yield”, “CPI”, “DCF”)" autocomplete="off" />
+        <span class="kbd" aria-hidden="true">⌘K</span>
+      </label>
+
+      <button class="btn" id="toggleDensity" type="button" aria-pressed="false" title="Toggle compact layout">
+        <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 7h16"></path>
+          <path d="M4 12h10"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+        Density
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero">
+      <div class="heroLeft">
+        <div class="heroKicker">
+          <span class="pulse" aria-hidden="true"></span>
+          <span id="lastSync">Sync: —</span>
+        </div>
+
+        <h1 class="heroTitle">
+          A calm place to think about money
+          <span class="ghost">without the circus.</span>
+        </h1>
+
+        <p class="heroBody">
+          Short memos, charts, and sanity checks. Built like a blueprint:
+          light ink, clean grid, wireframe iconography.
+        </p>
+
+        <div class="heroMeta">
+          <div class="stat">
+            <div class="statIcon" aria-hidden="true">
+              <!-- wireframe bar chart -->
+              <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19V5"></path>
+                <path d="M4 19h16"></path>
+                <path d="M7 17v-5"></path>
+                <path d="M11 17v-8"></path>
+                <path d="M15 17v-3"></path>
+                <path d="M19 17v-10"></path>
+              </svg>
+            </div>
+            <div class="statText">
+              <div class="statLabel">Watchlist</div>
+              <div class="statValue" id="watchCount">5</div>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="statIcon" aria-hidden="true">
+              <!-- wireframe compass -->
+              <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M14.8 9.2 13 13l-3.8 1.8L11 11z"></path>
+              </svg>
+            </div>
+            <div class="statText">
+              <div class="statLabel">Regime</div>
+              <div class="statValue" id="regime">Neutral</div>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="statIcon" aria-hidden="true">
+              <!-- wireframe clock -->
+              <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v6l4 2"></path>
+              </svg>
+            </div>
+            <div class="statText">
+              <div class="statLabel">Reading</div>
+              <div class="statValue" id="readingTime">~6 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="heroRight" aria-label="Mini market panel">
+        <div class="panelHead">
+          <div class="panelTitle">Tape</div>
+          <div class="panelHint">synthetic demo feed</div>
+        </div>
+
+        <ul class="tape" id="tape" role="list"></ul>
+
+        <div class="panelFoot">
+          <div class="note">
+            <span class="noteIcon" aria-hidden="true">
+              <!-- wireframe info -->
+              <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 11v5"></path>
+                <path d="M12 8h.01"></path>
+              </svg>
+            </span>
+            <span>Press <span class="kbdInline">⌘K</span> to focus search.</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <div class="rail">
+        <div class="railCard">
+          <div class="railTitle">Signals</div>
+          <div class="railList" id="signals"></div>
+        </div>
+
+        <div class="railCard">
+          <div class="railTitle">Pinned notes</div>
+          <div class="pinList" id="pins"></div>
+        </div>
+      </div>
+
+      <section class="posts" aria-label="Posts">
+        <div class="postsHead">
+          <div class="postsTitle">
+            <span>Posts</span>
+            <span class="pill" id="resultPill">—</span>
+          </div>
+
+          <div class="sort">
+            <button class="sortBtn is-active" data-sort="new" type="button" aria-pressed="true">Newest</button>
+            <button class="sortBtn" data-sort="signal" type="button" aria-pressed="false">Signal</button>
+            <button class="sortBtn" data-sort="read" type="button" aria-pressed="false">Reading</button>
+          </div>
+        </div>
+
+        <div class="postList" id="postList"></div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <div class="footerLeft">
+        <span class="footMark" aria-hidden="true"></span>
+        <span>Liberal Markets</span>
+        <span class="muted">© <span id="year"></span></span>
+      </div>
+      <div class="footerRight">
+        <a class="footLink" href="#" id="exportBtn">Export pins</a>
+        <span class="muted">No trackers. No noise.</span>
+      </div>
+    </footer>
+  </main>
+
+  <dialog class="modal" id="modal">
+    <form method="dialog" class="modalBox">
+      <div class="modalHead">
+        <div class="modalTitle">Quick Search</div>
+        <button class="x" value="cancel" aria-label="Close">
+          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 6l12 12"></path>
+            <path d="M18 6l-12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <label class="modalSearch">
+        <input id="modalQ" type="search" placeholder="Type to filter posts…" autocomplete="off" />
+      </label>
+
+      <div class="modalList" id="modalList"></div>
+
+      <div class="modalFoot">
+        <span class="muted">Enter opens. Esc closes. Humans remain complicated.</span>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
