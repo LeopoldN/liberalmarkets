@@ -153,7 +153,7 @@ let POSTS = [];
 
 async function loadPosts() {
   const day = new Date().toISOString().slice(0, 10);
-  const res = await fetch(`/data/posts.json?v=${day}`, { cache: "no-store" });
+  const res = await fetch(`data/posts.json?v=${day}`, { cache: "no-store" });
   if (!res.ok) throw new Error("Failed to load posts.json");
   const json = await res.json();
   POSTS = Array.isArray(json.posts) ? json.posts : [];

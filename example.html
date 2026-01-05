@@ -237,7 +237,7 @@ GDPC1,↔,real output constraints matter</pre>
 
   async function loadPosts() {
     const day = new Date().toISOString().slice(0, 10);
-    const res = await fetch("/data/posts.json?v=" + day, { cache: "no-store" });
+    const res = await fetch("data/posts.json?v=" + day, { cache: "no-store" });
     if (!res.ok) return;
     const json = await res.json();
     POSTS = Array.isArray(json.posts) ? json.posts : [];
