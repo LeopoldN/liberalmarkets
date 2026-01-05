@@ -101,6 +101,30 @@ function loadPins() {
   }
 }
 
+/**
+ * Persist pinned notes to localStorage.
+ * Notes are stored as an array of objects.
+ * @param {Array<{id:string,title:string,excerpt:string,url:string,ts:number}>} notes
+ */
+function saveNotePins(notes) {
+  localStorage.setItem("lw_note_pins", JSON.stringify(notes));
+}
+
+/**
+ * Load pinned notes from localStorage.
+ * @returns {Array<{id:string,title:string,excerpt:string,url:string,ts:number}>}
+ */
+function loadNotePins() {
+  try {
+    const raw = localStorage.getItem("lw_note_pins");
+    if (!raw) return [];
+    const arr = JSON.parse(raw);
+    return Array.isArray(arr) ? arr : [];
+  } catch {
+    return [];
+  }
+}
+
 /* ---------------- Config ---------------- */
 
 const WATCH = [
@@ -125,88 +149,15 @@ const WATCH = [
  */
 
 /** @type {Post[]} */
-const POSTS = [
-  {
-    id: "p1",
-    title: "The yield curve as a mood ring",
-    desc: "A wireframe take: treat the curve like a system diagram. What moves, what lags, what lies.",
-    tags: ["rates", "curve", "macro"],
-    category: "macro",
-    dateISO: "2026-01-04",
-    minutes: 6,
-    signal: 82,
-  },
-  {
-    id: "p2",
-    title: "DCF without cosplay",
-    desc: "Discounting is not wizardry. It’s just assumptions with a flashlight. Build a clean, auditable stack.",
-    tags: ["valuation", "dcf", "accounting"],
-    category: "accounting",
-    dateISO: "2026-01-02",
-    minutes: 7,
-    signal: 74,
-  },
-  {
-    id: "p3",
-    title: "Inflation: the three-bucket sanity check",
-    desc: "A quick framework to separate demand pressure, supply shocks, and narrative contagion.",
-    tags: ["cpi", "macro", "framework"],
-    category: "macro",
-    dateISO: "2025-12-28",
-    minutes: 5,
-    signal: 69,
-  },
-  {
-    id: "p4",
-    title: "Market microstructure for normal people",
-    desc: "Bid-ask, spreads, and why your 'perfect entry' is mostly a bedtime story.",
-    tags: ["microstructure", "execution", "markets"],
-    category: "markets",
-    dateISO: "2025-12-22",
-    minutes: 8,
-    signal: 77,
-  },
-  {
-    id: "p5",
-    title: "A tiny checklist for reading earnings",
-    desc: "Five things that keep you from getting hypnotized by adjusted EBITDA confetti.",
-    tags: ["earnings", "quality", "accounting"],
-    category: "accounting",
-    dateISO: "2025-12-16",
-    minutes: 4,
-    signal: 71,
-  },
-  {
-    id: "p6",
-    title: "One-page risk map: exposures over opinions",
-    desc: "If you can’t draw it, you probably can’t manage it. A simple map for portfolio fragility.",
-    tags: ["risk", "portfolio", "markets"],
-    category: "markets",
-    dateISO: "2025-12-09",
-    minutes: 6,
-    signal: 80,
-  },
-  {
-    id: "p7",
-    title: "Tool note: a clean spreadsheet template",
-    desc: "A minimalist layout for forecasts that doesn’t turn into a haunted mansion.",
-    tags: ["spreadsheets", "workflow", "tools"],
-    category: "tools",
-    dateISO: "2025-12-01",
-    minutes: 3,
-    signal: 66,
-  },
-  {
-    id: "p8",
-    title: "Narratives are leverage",
-    desc: "Markets price stories, then price the consequences of believing them. Keep both ledgers.",
-    tags: ["narratives", "positioning", "macro"],
-    category: "macro",
-    dateISO: "2025-11-24",
-    minutes: 5,
-    signal: 73,
-  },
-];
+let POSTS = [];
+
+async function loadPosts() {
+  const day = new Date().toISOString().slice(0, 10);
+  const res = await fetch(`/data/posts.json?v=${day}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to load posts.json");
+  const json = await res.json();
+  POSTS = Array.isArray(json.posts) ? json.posts : [];
+}
 
 /* ---------------- Tape (static JSON) ---------------- */
 
@@ -307,6 +258,7 @@ async function renderTape() {
 
 const state = { filter: "all", q: "", sort: "new" };
 const pinSet = loadPins();
+let notePins = loadNotePins();
 
 /**
  * Apply filter + search + sort.
@@ -356,13 +308,8 @@ function renderPosts(posts, pins) {
     const scoreW = clamp(p.signal, 0, 100);
     const isPinned = pins.has(p.id);
     const pinLabel = isPinned ? "Pinned" : "Pin";
-
     const pinIcon = `
-      <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 17v5"></path>
-        <path d="M5 10l7-7 7 7"></path>
-        <path d="M7 10h10l-1 6H8l-1-6Z"></path>
-      </svg>
+      <svg viewBox="0 0 640 640" class="icon" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M160 96C160 78.3 174.3 64 192 64L448 64C465.7 64 480 78.3 480 96C480 113.7 465.7 128 448 128L418.5 128L428.8 262.1C465.9 283.3 494.6 318.5 507 361.8L510.8 375.2C513.6 384.9 511.6 395.2 505.6 403.3C499.6 411.4 490 416 480 416L160 416C150 416 140.5 411.3 134.5 403.3C128.5 395.3 126.5 384.9 129.3 375.2L133 361.8C145.4 318.5 174 283.3 211.2 262.1L221.5 128L192 128C174.3 128 160 113.7 160 96zM288 464L352 464L352 576C352 593.7 337.7 608 320 608C302.3 608 288 593.7 288 576L288 464z"/></svg>
     `;
 
     return `
@@ -426,6 +373,13 @@ function renderRail(currentPosts, pins) {
     </svg>
   `;
 
+  const unpinIcon = `
+      <svg viewBox="0 0 640 640" class="icon" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M73 39.1C63.6 29.7 48.4 29.7 39.1 39.1C29.8 48.5 29.7 63.7 39 73.1L567 601.1C576.4 610.5 591.6 610.5 600.9 601.1C610.2 591.7 610.3 576.5 600.9 567.2L449.8 416L480 416C490 416 499.5 411.3 505.5 403.3C511.5 395.3 513.5 384.9 510.7 375.2L507 361.8C494.6 318.5 466 283.3 428.8 262.1L418.5 128L448 128C465.7 128 480 113.7 480 96C480 78.3 465.7 64 448 64L192 64C184.6 64 177.9 66.5 172.5 70.6L222.1 120.3L217.3 183.4L73 39.1zM314.2 416L181.7 283.6C159 304.1 141.9 331 133 361.9L129.2 375.3C126.4 385 128.4 395.3 134.4 403.4C140.4 411.5 150 416 160 416L314.2 416zM288 576C288 593.7 302.3 608 320 608C337.7 608 352 593.7 352 576L352 464L288 464L288 576z"/></svg>
+    `;  
+  const openIcon = `
+      <svg viewBox="0 0 640 640" class="icon" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M320 205.3L320 514.6L320.5 514.4C375.1 491.7 433.7 480 492.8 480L512 480L512 160L492.8 160C450.6 160 408.7 168.4 369.7 184.6C352.9 191.6 336.3 198.5 320 205.3zM294.9 125.5L320 136L345.1 125.5C391.9 106 442.1 96 492.8 96L528 96C554.5 96 576 117.5 576 144L576 496C576 522.5 554.5 544 528 544L492.8 544C442.1 544 391.9 554 345.1 573.5L332.3 578.8C324.4 582.1 315.6 582.1 307.7 578.8L294.9 573.5C248.1 554 197.9 544 147.2 544L112 544C85.5 544 64 522.5 64 496L64 144C64 117.5 85.5 96 112 96L147.2 96C197.9 96 248.1 106 294.9 125.5z"/></svg>
+    `;
+
   setHTML(signals, topSignals.map(p => `
     <div class="signal">
       <div class="signalLeft">
@@ -436,18 +390,50 @@ function renderRail(currentPosts, pins) {
     </div>
   `).join(""));
 
-  const pinned = POSTS.filter(p => pins.has(p.id)).slice(0, 6);
-  if (pinned.length === 0) {
-    setHTML(pinsEl, `<div class="muted">Pin a post to keep it here.</div>`);
+  const pinnedPosts = POSTS.filter(p => pins.has(p.id)).slice(0, 6);
+  const pinnedNotes = (notePins || []).slice(0, 6);
+
+  if (pinnedPosts.length === 0 && pinnedNotes.length === 0) {
+    setHTML(pinsEl, `<div class="muted">Pin a post or note to keep it here.</div>`);
     return;
   }
 
-  setHTML(pinsEl, pinned.map(p => `
+  const notesHTML = pinnedNotes.map(n => `
+    <div class="pin">
+      <div class="pinTitle" title="${esc(n.excerpt || n.title || "Note")}">
+        ${esc(n.title || "Note")}
+      </div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <a class="pinBtn pinBtnIcon" href="${esc(n.url)}" style="text-decoration:none;">${openIcon}</a>
+        <button
+        class="pinBtn pinBtnIcon"
+        type="button"
+        data-unpin-note="${esc(n.id)}"
+        aria-label="Unpin note"
+        title="Unpin note"
+        >
+          ${unpinIcon}
+        </button>
+      </div>
+    </div>
+  `).join("");
+
+  const postsHTML = pinnedPosts.map(p => `
     <div class="pin">
       <div class="pinTitle" title="${esc(p.title)}">${esc(p.title)}</div>
-      <button class="pinBtn" type="button" data-unpin="${esc(p.id)}">Unpin</button>
+        <button
+        class="pinBtn pinBtnIcon"
+        type="button"
+        data-unpin-note="${esc(p.id)}"
+        aria-label="Unpin note"
+        title="Unpin note"
+        >
+          ${unpinIcon}
+        </button>
     </div>
-  `).join(""));
+  `).join("");
+
+  setHTML(pinsEl, notesHTML + postsHTML);
 }
 
 /**
@@ -556,18 +542,38 @@ async function renderHeroIndicators() {
 
 /* ---------------- Init ---------------- */
 
-(function init() {
+(async function init() {
   // footer + header stats
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  await loadPosts();
+
+  const initial = selectPosts(state);
+  renderPosts(initial, pinSet);
+  renderRail(initial, pinSet);
 
 
   // initial renders
   renderTape();
   renderHeroIndicators();
-  const initial = selectPosts(state);
-  renderPosts(initial, pinSet);
-  renderRail(initial, pinSet);
+
+  // Keep note pins in sync when another page updates localStorage.
+  window.addEventListener("storage", (e) => {
+    if (e.key === "lw_note_pins") {
+      notePins = loadNotePins();
+      const posts = selectPosts(state);
+      renderRail(posts, pinSet);
+    }
+  });
+
+  // Also refresh when returning to the tab/page (covers back-navigation cases).
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState !== "visible") return;
+    notePins = loadNotePins();
+    const posts = selectPosts(state);
+    renderRail(posts, pinSet);
+  });
 
 
   // Filter chips
@@ -653,18 +659,46 @@ async function renderHeroIndicators() {
       return;
     }
 
+    const unpinNoteId = t.closest("[data-unpin-note]")?.getAttribute("data-unpin-note");
+    if (unpinNoteId) {
+      notePins = (notePins || []).filter(n => n.id !== unpinNoteId);
+      saveNotePins(notePins);
+
+      const posts = selectPosts(state);
+      renderPosts(posts, pinSet);
+      renderRail(posts, pinSet);
+      return;
+    }
+
     // Export pins
     const exportBtn = t.closest("#exportBtn");
     if (exportBtn) {
       e.preventDefault();
-      const pinned = POSTS.filter(p => pinSet.has(p.id)).map(p => ({
+      const pinnedPosts = POSTS.filter(p => pinSet.has(p.id)).map(p => ({
+        type: "post",
+        id: p.id,
         title: p.title,
         date: p.dateISO,
         category: p.category,
         tags: p.tags,
       }));
 
-      const blob = new Blob([JSON.stringify({ exportedAt: new Date().toISOString(), pinned }, null, 2)], { type: "application/json" });
+      const pinnedNotes = (notePins || []).map(n => ({
+        type: "note",
+        id: n.id,
+        title: n.title,
+        excerpt: n.excerpt,
+        url: n.url,
+        ts: n.ts,
+      }));
+
+      const blob = new Blob([
+        JSON.stringify(
+          { exportedAt: new Date().toISOString(), pinnedPosts, pinnedNotes },
+          null,
+          2
+        )
+      ], { type: "application/json" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;

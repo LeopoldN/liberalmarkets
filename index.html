@@ -7,7 +7,7 @@
   <title>Liberal Markets — Minimal Finance Notes</title>
   <meta name="description" content="Minimalist finance blog with wireframe iconography and calm, earthy palette." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         <span class="chipDot" aria-hidden="true"></span> All
       </button>
       <button class="chip" data-filter="macro" type="button" aria-pressed="false">
-        <span class="chipDot" aria-hidden="true"></span> Macro
+        <span class="chipDot" aria-hidden="true"></span> Trump Tracker
       </button>
       <button class="chip" data-filter="markets" type="button" aria-pressed="false">
         <span class="chipDot" aria-hidden="true"></span> Markets
@@ -175,6 +175,121 @@
       </aside>
     </section>
 
+    <section class="chartCard" aria-label="Chart">
+      <div class="chartHead">
+        <div class="chartTitle">
+          <span class="chartDot" aria-hidden="true"></span>
+          <span class="chartTitleText">CPI (Index)</span>
+        </div>
+
+        <div class="chartControls" role="tablist" aria-label="Chart range">
+          <button class="chartTab is-active" type="button" data-range="1y" role="tab" aria-selected="false">1y</button>
+          <button class="chartTab" type="button" data-range="5y" role="tab" aria-selected="true">5y</button>
+          <button class="chartTab" type="button" data-range="10y" role="tab" aria-selected="false">10y</button>
+          <button class="chartTab" type="button" data-range="all" role="tab" aria-selected="false">all</button>
+        </div>
+
+        <div class="chartMeta">
+          <span class="chartPill chartRange">—</span>
+          <span class="chartPill chartLatest">—</span>
+        </div>
+      </div>
+
+      <div class="chartWrap">
+        <canvas
+          class="wireChart"
+          width="1100"
+          height="360"
+          aria-label="Line chart"
+          data-csv="data/UNRATE.csv"
+          data-title="U-Rate (Index)"
+          data-height="260"
+        ></canvas>
+        <div class="chartTip" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="chartFoot">
+        <span class="muted">Source: FRED CSV • rendered client-side</span>
+      </div>
+    </section>
+    <section class="chartRow">
+      <section class="chartCard" aria-label="Chart">
+        <div class="chartHead">
+          <div class="chartTitle">
+            <span class="chartDot" aria-hidden="true"></span>
+            <span class="chartTitleText">CPI (Index)</span>
+          </div>
+
+          <div class="chartControls" role="tablist" aria-label="Chart range">
+            <button class="chartTab is-active" type="button" data-range="1y" role="tab" aria-selected="false">1y</button>
+            <button class="chartTab" type="button" data-range="5y" role="tab" aria-selected="true">5y</button>
+            <button class="chartTab" type="button" data-range="10y" role="tab" aria-selected="false">10y</button>
+            <button class="chartTab" type="button" data-range="all" role="tab" aria-selected="false">all</button>
+          </div>
+
+          <div class="chartMeta">
+            <span class="chartPill chartRange">—</span>
+            <span class="chartPill chartLatest">—</span>
+          </div>
+        </div>
+
+        <div class="chartWrap">
+          <canvas
+            class="wireChart"
+            width="1100"
+            height="360"
+            aria-label="Line chart"
+            data-csv="data/MSPUS.csv"
+            data-title="Median Sales Price of House (Index)"
+            data-height="260"
+          ></canvas>
+          <div class="chartTip" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="chartFoot">
+          <span class="muted">Source: FRED CSV • rendered client-side</span>
+        </div>
+      </section>
+
+      <section class="chartCard" aria-label="Chart"">
+        <div class="chartHead">
+          <div class="chartTitle">
+            <span class="chartDot" aria-hidden="true"></span>
+            <span class="chartTitleText">CPI (Index)</span>
+          </div>
+
+          <div class="chartControls" role="tablist" aria-label="Chart range">
+            <button class="chartTab is-active" type="button" data-range="1y" role="tab" aria-selected="false">1y</button>
+            <button class="chartTab" type="button" data-range="5y" role="tab" aria-selected="true">5y</button>
+            <button class="chartTab" type="button" data-range="10y" role="tab" aria-selected="false">10y</button>
+            <button class="chartTab" type="button" data-range="all" role="tab" aria-selected="false">all</button>
+          </div>
+
+          <div class="chartMeta">
+            <span class="chartPill chartRange">—</span>
+            <span class="chartPill chartLatest">—</span>
+          </div>
+        </div>
+
+        <div class="chartWrap">
+          <canvas
+            class="wireChart"
+            width="1100"
+            height="360"
+            aria-label="Line chart"
+            data-csv="data/MEHOINUSA646N.csv"
+            data-title="Median Income (Index)"
+            data-height="260"
+          ></canvas>
+          <div class="chartTip" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="chartFoot">
+          <span class="muted">Source: FRED CSV • rendered client-side</span>
+        </div>
+      </section>
+    </section>
+
     <section class="grid">
       <div class="rail">
         <div class="railCard">
@@ -244,5 +359,6 @@
   </dialog>
 
   <script src="app.js"></script>
+  <script src="scripts/chart.js"></script>
 </body>
 </html>

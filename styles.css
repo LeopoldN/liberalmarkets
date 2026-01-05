@@ -87,7 +87,6 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
 .brand{
   display:flex; align-items:center; gap: 12px;
-  min-width: 240px;
 }
 .mark{
   width: 42px; height: 42px;
@@ -101,6 +100,8 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
 .nav{
   display:flex; gap: 10px;
+  flex-wrap: wrap;
+  max-width: 100%;
   padding: 6px 8px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -139,7 +140,6 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
 .actions{
   display:flex; justify-content:flex-end; align-items:center; gap: 10px;
-  min-width: 240px;
 }
 
 .search{
@@ -149,7 +149,8 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
   border: 1px solid var(--line);
   background: rgba(218,215,205,.55);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.28);
-  min-width: min(520px, 42vw);
+  min-width: 0;
+  width: min(520px, 100%);
 }
 .search input{
   border: 0;
@@ -507,6 +508,20 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 }
 .pinBtn:hover{ box-shadow: inset 0 0 0 1px rgba(52,78,65,.15); }
 
+.pinBtn.pinBtnIcon{
+  padding: 6px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.pinBtn.pinBtnIcon .icon{
+  width: 16px;
+  height: 16px;
+}
+
+
 .posts{
   border-radius: var(--r);
   border: 1px solid var(--line);
@@ -771,9 +786,9 @@ body.compact .postList{ grid-template-columns: 1fr; }
 body.compact .postDesc{ display:none; }
 body.compact .grid{ grid-template-columns: 320px 1fr; }
 
-@media (max-width: 980px){
+@media (max-width: 1180px){
   .topbar{ grid-template-columns: 1fr; }
-  .actions{ justify-content: flex-start; min-width: 0; }
+  .actions{ justify-content: flex-start; min-width: 0; flex-wrap: wrap; }
   .search{ min-width: 0; width: 100%; }
   .nav{ overflow:auto; }
   .hero{ grid-template-columns: 1fr; }
@@ -781,3 +796,260 @@ body.compact .grid{ grid-template-columns: 320px 1fr; }
   .postList{ grid-template-columns: 1fr; }
 }
 
+.chartCard{
+  margin-top: 18px;
+  border-radius: var(--r);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(218,215,205,.58), rgba(218,215,205,.42)),
+    radial-gradient(circle at 18% 25%, rgba(163,177,138,.22), transparent 48%),
+    radial-gradient(circle at 90% 70%, rgba(88,129,87,.14), transparent 52%);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+  position: relative;
+}
+
+.chartCard::after{
+  content:"";
+  position:absolute; inset:-1px;
+  background:
+    repeating-linear-gradient(135deg, rgba(52,78,65,.08) 0px, rgba(52,78,65,.08) 1px, transparent 1px, transparent 12px);
+  opacity: .14;
+  pointer-events:none;
+}
+
+.chartHead{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px 10px;
+  border-bottom: 1px dashed rgba(52,78,65,.25);
+  position: relative;
+  z-index: 1;
+}
+
+.chartTitle{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 760;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.chartDot{
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  border: 2px solid rgba(58,90,64,.55);
+  background: rgba(88,129,87,.22);
+}
+
+.chartMeta{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+.chartPill{
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line2);
+  background: rgba(218,215,205,.35);
+  opacity: .95;
+}
+
+.chartWrap{
+  position: relative;
+  padding: 10px 14px 14px;
+  z-index: 1;
+}
+
+#wireChart{
+  width: 100%;
+  height: auto;
+  display:block;
+  border-radius: 16px;
+  border: 1px solid rgba(52,78,65,.18);
+  background:
+    radial-gradient(circle at 20% 40%, rgba(163,177,138,.16), transparent 55%),
+    repeating-linear-gradient(0deg, rgba(52,78,65,.06) 0px, rgba(52,78,65,.06) 1px, transparent 1px, transparent 18px),
+    repeating-linear-gradient(90deg, rgba(52,78,65,.04) 0px, rgba(52,78,65,.04) 1px, transparent 1px, transparent 18px),
+    rgba(218,215,205,.30);
+}
+
+.chartTip{
+  position:absolute;
+  left: 14px;
+  top: 14px;
+  pointer-events:none;
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 6px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(52,78,65,.28);
+  background: rgba(218,215,205,.70);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .12s ease, transform .12s ease;
+  max-width: min(340px, 70vw);
+}
+
+.chartTip.is-on{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chartFoot{
+  padding: 10px 14px 14px;
+  border-top: 1px dashed rgba(52,78,65,.20);
+  position: relative;
+  z-index: 1;
+}
+
+.chartControls{
+  display:flex;
+  gap: 6px;
+  align-items:center;
+  padding: 3px 6px;
+  border: 1px solid rgba(52,78,65,.18);
+  border-radius: 999px;
+  background: rgba(218,215,205,.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+.chartTab{
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 6px 9px;
+  border-radius: 999px;
+  cursor:pointer;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .2px;
+  color: rgba(52,78,65,.88);
+  line-height: 1;
+}
+
+.chartTab:hover{
+  border-color: rgba(52,78,65,.18);
+  background: rgba(163,177,138,.20);
+}
+
+.chartTab.is-active{
+  border-color: rgba(52,78,65,.24);
+  background: rgba(88,129,87,.22);
+}
+
+.chartTab:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Micro-motion + hover polish ---------- */
+
+:root{
+  --shadow2: 0 14px 40px rgba(52,78,65,.18);
+  --lift: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .stat, .tick, .post, .chip, .btn, .pin, .signal{
+    transition:
+      transform .14s ease,
+      box-shadow .14s ease,
+      background-color .14s ease,
+      border-color .14s ease,
+      filter .14s ease;
+    will-change: transform;
+  }
+
+  /* HERO STATS */
+  .stat:hover{
+    transform: var(--lift);
+    box-shadow: var(--shadow2);
+    border-color: rgba(52,78,65,.34);
+    background: rgba(163,177,138,.20);
+  }
+  .stat:focus-within{
+    transform: var(--lift);
+    box-shadow: var(--shadow2);
+    border-color: rgba(52,78,65,.40);
+  }
+
+  /* TAPE ROWS */
+  .tick:hover{
+    transform: translateY(-1px);
+    border-color: rgba(52,78,65,.34);
+    box-shadow: 0 10px 22px rgba(52,78,65,.12);
+    background: linear-gradient(180deg, rgba(218,215,205,.62), rgba(163,177,138,.20));
+  }
+
+  /* POSTS */
+  .post:hover{
+    transform: translateY(-2px);
+    border-color: rgba(52,78,65,.34);
+    box-shadow: 0 14px 38px rgba(52,78,65,.14);
+    filter: saturate(1.03);
+  }
+  .post:hover::before{
+    opacity: .28;
+  }
+
+  /* NAV CHIPS + BUTTONS (tiny lift) */
+  .chip:hover{
+    transform: translateY(-1px);
+  }
+  .btn:hover{
+    transform: translateY(-1px);
+    border-color: rgba(52,78,65,.30);
+  }
+
+  /* PINS + SIGNALS */
+  .pin:hover, .signal:hover{
+    transform: translateY(-1px);
+    border-color: rgba(52,78,65,.34);
+    box-shadow: 0 10px 22px rgba(52,78,65,.10);
+  }
+}
+
+/* Keyboard-visible affordance */
+.stat:focus-within, .tick:focus-within, .post:focus-within{
+  outline: 2px solid rgba(88,129,87,.55);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px){
+  .chartHead{ flex-wrap: wrap; }
+  .chartControls{ order: 3; width: 100%; justify-content: center; }
+  .chartMeta{ order: 2; width: 100%; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: no-preference){
+  .stat:hover .statIcon svg,
+  .tick:hover .chev,
+  .post:hover .pinIt .icon{
+    transform: translateY(-1px);
+    transition: transform .14s ease;
+  }
+}
+
+.chartRow{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* Stack on small screens */
+@media (max-width: 900px){
+  .chartRow{
+    grid-template-columns: 1fr;
+  }
+}

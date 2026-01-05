@@ -1,0 +1,566 @@
+<!-- blog-page.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liberal Markets — Article</title>
+  <meta name="description" content="Article page template for Liberal Markets." />
+  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="blog-styles.css?v=1" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Same topbar as index.html (copy/pasted so both pages match) -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+        <path d="m655.45 328.74v77.062-0.046875c0 9.375-7.5469 16.969-16.922 16.969h-77.062c-4.5 0-8.8125-1.7812-11.953-4.9688-3.1875-3.1875-4.9688-7.5-4.9688-12v-77.016c0-4.5 1.7812-8.8125 4.9688-12 3.1406-3.1875 7.4531-4.9688 11.953-4.9688h77.062c9.375 0 16.922 7.5938 16.922 16.969zm-279.94 0v77.062-0.046875c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1875-7.4531 4.9688-11.953 4.9688h-78.656c-4.4531 0-8.7656-1.7812-11.953-4.9688s-4.9688-7.5-4.9219-12v-77.016c-0.046875-4.5 1.7344-8.8125 4.9219-12s7.5-4.9688 11.953-4.9688h78.656c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1875 4.9688 7.5 4.9688 12zm488.29-99.094v-78.656c0-4.5 1.7812-8.7656 4.9219-11.953 3.1875-3.1875 7.5-4.9688 12-4.9688h215.44c9.375 0 16.922 7.5938 16.922 16.922v898.03c0 9.3281-7.5469 16.922-16.922 16.922h-215.44c-4.5 0-8.8125-1.7812-12-4.9688-3.1406-3.1875-4.9219-7.4531-4.9219-11.953v-77.016c0-9.3281 7.5469-16.922 16.922-16.922h119.91v-708.52h-119.91c-9.375 0-16.922-7.5938-16.922-16.922zm-664.45 725.39v-708.47h119.91c9.375 0 16.922-7.5938 16.922-16.922v-78.656c0-4.5-1.7812-8.7656-4.9219-11.953-3.1875-3.1875-7.5-4.9688-12-4.9688h-215.44c-9.375 0-16.922 7.5938-16.922 16.922v898.03c0 9.3281 7.5469 16.922 16.922 16.922h215.44c4.5 0 8.8125-1.7812 12-4.9688 3.1406-3.1875 4.9219-7.4531 4.9219-11.953v-77.016c0-9.3281-7.5469-16.922-16.922-16.922zm737.58-160.78 0.046875-0.046875c0-9.3281-7.5938-16.922-16.922-16.922h-78.656c-9.3281 0-16.922 7.5938-16.922 16.922v78.609c0 9.375 7.5938 16.922 16.922 16.969h78.656c9.3281 0 16.922-7.5938 16.922-16.969v-78.562zm-281.53 0v78.609l0.046875-0.046875c0 9.375-7.5469 16.969-16.922 16.969h-77.062c-4.5 0-8.8125-1.7812-11.953-4.9688-3.1875-3.1875-4.9688-7.5-4.9688-12v-78.562c0-4.5 1.7812-8.8125 4.9688-12 3.1406-3.1875 7.4531-4.9688 11.953-4.9688h77.062c9.375 0 16.922 7.5938 16.922 16.969zm-279.94 0v78.609l0.046875-0.046875c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1875-7.4531 4.9688-11.953 4.9688h-78.656c-4.4531 0-8.7656-1.7812-11.953-4.9688s-4.9688-7.5-4.9219-12v-78.562c-0.046875-4.5 1.7344-8.8125 4.9219-12s7.5-4.9688 11.953-4.9688h78.656c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1875 4.9688 7.5 4.9688 12zm561.47-232.78 0.046875-0.046874c0-4.5-1.7812-8.8125-4.9688-12-3.1875-3.1406-7.5-4.9219-11.953-4.9219h-78.656c-9.3281 0-16.922 7.5469-16.922 16.922v78.656-0.046876c0 9.375 7.5938 16.922 16.922 16.922h78.656c4.4531 0 8.7656-1.7812 11.953-4.9219 3.1875-3.1875 4.9688-7.5 4.9688-12v-78.562zm-281.53 0v78.656l0.046875-0.09375c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1406-7.4531 4.9219-11.953 4.9219h-77.062c-9.3281 0-16.922-7.5469-16.922-16.922v-78.562c0-9.3281 7.5938-16.922 16.922-16.922h77.062c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1406 4.9688 7.4531 4.9688 11.953zm-279.94 0v78.656l0.046875-0.09375c0 9.375-7.5938 16.922-16.922 16.922h-78.656c-9.3281 0-16.875-7.5469-16.875-16.922v-78.562c0-9.3281 7.5469-16.922 16.875-16.922h78.656c9.3281 0 16.922 7.5938 16.922 16.922zm561.47-232.78 0.046875-0.09375c0-9.3281-7.5938-16.922-16.922-16.922h-78.656c-9.3281 0-16.922 7.5938-16.922 16.922v77.062c0 9.3281 7.5938 16.922 16.922 16.922h78.656c9.3281 0 16.922-7.5469 16.922-16.922z" fill-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="brandText">
+        <div class="brandName">Liberal Markets</div>
+        <div class="brandTag">minimal finance notes</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Sections">
+      <a class="chip is-active" href="index.html"><span class="chipDot" aria-hidden="true"></span> Home</a>
+      <a class="chip" href="index.html#posts"><span class="chipDot" aria-hidden="true"></span> Posts</a>
+      <a class="chip" href="index.html#signals"><span class="chipDot" aria-hidden="true"></span> Signals</a>
+      <a class="chip" href="index.html#pins"><span class="chipDot" aria-hidden="true"></span> Pinned</a>
+    </nav>
+
+    <div class="actions">
+      <a class="btn" href="index.html" title="Back to homepage">
+        <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6"></path>
+        </svg>
+        Back
+      </a>
+    </div>
+  </header>
+
+  <main id="main" class="wrap wrap--wide">
+    <section class="articleShell">
+      <!-- LEFT: PINNED -->
+      <aside class="leftRail" aria-label="Pinned notes">
+        <div class="sideCard">
+          <div class="sideTitle">Pinned</div>
+          <div id="pinnedList" class="pinnedList">
+            <div class="muted">No pinned notes yet.</div>
+          </div>
+          <div class="miniHint" style="margin-top:10px;">
+            Notes pin from articles. Post pins live on the homepage.
+          </div>
+        </div>
+      </aside>
+      <!-- MAIN ARTICLE -->
+      <article class="paperCard" aria-label="Article">
+        <header class="articleHead">
+          <div class="articleHeadInner">
+            <div class="crumbs">
+              <span class="badge">macro</span>
+              <span class="crumbDot" aria-hidden="true"></span>
+              <span>Memo</span>
+              <span class="crumbDot" aria-hidden="true"></span>
+              <span>Updated <span id="updatedAt">2026-01-02</span></span>
+            </div>
+
+            <h1 class="h1">Inflation isn’t one thing. It’s three.</h1>
+
+            <p class="deck">
+              A wireframe sanity-check: separate demand pressure, supply shocks, and narrative contagion.
+              Most arguments fail because people talk past which bucket they mean.
+            </p>
+
+            <div class="metaRow">
+              <span class="metaPill" title="Reading time">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a1 1 0 0 1 1 1v2.6l1.9 1.1a1 1 0 1 1-1 1.7l-2.4-1.4A1 1 0 0 1 11 12V9a1 1 0 0 1 1-1z"></path><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                6 min
+              </span>
+              <span class="metaPill" title="Author">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"></path><path d="M4 22a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                Nicholas Leopold
+              </span>
+              <span class="metaPill" title="Source notes">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l3 3v17H6z"></path><path d="M15 2v5h5" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>
+                sources: FRED, BEA
+              </span>
+            </div>
+          </div>
+        </header>
+
+        <div class="articleBody">
+          <div class="prose">
+            <h2 id="thesis">Thesis</h2>
+            <p>
+              People argue about “inflation” like it’s a single dial. It isn’t. It’s a messy output of multiple systems
+              and a bunch of human expectations stapled on top.
+            </p>
+
+            <div class="callout">
+              <div class="calloutTitle">Sanity check</div>
+              <p style="margin:0;">
+                Before you debate policy, name the bucket: <code>demand</code>, <code>supply</code>, or <code>narrative</code>.
+                If you can’t, you’re just doing vibes.
+              </p>
+            </div>
+
+            <h2 id="bucket1">Bucket 1: Demand pressure</h2>
+            <p>
+              Demand-driven inflation usually shows up with tight labor markets, rapid nominal spending, and services price pressure.
+              It’s the “too much money chasing too few goods” story. Sometimes that story is even true.
+            </p>
+
+            <h3 id="measure">What to look at</h3>
+            <ul>
+              <li>Core services measures</li>
+              <li>Labor tightness proxies (not one number)</li>
+              <li>Nominal spending growth vs real output</li>
+            </ul>
+
+            <div class="dataCard">
+              <div class="dataCardHead">
+                <div class="dataCardTitle">Mini table</div>
+                <div class="dataCardMeta">illustrative only</div>
+              </div>
+              <div class="dataCardBody">
+                <pre>Metric,Signal,Notes
+UNRATE,↓,tight labor markets tend to amplify wage pressure
+CPIAUCSL,↑,headline can be distorted by energy/food
+GDPC1,↔,real output constraints matter</pre>
+              </div>
+            </div>
+
+            <h2 id="bucket2">Bucket 2: Supply shocks</h2>
+            <p>
+              Supply shocks are the part where reality punches your model. Energy, shipping, geopolitical disruptions,
+              or plain old capacity constraints. Policy can lean against second-round effects, but it can’t manufacture ships.
+            </p>
+
+            <div class="quote">
+              “If prices move because the supply curve moved, pretending it’s only demand is how you overtighten into a slowdown.”
+            </div>
+
+            <h2 id="bucket3">Bucket 3: Narrative contagion</h2>
+            <p>
+              Humans aren’t rational agents. They’re story engines. Once inflation becomes the headline, behavior shifts:
+              wage bargaining changes, pricing strategies change, politics changes.
+            </p>
+
+            <h2 id="bottomline">Bottom line</h2>
+            <p>
+              When you read “inflation is coming down” or “inflation is entrenched,” translate it into buckets.
+              Then you can actually decide what policy or positioning even means.
+            </p>
+          </div>
+
+          <div class="backRow">
+            <a class="backLink" href="index.html">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              Back to homepage
+            </a>
+            <span class="muted">No trackers. No noise.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="side" aria-label="Article sidebar">
+        <div class="sideCard">
+          <div class="sideTitle">Outline</div>
+          <ol class="toc">
+            <li><a href="#thesis">Thesis</a></li>
+            <li><a href="#bucket1">Demand pressure</a></li>
+            <li><a href="#bucket2">Supply shocks</a></li>
+            <li><a href="#bucket3">Narrative contagion</a></li>
+            <li><a href="#bottomline">Bottom line</a></li>
+          </ol>
+        </div>
+
+        <div class="sideCard">
+            <div class="sideTitle">Quick notes</div>
+
+            <div class="qnBar">
+                <button class="qnTab is-active" id="qnEdit" type="button">Edit</button>
+                <button class="qnTab" id="qnPreviewBtn" type="button">Preview</button>
+
+                <div class="qnBarRight">
+                <button class="qnBtn" id="pinAllNotes" type="button" title="Pin full notes">Pin</button>
+                </div>
+            </div>
+
+            <textarea
+                class="quickNotes"
+                id="quickNotes"
+                placeholder="# Notes\n- Paste links\n- Write bullets\n- Use **bold** / _italic_ / `code`\n"
+                rows="10"
+                aria-label="Quick article notes (Markdown)"
+            ></textarea>
+
+            <div class="qnPreview" id="qnPreview" hidden></div>
+
+            <div class="miniHint">
+                Markdown notes saved locally in your browser.
+            </div>
+        </div>
+
+        <div class="sideCard">
+          <div class="sideTitle">Tags</div>
+          <div class="tagRow">
+            <span class="tag">cpi</span>
+            <span class="tag">macro</span>
+            <span class="tag">framework</span>
+            <span class="tag">rates</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+<script>
+(async function(){
+  const notesEl = document.getElementById("quickNotes");
+  const previewEl = document.getElementById("qnPreview");
+  const editBtn = document.getElementById("qnEdit");
+  const previewBtn = document.getElementById("qnPreviewBtn");
+  const pinSelBtn = document.getElementById("pinSelection");
+  const pinAllBtn = document.getElementById("pinAllNotes");
+
+  if (!notesEl || !previewEl) return;
+
+  let POSTS = [];
+
+  async function loadPosts() {
+    const day = new Date().toISOString().slice(0, 10);
+    const res = await fetch("/data/posts.json?v=" + day, { cache: "no-store" });
+    if (!res.ok) return;
+    const json = await res.json();
+    POSTS = Array.isArray(json.posts) ? json.posts : [];
+  } 
+
+  function getPostMeta(id) {
+    return POSTS.find(p => p.id === id)
+      || { id, title: `Post ${id}`, url: "index.html#posts" };
+  }
+
+  // Per-article key so each article gets its own notes
+  const notesKey = "lm_article_notes:" + location.pathname;
+
+  // Load saved notes
+  const saved = localStorage.getItem(notesKey);
+  if (saved) notesEl.value = saved;
+
+  // Save on input
+  notesEl.addEventListener("input", () => {
+    localStorage.setItem(notesKey, notesEl.value);
+    // If preview is open, keep it live-updated
+    if (!previewEl.hidden) previewEl.innerHTML = renderMarkdown(notesEl.value);
+  });
+
+  // Tabs: Edit / Preview
+  editBtn?.addEventListener("click", () => {
+    editBtn.classList.add("is-active");
+    previewBtn.classList.remove("is-active");
+    notesEl.hidden = false;
+    previewEl.hidden = true;
+    notesEl.focus();
+  });
+
+  previewBtn?.addEventListener("click", () => {
+    previewBtn.classList.add("is-active");
+    editBtn.classList.remove("is-active");
+    previewEl.innerHTML = renderMarkdown(notesEl.value);
+    notesEl.hidden = true;
+    previewEl.hidden = false;
+  });
+
+  // --- Note pin integration (homepage reads these) ---
+  const NOTE_PINS_KEY = "lw_note_pins";
+
+  /**
+   * @returns {Array<{id:string,title:string,excerpt:string,url:string,ts:number}>}
+   */
+  function loadNotePins() {
+    try {
+      const raw = localStorage.getItem(NOTE_PINS_KEY);
+      if (!raw) return [];
+      const arr = JSON.parse(raw);
+      return Array.isArray(arr) ? arr : [];
+    } catch {
+      return [];
+    }
+  }
+
+  /**
+   * @param {Array<{id:string,title:string,excerpt:string,url:string,ts:number}>} pins
+   */
+  function saveNotePins(pins) {
+    localStorage.setItem(NOTE_PINS_KEY, JSON.stringify(pins));
+  }
+
+  // --- Post pin integration (homepage post pins) ---
+  const POST_PINS_KEY = "lw_pins";
+
+  /**
+   * @returns {Set<string>}
+   */
+  function loadPostPins() {
+    try {
+      const raw = localStorage.getItem(POST_PINS_KEY);
+      if (!raw) return new Set();
+      const arr = JSON.parse(raw);
+      return new Set(Array.isArray(arr) ? arr : []);
+    } catch {
+      return new Set();
+    }
+  }
+
+  /**
+   * @param {Set<string>} pins
+   */
+  function savePostPins(pins) {
+    localStorage.setItem(POST_PINS_KEY, JSON.stringify([...pins]));
+  }
+
+
+
+
+  function getArticleTitle() {
+    const h1 = document.querySelector("h1");
+    return (h1?.textContent || "Note").trim();
+  }
+
+  /**
+   * Pin text as a note for the homepage rail.
+   * @param {string} text
+   * @param {"selection"|"all"} mode
+   */
+  function pinText(text, mode) {
+    const clean = (text || "").trim();
+    if (!clean) return;
+
+    const pins = loadNotePins();
+
+    const item = {
+      id: "note_" + Math.random().toString(16).slice(2) + "_" + Date.now(),
+      title: mode === "selection" ? `Note (selection) · ${getArticleTitle()}` : `Note · ${getArticleTitle()}`,
+      excerpt: clean.slice(0, 180),
+      url: location.pathname + location.search + location.hash,
+      ts: Date.now(),
+    };
+
+    // Avoid duplicates per-URL+excerpt
+    const dup = pins.some(p => p.url === item.url && p.excerpt === item.excerpt);
+    if (!dup) {
+      pins.unshift(item);
+      saveNotePins(pins);
+      renderPinnedRail();
+      const btn = mode === "selection" ? pinSelBtn : pinAllBtn;
+      if (btn) {
+        const prev = btn.textContent;
+        btn.textContent = "Pinned";
+        setTimeout(() => { btn.textContent = prev; }, 900);
+      }
+    }
+  }
+
+  pinSelBtn?.addEventListener("click", () => {
+    const start = notesEl.selectionStart ?? 0;
+    const end = notesEl.selectionEnd ?? 0;
+    const selected = (start !== end) ? notesEl.value.slice(start, end) : "";
+    pinText(selected, "selection");
+  });
+
+  pinAllBtn?.addEventListener("click", () => {
+    pinText(notesEl.value, "all");
+  });
+
+  // --- Left rail: show pinned notes on this page ---
+  const pinnedListEl = document.getElementById("pinnedList");
+
+  function escHtml(s) {
+    return String(s)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function fmtDateShort(ts) {
+    try {
+      return new Date(ts).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "2-digit" });
+    } catch {
+      return "";
+    }
+  }
+
+  function renderPinnedRail() {
+    if (!pinnedListEl) return;
+
+    const notePins = loadNotePins();
+    const postPinSet = loadPostPins();
+    const postPinIds = [...postPinSet];
+
+    if (!notePins.length && !postPinIds.length) {
+      pinnedListEl.innerHTML = `<div class="muted">No pinned items yet.</div>`;
+      return;
+    }
+
+    const notesHTML = notePins.slice(0, 12).map(n => {
+      const title = escHtml(n.title || "Note");
+      const excerpt = escHtml(n.excerpt || "");
+      const url = escHtml(n.url || "index.html");
+      const when = n.ts ? fmtDateShort(n.ts) : "";
+
+      return `
+        <div class="pinRow" data-kind="note">
+          <a class="pinRowMain" href="${url}" title="Open note source">
+            <div class="pinRowTitle">${title}</div>
+            <div class="pinRowExcerpt">${excerpt}</div>
+          </a>
+          <div class="pinRowMeta">
+            <span class="pinRowDate">${escHtml(when)}</span>
+            <button class="pinBtn" type="button" data-unpin-note="${escHtml(n.id)}"
+              aria-label="Unpin note" title="Unpin note">Unpin</button>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    const postsHTML = postPinIds.slice(0, 12).map(id => {
+      const meta = getPostMeta(id);
+      return `
+        <div class="pinRow" data-kind="post">
+          <a class="pinRowMain" href="${escHtml(meta.url)}" title="Open on homepage">
+            <div class="pinRowTitle">${escHtml(meta.title)}</div>
+            <div class="pinRowExcerpt">Pinned post • ${escHtml(id)}</div>
+          </a>
+          <div class="pinRowMeta">
+            <span class="pinRowDate">&nbsp;</span>
+            <button class="pinBtn" type="button" data-unpin-post="${escHtml(id)}"
+              aria-label="Unpin post" title="Unpin post">Unpin</button>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    pinnedListEl.innerHTML = notesHTML + postsHTML;
+  }
+
+  pinnedListEl?.addEventListener("click", (e) => {
+    const t = e.target;
+
+    const unpinNoteId = t?.closest?.("[data-unpin-note]")?.getAttribute?.("data-unpin-note");
+    if (unpinNoteId) {
+      const next = loadNotePins().filter(n => n.id !== unpinNoteId);
+      saveNotePins(next);
+      renderPinnedRail();
+      return;
+    }
+
+    const unpinPostId = t?.closest?.("[data-unpin-post]")?.getAttribute?.("data-unpin-post");
+    if (unpinPostId) {
+      const set = loadPostPins();
+      set.delete(unpinPostId);
+      savePostPins(set);
+      renderPinnedRail();
+      return;
+    }
+  });
+
+  // Initial render
+  await loadPosts();
+  renderPinnedRail();
+
+  // Keep in sync if storage changes in another tab/page
+  window.addEventListener("storage", (e) => {
+  if (e.key === NOTE_PINS_KEY || e.key === POST_PINS_KEY) renderPinnedRail();
+  });
+
+  // --- Markdown renderer (tiny, safe-ish) ---
+  function escapeHtml(s) {
+    return s
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
+  }
+
+  function inlineMd(s) {
+    // links: [text](url)
+    s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    // code: `x`
+    s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
+    // bold: **x**
+    s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    // italic: _x_
+    s = s.replace(/_([^_]+)_/g, "<em>$1</em>");
+    return s;
+  }
+
+  function renderMarkdown(md) {
+    const safe = escapeHtml(md || "");
+    const lines = safe.split("\n");
+
+    let out = [];
+    let inList = false;
+
+    for (let raw of lines) {
+      const line = raw.trimEnd();
+
+      // blank line closes list
+      if (!line.trim()) {
+        if (inList) { out.push("</ul>"); inList = false; }
+        continue;
+      }
+
+      // headings
+      if (line.startsWith("### ")) {
+        if (inList) { out.push("</ul>"); inList = false; }
+        out.push(`<h3>${inlineMd(line.slice(4).trim())}</h3>`);
+        continue;
+      }
+      if (line.startsWith("## ")) {
+        if (inList) { out.push("</ul>"); inList = false; }
+        out.push(`<h2>${inlineMd(line.slice(3).trim())}</h2>`);
+        continue;
+      }
+      if (line.startsWith("# ")) {
+        if (inList) { out.push("</ul>"); inList = false; }
+        out.push(`<h1>${inlineMd(line.slice(2).trim())}</h1>`);
+        continue;
+      }
+
+      // blockquote
+      if (line.startsWith("&gt; ")) {
+        if (inList) { out.push("</ul>"); inList = false; }
+        out.push(`<blockquote>${inlineMd(line.slice(5).trim())}</blockquote>`);
+        continue;
+      }
+
+      // list
+      if (line.startsWith("- ") || line.startsWith("* ")) {
+        if (!inList) { out.push("<ul>"); inList = true; }
+        out.push(`<li>${inlineMd(line.slice(2).trim())}</li>`);
+        continue;
+      }
+
+      // paragraph
+      if (inList) { out.push("</ul>"); inList = false; }
+      out.push(`<p>${inlineMd(line.trim())}</p>`);
+    }
+
+    if (inList) out.push("</ul>");
+    return out.join("");
+  }
+})();
+</script>
+</body>
+</html>
