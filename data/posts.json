@@ -2,13 +2,12 @@
   "posts": [
     {
       "id": "p1",
-      "title": "The yield curve as a mood ring",
+      "title": "Example",
       "desc": "A wireframe take: treat the curve like a system diagram.",
       "tags": ["rates", "curve", "macro"],
       "category": "macro",
       "dateISO": "2026-01-04",
       "minutes": 6,
-      "signal": 82,
       "url": "example.html?p=p1"
     },
     {
@@ -16,10 +15,9 @@
       "title": "DCF without cosplay",
       "desc": "Discounting is not wizardry.",
       "tags": ["valuation", "dcf", "accounting"],
-      "category": "accounting",
+      "category": "macro",
       "dateISO": "2026-01-02",
       "minutes": 7,
-      "signal": 74,
       "url": "example.html?p=p2"
     }
   ]

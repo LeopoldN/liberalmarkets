@@ -2,7 +2,7 @@
    Liberal Markets — app.js
    Full client logic
    - Tape loads from static tape.json (GitHub Actions)
-   - Restores: filters, sorting, pinning, signals rail, export pins,
+   - Restores: filters, sorting, pinning, export pins,
      density toggle, and Cmd/Ctrl+K quick search modal.
    ============================================================ */
 
@@ -145,7 +145,6 @@ const WATCH = [
  * @property {string} category
  * @property {string} dateISO
  * @property {number} minutes
- * @property {number} signal
  */
 
 /** @type {Post[]} */
@@ -283,8 +282,6 @@ function selectPosts(s) {
 
   if (s.sort === "new") {
     items.sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
-  } else if (s.sort === "signal") {
-    items.sort((a, b) => b.signal - a.signal);
   } else if (s.sort === "read") {
     items.sort((a, b) => a.minutes - b.minutes);
   }
@@ -302,10 +299,9 @@ function renderPosts(posts, pins) {
   const pill = document.getElementById("resultPill");
   if (!postList) return;
 
-  if (pill) pill.textContent = `${posts.length} shown`;
+  if (pill) pill.textContent = `${posts.length}`;
 
   setHTML(postList, posts.map(p => {
-    const scoreW = clamp(p.signal, 0, 100);
     const isPinned = pins.has(p.id);
     const pinLabel = isPinned ? "Pinned" : "Pin";
     const pinIcon = `
@@ -313,23 +309,15 @@ function renderPosts(posts, pins) {
     `;
 
     return `
-      <article class="post" data-id="${esc(p.id)}">
+      <article class="post" data-id="${esc(p.id)}" data-open-post="${esc(p.id)}" tabindex="0" role="link" aria-label="Open ${esc(p.title)}">
         <div class="postInner">
           <div class="postTop">
             <div class="tagRow">
               ${p.tags.slice(0, 3).map(t => `<span class="tag">${esc(t)}</span>`).join(" ")}
             </div>
-            <div class="score" title="Signal score">
-              <span>${p.signal}</span>
-              <span class="scoreBar" aria-hidden="true">
-                <span class="scoreFill" style="width:${scoreW}%"></span>
-              </span>
-            </div>
           </div>
 
-          <h3 class="postTitle">
-            <a href="#" data-open="${esc(p.id)}">${esc(p.title)}</a>
-          </h3>
+          <h3 class="postTitle"><a href="${esc(p.url)}">${esc(p.title)}</a></h3>
 
           <p class="postDesc">${esc(p.desc)}</p>
 
@@ -354,24 +342,11 @@ function renderPosts(posts, pins) {
 
 /**
  * Render signals and pins in the left rail.
- * @param {Post[]} currentPosts
  * @param {Set<string>} pins
  */
-function renderRail(currentPosts, pins) {
-  const signals = document.getElementById("signals");
+function renderRail(pins) {
   const pinsEl = document.getElementById("pins");
-  if (!signals || !pinsEl) return;
-
-  const topSignals = [...currentPosts].sort((a, b) => b.signal - a.signal).slice(0, 4);
-
-  const icon = `
-    <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M4 18V6"></path>
-      <path d="M4 18h16"></path>
-      <path d="M7 16l3-3 3 2 5-6"></path>
-      <path d="M17 9h2v2"></path>
-    </svg>
-  `;
+  if (!pinsEl) return;
 
   const unpinIcon = `
       <svg viewBox="0 0 640 640" class="icon" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M73 39.1C63.6 29.7 48.4 29.7 39.1 39.1C29.8 48.5 29.7 63.7 39 73.1L567 601.1C576.4 610.5 591.6 610.5 600.9 601.1C610.2 591.7 610.3 576.5 600.9 567.2L449.8 416L480 416C490 416 499.5 411.3 505.5 403.3C511.5 395.3 513.5 384.9 510.7 375.2L507 361.8C494.6 318.5 466 283.3 428.8 262.1L418.5 128L448 128C465.7 128 480 113.7 480 96C480 78.3 465.7 64 448 64L192 64C184.6 64 177.9 66.5 172.5 70.6L222.1 120.3L217.3 183.4L73 39.1zM314.2 416L181.7 283.6C159 304.1 141.9 331 133 361.9L129.2 375.3C126.4 385 128.4 395.3 134.4 403.4C140.4 411.5 150 416 160 416L314.2 416zM288 576C288 593.7 302.3 608 320 608C337.7 608 352 593.7 352 576L352 464L288 464L288 576z"/></svg>
@@ -379,16 +354,6 @@ function renderRail(currentPosts, pins) {
   const openIcon = `
       <svg viewBox="0 0 640 640" class="icon" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M320 205.3L320 514.6L320.5 514.4C375.1 491.7 433.7 480 492.8 480L512 480L512 160L492.8 160C450.6 160 408.7 168.4 369.7 184.6C352.9 191.6 336.3 198.5 320 205.3zM294.9 125.5L320 136L345.1 125.5C391.9 106 442.1 96 492.8 96L528 96C554.5 96 576 117.5 576 144L576 496C576 522.5 554.5 544 528 544L492.8 544C442.1 544 391.9 554 345.1 573.5L332.3 578.8C324.4 582.1 315.6 582.1 307.7 578.8L294.9 573.5C248.1 554 197.9 544 147.2 544L112 544C85.5 544 64 522.5 64 496L64 144C64 117.5 85.5 96 112 96L147.2 96C197.9 96 248.1 106 294.9 125.5z"/></svg>
     `;
-
-  setHTML(signals, topSignals.map(p => `
-    <div class="signal">
-      <div class="signalLeft">
-        <div class="sigIcon" aria-hidden="true">${icon}</div>
-        <div class="sigName" title="${esc(p.title)}">${esc(p.title)}</div>
-      </div>
-      <div class="sigVal">${p.signal}</div>
-    </div>
-  `).join(""));
 
   const pinnedPosts = POSTS.filter(p => pins.has(p.id)).slice(0, 6);
   const pinnedNotes = (notePins || []).slice(0, 6);
@@ -421,15 +386,15 @@ function renderRail(currentPosts, pins) {
   const postsHTML = pinnedPosts.map(p => `
     <div class="pin">
       <div class="pinTitle" title="${esc(p.title)}">${esc(p.title)}</div>
-        <button
+      <button
         class="pinBtn pinBtnIcon"
         type="button"
-        data-unpin-note="${esc(p.id)}"
-        aria-label="Unpin note"
-        title="Unpin note"
-        >
-          ${unpinIcon}
-        </button>
+        data-unpin="${esc(p.id)}"
+        aria-label="Unpin post"
+        title="Unpin post"
+      >
+        ${unpinIcon}
+      </button>
     </div>
   `).join("");
 
@@ -465,7 +430,7 @@ function renderModalList(posts) {
   if (!modalList) return;
 
   setHTML(modalList, posts.map(p => `
-    <div class="modalItem" role="button" tabindex="0" data-open="${esc(p.id)}">
+    <div class="modalItem" data-open-post="${esc(p.id)}" tabindex="0" role="button">
       <div class="modalItemTitle">${esc(p.title)}</div>
       <div class="modalItemMeta">${esc(p.category)} • ${p.minutes}m</div>
     </div>
@@ -551,19 +516,30 @@ async function renderHeroIndicators() {
 
   const initial = selectPosts(state);
   renderPosts(initial, pinSet);
-  renderRail(initial, pinSet);
+  renderRail(pinSet);
 
 
   // initial renders
   renderTape();
   renderHeroIndicators();
 
+  document.addEventListener("keydown", (e) => {
+    const el = /** @type {HTMLElement|null} */ (document.activeElement);
+    const openPostId = el?.closest?.("[data-open-post]")?.getAttribute?.("data-open-post");
+    if (!openPostId) return;
+
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      const p = POSTS.find(x => x.id === openPostId);
+      if (p?.url) window.location.href = p.url;
+    }
+  });
+
   // Keep note pins in sync when another page updates localStorage.
   window.addEventListener("storage", (e) => {
     if (e.key === "lw_note_pins") {
       notePins = loadNotePins();
-      const posts = selectPosts(state);
-      renderRail(posts, pinSet);
+      renderRail(pinSet);
     }
   });
 
@@ -571,22 +547,32 @@ async function renderHeroIndicators() {
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState !== "visible") return;
     notePins = loadNotePins();
-    const posts = selectPosts(state);
-    renderRail(posts, pinSet);
+    renderRail(pinSet);
   });
 
 
-  // Filter chips
+  // Filter chips + nav chips
   document.querySelectorAll(".chip").forEach(btn => {
     btn.addEventListener("click", () => {
+      // Nav chips (page links)
+      const nav = btn.getAttribute("data-nav");
+      if (nav === "trumptracker") {
+        window.location.href = "trumptracker.html";
+        return;
+      }
+
+      // Filter chips (stay on this page)
       document.querySelectorAll(".chip").forEach(b => b.classList.remove("is-active"));
       btn.classList.add("is-active");
       document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
 
-      state.filter = btn.getAttribute("data-filter") || "all";
+      const f = btn.getAttribute("data-filter");
+      if (!f) return;
+
+      state.filter = f || "all";
       const posts = selectPosts(state);
       renderPosts(posts, pinSet);
-      renderRail(posts, pinSet);
+      renderRail(pinSet);
     });
   });
 
@@ -600,18 +586,28 @@ async function renderHeroIndicators() {
       state.sort = btn.getAttribute("data-sort") || "new";
       const posts = selectPosts(state);
       renderPosts(posts, pinSet);
-      renderRail(posts, pinSet);
+      renderRail(pinSet);
     });
   });
 
-  // Search input
-  const q = document.getElementById("q");
+  // Search input (shared with modal)
+  const q = /** @type {HTMLInputElement|null} */ (document.getElementById("q"));
   if (q) {
     q.addEventListener("input", () => {
       state.q = q.value;
+
+      // Keep modal query in sync if it exists.
+      const modalQEl = /** @type {HTMLInputElement|null} */ (document.getElementById("modalQ"));
+      if (modalQEl && modalQEl.value !== q.value) modalQEl.value = q.value;
+
+      // Update main list
       const posts = selectPosts(state);
       renderPosts(posts, pinSet);
-      renderRail(posts, pinSet);
+      renderRail(pinSet);
+
+      // If the modal is open, also refresh its list
+      const modalEl = /** @type {HTMLDialogElement|null} */ (document.getElementById("modal"));
+      if (modalEl && modalEl.open) renderModalList(posts);
     });
   }
 
@@ -644,7 +640,7 @@ async function renderHeroIndicators() {
 
       const posts = selectPosts(state);
       renderPosts(posts, pinSet);
-      renderRail(posts, pinSet);
+      renderRail(pinSet);
       return;
     }
 
@@ -655,7 +651,7 @@ async function renderHeroIndicators() {
 
       const posts = selectPosts(state);
       renderPosts(posts, pinSet);
-      renderRail(posts, pinSet);
+      renderRail(pinSet);
       return;
     }
 
@@ -666,9 +662,20 @@ async function renderHeroIndicators() {
 
       const posts = selectPosts(state);
       renderPosts(posts, pinSet);
-      renderRail(posts, pinSet);
+      renderRail(pinSet);
       return;
     }
+
+  // Open post card (click anywhere on card)
+  const openPostId = t.closest("[data-open-post]")?.getAttribute("data-open-post");
+  if (openPostId) {
+    // Ignore clicks on interactive elements inside the card
+    if (t.closest("button, a, input, textarea, select, [role='button']")) return;
+
+    const p = POSTS.find(x => x.id === openPostId);
+    if (p?.url) window.location.href = p.url;
+    return;
+  }
 
     // Export pins
     const exportBtn = t.closest("#exportBtn");
@@ -718,8 +725,18 @@ async function renderHeroIndicators() {
    * @param {string} query
    */
   function updateModal(query) {
-    const tmp = { ...state, q: query };
-    const posts = selectPosts(tmp);
+    // Shared query state
+    state.q = query;
+
+    // Sync the topbar search box
+    if (q && q.value !== query) q.value = query;
+
+    // Update main list
+    const posts = selectPosts(state);
+    renderPosts(posts, pinSet);
+    renderRail(pinSet);
+
+    // Update modal list
     renderModalList(posts);
   }
 
@@ -744,17 +761,23 @@ async function renderHeroIndicators() {
     modalQ.addEventListener("input", () => updateModal(modalQ.value));
   }
 
+  if (modal) {
+  modal.addEventListener("close", () => {
+    if (q && q.value !== state.q) q.value = state.q;
+  });
+  }
+
   const modalList = document.getElementById("modalList");
   if (modalList) {
     modalList.addEventListener("click", (e) => {
       if (!modal) return;
       const t = /** @type {HTMLElement} */ (e.target);
-      const openId = t.closest("[data-open]")?.getAttribute("data-open");
-      if (!openId) return;
-      const post = POSTS.find(p => p.id === openId);
-      if (post) {
-        modal.close();
-        openPost(post);
+    const openId = t.closest("[data-open-post]")?.getAttribute("data-open-post");
+    if (!openId) return;
+    const post = POSTS.find(p => p.id === openId);
+    if (post?.url) {
+      modal.close();
+      window.location.href = post.url;
       }
     });
 
@@ -763,12 +786,12 @@ async function renderHeroIndicators() {
       const ke = /** @type {KeyboardEvent} */ (e);
       if (ke.key !== "Enter") return;
       const t = /** @type {HTMLElement} */ (ke.target);
-      const openId = t.closest("[data-open]")?.getAttribute("data-open");
+      const openId = t.closest("[data-open-post]")?.getAttribute("data-open-post");
       if (!openId) return;
       const post = POSTS.find(p => p.id === openId);
-      if (post) {
+      if (post?.url) {
         modal.close();
-        openPost(post);
+        window.location.href = post.url;
       }
     });
   }

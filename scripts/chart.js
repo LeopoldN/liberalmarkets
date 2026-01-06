@@ -52,7 +52,7 @@ async function loadSeries(path) {
  * Render a blueprint wireframe line chart with hover tooltip.
  * @param {HTMLCanvasElement} canvas
  * @param {Point[]} series
- * @param {{title?: string}} opts
+ * @param {{title?: string, root?: Document|Element}} opts
  */
 function renderWireChart(canvas, series, opts = {}) {
   const root = opts.root || canvas.closest(".chartCard") || document;
@@ -95,8 +95,7 @@ function renderWireChart(canvas, series, opts = {}) {
     draw();
   }
 
-  // Choose a readable slice: last ~5 years (or all if shorter)
-// Range selection (default comes from active tab if present)
+  // Range selection (default comes from active tab if present)
   const rangeButtons = Array.from(root.querySelectorAll(".chartTab[data-range]"));
 
   const getActiveRange = () => {
@@ -126,57 +125,67 @@ function renderWireChart(canvas, series, opts = {}) {
 
   const pad = { l: 44, r: 18, t: 18, b: 34 };
   let hover = null;
-  let elect = [];
+
+  /** significant dates state for current slice */
+  let sig = [];
+  let sigWins = [];
+
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
   /**
-   * US presidential election day:
-   * Tuesday following the first Monday in November.
-   * @param {number} year
-   * @returns {Date}
+   * Significant markers you want on the chart.
+   * NOTE: Verify the April tariff date if you mean a different day.
+   * @returns {{ t:number, label:string, windowDays?: {before:number, after:number} }[]}
    */
-  function usElectionDay(year) {
-    const d = new Date(Date.UTC(year, 10, 1)); // Nov 1
-    const dow = d.getUTCDay(); // 0 Sun..6 Sat
+  function significantMarkers() {
+    const mk = (iso, label, windowDays) => ({
+      t: Date.parse(iso),
+      label,
+      windowDays,
+    });
 
-    // First Monday in November
-    const firstMonday = new Date(d);
-    const offsetToMonday = (1 - dow + 7) % 7;
-    firstMonday.setUTCDate(1 + offsetToMonday);
-
-    // Election day: Tuesday after first Monday
-    const election = new Date(firstMonday);
-    election.setUTCDate(firstMonday.getUTCDate() + 1);
-    return election;
+    return [
+      mk("2021-01-20", "Biden Inauguration"),
+      mk("2022-08-16", "IRA Signed (Inflation Reduction Act)"),
+      mk("2025-01-20", "Trump 2nd Inauguration"),
+      mk("2025-04-02", "Liberation Day Tariffs", { before: 7, after: 21 }),
+    ].filter(m => Number.isFinite(m.t));
   }
 
   /**
-   * Election shading windows in [minT, maxT]
-   * Window: 30d before → 10d after election day
-   * @param {number} minTms
-   * @param {number} maxTms
-   * @returns {{start:number,end:number,label:string}[]}
+   * Markers inside [minT, maxT]
+   * @param {number} minT
+   * @param {number} maxT
+   * @returns {{t:number,label:string,windowDays?:{before:number,after:number}}[]}
    */
-  function electionWindows(minTms, maxTms) {
-    const out = [];
-    const minY = new Date(minTms).getUTCFullYear();
-    const maxY = new Date(maxTms).getUTCFullYear();
+  function markersInRange(minT, maxT) {
+    return significantMarkers().filter(m => m.t >= minT && m.t <= maxT);
+  }
 
-    for (let y = minY; y <= maxY; y++) {
-      if (y % 4 !== 0) continue;
-      const ed = usElectionDay(y).getTime();
-      const start = ed - 1000 * 60 * 60 * 24 * 30;
-      const end = ed + 1000 * 60 * 60 * 24 * 10;
-      if (end < minTms || start > maxTms) continue;
+  /**
+   * Shading windows for markers that have windowDays
+   * @param {{t:number,label:string,windowDays?:{before:number,after:number}}[]} markers
+   * @param {number} minT
+   * @param {number} maxT
+   * @returns {{start:number,end:number,label:string,t:number}[]}
+   */
+  function markerWindows(markers, minT, maxT) {
+    const day = 1000 * 60 * 60 * 24;
+    const out = [];
+    for (const m of markers) {
+      if (!m.windowDays) continue;
+      const start = m.t - (m.windowDays.before ?? 0) * day;
+      const end = m.t + (m.windowDays.after ?? 0) * day;
+      if (end < minT || start > maxT) continue;
       out.push({
-        start: Math.max(start, minTms),
-        end: Math.min(end, maxTms),
-        label: `Election ${y}`,
+        start: Math.max(start, minT),
+        end: Math.min(end, maxT),
+        label: m.label,
+        t: m.t,
       });
     }
     return out;
   }
-
-  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
   // Hook up range selector buttons (optional)
   if (rangeButtons.length) {
@@ -188,7 +197,8 @@ function renderWireChart(canvas, series, opts = {}) {
         });
         hover = null;
         data = sliceSeries();
-        elect = [];
+        sig = [];
+        sigWins = [];
         if (tip) tip.classList.remove("is-on");
         resize(); // redraw using new slice + current size
       });
@@ -200,16 +210,16 @@ function renderWireChart(canvas, series, opts = {}) {
     const h = canvas.getBoundingClientRect().height;
 
     ctx.clearRect(0, 0, w, h);
+
     // Subtle vignette to make the plot feel "framed"
+    // Bottom-weighted haze (tape-style, subtle)
     ctx.save();
-    const vign = ctx.createRadialGradient(
-      w * 0.5, h * 0.35, Math.min(w, h) * 0.10,
-      w * 0.5, h * 0.45, Math.min(w, h) * 0.85
-    );
-    vign.addColorStop(0, "rgba(163,177,138,0.06)");
-    vign.addColorStop(1, "rgba(52,78,65,0.03)");
-    ctx.fillStyle = vign;
-    ctx.fillRect(0, 0, w, h);
+    const haze = ctx.createLinearGradient(0, h - pad.b, 0, pad.t);
+    haze.addColorStop(0, "rgba(88,129,87,0.10)");
+    haze.addColorStop(0.45, "rgba(88,129,87,0.04)");
+    haze.addColorStop(1, "rgba(88,129,87,0.00)");
+    ctx.fillStyle = haze;
+    ctx.fillRect(pad.l, pad.t, (w - pad.l - pad.r), (h - pad.t - pad.b));
     ctx.restore();
 
     // If no data, draw a polite placeholder
@@ -233,11 +243,14 @@ function renderWireChart(canvas, series, opts = {}) {
     const x = (t) => pad.l + ((t - minT) / spanT) * (w - pad.l - pad.r);
     const y = (v) => pad.t + (1 - (v - minV) / spanV) * (h - pad.t - pad.b);
 
-    // Regime shading: elections (30d before → 10d after)
-    elect = electionWindows(minT, maxT2);
-    if (elect.length) {
+    // Significant markers (only the ones you want)
+    sig = markersInRange(minT, maxT2);
+    sigWins = markerWindows(sig, minT, maxT2);
+
+    // Optional shading windows around selected markers
+    if (sigWins.length) {
       ctx.save();
-      for (const win of elect) {
+      for (const win of sigWins) {
         const x0 = x(win.start);
         const x1 = x(win.end);
 
@@ -260,7 +273,6 @@ function renderWireChart(canvas, series, opts = {}) {
       }
       ctx.restore();
     }
-
 
     // Grid: subtle
     ctx.save();
@@ -297,24 +309,52 @@ function renderWireChart(canvas, series, opts = {}) {
     ctx.stroke();
     ctx.restore();
 
-    // Election markers on baseline (tiny triangles)
-    if (elect.length) {
+    // Significant marker lines + baseline triangles + labels
+    if (sig.length) {
       ctx.save();
-      ctx.fillStyle = "rgba(52,78,65,0.55)";
-      ctx.globalAlpha = 0.75;
+      ctx.strokeStyle = "rgba(52,78,65,0.45)";
+      ctx.fillStyle = "rgba(52,78,65,0.60)";
+      ctx.globalAlpha = 0.85;
+      ctx.lineWidth = 1;
 
-      for (const win of elect) {
-        const mid = (win.start + win.end) / 2;
-        const px = clamp(x(mid), pad.l, w - pad.r);
+      ctx.font = `11px ${css.getPropertyValue("--mono") || "ui-monospace"}`;
+
+      // simple label collision avoidance: only label if far enough from previous label
+      let lastLabelX = -Infinity;
+      const minLabelGap = 90; // px
+
+      for (const m of sig) {
+        const px = clamp(x(m.t), pad.l, w - pad.r);
+
+        // vertical line
+        ctx.beginPath();
+        ctx.moveTo(px, pad.t);
+        ctx.lineTo(px, h - pad.b);
+        ctx.stroke();
+
+        // baseline triangle
         const by = h - pad.b;
-
         ctx.beginPath();
         ctx.moveTo(px, by + 2);
         ctx.lineTo(px - 5, by + 10);
         ctx.lineTo(px + 5, by + 10);
         ctx.closePath();
         ctx.fill();
+
+        // label near top (only if not too crowded)
+        const label = m.label;
+        const tw = ctx.measureText(label).width;
+        const lx = clamp(px - tw / 2, pad.l, (w - pad.r) - tw);
+        const ly = pad.t + 12;
+
+        if (lx - lastLabelX >= minLabelGap) {
+          ctx.globalAlpha = 0.75;
+          ctx.fillText(label, lx, ly);
+          ctx.globalAlpha = 0.85;
+          lastLabelX = lx;
+        }
       }
+
       ctx.restore();
     }
 
@@ -468,16 +508,31 @@ function renderWireChart(canvas, series, opts = {}) {
       tip.style.left = `${Math.min(maxLeft, Math.max(14, leftWithinCard))}px`;
       tip.style.top = `14px`;
 
-      const inElection = (() => {
-        for (const win of elect) {
+      // Add significant label when close to a marker (±3 days) or inside a window.
+      const day = 1000 * 60 * 60 * 24;
+
+      const nearestSig = (() => {
+        let best = null;
+        let bestDist = Infinity;
+        for (const m of sig) {
+          const dist = Math.abs(m.t - hover.t);
+          if (dist < bestDist) { bestDist = dist; best = m; }
+        }
+        return (best && bestDist <= 3 * day) ? best.label : null;
+      })();
+
+      const inSigWindow = (() => {
+        for (const win of sigWins) {
           if (hover.t >= win.start && hover.t <= win.end) return win.label;
         }
         return null;
       })();
 
+      const sigLabel = nearestSig || inSigWindow;
+
       tip.textContent =
         `${hover.d}  •  ${hover.v.toLocaleString(undefined, { maximumFractionDigits: 3 })}` +
-        (inElection ? `  •  ${inElection}` : "");
+        (sigLabel ? `  •  ${sigLabel}` : "");
     }
   });
 
