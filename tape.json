@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-09T18:48:30.729Z",
+  "generatedAt": "2026-01-10T18:44:08.414Z",
   "source": "stooq",
   "items": [
     {
@@ -16,17 +16,17 @@
       "sym": "usdeur",
       "name": "USD/EUR",
       "date": "2026-01-09",
-      "close": 0.859291,
+      "close": 0.85949,
       "prevDate": "2026-01-08",
-      "prevClose": 0.857684,
-      "deltaPct": 0.1873650435358476,
+      "prevClose": 0.857721,
+      "deltaPct": 0.20624422160586686,
       "ok": true
     },
     {
       "sym": "cb.f",
       "name": "Brent Oil",
       "date": "2026-01-09",
-      "close": 63.56,
+      "close": 63.34,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -36,30 +36,30 @@
       "sym": "^spx",
       "name": "S&P 500",
       "date": "2026-01-09",
-      "close": 6970.85,
+      "close": 6966.28,
       "prevDate": "2026-01-08",
       "prevClose": 6921.46,
-      "deltaPct": 0.713577771163898,
+      "deltaPct": 0.6475512391894256,
       "ok": true
     },
     {
       "sym": "xauusd",
       "name": "Gold",
       "date": "2026-01-09",
-      "close": 4499.025,
+      "close": 4508.015,
       "prevDate": "2026-01-08",
       "prevClose": 4478.355,
-      "deltaPct": 0.4615534052124115,
+      "deltaPct": 0.6622967585196093,
       "ok": true
     },
     {
       "sym": "asts.us",
       "name": "ASTS",
       "date": "2026-01-09",
-      "close": 99.075,
+      "close": 97.67,
       "prevDate": "2026-01-08",
       "prevClose": 90.56,
-      "deltaPct": 9.402606007067149,
+      "deltaPct": 7.851148409893982,
       "ok": true
     }
   ]
