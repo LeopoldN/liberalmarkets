@@ -249,7 +249,7 @@ async function main() {
   for (const w of HEATMAP) {
     const item = await fetchOne(w);
     heatmapItems.push(item);
-    await sleep(250);
+    await sleep(350);
   }
 
   const heatmapPayload = {
