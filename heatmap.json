@@ -1,0 +1,292 @@
+{
+  "generatedAt": "2026-01-13T23:39:41.359Z",
+  "source": "stooq",
+  "items": [
+    {
+      "sym": "spy.us",
+      "name": "S&P 500 (SPY)",
+      "group": "Index",
+      "date": "2026-01-13",
+      "close": 693.87,
+      "prevDate": "2026-01-12",
+      "prevClose": 695.16,
+      "deltaPct": -0.18556878991886627,
+      "ok": true
+    },
+    {
+      "sym": "qqq.us",
+      "name": "Nasdaq 100 (QQQ)",
+      "group": "Index",
+      "date": "2026-01-13",
+      "close": 626.24,
+      "prevDate": "2026-01-12",
+      "prevClose": 627.17,
+      "deltaPct": -0.14828515394549324,
+      "ok": true
+    },
+    {
+      "sym": "iwm.us",
+      "name": "Russell 2000 (IWM)",
+      "group": "Index",
+      "date": "2026-01-13",
+      "close": 261.35,
+      "prevDate": "2026-01-12",
+      "prevClose": 261.5,
+      "deltaPct": -0.05736137667302632,
+      "ok": true
+    },
+    {
+      "sym": "dia.us",
+      "name": "Dow 30 (DIA)",
+      "group": "Index",
+      "date": "2026-01-13",
+      "close": 491.94,
+      "prevDate": "2026-01-12",
+      "prevClose": 495.9,
+      "deltaPct": -0.7985480943738632,
+      "ok": true
+    },
+    {
+      "sym": "aapl.us",
+      "name": "Apple",
+      "group": "Mega",
+      "date": "2026-01-13",
+      "close": 261.05,
+      "prevDate": "2026-01-12",
+      "prevClose": 260.25,
+      "deltaPct": 0.307396733909715,
+      "ok": true
+    },
+    {
+      "sym": "msft.us",
+      "name": "Microsoft",
+      "group": "Mega",
+      "date": "2026-01-13",
+      "close": 470.67,
+      "prevDate": "2026-01-12",
+      "prevClose": 477.18,
+      "deltaPct": -1.3642650572111115,
+      "ok": true
+    },
+    {
+      "sym": "nvda.us",
+      "name": "Nvidia",
+      "group": "Mega",
+      "date": "2026-01-13",
+      "close": 185.805,
+      "prevDate": "2026-01-12",
+      "prevClose": 184.94,
+      "deltaPct": 0.4677192603006475,
+      "ok": true
+    },
+    {
+      "sym": "amzn.us",
+      "name": "Amazon",
+      "group": "Mega",
+      "date": "2026-01-13",
+      "close": 242.6,
+      "prevDate": "2026-01-12",
+      "prevClose": 246.47,
+      "deltaPct": -1.5701708118635138,
+      "ok": true
+    },
+    {
+      "sym": "googl.us",
+      "name": "Alphabet",
+      "group": "Mega",
+      "date": "2026-01-13",
+      "close": 335.97,
+      "prevDate": "2026-01-12",
+      "prevClose": 331.86,
+      "deltaPct": 1.2384740553245344,
+      "ok": true
+    },
+    {
+      "sym": "meta.us",
+      "name": "Meta",
+      "group": "Mega",
+      "date": "2026-01-13",
+      "close": 631.09,
+      "prevDate": "2026-01-12",
+      "prevClose": 641.97,
+      "deltaPct": -1.6947832453229839,
+      "ok": true
+    },
+    {
+      "sym": "tsla.us",
+      "name": "Tesla",
+      "group": "Mega",
+      "date": "2026-01-13",
+      "close": 447.2,
+      "prevDate": "2026-01-12",
+      "prevClose": 448.96,
+      "deltaPct": -0.3920171062009925,
+      "ok": true
+    },
+    {
+      "sym": "xlk.us",
+      "name": "Tech (XLK)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 146.48,
+      "prevDate": "2026-01-12",
+      "prevClose": 146.79,
+      "deltaPct": -0.21118604809592378,
+      "ok": true
+    },
+    {
+      "sym": "xlf.us",
+      "name": "Financials (XLF)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 54.23,
+      "prevDate": "2026-01-12",
+      "prevClose": 55.29,
+      "deltaPct": -1.9171640441309479,
+      "ok": true
+    },
+    {
+      "sym": "xle.us",
+      "name": "Energy (XLE)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 47,
+      "prevDate": "2026-01-12",
+      "prevClose": 46.34,
+      "deltaPct": 1.4242555028053383,
+      "ok": true
+    },
+    {
+      "sym": "xly.us",
+      "name": "Cons Disc (XLY)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 124.21,
+      "prevDate": "2026-01-12",
+      "prevClose": 124.52,
+      "deltaPct": -0.24895599100546173,
+      "ok": true
+    },
+    {
+      "sym": "xlp.us",
+      "name": "Cons Staples (XLP)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 81.11,
+      "prevDate": "2026-01-12",
+      "prevClose": 80.18,
+      "deltaPct": 1.1598902469443617,
+      "ok": true
+    },
+    {
+      "sym": "xli.us",
+      "name": "Industrials (XLI)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 164.01,
+      "prevDate": "2026-01-12",
+      "prevClose": 163.17,
+      "deltaPct": 0.5148005148005064,
+      "ok": true
+    },
+    {
+      "sym": "xlv.us",
+      "name": "Health Care (XLV)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 156.74,
+      "prevDate": "2026-01-12",
+      "prevClose": 157.38,
+      "deltaPct": -0.40665904180962054,
+      "ok": true
+    },
+    {
+      "sym": "xlu.us",
+      "name": "Utilities (XLU)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 42.85,
+      "prevDate": "2026-01-12",
+      "prevClose": 42.58,
+      "deltaPct": 0.6341005166744962,
+      "ok": true
+    },
+    {
+      "sym": "xlb.us",
+      "name": "Materials (XLB)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 48.73,
+      "prevDate": "2026-01-12",
+      "prevClose": 48.52,
+      "deltaPct": 0.4328112118713756,
+      "ok": true
+    },
+    {
+      "sym": "xlc.us",
+      "name": "Comm (XLC)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 116.89,
+      "prevDate": "2026-01-12",
+      "prevClose": 117.55,
+      "deltaPct": -0.5614632071458958,
+      "ok": true
+    },
+    {
+      "sym": "xlre.us",
+      "name": "Real Estate (XLRE)",
+      "group": "Sector",
+      "date": "2026-01-13",
+      "close": 40.93,
+      "prevDate": "2026-01-12",
+      "prevClose": 40.62,
+      "deltaPct": 0.7631708517971569,
+      "ok": true
+    },
+    {
+      "sym": "xauusd",
+      "name": "Gold",
+      "group": "Macro",
+      "date": "2026-01-14",
+      "close": 4596.025,
+      "prevDate": "2026-01-13",
+      "prevClose": 4586.07,
+      "deltaPct": 0.21707038924394517,
+      "ok": true
+    },
+    {
+      "sym": "cb.f",
+      "name": "Brent Oil",
+      "group": "Macro",
+      "date": "2026-01-13",
+      "close": 65.46,
+      "prevDate": null,
+      "prevClose": null,
+      "deltaPct": 0,
+      "ok": true
+    },
+    {
+      "sym": "10yusy.b",
+      "name": "US 10Y Yield",
+      "group": "Macro",
+      "date": "2026-01-13",
+      "close": 4.18,
+      "prevDate": "2026-01-12",
+      "prevClose": 4.179,
+      "deltaPct": 0.023929169657810334,
+      "ok": true
+    },
+    {
+      "sym": "usdeur",
+      "name": "USD/EUR",
+      "group": "Macro",
+      "date": "2026-01-14",
+      "close": 0.85873,
+      "prevDate": "2026-01-13",
+      "prevClose": 0.858745,
+      "deltaPct": -0.0017467350610478327,
+      "ok": true
+    }
+  ]
+}
