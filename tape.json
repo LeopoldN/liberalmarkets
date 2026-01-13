@@ -1,32 +1,32 @@
 {
-  "generatedAt": "2026-01-13T18:48:42.211Z",
+  "generatedAt": "2026-01-13T23:25:56.317Z",
   "source": "stooq",
   "items": [
     {
       "sym": "10yusy.b",
       "name": "US 10Y Yield",
       "date": "2026-01-13",
-      "close": 4.168,
+      "close": 4.18,
       "prevDate": "2026-01-12",
       "prevClose": 4.179,
-      "deltaPct": -0.263220866235947,
+      "deltaPct": 0.023929169657810334,
       "ok": true
     },
     {
       "sym": "usdeur",
       "name": "USD/EUR",
-      "date": "2026-01-13",
-      "close": 0.858184,
-      "prevDate": "2026-01-12",
-      "prevClose": 0.856942,
-      "deltaPct": 0.1449339628586177,
+      "date": "2026-01-14",
+      "close": 0.858752,
+      "prevDate": "2026-01-13",
+      "prevClose": 0.858745,
+      "deltaPct": 0.0008151430284764061,
       "ok": true
     },
     {
       "sym": "cb.f",
       "name": "Brent Oil",
       "date": "2026-01-13",
-      "close": 65.53,
+      "close": 65.46,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -36,30 +36,30 @@
       "sym": "^spx",
       "name": "S&P 500",
       "date": "2026-01-13",
-      "close": 6956.99,
+      "close": 6963.74,
       "prevDate": "2026-01-12",
       "prevClose": 6977.27,
-      "deltaPct": -0.290658094068319,
+      "deltaPct": -0.19391538524380358,
       "ok": true
     },
     {
       "sym": "xauusd",
       "name": "Gold",
-      "date": "2026-01-13",
-      "close": 4600.515,
-      "prevDate": "2026-01-12",
-      "prevClose": 4598.515,
-      "deltaPct": 0.043492301319014715,
+      "date": "2026-01-14",
+      "close": 4597.085,
+      "prevDate": "2026-01-13",
+      "prevClose": 4586.07,
+      "deltaPct": 0.24018386112729662,
       "ok": true
     },
     {
       "sym": "asts.us",
       "name": "ASTS",
       "date": "2026-01-13",
-      "close": 95.61,
+      "close": 92.72,
       "prevDate": "2026-01-12",
       "prevClose": 98.39,
-      "deltaPct": -2.825490395365382,
+      "deltaPct": -5.762780770403497,
       "ok": true
     }
   ]
