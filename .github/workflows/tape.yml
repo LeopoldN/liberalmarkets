@@ -1,4 +1,4 @@
-name: Update tape.json
+name: Update tape.json + heatmap.json
 
 on:
   workflow_dispatch:
@@ -26,13 +26,16 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Generate tape.json
+      - name: Generate tape.json + heatmap.json
         run: node scripts/fetch-tape.mjs
 
       - name: Debug list files
         run: |
           ls -la
           test -f tape.json && echo "tape.json exists" || echo "tape.json missing"
+          test -f heatmap.json && echo "heatmap.json exists" || echo "heatmap.json missing"
+          echo "---- git status ----"
+          git status --porcelain
 
       - name: Commit changes
         run: |
@@ -44,6 +47,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add tape.json
-          git commit -m "chore: update tape.json"
+          git add tape.json heatmap.json
+          git commit -m "chore: update tape + heatmap"
           git push
