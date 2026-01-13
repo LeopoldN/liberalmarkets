@@ -3,7 +3,7 @@ name: Update FRED CSVs
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 18 * * *" # daily 18:15 UTC
+    - cron: "15 18 * * 0" # daily 18:15 UTC
 
 permissions:
   contents: write

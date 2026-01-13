@@ -3,12 +3,17 @@
  * - Writes to /data/<SERIES_ID>.csv
  * - De-dupes by date
  * - Updates the value if the date exists (handles revisions)
+ * - Incremental pulls with revision backfill window
  */
 
 import fs from "node:fs/promises";
 import path from "node:path";
 
 const DATA_DIR = "data";
+
+// How far back to re-pull data to catch revisions (days)
+const REVISION_BACKFILL_DAYS = 365 * 5;
+const FALLBACK_START = "1970-01-01";
 
 const SERIES = [
   { id: "CPIAUCSL", name: "CPI (Inflation)" },
@@ -46,18 +51,10 @@ const SERIES = [
   { id: "GFDEGDQ188S", name: "Debt as % of GDP" },
   { id: "FYFSD", name: "Federal Deficit" },
   { id: "FEDFUNDS", name: "Federal Funds Rate" },
-  { id: "MORTGAGE30US", name: "Avg 30yr Fixed Mortgage" },
-  { id: "MEHOINUSA646N", name: "Total blank Employment" },
-  { id: "MEHOINUSA646N", name: "Total blank Employment" },
-  { id: "MEHOINUSA646N", name: "Total blank Employment" },
-  { id: "MEHOINUSA646N", name: "Total blank Employment" },
-  { id: "MEHOINUSA646N", name: "Total blank Employment" },
 ];
 
 /**
  * Ensure directory exists.
- * @param {string} dir
- * @returns {Promise<void>}
  */
 async function ensureDir(dir) {
   await fs.mkdir(dir, { recursive: true });
@@ -65,12 +62,8 @@ async function ensureDir(dir) {
 
 /**
  * Fetch observations for a series (ascending).
- * @param {string} seriesId
- * @param {string} apiKey
- * @param {string} observationStart
- * @returns {Promise<Array<{date:string, value:string}>>}
  */
-async function fetchObservations(seriesId, apiKey, observationStart = "1970-01-01") {
+async function fetchObservations(seriesId, apiKey, observationStart) {
   const url = new URL("https://api.stlouisfed.org/fred/series/observations");
   url.searchParams.set("series_id", seriesId);
   url.searchParams.set("api_key", apiKey);
@@ -88,25 +81,16 @@ async function fetchObservations(seriesId, apiKey, observationStart = "1970-01-0
   const obs = Array.isArray(data.observations) ? data.observations : [];
 
   return obs
-    .filter(o => o && typeof o.date === "string" && typeof o.value === "string" && o.value !== ".")
+    .filter(o => o && o.value !== ".")
     .map(o => ({ date: o.date, value: o.value }));
 }
 
-
-
-
-
-
 /**
- * Parse a CSV of shape: date,value
- * @param {string} text
- * @returns {Map<string, string>}
+ * Parse CSV into Map(date -> value)
  */
 function parseCsvToMap(text) {
   const lines = text.trim().split("\n").filter(Boolean);
   const map = new Map();
-
-  // empty or header-only
   if (lines.length <= 1) return map;
 
   for (let i = 1; i < lines.length; i++) {
@@ -117,9 +101,7 @@ function parseCsvToMap(text) {
 }
 
 /**
- * Serialize Map(date->value) back to CSV sorted by date asc.
- * @param {Map<string, string>} map
- * @returns {string}
+ * Serialize Map(date -> value) to CSV
  */
 function mapToCsv(map) {
   const rows = [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
@@ -128,9 +110,7 @@ function mapToCsv(map) {
 }
 
 /**
- * Read file if exists else return empty string.
- * @param {string} filePath
- * @returns {Promise<string>}
+ * Read file if exists
  */
 async function readIfExists(filePath) {
   try {
@@ -141,9 +121,41 @@ async function readIfExists(filePath) {
 }
 
 /**
- * Read series CSV into sorted arrays.
- * @param {string} filePath
- * @returns {Promise<Array<{date:string, value:number}>>}
+ * Extract last date from existing CSV
+ */
+function getLastDateFromCsv(csvText) {
+  const text = csvText.trim();
+  if (!text) return null;
+
+  const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+  if (lines.length <= 1) return null;
+
+  const [date] = lines[lines.length - 1].split(",");
+  return date && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : null;
+}
+
+/**
+ * YYYY-MM-DD minus N days
+ */
+function minusDays(dateStr, days) {
+  const d = new Date(`${dateStr}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - days);
+  return d.toISOString().slice(0, 10);
+}
+
+/**
+ * Decide observation_start for incremental pulls
+ */
+function computeObservationStart(existingCsv) {
+  const lastDate = getLastDateFromCsv(existingCsv);
+  if (!lastDate) return FALLBACK_START;
+
+  const start = minusDays(lastDate, REVISION_BACKFILL_DAYS);
+  return start < FALLBACK_START ? FALLBACK_START : start;
+}
+
+/**
+ * Read series CSV into sorted array
  */
 async function readSeriesCsv(filePath) {
   const text = await readIfExists(filePath);
@@ -152,44 +164,29 @@ async function readSeriesCsv(filePath) {
 
   const out = [];
   for (let i = 1; i < lines.length; i++) {
-    const [dateRaw, valRaw] = lines[i].split(",");
-    const date = (dateRaw ?? "").trim();
-    const value = Number((valRaw ?? "").trim());
-    if (!date || !Number.isFinite(value)) continue;
-    out.push({ date, value });
+    const [date, val] = lines[i].split(",");
+    const value = Number(val);
+    if (date && Number.isFinite(value)) out.push({ date, value });
   }
-
-  out.sort((a, b) => a.date.localeCompare(b.date));
-  return out;
+  return out.sort((a, b) => a.date.localeCompare(b.date));
 }
 
 /**
- * Find latest value on or before targetDate (dates are YYYY-MM-DD).
- * @param {Array<{date:string, value:number}>} series
- * @param {string} targetDate
- * @returns {number|null}
+ * Find latest value as-of target date
  */
 function asOf(series, targetDate) {
-  // series is sorted asc
-  let lo = 0;
-  let hi = series.length - 1;
-  let best = null;
-
+  let lo = 0, hi = series.length - 1, best = null;
   while (lo <= hi) {
     const mid = (lo + hi) >> 1;
-    const d = series[mid].date;
-
-    if (d <= targetDate) {
+    if (series[mid].date <= targetDate) {
       best = series[mid].value;
       lo = mid + 1;
     } else {
       hi = mid - 1;
     }
   }
-
   return best;
 }
-
 
 async function main() {
   const apiKey = process.env.FRED_API_KEY;
@@ -198,62 +195,51 @@ async function main() {
   await ensureDir(DATA_DIR);
 
   for (const s of SERIES) {
-    const observations = await fetchObservations(s.id, apiKey, "1970-01-01");
-
     const filePath = path.join(DATA_DIR, `${s.id}.csv`);
     const existing = await readIfExists(filePath);
+
+    const observationStart = computeObservationStart(existing);
+    const observations = await fetchObservations(s.id, apiKey, observationStart);
+
     const map = parseCsvToMap(existing);
 
     let changed = 0;
     for (const o of observations) {
-    const prev = map.get(o.date);
-    if (prev !== o.value) {
-        map.set(o.date, o.value); // append or revision-update
+      if (map.get(o.date) !== o.value) {
+        map.set(o.date, o.value);
         changed++;
-    }
+      }
     }
 
     await fs.writeFile(filePath, mapToCsv(map), "utf8");
-    console.log(`${s.id}: merged ${observations.length} obs (${changed} new/updated)`);
-    
+    console.log(`${s.id}: fetched since ${observationStart}, ${changed} updates`);
   }
 
-    // ---- Derived series: House price to income ratio ----
-    {
-    const INCOME_ID = "MEHOINUSA646N";
-    const HOUSE_ID = "MSPUS";
-
-    const incomePath = path.join(DATA_DIR, `${INCOME_ID}.csv`);
-    const housePath = path.join(DATA_DIR, `${HOUSE_ID}.csv`);
-
-    const income = await readSeriesCsv(incomePath);
-    const house = await readSeriesCsv(housePath);
+  // ---- Derived: House price to income ratio ----
+  {
+    const income = await readSeriesCsv(path.join(DATA_DIR, "MEHOINUSA646N.csv"));
+    const house = await readSeriesCsv(path.join(DATA_DIR, "MSPUS.csv"));
 
     if (!income.length || !house.length) {
-        console.log("Derived: ratio skipped (missing income or housing series data)");
+      console.log("Derived ratio skipped (missing data)");
     } else {
-        const ratioMap = new Map();
-
-        // Build ratio on income dates (annual), using latest house value as-of that date
-        for (const inc of income) {
+      const ratioMap = new Map();
+      for (const inc of income) {
         const h = asOf(house, inc.date);
-        if (!Number.isFinite(inc.value) || !Number.isFinite(h) || inc.value === 0) continue;
-
-        const ratio = h / inc.value;
-        ratioMap.set(inc.date, String(ratio));
-        }
-
-        const ratioOutPath = path.join(DATA_DIR, "HOUSE_TO_INCOME_RATIO.csv");
-        await fs.writeFile(ratioOutPath, mapToCsv(ratioMap), "utf8");
-
-        console.log(`Derived: HOUSE_TO_INCOME_RATIO.csv (${ratioMap.size} rows)`);
+        if (!Number.isFinite(h) || inc.value === 0) continue;
+        ratioMap.set(inc.date, String(h / inc.value));
+      }
+      await fs.writeFile(
+        path.join(DATA_DIR, "HOUSE_TO_INCOME_RATIO.csv"),
+        mapToCsv(ratioMap),
+        "utf8"
+      );
+      console.log(`Derived: HOUSE_TO_INCOME_RATIO.csv (${ratioMap.size} rows)`);
     }
-    }
-
-
+  }
 }
 
-main().catch((e) => {
-  console.error(e);
+main().catch(err => {
+  console.error(err);
   process.exit(1);
 });
