@@ -560,6 +560,14 @@ async function renderHeroIndicators() {
         window.location.href = "trumptracker.html";
         return;
       }
+      if (nav === "markets") {
+        window.location.href = "markets.html";
+        return;
+      }
+      if (nav === "all") {
+        window.location.href = "index.html";
+        return;
+      }
 
       // Filter chips (stay on this page)
       document.querySelectorAll(".chip").forEach(b => b.classList.remove("is-active"));

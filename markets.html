@@ -8,6 +8,143 @@
   <meta name="description" content="Minimalist finance blog with wireframe iconography and calm, earthy palette." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css?v=2" />
+  <style>
+    /* Heatmap: same “wireframe card” vibe, just… colored by reality */
+    .hmSection {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.28);
+      box-shadow: 0 10px 24px rgba(0,0,0,.06);
+      backdrop-filter: blur(6px);
+    }
+    .hmHead {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    .hmKicker {
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .75;
+    }
+    .hmTitle {
+      margin: 6px 0 6px;
+      font-size: 22px;
+      line-height: 1.15;
+    }
+    .hmSub {
+      margin: 0;
+      max-width: 70ch;
+    }
+    .hmActions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .hmStamp {
+      font-size: 12px;
+    }
+    .hmGrid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+    @media (max-width: 1100px) {
+      .hmGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .hmGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hmHead { flex-direction: column; }
+      .hmActions { justify-content: flex-start; }
+    }
+    .hmTile {
+      position: relative;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.35);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+      cursor: pointer;
+      text-align: left;
+      min-height: 78px;
+      display: grid;
+      gap: 4px;
+      transition: transform .08s ease, filter .08s ease;
+    }
+    .hmTile:hover { transform: translateY(-1px); filter: contrast(1.03); }
+    .hmSym {
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .8;
+    }
+    .hmName {
+      font-size: 13px;
+      line-height: 1.2;
+      opacity: .95;
+    }
+    .hmNums {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 2px;
+    }
+    .hmPct {
+      font-variant-numeric: tabular-nums;
+      font-weight: 650;
+    }
+    .hmPx {
+      font-variant-numeric: tabular-nums;
+      opacity: .85;
+      font-size: 12px;
+    }
+    .hmTag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 11px;
+      opacity: .75;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.25);
+    }
+
+    /* Color bands (subtle, not Vegas). */
+    .hmDn3 { background: rgba(180, 65, 65, .22); }
+    .hmDn2 { background: rgba(180, 65, 65, .16); }
+    .hmDn1 { background: rgba(180, 65, 65, .10); }
+    .hmFlat { background: rgba(0, 0, 0, .03); }
+    .hmUp1 { background: rgba(88, 129, 87, .10); }
+    .hmUp2 { background: rgba(88, 129, 87, .16); }
+    .hmUp3 { background: rgba(88, 129, 87, .22); }
+
+    .hmLegend {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      opacity: .85;
+    }
+    .hmSwatch {
+      width: 14px;
+      height: 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(0,0,0,.10);
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 
 <body>
@@ -28,13 +165,13 @@
     </div>
 
     <nav class="nav">
-      <button class="chip is-active" data-filter="all" type="button" aria-pressed="true">
-        <span class="chipDot" aria-hidden="true"></span> All
+      <button class="chip" data-nav="all" type="button" aria-pressed="true">
+        <span class="chipDot" aria-hidden="true"></span> Home
       </button>
-      <button class="chip" data-nav="trumptracker" type="button" aria-pressed="false">
+      <button class="chip is-active" data-nav="trumptracker" type="button" aria-pressed="false">
         <span class="chipDot" aria-hidden="true"></span> Trump Tracker
       </button>
-      <button class="chip" data-filter="markets" type="button" aria-pressed="false">
+      <button class="chip" data-nav="markets" type="button" aria-pressed="false">
         <span class="chipDot" aria-hidden="true"></span> Markets
       </button>
     </nav>
@@ -167,33 +304,37 @@
           </div>
         </div>
       </aside>
+
     </section>
 
-    <section class="grid">
-      <div class="rail">
+    <section class="hmSection" aria-label="Stock heatmap">
+      <div class="hmHead">
+        <div>
+          <div class="hmKicker">MARKETS</div>
+          <h2 class="hmTitle">Stock heatmap</h2>
+          <p class="hmSub">Daily close-to-close moves, sourced from Stooq. Equal-size tiles because market-cap math on the client is how you get bugs and ulcers.</p>
+        </div>
 
-        <div class="railCard">
-          <div class="railTitle">Pinned notes</div>
-          <div class="pinList" id="pins"></div>
+        <div class="hmActions">
+          <button class="btn" id="hmRefresh" type="button" title="Refresh heatmap">Refresh</button>
+          <span class="hmStamp muted" id="hmStamp">Updated: —</span>
         </div>
       </div>
 
-      <section class="posts" aria-label="Posts">
-        <div class="postsHead">
-          <div class="postsTitle">
-            <span>Posts</span>
-            <span class="pill" id="resultPill">—</span>
-          </div>
+      <div class="hmGrid" id="hmGrid" role="list" aria-label="Heatmap tiles"></div>
 
-          <div class="sort">
-            <button class="sortBtn is-active" data-sort="new" type="button" aria-pressed="true">Newest</button>
-            <button class="sortBtn" data-sort="read" type="button" aria-pressed="false">Reading</button>
-          </div>
-        </div>
-
-        <div class="postList" id="postList"></div>
-      </section>
+      <div class="hmLegend" aria-label="Legend">
+        <span class="muted">Legend:</span>
+        <span><span class="hmSwatch hmDn3"></span> down big</span>
+        <span><span class="hmSwatch hmDn2"></span> down</span>
+        <span><span class="hmSwatch hmDn1"></span> slightly down</span>
+        <span><span class="hmSwatch hmFlat"></span> flat</span>
+        <span><span class="hmSwatch hmUp1"></span> slightly up</span>
+        <span><span class="hmSwatch hmUp2"></span> up</span>
+        <span><span class="hmSwatch hmUp3"></span> up big</span>
+      </div>
     </section>
+
 
     <footer class="footer">
       <div class="footerLeft">
@@ -234,5 +375,130 @@
 
   <script src="app.js?v=2"></script>
   <script src="scripts/chart.js?v=1"></script>
+  <script>
+    /**
+     * Heatmap renderer (reads /heatmap.json generated by scripts/fetch-tape.mjs).
+     * No direct Stooq client fetch because CORS is a thing that exists to ruin your day.
+     */
+    (function () {
+      const grid = document.getElementById("hmGrid");
+      const stamp = document.getElementById("hmStamp");
+      const btn = document.getElementById("hmRefresh");
+
+      if (!grid || !stamp || !btn) return;
+
+      /**
+       * Map percent change into a subtle color band.
+       * @param {number} pct
+       * @returns {string}
+       */
+      function bandClass(pct) {
+        if (!Number.isFinite(pct)) return "hmFlat";
+        if (pct <= -2.0) return "hmDn3";
+        if (pct <= -1.0) return "hmDn2";
+        if (pct <= -0.25) return "hmDn1";
+        if (pct < 0.25) return "hmFlat";
+        if (pct < 1.0) return "hmUp1";
+        if (pct < 2.0) return "hmUp2";
+        return "hmUp3";
+      }
+
+      /**
+       * Format a percent change.
+       * @param {number} pct
+       * @returns {string}
+       */
+      function fmtPct(pct) {
+        if (!Number.isFinite(pct)) return "—";
+        const sign = pct > 0 ? "+" : "";
+        return `${sign}${pct.toFixed(2)}%`;
+      }
+
+      /**
+       * Format price (keep it simple and readable).
+       * @param {number} px
+       * @returns {string}
+       */
+      function fmtPx(px) {
+        if (!Number.isFinite(px)) return "—";
+        if (Math.abs(px) >= 1000) return px.toFixed(0);
+        if (Math.abs(px) >= 100) return px.toFixed(1);
+        return px.toFixed(2);
+      }
+
+      /**
+       * Render heatmap tiles.
+       * @param {{generatedAt:string, items:Array<any>}} payload
+       */
+      function render(payload) {
+        const items = Array.isArray(payload?.items) ? payload.items : [];
+        grid.innerHTML = "";
+
+        for (const it of items) {
+          const pct = Number(it.deltaPct);
+          const close = Number(it.close);
+
+          const tile = document.createElement("button");
+          tile.type = "button";
+          tile.className = `hmTile ${bandClass(pct)}`;
+          tile.setAttribute("role", "listitem");
+          tile.title = it.ok === false ? `Failed: ${it.error ?? "unknown"}` : "Open on Stooq";
+
+          const symLabel = String(it.sym ?? "").toUpperCase();
+          const group = it.group ? String(it.group) : "";
+
+          tile.innerHTML = `
+            <div class="hmSym">${symLabel}</div>
+            <div class="hmName">${it.name ?? symLabel}</div>
+            ${group ? `<div class="hmTag">${group}</div>` : ""}
+            <div class="hmNums">
+              <div class="hmPct">${it.ok === false ? "—" : fmtPct(pct)}</div>
+              <div class="hmPx">${it.ok === false ? "" : fmtPx(close)}</div>
+            </div>
+          `;
+
+          tile.addEventListener("click", () => {
+            const sym = encodeURIComponent(it.sym ?? "");
+            if (!sym) return;
+            window.open(`https://stooq.com/q/?s=${sym}`, "_blank", "noopener,noreferrer");
+          });
+
+          grid.appendChild(tile);
+        }
+
+        const ts = payload?.generatedAt ? new Date(payload.generatedAt) : null;
+        stamp.textContent = ts && !Number.isNaN(ts.getTime())
+          ? `Updated: ${ts.toLocaleString()}`
+          : "Updated: —";
+      }
+
+      /**
+       * Fetch heatmap.json from the same origin.
+       */
+      async function load() {
+        grid.innerHTML = "";
+        const skeleton = document.createElement("div");
+        skeleton.className = "muted";
+        skeleton.textContent = "Loading heatmap…";
+        grid.appendChild(skeleton);
+
+        try {
+          const res = await fetch(`heatmap.json?v=${Date.now()}`, { cache: "no-store" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const payload = await res.json();
+          render(payload);
+        } catch (e) {
+          grid.innerHTML = "";
+          const err = document.createElement("div");
+          err.className = "muted";
+          err.textContent = `Heatmap failed to load (${e instanceof Error ? e.message : String(e)}).`;
+          grid.appendChild(err);
+        }
+      }
+
+      btn.addEventListener("click", load);
+      load();
+    })();
+  </script>
 </body>
 </html>

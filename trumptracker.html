@@ -38,12 +38,15 @@
     </div>
 
     <nav class="nav">
-      <a class="chip" href="index.html">
+      <button class="chip" data-nav="all" type="button" aria-pressed="true">
         <span class="chipDot" aria-hidden="true"></span> Home
-      </a>
-      <span class="chip is-active" aria-current="page" style="pointer-events:none;">
+      </button>
+      <button class="chip is-active" data-nav="trumptracker" type="button" aria-pressed="true">
         <span class="chipDot" aria-hidden="true"></span> Trump Tracker
-      </span>
+      </button>
+      <button class="chip" data-nav="markets" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Markets
+      </button>
     </nav>
 
     <div class="actions">
@@ -1147,6 +1150,7 @@
     document.getElementById("year").textContent = String(new Date().getFullYear());
   </script>
 
+  <script src="app.js?v=1"></script>
   <script src="scripts/chart.js?v=1"></script>
   <script src="scripts/trump.js?v=1"></script>
 </body>

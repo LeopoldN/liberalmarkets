@@ -16,6 +16,42 @@ const WATCH = [
   { sym: "asts.us", name: "ASTS" },
 ];
 
+const HEATMAP = [
+  // Broad market
+  { sym: "spy.us", name: "S&P 500 (SPY)", group: "Index" },
+  { sym: "qqq.us", name: "Nasdaq 100 (QQQ)", group: "Index" },
+  { sym: "iwm.us", name: "Russell 2000 (IWM)", group: "Index" },
+  { sym: "dia.us", name: "Dow 30 (DIA)", group: "Index" },
+
+  // Mega cap
+  { sym: "aapl.us", name: "Apple", group: "Mega" },
+  { sym: "msft.us", name: "Microsoft", group: "Mega" },
+  { sym: "nvda.us", name: "Nvidia", group: "Mega" },
+  { sym: "amzn.us", name: "Amazon", group: "Mega" },
+  { sym: "googl.us", name: "Alphabet", group: "Mega" },
+  { sym: "meta.us", name: "Meta", group: "Mega" },
+  { sym: "tsla.us", name: "Tesla", group: "Mega" },
+
+  // Sectors (SPDR)
+  { sym: "xlk.us", name: "Tech (XLK)", group: "Sector" },
+  { sym: "xlf.us", name: "Financials (XLF)", group: "Sector" },
+  { sym: "xle.us", name: "Energy (XLE)", group: "Sector" },
+  { sym: "xly.us", name: "Cons Disc (XLY)", group: "Sector" },
+  { sym: "xlp.us", name: "Cons Staples (XLP)", group: "Sector" },
+  { sym: "xli.us", name: "Industrials (XLI)", group: "Sector" },
+  { sym: "xlv.us", name: "Health Care (XLV)", group: "Sector" },
+  { sym: "xlu.us", name: "Utilities (XLU)", group: "Sector" },
+  { sym: "xlb.us", name: "Materials (XLB)", group: "Sector" },
+  { sym: "xlc.us", name: "Comm (XLC)", group: "Sector" },
+  { sym: "xlre.us", name: "Real Estate (XLRE)", group: "Sector" },
+
+  // “Stuff” people argue about
+  { sym: "xauusd", name: "Gold", group: "Macro" },
+  { sym: "cb.f", name: "Brent Oil", group: "Macro" },
+  { sym: "10yusy.b", name: "US 10Y Yield", group: "Macro" },
+  { sym: "usdeur", name: "USD/EUR", group: "Macro" },
+];
+
 /**
  * Sleep helper (gentle rate limiting).
  * @param {number} ms
@@ -125,11 +161,13 @@ async function fetchStooqQuote(sym) {
   return { date, close };
 }
 
-async function main() {
-  const results = [];
-
-  for (const w of WATCH) {
-    try {
+/**
+ * Fetch daily history (fallback to quote) and compute last close + prev close + pct.
+ * @param {{sym:string,name:string,group?:string}} w
+ * @returns {Promise<{sym:string,name:string,group:(string|null),date?:string,close?:number,prevDate?:(string|null),prevClose?:(number|null),deltaPct?:number,ok:boolean,error?:string}>}
+ */
+async function fetchOne(w) {
+  try {
     const csv = await fetchStooqDailyCsv(w.sym);
 
     // Detect header-only CSV quickly
@@ -138,54 +176,60 @@ async function main() {
     let date, close, prevDate = null, prevClose = null, deltaPct = 0;
 
     if (lines.length >= 2) {
-        // Try to parse daily last close (and maybe prev)
-        const parsed = parseLastCloseMaybePrev(csv);
-        date = parsed.date;
-        close = parsed.close;
-        prevDate = parsed.prevDate;
-        prevClose = parsed.prevClose;
+      const parsed = parseLastCloseMaybePrev(csv);
+      date = parsed.date;
+      close = parsed.close;
+      prevDate = parsed.prevDate;
+      prevClose = parsed.prevClose;
 
-        if (prevClose !== null && prevClose !== 0) {
+      if (prevClose !== null && prevClose !== 0) {
         deltaPct = pctChange(close, prevClose);
-        }
+      }
     } else {
-        // Truly empty: fallback to quote
-        const q = await fetchStooqQuote(w.sym);
-        date = q.date;
-        close = q.close;
-        deltaPct = 0;
+      // Truly empty: fallback to quote
+      const q = await fetchStooqQuote(w.sym);
+      date = q.date;
+      close = q.close;
+      deltaPct = 0;
     }
 
     // If header-only daily (lines length == 1), fallback to quote
     if (lines.length === 1) {
-        const q = await fetchStooqQuote(w.sym);
-        date = q.date;
-        close = q.close;
-        prevDate = null;
-        prevClose = null;
-        deltaPct = 0;
+      const q = await fetchStooqQuote(w.sym);
+      date = q.date;
+      close = q.close;
+      prevDate = null;
+      prevClose = null;
+      deltaPct = 0;
     }
 
-    results.push({
-        sym: w.sym,
-        name: w.name,
-        date,
-        close,
-        prevDate,
-        prevClose,
-        deltaPct,
-        ok: true,
-    });
-    } catch (err) {
-    results.push({
-        sym: w.sym,
-        name: w.name,
-        ok: false,
-        error: err instanceof Error ? err.message : String(err),
-    });
-    }
+    return {
+      sym: w.sym,
+      name: w.name,
+      group: w.group ?? null,
+      date,
+      close,
+      prevDate,
+      prevClose,
+      deltaPct,
+      ok: true,
+    };
+  } catch (err) {
+    return {
+      sym: w.sym,
+      name: w.name,
+      group: w.group ?? null,
+      ok: false,
+      error: err instanceof Error ? err.message : String(err),
+    };
+  }
+}
 
-    // Be polite: tiny delay between hits
+async function main() {
+  const results = [];
+  for (const w of WATCH) {
+    const item = await fetchOne(w);
+    results.push(item);
     await sleep(350);
   }
 
@@ -199,6 +243,23 @@ async function main() {
 
   await fs.writeFile("tape.json", JSON.stringify(payload, null, 2) + "\n", "utf8");
   console.log(`Wrote tape.json with ${results.length} items @ ${now}`);
+
+  // Build heatmap payload (bigger watchlist) from the same Stooq source
+  const heatmapItems = [];
+  for (const w of HEATMAP) {
+    const item = await fetchOne(w);
+    heatmapItems.push(item);
+    await sleep(250);
+  }
+
+  const heatmapPayload = {
+    generatedAt: now,
+    source: "stooq",
+    items: heatmapItems,
+  };
+
+  await fs.writeFile("heatmap.json", JSON.stringify(heatmapPayload, null, 2) + "\n", "utf8");
+  console.log(`Wrote heatmap.json with ${heatmapItems.length} items @ ${now}`);
 
   // If everything failed, exit non-zero so you notice.
   const okCount = results.filter((x) => x.ok).length;
