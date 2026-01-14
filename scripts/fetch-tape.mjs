@@ -18,10 +18,15 @@ const WATCH = [
 
 const HEATMAP = [
   // Broad market
-  { sym: "spy.us", name: "S&P 500 (SPY)", group: "Index" },
-  { sym: "qqq.us", name: "Nasdaq 100 (QQQ)", group: "Index" },
-  { sym: "iwm.us", name: "Russell 2000 (IWM)", group: "Index" },
-  { sym: "dia.us", name: "Dow 30 (DIA)", group: "Index" },
+  { sym: "spy.us", name: "S&P 500", group: "Index" },
+  { sym: "qqq.us", name: "Nasdaq 100", group: "Index" },
+  { sym: "iwm.us", name: "Russell 2000", group: "Index" },
+  { sym: "dia.us", name: "Dow 30", group: "Index" },
+  { sym: "^hsi", name: "Hong Kong HSI", group: "Index" },
+  { sym: "^nkx", name: "Japan Nikkei", group: "Index" },
+  { sym: "^snx", name: "Sensex India", group: "Index" },
+  { sym: "^dax", name: "DAX Germany", group: "Index" },
+  { sym: "^ukx", name: "FTSE 100 UK", group: "Index" },
 
   // Mega cap
   { sym: "aapl.us", name: "Apple", group: "Mega" },
@@ -32,33 +37,131 @@ const HEATMAP = [
   { sym: "meta.us", name: "Meta", group: "Mega" },
   { sym: "tsla.us", name: "Tesla", group: "Mega" },
 
+  // Large Cap
+  { sym: "jpm.us", name: "JPMorgan Chase", group: "Large" },
+  { sym: "wmt.us", name: "Walmart", group: "Large" },
+  { sym: "jnj.us", name: "Johnson & Johnson", group: "Large" },
+  { sym: "pg.us", name: "Procter & Gamble", group: "Large" },
+  { sym: "xom.us", name: "Exxon Mobil", group: "Large" },
+  { sym: "hd.us", name: "Home Depot", group: "Large" },
+
   // Sectors (SPDR)
-  { sym: "xlk.us", name: "Tech (XLK)", group: "Sector" },
-  { sym: "xlf.us", name: "Financials (XLF)", group: "Sector" },
-  { sym: "xle.us", name: "Energy (XLE)", group: "Sector" },
-  { sym: "xly.us", name: "Cons Disc (XLY)", group: "Sector" },
-  { sym: "xlp.us", name: "Cons Staples (XLP)", group: "Sector" },
-  { sym: "xli.us", name: "Industrials (XLI)", group: "Sector" },
-  { sym: "xlv.us", name: "Health Care (XLV)", group: "Sector" },
-  { sym: "xlu.us", name: "Utilities (XLU)", group: "Sector" },
-  { sym: "xlb.us", name: "Materials (XLB)", group: "Sector" },
-  { sym: "xlc.us", name: "Comm (XLC)", group: "Sector" },
-  { sym: "xlre.us", name: "Real Estate (XLRE)", group: "Sector" },
+  { sym: "xlk.us", name: "Tech", group: "Sector" },
+  { sym: "xlf.us", name: "Financials", group: "Sector" },
+  { sym: "xle.us", name: "Energy", group: "Sector" },
+  { sym: "xly.us", name: "Consumer Disc", group: "Sector" },
+  { sym: "xlp.us", name: "Consumser Staples", group: "Sector" },
+  { sym: "xli.us", name: "Industrials", group: "Sector" },
+  { sym: "xlv.us", name: "Health Care", group: "Sector" },
+  { sym: "xlu.us", name: "Utilities", group: "Sector" },
+  { sym: "xlb.us", name: "Materials", group: "Sector" },
+  { sym: "xlc.us", name: "Communcation", group: "Sector" },
+  { sym: "xlre.us", name: "Real Estate", group: "Sector" },
 
   // “Stuff” people argue about
   { sym: "xauusd", name: "Gold", group: "Macro" },
   { sym: "cb.f", name: "Brent Oil", group: "Macro" },
   { sym: "10yusy.b", name: "US 10Y Yield", group: "Macro" },
   { sym: "usdeur", name: "USD/EUR", group: "Macro" },
+  { sym: "btc.v", name: "Bitcoin", group: "Macro" },
+  { sym: "hg.f", name: "Copper", group: "Macro" },
+  { sym: "si.f", name: "Silver", group: "Macro" },
+  { sym: "ung.us", name: "Nat Gas", group: "Macro" },
+  { sym: "slx.us", name: "Steel", group: "Macro" },
 ];
 
+// --- Request pacing + retry policy (Stooq is friendly until it isn't) ---
+const REQUEST_GAP_MS = 800;       // baseline delay between symbols
+const REQUEST_JITTER_MS = 400;    // random extra delay to look less bot-like
+
+const RETRY_COUNT = 4;            // retries after the initial attempt
+const BACKOFF_BASE_MS = 800;      // exponential backoff base
+const BACKOFF_MAX_MS = 15_000;    // cap backoff so it doesn't explode
+
+function sleepMs(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
 /**
- * Sleep helper (gentle rate limiting).
- * @param {number} ms
+ * Sleep with jitter to avoid perfectly-regular request intervals.
+ * @param {number} baseMs
+ * @param {number} jitterMs
  * @returns {Promise<void>}
  */
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
+function sleepJitter(baseMs, jitterMs) {
+  const b = Math.max(0, Number(baseMs) || 0);
+  const j = Math.max(0, Number(jitterMs) || 0);
+  const extra = j ? Math.floor(Math.random() * (j + 1)) : 0;
+  return sleepMs(b + extra);
+}
+
+/**
+ * @param {number} attempt 0-based attempt number
+ * @returns {number}
+ */
+function backoffDelayMs(attempt) {
+  const exp = Math.min(BACKOFF_MAX_MS, BACKOFF_BASE_MS * (2 ** attempt));
+  const jitter = Math.floor(Math.random() * 250);
+  return exp + jitter;
+}
+
+/**
+ * @param {number} status
+ * @returns {boolean}
+ */
+function isRetryableStatus(status) {
+  return status === 429 || status === 500 || status === 502 || status === 503 || status === 504;
+}
+
+/**
+ * Fetch text with retry + exponential backoff. Honors Retry-After when present.
+ * @param {string} url
+ * @param {RequestInit} options
+ * @param {string} label
+ * @returns {Promise<string>}
+ */
+async function fetchTextWithRetry(url, options, label) {
+  let lastErr = null;
+
+  for (let attempt = 0; attempt <= RETRY_COUNT; attempt++) {
+    try {
+      const res = await fetch(url, options);
+
+      if (res.ok) {
+        return await res.text();
+      }
+
+      const status = res.status;
+      const retryable = isRetryableStatus(status);
+
+      if (!retryable || attempt === RETRY_COUNT) {
+        throw new Error(`${label} HTTP ${status}`);
+      }
+
+      const ra = res.headers.get("retry-after");
+      let waitMs = backoffDelayMs(attempt);
+
+      if (ra) {
+        const raNum = Number(ra);
+        if (Number.isFinite(raNum) && raNum >= 0) {
+          waitMs = Math.min(BACKOFF_MAX_MS, Math.floor(raNum * 1000));
+        }
+      }
+
+      console.warn(`${label}: retrying after HTTP ${status} (attempt ${attempt + 1}/${RETRY_COUNT + 1}) in ${waitMs}ms`);
+      await sleepMs(waitMs);
+    } catch (e) {
+      lastErr = e;
+
+      if (attempt === RETRY_COUNT) break;
+
+      const waitMs = backoffDelayMs(attempt);
+      console.warn(`${label}: network error, retrying (attempt ${attempt + 1}/${RETRY_COUNT + 1}) in ${waitMs}ms`);
+      await sleepMs(waitMs);
+    }
+  }
+
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
 }
 
 /**
@@ -108,18 +211,16 @@ function parseLastCloseMaybePrev(csv) {
  */
 async function fetchStooqDailyCsv(sym) {
   const url = `https://stooq.com/q/d/l/?s=${encodeURIComponent(sym)}&i=d`;
-  const res = await fetch(url, {
-    headers: {
-      "user-agent": "LiberalMarketsTapeBot/1.0 (GitHub Actions)",
-      "accept": "text/csv,*/*",
+  return await fetchTextWithRetry(
+    url,
+    {
+      headers: {
+        "user-agent": "LiberalMarketsTapeBot/1.0 (GitHub Actions)",
+        "accept": "text/csv,*/*",
+      },
     },
-  });
-
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status}`);
-  }
-
-  return await res.text();
+    `Daily CSV ${sym}`
+  );
 }
 
 /**
@@ -140,15 +241,17 @@ function pctChange(close, prevClose) {
 async function fetchStooqQuote(sym) {
   // f=sd2t2c = symbol, date, time, close (simple)
   const url = `https://stooq.com/q/l/?s=${encodeURIComponent(sym)}&f=sd2t2c&h&e=csv`;
-  const res = await fetch(url, {
-    headers: {
-      "user-agent": "LiberalMarketsTapeBot/1.0 (GitHub Actions)",
-      "accept": "text/csv,*/*",
+  const text = await fetchTextWithRetry(
+    url,
+    {
+      headers: {
+        "user-agent": "LiberalMarketsTapeBot/1.0 (GitHub Actions)",
+        "accept": "text/csv,*/*",
+      },
     },
-  });
-  if (!res.ok) throw new Error(`Quote HTTP ${res.status}`);
+    `Quote ${sym}`
+  );
 
-  const text = await res.text();
   const lines = text.trim().split("\n").filter(Boolean);
   if (lines.length < 2) throw new Error("No quote data returned");
 
@@ -230,7 +333,7 @@ async function main() {
   for (const w of WATCH) {
     const item = await fetchOne(w);
     results.push(item);
-    await sleep(350);
+    await sleepJitter(REQUEST_GAP_MS, REQUEST_JITTER_MS);
   }
 
   const now = new Date().toISOString();
@@ -249,7 +352,7 @@ async function main() {
   for (const w of HEATMAP) {
     const item = await fetchOne(w);
     heatmapItems.push(item);
-    await sleep(350);
+    await sleepJitter(REQUEST_GAP_MS, REQUEST_JITTER_MS);
   }
 
   const heatmapPayload = {

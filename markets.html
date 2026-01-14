@@ -119,13 +119,13 @@
     }
 
     /* Color bands (subtle, not Vegas). */
-    .hmDn3 { background: rgba(180, 65, 65, .22); }
-    .hmDn2 { background: rgba(180, 65, 65, .16); }
-    .hmDn1 { background: rgba(180, 65, 65, .10); }
-    .hmFlat { background: rgba(0, 0, 0, .03); }
-    .hmUp1 { background: rgba(88, 129, 87, .10); }
-    .hmUp2 { background: rgba(88, 129, 87, .16); }
-    .hmUp3 { background: rgba(88, 129, 87, .22); }
+    .hmDn3 { background: rgba(180, 65, 65, .36); }
+    .hmDn2 { background: rgba(180, 65, 65, .26); }
+    .hmDn1 { background: rgba(180, 65, 65, .16); }
+    .hmFlat { background: rgba(0, 0, 0, .05); }
+    .hmUp1 { background: rgba(88, 129, 87, .16); }
+    .hmUp2 { background: rgba(88, 129, 87, .26); }
+    .hmUp3 { background: rgba(88, 129, 87, .36); }
 
     .hmLegend {
       margin-top: 12px;
@@ -168,10 +168,10 @@
       <button class="chip" data-nav="all" type="button" aria-pressed="true">
         <span class="chipDot" aria-hidden="true"></span> Home
       </button>
-      <button class="chip is-active" data-nav="trumptracker" type="button" aria-pressed="false">
+      <button class="chip" data-nav="trumptracker" type="button" aria-pressed="false">
         <span class="chipDot" aria-hidden="true"></span> Trump Tracker
       </button>
-      <button class="chip" data-nav="markets" type="button" aria-pressed="false">
+      <button class="chip is-active" data-nav="markets" type="button" aria-pressed="false">
         <span class="chipDot" aria-hidden="true"></span> Markets
       </button>
     </nav>
@@ -188,14 +188,6 @@
         <span class="kbd" aria-hidden="true">⌘K</span>
       </label>
 
-      <button class="btn" id="toggleDensity" type="button" aria-pressed="false" title="Toggle compact layout">
-        <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M4 7h16"></path>
-          <path d="M4 12h10"></path>
-          <path d="M4 17h16"></path>
-        </svg>
-        Density
-      </button>
     </div>
   </header>
 
@@ -373,7 +365,7 @@
     </form>
   </dialog>
 
-  <script src="app.js?v=2"></script>
+  <script src="app.js?v=3"></script>
   <script src="scripts/chart.js?v=1"></script>
   <script>
     /**
@@ -381,6 +373,57 @@
      * No direct Stooq client fetch because CORS is a thing that exists to ruin your day.
      */
     (function () {
+
+
+    /**
+     * Decide how to decorate the numeric value based on Stooq symbol suffix.
+     * - *.us -> USD ($)
+     * - *.b  -> percent (%)
+     * - otherwise -> plain number (no symbol)
+     *
+     * @param {string} sym
+     * @param {number} value
+     * @returns {string}
+     */
+    function formatValueBySym(sym, value) {
+    if (!Number.isFinite(value)) return "—";
+
+    const s = String(sym ?? "").trim().toLowerCase();
+
+    if (s.endsWith(".us")) {
+        return `$${fmtPx(value)}`;
+    }
+
+    if (s.includes("hsi")) {
+        return `HK$${fmtPx(value)}`;
+    }
+
+    if (s.includes("nkx")) {
+        return `¥${fmtPx(value)}`;
+    }
+
+    if (s.includes("snx")) {
+        return `₹${fmtPx(value)}`;
+    }
+
+    if (s.includes("dax")) {
+        return `€${fmtPx(value)}`;
+    }
+
+    if (s.includes("ukx")) {
+        return `£${fmtPx(value)}`;
+    }
+    
+    if (s.endsWith(".b")) {
+        // yields/rates typically come as already “4.17” meaning 4.17%
+        return `${fmtPx(value)}%`;
+    }
+
+    // everything else: no symbol
+    return fmtPx(value);
+    }
+
+
       const grid = document.getElementById("hmGrid");
       const stamp = document.getElementById("hmStamp");
       const btn = document.getElementById("hmRefresh");
@@ -453,7 +496,7 @@
             ${group ? `<div class="hmTag">${group}</div>` : ""}
             <div class="hmNums">
               <div class="hmPct">${it.ok === false ? "—" : fmtPct(pct)}</div>
-              <div class="hmPx">${it.ok === false ? "" : fmtPx(close)}</div>
+              <div class="hmPx">${it.ok === false ? "" : formatValueBySym(it.sym, close)}</div>
             </div>
           `;
 
