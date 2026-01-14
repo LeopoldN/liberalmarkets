@@ -7,6 +7,41 @@
 
 import fs from "node:fs/promises";
 
+/**
+ * Exit early unless local NY time matches one of the allowed (hour, minute) pairs.
+ * @param {Array<[number, number]>} allowedTimes
+ */
+function exitUnlessNYTimeMatches(allowedTimes) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    hour12: false,
+    hour: "2-digit",
+    minute: "2-digit",
+    weekday: "short",
+  }).formatToParts(new Date());
+
+  const get = (t) => parts.find(p => p.type === t)?.value;
+  const weekday = get("weekday");
+  const hour = Number(get("hour"));
+  const minute = Number(get("minute"));
+
+  // Weekends: bail
+  if (weekday === "Sat" || weekday === "Sun") {
+    console.log("Weekend in NY, skipping.");
+    process.exit(0);
+  }
+
+  const ok = allowedTimes.some(([h, m]) => h === hour && m === minute);
+  if (!ok) {
+    console.log(`NY time ${String(hour).padStart(2,"0")}:${String(minute).padStart(2,"0")} not scheduled, skipping.`);
+    process.exit(0);
+  }
+}
+
+// Example: 10:00 ET and 16:30 ET
+exitUnlessNYTimeMatches([[10, 0], [16, 30]]);
+
+
 const WATCH = [
   { sym: "10yusy.b", name: "US 10Y Yield" },
   { sym: "usdeur", name: "USD/EUR" },
