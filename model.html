@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liberal Markets — Minimal Finance Notes</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <meta name="description" content="Minimalist finance blog with wireframe iconography and calm, earthy palette." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <style>
+    /* DCF: uses your existing palette via inherited colors */
+    .cardHead { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:12px; }
+    .kicker { letter-spacing:.12em; text-transform:uppercase; font-size:11px; opacity:.65; }
+    .cardTitle { margin:2px 0 4px; font-size:22px; line-height:1.15; }
+    .cardActions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+
+    .dcfGrid { display:grid; grid-template-columns: 1.1fr 0.9fr; gap:14px; }
+    @media (max-width: 980px) { .dcfGrid { grid-template-columns: 1fr; } }
+
+    .dcfPane { border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:14px; background: rgba(255,255,255,.35); }
+    .paneTitle { font-weight:600; margin-bottom:10px; }
+
+    .dcfForm { display:flex; flex-direction:column; gap:10px; }
+    .field { display:flex; flex-direction:column; gap:6px; }
+    .fieldRow { display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+    @media (max-width: 520px) { .fieldRow { grid-template-columns: 1fr; } }
+
+    .label { font-size:12px; opacity:.75; }
+    .hint { font-size:11px; opacity:.6; }
+
+    .input { width:100%; border:1px solid rgba(0,0,0,.12); background: rgba(255,255,255,.55); border-radius:12px; padding:10px 10px; font: inherit; }
+    .input:focus { outline: none; box-shadow: 0 0 0 3px rgba(0,0,0,.08); }
+
+    .dcfDetails { border:1px dashed rgba(0,0,0,.15); border-radius:14px; padding:10px; background: rgba(255,255,255,.25); }
+    .dcfDetails > summary { cursor:pointer; font-weight:600; }
+
+    .dcfTableWrap { overflow:auto; border-radius:12px; border:1px solid rgba(0,0,0,.10); background: rgba(255,255,255,.35); }
+    .dcfTable { width:100%; border-collapse: collapse; font-size:12px; }
+    .dcfTable th, .dcfTable td { padding:10px; border-bottom:1px solid rgba(0,0,0,.08); white-space:nowrap; }
+    .dcfTable thead th { position: sticky; top: 0; background: rgba(255,255,255,.70); backdrop-filter: blur(6px); text-align:left; }
+    .dcfTable tbody tr:last-child td { border-bottom:none; }
+
+    .dcfTable .cell { width:110px; border:1px solid rgba(0,0,0,.10); background: rgba(255,255,255,.60); border-radius:10px; padding:8px 8px; font: inherit; }
+
+    .dcfKPIs { display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin: 10px 0 14px; }
+    @media (max-width: 520px) { .dcfKPIs { grid-template-columns: 1fr; } }
+
+    .kpi { border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:12px; background: rgba(255,255,255,.30); }
+    .kpiLabel { font-size:12px; opacity:.7; margin-bottom:6px; }
+    .kpiVal { font-size:18px; font-weight:650; }
+
+    .bad { opacity:.55; }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <!-- Liberal Markets logo -->
+        <svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+        <path d="m655.45 328.74v77.062-0.046875c0 9.375-7.5469 16.969-16.922 16.969h-77.062c-4.5 0-8.8125-1.7812-11.953-4.9688-3.1875-3.1875-4.9688-7.5-4.9688-12v-77.016c0-4.5 1.7812-8.8125 4.9688-12 3.1406-3.1875 7.4531-4.9688 11.953-4.9688h77.062c9.375 0 16.922 7.5938 16.922 16.969zm-279.94 0v77.062-0.046875c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1875-7.4531 4.9688-11.953 4.9688h-78.656c-4.4531 0-8.7656-1.7812-11.953-4.9688s-4.9688-7.5-4.9219-12v-77.016c-0.046875-4.5 1.7344-8.8125 4.9219-12s7.5-4.9688 11.953-4.9688h78.656c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1875 4.9688 7.5 4.9688 12zm488.29-99.094v-78.656c0-4.5 1.7812-8.7656 4.9219-11.953 3.1875-3.1875 7.5-4.9688 12-4.9688h215.44c9.375 0 16.922 7.5938 16.922 16.922v898.03c0 9.3281-7.5469 16.922-16.922 16.922h-215.44c-4.5 0-8.8125-1.7812-12-4.9688-3.1406-3.1875-4.9219-7.4531-4.9219-11.953v-77.016c0-9.3281 7.5469-16.922 16.922-16.922h119.91v-708.52h-119.91c-9.375 0-16.922-7.5938-16.922-16.922zm-664.45 725.39v-708.47h119.91c9.375 0 16.922-7.5938 16.922-16.922v-78.656c0-4.5-1.7812-8.7656-4.9219-11.953-3.1875-3.1875-7.5-4.9688-12-4.9688h-215.44c-9.375 0-16.922 7.5938-16.922 16.922v898.03c0 9.3281 7.5469 16.922 16.922 16.922h215.44c4.5 0 8.8125-1.7812 12-4.9688 3.1406-3.1875 4.9219-7.4531 4.9219-11.953v-77.016c0-9.3281-7.5469-16.922-16.922-16.922zm737.58-160.78 0.046875-0.046875c0-9.3281-7.5938-16.922-16.922-16.922h-78.656c-9.3281 0-16.922 7.5938-16.922 16.922v78.609c0 9.375 7.5938 16.922 16.922 16.969h78.656c9.3281 0 16.922-7.5938 16.922-16.969v-78.562zm-281.53 0v78.609l0.046875-0.046875c0 9.375-7.5469 16.969-16.922 16.969h-77.062c-4.5 0-8.8125-1.7812-11.953-4.9688-3.1875-3.1875-4.9688-7.5-4.9688-12v-78.562c0-4.5 1.7812-8.8125 4.9688-12 3.1406-3.1875 7.4531-4.9688 11.953-4.9688h77.062c9.375 0 16.922 7.5938 16.922 16.969zm-279.94 0v78.609l0.046875-0.046875c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1875-7.4531 4.9688-11.953 4.9688h-78.656c-4.4531 0-8.7656-1.7812-11.953-4.9688s-4.9688-7.5-4.9219-12v-78.562c-0.046875-4.5 1.7344-8.8125 4.9219-12s7.5-4.9688 11.953-4.9688h78.656c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1875 4.9688 7.5 4.9688 12zm561.47-232.78 0.046875-0.046874c0-4.5-1.7812-8.8125-4.9688-12-3.1875-3.1406-7.5-4.9219-11.953-4.9219h-78.656c-9.3281 0-16.922 7.5469-16.922 16.922v78.656-0.046876c0 9.375 7.5938 16.922 16.922 16.922h78.656c4.4531 0 8.7656-1.7812 11.953-4.9219 3.1875-3.1875 4.9688-7.5 4.9688-12v-78.562zm-281.53 0v78.656l0.046875-0.09375c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1406-7.4531 4.9219-11.953 4.9219h-77.062c-9.3281 0-16.922-7.5469-16.922-16.922v-78.562c0-9.3281 7.5938-16.922 16.922-16.922h77.062c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1406 4.9688 7.4531 4.9688 11.953zm-279.94 0v78.656l0.046875-0.09375c0 9.375-7.5938 16.922-16.922 16.922h-78.656c-9.3281 0-16.875-7.5469-16.875-16.922v-78.562c0-9.3281 7.5469-16.922 16.875-16.922h78.656c9.3281 0 16.922 7.5938 16.922 16.922zm561.47-232.78 0.046875-0.09375c0-9.3281-7.5938-16.922-16.922-16.922h-78.656c-9.3281 0-16.922 7.5938-16.922 16.922v77.062c0 9.3281 7.5938 16.922 16.922 16.922h78.656c9.3281 0 16.922-7.5469 16.922-16.922z" fill-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="brandText">
+        <div class="brandName">Liberal Markets</div>
+        <div class="brandTag">minimal finance notes</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="chip" data-nav="all" type="button" aria-pressed="true">
+        <span class="chipDot" aria-hidden="true"></span> All
+      </button>
+      <button class="chip" data-nav="trumptracker" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Trump Tracker
+      </button>
+      <button class="chip" data-nav="markets" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Markets
+      </button>
+       <button class="chip is-active" data-nav="model" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Model
+      </button>
+    </nav>
+
+    <div class="actions">
+      <label class="search" aria-label="Search posts">
+        <span class="searchIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.2-3.2"></path>
+          </svg>
+        </span>
+        <input id="q" type="search" placeholder="Search… (e.g., “yield”, “CPI”, “DCF”)" autocomplete="off" />
+        <span class="kbd" aria-hidden="true">⌘K</span>
+      </label>
+
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+
+    <section class="card" id="dcf">
+      <div class="cardHead">
+        <div>
+          <div class="kicker">TOOLS</div>
+          <h2 class="cardTitle">Discounted Cash Flow (DCF)</h2>
+          <p class="muted">A spreadsheet, but without the spreadsheet. Enter assumptions, edit year-by-year drivers, and get implied value.</p>
+        </div>
+        <div class="cardActions">
+          <button class="chip" type="button" id="dcfReset"><span class="chipDot" aria-hidden="true"></span> Reset</button>
+          <button class="chip is-active" type="button" id="dcfRun" aria-pressed="true"><span class="chipDot" aria-hidden="true"></span> Calculate</button>
+        </div>
+      </div>
+
+      <div class="dcfGrid">
+        <!-- Inputs -->
+        <div class="dcfPane" aria-label="DCF inputs">
+          <div class="paneTitle">Inputs</div>
+
+          <div class="dcfForm">
+            <label class="field">
+              <span class="label">Base revenue (Year 0)</span>
+              <input class="input" id="dcf_rev0" type="number" step="0.01" value="18.53" />
+              <span class="hint">In millions (or whatever unit you live by). The output uses the same unit.</span>
+            </label>
+
+            <div class="fieldRow">
+              <label class="field">
+                <span class="label">Forecast years</span>
+                <input class="input" id="dcf_years" type="number" min="3" max="15" step="1" value="5" />
+              </label>
+              <label class="field">
+                <span class="label">Tax rate</span>
+                <input class="input" id="dcf_tax" type="number" step="0.01" value="0.21" />
+                <span class="hint">Decimal (0.21 = 21%).</span>
+              </label>
+            </div>
+
+            <div class="fieldRow">
+              <label class="field">
+                <span class="label">WACC</span>
+                <input class="input" id="dcf_wacc" type="number" step="0.001" value="0.12" />
+                <span class="hint">Discount rate (decimal).</span>
+              </label>
+              <label class="field">
+                <span class="label">Terminal growth</span>
+                <input class="input" id="dcf_gterm" type="number" step="0.001" value="0.03" />
+                <span class="hint">Gordon growth (decimal).</span>
+              </label>
+            </div>
+
+            <div class="fieldRow">
+              <label class="field">
+                <span class="label">Net debt</span>
+                <input class="input" id="dcf_netdebt" type="number" step="0.01" value="-420.07" />
+                <span class="hint">Debt − cash. Negative means net cash.</span>
+              </label>
+              <label class="field">
+                <span class="label">Shares outstanding</span>
+                <input class="input" id="dcf_shares" type="number" step="0.01" value="277.63" />
+                <span class="hint">In millions (match your unit).</span>
+              </label>
+            </div>
+
+            <details class="dcfDetails" open>
+              <summary>Year-by-year drivers</summary>
+              <p class="muted">Defaults fill the table. Edit per-year growth/margins, then recalc.</p>
+              <div class="dcfTableWrap" role="region" aria-label="DCF driver table" tabindex="0">
+                <table class="dcfTable" id="dcfDrivers">
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Revenue growth</th>
+                      <th>EBIT margin</th>
+                      <th>D&amp;A (% rev)</th>
+                      <th>Capex (% rev)</th>
+                      <th>NWC (% rev)</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Outputs -->
+        <div class="dcfPane" aria-label="DCF outputs">
+          <div class="paneTitle">Results</div>
+
+          <div class="dcfKPIs" role="list">
+            <div class="kpi" role="listitem">
+              <div class="kpiLabel">Enterprise value</div>
+              <div class="kpiVal" id="kpi_ev">—</div>
+            </div>
+            <div class="kpi" role="listitem">
+              <div class="kpiLabel">Equity value</div>
+              <div class="kpiVal" id="kpi_eq">—</div>
+            </div>
+            <div class="kpi" role="listitem">
+              <div class="kpiLabel">Implied value / share</div>
+              <div class="kpiVal" id="kpi_ps">—</div>
+            </div>
+            <div class="kpi" role="listitem">
+              <div class="kpiLabel">PV of explicit FCF</div>
+              <div class="kpiVal" id="kpi_pv">—</div>
+            </div>
+            <div class="kpi" role="listitem">
+              <div class="kpiLabel">PV of terminal value</div>
+              <div class="kpiVal" id="kpi_tv">—</div>
+            </div>
+          </div>
+
+          <details class="dcfDetails" open>
+            <summary>Forecast cash flows</summary>
+            <div class="dcfTableWrap" role="region" aria-label="DCF forecast table" tabindex="0">
+              <table class="dcfTable" id="dcfForecast">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Revenue</th>
+                    <th>FCF</th>
+                    <th>Discount factor</th>
+                    <th>PV (FCF)</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+
+          <details class="dcfDetails">
+            <summary>Sensitivity (WACC × Terminal g)</summary>
+            <p class="muted">Because assumptions are doing most of the work anyway.</p>
+            <div class="dcfTableWrap" role="region" aria-label="DCF sensitivity table" tabindex="0">
+              <table class="dcfTable" id="dcfSense">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+
+          <p class="muted" id="dcfWarn" style="display:none"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footerLeft">
+        <span class="footMark" aria-hidden="true"></span>
+        <span>Liberal Markets</span>
+        <span class="muted">© <span id="year"></span></span>
+      </div>
+      <div class="footerRight">
+        <a class="footLink" href="#" id="exportBtn">Export pins</a>
+        <span class="muted">No trackers. No noise.</span>
+      </div>
+    </footer>
+  </main>
+
+  <dialog class="modal" id="modal">
+    <form method="dialog" class="modalBox">
+      <div class="modalHead">
+        <div class="modalTitle">Quick Search</div>
+        <button class="x" value="cancel" aria-label="Close">
+          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 6l12 12"></path>
+            <path d="M18 6l-12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <label class="modalSearch">
+        <input id="modalQ" type="search" placeholder="Type to filter posts…" autocomplete="off" />
+      </label>
+
+      <div class="modalList" id="modalList"></div>
+
+      <div class="modalFoot">
+        <span class="muted">Enter opens. Esc closes. Humans remain complicated.</span>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js?v=3"></script>
+  <script src="scripts/chart.js?v=1"></script>
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+
+      function clamp(n, lo, hi) {
+        return Math.min(hi, Math.max(lo, n));
+      }
+
+      function num(v, fallback = 0) {
+        const x = Number(v);
+        return Number.isFinite(x) ? x : fallback;
+      }
+
+      function fmtMoney(v) {
+        if (!Number.isFinite(v)) return "—";
+        const abs = Math.abs(v);
+        const sign = v < 0 ? "-" : "";
+        if (abs >= 1e9) return `${sign}${(abs / 1e9).toFixed(2)}B`;
+        if (abs >= 1e6) return `${sign}${(abs / 1e6).toFixed(2)}M`;
+        if (abs >= 1e3) return `${sign}${(abs / 1e3).toFixed(2)}K`;
+        return `${sign}${abs.toFixed(2)}`;
+      }
+
+      function fmtPct(v) {
+        if (!Number.isFinite(v)) return "—";
+        return `${(v * 100).toFixed(2)}%`;
+      }
+
+      function buildDriversTable(years) {
+        const tbody = $("dcfDrivers").querySelector("tbody");
+        tbody.innerHTML = "";
+
+        // Default curves: high early growth tapering, margin expansion, capex taper.
+        for (let t = 1; t <= years; t++) {
+          const g = clamp(0.15 - (t - 1) * 0.01, 0.03, 0.15); // 15% -> 6%
+          const m = clamp(0.12 + (t - 1) * 0.005, 0.12, 0.20); // 12% -> 16.5%
+          const da = 0.03;
+          const capex = clamp(0.05 - (t - 1) * 0.002, 0.03, 0.05);
+          const nwc = 0.02;
+
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${t}</td>
+            <td><input class="cell" data-k="g" type="number" step="0.001" value="${g.toFixed(3)}" aria-label="Year ${t} revenue growth" /></td>
+            <td><input class="cell" data-k="m" type="number" step="0.001" value="${m.toFixed(3)}" aria-label="Year ${t} EBIT margin" /></td>
+            <td><input class="cell" data-k="da" type="number" step="0.001" value="${da.toFixed(3)}" aria-label="Year ${t} D&A percent of revenue" /></td>
+            <td><input class="cell" data-k="capex" type="number" step="0.001" value="${capex.toFixed(3)}" aria-label="Year ${t} capex percent of revenue" /></td>
+            <td><input class="cell" data-k="nwc" type="number" step="0.001" value="${nwc.toFixed(3)}" aria-label="Year ${t} NWC percent of revenue" /></td>
+          `;
+          tbody.appendChild(tr);
+        }
+      }
+
+      function readDrivers() {
+        const rows = Array.from($("dcfDrivers").querySelectorAll("tbody tr"));
+        return rows.map((tr) => {
+          const byK = (k) => num(tr.querySelector(`input[data-k="${k}"]`)?.value, 0);
+          return {
+            g: byK("g"),
+            m: byK("m"),
+            da: byK("da"),
+            capex: byK("capex"),
+            nwc: byK("nwc"),
+          };
+        });
+      }
+
+      function computeDCF(inputs, drivers) {
+        const { rev0, tax, wacc, gterm, netDebt, shares } = inputs;
+        const n = drivers.length;
+
+        if (!(wacc > gterm)) {
+          return { ok: false, error: "WACC must be greater than terminal growth (g)." };
+        }
+        if (shares <= 0) {
+          return { ok: false, error: "Shares outstanding must be > 0." };
+        }
+
+        const rows = [];
+        let revPrev = rev0;
+        let nwcPrev = revPrev * num(drivers[0]?.nwc, 0);
+
+        let pvExplicit = 0;
+
+        for (let t = 1; t <= n; t++) {
+          const d = drivers[t - 1];
+          const rev = revPrev * (1 + d.g);
+          const ebit = rev * d.m;
+          const nopat = ebit * (1 - tax);
+          const da = rev * d.da;
+          const capex = rev * d.capex;
+
+          // NWC modeled as % of revenue; change is current - prior
+          const nwc = rev * d.nwc;
+          const dNwc = nwc - nwcPrev;
+
+          const fcf = nopat + da - capex - dNwc;
+          const df = 1 / Math.pow(1 + wacc, t);
+          const pv = fcf * df;
+
+          rows.push({ t, rev, fcf, df, pv });
+
+          pvExplicit += pv;
+          revPrev = rev;
+          nwcPrev = nwc;
+        }
+
+        const fcfN = rows[rows.length - 1].fcf;
+        const tv = (fcfN * (1 + gterm)) / (wacc - gterm);
+        const pvTv = tv / Math.pow(1 + wacc, n);
+
+        const ev = pvExplicit + pvTv;
+        const eq = ev - netDebt;
+        const ps = eq / shares;
+
+        return {
+          ok: true,
+          rows,
+          pvExplicit,
+          tv,
+          pvTv,
+          ev,
+          eq,
+          ps,
+        };
+      }
+
+      function renderForecastTable(rows) {
+        const tbody = $("dcfForecast").querySelector("tbody");
+        tbody.innerHTML = "";
+        for (const r of rows) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${r.t}</td>
+            <td>${fmtMoney(r.rev)}</td>
+            <td>${fmtMoney(r.fcf)}</td>
+            <td>${r.df.toFixed(4)}</td>
+            <td>${fmtMoney(r.pv)}</td>
+          `;
+          tbody.appendChild(tr);
+        }
+      }
+
+      function renderSensitivity(inputs, drivers) {
+        const thead = $("dcfSense").querySelector("thead");
+        const tbody = $("dcfSense").querySelector("tbody");
+        thead.innerHTML = "";
+        tbody.innerHTML = "";
+
+        const waccs = [inputs.wacc - 0.02, inputs.wacc - 0.01, inputs.wacc, inputs.wacc + 0.01, inputs.wacc + 0.02]
+          .map((x) => clamp(x, 0.01, 0.30));
+        const gs = [inputs.gterm - 0.01, inputs.gterm - 0.005, inputs.gterm, inputs.gterm + 0.005, inputs.gterm + 0.01]
+          .map((x) => clamp(x, -0.05, 0.10));
+
+        const hr = document.createElement("tr");
+        hr.innerHTML = `<th>WACC \\ g</th>${gs.map((g) => `<th>${fmtPct(g)}</th>`).join("")}`;
+        thead.appendChild(hr);
+
+        for (const w of waccs) {
+          const tr = document.createElement("tr");
+          const cells = [];
+          cells.push(`<td>${fmtPct(w)}</td>`);
+
+          for (const g of gs) {
+            const out = computeDCF({ ...inputs, wacc: w, gterm: g }, drivers);
+            if (!out.ok) {
+              cells.push(`<td class="bad">—</td>`);
+            } else {
+              cells.push(`<td>${fmtMoney(out.ps)}</td>`);
+            }
+          }
+
+          tr.innerHTML = cells.join("");
+          tbody.appendChild(tr);
+        }
+      }
+
+      function readInputs() {
+        const years = clamp(Math.round(num($("dcf_years").value, 10)), 3, 15);
+        return {
+          years,
+          rev0: num($("dcf_rev0").value, 0),
+          tax: clamp(num($("dcf_tax").value, 0.21), 0, 0.6),
+          wacc: clamp(num($("dcf_wacc").value, 0.1), 0.001, 0.5),
+          gterm: clamp(num($("dcf_gterm").value, 0.025), -0.2, 0.2),
+          netDebt: num($("dcf_netdebt").value, 0),
+          shares: num($("dcf_shares").value, 1),
+        };
+      }
+
+      function renderKPIs(out) {
+        $("kpi_ev").textContent = fmtMoney(out.ev);
+        $("kpi_eq").textContent = fmtMoney(out.eq);
+        $("kpi_ps").textContent = fmtMoney(out.ps);
+        $("kpi_pv").textContent = fmtMoney(out.pvExplicit);
+        $("kpi_tv").textContent = fmtMoney(out.pvTv);
+      }
+
+      function setWarn(msg) {
+        const el = $("dcfWarn");
+        if (!msg) {
+          el.style.display = "none";
+          el.textContent = "";
+          return;
+        }
+        el.style.display = "block";
+        el.textContent = msg;
+      }
+
+      function run() {
+        const inputs = readInputs();
+
+        // If user changed years, rebuild drivers table.
+        const currentRows = $("dcfDrivers").querySelectorAll("tbody tr").length;
+        if (currentRows !== inputs.years) buildDriversTable(inputs.years);
+
+        const drivers = readDrivers();
+        const out = computeDCF(inputs, drivers);
+
+        if (!out.ok) {
+          setWarn(out.error);
+          return;
+        }
+
+        setWarn("");
+        renderKPIs(out);
+        renderForecastTable(out.rows);
+        renderSensitivity(inputs, drivers);
+      }
+
+      function reset() {
+        $("dcf_rev0").value = 18530000;
+        $("dcf_years").value = 5;
+        $("dcf_tax").value = 0.21;
+        $("dcf_wacc").value = 0.12;
+        $("dcf_gterm").value = 0.03;
+        $("dcf_netdebt").value = -420070000;
+        $("dcf_shares").value = 277630000;
+        buildDriversTable(5);
+        run();
+      }
+
+      function init() {
+        if (!$("dcfDrivers") || !$("dcfRun")) return;
+
+        buildDriversTable(clamp(Math.round(num($("dcf_years").value, 10)), 3, 15));
+        $("dcfRun").addEventListener("click", run);
+        $("dcfReset").addEventListener("click", reset);
+
+        // Auto-recalc on key input changes (lightweight).
+        ["dcf_rev0", "dcf_years", "dcf_tax", "dcf_wacc", "dcf_gterm", "dcf_netdebt", "dcf_shares"].forEach((id) => {
+          $(id).addEventListener("change", run);
+        });
+
+        // Delegate driver table edits
+        $("dcfDrivers").addEventListener("input", (e) => {
+          const t = e.target;
+          if (t && t.classList && t.classList.contains("cell")) run();
+        });
+
+        run();
+      }
+
+      init();
+    })();
+  </script>
+</body>
+</html>

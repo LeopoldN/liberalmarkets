@@ -568,6 +568,10 @@ async function renderHeroIndicators() {
         window.location.href = "index.html";
         return;
       }
+      if (nav === "model") {
+        window.location.href = "model.html";
+        return;
+      }
 
       // Filter chips (stay on this page)
       document.querySelectorAll(".chip").forEach(b => b.classList.remove("is-active"));
