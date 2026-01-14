@@ -1,0 +1,1125 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liberal Markets — Minimal Finance Notes</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <meta name="description" content="Minimalist finance blog with wireframe iconography and calm, earthy palette." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <style>
+    /* ==========================
+    ASTS portfolio tracker
+    ========================== */
+
+    /* Base layout (this is what makes it NOT look like a sad list) */
+    .astsCard {
+    border: 1px solid var(--line, rgba(0,0,0,.10));
+    background:
+        radial-gradient(1200px 400px at 18% -10%, rgba(0,0,0,.05), transparent 60%),
+        radial-gradient(900px 300px at 88% 0%, rgba(0,0,0,.035), transparent 55%),
+        var(--card, rgba(255,255,255,.18));
+    box-shadow: 0 10px 28px rgba(0,0,0,.06);
+    padding: 18px;
+    }
+
+    .astsCard .cardHead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line, rgba(0,0,0,.08));
+    margin-bottom: 14px;
+    }
+
+    .astsCard .cardTitle {
+    font-size: 18px;
+    letter-spacing: .2px;
+    }
+
+    .astsCard .cardSub {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted, rgba(0,0,0,.55));
+    }
+
+    .astsHeadMeta {
+    text-align: right;
+    font-size: 12px;
+    line-height: 1.35;
+    padding: 8px 10px;
+    border-radius: 14px;
+    border: 1px solid var(--line, rgba(0,0,0,.10));
+    background: rgba(255,255,255,.22);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    .astsMetaLine {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    }
+
+    .astsDelta {
+    margin-left: 6px;
+    border: 1px solid rgba(0,0,0,.12);
+    background: rgba(0,0,0,.04);
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    }
+
+    .astsDelta.is-up {
+    color: #0b6b3a;
+    background: rgba(11,107,58,.12);
+    border-color: rgba(11,107,58,.22);
+    }
+
+    .astsDelta.is-down {
+    color: #8a1f1f;
+    background: rgba(138,31,31,.12);
+    border-color: rgba(138,31,31,.22);
+    }
+
+    .astsGrid {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 16px;
+    }
+
+    /* Panels (match the close pill language) */
+    .astsPanel {
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(0,0,0,.14);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.16)),
+        radial-gradient(900px 280px at 12% -30%, rgba(0,0,0,.05), transparent 60%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.45),
+        0 10px 22px rgba(0,0,0,.05);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .astsPanelHead {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(0,0,0,.10);
+    }
+
+    .astsPanelTitle {
+      font-size: 14px;
+      font-weight: 950;
+      letter-spacing: .2px;
+      color: rgba(0,0,0,.82);
+    }
+
+    .astsPanelHint {
+      font-size: 12px;
+      color: rgba(0,0,0,.55);
+    }
+
+    .astsDivider {
+      height: 1px;
+      background: rgba(0,0,0,.10);
+      margin: 12px 0;
+    }
+
+    .astsCallout {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,.12);
+      background: rgba(255,255,255,.20);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.40);
+      font-size: 12px;
+      color: rgba(0,0,0,.72);
+    }
+
+    .astsCallout strong {
+      font-weight: 950;
+      color: rgba(0,0,0,.86);
+    }
+
+    .astsSpan2 { grid-column: 1 / -1; }
+
+    .astsInner {
+    padding: 14px;
+    background: rgba(255,255,255,.20);
+    border: 1px solid var(--line, rgba(0,0,0,.08));
+    border-radius: 16px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    /* Section titles */
+    .astsInnerTitle {
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted, rgba(0,0,0,.55));
+    margin-bottom: 10px;
+    }
+
+    /* Tables */
+    .astsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    }
+
+    .astsTable th,
+    .astsTable td {
+    padding: 8px 8px;
+    border-bottom: 1px solid var(--line, rgba(0,0,0,.08));
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    }
+
+    .astsTable th:first-child,
+    .astsTable td:first-child { text-align: left; }
+
+    .astsTable thead th {
+      text-transform: uppercase;
+      letter-spacing: .10em;
+      font-size: 11px;
+      color: rgba(0,0,0,.58);
+      font-weight: 900;
+      background: rgba(255,255,255,.10);
+    }
+
+    .astsTable tbody tr:nth-child(even) { background: rgba(255,255,255,.10); }
+    .astsTable tbody tr:hover { background: rgba(0,0,0,.028); }
+
+    .astsTable tbody tr.is-current {
+    background: rgba(255, 244, 140, .28) !important;
+    box-shadow: inset 0 0 0 9999px rgba(255, 244, 140, .08);
+    }
+    .astsTable tbody tr.is-current td { font-weight: 900; }
+
+    .astsTable tfoot td {
+    font-weight: 900;
+    border-top: 1px solid var(--line, rgba(0,0,0,.12));
+    }
+
+    /* KPI tiles */
+    .astsKpis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 12px;
+    }
+
+    .astsKpi{
+    padding:12px 12px 12px 14px;
+    border-radius:18px;
+    border:1px solid rgba(0,0,0,.14);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.16)),
+        radial-gradient(700px 220px at 12% -25%, rgba(0,0,0,.045), transparent 60%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.45),
+        0 10px 22px rgba(0,0,0,.05);
+    position:relative;
+    overflow:hidden;
+    }
+    .astsKpi::before{
+    content:"";
+    position:absolute;
+    left:12px;
+    top:12px;
+    width:10px;
+    height:10px;
+    border-radius:999px;
+    background:rgba(0,0,0,.20);
+    box-shadow: 0 1px 0 rgba(255,255,255,.55), inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .astsKpi.is-up::before{ background: rgba(11,107,58,.55); }
+    .astsKpi.is-down::before{ background: rgba(138,31,31,.55); }
+
+    .astsKpi > div:last-child{
+    margin-top:6px;
+    font-size:16px;
+    font-weight:950;
+    letter-spacing:.2px;
+    font-variant-numeric: tabular-nums;
+    color: rgba(0,0,0,.86);
+    }
+
+    .astsKpiLabel{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.10em;
+    color: rgba(0,0,0,.58);
+    font-weight:900;
+    padding-left:16px; /* clears the dot */
+    }
+
+    .astsKpiValue{
+    padding-left:16px; /* clears the dot */
+    }
+
+    .astsPanelHoldings{
+    display:flex;
+    flex-direction:column;
+    }
+
+    .astsPanelHoldings .astsHoldingsActions{
+    margin-bottom:10px;
+    }
+
+    .astsPanelHoldings .astsPortfolioSummary{
+    margin-top:auto;
+    padding-top:14px;
+    border-top:1px solid rgba(0,0,0,.10);
+    }
+
+    .astsKpis2 .astsKpi{
+    border-radius:20px;
+    }
+
+    /* Inputs */
+    .astsForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    }
+
+    .astsField {
+    display: grid;
+    gap: 6px;
+    font-size: 12px;
+    }
+
+    .astsInput {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--line, rgba(0,0,0,.10));
+    background: rgba(255,255,255,.20);
+    padding: 8px 10px;
+    font-size: 12px;
+    color: inherit;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    .astsInput:focus {
+    outline: none;
+    border-color: rgba(0,0,0,.22);
+    box-shadow: 0 0 0 3px rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    /* Milestones note */
+    .astsNote {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.10);
+    background: rgba(255, 244, 140, .30);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.40);
+    font-size: 12px;
+    }
+
+    /* Compact inputs for editable holdings table */
+    .astsInputSm{
+    width:100%;
+    border-radius:10px;
+    border:1px solid rgba(0,0,0,.12);
+    background:rgba(255,255,255,.14);
+    padding:6px 8px;
+    font-size:12px;
+    color:inherit;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+    font-variant-numeric: tabular-nums;
+    text-align:right;
+    }
+    .astsTable td:first-child .astsInputSm{ text-align:left; }
+
+    .astsInputSm:focus{
+    outline:none;
+    border-color:rgba(0,0,0,.22);
+    box-shadow: 0 0 0 3px rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.35);
+    background:rgba(255,255,255,.18);
+    }
+
+    .astsHoldingsActions{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+    }
+
+    .astsBtn{
+    border:1px solid rgba(0,0,0,.14);
+    background:rgba(255,255,255,.18);
+    color:inherit;
+    border-radius:999px;
+    padding:7px 12px;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.02em;
+    cursor:pointer;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.40);
+    }
+    .astsBtn:hover{ background:rgba(255,255,255,.24); }
+    .astsBtn:active{
+    transform:translateY(1px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .astsBtnGhost{ background:rgba(255,255,255,.10); }
+
+    .astsMilestones { padding-top: 4px; }
+
+    /* Top header layout (title left, close pill right) */
+    .astsTop {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .astsTitleBlock {
+      min-width: 0;
+    }
+
+    .astsTitle {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+
+    .astsSub {
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--muted, rgba(0,0,0,.55));
+    }
+
+    /* Close/price pill on the right (make it look expensive, not like a default input) */
+    .astsPriceBlock {
+      margin-left: auto;
+      border: 1px solid rgba(0,0,0,.16);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.48), rgba(255,255,255,.20)),
+        radial-gradient(900px 260px at 10% -30%, rgba(0,0,0,.06), transparent 60%);
+      border-radius: 22px;
+      padding: 10px 12px;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.55),
+        0 14px 30px rgba(0,0,0,.08);
+      display: grid;
+      gap: 0;
+      min-width: 260px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .astsPriceRow {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      font-variant-numeric: tabular-nums;
+      padding: 6px 2px;
+    }
+
+    .astsPriceRow + .astsPriceRow {
+      border-top: 1px solid rgba(0,0,0,.10);
+      margin-top: 2px;
+      padding-top: 10px;
+    }
+
+    .astsMetaLabel {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .10em;
+      color: rgba(0,0,0,.55);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .astsMetaValue {
+      font-size: 12px;
+      font-weight: 900;
+      text-align: right;
+      white-space: nowrap;
+      color: rgba(0,0,0,.78);
+    }
+
+    /* Make the price line feel like a headline */
+    .astsPriceBlock [data-asts="closePrice"] {
+      font-size: 18px;
+      font-weight: 950;
+      letter-spacing: .2px;
+      color: rgba(0,0,0,.86);
+    }
+
+    /* Delta pill: clearer, tighter, actually looks intentional */
+    .astsPriceBlock .astsDelta {
+      margin-left: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.14);
+      background: rgba(0,0,0,.045);
+      font-weight: 900;
+      letter-spacing: .01em;
+    }
+
+    /* Mobile: stack nicely */
+    @media (max-width: 900px) {
+      .astsTop {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .astsPriceBlock {
+        margin-left: 0;
+        align-self: flex-start;
+        border-radius: 18px;
+        min-width: 0;
+        width: fit-content;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 900px) {
+    .astsGrid { grid-template-columns: 1fr; }
+    .astsSpan2 { grid-column: auto; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <!-- Liberal Markets logo -->
+        <svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+        <path d="m655.45 328.74v77.062-0.046875c0 9.375-7.5469 16.969-16.922 16.969h-77.062c-4.5 0-8.8125-1.7812-11.953-4.9688-3.1875-3.1875-4.9688-7.5-4.9688-12v-77.016c0-4.5 1.7812-8.8125 4.9688-12 3.1406-3.1875 7.4531-4.9688 11.953-4.9688h77.062c9.375 0 16.922 7.5938 16.922 16.969zm-279.94 0v77.062-0.046875c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1875-7.4531 4.9688-11.953 4.9688h-78.656c-4.4531 0-8.7656-1.7812-11.953-4.9688s-4.9688-7.5-4.9219-12v-77.016c-0.046875-4.5 1.7344-8.8125 4.9219-12s7.5-4.9688 11.953-4.9688h78.656c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1875 4.9688 7.5 4.9688 12zm488.29-99.094v-78.656c0-4.5 1.7812-8.7656 4.9219-11.953 3.1875-3.1875 7.5-4.9688 12-4.9688h215.44c9.375 0 16.922 7.5938 16.922 16.922v898.03c0 9.3281-7.5469 16.922-16.922 16.922h-215.44c-4.5 0-8.8125-1.7812-12-4.9688-3.1406-3.1875-4.9219-7.4531-4.9219-11.953v-77.016c0-9.3281 7.5469-16.922 16.922-16.922h119.91v-708.52h-119.91c-9.375 0-16.922-7.5938-16.922-16.922zm-664.45 725.39v-708.47h119.91c9.375 0 16.922-7.5938 16.922-16.922v-78.656c0-4.5-1.7812-8.7656-4.9219-11.953-3.1875-3.1875-7.5-4.9688-12-4.9688h-215.44c-9.375 0-16.922 7.5938-16.922 16.922v898.03c0 9.3281 7.5469 16.922 16.922 16.922h215.44c4.5 0 8.8125-1.7812 12-4.9688 3.1406-3.1875 4.9219-7.4531 4.9219-11.953v-77.016c0-9.3281-7.5469-16.922-16.922-16.922zm737.58-160.78 0.046875-0.046875c0-9.3281-7.5938-16.922-16.922-16.922h-78.656c-9.3281 0-16.922 7.5938-16.922 16.922v78.609c0 9.375 7.5938 16.922 16.922 16.969h78.656c9.3281 0 16.922-7.5938 16.922-16.969v-78.562zm-281.53 0v78.609l0.046875-0.046875c0 9.375-7.5469 16.969-16.922 16.969h-77.062c-4.5 0-8.8125-1.7812-11.953-4.9688-3.1875-3.1875-4.9688-7.5-4.9688-12v-78.562c0-4.5 1.7812-8.8125 4.9688-12 3.1406-3.1875 7.4531-4.9688 11.953-4.9688h77.062c9.375 0 16.922 7.5938 16.922 16.969zm-279.94 0v78.609l0.046875-0.046875c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1875-7.4531 4.9688-11.953 4.9688h-78.656c-4.4531 0-8.7656-1.7812-11.953-4.9688s-4.9688-7.5-4.9219-12v-78.562c-0.046875-4.5 1.7344-8.8125 4.9219-12s7.5-4.9688 11.953-4.9688h78.656c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1875 4.9688 7.5 4.9688 12zm561.47-232.78 0.046875-0.046874c0-4.5-1.7812-8.8125-4.9688-12-3.1875-3.1406-7.5-4.9219-11.953-4.9219h-78.656c-9.3281 0-16.922 7.5469-16.922 16.922v78.656-0.046876c0 9.375 7.5938 16.922 16.922 16.922h78.656c4.4531 0 8.7656-1.7812 11.953-4.9219 3.1875-3.1875 4.9688-7.5 4.9688-12v-78.562zm-281.53 0v78.656l0.046875-0.09375c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1406-7.4531 4.9219-11.953 4.9219h-77.062c-9.3281 0-16.922-7.5469-16.922-16.922v-78.562c0-9.3281 7.5938-16.922 16.922-16.922h77.062c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1406 4.9688 7.4531 4.9688 11.953zm-279.94 0v78.656l0.046875-0.09375c0 9.375-7.5938 16.922-16.922 16.922h-78.656c-9.3281 0-16.875-7.5469-16.875-16.922v-78.562c0-9.3281 7.5469-16.922 16.875-16.922h78.656c9.3281 0 16.922 7.5938 16.922 16.922zm561.47-232.78 0.046875-0.09375c0-9.3281-7.5938-16.922-16.922-16.922h-78.656c-9.3281 0-16.922 7.5938-16.922 16.922v77.062c0 9.3281 7.5938 16.922 16.922 16.922h78.656c9.3281 0 16.922-7.5469 16.922-16.922z" fill-rule="evenodd"/>
+        </svg>
+      </div>
+      <div class="brandText">
+        <div class="brandName">Liberal Markets</div>
+        <div class="brandTag">minimal finance notes</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="chip is-active" data-nav="all" type="button" aria-pressed="true">
+        <span class="chipDot" aria-hidden="true"></span> Home
+      </button>
+      <button class="chip" data-nav="trumptracker" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Trump Tracker
+      </button>
+      <button class="chip" data-nav="markets" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Markets
+      </button>
+       <button class="chip" data-nav="model" type="button" aria-pressed="false">
+        <span class="chipDot" aria-hidden="true"></span> Model
+      </button>
+    </nav>
+
+    <div class="actions">
+      <label class="search" aria-label="Search posts">
+        <span class="searchIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.2-3.2"></path>
+          </svg>
+        </span>
+        <input id="q" type="search" placeholder="Search… (e.g., “yield”, “CPI”, “DCF”)" autocomplete="off" />
+        <span class="kbd" aria-hidden="true">⌘K</span>
+      </label>
+
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+
+    <section class="card astsCard" id="astsPortfolio" aria-label="ASTS portfolio tracker">
+    <div class="astsTop">
+        <div class="astsTitleBlock">
+        <div class="astsTitle">ASTS portfolio tracker</div>
+        <div class="astsSub">Spreadsheet snapshot, recalculated from <code>tape.json</code> close.</div>
+        </div>
+
+        <div class="astsPriceBlock" aria-label="Close price">
+        <div class="astsPriceRow">
+            <div class="astsMetaLabel">Close</div>
+            <div class="astsMetaValue" data-asts="closeDate">—</div>
+        </div>
+        <div class="astsPriceRow">
+            <div class="astsMetaLabel">Price</div>
+            <div class="astsMetaValue">
+            <span data-asts="closePrice">—</span>
+            <span class="astsDelta" data-asts="deltaPct">—</span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="astsGrid">
+        <div class="astsPanel astsPanelHoldings">
+        <div class="astsPanelHead">
+            <div class="astsPanelTitle">Holdings</div>
+            <div class="astsPanelHint muted">Edit shares + cost to match your position</div>
+        </div>
+
+        <table class="astsTable" aria-label="Holdings lots">
+            <thead>
+            <tr>
+                <th>Shares</th>
+                <th>Avg cost</th>
+                <th>Buy in</th>
+                <th>Weight</th>
+            </tr>
+            </thead>
+            <tbody id="astsLotsTbody"></tbody>
+            <tfoot>
+            <tr>
+                <td data-asts="sharesTotal">—</td>
+                <td data-asts="avgCost">—</td>
+                <td data-asts="buyIn">—</td>
+                <td>100.00%</td>
+            </tr>
+            </tfoot>
+        </table>
+
+        <div class="astsHoldingsActions" aria-label="Holdings actions">
+            <button class="astsBtn" id="astsAddLot" type="button">Add lot</button>
+            <button class="astsBtn astsBtnGhost" id="astsResetLots" type="button">Reset</button>
+        </div>
+
+
+        <div class="astsKpis astsPortfolioSummary" role="list" aria-label="Portfolio summary">
+            <div class="astsKpi" role="listitem">
+            <div class="astsKpiLabel">Starting value</div>
+            <div class="astsKpiValue" data-asts="startingValue">—</div>
+            </div>
+            <div class="astsKpi" role="listitem">
+            <div class="astsKpiLabel">Current value</div>
+            <div class="astsKpiValue" data-asts="currentValue">—</div>
+            </div>
+            <div class="astsKpi" role="listitem">
+            <div class="astsKpiLabel">Total profit</div>
+            <div class="astsKpiValue" data-asts="totalProfit">—</div>
+            </div>
+            <div class="astsKpi" role="listitem">
+            <div class="astsKpiLabel">% return</div>
+            <div class="astsKpiValue" data-asts="pctReturn">—</div>
+            </div>
+        </div>
+        </div>
+
+        <div class="astsPanel">
+        <div class="astsPanelHead">
+            <div class="astsPanelTitle">Share classes + market cap</div>
+        </div>
+
+        <table class="astsTable astsTableCompact" aria-label="Share classes">
+            <tbody>
+            <tr><td class="muted">Class A</td><td data-asts="classA">—</td></tr>
+            <tr><td class="muted">Class B</td><td data-asts="classB">—</td></tr>
+            <tr><td class="muted">Class C</td><td data-asts="classC">—</td></tr>
+            <tr><td class="muted">Total</td><td data-asts="sharesOutstanding">—</td></tr>
+            <tr><td class="muted">Market cap</td><td data-asts="marketCap">—</td></tr>
+            </tbody>
+        </table>
+
+        <div class="astsDivider"></div>
+
+        <div class="astsPanelHead">
+            <div class="astsPanelTitle">Future valuation calculator</div>
+        </div>
+
+        <div class="astsForm" aria-label="Future valuation calculator">
+            <label class="astsField">
+            <span class="astsFieldLabel">Customer base</span>
+            <input id="astsCustomerBase" class="astsInput" inputmode="numeric" value="2800000000">
+            </label>
+
+            <label class="astsField">
+            <span class="astsFieldLabel">% converted</span>
+            <input id="astsConverted" class="astsInput" inputmode="decimal" value="0.6">
+            </label>
+
+            <label class="astsField">
+            <span class="astsFieldLabel">ARPU (yearly)</span>
+            <input id="astsArpu" class="astsInput" inputmode="decimal" value="18">
+            </label>
+
+            <label class="astsField">
+            <span class="astsFieldLabel">P/E</span>
+            <input id="astsPe" class="astsInput" inputmode="decimal" value="20">
+            </label>
+        </div>
+
+        <div class="astsKpis astsKpis2" role="list" aria-label="Future valuation outputs">
+            <div class="astsKpi" role="listitem">
+            <div class="astsKpiLabel">Implied market cap</div>
+            <div class="astsKpiValue" data-asts="fvMarketCap">—</div>
+            </div>
+            <div class="astsKpi" role="listitem">
+            <div class="astsKpiLabel">Implied price / share</div>
+            <div class="astsKpiValue" data-asts="fvPrice">—</div>
+            </div>
+        </div>
+        </div>
+
+        <div class="astsPanel astsSpan2">
+        <div class="astsPanelHead">
+            <div class="astsPanelTitle">Milestones</div>
+            <div class="astsPanelHint muted">
+            Balance = shares × price. Div = 5% yield. NPV = div discounted 10y @ 3%.
+            </div>
+        </div>
+
+        <table class="astsTable" aria-label="Milestones table">
+            <thead>
+            <tr>
+                <th>Price</th>
+                <th>Balance</th>
+                <th>Market cap</th>
+                <th>Yearly dividend</th>
+                <th>NPV (10y, 3%)</th>
+            </tr>
+            </thead>
+            <tbody id="astsMilesTbody"></tbody>
+        </table>
+
+        <div class="astsCallout">
+            Estimated dividend given current evaluations:
+            <strong data-asts="estimatedDividend">—</strong>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <footer class="footer">
+      <div class="footerLeft">
+        <span class="footMark" aria-hidden="true"></span>
+        <span>Liberal Markets</span>
+        <span class="muted">© <span id="year"></span></span>
+      </div>
+      <div class="footerRight">
+        <a class="footLink" href="#" id="exportBtn">Export pins</a>
+        <span class="muted">No trackers. No noise.</span>
+      </div>
+    </footer>
+  </main>
+
+  <dialog class="modal" id="modal">
+    <form method="dialog" class="modalBox">
+      <div class="modalHead">
+        <div class="modalTitle">Quick Search</div>
+        <button class="x" value="cancel" aria-label="Close">
+          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 6l12 12"></path>
+            <path d="M18 6l-12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <label class="modalSearch">
+        <input id="modalQ" type="search" placeholder="Type to filter posts…" autocomplete="off" />
+      </label>
+
+      <div class="modalList" id="modalList"></div>
+
+      <div class="modalFoot">
+        <span class="muted">Enter opens. Esc closes. Humans remain complicated.</span>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js?v=3"></script>
+  <script src="scripts/chart.js?v=1"></script>
+    <script>
+    // ==========================
+    // ASTS portfolio tracker
+    // ==========================
+
+    const ASTS_PORTFOLIO = {
+        lots: [
+        // Default lots (editable). buyIn/weightPct are computed.
+        { shares: 5000, avgCost: 18, buyIn: 0, weightPct: 0 },
+        { shares: 3000, avgCost: 12, buyIn: 0, weightPct: 0 },
+        { shares: 1000, avgCost: 16, buyIn: 0, weightPct: 0 }
+        ],
+
+        sharesOutstanding: {
+        classA: 283885761,
+        classB: 11227292,
+        classC: 78163078,
+        total: 373276131
+        },
+
+        milestones: [50, 92.72, 100, 250, 500, 676, 1000, 1113.61, 1484.81],
+
+        dividendYield: 0.05,
+        npvYears: 10,
+        npvDiscount: 0.03,
+
+        fallbackPrice: 92.72,
+
+        // Derived (computed)
+        sharesTotal: 0,
+        avgCost: 0,
+        buyIn: 0
+    };
+
+    const ASTS_HOLDINGS_STORAGE_KEY = "asts_holdings_v1";
+    const ASTS_DEFAULT_LOTS = ASTS_PORTFOLIO.lots.map(l => ({ shares: l.shares, avgCost: l.avgCost }));
+
+    let astsCurrentPrice = ASTS_PORTFOLIO.fallbackPrice;
+
+    const _nf0 = new Intl.NumberFormat(undefined, { maximumFractionDigits: 0 });
+    const _nf2 = new Intl.NumberFormat(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const _usd2 = new Intl.NumberFormat(undefined, { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+    function fmtPct(x) {
+        if (!Number.isFinite(x)) return "—";
+        return `${_nf2.format(x)}%`;
+    }
+
+    function setText(key, text) {
+        const el = document.querySelector(`[data-asts="${key}"]`);
+        if (el) el.textContent = text;
+    }
+
+    function clampNonNeg(n) {
+        return Number.isFinite(n) ? Math.max(0, n) : 0;
+    }
+
+    function parseNumLoose(v) {
+        const s = String(v ?? "").replace(/,/g, "").trim();
+        const n = Number(s);
+        return Number.isFinite(n) ? n : NaN;
+    }
+
+    function pvSingle(amount, r, years) {
+        return amount / Math.pow(1 + r, years);
+    }
+
+    function findAstsFromTape(tape) {
+        const items = Array.isArray(tape?.items) ? tape.items : [];
+        return items.find(it => String(it.sym || "").toLowerCase() === "asts.us") || null;
+    }
+
+    async function fetchTapeNoStore() {
+        const url = `tape.json?v=${Date.now()}`;
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) throw new Error(`tape.json HTTP ${res.status}`);
+        return res.json();
+    }
+
+    function loadLotsFromStorage() {
+        try {
+        const raw = localStorage.getItem(ASTS_HOLDINGS_STORAGE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) return null;
+
+        const lots = parsed
+            .map(x => ({
+            shares: clampNonNeg(parseNumLoose(x?.shares)),
+            avgCost: clampNonNeg(parseNumLoose(x?.avgCost))
+            }))
+            .filter(l => Number.isFinite(l.shares) && Number.isFinite(l.avgCost));
+
+        return lots.length ? lots : null;
+        } catch {
+        return null;
+        }
+    }
+
+    function saveLotsToStorage() {
+        try {
+        const payload = ASTS_PORTFOLIO.lots.map(l => ({ shares: l.shares, avgCost: l.avgCost }));
+        localStorage.setItem(ASTS_HOLDINGS_STORAGE_KEY, JSON.stringify(payload));
+        } catch {
+        // ignore
+        }
+    }
+
+    function applyLotsFromStorageIfAny() {
+        const stored = loadLotsFromStorage();
+        if (!stored) return;
+        ASTS_PORTFOLIO.lots = stored.map(l => ({ ...l, buyIn: 0, weightPct: 0 }));
+    }
+
+    function recomputeHoldings() {
+        let totalShares = 0;
+        let totalBuyIn = 0;
+
+        for (const lot of ASTS_PORTFOLIO.lots) {
+        lot.shares = clampNonNeg(Number(lot.shares));
+        lot.avgCost = clampNonNeg(Number(lot.avgCost));
+        lot.buyIn = lot.shares * lot.avgCost;
+
+        totalShares += lot.shares;
+        totalBuyIn += lot.buyIn;
+        }
+
+        ASTS_PORTFOLIO.sharesTotal = totalShares;
+        ASTS_PORTFOLIO.buyIn = totalBuyIn;
+        ASTS_PORTFOLIO.avgCost = totalShares > 0 ? (totalBuyIn / totalShares) : 0;
+
+        for (const lot of ASTS_PORTFOLIO.lots) {
+        lot.weightPct = totalBuyIn > 0 ? (lot.buyIn / totalBuyIn) * 100 : 0;
+        }
+    }
+
+    function resetLotsToDefault() {
+        ASTS_PORTFOLIO.lots = ASTS_DEFAULT_LOTS.map(l => ({ ...l, buyIn: 0, weightPct: 0 }));
+        try { localStorage.removeItem(ASTS_HOLDINGS_STORAGE_KEY); } catch { /* ignore */ }
+
+        recomputeHoldings();
+        renderLots();
+        renderStaticBits();
+        renderFromPrice(astsCurrentPrice);
+    }
+
+    function renderLots() {
+        const tbody = document.getElementById("astsLotsTbody");
+        if (!tbody) return;
+
+        tbody.innerHTML = "";
+
+        ASTS_PORTFOLIO.lots.forEach((lot, i) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>
+            <input
+                class="astsInputSm"
+                inputmode="numeric"
+                data-lot-index="${i}"
+                data-lot-field="shares"
+                value="${_nf0.format(lot.shares)}"
+                aria-label="Lot ${i + 1} shares"
+            />
+            </td>
+            <td>
+            <input
+                class="astsInputSm"
+                inputmode="decimal"
+                data-lot-index="${i}"
+                data-lot-field="avgCost"
+                value="${_nf2.format(lot.avgCost)}"
+                aria-label="Lot ${i + 1} average cost"
+            />
+            </td>
+            <td>${_usd2.format(lot.buyIn)}</td>
+            <td>${_nf2.format(lot.weightPct)}%</td>
+        `;
+        tbody.appendChild(tr);
+        });
+
+        // One listener, forever. Humans love rerenders.
+        if (!tbody.dataset.bound) {
+        tbody.dataset.bound = "1";
+        tbody.addEventListener("input", (e) => {
+            const t = e.target;
+            if (!(t instanceof HTMLInputElement)) return;
+
+            const idx = Number(t.getAttribute("data-lot-index"));
+            const field = t.getAttribute("data-lot-field");
+            if (!Number.isFinite(idx) || idx < 0 || idx >= ASTS_PORTFOLIO.lots.length) return;
+            if (field !== "shares" && field !== "avgCost") return;
+
+            const n = parseNumLoose(t.value);
+            if (!Number.isFinite(n)) return;
+
+            if (field === "shares") ASTS_PORTFOLIO.lots[idx].shares = clampNonNeg(Math.round(n));
+            if (field === "avgCost") ASTS_PORTFOLIO.lots[idx].avgCost = clampNonNeg(n);
+
+            recomputeHoldings();
+            saveLotsToStorage();
+
+            renderLots();
+            renderStaticBits();
+            renderFromPrice(astsCurrentPrice);
+        });
+        }
+    }
+
+    function renderMilestones(priceNow) {
+        const tbody = document.getElementById("astsMilesTbody");
+        if (!tbody) return;
+
+        const prices = Array.from(new Set(ASTS_PORTFOLIO.milestones.map(Number)))
+        .filter(Number.isFinite)
+        .sort((a, b) => a - b);
+
+        if (Number.isFinite(priceNow) && !prices.some(p => Math.abs(p - priceNow) < 1e-9)) {
+        prices.push(priceNow);
+        prices.sort((a, b) => a - b);
+        }
+
+        tbody.innerHTML = "";
+        for (const p of prices) {
+        const balance = ASTS_PORTFOLIO.sharesTotal * p;
+        const mcap = ASTS_PORTFOLIO.sharesOutstanding.total * p;
+        const yearlyDiv = balance * ASTS_PORTFOLIO.dividendYield;
+        const npv = pvSingle(yearlyDiv, ASTS_PORTFOLIO.npvDiscount, ASTS_PORTFOLIO.npvYears);
+
+        const tr = document.createElement("tr");
+        if (Math.abs(p - priceNow) < 1e-6) tr.classList.add("is-current");
+
+        tr.innerHTML = `
+            <td>${_usd2.format(p)}</td>
+            <td>${_usd2.format(balance)}</td>
+            <td>${_usd2.format(mcap)}</td>
+            <td>${_usd2.format(yearlyDiv)}</td>
+            <td>${_usd2.format(npv)}</td>
+        `;
+        tbody.appendChild(tr);
+        }
+    }
+
+    function computeFutureValuation() {
+        const base = Number(document.getElementById("astsCustomerBase")?.value);
+        const converted = Number(document.getElementById("astsConverted")?.value);
+        const arpu = Number(document.getElementById("astsArpu")?.value);
+        const pe = Number(document.getElementById("astsPe")?.value);
+
+        const ok = [base, converted, arpu, pe].every(Number.isFinite);
+        if (!ok) {
+        setText("fvMarketCap", "—");
+        setText("fvPrice", "—");
+        return;
+        }
+
+        const impliedMcap = base * converted * arpu * pe;
+        const impliedPx = impliedMcap / ASTS_PORTFOLIO.sharesOutstanding.total;
+
+        setText("fvMarketCap", _usd2.format(impliedMcap));
+        setText("fvPrice", _usd2.format(impliedPx));
+    }
+
+    function wireFutureValuationInputs() {
+        ["astsCustomerBase", "astsConverted", "astsArpu", "astsPe"].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.addEventListener("input", computeFutureValuation);
+        });
+    }
+
+    function renderStaticBits() {
+        setText("sharesTotal", _nf0.format(ASTS_PORTFOLIO.sharesTotal));
+        setText("avgCost", _usd2.format(ASTS_PORTFOLIO.avgCost));
+        setText("buyIn", _usd2.format(ASTS_PORTFOLIO.buyIn));
+        setText("startingValue", _usd2.format(ASTS_PORTFOLIO.buyIn));
+
+        setText("classA", _nf0.format(ASTS_PORTFOLIO.sharesOutstanding.classA));
+        setText("classB", _nf0.format(ASTS_PORTFOLIO.sharesOutstanding.classB));
+        setText("classC", _nf0.format(ASTS_PORTFOLIO.sharesOutstanding.classC));
+        setText("sharesOutstanding", _nf0.format(ASTS_PORTFOLIO.sharesOutstanding.total));
+    }
+
+    function setDelta(deltaPct) {
+        const el = document.querySelector('[data-asts="deltaPct"]');
+        if (!el) return;
+
+        if (!Number.isFinite(deltaPct)) {
+        el.textContent = "";
+        el.classList.remove("is-up", "is-down");
+        return;
+        }
+
+        el.textContent = `(${_nf2.format(deltaPct)}%)`;
+        el.classList.toggle("is-up", deltaPct > 0);
+        el.classList.toggle("is-down", deltaPct < 0);
+    }
+
+    function setKpiUpDown(profit) {
+        const profitKpi = document.querySelector('[data-asts="totalProfit"]')?.closest(".astsKpi");
+        const returnKpi = document.querySelector('[data-asts="pctReturn"]')?.closest(".astsKpi");
+
+        [profitKpi, returnKpi].forEach(el => {
+        if (!el) return;
+        el.classList.remove("is-up", "is-down");
+        el.classList.add(profit >= 0 ? "is-up" : "is-down");
+        });
+    }
+
+    function renderFromPrice(price) {
+        astsCurrentPrice = price;
+
+        const currentValue = ASTS_PORTFOLIO.sharesTotal * price;
+        const profit = currentValue - ASTS_PORTFOLIO.buyIn;
+
+        const pctReturn = (ASTS_PORTFOLIO.buyIn > 0) ? (profit / ASTS_PORTFOLIO.buyIn) * 100 : NaN;
+
+        const mcap = ASTS_PORTFOLIO.sharesOutstanding.total * price;
+        const yearlyDiv = currentValue * ASTS_PORTFOLIO.dividendYield;
+
+        setText("closePrice", _usd2.format(price));
+        setText("currentValue", _usd2.format(currentValue));
+        setText("totalProfit", _usd2.format(profit));
+        setText("pctReturn", fmtPct(pctReturn));
+        setText("marketCap", _usd2.format(mcap));
+        setText("estimatedDividend", _usd2.format(yearlyDiv));
+
+        setKpiUpDown(profit);
+        renderMilestones(price);
+    }
+
+    async function initAstsPortfolio() {
+        const root = document.getElementById("astsPortfolio");
+        if (!root) return;
+
+        applyLotsFromStorageIfAny();
+        recomputeHoldings();
+
+        document.getElementById("astsAddLot")?.addEventListener("click", () => {
+        ASTS_PORTFOLIO.lots.push({ shares: 0, avgCost: 0, buyIn: 0, weightPct: 0 });
+        recomputeHoldings();
+        saveLotsToStorage();
+        renderLots();
+        renderStaticBits();
+        renderFromPrice(astsCurrentPrice);
+        });
+
+        document.getElementById("astsResetLots")?.addEventListener("click", resetLotsToDefault);
+
+        renderLots();
+        renderStaticBits();
+        wireFutureValuationInputs();
+        computeFutureValuation();
+
+        let price = ASTS_PORTFOLIO.fallbackPrice;
+
+        try {
+        const tape = await fetchTapeNoStore();
+        const asts = findAstsFromTape(tape);
+
+        if (asts && Number.isFinite(Number(asts.close))) {
+            price = Number(asts.close);
+            setText("closeDate", asts.date || "—");
+            setDelta(Number(asts.deltaPct));
+        } else {
+            setText("closeDate", "—");
+            setDelta(NaN);
+        }
+        } catch {
+        setText("closeDate", "—");
+        setDelta(NaN);
+        }
+
+        renderFromPrice(price);
+    }
+
+    document.addEventListener("DOMContentLoaded", initAstsPortfolio);
+    </script>
+</body>
+</html>
