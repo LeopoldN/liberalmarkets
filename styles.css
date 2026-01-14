@@ -51,6 +51,34 @@ body{
 a{ color: inherit; text-decoration: none; }
 a:hover{ text-decoration: underline; text-underline-offset: 3px; }
 
+/* ---------- iOS/Safari sanity: stop "button text turns blue" ----------
+   Mobile Safari loves giving buttons the default system link-blue.
+   We explicitly inherit text color/font so UI stays on-palette. */
+button,
+input,
+select,
+textarea{
+  font: inherit;
+  color: inherit;
+}
+
+button{
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* remove Firefox inner padding (harmless elsewhere) */
+button::-moz-focus-inner{
+  border: 0;
+  padding: 0;
+}
+
+/* Optional: reduce the bright tap flash without killing accessibility */
+button,
+a{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 .skip{
   position:absolute; left:-999px; top:auto;
   width:1px; height:1px; overflow:hidden;
@@ -477,6 +505,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
   cursor:pointer;
   font-size: 11px;
   font-family: var(--mono);
+  color: var(--ink2);
 }
 .pinBtn:hover{ box-shadow: inset 0 0 0 1px rgba(52,78,65,.15); }
 
@@ -647,6 +676,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
   cursor:pointer;
   font-size: 12px;
   display:flex; align-items:center; gap: 8px;
+  color: var(--ink2);
 }
 .pinIt:hover{ box-shadow: inset 0 0 0 1px rgba(52,78,65,.15); }
 
@@ -710,6 +740,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 3px; }
   padding: 8px 10px;
   border-radius: 12px;
   cursor:pointer;
+  color: var(--ink2);
 }
 .modalSearch input{
   width: 100%;
