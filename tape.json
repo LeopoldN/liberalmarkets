@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-13T23:39:41.359Z",
+  "generatedAt": "2026-01-14T00:45:50.032Z",
   "source": "stooq",
   "items": [
     {
@@ -18,10 +18,10 @@
       "name": "USD/EUR",
       "group": null,
       "date": "2026-01-14",
-      "close": 0.858759,
+      "close": 0.858855,
       "prevDate": "2026-01-13",
       "prevClose": 0.858745,
-      "deltaPct": 0.001630286056997221,
+      "deltaPct": 0.01280939044769891,
       "ok": true
     },
     {
@@ -51,10 +51,10 @@
       "name": "Gold",
       "group": null,
       "date": "2026-01-14",
-      "close": 4596.025,
+      "close": 4607.055,
       "prevDate": "2026-01-13",
       "prevClose": 4586.07,
-      "deltaPct": 0.21707038924394517,
+      "deltaPct": 0.45758132780355787,
       "ok": true
     },
     {
