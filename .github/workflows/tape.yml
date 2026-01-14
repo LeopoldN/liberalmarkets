@@ -3,7 +3,6 @@ name: Update tape.json + heatmap.json
 on:
   workflow_dispatch:
   schedule:
-    # Runs daily at 18:10 UTC (adjust if you want)
   - cron: "0 14 * * 1-5"   # 10:00 ET during EDT
   - cron: "0 15 * * 1-5"   # 10:00 ET during EST
   - cron: "30 20 * * 1-5"  # 16:30 ET during EDT

@@ -8,17 +8,21 @@
 import fs from "node:fs/promises";
 
 /**
- * Exit early unless local NY time matches one of the allowed (hour, minute) pairs.
- * @param {Array<[number, number]>} allowedTimes
+ * Exit early unless local NY time is within +/- graceMinutes of one of the allowed times.
+ * @param {Array<[number, number]>} allowedTimes - array of [hour, minute] in NY time
+ * @param {number} graceMinutes - tolerance window (e.g., 20 means allow 09:40–10:20)
  */
-function exitUnlessNYTimeMatches(allowedTimes) {
+function exitUnlessNYTimeMatches(allowedTimes, graceMinutes = 20) {
+  const now = new Date();
+
+  // Get NY time parts
   const parts = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/New_York",
     hour12: false,
     hour: "2-digit",
     minute: "2-digit",
     weekday: "short",
-  }).formatToParts(new Date());
+  }).formatToParts(now);
 
   const get = (t) => parts.find(p => p.type === t)?.value;
   const weekday = get("weekday");
@@ -31,15 +35,29 @@ function exitUnlessNYTimeMatches(allowedTimes) {
     process.exit(0);
   }
 
-  const ok = allowedTimes.some(([h, m]) => h === hour && m === minute);
+  const nowTotal = hour * 60 + minute;
+
+  const ok = allowedTimes.some(([h, m]) => {
+    const target = h * 60 + m;
+    const diff = Math.abs(nowTotal - target);
+
+    // Normal window OR crossing midnight edge case (rare here, but correct)
+    const wrapDiff = Math.min(diff, 1440 - diff);
+    return wrapDiff <= graceMinutes;
+  });
+
   if (!ok) {
-    console.log(`NY time ${String(hour).padStart(2,"0")}:${String(minute).padStart(2,"0")} not scheduled, skipping.`);
+    console.log(
+      `NY time ${String(hour).padStart(2,"0")}:${String(minute).padStart(2,"0")} not within ±${graceMinutes}m of scheduled times, skipping.`
+    );
     process.exit(0);
   }
+
+  console.log(`NY time within ±${graceMinutes}m window, proceeding.`);
 }
 
-// Example: 10:00 ET and 16:30 ET
-exitUnlessNYTimeMatches([[10, 0], [16, 30]]);
+// Example: allow 10:00 and 16:30 with 25 minute grace
+exitUnlessNYTimeMatches([[10, 0], [16, 30]], 45);
 
 
 const WATCH = [
