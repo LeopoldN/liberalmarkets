@@ -307,6 +307,12 @@
     border-top:1px solid rgba(0,0,0,.10);
     }
 
+  /* Holdings table: tighten the right edge so the last column doesn't look oddly padded */
+  .astsPanelHoldings .astsTable th:last-child,
+  .astsPanelHoldings .astsTable td:last-child{
+    padding-right: 30px;
+  }
+
     .astsKpis2 .astsKpi{
     border-radius:20px;
     }
@@ -798,13 +804,11 @@
         total: 373276131
         },
 
-        milestones: [50, 92.72, 100, 250, 500, 676, 1000, 1113.61, 1484.81],
+        milestones: [50, 100, 250, 500, 750, 1000, 1000, 2000],
 
         dividendYield: 0.05,
         npvYears: 10,
         npvDiscount: 0.03,
-
-        fallbackPrice: 92.72,
 
         // Derived (computed)
         sharesTotal: 0,
@@ -815,7 +819,8 @@
     const ASTS_HOLDINGS_STORAGE_KEY = "asts_holdings_v1";
     const ASTS_DEFAULT_LOTS = ASTS_PORTFOLIO.lots.map(l => ({ shares: l.shares, avgCost: l.avgCost }));
 
-    let astsCurrentPrice = ASTS_PORTFOLIO.fallbackPrice;
+    // No hardcoded fallback: show placeholders until tape.json loads
+    let astsCurrentPrice = NaN;
 
     const _nf0 = new Intl.NumberFormat(undefined, { maximumFractionDigits: 0 });
     const _nf2 = new Intl.NumberFormat(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -1105,6 +1110,28 @@
     function renderFromPrice(price) {
         astsCurrentPrice = price;
 
+        // If we don't have a real price yet, keep the UI clean (no random numbers).
+        if (!Number.isFinite(price)) {
+        setText("closePrice", "—");
+        setText("currentValue", "—");
+        setText("totalProfit", "—");
+        setText("pctReturn", "—");
+        setText("marketCap", "—");
+        setText("estimatedDividend", "—");
+
+        // Remove up/down styling from KPI tiles
+        const profitKpi = document.querySelector('[data-asts="totalProfit"]')?.closest(".astsKpi");
+        const returnKpi = document.querySelector('[data-asts="pctReturn"]')?.closest(".astsKpi");
+        [profitKpi, returnKpi].forEach(el => {
+            if (!el) return;
+            el.classList.remove("is-up", "is-down");
+        });
+
+        // Still render milestones from the static list (no "current" row injected)
+        renderMilestones(NaN);
+        return;
+        }
+
         const currentValue = ASTS_PORTFOLIO.sharesTotal * price;
         const profit = currentValue - ASTS_PORTFOLIO.buyIn;
 
@@ -1147,7 +1174,7 @@
         wireFutureValuationInputs();
         computeFutureValuation();
 
-        let price = ASTS_PORTFOLIO.fallbackPrice;
+        let price = NaN;
 
         try {
         const tape = await fetchTapeNoStore();
