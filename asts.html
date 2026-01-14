@@ -177,11 +177,10 @@
     margin-bottom: 10px;
     }
 
-    /* Allow tables to scroll horizontally on small screens instead of exploding the layout */
+    /* Allow tables to scroll horizontally on small screens only */
     .astsTableScroll {
       width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      overflow: visible; /* no scrollbars on desktop */
       border-radius: 14px;
     }
 
@@ -541,8 +540,12 @@
       .astsKpis { grid-template-columns: 1fr; }
 
       /* Force horizontal scroll for wide tables instead of overflow */
-    .astsTableWide{ min-width: 640px; }
-    .astsTableScroll{ overflow-x: auto; }
+      .astsTableWide{ min-width: 640px; }
+      .astsTableScroll{
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
 
       /* Tables: tighten spacing */
       .astsTable { font-size: 11px; }
@@ -957,9 +960,14 @@
         });
 
         // One listener, forever. Humans love rerenders.
+        // IMPORTANT: do NOT recompute + rerender on every keystroke.
+        // Mobile keyboards + rerenders = losing focus and cursor position.
+        // We only commit changes when the user is "done": on blur/change or pressing Enter.
         if (!tbody.dataset.bound) {
-        tbody.dataset.bound = "1";
-        tbody.addEventListener("input", (e) => {
+          tbody.dataset.bound = "1";
+
+          // Commit on blur/change (fires when the input loses focus)
+          tbody.addEventListener("change", (e) => {
             const t = e.target;
             if (!(t instanceof HTMLInputElement)) return;
 
@@ -977,10 +985,20 @@
             recomputeHoldings();
             saveLotsToStorage();
 
+            // Now it's safe to rerender (user is done typing)
             renderLots();
             renderStaticBits();
             renderFromPrice(astsCurrentPrice);
-        });
+          });
+
+          // Pressing Enter should commit without keeping focus trapped
+          tbody.addEventListener("keydown", (e) => {
+            const t = e.target;
+            if (!(t instanceof HTMLInputElement)) return;
+            if (e.key !== "Enter") return;
+            e.preventDefault();
+            t.blur(); // triggers the change event
+          });
         }
     }
 
