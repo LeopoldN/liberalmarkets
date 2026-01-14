@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-14T20:45:40.820Z",
+  "generatedAt": "2026-01-14T21:43:24.008Z",
   "source": "stooq",
   "items": [
     {
@@ -29,7 +29,7 @@
       "name": "Brent Oil",
       "group": null,
       "date": "2026-01-14",
-      "close": 64.09,
+      "close": 64.85,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -62,10 +62,10 @@
       "name": "ASTS",
       "group": null,
       "date": "2026-01-14",
-      "close": 94.755,
+      "close": 95.22,
       "prevDate": "2026-01-13",
       "prevClose": 92.72,
-      "deltaPct": 2.194779982743733,
+      "deltaPct": 2.6962899050905875,
       "ok": true
     }
   ]
