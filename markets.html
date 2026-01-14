@@ -472,8 +472,23 @@
       const grid = document.getElementById("hmGrid");
       const stamp = document.getElementById("hmStamp");
       const btn = document.getElementById("hmRefresh");
+      const searchInput = document.getElementById("q");
 
       if (!grid || !stamp || !btn) return;
+
+      // Heatmap state so we can re-sort without re-fetching.
+      const hmState = {
+        baseItems: /** @type {Array<any>} */ ([]),
+        generatedAt: /** @type {string|null} */ (null),
+      };
+
+      /**
+       * Get the current query string from the top search box.
+       * @returns {string}
+       */
+      function getHeatmapQuery() {
+        return String(searchInput?.value ?? "").trim();
+      }
 
       /**
        * Map percent change into a subtle color band.
@@ -522,11 +537,49 @@
       }
 
       /**
-       * Render heatmap tiles.
-       * @param {{generatedAt:string, items:Array<any>}} payload
+       * Compute a match score for sorting.
+       * Higher score = closer match.
+       *
+       * @param {any} it
+       * @param {string[]} tokens
+       * @returns {number}
        */
-      function render(payload) {
-        const items = Array.isArray(payload?.items) ? payload.items : [];
+      function scoreItem(it, tokens) {
+        if (!tokens.length) return 0;
+
+        const sym = String(it?.sym ?? "").trim().toLowerCase();
+        const name = String(it?.name ?? "").trim().toLowerCase();
+        const group = String(it?.group ?? "").trim().toLowerCase();
+
+        let score = 0;
+        for (const t of tokens) {
+          if (!t) continue;
+
+          // Symbol: strongest signal
+          if (sym === t) score += 40;
+          else if (sym.startsWith(t)) score += 25;
+          else if (sym.includes(t)) score += 12;
+
+          // Name: medium signal
+          if (name === t) score += 18;
+          else if (name.startsWith(t)) score += 12;
+          else if (name.includes(t)) score += 8;
+
+          // Group: lighter signal (index/mega/sector/etc.)
+          if (group === t) score += 10;
+          else if (group.startsWith(t)) score += 7;
+          else if (group.includes(t)) score += 4;
+        }
+
+        return score;
+      }
+
+      /**
+       * Render heatmap tiles.
+       * @param {Array<any>} items
+       * @param {string|null} generatedAt
+       */
+      function renderTiles(items, generatedAt) {
         grid.innerHTML = "";
 
         for (const it of items) {
@@ -563,10 +616,51 @@
           grid.appendChild(tile);
         }
 
-        const ts = payload?.generatedAt ? new Date(payload.generatedAt) : null;
+        const ts = generatedAt ? new Date(generatedAt) : null;
         stamp.textContent = ts && !Number.isNaN(ts.getTime())
           ? `Updated: ${ts.toLocaleString()}`
           : "Updated: —";
+      }
+
+      /**
+       * Apply the current query: sort items by symbol/name/group match.
+       * We don't hide non-matches; we just push matches to the front.
+       */
+      function applyHeatmapQuery() {
+        const q = getHeatmapQuery().toLowerCase();
+        const tokens = q.split(/\s+/g).filter(Boolean);
+
+        const base = Array.isArray(hmState.baseItems) ? hmState.baseItems : [];
+        if (!base.length) {
+          renderTiles([], hmState.generatedAt);
+          return;
+        }
+
+        // Stable sort: use original index as tie-breaker.
+        const ranked = base.map((it, idx) => ({ it, idx, score: scoreItem(it, tokens) }));
+
+        ranked.sort((a, b) => {
+          // If no query, keep original order.
+          if (!tokens.length) return a.idx - b.idx;
+
+          // Higher score first.
+          if (b.score !== a.score) return b.score - a.score;
+
+          // Tie-breaker: original order.
+          return a.idx - b.idx;
+        });
+
+        renderTiles(ranked.map(r => r.it), hmState.generatedAt);
+      }
+
+      /**
+       * Render heatmap from payload and preserve base ordering for stable re-sorts.
+       * @param {{generatedAt:string, items:Array<any>}} payload
+       */
+      function render(payload) {
+        hmState.baseItems = Array.isArray(payload?.items) ? payload.items : [];
+        hmState.generatedAt = payload?.generatedAt ?? null;
+        applyHeatmapQuery();
       }
 
       /**
@@ -594,6 +688,15 @@
       }
 
       btn.addEventListener("click", load);
+
+      // Re-sort heatmap as the user types in the main search box.
+      if (searchInput) {
+        searchInput.addEventListener("input", () => {
+          // If heatmap hasn't loaded yet, this is harmless.
+          applyHeatmapQuery();
+        });
+      }
+
       load();
     })();
   </script>

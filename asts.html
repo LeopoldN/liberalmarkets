@@ -171,6 +171,21 @@
     margin-bottom: 10px;
     }
 
+    /* Allow tables to scroll horizontally on small screens instead of exploding the layout */
+    .astsTableScroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 14px;
+    }
+
+    .astsTableScroll::-webkit-scrollbar { height: 10px; }
+    .astsTableScroll::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,.12);
+      border-radius: 999px;
+    }
+    .astsTableScroll::-webkit-scrollbar-track { background: rgba(0,0,0,.04); }
+
     /* Tables */
     .astsTable {
     width: 100%;
@@ -489,8 +504,43 @@
     }
 
     @media (max-width: 900px) {
-    .astsGrid { grid-template-columns: 1fr; }
-    .astsSpan2 { grid-column: auto; }
+      .astsGrid { grid-template-columns: 1fr; }
+      .astsSpan2 { grid-column: auto; }
+
+      .astsCard { padding: 14px; }
+      .astsPanel { padding: 12px; }
+    }
+
+    @media (max-width: 560px) {
+      .astsCard { padding: 12px; }
+
+      /* Make the header breathe */
+      .astsTitle { font-size: 16px; }
+      .astsSub { font-size: 12px; }
+
+      /* Close pill should never overflow */
+      .astsPriceBlock {
+        width: 100%;
+        min-width: 0;
+      }
+
+      /* Inputs + buttons */
+      .astsForm { grid-template-columns: 1fr; }
+      .astsHoldingsActions { flex-wrap: wrap; }
+
+      /* KPI tiles: one per row */
+      .astsKpis { grid-template-columns: 1fr; }
+
+      /* Tables: tighten spacing */
+      .astsTable { font-size: 11px; }
+      .astsTable th,
+      .astsTable td { padding: 7px 6px; }
+
+      /* Editable lot inputs */
+      .astsInputSm { padding: 6px 7px; }
+
+      /* Callout */
+      .astsCallout { font-size: 12px; }
     }
   </style>
 </head>
@@ -527,19 +577,6 @@
       </button>
     </nav>
 
-    <div class="actions">
-      <label class="search" aria-label="Search posts">
-        <span class="searchIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="7"></circle>
-            <path d="M20 20l-3.2-3.2"></path>
-          </svg>
-        </span>
-        <input id="q" type="search" placeholder="Search… (e.g., “yield”, “CPI”, “DCF”)" autocomplete="off" />
-        <span class="kbd" aria-hidden="true">⌘K</span>
-      </label>
-
-    </div>
   </header>
 
   <main id="main" class="wrap">
@@ -573,6 +610,7 @@
             <div class="astsPanelHint muted">Edit shares + cost to match your position</div>
         </div>
 
+        <div class="astsTableScroll" aria-label="Holdings table scroll">
         <table class="astsTable" aria-label="Holdings lots">
             <thead>
             <tr>
@@ -592,6 +630,7 @@
             </tr>
             </tfoot>
         </table>
+        </div>
 
         <div class="astsHoldingsActions" aria-label="Holdings actions">
             <button class="astsBtn" id="astsAddLot" type="button">Add lot</button>
@@ -624,6 +663,7 @@
             <div class="astsPanelTitle">Share classes + market cap</div>
         </div>
 
+        <div class="astsTableScroll" aria-label="Share classes table scroll">
         <table class="astsTable astsTableCompact" aria-label="Share classes">
             <tbody>
             <tr><td class="muted">Class A</td><td data-asts="classA">—</td></tr>
@@ -633,6 +673,7 @@
             <tr><td class="muted">Market cap</td><td data-asts="marketCap">—</td></tr>
             </tbody>
         </table>
+        </div>
 
         <div class="astsDivider"></div>
 
@@ -682,6 +723,7 @@
             </div>
         </div>
 
+        <div class="astsTableScroll" aria-label="Milestones table scroll">
         <table class="astsTable" aria-label="Milestones table">
             <thead>
             <tr>
@@ -694,6 +736,7 @@
             </thead>
             <tbody id="astsMilesTbody"></tbody>
         </table>
+        </div>
 
         <div class="astsCallout">
             Estimated dividend given current evaluations:
@@ -716,30 +759,6 @@
       </div>
     </footer>
   </main>
-
-  <dialog class="modal" id="modal">
-    <form method="dialog" class="modalBox">
-      <div class="modalHead">
-        <div class="modalTitle">Quick Search</div>
-        <button class="x" value="cancel" aria-label="Close">
-          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M6 6l12 12"></path>
-            <path d="M18 6l-12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-      <label class="modalSearch">
-        <input id="modalQ" type="search" placeholder="Type to filter posts…" autocomplete="off" />
-      </label>
-
-      <div class="modalList" id="modalList"></div>
-
-      <div class="modalFoot">
-        <span class="muted">Enter opens. Esc closes. Humans remain complicated.</span>
-      </div>
-    </form>
-  </dialog>
 
   <script src="app.js?v=3"></script>
   <script src="scripts/chart.js?v=1"></script>

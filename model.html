@@ -86,19 +86,6 @@
       </button>
     </nav>
 
-    <div class="actions">
-      <label class="search" aria-label="Search posts">
-        <span class="searchIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="7"></circle>
-            <path d="M20 20l-3.2-3.2"></path>
-          </svg>
-        </span>
-        <input id="q" type="search" placeholder="Search… (e.g., “yield”, “CPI”, “DCF”)" autocomplete="off" />
-        <span class="kbd" aria-hidden="true">⌘K</span>
-      </label>
-
-    </div>
   </header>
 
   <main id="main" class="wrap">
@@ -262,29 +249,6 @@
     </footer>
   </main>
 
-  <dialog class="modal" id="modal">
-    <form method="dialog" class="modalBox">
-      <div class="modalHead">
-        <div class="modalTitle">Quick Search</div>
-        <button class="x" value="cancel" aria-label="Close">
-          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M6 6l12 12"></path>
-            <path d="M18 6l-12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-      <label class="modalSearch">
-        <input id="modalQ" type="search" placeholder="Type to filter posts…" autocomplete="off" />
-      </label>
-
-      <div class="modalList" id="modalList"></div>
-
-      <div class="modalFoot">
-        <span class="muted">Enter opens. Esc closes. Humans remain complicated.</span>
-      </div>
-    </form>
-  </dialog>
 
   <script src="app.js?v=3"></script>
   <script src="scripts/chart.js?v=1"></script>
