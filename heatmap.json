@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-19T15:24:41.409Z",
+  "generatedAt": "2026-01-19T20:46:47.504Z",
   "source": "stooq",
   "items": [
     {
@@ -84,10 +84,10 @@
       "name": "DAX Germany",
       "group": "Index",
       "date": "2026-01-19",
-      "close": 24982.31,
+      "close": 24960.33,
       "prevDate": "2026-01-16",
       "prevClose": 25297.13,
-      "deltaPct": -1.2444889993449837,
+      "deltaPct": -1.331376326089162,
       "ok": true
     },
     {
@@ -95,10 +95,10 @@
       "name": "FTSE 100 UK",
       "group": "Index",
       "date": "2026-01-19",
-      "close": 10201.4,
+      "close": 10195.4,
       "prevDate": "2026-01-16",
       "prevClose": 10235.29,
-      "deltaPct": -0.3311093286072153,
+      "deltaPct": -0.38973004184542637,
       "ok": true
     },
     {
@@ -370,10 +370,10 @@
       "name": "Gold",
       "group": "Macro",
       "date": "2026-01-19",
-      "close": 4664.56,
+      "close": 4670.92,
       "prevDate": "2026-01-16",
       "prevClose": 4582.265,
-      "deltaPct": 1.7959458913877846,
+      "deltaPct": 1.934741879834534,
       "ok": true
     },
     {
@@ -381,7 +381,7 @@
       "name": "Brent Oil",
       "group": "Macro",
       "date": "2026-01-19",
-      "close": 64.01,
+      "close": 64.19,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -392,10 +392,10 @@
       "name": "US 10Y Yield",
       "group": "Macro",
       "date": "2026-01-19",
-      "close": 4.256,
+      "close": 4.267,
       "prevDate": "2026-01-16",
       "prevClose": 4.229,
-      "deltaPct": 0.6384488058642779,
+      "deltaPct": 0.8985575786238043,
       "ok": true
     },
     {
@@ -403,10 +403,10 @@
       "name": "USD/EUR",
       "group": "Macro",
       "date": "2026-01-19",
-      "close": 0.859372,
+      "close": 0.858826,
       "prevDate": "2026-01-16",
       "prevClose": 0.862113,
-      "deltaPct": -0.3179397596370759,
+      "deltaPct": -0.38127252459945193,
       "ok": true
     },
     {
@@ -414,10 +414,10 @@
       "name": "Bitcoin",
       "group": "Macro",
       "date": "2026-01-19",
-      "close": 92976.35,
+      "close": 93091.06,
       "prevDate": "2026-01-18",
       "prevClose": 95469.95,
-      "deltaPct": -2.611921342789003,
+      "deltaPct": -2.4917683522406753,
       "ok": true
     },
     {
@@ -425,7 +425,7 @@
       "name": "Copper",
       "group": "Macro",
       "date": "2026-01-19",
-      "close": 591.02,
+      "close": 590.55,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -436,7 +436,7 @@
       "name": "Silver",
       "group": "Macro",
       "date": "2026-01-19",
-      "close": 9383.5,
+      "close": 9428,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
