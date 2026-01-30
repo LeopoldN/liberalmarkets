@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-30T14:29:41.263Z",
+  "generatedAt": "2026-01-30T15:32:29.952Z",
   "source": "stooq",
   "items": [
     {
@@ -7,10 +7,10 @@
       "name": "US 10Y Yield",
       "group": null,
       "date": "2026-01-30",
-      "close": 4.242,
+      "close": 4.246,
       "prevDate": "2026-01-29",
       "prevClose": 4.235,
-      "deltaPct": 0.16528925619834212,
+      "deltaPct": 0.25974025974027093,
       "ok": true
     },
     {
@@ -18,10 +18,10 @@
       "name": "USD/EUR",
       "group": null,
       "date": "2026-01-30",
-      "close": 0.83982,
+      "close": 0.841042,
       "prevDate": "2026-01-29",
       "prevClose": 0.83554,
-      "deltaPct": 0.5122435790028135,
+      "deltaPct": 0.6584963017928436,
       "ok": true
     },
     {
@@ -29,7 +29,7 @@
       "name": "Brent Oil",
       "group": null,
       "date": "2026-01-30",
-      "close": 69.89,
+      "close": 69.58,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -39,11 +39,11 @@
       "sym": "^spx",
       "name": "S&P 500",
       "group": null,
-      "date": "2026-01-29",
-      "close": 6969.01,
-      "prevDate": "2026-01-28",
-      "prevClose": 6978.03,
-      "deltaPct": -0.12926284352460238,
+      "date": "2026-01-30",
+      "close": 6935.84,
+      "prevDate": "2026-01-29",
+      "prevClose": 6969.01,
+      "deltaPct": -0.4759643048295237,
       "ok": true
     },
     {
@@ -51,21 +51,21 @@
       "name": "Gold",
       "group": null,
       "date": "2026-01-30",
-      "close": 5070.35,
+      "close": 5042.3,
       "prevDate": "2026-01-29",
       "prevClose": 5378.77,
-      "deltaPct": -5.73402469337786,
+      "deltaPct": -6.255519384543307,
       "ok": true
     },
     {
       "sym": "asts.us",
       "name": "ASTS",
       "group": null,
-      "date": "2026-01-29",
-      "close": 122.09,
-      "prevDate": "2026-01-28",
-      "prevClose": 121.23,
-      "deltaPct": 0.7093953641837736,
+      "date": "2026-01-30",
+      "close": 117.11,
+      "prevDate": "2026-01-29",
+      "prevClose": 122.09,
+      "deltaPct": -4.078958145630274,
       "ok": true
     }
   ]
