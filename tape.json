@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-02T14:36:51.236Z",
+  "generatedAt": "2026-02-02T15:36:16.638Z",
   "source": "stooq",
   "items": [
     {
@@ -7,10 +7,10 @@
       "name": "US 10Y Yield",
       "group": null,
       "date": "2026-02-02",
-      "close": 4.251,
+      "close": 4.278,
       "prevDate": "2026-01-30",
       "prevClose": 4.239,
-      "deltaPct": 0.2830856334041121,
+      "deltaPct": 0.9200283085633254,
       "ok": true
     },
     {
@@ -18,10 +18,10 @@
       "name": "USD/EUR",
       "group": null,
       "date": "2026-02-02",
-      "close": 0.845787,
+      "close": 0.847048,
       "prevDate": "2026-01-30",
       "prevClose": 0.843639,
-      "deltaPct": 0.254611273305283,
+      "deltaPct": 0.4040827889654208,
       "ok": true
     },
     {
@@ -29,7 +29,7 @@
       "name": "Brent Oil",
       "group": null,
       "date": "2026-02-02",
-      "close": 66.3,
+      "close": 66.4,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -40,10 +40,10 @@
       "name": "S&P 500",
       "group": null,
       "date": "2026-02-02",
-      "close": 6940.19,
+      "close": 6974.4,
       "prevDate": "2026-01-30",
       "prevClose": 6939.03,
-      "deltaPct": 0.016717033937019288,
+      "deltaPct": 0.5097254227175885,
       "ok": true
     },
     {
@@ -51,21 +51,21 @@
       "name": "Gold",
       "group": null,
       "date": "2026-02-02",
-      "close": 4763.69,
+      "close": 4695.55,
       "prevDate": "2026-01-30",
       "prevClose": 4847.87,
-      "deltaPct": -1.7364327013719483,
+      "deltaPct": -3.1419984446777627,
       "ok": true
     },
     {
       "sym": "asts.us",
       "name": "ASTS",
       "group": null,
-      "date": "2026-01-30",
-      "close": 111.21,
-      "prevDate": "2026-01-29",
-      "prevClose": 122.09,
-      "deltaPct": -8.9114587599312,
+      "date": "2026-02-02",
+      "close": 110.3572,
+      "prevDate": "2026-01-30",
+      "prevClose": 111.21,
+      "deltaPct": -0.7668375146119843,
       "ok": true
     }
   ]
