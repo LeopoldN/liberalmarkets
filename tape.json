@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-03T14:39:23.894Z",
+  "generatedAt": "2026-02-03T21:02:21.189Z",
   "source": "stooq",
   "items": [
     {
@@ -7,10 +7,10 @@
       "name": "US 10Y Yield",
       "group": null,
       "date": "2026-02-03",
-      "close": 4.293,
+      "close": 4.263,
       "prevDate": "2026-02-02",
       "prevClose": 4.283,
-      "deltaPct": 0.2334812047630086,
+      "deltaPct": -0.4669624095260394,
       "ok": true
     },
     {
@@ -18,10 +18,10 @@
       "name": "USD/EUR",
       "group": null,
       "date": "2026-02-03",
-      "close": 0.848003,
+      "close": 0.845887,
       "prevDate": "2026-02-02",
       "prevClose": 0.848075,
-      "deltaPct": -0.008489815169654413,
+      "deltaPct": -0.25799604987767344,
       "ok": true
     },
     {
@@ -29,7 +29,7 @@
       "name": "Brent Oil",
       "group": null,
       "date": "2026-02-03",
-      "close": 66.92,
+      "close": 68.11,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -40,10 +40,10 @@
       "name": "S&P 500",
       "group": null,
       "date": "2026-02-03",
-      "close": 6979.38,
+      "close": 6917.79,
       "prevDate": "2026-02-02",
       "prevClose": 6976.44,
-      "deltaPct": 0.042141837384113146,
+      "deltaPct": -0.8406866539381053,
       "ok": true
     },
     {
@@ -51,21 +51,21 @@
       "name": "Gold",
       "group": null,
       "date": "2026-02-03",
-      "close": 4913.48,
+      "close": 4943.58,
       "prevDate": "2026-02-02",
       "prevClose": 4661.28,
-      "deltaPct": 5.410531012940645,
+      "deltaPct": 6.056276387601689,
       "ok": true
     },
     {
       "sym": "asts.us",
       "name": "ASTS",
       "group": null,
-      "date": "2026-02-02",
-      "close": 104.55,
-      "prevDate": "2026-01-30",
-      "prevClose": 111.21,
-      "deltaPct": -5.9886700836255695,
+      "date": "2026-02-03",
+      "close": 115.98,
+      "prevDate": "2026-02-02",
+      "prevClose": 104.55,
+      "deltaPct": 10.932568149210908,
       "ok": true
     }
   ]
