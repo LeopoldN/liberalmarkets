@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-02T15:36:16.638Z",
+  "generatedAt": "2026-02-03T14:39:23.894Z",
   "source": "stooq",
   "items": [
     {
@@ -7,10 +7,10 @@
       "name": "S&P 500",
       "group": "Index",
       "date": "2026-02-02",
-      "close": 695.32,
+      "close": 695.41,
       "prevDate": "2026-01-30",
       "prevClose": 691.97,
-      "deltaPct": 0.48412503432229137,
+      "deltaPct": 0.49713137852795963,
       "ok": true
     },
     {
@@ -18,10 +18,10 @@
       "name": "Nasdaq 100",
       "group": "Index",
       "date": "2026-02-02",
-      "close": 627.26,
+      "close": 626.14,
       "prevDate": "2026-01-30",
       "prevClose": 621.87,
-      "deltaPct": 0.8667406371106523,
+      "deltaPct": 0.6866386865421958,
       "ok": true
     },
     {
@@ -29,10 +29,10 @@
       "name": "Russell 2000",
       "group": "Index",
       "date": "2026-02-02",
-      "close": 262.525,
+      "close": 262.18,
       "prevDate": "2026-01-30",
       "prevClose": 259.65,
-      "deltaPct": 1.107259772771041,
+      "deltaPct": 0.9743886000385338,
       "ok": true
     },
     {
@@ -40,65 +40,65 @@
       "name": "Dow 30",
       "group": "Index",
       "date": "2026-02-02",
-      "close": 492.155,
+      "close": 494.03,
       "prevDate": "2026-01-30",
       "prevClose": 489.03,
-      "deltaPct": 0.6390201010163077,
+      "deltaPct": 1.0224321616260745,
       "ok": true
     },
     {
       "sym": "^hsi",
       "name": "Hong Kong HSI",
       "group": "Index",
-      "date": "2026-02-02",
-      "close": 26775.57,
-      "prevDate": "2026-01-30",
-      "prevClose": 27387.11,
-      "deltaPct": -2.23294827384124,
+      "date": "2026-02-03",
+      "close": 26834.77,
+      "prevDate": "2026-02-02",
+      "prevClose": 26775.57,
+      "deltaPct": 0.2210970672146262,
       "ok": true
     },
     {
       "sym": "^nkx",
       "name": "Japan Nikkei",
       "group": "Index",
-      "date": "2026-02-02",
-      "close": 52655.18,
-      "prevDate": "2026-01-30",
-      "prevClose": 53322.85,
-      "deltaPct": -1.2521273712864156,
+      "date": "2026-02-03",
+      "close": 54720.66,
+      "prevDate": "2026-02-02",
+      "prevClose": 52655.18,
+      "deltaPct": 3.9226530039399687,
       "ok": true
     },
     {
       "sym": "^snx",
       "name": "Sensex India",
       "group": "Index",
-      "date": "2026-01-30",
-      "close": 82269.78,
-      "prevDate": "2026-01-29",
-      "prevClose": 82566.37,
-      "deltaPct": -0.3592140480440098,
+      "date": "2026-02-03",
+      "close": 83739.13,
+      "prevDate": "2026-02-02",
+      "prevClose": 81666.46,
+      "deltaPct": 2.5379696879232805,
       "ok": true
     },
     {
       "sym": "^dax",
       "name": "DAX Germany",
       "group": "Index",
-      "date": "2026-02-02",
-      "close": 24834.62,
-      "prevDate": "2026-01-30",
-      "prevClose": 24538.81,
-      "deltaPct": 1.2054781792597113,
+      "date": "2026-02-03",
+      "close": 24757.27,
+      "prevDate": "2026-02-02",
+      "prevClose": 24797.52,
+      "deltaPct": -0.16231461855863438,
       "ok": true
     },
     {
       "sym": "^ukx",
       "name": "FTSE 100 UK",
       "group": "Index",
-      "date": "2026-02-02",
-      "close": 10314.1,
-      "prevDate": "2026-01-30",
-      "prevClose": 10223.54,
-      "deltaPct": 0.8857988524522797,
+      "date": "2026-02-03",
+      "close": 10253.7,
+      "prevDate": "2026-02-02",
+      "prevClose": 10341.56,
+      "deltaPct": -0.8495816878691276,
       "ok": true
     },
     {
@@ -106,10 +106,10 @@
       "name": "Apple",
       "group": "Mega",
       "date": "2026-02-02",
-      "close": 264.77,
+      "close": 270.01,
       "prevDate": "2026-01-30",
       "prevClose": 259.48,
-      "deltaPct": 2.0386927701556923,
+      "deltaPct": 4.058116232464926,
       "ok": true
     },
     {
@@ -117,10 +117,10 @@
       "name": "Microsoft",
       "group": "Mega",
       "date": "2026-02-02",
-      "close": 429.71,
+      "close": 423.37,
       "prevDate": "2026-01-30",
       "prevClose": 430.29,
-      "deltaPct": -0.13479281414860989,
+      "deltaPct": -1.6082177136349962,
       "ok": true
     },
     {
@@ -128,10 +128,10 @@
       "name": "Nvidia",
       "group": "Mega",
       "date": "2026-02-02",
-      "close": 188.7955,
+      "close": 185.61,
       "prevDate": "2026-01-30",
       "prevClose": 191.13,
-      "deltaPct": -1.2214199759326028,
+      "deltaPct": -2.8880866425992635,
       "ok": true
     },
     {
@@ -139,10 +139,10 @@
       "name": "Amazon",
       "group": "Mega",
       "date": "2026-02-02",
-      "close": 245.1112,
+      "close": 242.96,
       "prevDate": "2026-01-30",
       "prevClose": 239.3,
-      "deltaPct": 2.428416213957374,
+      "deltaPct": 1.5294609277058058,
       "ok": true
     },
     {
@@ -150,10 +150,10 @@
       "name": "Alphabet",
       "group": "Mega",
       "date": "2026-02-02",
-      "close": 343.26,
+      "close": 343.69,
       "prevDate": "2026-01-30",
       "prevClose": 338,
-      "deltaPct": 1.5562130177514844,
+      "deltaPct": 1.6834319526627173,
       "ok": true
     },
     {
@@ -161,10 +161,10 @@
       "name": "Meta",
       "group": "Mega",
       "date": "2026-02-02",
-      "close": 708.66,
+      "close": 706.41,
       "prevDate": "2026-01-30",
       "prevClose": 716.5,
-      "deltaPct": -1.0942079553384554,
+      "deltaPct": -1.4082344731332963,
       "ok": true
     },
     {
@@ -172,10 +172,10 @@
       "name": "Tesla",
       "group": "Mega",
       "date": "2026-02-02",
-      "close": 419.5298,
+      "close": 421.81,
       "prevDate": "2026-01-30",
       "prevClose": 430.41,
-      "deltaPct": -2.527868776283082,
+      "deltaPct": -1.99809483980391,
       "ok": true
     },
     {
@@ -183,10 +183,10 @@
       "name": "JPMorgan Chase",
       "group": "Large",
       "date": "2026-02-02",
-      "close": 305.935,
+      "close": 308.14,
       "prevDate": "2026-01-30",
       "prevClose": 305.89,
-      "deltaPct": 0.014711170682280006,
+      "deltaPct": 0.7355585341135784,
       "ok": true
     },
     {
@@ -194,10 +194,10 @@
       "name": "Walmart",
       "group": "Large",
       "date": "2026-02-02",
-      "close": 121.245,
+      "close": 124.06,
       "prevDate": "2026-01-30",
       "prevClose": 119.14,
-      "deltaPct": 1.7668289407419824,
+      "deltaPct": 4.129595433943267,
       "ok": true
     },
     {
@@ -205,10 +205,10 @@
       "name": "Johnson & Johnson",
       "group": "Large",
       "date": "2026-02-02",
-      "close": 229.13,
+      "close": 230.75,
       "prevDate": "2026-01-30",
       "prevClose": 227.25,
-      "deltaPct": 0.8272827282728157,
+      "deltaPct": 1.5401540154015292,
       "ok": true
     },
     {
@@ -216,10 +216,10 @@
       "name": "Procter & Gamble",
       "group": "Large",
       "date": "2026-02-02",
-      "close": 152.525,
+      "close": 153.19,
       "prevDate": "2026-01-30",
       "prevClose": 151.77,
-      "deltaPct": 0.49746326678525854,
+      "deltaPct": 0.9356262766027523,
       "ok": true
     },
     {
@@ -227,10 +227,10 @@
       "name": "Exxon Mobil",
       "group": "Large",
       "date": "2026-02-02",
-      "close": 139.18,
+      "close": 138.4,
       "prevDate": "2026-01-30",
       "prevClose": 141.4,
-      "deltaPct": -1.5700141442715698,
+      "deltaPct": -2.121640735502117,
       "ok": true
     },
     {
@@ -238,10 +238,10 @@
       "name": "Home Depot",
       "group": "Large",
       "date": "2026-02-02",
-      "close": 373.74,
+      "close": 378.12,
       "prevDate": "2026-01-30",
       "prevClose": 374.59,
-      "deltaPct": -0.22691476013774192,
+      "deltaPct": 0.9423636509250155,
       "ok": true
     },
     {
@@ -249,10 +249,10 @@
       "name": "Tech",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 146.025,
+      "close": 145.26,
       "prevDate": "2026-01-30",
       "prevClose": 143.88,
-      "deltaPct": 1.4908256880733939,
+      "deltaPct": 0.9591326105087505,
       "ok": true
     },
     {
@@ -260,10 +260,10 @@
       "name": "Financials",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 53.64,
+      "close": 54.03,
       "prevDate": "2026-01-30",
       "prevClose": 53.44,
-      "deltaPct": 0.37425149700598404,
+      "deltaPct": 1.104041916167664,
       "ok": true
     },
     {
@@ -271,10 +271,10 @@
       "name": "Energy",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 50.16,
+      "close": 50.05,
       "prevDate": "2026-01-30",
       "prevClose": 51.05,
-      "deltaPct": -1.7433888344760007,
+      "deltaPct": -1.9588638589618013,
       "ok": true
     },
     {
@@ -282,10 +282,10 @@
       "name": "Consumer Disc",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 121.65,
+      "close": 121.97,
       "prevDate": "2026-01-30",
       "prevClose": 121.17,
-      "deltaPct": 0.3961376578361042,
+      "deltaPct": 0.660229429726833,
       "ok": true
     },
     {
@@ -293,10 +293,10 @@
       "name": "Consumser Staples",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 83.58,
+      "close": 84.5,
       "prevDate": "2026-01-30",
       "prevClose": 83.51,
-      "deltaPct": 0.08382229673091768,
+      "deltaPct": 1.1854867680517245,
       "ok": true
     },
     {
@@ -304,10 +304,10 @@
       "name": "Industrials",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 166.45,
+      "close": 167.53,
       "prevDate": "2026-01-30",
       "prevClose": 165.44,
-      "deltaPct": 0.6104932301740806,
+      "deltaPct": 1.2632978723404298,
       "ok": true
     },
     {
@@ -315,10 +315,10 @@
       "name": "Health Care",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 155.57,
+      "close": 155.69,
       "prevDate": "2026-01-30",
       "prevClose": 154.74,
-      "deltaPct": 0.5363836112188158,
+      "deltaPct": 0.6139330489853823,
       "ok": true
     },
     {
@@ -326,10 +326,10 @@
       "name": "Utilities",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 42.91,
+      "close": 42.62,
       "prevDate": "2026-01-30",
       "prevClose": 43.25,
-      "deltaPct": -0.7861271676300685,
+      "deltaPct": -1.4566473988439355,
       "ok": true
     },
     {
@@ -337,10 +337,10 @@
       "name": "Materials",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 49.555,
+      "close": 49.65,
       "prevDate": "2026-01-30",
       "prevClose": 49.27,
-      "deltaPct": 0.578445301400432,
+      "deltaPct": 0.7712604018672575,
       "ok": true
     },
     {
@@ -348,10 +348,10 @@
       "name": "Communcation",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 120.13,
+      "close": 119.67,
       "prevDate": "2026-01-30",
       "prevClose": 120.08,
-      "deltaPct": 0.04163890739505849,
+      "deltaPct": -0.3414390406395684,
       "ok": true
     },
     {
@@ -359,29 +359,29 @@
       "name": "Real Estate",
       "group": "Sector",
       "date": "2026-02-02",
-      "close": 41.28,
+      "close": 40.96,
       "prevDate": "2026-01-30",
       "prevClose": 41.43,
-      "deltaPct": -0.3620564808110016,
+      "deltaPct": -1.1344436398744828,
       "ok": true
     },
     {
       "sym": "xauusd",
       "name": "Gold",
       "group": "Macro",
-      "date": "2026-02-02",
-      "close": 4679.03,
-      "prevDate": "2026-01-30",
-      "prevClose": 4847.87,
-      "deltaPct": -3.4827666583468697,
+      "date": "2026-02-03",
+      "close": 4923.34,
+      "prevDate": "2026-02-02",
+      "prevClose": 4661.28,
+      "deltaPct": 5.622060893145231,
       "ok": true
     },
     {
       "sym": "cb.f",
       "name": "Brent Oil",
       "group": "Macro",
-      "date": "2026-02-02",
-      "close": 66.31,
+      "date": "2026-02-03",
+      "close": 66.95,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -391,41 +391,41 @@
       "sym": "10yusy.b",
       "name": "US 10Y Yield",
       "group": "Macro",
-      "date": "2026-02-02",
-      "close": 4.28,
-      "prevDate": "2026-01-30",
-      "prevClose": 4.239,
-      "deltaPct": 0.9672092474640293,
+      "date": "2026-02-03",
+      "close": 4.293,
+      "prevDate": "2026-02-02",
+      "prevClose": 4.283,
+      "deltaPct": 0.2334812047630086,
       "ok": true
     },
     {
       "sym": "usdeur",
       "name": "USD/EUR",
       "group": "Macro",
-      "date": "2026-02-02",
-      "close": 0.847235,
-      "prevDate": "2026-01-30",
-      "prevClose": 0.843639,
-      "deltaPct": 0.42624866797289496,
+      "date": "2026-02-03",
+      "close": 0.848082,
+      "prevDate": "2026-02-02",
+      "prevClose": 0.848075,
+      "deltaPct": 0.0008253986970574445,
       "ok": true
     },
     {
       "sym": "btc.v",
       "name": "Bitcoin",
       "group": "Macro",
-      "date": "2026-02-02",
-      "close": 78633.28,
-      "prevDate": "2026-02-01",
-      "prevClose": 77187.51,
-      "deltaPct": 1.8730621055142338,
+      "date": "2026-02-03",
+      "close": 78016.36,
+      "prevDate": "2026-02-02",
+      "prevClose": 78755.8,
+      "deltaPct": -0.9389022776735256,
       "ok": true
     },
     {
       "sym": "hg.f",
       "name": "Copper",
       "group": "Macro",
-      "date": "2026-02-02",
-      "close": 581.42,
+      "date": "2026-02-03",
+      "close": 607.83,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -435,8 +435,8 @@
       "sym": "si.f",
       "name": "Silver",
       "group": "Macro",
-      "date": "2026-02-02",
-      "close": 7772.5,
+      "date": "2026-02-03",
+      "close": 8804.3,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -447,10 +447,10 @@
       "name": "Nat Gas",
       "group": "Macro",
       "date": "2026-02-02",
-      "close": 13.745,
+      "close": 12.7,
       "prevDate": "2026-01-30",
       "prevClose": 16.9,
-      "deltaPct": -18.66863905325443,
+      "deltaPct": -24.852071005917153,
       "ok": true
     },
     {
@@ -458,10 +458,10 @@
       "name": "Steel",
       "group": "Macro",
       "date": "2026-02-02",
-      "close": 95.139,
+      "close": 95.02,
       "prevDate": "2026-01-30",
       "prevClose": 94.01,
-      "deltaPct": 1.2009360706307648,
+      "deltaPct": 1.0743537921497515,
       "ok": true
     }
   ]
