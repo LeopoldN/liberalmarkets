@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-04T21:00:38.128Z",
+  "generatedAt": "2026-02-04T21:53:09.776Z",
   "source": "stooq",
   "items": [
     {
@@ -7,10 +7,10 @@
       "name": "US 10Y Yield",
       "group": null,
       "date": "2026-02-04",
-      "close": 4.28,
+      "close": 4.278,
       "prevDate": "2026-02-03",
       "prevClose": 4.267,
-      "deltaPct": 0.3046636981485884,
+      "deltaPct": 0.25779235997185346,
       "ok": true
     },
     {
@@ -18,10 +18,10 @@
       "name": "USD/EUR",
       "group": null,
       "date": "2026-02-04",
-      "close": 0.847213,
+      "close": 0.847206,
       "prevDate": "2026-02-03",
       "prevClose": 0.846202,
-      "deltaPct": 0.11947501896709678,
+      "deltaPct": 0.11864779331649533,
       "ok": true
     },
     {
@@ -29,7 +29,7 @@
       "name": "Brent Oil",
       "group": null,
       "date": "2026-02-04",
-      "close": 68.54,
+      "close": 68.76,
       "prevDate": null,
       "prevClose": null,
       "deltaPct": 0,
@@ -51,10 +51,10 @@
       "name": "Gold",
       "group": null,
       "date": "2026-02-04",
-      "close": 4941.91,
+      "close": 4967.19,
       "prevDate": "2026-02-03",
       "prevClose": 4947.22,
-      "deltaPct": -0.10733300722426398,
+      "deltaPct": 0.4036610460015799,
       "ok": true
     },
     {
@@ -62,10 +62,10 @@
       "name": "ASTS",
       "group": null,
       "date": "2026-02-04",
-      "close": 103.49,
+      "close": 103.5,
       "prevDate": "2026-02-03",
       "prevClose": 115.76,
-      "deltaPct": -10.599516240497586,
+      "deltaPct": -10.590877677954392,
       "ok": true
     }
   ]
