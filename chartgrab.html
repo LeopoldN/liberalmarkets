@@ -1,0 +1,426 @@
+<!-- chartgrab.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liberal Markets — Chart Grab</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <meta name="description" content="Configurable multi-chart page for grabbing clean screenshots." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=4" />
+
+  <style>
+    html, body { height: 100%; }
+    body { margin: 0; background: #fff; }
+
+    .cgWrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cgBar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(0,0,0,.10);
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      flex-wrap: wrap;
+    }
+
+    .cgBar label {
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .7;
+      white-space: nowrap;
+    }
+
+    .cgSelect, .cgInput {
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: #fff;
+      font: inherit;
+      height: 42px;
+    }
+
+    .cgSelect { max-width: 520px; width: 100%; }
+    .cgInput { width: 120px; }
+
+    .cgSpacer { flex: 1; }
+
+    .cgHint {
+      font-size: 12px;
+      opacity: .65;
+      white-space: nowrap;
+    }
+
+    .cgArea {
+      --cg-max: 1600px;
+      --cg-gap: 14px;
+      --cg-h: 520px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 14px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .cgInner {
+      width: 100%;
+      max-width: var(--cg-max);
+      box-sizing: border-box;
+    }
+
+    .cgInner.layout-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: var(--cg-gap);
+    }
+
+    .cgInner.layout-horizontal {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--cg-gap);
+      align-items: stretch;
+    }
+
+    .cgInner.layout-grid {
+      display: grid;
+      gap: var(--cg-gap);
+      grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+      align-items: stretch;
+    }
+
+    .cgInner.layout-horizontal .chartCard.cgCard,
+    .cgInner.layout-grid .chartCard.cgCard {
+      flex: 1 1 520px;
+      min-width: 520px;
+    }
+
+    .chartCard.cgCard {
+      width: 100%;
+      margin: 0;
+    }
+
+    .chartWrap.cgChartWrap {
+      height: var(--cg-h);
+    }
+
+    .wireChart.cgCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .chartFoot { display: none; }
+
+    /* Per-card series selector (small + screenshot-friendly) */
+    .cgCardSeries {
+      margin-left: 10px;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: 10px;
+      padding: 6px 10px;
+      background: #fff;
+      font: inherit;
+      height: 34px;
+      max-width: 320px;
+    }
+
+    @media (max-width: 900px) {
+      .cgHint { display: none; }
+      .cgSpacer { display: none; }
+
+      .cgInner.layout-horizontal .chartCard.cgCard,
+      .cgInner.layout-grid .chartCard.cgCard {
+        min-width: 0;
+        flex-basis: 100%;
+      }
+
+      .cgInner.layout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .chartWrap.cgChartWrap {
+        height: min(62vh, var(--cg-h));
+      }
+
+      .cgCardSeries { max-width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cgWrap">
+    <div class="cgBar">
+      <label for="count">Charts</label>
+      <select id="count" class="cgInput" aria-label="Number of charts">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+      </select>
+
+      <label for="layout">Layout</label>
+      <select id="layout" class="cgInput" aria-label="Layout mode">
+        <option value="vertical" selected>Vertical</option>
+        <option value="horizontal">Horizontal</option>
+        <option value="grid">Grid</option>
+      </select>
+
+      <label for="size">Size</label>
+      <select id="size" class="cgInput" aria-label="Chart size">
+        <option value="320">S</option>
+        <option value="420">M</option>
+        <option value="520" selected>L</option>
+        <option value="680">XL</option>
+        <option value="840">XXL</option>
+      </select>
+
+      <label for="defaultSeries">Default series</label>
+      <select id="defaultSeries" class="cgSelect" aria-label="Default series for new charts">
+        <option value="CPIAUCSL" selected>CPI (CPIAUCSL)</option>
+        <option value="UNRATE">Unemployment (UNRATE)</option>
+        <option value="GDPC1">Real GDP (GDPC1)</option>
+        <option value="FEDFUNDS">Fed Funds (FEDFUNDS)</option>
+        <option value="MSPUS">Median Home Price (MSPUS)</option>
+        <option value="MEHOINUSA646N">Median Household Income (MEHOINUSA646N)</option>
+        <option value="HOUSE_TO_INCOME_RATIO">Housing/Income Ratio (derived)</option>
+        <option value="FYFSD">Federal Deficit (FYFSD)</option>
+        <option value="GFDEBTN">Total US Debt (GFDEBTN)</option>
+        <option value="GFDEGDQ188S">Debt as % of GDP (GFDEGDQ188S)</option>
+        <option value="BOPGSTB">Trade Balance (BOPGSTB)</option>
+      </select>
+
+      <div class="cgSpacer" aria-hidden="true"></div>
+      <div class="cgHint">
+        Params: <code>?n=4&layout=grid&h=520&default=CPIAUCSL&series=CPIAUCSL,UNRATE,GDPC1,FEDFUNDS</code>
+      </div>
+    </div>
+
+    <div class="cgArea">
+      <div id="cgInner" class="cgInner layout-vertical" aria-label="Charts"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const countEl = document.getElementById("count");
+      const layoutEl = document.getElementById("layout");
+      const sizeEl = document.getElementById("size");
+      const defaultSeriesEl = document.getElementById("defaultSeries");
+      const inner = document.getElementById("cgInner");
+
+      const meta = {
+        CPIAUCSL: { title: "CPI (CPIAUCSL)", csv: "data/CPIAUCSL.csv" },
+        UNRATE: { title: "Unemployment (UNRATE)", csv: "data/UNRATE.csv" },
+        GDPC1: { title: "Real GDP (GDPC1)", csv: "data/GDPC1.csv" },
+        FEDFUNDS: { title: "Fed Funds (FEDFUNDS)", csv: "data/FEDFUNDS.csv" },
+        MSPUS: { title: "Median Home Price (MSPUS)", csv: "data/MSPUS.csv" },
+        MEHOINUSA646N: { title: "Median Household Income (MEHOINUSA646N)", csv: "data/MEHOINUSA646N.csv" },
+        HOUSE_TO_INCOME_RATIO: { title: "Housing/Income Ratio", csv: "data/HOUSE_TO_INCOME_RATIO.csv" },
+        FYFSD: { title: "Federal Deficit (FYFSD)", csv: "data/FYFSD.csv" },
+        GFDEBTN: { title: "Total US Debt (GFDEBTN)", csv: "data/GFDEBTN.csv" },
+        GFDEGDQ188S: { title: "Debt as % of GDP (GFDEGDQ188S)", csv: "data/GFDEGDQ188S.csv" },
+        BOPGSTB: { title: "Trade Balance (BOPGSTB)", csv: "data/BOPGSTB.csv" },
+      };
+
+      const SERIES_KEYS = Object.keys(meta);
+
+      function parseSeriesList(value) {
+        const raw = String(value || "").trim();
+        if (!raw) return [];
+        return raw
+          .split(",")
+          .map(s => String(s || "").trim().toUpperCase())
+          .filter(s => meta[s]);
+      }
+
+      function normalizeSeriesList(list, n, defaultSeries) {
+        const out = list.slice(0, n);
+        while (out.length < n) out.push(defaultSeries);
+        return out;
+      }
+
+      function readStateFromUrl() {
+        const params = new URLSearchParams(location.search);
+
+        const nRaw = Number(params.get("n") || "1");
+        const n = Number.isFinite(nRaw) ? Math.max(1, Math.min(12, Math.floor(nRaw))) : 1;
+
+        const layoutRaw = String(params.get("layout") || "vertical").toLowerCase();
+        const layout = (layoutRaw === "horizontal" || layoutRaw === "grid") ? layoutRaw : "vertical";
+
+        const hRaw = Number(params.get("h") || "520");
+        const h = Number.isFinite(hRaw) ? Math.max(240, Math.min(1400, Math.floor(hRaw))) : 520;
+
+        const defaultSeries = (() => {
+          const ds = String(params.get("default") || defaultSeriesEl.value || "CPIAUCSL").toUpperCase();
+          return meta[ds] ? ds : "CPIAUCSL";
+        })();
+
+        const seriesFromUrl = parseSeriesList(params.get("series"));
+        const series = normalizeSeriesList(seriesFromUrl, n, defaultSeries);
+
+        // hydrate menu
+        countEl.value = String(n);
+        layoutEl.value = layout;
+        sizeEl.value = String(h);
+        defaultSeriesEl.value = defaultSeries;
+
+        return { n, layout, h, defaultSeries, series };
+      }
+
+      function writeStateToUrl(st) {
+        const next = new URL(location.href);
+        next.searchParams.set("n", String(st.n));
+        next.searchParams.set("layout", st.layout);
+        next.searchParams.set("h", String(st.h));
+        next.searchParams.set("default", st.defaultSeries);
+        next.searchParams.set("series", st.series.join(","));
+        history.replaceState(null, "", next.toString());
+      }
+
+      function makeSeriesSelect(value, idx) {
+        const sel = document.createElement("select");
+        sel.className = "cgCardSeries";
+        sel.setAttribute("aria-label", `Series for chart ${idx + 1}`);
+        sel.setAttribute("data-idx", String(idx));
+
+        for (const key of SERIES_KEYS) {
+          const opt = document.createElement("option");
+          opt.value = key;
+          opt.textContent = meta[key].title;
+          sel.appendChild(opt);
+        }
+
+        sel.value = meta[value] ? value : "CPIAUCSL";
+        return sel;
+      }
+
+      function buildCharts(st) {
+        inner.classList.remove("layout-vertical", "layout-horizontal", "layout-grid");
+        inner.classList.add(`layout-${st.layout}`);
+        inner.style.setProperty("--cg-h", `${st.h}px`);
+        inner.innerHTML = "";
+
+        for (let i = 0; i < st.n; i++) {
+          const key = st.series[i] || st.defaultSeries;
+          const m = meta[key] || meta.CPIAUCSL;
+
+          const card = document.createElement("section");
+          card.className = "chartCard cgCard";
+          card.setAttribute("aria-label", `Chart ${i + 1}`);
+
+          card.innerHTML = `
+            <div class="chartHead">
+              <div class="chartTitle">
+                <span class="chartDot" aria-hidden="true"></span>
+                <span class="chartTitleText">${m.title}</span>
+              </div>
+
+              <div class="chartControls" role="tablist" aria-label="Chart range">
+                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
+                <button class="chartTab" type="button" data-range="5y">5y</button>
+                <button class="chartTab" type="button" data-range="10y">10y</button>
+                <button class="chartTab" type="button" data-range="all">all</button>
+              </div>
+
+              <div class="chartMeta">
+                <span class="chartPill chartRange">—</span>
+                <span class="chartPill chartLatest">—</span>
+              </div>
+            </div>
+
+            <div class="chartWrap cgChartWrap">
+              <canvas
+                class="wireChart cgCanvas"
+                data-csv="${m.csv}"
+                data-title="${m.title}"
+                data-view="level"
+                data-fit="container"
+              ></canvas>
+              <div class="chartTip" role="status" aria-live="polite"></div>
+            </div>
+
+            <div class="chartFoot">
+              <span class="muted">Source: FRED CSV • rendered client-side</span>
+            </div>
+          `;
+
+          // add per-card series selector into the title row
+          const title = card.querySelector(".chartTitle");
+          const sel = makeSeriesSelect(key, i);
+          title.appendChild(sel);
+
+          inner.appendChild(card);
+        }
+
+        // per-card change: update URL state and rebuild (fresh canvases, no listener stacking)
+        inner.querySelectorAll(".cgCardSeries").forEach(sel => {
+          sel.addEventListener("change", () => {
+            const idx = Number(sel.getAttribute("data-idx"));
+            const chosen = String(sel.value || st.defaultSeries).toUpperCase();
+            if (!meta[chosen] || !Number.isFinite(idx) || idx < 0) return;
+
+            const next = getStateFromControls();
+            next.series[idx] = chosen;
+            next.series = normalizeSeriesList(next.series, next.n, next.defaultSeries);
+            writeStateToUrl(next);
+            buildCharts(next);
+          });
+        });
+
+        if (typeof window.initWireCharts === "function") window.initWireCharts();
+      }
+
+      function getStateFromControls() {
+        const n = Math.max(1, Math.min(12, Math.floor(Number(countEl.value || "1"))));
+        const layoutRaw = String(layoutEl.value || "vertical");
+        const layout = (layoutRaw === "horizontal" || layoutRaw === "grid") ? layoutRaw : "vertical";
+        const h = Math.max(240, Math.min(1400, Math.floor(Number(sizeEl.value || "520"))));
+
+        const defaultSeriesRaw = String(defaultSeriesEl.value || "CPIAUCSL").toUpperCase();
+        const defaultSeries = meta[defaultSeriesRaw] ? defaultSeriesRaw : "CPIAUCSL";
+
+        const params = new URLSearchParams(location.search);
+        const existing = parseSeriesList(params.get("series"));
+        const series = normalizeSeriesList(existing, n, defaultSeries);
+
+        return { n, layout, h, defaultSeries, series };
+      }
+
+      function rebuildFromControls() {
+        const st = getStateFromControls();
+        writeStateToUrl(st);
+        buildCharts(st);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const st = readStateFromUrl();
+        writeStateToUrl(st);
+        buildCharts(st);
+      });
+
+      [countEl, layoutEl, sizeEl, defaultSeriesEl].forEach(el => {
+        el.addEventListener("change", rebuildFromControls);
+      });
+    })();
+  </script>
+
+  <script src="app.js?v=3"></script>
+  <script src="scripts/charts-solo.js?v=4"></script>
+</body>
+</html>
