@@ -102,14 +102,7 @@
 
     /* Group accent bar (set via data-group in JS) */
     .hmTile::before {
-      content:"";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: var(--hmGroupBar, transparent);
-      opacity: .8;
+      display: none;
     }
 
     .hmTile:hover {
@@ -390,7 +383,7 @@
       gap: 18px;
       flex-shrink: 0;
       width: max-content;
-      animation: news-scroll 55s linear infinite;
+      animation: news-scroll 90s linear infinite;
       padding-right: 18px;
     }
     .newsTicker:hover .newsTrack{
