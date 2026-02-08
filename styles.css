@@ -84,19 +84,19 @@ body.home{
 body.markets{
   --bg: #050505;
   --panel: #0b0b0b;
-  --accent: #ff9d00;
-  --accent2: #ffb84d;
-  --ink: #f6efe4;
-  --ink2: rgba(246,239,228,.76);
+  --accent: #56ffa8;
+  --accent2: #11cfa2;
+  --ink: #e6f6ef;
+  --ink2: rgba(230,246,239,.76);
   --paper: rgba(8,8,8,.94);
   --paper2: rgba(8,8,8,.72);
-  --line: rgba(255,157,0,.22);
-  --line2: rgba(255,157,0,.36);
-  --pop-sage: rgba(255,157,0,.22);
-  --pop-moss: rgba(255,157,0,.16);
-  --pop-forest: rgba(255,184,77,.14);
-  --pop-ink: rgba(246,239,228,.10);
-  --up: #ff9d00;
+  --line: rgba(86,255,168,.22);
+  --line2: rgba(86,255,168,.36);
+  --pop-sage: rgba(86,255,168,.22);
+  --pop-moss: rgba(86,255,168,.16);
+  --pop-forest: rgba(17,207,162,.14);
+  --pop-ink: rgba(230,246,239,.10);
+  --up: #56ffa8;
   --down: #ff4d5a;
   --shadow: 0 18px 40px rgba(0,0,0,.55);
   --r: 12px;
@@ -107,8 +107,8 @@ body.markets{
 body.markets{
   position: relative;
   background:
-    radial-gradient(circle at 20% 12%, rgba(255,157,0,.10), transparent 42%),
-    radial-gradient(circle at 85% 20%, rgba(255,184,77,.12), transparent 45%),
+    radial-gradient(circle at 20% 12%, rgba(86,255,168,.10), transparent 42%),
+    radial-gradient(circle at 85% 20%, rgba(17,207,162,.12), transparent 45%),
     linear-gradient(180deg, #050505, #020202);
 }
 
@@ -123,15 +123,15 @@ body.markets::after{
 
 body.markets::before{
   background:
-    repeating-linear-gradient(0deg, rgba(255,157,0,.04) 0 1px, transparent 1px 16px),
-    repeating-linear-gradient(90deg, rgba(255,157,0,.03) 0 1px, transparent 1px 20px);
+    repeating-linear-gradient(0deg, rgba(86,255,168,.04) 0 1px, transparent 1px 16px),
+    repeating-linear-gradient(90deg, rgba(86,255,168,.03) 0 1px, transparent 1px 20px);
   opacity: .5;
 }
 
 body.markets::after{
   background:
-    radial-gradient(circle at 30% 80%, rgba(255,184,77,.12), transparent 50%),
-    radial-gradient(circle at 70% 30%, rgba(255,157,0,.12), transparent 46%);
+    radial-gradient(circle at 30% 80%, rgba(17,207,162,.12), transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(86,255,168,.12), transparent 46%);
   opacity: .45;
   animation: bg-drift 22s ease-in-out infinite alternate;
 }
@@ -252,7 +252,7 @@ body.home .topbar{
 }
 
 body.markets .topbar{
-  border-bottom: 1px solid rgba(255,157,0,.22);
+  border-bottom: 1px solid rgba(86,255,168,.22);
   background:
     linear-gradient(180deg, rgba(8,8,8,.92), rgba(8,8,8,.85));
   box-shadow: 0 10px 24px rgba(0,0,0,.35);
@@ -312,9 +312,9 @@ body.home .nav{
     linear-gradient(180deg, rgba(255,250,244,.85), rgba(246,241,231,.55));
 }
 body.markets .nav{
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background: rgba(8,8,8,.88);
-  box-shadow: inset 0 0 0 1px rgba(255,157,0,.08);
+  box-shadow: inset 0 0 0 1px rgba(86,255,168,.08);
 }
 
 .chip{
@@ -341,7 +341,7 @@ body.markets .chip{
 }
 body.markets .chip.is-active{
   color: #0b1216;
-  background: rgba(255,157,0,.88);
+  background: rgba(86,255,168,.88);
 }
 .chipDot{
   display: inline-block !important;
@@ -368,8 +368,8 @@ body.home .chip.is-active .chipDot{
   border-color: rgba(31,181,143,.65) !important;
 }
 body.markets .chipDot{
-  border-color: rgba(255,157,0,.6) !important;
-  background: rgba(255,157,0,.12) !important;
+  border-color: rgba(86,255,168,.6) !important;
+  background: rgba(86,255,168,.12) !important;
 }
 body.markets .chip.is-active .chipDot{
   border-color: rgba(11,18,22,.9) !important;
@@ -397,15 +397,16 @@ body.home .search{
   background: rgba(255,250,244,.85);
 }
 body.markets .search{
-  border-color: rgba(255,157,0,.24);
+  border-color: rgba(86,255,168,.24);
   background: rgba(8,8,8,.9);
-  box-shadow: inset 0 0 0 1px rgba(255,157,0,.08);
+  box-shadow: inset 0 0 0 1px rgba(86,255,168,.08);
 }
 body.markets .search input{
-  color: #f6efe4;
+  color: #e6f6ef;
+  caret-color: var(--accent);
 }
 body.markets .searchIcon{
-  color: rgba(255,184,77,.85);
+  color: rgba(17,207,162,.85);
 }
 .search input{
   border: 0;
@@ -416,7 +417,7 @@ body.markets .searchIcon{
   color: var(--ink);
 }
 body.markets .search input::placeholder{
-  color: rgba(246,239,228,.6);
+  color: rgba(230,246,239,.6);
 }
 .searchIcon{ opacity:.85; display:flex; }
 .kbd{
@@ -437,7 +438,7 @@ body.markets .search input::placeholder{
 }
 body.markets .kbd,
 body.markets .kbdInline{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
 }
 
@@ -457,7 +458,7 @@ body.home .btn{
   background: rgba(31,181,143,.12);
 }
 body.markets .btn{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
   color: rgba(230,246,239,.85);
 }
@@ -497,11 +498,11 @@ body.markets .btn{
     radial-gradient(circle at 82% 18%, rgba(224,122,95,.18), transparent 45%);
 }
 .markets .heroLeft{
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background:
     linear-gradient(180deg, rgba(8,8,8,.92), rgba(8,8,8,.88)),
-    radial-gradient(circle at 18% 28%, rgba(255,157,0,.18), transparent 52%),
-    radial-gradient(circle at 80% 15%, rgba(255,184,77,.16), transparent 45%);
+    radial-gradient(circle at 18% 28%, rgba(86,255,168,.18), transparent 52%),
+    radial-gradient(circle at 80% 15%, rgba(17,207,162,.16), transparent 45%);
   box-shadow: 0 16px 34px rgba(0,0,0,.45);
 }
 .home .heroLeft::before{
@@ -519,8 +520,8 @@ body.markets .btn{
   content:"";
   position:absolute; inset:-20%;
   background:
-    linear-gradient(110deg, transparent 22%, rgba(255,157,0,.16) 48%, transparent 60%),
-    repeating-linear-gradient(0deg, rgba(255,157,0,.05) 0 1px, transparent 1px 14px);
+    linear-gradient(110deg, transparent 22%, rgba(86,255,168,.16) 48%, transparent 60%),
+    repeating-linear-gradient(0deg, rgba(86,255,168,.05) 0 1px, transparent 1px 14px);
   opacity: .5;
   animation: hero-sheen 16s linear infinite;
   pointer-events:none;
@@ -586,11 +587,11 @@ body.markets .btn{
   animation: pulse 2.3s ease-in-out infinite;
 }
 body.markets .pulse{
-  border-color: rgba(255,157,0,.65);
-  background: rgba(255,157,0,.3);
+  border-color: rgba(86,255,168,.65);
+  background: rgba(86,255,168,.3);
 }
 body.markets .pulse::after{
-  border-color: rgba(255,157,0,.55);
+  border-color: rgba(86,255,168,.55);
 }
 @keyframes pulse{
   0%{ transform: scale(.85); opacity: .25; }
@@ -683,9 +684,9 @@ body.home .stat::after{
 }
 body.markets .stat{
   border-radius: 10px;
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background: rgba(8,8,8,.9);
-  box-shadow: inset 0 0 0 1px rgba(255,157,0,.08);
+  box-shadow: inset 0 0 0 1px rgba(86,255,168,.08);
 }
 body.markets .stat::after{
   content:"";
@@ -695,7 +696,7 @@ body.markets .stat::after{
   top: 0;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255,157,0,.85), rgba(255,184,77,.65), transparent);
+  background: linear-gradient(90deg, rgba(86,255,168,.85), rgba(17,207,162,.65), transparent);
   opacity: .85;
 }
 .statIcon{
@@ -742,7 +743,7 @@ body.markets .statValue{
   background: rgba(255,250,244,.80);
 }
 .markets .heroRight{
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background: rgba(8,8,8,.92);
 }
 .heroRight::before{
@@ -760,8 +761,8 @@ body.home .heroRight::before{
 }
 body.markets .heroRight::before{
   background:
-    radial-gradient(circle at 25% 10%, rgba(255,157,0,.16), transparent 55%),
-    radial-gradient(circle at 88% 70%, rgba(255,184,77,.14), transparent 52%);
+    radial-gradient(circle at 25% 10%, rgba(86,255,168,.16), transparent 55%),
+    radial-gradient(circle at 88% 70%, rgba(17,207,162,.14), transparent 52%);
 }
 .panelHead{
   display:flex; align-items: baseline; justify-content: space-between;
@@ -773,7 +774,7 @@ body.markets .heroRight::before{
 .panelTitle{ font-weight: 760; letter-spacing: .4px; text-transform: uppercase; font-size: 12px; }
 .panelHint{ font-size: 12px; opacity: .7; }
 body.markets .panelHead{
-  border-bottom: 1px dashed rgba(255,157,0,.28);
+  border-bottom: 1px dashed rgba(86,255,168,.28);
 }
 body.markets .panelHint{
   font-family: var(--mono);
@@ -836,16 +837,16 @@ body.home .tick::after{
 }
 body.markets .tick{
   border-radius: 10px;
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background: rgba(8,8,8,.9);
-  box-shadow: inset 0 0 0 1px rgba(255,157,0,.08);
+  box-shadow: inset 0 0 0 1px rgba(86,255,168,.08);
   position: relative;
   overflow: hidden;
 }
 body.markets .tick::after{
   content:"";
   position:absolute; inset:0;
-  background: linear-gradient(110deg, transparent 30%, rgba(255,157,0,.12) 52%, transparent 68%);
+  background: linear-gradient(110deg, transparent 30%, rgba(86,255,168,.12) 52%, transparent 68%);
   opacity: .5;
   transform: translateX(-60%);
   pointer-events:none;
@@ -861,7 +862,7 @@ body.markets .tick::after{
   letter-spacing: .4px;
 }
 body.markets .badge{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.8);
   letter-spacing: .18em;
 }
@@ -901,7 +902,7 @@ body.markets .tickRight{
   z-index: 1;
 }
 body.markets .panelFoot{
-  border-top: 1px dashed rgba(255,157,0,.28);
+  border-top: 1px dashed rgba(86,255,168,.28);
 }
 .note{
   display:flex; align-items:center; gap: 10px;
@@ -920,7 +921,7 @@ body.markets .note{
   background: rgba(218,215,205,.4);
 }
 body.markets .noteIcon{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
 }
 
@@ -949,7 +950,7 @@ body.home .railCard{
   background: rgba(255,250,244,.85);
 }
 body.markets .railCard{
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background: rgba(8,8,8,.92);
 }
 .railTitle{
@@ -962,7 +963,7 @@ body.markets .railCard{
   margin-bottom: 12px;
 }
 body.markets .railTitle{
-  border-bottom: 1px dashed rgba(255,157,0,.28);
+  border-bottom: 1px dashed rgba(86,255,168,.28);
 }
 
 .pin{
@@ -980,7 +981,7 @@ body.home .pin{
 }
 body.markets .pin{
   border-radius: 10px;
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background: rgba(8,8,8,.85);
 }
 .pin:last-child{ margin-bottom: 0; }
@@ -996,7 +997,7 @@ body.markets .pin{
   color: var(--ink2);
 }
 body.markets .pinBtn{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
 }
 .pinBtn:hover{ box-shadow: inset 0 0 0 1px rgba(52,78,65,.15); }
@@ -1028,7 +1029,7 @@ body.home .posts{
   background: rgba(255,250,244,.82);
 }
 body.markets .posts{
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background: rgba(8,8,8,.92);
 }
 
@@ -1042,7 +1043,7 @@ body.markets .posts{
   margin-bottom: 12px;
 }
 body.markets .postsHead{
-  border-bottom: 1px dashed rgba(255,157,0,.28);
+  border-bottom: 1px dashed rgba(86,255,168,.28);
 }
 .postsTitle{
   display:flex; align-items:center; gap: 10px;
@@ -1065,7 +1066,7 @@ body.home .pill{
   background: rgba(31,181,143,.16);
 }
 body.markets .pill{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
   letter-spacing: .12em;
 }
@@ -1092,16 +1093,16 @@ body.home .sortBtn.is-active{
   border-color: rgba(21,37,34,.32);
 }
 body.markets .sortBtn{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
   color: rgba(230,246,239,.8);
   letter-spacing: .12em;
   text-transform: uppercase;
 }
 body.markets .sortBtn.is-active{
-  background: rgba(255,157,0,.85);
+  background: rgba(86,255,168,.85);
   color: #0b1216;
-  border-color: rgba(255,157,0,.6);
+  border-color: rgba(86,255,168,.6);
 }
 
 .postList{
@@ -1124,7 +1125,7 @@ body.home .post{
 }
 body.markets .post{
   border-radius: 12px;
-  border-color: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.22);
   background: rgba(8,8,8,.9);
 }
 .post::before{
@@ -1144,8 +1145,8 @@ body.home .post::before{
 }
 body.markets .post::before{
   background:
-    linear-gradient(135deg, rgba(255,157,0,.16), rgba(255,184,77,.10) 40%, transparent 70%),
-    repeating-linear-gradient(90deg, rgba(255,157,0,.06), rgba(255,157,0,.06) 1px, transparent 1px, transparent 18px);
+    linear-gradient(135deg, rgba(86,255,168,.16), rgba(17,207,162,.10) 40%, transparent 70%),
+    repeating-linear-gradient(90deg, rgba(86,255,168,.06), rgba(86,255,168,.06) 1px, transparent 1px, transparent 18px);
   opacity: .22;
 }
 .postInner{ position: relative; z-index: 1; }
@@ -1171,7 +1172,7 @@ body.home .tag{
   background: rgba(31,181,143,.12);
 }
 body.markets .tag{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -1191,7 +1192,7 @@ body.home .score{
   background: rgba(255,250,244,.75);
 }
 body.markets .score{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
 }
 .scoreBar{
@@ -1210,7 +1211,7 @@ body.home .scoreFill{
   background: linear-gradient(90deg, rgba(31,181,143,.8), rgba(224,122,95,.65));
 }
 body.markets .scoreFill{
-  background: linear-gradient(90deg, rgba(255,157,0,.85), rgba(255,184,77,.75));
+  background: linear-gradient(90deg, rgba(86,255,168,.85), rgba(17,207,162,.75));
 }
 
 .postTitle{
@@ -1277,7 +1278,7 @@ body.home .pinIt{
   background: rgba(31,181,143,.16);
 }
 body.markets .pinIt{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
   color: rgba(230,246,239,.85);
 }
@@ -1305,8 +1306,8 @@ body.markets .footer{
   background: rgba(163,177,138,.25);
 }
 body.markets .footMark{
-  border-color: rgba(255,157,0,.6);
-  background: rgba(255,157,0,.22);
+  border-color: rgba(86,255,168,.6);
+  background: rgba(86,255,168,.22);
 }
 .muted{ opacity: .75; font-size: 12px; }
 .footLink{
@@ -1318,7 +1319,7 @@ body.markets .footMark{
   background: rgba(218,215,205,.4);
 }
 body.markets .footLink{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
 }
 
@@ -1339,6 +1340,7 @@ body.markets .modal{
   border-radius: 12px;
   background: rgba(8,8,8,.96);
   box-shadow: 0 24px 90px rgba(0,0,0,.6);
+  color: var(--ink);
 }
 body.markets .modal::backdrop{
   background: rgba(5,8,12,.7);
@@ -1351,7 +1353,7 @@ body.markets .modal::backdrop{
   margin-bottom: 12px;
 }
 body.markets .modalHead{
-  border-bottom: 1px dashed rgba(255,157,0,.28);
+  border-bottom: 1px dashed rgba(86,255,168,.28);
 }
 .modalTitle{
   font-weight: 760;
@@ -1368,7 +1370,7 @@ body.markets .modalHead{
   color: var(--ink2);
 }
 body.markets .x{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.85);
   color: rgba(230,246,239,.85);
 }
@@ -1382,8 +1384,13 @@ body.markets .x{
   font-size: 13px;
 }
 body.markets .modalSearch input{
-  border-color: rgba(255,157,0,.28);
+  border-color: rgba(86,255,168,.28);
   background: rgba(8,8,8,.9);
+  color: var(--ink);
+  caret-color: var(--accent);
+}
+body.markets .modalSearch input::placeholder{
+  color: rgba(230,246,239,.6);
 }
 .modalList{
   margin-top: 12px;
@@ -1404,8 +1411,17 @@ body.markets .modalSearch input{
 }
 body.markets .modalItem{
   border-radius: 10px;
-  border-color: rgba(255,157,0,.24);
+  border-color: rgba(86,255,168,.24);
   background: rgba(8,8,8,.9);
+}
+body.markets .modalItemTitle{
+  color: var(--ink);
+}
+body.markets .modalItemMeta{
+  color: rgba(230,246,239,.7);
+}
+body.markets .modalFoot{
+  color: rgba(230,246,239,.6);
 }
 .modalItemTitle{
   font-size: 13px;

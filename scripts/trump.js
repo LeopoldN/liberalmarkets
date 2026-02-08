@@ -147,18 +147,20 @@
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    const scroller = document.scrollingElement || document.documentElement;
+    const rail = el.closest(".fallGuy") || el.parentElement;
+
     let raf = 0;
 
     const update = () => {
       raf = 0;
-      const doc = document.documentElement;
-      const scrollTop = window.scrollY || doc.scrollTop || 0;
-      const maxScroll = Math.max(1, doc.scrollHeight - window.innerHeight);
+      const scrollTop = scroller.scrollTop || window.scrollY || 0;
+      const maxScroll = Math.max(1, scroller.scrollHeight - scroller.clientHeight);
       const t = clamp(scrollTop / maxScroll, 0, 1);
 
-      const rail = el.parentElement;
       const railH = rail ? rail.getBoundingClientRect().height : window.innerHeight;
-      const maxY = Math.max(0, railH - 90);
+      const elH = el.getBoundingClientRect().height || 82;
+      const maxY = Math.max(0, railH - elH - 8);
 
       const y = t * maxY;
       const rot = -8 + t * 120 + Math.sin(t * Math.PI * 2) * 2;
@@ -172,8 +174,38 @@
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    scroller.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+    window.addEventListener("load", onScroll);
     update();
+  }
+
+  /* ================================
+     Chart grid reflow
+  ================================= */
+
+  function rebalanceChartRows() {
+    document.querySelectorAll(".ttSection").forEach((section) => {
+      const rows = Array.from(section.querySelectorAll(":scope > .chartRow"));
+      if (!rows.length) return;
+
+      const cards = rows.flatMap(row => Array.from(row.querySelectorAll(".chartCard")));
+      rows.forEach(row => row.remove());
+
+      const anchor = section.querySelector(".ttMore") || section.querySelector(".ttSectionHead");
+      if (!anchor) return;
+
+      let insertAfter = anchor;
+      cards.forEach((card, idx) => {
+        if (idx % 2 === 0) {
+          const row = document.createElement("div");
+          row.className = "chartRow";
+          insertAfter.insertAdjacentElement("afterend", row);
+          insertAfter = row;
+        }
+        insertAfter.appendChild(card);
+      });
+    });
   }
 
   /* ================================
@@ -218,6 +250,7 @@
     initSnapshotDrawers(); 
     initSnapshots();
     initFallingMan();
+    rebalanceChartRows();
     initChartSearch();
   });
 })();
