@@ -1,6 +1,97 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-02-08T00:58:15.660Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
-  "items": []
+  "items": [
+    {
+      "title": "As &apos;Sell America&apos; trade volatility rages on, some of the biggest changes may be in your bonds",
+      "link": "https://www.cnbc.com/2026/02/07/sell-america-market-trade-fixed-income-international-bonds.html",
+      "pubDate": "Sat, 07 Feb 2026 14:59:59 GMT"
+    },
+    {
+      "title": "Bitcoin gets slashed in half. What&apos;s behind the crypto&apos;s existential crisis",
+      "link": "https://www.cnbc.com/2026/02/06/bitcoin-gets-slashed-in-half-whats-behind-the-cryptos-existential-crisis.html",
+      "pubDate": "Fri, 06 Feb 2026 18:50:10 GMT"
+    },
+    {
+      "title": "Goldman Sachs taps Anthropic’s Claude to automate accounting, compliance roles",
+      "link": "https://www.cnbc.com/2026/02/06/anthropic-goldman-sachs-ai-model-accounting.html",
+      "pubDate": "Fri, 06 Feb 2026 18:10:44 GMT"
+    },
+    {
+      "title": "Kalshi expands surveillance, enforcement efforts ahead of Super Bowl 60",
+      "link": "https://www.cnbc.com/2026/02/05/kalshi-expands-surveillance-enforcement-efforts.html",
+      "pubDate": "Thu, 05 Feb 2026 16:51:40 GMT"
+    },
+    {
+      "title": "Fixed-income ETF provider BondBloxx questions private credit meltdown fears, sees space as sensible way to generate income",
+      "link": "https://www.cnbc.com/2026/02/05/private-credit-meltdown-fears-why-bondbloxx-isnt-worried-.html",
+      "pubDate": "Thu, 05 Feb 2026 12:00:01 GMT"
+    },
+    {
+      "title": "Bitcoin bleeds for second straight day, nearly grazes $72,000",
+      "link": "https://www.cnbc.com/2026/02/04/bitcoin-bleeds-for-second-straight-day-nearly-grazes-72000.html",
+      "pubDate": "Thu, 05 Feb 2026 15:30:35 GMT"
+    },
+    {
+      "title": "Bitcoin briefly breaks below $73,000 to lowest since November 2024 as heavy selling resumes",
+      "link": "https://www.cnbc.com/2026/02/03/bitcoin-price-today.html",
+      "pubDate": "Wed, 04 Feb 2026 15:26:53 GMT"
+    },
+    {
+      "title": "Rocket Companies shares jump 6% after CEO says mortgage loan volume is surging",
+      "link": "https://www.cnbc.com/2026/02/03/rocket-companies-shares-jump-6percent-after-ceo-says-mortgage-loan-volume-is-surging.html",
+      "pubDate": "Tue, 03 Feb 2026 13:32:19 GMT"
+    },
+    {
+      "title": "China set to attend India&apos;s upcoming AI summit signaling improving relations with New Delhi",
+      "link": "https://www.cnbc.com/2026/02/03/china-india-ai-summit-improving-relations-with-new-delhi.html",
+      "pubDate": "Tue, 03 Feb 2026 23:35:36 GMT"
+    },
+    {
+      "title": "We just got reasons to love these 2 portfolio stocks even more",
+      "link": "https://www.cnbc.com/2026/02/02/we-just-got-reasons-to-love-these-2-portfolio-stocks-even-more.html",
+      "pubDate": "Mon, 02 Feb 2026 20:40:00 GMT"
+    },
+    {
+      "title": "Strategy slides after bitcoin briefly dips below crypto firm&apos;s key breakeven level",
+      "link": "https://www.cnbc.com/2026/02/02/strategy-slides-after-bitcoin-briefly-dips-below-crypto-firms-key-breakeven-level-.html",
+      "pubDate": "Mon, 02 Feb 2026 22:39:16 GMT"
+    },
+    {
+      "title": "Rare earth miners jump as Trump announces establishment of critical mineral reserve",
+      "link": "https://www.cnbc.com/2026/02/02/rare-earth-miners-jump-as-trump-is-reportedly-eyeing-mineral-stockpile-.html",
+      "pubDate": "Mon, 02 Feb 2026 21:56:32 GMT"
+    },
+    {
+      "title": "American Express, credit card provider to the wealthy, wants even more high spenders",
+      "link": "https://www.cnbc.com/2026/01/30/american-express-credit-card-high-spenders.html",
+      "pubDate": "Fri, 30 Jan 2026 19:09:39 GMT"
+    },
+    {
+      "title": "If you missed big international stock market rally in 2025, it&apos;s not too late to start making money overseas",
+      "link": "https://www.cnbc.com/2026/01/30/overseas-markets-international-stocks-investing-etfs.html",
+      "pubDate": "Fri, 30 Jan 2026 20:09:36 GMT"
+    },
+    {
+      "title": "Everything you need to know about Kevin Warsh, Trump&apos;s pick to lead the Federal Reserve",
+      "link": "https://www.cnbc.com/2026/01/30/who-is-kevin-warsh-trumps-fed-chair-pick.html",
+      "pubDate": "Fri, 30 Jan 2026 18:28:58 GMT"
+    },
+    {
+      "title": "Trump nominates Kevin Warsh for Federal Reserve chair to succeed Jerome Powell",
+      "link": "https://www.cnbc.com/2026/01/30/trump-nominates-kevin-warsh-for-federal-reserve-chair-to-succeed-jerome-powell.html",
+      "pubDate": "Fri, 30 Jan 2026 20:22:43 GMT"
+    },
+    {
+      "title": "World leaders flock to Beijing, hedging against U.S. disruptions",
+      "link": "https://www.cnbc.com/2026/01/30/china-beijing-trade-tariffs-trump-starmer-carney.html",
+      "pubDate": "Fri, 30 Jan 2026 09:39:24 GMT"
+    },
+    {
+      "title": "Software stocks enter bear market on AI disruption fear with ServiceNow plunging 10%",
+      "link": "https://www.cnbc.com/2026/01/29/software-stocks-enter-bear-market-on-ai-disruption-fear-with-servicenow-plunging-11percent-thursday.html",
+      "pubDate": "Fri, 30 Jan 2026 16:33:16 GMT"
+    }
+  ]
 }
