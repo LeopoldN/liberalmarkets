@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-02-08T00:58:15.660Z",
+  "generatedAt": "2026-02-08T13:08:25.371Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "China&apos;s Luckin Coffee opens first high-end store as it takes on Starbucks",
+      "link": "https://www.cnbc.com/2026/02/08/chinas-luckin-coffee-opens-its-first-high-end-store.html",
+      "pubDate": "Sun, 08 Feb 2026 06:26:08 GMT"
+    },
     {
       "title": "As &apos;Sell America&apos; trade volatility rages on, some of the biggest changes may be in your bonds",
       "link": "https://www.cnbc.com/2026/02/07/sell-america-market-trade-fixed-income-international-bonds.html",
@@ -87,11 +92,6 @@
       "title": "World leaders flock to Beijing, hedging against U.S. disruptions",
       "link": "https://www.cnbc.com/2026/01/30/china-beijing-trade-tariffs-trump-starmer-carney.html",
       "pubDate": "Fri, 30 Jan 2026 09:39:24 GMT"
-    },
-    {
-      "title": "Software stocks enter bear market on AI disruption fear with ServiceNow plunging 10%",
-      "link": "https://www.cnbc.com/2026/01/29/software-stocks-enter-bear-market-on-ai-disruption-fear-with-servicenow-plunging-11percent-thursday.html",
-      "pubDate": "Fri, 30 Jan 2026 16:33:16 GMT"
     }
   ]
 }
