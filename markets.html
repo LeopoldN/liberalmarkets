@@ -67,13 +67,103 @@
       flex-wrap: wrap;
       justify-content: flex-end;
     }
+    .hmControlRow {
+      margin-top: 10px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hmFilters {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .hmChip {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 5px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(86, 255, 168, .22);
+      background: rgba(7, 7, 7, .9);
+      color: inherit;
+      cursor: pointer;
+    }
+    .hmChip.is-active {
+      border-color: rgba(86, 255, 168, .7);
+      box-shadow: inset 0 0 12px rgba(86, 255, 168, .14);
+    }
+    .hmToggle {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(86, 255, 168, .32);
+      background: rgba(6, 6, 6, .9);
+      color: inherit;
+      cursor: pointer;
+    }
+    .hmToggle.is-active {
+      border-color: rgba(86, 255, 168, .7);
+      box-shadow: inset 0 0 16px rgba(86, 255, 168, .16);
+    }
+    .hmActionBtn {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(86, 255, 168, .32);
+      background: rgba(6, 6, 6, .9);
+      color: inherit;
+      cursor: pointer;
+    }
+    .hmActionBtn:hover {
+      border-color: rgba(86, 255, 168, .55);
+      box-shadow: inset 0 0 14px rgba(86, 255, 168, .12);
+    }
     .hmStamp {
       font-size: 12px;
     }
     .hmGrid {
       display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-template-columns: repeat(7, minmax(0, 1fr));
       gap: 10px;
+    }
+    .hmGrid.is-focus {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .hmGrid.is-focus .hmTile {
+      min-height: 110px;
+      font-size: 1.05em;
+    }
+    .hmGrid.is-focus .hmName {
+      font-size: 16px;
+    }
+    .hmGrid.is-focus .hmPct {
+      font-size: 16px;
+    }
+    .hmGrid.is-focus .hmPx {
+      font-size: 12px;
+    }
+    @media (max-width: 1100px) {
+      .hmGrid.is-focus { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .hmGrid.is-focus { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .hmGrid.is-sized {
+      grid-auto-rows: 58px;
+      grid-auto-flow: dense;
+    }
+    .hmGrid.is-sized .hmTile {
+      min-height: 58px;
     }
     @media (max-width: 1100px) {
       .hmGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -82,6 +172,76 @@
       .hmGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .hmHead { flex-direction: column; }
       .hmActions { justify-content: flex-start; }
+    }
+    @media (min-width: 1400px) {
+      .hmGrid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    }
+    .hmGrid.is-grouped {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    @media (max-width: 980px) {
+      .hmGrid.is-grouped { grid-template-columns: 1fr; }
+    }
+    .hmGroup {
+      border-radius: 12px;
+      border: 1px solid rgba(86, 255, 168, .22);
+      background: rgba(7, 7, 7, .9);
+      padding: 10px 12px 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hmGroup::before {
+      content: "";
+      position: absolute;
+      inset: -40% -10%;
+      background:
+        repeating-linear-gradient(0deg, rgba(86, 255, 168, .04) 0 1px, transparent 1px 20px),
+        repeating-linear-gradient(90deg, rgba(86, 255, 168, .03) 0 1px, transparent 1px 24px);
+      opacity: .25;
+      pointer-events: none;
+    }
+    .hmGroupHead {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .hmGroupTitle {
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .hmGroupCount {
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+    .hmGroupGrid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .hmGroupGrid.is-sized {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: 56px;
+      grid-auto-flow: dense;
+    }
+    .hmGroupGrid.is-sized .hmTile {
+      min-height: 56px;
+    }
+    @media (max-width: 1100px) {
+      .hmGroupGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hmGroupGrid.is-sized { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .hmGroupGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     .hmTile {
       position: relative;
@@ -97,7 +257,43 @@
       min-height: 78px;
       display: grid;
       gap: 4px;
+      align-content: start;
       transition: transform .12s ease, filter .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .hmGrid.is-sized .hmTile,
+    .hmGroupGrid.is-sized .hmTile {
+      padding: 6px 8px;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 4px;
+    }
+    .hmGrid.is-sized .hmTile .hmName,
+    .hmGroupGrid.is-sized .hmTile .hmName,
+    .hmGrid.is-sized .hmTile .hmPx,
+    .hmGroupGrid.is-sized .hmTile .hmPx,
+    .hmGrid.is-sized .hmTile .hmTip,
+    .hmGroupGrid.is-sized .hmTile .hmTip,
+    .hmGrid.is-sized .hmTile .hmTag,
+    .hmGroupGrid.is-sized .hmTile .hmTag {
+      display: none;
+    }
+    .hmGrid.is-sized .hmTile .hmSym,
+    .hmGroupGrid.is-sized .hmTile .hmSym {
+      font-size: 11px;
+      letter-spacing: .16em;
+      opacity: .9;
+    }
+    .hmGrid.is-sized .hmTile .hmNums,
+    .hmGroupGrid.is-sized .hmTile .hmNums {
+      margin-top: 0;
+    }
+    .hmGrid.is-sized .hmTile .hmPct,
+    .hmGroupGrid.is-sized .hmTile .hmPct {
+      font-size: 14px;
     }
 
     /* Group accent bar (set via data-group in JS) */
@@ -120,6 +316,31 @@
       outline: 2px solid rgba(86, 255, 168, .55);
       outline-offset: 2px;
     }
+    .hmTip {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(86, 255, 168, .25);
+      background: rgba(6, 6, 6, .85);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .15s ease, transform .15s ease;
+      pointer-events: none;
+      max-width: calc(100% - 20px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .hmTile:hover .hmTip,
+    .hmTile:focus-visible .hmTip {
+      opacity: .92;
+      transform: translateY(0);
+    }
 
     /* Group accent colors */
     .hmTile[data-group="index"]  { --hmGroupBar: rgba(86, 255, 168, .55); }
@@ -127,6 +348,7 @@
     .hmTile[data-group="large"]  { --hmGroupBar: rgba(86, 255, 168, .30); }
     .hmTile[data-group="sector"] { --hmGroupBar: rgba(86, 255, 168, .46); }
     .hmTile[data-group="macro"]  { --hmGroupBar: rgba(86, 255, 168, .26); }
+    .hmTile[data-group="crypto"] { --hmGroupBar: rgba(110, 195, 255, .55); }
 
     .hmSym {
       font-size: 10.5px;
@@ -283,12 +505,215 @@
       border-radius: 6px;
       border: 1px solid rgba(86, 255, 168, .28);
       background: rgba(7, 7, 7, .9);
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      appearance: none;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease, background .18s ease;
+    }
+    .kbdKey.is-active {
+      border-color: rgba(86, 255, 168, .75);
+      box-shadow: 0 0 0 1px rgba(86, 255, 168, .2), inset 0 0 18px rgba(86, 255, 168, .08);
+      background: rgba(10, 12, 10, .95);
+    }
+    .kbdKey.is-active::before {
+      content: "";
+      position: absolute;
+      inset: -30% -10%;
+      background: radial-gradient(circle at 30% 30%, rgba(86, 255, 168, .25), transparent 55%);
+      opacity: .6;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .kbdKey.is-pulse::after {
+      content: "";
+      position: absolute;
+      left: -10%;
+      right: -10%;
+      height: 2px;
+      top: 50%;
+      background: linear-gradient(90deg, transparent, rgba(86, 255, 168, .9), transparent);
+      opacity: 0;
+      animation: scanline 0.9s ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .kbdKey:focus-visible {
+      outline: 2px solid rgba(86, 255, 168, .6);
+      outline-offset: 2px;
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-14px); opacity: 0; }
+      35% { opacity: .85; }
+      100% { transform: translateY(14px); opacity: 0; }
+    }
+    .view-overview,
+    .view-tables,
+    .view-heatmap {
+      display: block;
+    }
+    body[data-view="overview"] .view-tables,
+    body[data-view="overview"] .view-heatmap {
+      display: none;
+    }
+    body[data-view="tables"] .view-overview,
+    body[data-view="tables"] .view-heatmap {
+      display: none;
+    }
+    body[data-view="heatmap"] .view-overview,
+    body[data-view="heatmap"] .view-tables {
+      display: none;
+    }
+    body.markets[data-view="overview"] {
+      background:
+        radial-gradient(circle at 20% 12%, rgba(86,255,168,.10), transparent 42%),
+        radial-gradient(circle at 85% 20%, rgba(17,207,162,.12), transparent 45%),
+        linear-gradient(180deg, #050505, #020202);
+    }
+    body.markets[data-view="tables"] {
+      background:
+        radial-gradient(circle at 18% 18%, rgba(86,255,168,.08), transparent 40%),
+        radial-gradient(circle at 80% 10%, rgba(86,255,168,.06), transparent 45%),
+        linear-gradient(180deg, #060607, #020203);
+    }
+    body.markets[data-view="heatmap"] {
+      background:
+        radial-gradient(circle at 30% 14%, rgba(86,255,168,.14), transparent 45%),
+        radial-gradient(circle at 78% 35%, rgba(255,98,122,.10), transparent 50%),
+        linear-gradient(180deg, #050506, #010101);
     }
     .terminalHint {
       font-size: 10px;
       letter-spacing: .2em;
       text-transform: uppercase;
       opacity: .6;
+    }
+    .sessionStrip {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .sessionTitle {
+      font-size: 9.5px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+    .sessionPill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(86, 255, 168, .22);
+      background: rgba(8, 8, 8, .9);
+      font-size: 9.5px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .sessionDot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(230, 246, 239, .4);
+      box-shadow: 0 0 8px rgba(86, 255, 168, .2);
+    }
+    .sessionName {
+      opacity: .9;
+    }
+    .sessionTime {
+      opacity: .7;
+    }
+    .sessionState {
+      opacity: .8;
+    }
+    .sessionPill[data-state="open"] {
+      border-color: rgba(86, 255, 168, .55);
+      background: rgba(10, 12, 10, .95);
+    }
+    .sessionPill[data-state="open"] .sessionDot {
+      background: rgba(86, 255, 168, .95);
+      box-shadow: 0 0 10px rgba(86, 255, 168, .45);
+    }
+    .sessionPill[data-state="pre"] {
+      border-color: rgba(255, 198, 86, .55);
+    }
+    .sessionPill[data-state="pre"] .sessionDot {
+      background: rgba(255, 198, 86, .9);
+      box-shadow: 0 0 10px rgba(255, 198, 86, .35);
+    }
+    .sessionPill[data-state="after"] {
+      border-color: rgba(255, 98, 122, .45);
+    }
+    .sessionPill[data-state="after"] .sessionDot {
+      background: rgba(255, 98, 122, .85);
+      box-shadow: 0 0 10px rgba(255, 98, 122, .35);
+    }
+    .sessionPill[data-state="lunch"] {
+      border-color: rgba(255, 198, 86, .55);
+    }
+    .sessionPill[data-state="lunch"] .sessionDot {
+      background: rgba(255, 198, 86, .9);
+      box-shadow: 0 0 10px rgba(255, 198, 86, .35);
+    }
+    .sessionPill[data-state="closed"] .sessionDot {
+      background: rgba(230, 246, 239, .35);
+      box-shadow: none;
+    }
+    .marketClock {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .clockRing {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: conic-gradient(rgba(86, 255, 168, .9) 0deg, rgba(86, 255, 168, .9) 0deg, rgba(86, 255, 168, .12) 0deg 360deg);
+      position: relative;
+      box-shadow: inset 0 0 0 1px rgba(86, 255, 168, .2);
+    }
+    .clockRing::after {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      background: rgba(7, 7, 7, .92);
+      box-shadow: inset 0 0 0 1px rgba(86, 255, 168, .18);
+    }
+    .clockLabel {
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+    .panelTabs {
+      display: inline-flex;
+      gap: 6px;
+    }
+    .panelTab {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 4px 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(86, 255, 168, .24);
+      background: rgba(7, 7, 7, .9);
+      color: inherit;
+      cursor: pointer;
+    }
+    .panelTab.is-active {
+      border-color: rgba(86, 255, 168, .6);
+      box-shadow: inset 0 0 12px rgba(86, 255, 168, .12);
+    }
+    .boardRows.is-hidden {
+      display: none;
     }
 
     .tickerStrip {
@@ -383,7 +808,7 @@
       gap: 18px;
       flex-shrink: 0;
       width: max-content;
-      animation: news-scroll 90s linear infinite;
+      animation: news-scroll 400s linear infinite;
       padding-right: 18px;
     }
     .newsTicker:hover .newsTrack{
@@ -406,7 +831,7 @@
     .signalGrid {
       margin-top: 14px;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
       gap: 12px;
     }
     .signalCard {
@@ -467,6 +892,67 @@
     }
     .signalVal {
       font-variant-numeric: tabular-nums;
+    }
+    .riskRow {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .riskRing {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: conic-gradient(rgba(86, 255, 168, .9) 0deg, rgba(86, 255, 168, .9) 0deg, rgba(86, 255, 168, .14) 0deg 360deg);
+      position: relative;
+      box-shadow: inset 0 0 0 1px rgba(86, 255, 168, .2);
+    }
+    .riskRing::after {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border-radius: 50%;
+      background: rgba(8, 8, 8, .95);
+      box-shadow: inset 0 0 0 1px rgba(86, 255, 168, .16);
+    }
+    .riskValue {
+      font-size: 16px;
+      letter-spacing: .08em;
+    }
+    .riskNote {
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .65;
+    }
+
+    .hotkeysGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+    }
+    .hotkeyRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(86, 255, 168, .24);
+      background: rgba(7, 7, 7, .9);
+      padding: 8px 10px;
+    }
+    .hotkeyKey {
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      padding: 4px 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(86, 255, 168, .28);
+      background: rgba(8, 8, 8, .9);
+    }
+    .hotkeyDesc {
+      font-size: 11px;
+      opacity: .75;
     }
 
     .terminalTables {
@@ -633,7 +1119,7 @@
     .moverGrid {
       margin-top: 16px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 12px;
     }
     .moverList {
@@ -648,6 +1134,28 @@
       font-size: 11px;
       padding: 4px 0;
       border-bottom: 1px dashed rgba(86, 255, 168, .18);
+    }
+    .moverRight {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .moverRow.is-shock {
+      border-radius: 8px;
+      border-bottom: 0;
+      padding: 6px 8px;
+      background: rgba(8, 8, 8, .9);
+      border: 1px solid rgba(86, 255, 168, .22);
+      box-shadow: inset 0 0 0 1px rgba(86, 255, 168, .06);
+    }
+    .moverRow.is-shock.is-up {
+      border-color: rgba(86, 255, 168, .55);
+      box-shadow: inset 0 0 0 1px rgba(86, 255, 168, .18), 0 0 14px rgba(86, 255, 168, .08);
+    }
+    .moverRow.is-shock.is-dn {
+      border-color: rgba(255, 98, 122, .55);
+      box-shadow: inset 0 0 0 1px rgba(255, 98, 122, .18), 0 0 14px rgba(255, 98, 122, .08);
     }
     .moverRow:last-child { border-bottom: 0; }
     .moverSym {
@@ -763,7 +1271,7 @@
   </style>
 </head>
 
-<body class="markets">
+<body class="markets" data-view="overview">
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="topbar">
@@ -821,21 +1329,43 @@
           <span>Local <span id="termLocal">—</span></span>
           <span>Sync <span id="termSync">—</span></span>
         </div>
+        <div class="sessionStrip" aria-label="Market sessions">
+          <span class="sessionTitle">Sessions</span>
+          <div class="sessionPill" id="sessionAsiaPill" data-state="closed">
+            <span class="sessionDot" aria-hidden="true"></span>
+            <span class="sessionName">Asia</span>
+            <span class="sessionTime" id="sessionAsia">—</span>
+            <span class="sessionState" id="sessionAsiaState">—</span>
+          </div>
+          <div class="sessionPill" id="sessionEuropePill" data-state="closed">
+            <span class="sessionDot" aria-hidden="true"></span>
+            <span class="sessionName">Europe</span>
+            <span class="sessionTime" id="sessionEurope">—</span>
+            <span class="sessionState" id="sessionEuropeState">—</span>
+          </div>
+          <div class="sessionPill" id="sessionUsPill" data-state="closed">
+            <span class="sessionDot" aria-hidden="true"></span>
+            <span class="sessionName">US</span>
+            <span class="sessionTime" id="sessionUs">—</span>
+            <span class="sessionState" id="sessionUsState">—</span>
+          </div>
+        </div>
       </div>
       <div class="terminalRight">
+        <div class="marketClock" aria-label="Market clock">
+          <div class="clockRing" id="clockRing" aria-hidden="true"></div>
+          <div class="clockLabel" id="clockLabel">—</div>
+        </div>
         <div class="kbdRow" aria-label="Terminal shortcuts">
-          <span class="kbdKey">F1 Index</span>
-          <span class="kbdKey">F2 Mega</span>
-          <span class="kbdKey">F3 Large</span>
-          <span class="kbdKey">F4 Sector</span>
-          <span class="kbdKey">F5 Macro</span>
-          <span class="kbdKey">F6 Reset</span>
+          <button class="kbdKey js-view is-active" type="button" data-view="overview" aria-pressed="true">F1 Overview</button>
+          <button class="kbdKey js-view" type="button" data-view="tables" aria-pressed="false">F2 Tables</button>
+          <button class="kbdKey js-view" type="button" data-view="heatmap" aria-pressed="false">F3 Heatmap</button>
         </div>
         <div class="terminalHint">Cmd + K to filter</div>
       </div>
     </section>
 
-    <section class="tickerStrip" aria-label="Market ticker">
+    <section class="tickerStrip view-overview" aria-label="Market ticker">
       <div class="tickerLabel">TAPE</div>
       <div class="tickerMarquee" role="list">
         <div class="tickerTrack">
@@ -925,7 +1455,7 @@
       </div>
     </section>
 
-    <section class="newsTicker" aria-label="News ticker">
+    <section class="newsTicker view-overview" aria-label="News ticker">
       <div class="newsLabel">NEWS</div>
       <div class="newsMarquee">
         <div class="newsTrack" id="newsTrack">
@@ -939,7 +1469,7 @@
 
     <div class="terminalLayout">
       <div class="terminalMain">
-        <section class="signalGrid" aria-label="Market signals">
+        <section class="signalGrid view-overview" aria-label="Market signals">
       <div class="signalCard">
         <div class="signalLabel">Breadth</div>
         <div class="signalValue" id="sigBreadth">—</div>
@@ -969,9 +1499,20 @@
         </div>
         <div class="signalMeta">Heatmap</div>
       </div>
+      <div class="signalCard">
+        <div class="signalLabel">Risk Radar</div>
+        <div class="riskRow">
+          <div class="riskRing" id="riskRing" aria-hidden="true"></div>
+          <div>
+            <div class="riskValue" id="riskValue">—</div>
+            <div class="riskNote" id="riskNote">Balanced</div>
+          </div>
+        </div>
+        <div class="signalMeta">Breadth × Dispersion</div>
+      </div>
         </section>
 
-        <section class="marketBoard" aria-label="Market board">
+        <section class="marketBoard view-overview" aria-label="Market board">
           <div class="boardCard">
             <div class="boardHead">
               <div class="boardTitle">Indices</div>
@@ -1006,31 +1547,63 @@
           </div>
           <div class="boardCard">
             <div class="boardHead">
-              <div class="boardTitle">Rates</div>
-              <div class="boardHint">Govt</div>
+              <div>
+                <div class="boardTitle">Rates</div>
+                <div class="boardHint">Govt</div>
+              </div>
+              <div class="panelTabs" role="tablist" aria-label="Rates panels">
+                <button class="panelTab is-active js-rate-tab" type="button" data-panel="rates" aria-pressed="true">Rates</button>
+                <button class="panelTab js-rate-tab" type="button" data-panel="fx" aria-pressed="false">FX</button>
+              </div>
             </div>
-            <div class="boardRows">
+            <div class="boardRows js-rates-rows">
+              <div class="boardRow" data-sym="2yusy.b">
+                <span class="boardSym">2Y</span>
+                <span class="boardName">US 2Y</span>
+                <span class="boardPx js-price">—</span>
+                <span class="boardChg js-pct is-flat">—</span>
+              </div>
+              <div class="boardRow" data-sym="5yusy.b">
+                <span class="boardSym">5Y</span>
+                <span class="boardName">US 5Y</span>
+                <span class="boardPx js-price">—</span>
+                <span class="boardChg js-pct is-flat">—</span>
+              </div>
               <div class="boardRow" data-sym="10yusy.b">
                 <span class="boardSym">10Y</span>
                 <span class="boardName">US 10Y</span>
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
+              <div class="boardRow" data-sym="30yusy.b">
+                <span class="boardSym">30Y</span>
+                <span class="boardName">US 30Y</span>
+                <span class="boardPx js-price">—</span>
+                <span class="boardChg js-pct is-flat">—</span>
+              </div>
+            </div>
+            <div class="boardRows js-fx-rows is-hidden">
               <div class="boardRow" data-sym="usdeur">
                 <span class="boardSym">EUR</span>
                 <span class="boardName">USD/EUR</span>
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
-              <div class="boardRow" data-sym="^hsi">
-                <span class="boardSym">HSI</span>
-                <span class="boardName">Hong Kong</span>
+              <div class="boardRow" data-sym="usdjpy">
+                <span class="boardSym">JPY</span>
+                <span class="boardName">USD/JPY</span>
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
-              <div class="boardRow" data-sym="^nkx">
-                <span class="boardSym">NKX</span>
-                <span class="boardName">Japan</span>
+              <div class="boardRow" data-sym="usdcny">
+                <span class="boardSym">CNY</span>
+                <span class="boardName">USD/CNY</span>
+                <span class="boardPx js-price">—</span>
+                <span class="boardChg js-pct is-flat">—</span>
+              </div>
+              <div class="boardRow" data-sym="usdtwd">
+                <span class="boardSym">TWD</span>
+                <span class="boardName">USD/TWD</span>
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
@@ -1048,9 +1621,21 @@
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
+              <div class="boardRow" data-sym="cl.f">
+                <span class="boardSym">WTI</span>
+                <span class="boardName">Crude</span>
+                <span class="boardPx js-price">—</span>
+                <span class="boardChg js-pct is-flat">—</span>
+              </div>
               <div class="boardRow" data-sym="xauusd">
                 <span class="boardSym">XAU</span>
                 <span class="boardName">Gold</span>
+                <span class="boardPx js-price">—</span>
+                <span class="boardChg js-pct is-flat">—</span>
+              </div>
+              <div class="boardRow" data-sym="gc.f">
+                <span class="boardSym">GC</span>
+                <span class="boardName">Gold (Fut)</span>
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
@@ -1080,21 +1665,27 @@
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
-              <div class="boardRow" data-sym="ung.us">
-                <span class="boardSym">UNG</span>
-                <span class="boardName">Nat Gas</span>
+              <div class="boardRow" data-sym="eth.v">
+                <span class="boardSym">ETH</span>
+                <span class="boardName">Ethereum</span>
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
-              <div class="boardRow" data-sym="slx.us">
-                <span class="boardSym">SLX</span>
-                <span class="boardName">Steel</span>
+              <div class="boardRow" data-sym="sol.v">
+                <span class="boardSym">SOL</span>
+                <span class="boardName">Solana</span>
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
-              <div class="boardRow" data-sym="iwm.us">
-                <span class="boardSym">IWM</span>
-                <span class="boardName">Small Caps</span>
+              <div class="boardRow" data-sym="xrp.v">
+                <span class="boardSym">XRP</span>
+                <span class="boardName">XRP</span>
+                <span class="boardPx js-price">—</span>
+                <span class="boardChg js-pct is-flat">—</span>
+              </div>
+              <div class="boardRow" data-sym="doge.v">
+                <span class="boardSym">DOGE</span>
+                <span class="boardName">Dogecoin</span>
                 <span class="boardPx js-price">—</span>
                 <span class="boardChg js-pct is-flat">—</span>
               </div>
@@ -1102,7 +1693,7 @@
           </div>
         </section>
 
-        <section class="moverGrid" aria-label="Top movers">
+        <section class="moverGrid view-overview" aria-label="Top movers">
       <div class="termTable">
         <div class="termTableHead">
           <div class="termTableTitle">Top Gainers</div>
@@ -1124,9 +1715,16 @@
         </div>
         <div class="moverList" id="volList"></div>
       </div>
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Shock List</div>
+          <div class="termTableHint">≥ 2% move</div>
+        </div>
+        <div class="moverList" id="shockList"></div>
+      </div>
         </section>
 
-        <section class="terminalTables" aria-label="Market tables">
+        <section class="terminalTables view-tables" aria-label="Market tables">
       <div class="termTable">
         <div class="termTableHead">
           <div class="termTableTitle">Major Indices</div>
@@ -1196,15 +1794,39 @@
             </tr>
           </thead>
           <tbody>
+            <tr data-sym="2yusy.b">
+              <td class="cellSym">2Y</td>
+              <td>US 2Y</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="5yusy.b">
+              <td class="cellSym">5Y</td>
+              <td>US 5Y</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
             <tr data-sym="10yusy.b">
               <td class="cellSym">10Y</td>
               <td>US 10Y</td>
               <td class="cellPx js-price">—</td>
               <td class="cellChg js-pct is-flat">—</td>
             </tr>
+            <tr data-sym="30yusy.b">
+              <td class="cellSym">30Y</td>
+              <td>US 30Y</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
             <tr data-sym="usdeur">
               <td class="cellSym">EURUSD</td>
               <td>USD/EUR</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="usdjpy">
+              <td class="cellSym">USDJPY</td>
+              <td>USD/JPY</td>
               <td class="cellPx js-price">—</td>
               <td class="cellChg js-pct is-flat">—</td>
             </tr>
@@ -1226,9 +1848,51 @@
               <td class="cellPx js-price">—</td>
               <td class="cellChg js-pct is-flat">—</td>
             </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Crypto</div>
+          <div class="termTableHint">24h</div>
+        </div>
+        <table class="gridTable" role="table">
+          <thead>
+            <tr>
+              <th>Sym</th>
+              <th>Name</th>
+              <th class="cellPx">Last</th>
+              <th class="cellChg">Chg%</th>
+            </tr>
+          </thead>
+          <tbody>
             <tr data-sym="btc.v">
               <td class="cellSym">BTC</td>
               <td>Bitcoin</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="eth.v">
+              <td class="cellSym">ETH</td>
+              <td>Ethereum</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="sol.v">
+              <td class="cellSym">SOL</td>
+              <td>Solana</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="xrp.v">
+              <td class="cellSym">XRP</td>
+              <td>XRP</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="doge.v">
+              <td class="cellSym">DOGE</td>
+              <td>Dogecoin</td>
               <td class="cellPx js-price">—</td>
               <td class="cellChg js-pct is-flat">—</td>
             </tr>
@@ -1345,16 +2009,28 @@
       </div>
         </section>
 
-        <section class="hmSection" aria-label="Stock heatmap">
+        <section class="hmSection view-heatmap" aria-label="Stock heatmap">
       <div class="hmHead">
         <div>
           <div class="hmKicker">MARKETS</div>
           <h2 class="hmTitle">Stock heatmap</h2>
           <p class="hmSub">Daily close-to-close moves, sourced from Stooq. Equal-size tiles because market-cap math on the client is how you get bugs and ulcers.</p>
         </div>
+      </div>
 
+      <div class="hmControlRow" aria-label="Heatmap controls">
+        <div class="hmFilters" aria-label="Heatmap filters">
+          <button class="hmChip js-hm-filter is-active" type="button" data-group="all" aria-pressed="true">All</button>
+          <button class="hmChip js-hm-filter" type="button" data-group="index" aria-pressed="false">Index</button>
+          <button class="hmChip js-hm-filter" type="button" data-group="mega" aria-pressed="false">Mega</button>
+          <button class="hmChip js-hm-filter" type="button" data-group="large" aria-pressed="false">Large</button>
+          <button class="hmChip js-hm-filter" type="button" data-group="sector" aria-pressed="false">Sector</button>
+          <button class="hmChip js-hm-filter" type="button" data-group="macro" aria-pressed="false">Macro</button>
+          <button class="hmChip js-hm-filter" type="button" data-group="crypto" aria-pressed="false">Crypto</button>
+        </div>
         <div class="hmActions">
-          <button class="btn" id="hmRefresh" type="button" title="Refresh heatmap">Refresh</button>
+          <button class="hmToggle" id="hmSizeToggle" type="button" aria-pressed="false">Size by %</button>
+          <button class="btn hmActionBtn" id="hmRefresh" type="button" title="Refresh heatmap">Refresh</button>
           <span class="hmStamp muted" id="hmStamp">Updated: —</span>
         </div>
       </div>
@@ -1410,6 +2086,32 @@
 
       <div class="modalFoot">
         <span class="muted">Enter opens. Esc closes. Humans remain complicated.</span>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="hotkeys">
+    <form method="dialog" class="modalBox">
+      <div class="modalHead">
+        <div class="modalTitle">Keybinds</div>
+        <button class="x" value="cancel" aria-label="Close">
+          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 6l12 12"></path>
+            <path d="M18 6l-12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hotkeysGrid">
+        <div class="hotkeyRow"><span class="hotkeyKey">F1</span><span class="hotkeyDesc">Overview view</span></div>
+        <div class="hotkeyRow"><span class="hotkeyKey">F2</span><span class="hotkeyDesc">Tables view</span></div>
+        <div class="hotkeyRow"><span class="hotkeyKey">F3</span><span class="hotkeyDesc">Heatmap view</span></div>
+        <div class="hotkeyRow"><span class="hotkeyKey">R</span><span class="hotkeyDesc">Toggle FX panel</span></div>
+        <div class="hotkeyRow"><span class="hotkeyKey">?</span><span class="hotkeyDesc">Toggle help</span></div>
+        <div class="hotkeyRow"><span class="hotkeyKey">⌘ + K</span><span class="hotkeyDesc">Search filter</span></div>
+        <div class="hotkeyRow"><span class="hotkeyKey">Esc</span><span class="hotkeyDesc">Close panel</span></div>
+      </div>
+      <div class="modalFoot">
+        <span class="muted">Tip: press ? anytime to see this panel.</span>
       </div>
     </form>
   </dialog>
@@ -1476,10 +2178,22 @@
       const grid = document.getElementById("hmGrid");
       const stamp = document.getElementById("hmStamp");
       const btn = document.getElementById("hmRefresh");
+      const sizeToggle = document.getElementById("hmSizeToggle");
       const searchInput = document.getElementById("q");
       const termUtc = document.getElementById("termUtc");
       const termLocal = document.getElementById("termLocal");
       const termSync = document.getElementById("termSync");
+      const sessionAsia = document.getElementById("sessionAsia");
+      const sessionEurope = document.getElementById("sessionEurope");
+      const sessionUs = document.getElementById("sessionUs");
+      const sessionAsiaState = document.getElementById("sessionAsiaState");
+      const sessionEuropeState = document.getElementById("sessionEuropeState");
+      const sessionUsState = document.getElementById("sessionUsState");
+      const sessionAsiaPill = document.getElementById("sessionAsiaPill");
+      const sessionEuropePill = document.getElementById("sessionEuropePill");
+      const sessionUsPill = document.getElementById("sessionUsPill");
+      const clockRing = document.getElementById("clockRing");
+      const clockLabel = document.getElementById("clockLabel");
 
       const sigBreadth = document.getElementById("sigBreadth");
       const sigAdv = document.getElementById("sigAdv");
@@ -1488,11 +2202,149 @@
       const sigDisp = document.getElementById("sigDisp");
       const sigTopUp = document.getElementById("sigTopUp");
       const sigTopDn = document.getElementById("sigTopDn");
+      const riskRing = document.getElementById("riskRing");
+      const riskValue = document.getElementById("riskValue");
+      const riskNote = document.getElementById("riskNote");
       const gainersList = document.getElementById("gainersList");
       const losersList = document.getElementById("losersList");
       const volList = document.getElementById("volList");
+      const shockList = document.getElementById("shockList");
       const newsTrack = document.getElementById("newsTrack");
       const newsTrackClone = document.getElementById("newsTrackClone");
+      const hotkeysDialog = document.getElementById("hotkeys");
+      const rateTabs = Array.from(document.querySelectorAll(".js-rate-tab"));
+      const ratesRows = document.querySelector(".js-rates-rows");
+      const fxRows = document.querySelector(".js-fx-rows");
+
+      const viewButtons = Array.from(document.querySelectorAll(".js-view"));
+      const viewKeyMap = {
+        F1: "overview",
+        F2: "tables",
+        F3: "heatmap",
+      };
+      const allowedViews = new Set(Object.values(viewKeyMap));
+      let viewPulseTimer = null;
+      const ratePanels = new Set(["rates", "fx"]);
+
+      function setRatesPanel(panel, persist = true) {
+        if (!ratePanels.has(panel)) return;
+        if (ratesRows) ratesRows.classList.toggle("is-hidden", panel !== "rates");
+        if (fxRows) fxRows.classList.toggle("is-hidden", panel !== "fx");
+        for (const tab of rateTabs) {
+          const active = tab.dataset.panel === panel;
+          tab.classList.toggle("is-active", active);
+          tab.setAttribute("aria-pressed", active ? "true" : "false");
+        }
+        if (persist) {
+          try {
+            localStorage.setItem("lm_rates_panel", panel);
+          } catch {
+            // ignore storage errors
+          }
+        }
+      }
+
+      function isTypingTarget(el) {
+        if (!(el instanceof HTMLElement)) return false;
+        const tag = el.tagName;
+        return el.isContentEditable || tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+      }
+
+      function setView(view, persist = true) {
+        if (!view) return;
+        document.body.setAttribute("data-view", view);
+        for (const btn of viewButtons) {
+          const active = btn.dataset.view === view;
+          btn.classList.toggle("is-active", active);
+          btn.setAttribute("aria-pressed", active ? "true" : "false");
+        }
+        for (const btn of viewButtons) {
+          btn.classList.remove("is-pulse");
+        }
+        const activeBtn = viewButtons.find((btn) => btn.dataset.view === view);
+        if (activeBtn) {
+          activeBtn.classList.add("is-pulse");
+          if (viewPulseTimer) clearTimeout(viewPulseTimer);
+          viewPulseTimer = setTimeout(() => {
+            activeBtn.classList.remove("is-pulse");
+          }, 900);
+        }
+        if (persist) {
+          try {
+            localStorage.setItem("lm_view", view);
+          } catch {
+            // ignore storage errors
+          }
+        }
+      }
+
+      const savedView = (() => {
+        try {
+          return localStorage.getItem("lm_view");
+        } catch {
+          return null;
+        }
+      })();
+      if (savedView && allowedViews.has(savedView)) setView(savedView, false);
+
+      const savedPanel = (() => {
+        try {
+          return localStorage.getItem("lm_rates_panel");
+        } catch {
+          return null;
+        }
+      })();
+      if (savedPanel && ratePanels.has(savedPanel)) setRatesPanel(savedPanel, false);
+
+      for (const btn of viewButtons) {
+        btn.addEventListener("click", () => {
+          const view = btn.dataset.view;
+          if (view) setView(view);
+        });
+      }
+      for (const tab of rateTabs) {
+        tab.addEventListener("click", () => {
+          const panel = tab.dataset.panel;
+          if (panel) setRatesPanel(panel);
+        });
+      }
+      function toggleHotkeys(force) {
+        if (!(hotkeysDialog instanceof HTMLDialogElement)) return;
+        if (force === true) {
+          if (!hotkeysDialog.open) hotkeysDialog.showModal();
+          return;
+        }
+        if (force === false) {
+          if (hotkeysDialog.open) hotkeysDialog.close();
+          return;
+        }
+        if (hotkeysDialog.open) hotkeysDialog.close();
+        else hotkeysDialog.showModal();
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (isTypingTarget(e.target)) return;
+        if (e.key === "?") {
+          e.preventDefault();
+          toggleHotkeys();
+          return;
+        }
+        if (e.key === "Escape") {
+          toggleHotkeys(false);
+          return;
+        }
+        if (e.key === "r" || e.key === "R") {
+          e.preventDefault();
+          const active = rateTabs.find((tab) => tab.classList.contains("is-active"))?.dataset.panel;
+          const next = active === "fx" ? "rates" : "fx";
+          setRatesPanel(next);
+          return;
+        }
+        const view = viewKeyMap[e.key];
+        if (!view) return;
+        e.preventDefault();
+        setView(view);
+      });
 
       if (!grid || !stamp || !btn) return;
 
@@ -1501,6 +2353,107 @@
         baseItems: /** @type {Array<any>} */ ([]),
         generatedAt: /** @type {string|null} */ (null),
       };
+      const hmFilterButtons = Array.from(document.querySelectorAll(".js-hm-filter"));
+      const hmGroupOrder = [
+        { key: "index", label: "Index" },
+        { key: "mega", label: "Mega" },
+        { key: "large", label: "Large" },
+        { key: "sector", label: "Sector" },
+        { key: "macro", label: "Macro" },
+        { key: "crypto", label: "Crypto" },
+      ];
+      const hmAllowedGroups = new Set(["all", ...hmGroupOrder.map((g) => g.key)]);
+      let hmGroup = "all";
+      let hmSizeMode = false;
+
+      function updateSizeModeClasses() {
+        if (grid) grid.classList.toggle("is-sized", hmSizeMode && hmGroup !== "all");
+        if (grid) grid.classList.toggle("is-focus", hmGroup !== "all");
+        document.querySelectorAll(".hmGroupGrid").forEach((el) => {
+          el.classList.toggle("is-sized", hmSizeMode);
+        });
+      }
+
+      function setHmGroup(group, persist = true) {
+        if (!hmAllowedGroups.has(group)) return;
+        hmGroup = group;
+        for (const btn of hmFilterButtons) {
+          const active = btn.dataset.group === group;
+          btn.classList.toggle("is-active", active);
+          btn.setAttribute("aria-pressed", active ? "true" : "false");
+        }
+        if (persist) {
+          try {
+            localStorage.setItem("lm_hm_group", group);
+          } catch {
+            // ignore storage errors
+          }
+        }
+        updateSizeModeClasses();
+        applyHeatmapQuery();
+      }
+
+      function setHmSizeMode(on, persist = true) {
+        hmSizeMode = Boolean(on);
+        updateSizeModeClasses();
+        if (sizeToggle) {
+          sizeToggle.classList.toggle("is-active", hmSizeMode);
+          sizeToggle.setAttribute("aria-pressed", hmSizeMode ? "true" : "false");
+          sizeToggle.textContent = hmSizeMode ? "Equal size" : "Size by %";
+        }
+        if (persist) {
+          try {
+            localStorage.setItem("lm_hm_size", hmSizeMode ? "1" : "0");
+          } catch {
+            // ignore storage errors
+          }
+        }
+        applyHeatmapQuery();
+      }
+
+      function groupKeyFor(it) {
+        return String(it?.group ?? "").trim().toLowerCase();
+      }
+
+      function sortItems(list, tokens) {
+        const ranked = list.map((it, idx) => ({ it, idx, score: scoreItem(it, tokens) }));
+        ranked.sort((a, b) => {
+          if (!tokens.length) return a.idx - b.idx;
+          if (b.score !== a.score) return b.score - a.score;
+          return a.idx - b.idx;
+        });
+        return ranked.map((r) => r.it);
+      }
+
+      const savedGroup = (() => {
+        try {
+          return localStorage.getItem("lm_hm_group");
+        } catch {
+          return null;
+        }
+      })();
+      if (savedGroup && hmAllowedGroups.has(savedGroup)) setHmGroup(savedGroup, false);
+
+      const savedSize = (() => {
+        try {
+          return localStorage.getItem("lm_hm_size");
+        } catch {
+          return null;
+        }
+      })();
+      if (savedSize === "1") setHmSizeMode(true, false);
+
+      for (const chip of hmFilterButtons) {
+        chip.addEventListener("click", () => {
+          const group = chip.dataset.group;
+          if (group) setHmGroup(group);
+        });
+      }
+      if (sizeToggle) {
+        sizeToggle.addEventListener("click", () => {
+          setHmSizeMode(!hmSizeMode);
+        });
+      }
 
       function fmtTime(date, timeZone) {
         if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "—";
@@ -1518,10 +2471,149 @@
         }
       }
 
+      function fmtTimeShort(date, timeZone) {
+        if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "—";
+        try {
+          const opts = {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+          };
+          if (timeZone) opts.timeZone = timeZone;
+          return date.toLocaleTimeString("en-US", opts);
+        } catch {
+          return date.toTimeString().slice(0, 5);
+        }
+      }
+
+      function fmtDateShort(iso) {
+        if (!iso) return "—";
+        const d = new Date(iso);
+        if (Number.isNaN(d.getTime())) return "—";
+        return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+      }
+
+      function getZoneParts(timeZone) {
+        const now = new Date();
+        const parts = new Intl.DateTimeFormat("en-US", {
+          timeZone,
+          hour12: false,
+          hour: "2-digit",
+          minute: "2-digit",
+          weekday: "short",
+        }).formatToParts(now);
+        const get = (t) => parts.find((p) => p.type === t)?.value;
+        const hour = Number(get("hour"));
+        const minute = Number(get("minute"));
+        const weekday = get("weekday") || "";
+        if (!Number.isFinite(hour) || !Number.isFinite(minute)) return null;
+        return { minutes: hour * 60 + minute, weekday };
+      }
+
+      function sessionState(nowMin, weekday, schedule) {
+        if (nowMin == null) return "closed";
+        if (weekday === "Sat" || weekday === "Sun") return "closed";
+
+        const {
+          open,
+          close,
+          preStart,
+          preEnd,
+          lunchStart,
+          lunchEnd,
+          afterStart,
+          afterEnd,
+        } = schedule;
+
+        if (Number.isFinite(lunchStart) && Number.isFinite(lunchEnd)) {
+          if (nowMin >= lunchStart && nowMin < lunchEnd) return "lunch";
+        }
+        if (nowMin >= open && nowMin < close) return "open";
+        if (Number.isFinite(preStart) && Number.isFinite(preEnd)) {
+          if (nowMin >= preStart && nowMin < preEnd) return "pre";
+        }
+        if (Number.isFinite(afterStart) && Number.isFinite(afterEnd)) {
+          if (nowMin >= afterStart && nowMin < afterEnd) return "after";
+        }
+        return "closed";
+      }
+
+      function updateSessions() {
+        const sessions = [
+          {
+            tz: "Asia/Tokyo",
+            schedule: {
+              preStart: 8 * 60,
+              preEnd: 9 * 60,
+              open: 9 * 60,
+              lunchStart: 11 * 60 + 30,
+              lunchEnd: 12 * 60 + 30,
+              close: 15 * 60,
+              afterStart: 15 * 60,
+              afterEnd: 16 * 60,
+            },
+            timeEl: sessionAsia,
+            stateEl: sessionAsiaState,
+            pillEl: sessionAsiaPill,
+          },
+          {
+            tz: "Europe/London",
+            schedule: {
+              preStart: 7 * 60,
+              preEnd: 8 * 60,
+              open: 8 * 60,
+              close: 16 * 60 + 30,
+              afterStart: 16 * 60 + 30,
+              afterEnd: 17 * 60 + 30,
+            },
+            timeEl: sessionEurope,
+            stateEl: sessionEuropeState,
+            pillEl: sessionEuropePill,
+          },
+          {
+            tz: "America/New_York",
+            schedule: {
+              preStart: 4 * 60,
+              preEnd: 9 * 60 + 30,
+              open: 9 * 60 + 30,
+              close: 16 * 60,
+              afterStart: 16 * 60,
+              afterEnd: 20 * 60,
+            },
+            timeEl: sessionUs,
+            stateEl: sessionUsState,
+            pillEl: sessionUsPill,
+          },
+        ];
+
+        const now = new Date();
+        for (const s of sessions) {
+          const parts = getZoneParts(s.tz);
+          const minutes = parts?.minutes ?? null;
+          const weekday = parts?.weekday ?? "";
+          const state = sessionState(minutes, weekday, s.schedule);
+          if (s.timeEl) s.timeEl.textContent = fmtTimeShort(now, s.tz);
+          if (s.stateEl) s.stateEl.textContent = state.toUpperCase();
+          if (s.pillEl) s.pillEl.setAttribute("data-state", state);
+        }
+      }
+
+      function updateClockRing(now) {
+        if (!(clockRing instanceof HTMLElement) || !(clockLabel instanceof HTMLElement)) return;
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const total = hours * 60 + minutes;
+        const angle = Math.round((total / 1440) * 360);
+        clockRing.style.background = `conic-gradient(rgba(86, 255, 168, .9) 0deg ${angle}deg, rgba(86, 255, 168, .12) ${angle}deg 360deg)`;
+        clockLabel.textContent = `Local ${fmtTimeShort(now)}`;
+      }
+
       function updateClocks() {
         const now = new Date();
         if (termUtc) termUtc.textContent = fmtTime(now, "UTC");
         if (termLocal) termLocal.textContent = fmtTime(now);
+        updateSessions();
+        updateClockRing(now);
       }
 
       function updateTermSync(ts) {
@@ -1584,6 +2676,10 @@
         return px.toFixed(2);
       }
 
+      function clampNum(n, min, max) {
+        return Math.min(max, Math.max(min, n));
+      }
+
       function updateSymbolBindings(items) {
         if (!Array.isArray(items) || !items.length) return;
         const map = new Map();
@@ -1630,6 +2726,8 @@
           if (sigDisp) sigDisp.textContent = "—";
           if (sigTopUp) sigTopUp.textContent = "—";
           if (sigTopDn) sigTopDn.textContent = "—";
+          if (riskValue) riskValue.textContent = "—";
+          if (riskNote) riskNote.textContent = "No data";
           return;
         }
 
@@ -1660,7 +2758,26 @@
         if (sigDisp) sigDisp.textContent = `${stdev.toFixed(2)}%`;
         if (sigTopUp) sigTopUp.textContent = topUp ? `${String(topUp.sym ?? "").toUpperCase()} ${fmtPct(topUp.pct)}` : "—";
         if (sigTopDn) sigTopDn.textContent = topDn ? `${String(topDn.sym ?? "").toUpperCase()} ${fmtPct(topDn.pct)}` : "—";
+
+        const breadthBias = Math.abs(breadth - 50) / 50;
+        const volNorm = clampNum(stdev / 2.5, 0, 1);
+        const risk = clampNum(volNorm * 0.65 + breadthBias * 0.35, 0, 1);
+        const riskPct = Math.round(risk * 100);
+        const angle = Math.round(risk * 360);
+        const riskColor =
+          risk >= 0.66 ? "rgba(255, 98, 122, .9)" :
+          risk >= 0.33 ? "rgba(255, 198, 86, .9)" :
+          "rgba(86, 255, 168, .9)";
+
+        if (riskRing) {
+          riskRing.style.background = `conic-gradient(${riskColor} 0deg ${angle}deg, rgba(86, 255, 168, .12) ${angle}deg 360deg)`;
+        }
+        if (riskValue) riskValue.textContent = `${riskPct}%`;
+        if (riskNote) {
+          riskNote.textContent = risk >= 0.66 ? "Hot" : risk >= 0.33 ? "Active" : "Calm";
+        }
       }
+
 
       function renderMoverList(el, rows) {
         if (!el) return;
@@ -1672,6 +2789,24 @@
           const pctClass = pctDirClass(row.pct);
           return `
             <div class="moverRow">
+              <span class="moverSym">${row.sym}</span>
+              <span class="moverName">${row.name}</span>
+              <span class="moverPct ${pctClass}">${fmtPct(row.pct)}</span>
+            </div>
+          `;
+        }).join("");
+      }
+
+      function renderShockList(el, rows) {
+        if (!el) return;
+        if (!rows.length) {
+          el.innerHTML = "<div class=\"moverRow\"><span class=\"moverSym\">—</span><span class=\"moverName\">No shocks</span><span class=\"moverPct is-flat\">—</span></div>";
+          return;
+        }
+        el.innerHTML = rows.map((row) => {
+          const pctClass = pctDirClass(row.pct);
+          return `
+            <div class="moverRow is-shock ${pctClass}">
               <span class="moverSym">${row.sym}</span>
               <span class="moverName">${row.name}</span>
               <span class="moverPct ${pctClass}">${fmtPct(row.pct)}</span>
@@ -1693,10 +2828,16 @@
         const gainers = [...usable].sort((a, b) => b.pct - a.pct).slice(0, 5);
         const losers = [...usable].sort((a, b) => a.pct - b.pct).slice(0, 5);
         const vol = [...usable].sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct)).slice(0, 5);
+        const shockThreshold = 2;
+        const shocks = [...usable]
+          .filter((it) => Math.abs(it.pct) >= shockThreshold)
+          .sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct))
+          .slice(0, 5);
 
         renderMoverList(gainersList, gainers);
         renderMoverList(losersList, losers);
         renderMoverList(volList, vol);
+        renderShockList(shockList, shocks);
       }
 
       function escapeHtml(value) {
@@ -1785,46 +2926,115 @@
         return score;
       }
 
+      function sizeTile(tile, pct) {
+        if (!hmSizeMode) {
+          tile.style.gridColumnEnd = "";
+          tile.style.gridRowEnd = "";
+          return;
+        }
+        const absPct = Math.abs(pct);
+        let rowSpan = 1;
+        if (Number.isFinite(absPct)) {
+          if (absPct >= 5) rowSpan = 3;
+          else if (absPct >= 2.5) rowSpan = 2;
+        }
+        tile.style.gridColumnEnd = "span 1";
+        tile.style.gridRowEnd = `span ${rowSpan}`;
+      }
+
+      function buildTile(it) {
+        const pct = Number(it.deltaPct);
+        const close = Number(it.close);
+
+        const tile = document.createElement("button");
+        tile.type = "button";
+        tile.className = `hmTile ${bandClass(pct)}`;
+        tile.setAttribute("role", "listitem");
+        tile.title = it.ok === false ? `Failed: ${it.error ?? "unknown"}` : "Open on Stooq";
+
+        const symLabel = String(it.sym ?? "").toUpperCase();
+        const group = it.group ? String(it.group) : "";
+        const groupKey = group ? group.toLowerCase() : "";
+        if (groupKey) tile.dataset.group = groupKey;
+        const dateText = fmtDateShort(it.date);
+        const prevClose = Number(it.prevClose);
+        const prevText = Number.isFinite(prevClose) ? formatValueBySym(it.sym, prevClose) : "—";
+        const tipText = it.ok === false ? "No data" : `Close ${dateText} · Prev ${prevText}`;
+
+        sizeTile(tile, pct);
+
+        tile.innerHTML = `
+          <div class="hmSym">${symLabel}</div>
+          <div class="hmName">${it.name ?? symLabel}</div>
+          ${group ? `<div class="hmTag">${group}</div>` : ""}
+          <div class="hmNums">
+            <div class="hmPct ${it.ok === false ? "" : pctDirClass(pct)}">${it.ok === false ? "—" : fmtPct(pct)}</div>
+            <div class="hmPx">${it.ok === false ? "" : formatValueBySym(it.sym, close)}</div>
+          </div>
+          <div class="hmTip">${tipText}</div>
+        `;
+
+        tile.addEventListener("click", () => {
+          const sym = encodeURIComponent(it.sym ?? "");
+          if (!sym) return;
+          window.open(`https://stooq.com/q/?s=${sym}`, "_blank", "noopener,noreferrer");
+        });
+
+        return tile;
+      }
+
       /**
        * Render heatmap tiles.
        * @param {Array<any>} items
        * @param {string|null} generatedAt
        */
       function renderTiles(items, generatedAt) {
+        grid.classList.remove("is-grouped");
+        updateSizeModeClasses();
         grid.innerHTML = "";
 
         for (const it of items) {
-          const pct = Number(it.deltaPct);
-          const close = Number(it.close);
+          grid.appendChild(buildTile(it));
+        }
 
-          const tile = document.createElement("button");
-          tile.type = "button";
-          tile.className = `hmTile ${bandClass(pct)}`;
-          tile.setAttribute("role", "listitem");
-          tile.title = it.ok === false ? `Failed: ${it.error ?? "unknown"}` : "Open on Stooq";
+        const ts = generatedAt ? new Date(generatedAt) : null;
+        stamp.textContent = ts && !Number.isNaN(ts.getTime())
+          ? `Updated: ${ts.toLocaleString()}`
+          : "Updated: —";
+      }
 
-          const symLabel = String(it.sym ?? "").toUpperCase();
-          const group = it.group ? String(it.group) : "";
-          const groupKey = group ? group.toLowerCase() : "";
-          if (groupKey) tile.dataset.group = groupKey;
+      /**
+       * Render grouped heatmap tiles.
+       * @param {Array<{key:string,label:string,items:Array<any>}>} groups
+       * @param {string|null} generatedAt
+       */
+      function renderGroupedTiles(groups, generatedAt) {
+        grid.classList.add("is-grouped");
+        updateSizeModeClasses();
+        grid.innerHTML = "";
 
-          tile.innerHTML = `
-            <div class="hmSym">${symLabel}</div>
-            <div class="hmName">${it.name ?? symLabel}</div>
-            ${group ? `<div class="hmTag">${group}</div>` : ""}
-            <div class="hmNums">
-              <div class="hmPct ${it.ok === false ? "" : pctDirClass(pct)}">${it.ok === false ? "—" : fmtPct(pct)}</div>
-              <div class="hmPx">${it.ok === false ? "" : formatValueBySym(it.sym, close)}</div>
+        for (const group of groups) {
+          const items = Array.isArray(group.items) ? group.items : [];
+          if (!items.length) continue;
+
+          const card = document.createElement("div");
+          card.className = "hmGroup";
+          card.innerHTML = `
+            <div class="hmGroupHead">
+              <div class="hmGroupTitle">${group.label}</div>
+              <div class="hmGroupCount">${items.length} items</div>
             </div>
+            <div class="hmGroupGrid${hmSizeMode ? " is-sized" : ""}"></div>
           `;
 
-          tile.addEventListener("click", () => {
-            const sym = encodeURIComponent(it.sym ?? "");
-            if (!sym) return;
-            window.open(`https://stooq.com/q/?s=${sym}`, "_blank", "noopener,noreferrer");
-          });
+          const inner = card.querySelector(".hmGroupGrid");
+          if (inner) {
+            for (const it of items) {
+              inner.appendChild(buildTile(it));
+            }
+          }
 
-          grid.appendChild(tile);
+          grid.appendChild(card);
         }
 
         const ts = generatedAt ? new Date(generatedAt) : null;
@@ -1847,21 +3057,26 @@
           return;
         }
 
-        // Stable sort: use original index as tie-breaker.
-        const ranked = base.map((it, idx) => ({ it, idx, score: scoreItem(it, tokens) }));
+        const filtered = hmGroup === "all"
+          ? base
+          : base.filter((it) => groupKeyFor(it) === hmGroup);
 
-        ranked.sort((a, b) => {
-          // If no query, keep original order.
-          if (!tokens.length) return a.idx - b.idx;
+        if (!filtered.length) {
+          renderTiles([], hmState.generatedAt);
+          return;
+        }
 
-          // Higher score first.
-          if (b.score !== a.score) return b.score - a.score;
+        if (hmGroup === "all") {
+          const groups = hmGroupOrder.map((g) => ({
+            key: g.key,
+            label: g.label,
+            items: sortItems(filtered.filter((it) => groupKeyFor(it) === g.key), tokens),
+          }));
+          renderGroupedTiles(groups, hmState.generatedAt);
+          return;
+        }
 
-          // Tie-breaker: original order.
-          return a.idx - b.idx;
-        });
-
-        renderTiles(ranked.map(r => r.it), hmState.generatedAt);
+        renderTiles(sortItems(filtered, tokens), hmState.generatedAt);
       }
 
       /**

@@ -61,7 +61,10 @@ exitUnlessNYTimeMatches([[10, 0], [16, 30]], 45);
 
 
 const WATCH = [
+  { sym: "2yusy.b", name: "US 2Y Yield" },
+  { sym: "5yusy.b", name: "US 5Y Yield" },
   { sym: "10yusy.b", name: "US 10Y Yield" },
+  { sym: "30yusy.b", name: "US 30Y Yield" },
   { sym: "usdeur", name: "USD/EUR" },
   { sym: "cb.f", name: "Brent Oil" },
   { sym: "^spx", name: "S&P 500" },
@@ -114,9 +117,21 @@ const HEATMAP = [
   // “Stuff” people argue about
   { sym: "xauusd", name: "Gold", group: "Macro" },
   { sym: "cb.f", name: "Brent Oil", group: "Macro" },
+  { sym: "cl.f", name: "WTI Crude", group: "Macro" },
+  { sym: "gc.f", name: "Gold (Fut)", group: "Macro" },
+  { sym: "2yusy.b", name: "US 2Y Yield", group: "Macro" },
+  { sym: "5yusy.b", name: "US 5Y Yield", group: "Macro" },
   { sym: "10yusy.b", name: "US 10Y Yield", group: "Macro" },
+  { sym: "30yusy.b", name: "US 30Y Yield", group: "Macro" },
   { sym: "usdeur", name: "USD/EUR", group: "Macro" },
-  { sym: "btc.v", name: "Bitcoin", group: "Macro" },
+  { sym: "usdjpy", name: "USD/JPY", group: "Macro" },
+  { sym: "usdcny", name: "USD/CNY", group: "Macro" },
+  { sym: "usdtwd", name: "USD/TWD", group: "Macro" },
+  { sym: "btc.v", name: "Bitcoin", group: "Crypto" },
+  { sym: "eth.v", name: "Ethereum", group: "Crypto" },
+  { sym: "sol.v", name: "Solana", group: "Crypto" },
+  { sym: "xrp.v", name: "XRP", group: "Crypto" },
+  { sym: "doge.v", name: "Dogecoin", group: "Crypto" },
   { sym: "hg.f", name: "Copper", group: "Macro" },
   { sym: "si.f", name: "Silver", group: "Macro" },
   { sym: "ung.us", name: "Nat Gas", group: "Macro" },
@@ -126,6 +141,9 @@ const HEATMAP = [
 // --- Request pacing + retry policy (Stooq is friendly until it isn't) ---
 const REQUEST_GAP_MS = 800;       // baseline delay between symbols
 const REQUEST_JITTER_MS = 400;    // random extra delay to look less bot-like
+const BATCH_SIZE = 10;            // symbols per batch (lower = gentler on Stooq)
+const BATCH_PAUSE_MS = 7_000;     // pause between batches
+const BATCH_JITTER_MS = 2_000;    // random extra pause between batches
 
 const RETRY_COUNT = 4;            // retries after the initial attempt
 const BACKOFF_BASE_MS = 800;      // exponential backoff base
@@ -454,18 +472,45 @@ async function fetchOne(w, fallbackMap) {
   }
 }
 
+/**
+ * Process a watchlist in small batches with delays between each request and batch.
+ * @param {string} label
+ * @param {Array<{sym:string,name:string,group?:string}>} list
+ * @param {Map<string,{date:(string|null),close:number,prevDate:(string|null),prevClose:(number|null)}>} fallbackMap
+ * @returns {Promise<Array<any>>}
+ */
+async function fetchInBatches(label, list, fallbackMap) {
+  const out = [];
+  const total = list.length;
+
+  for (let i = 0; i < total; i += BATCH_SIZE) {
+    const batch = list.slice(i, i + BATCH_SIZE);
+    const batchIndex = Math.floor(i / BATCH_SIZE) + 1;
+    const batchCount = Math.ceil(total / BATCH_SIZE);
+
+    console.log(`[${label}] batch ${batchIndex}/${batchCount} (${batch.length} symbols)`);
+
+    for (const w of batch) {
+      const item = await fetchOne(w, fallbackMap);
+      out.push(item);
+      await sleepJitter(REQUEST_GAP_MS, REQUEST_JITTER_MS);
+    }
+
+    if (i + BATCH_SIZE < total) {
+      await sleepJitter(BATCH_PAUSE_MS, BATCH_JITTER_MS);
+    }
+  }
+
+  return out;
+}
+
 async function main() {
   const [priorTapeMap, priorHeatmapMap] = await Promise.all([
     readExistingItemsMap("tape.json"),
     readExistingItemsMap("heatmap.json"),
   ]);
 
-  const results = [];
-  for (const w of WATCH) {
-    const item = await fetchOne(w, priorTapeMap);
-    results.push(item);
-    await sleepJitter(REQUEST_GAP_MS, REQUEST_JITTER_MS);
-  }
+  const results = await fetchInBatches("tape", WATCH, priorTapeMap);
 
   const now = new Date().toISOString();
 
@@ -479,12 +524,7 @@ async function main() {
   console.log(`Wrote tape.json with ${results.length} items @ ${now}`);
 
   // Build heatmap payload (bigger watchlist) from the same Stooq source
-  const heatmapItems = [];
-  for (const w of HEATMAP) {
-    const item = await fetchOne(w, priorHeatmapMap);
-    heatmapItems.push(item);
-    await sleepJitter(REQUEST_GAP_MS, REQUEST_JITTER_MS);
-  }
+  const heatmapItems = await fetchInBatches("heatmap", HEATMAP, priorHeatmapMap);
 
   const heatmapPayload = {
     generatedAt: now,
