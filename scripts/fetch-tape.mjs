@@ -287,6 +287,73 @@ function pctChange(close, prevClose) {
 }
 
 /**
+ * Read prior output to provide a fallback prev close when daily CSV is missing it.
+ * @param {string} path
+ * @returns {Promise<Map<string,{date:(string|null),close:number,prevDate:(string|null),prevClose:(number|null)}>>}
+ */
+async function readExistingItemsMap(path) {
+  try {
+    const text = await fs.readFile(path, "utf8");
+    const json = JSON.parse(text);
+    const items = Array.isArray(json?.items) ? json.items : [];
+    const map = new Map();
+
+    for (const item of items) {
+      if (!item || typeof item.sym !== "string") continue;
+      if (item.ok !== true) continue;
+
+      const close = Number(item.close);
+      if (!Number.isFinite(close)) continue;
+
+      const prevClose = Number(item.prevClose);
+      map.set(item.sym, {
+        date: typeof item.date === "string" ? item.date : null,
+        close,
+        prevDate: typeof item.prevDate === "string" ? item.prevDate : null,
+        prevClose: Number.isFinite(prevClose) ? prevClose : null,
+      });
+    }
+
+    return map;
+  } catch {
+    return new Map();
+  }
+}
+
+/**
+ * Fill missing prevClose using prior run data if possible.
+ * @param {{date:string,close:number,prevDate:(string|null),prevClose:(number|null),deltaPct:number}} cur
+ * @param {{date:(string|null),close:number,prevDate:(string|null),prevClose:(number|null)}|undefined} fallback
+ * @returns {{date:string,close:number,prevDate:(string|null),prevClose:(number|null),deltaPct:number}}
+ */
+function applyPrevFallback(cur, fallback) {
+  const prevOk = Number.isFinite(cur.prevClose) && cur.prevClose !== 0;
+  if (prevOk || !fallback) return cur;
+
+  const fbDate = typeof fallback.date === "string" ? fallback.date : null;
+  const fbClose = Number(fallback.close);
+  const fbCloseOk = Number.isFinite(fbClose) && fbClose !== 0;
+
+  const fbPrevDate = typeof fallback.prevDate === "string" ? fallback.prevDate : null;
+  const fbPrevClose = Number(fallback.prevClose);
+  const fbPrevCloseOk = Number.isFinite(fbPrevClose) && fbPrevClose !== 0;
+
+  if (fbDate && fbDate !== cur.date && fbCloseOk) {
+    cur.prevDate = fbDate;
+    cur.prevClose = fbClose;
+  } else if (fbPrevCloseOk) {
+    cur.prevDate = fbPrevDate;
+    cur.prevClose = fbPrevClose;
+  }
+
+  if (Number.isFinite(cur.prevClose) && cur.prevClose !== 0) {
+    cur.deltaPct = pctChange(cur.close, cur.prevClose);
+  }
+
+  return cur;
+}
+
+/**
  * Fetch a single quote row from Stooq (works even when daily history is missing).
  * @param {string} sym
  * @returns {Promise<{date:string, close:number}>}
@@ -320,9 +387,10 @@ async function fetchStooqQuote(sym) {
 /**
  * Fetch daily history (fallback to quote) and compute last close + prev close + pct.
  * @param {{sym:string,name:string,group?:string}} w
+ * @param {Map<string,{date:(string|null),close:number,prevDate:(string|null),prevClose:(number|null)}>} fallbackMap
  * @returns {Promise<{sym:string,name:string,group:(string|null),date?:string,close?:number,prevDate?:(string|null),prevClose?:(number|null),deltaPct?:number,ok:boolean,error?:string}>}
  */
-async function fetchOne(w) {
+async function fetchOne(w, fallbackMap) {
   try {
     const csv = await fetchStooqDailyCsv(w.sym);
 
@@ -359,15 +427,20 @@ async function fetchOne(w) {
       deltaPct = 0;
     }
 
+    const withFallback = applyPrevFallback(
+      { date, close, prevDate, prevClose, deltaPct },
+      fallbackMap?.get(w.sym)
+    );
+
     return {
       sym: w.sym,
       name: w.name,
       group: w.group ?? null,
-      date,
-      close,
-      prevDate,
-      prevClose,
-      deltaPct,
+      date: withFallback.date,
+      close: withFallback.close,
+      prevDate: withFallback.prevDate,
+      prevClose: withFallback.prevClose,
+      deltaPct: withFallback.deltaPct,
       ok: true,
     };
   } catch (err) {
@@ -382,9 +455,14 @@ async function fetchOne(w) {
 }
 
 async function main() {
+  const [priorTapeMap, priorHeatmapMap] = await Promise.all([
+    readExistingItemsMap("tape.json"),
+    readExistingItemsMap("heatmap.json"),
+  ]);
+
   const results = [];
   for (const w of WATCH) {
-    const item = await fetchOne(w);
+    const item = await fetchOne(w, priorTapeMap);
     results.push(item);
     await sleepJitter(REQUEST_GAP_MS, REQUEST_JITTER_MS);
   }
@@ -403,7 +481,7 @@ async function main() {
   // Build heatmap payload (bigger watchlist) from the same Stooq source
   const heatmapItems = [];
   for (const w of HEATMAP) {
-    const item = await fetchOne(w);
+    const item = await fetchOne(w, priorHeatmapMap);
     heatmapItems.push(item);
     await sleepJitter(REQUEST_GAP_MS, REQUEST_JITTER_MS);
   }

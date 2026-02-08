@@ -7,18 +7,33 @@
   <title>Liberal Markets — Minimal Finance Notes</title>
   <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
   <meta name="description" content="Minimalist finance blog with wireframe iconography and calm, earthy palette." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css?v=5" />
   <style>
     /* Heatmap: same “wireframe card” vibe, just… colored by reality */
     .hmSection {
       margin-top: 18px;
       padding: 18px;
-      border-radius: 16px;
-      border: 1px solid rgba(0,0,0,.08);
-      background: rgba(255,255,255,.28);
-      box-shadow: 0 10px 24px rgba(0,0,0,.06);
-      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 157, 0, .24);
+      background:
+        linear-gradient(180deg, rgba(10, 10, 10, .92), rgba(5, 5, 5, .94)),
+        radial-gradient(circle at 15% 10%, rgba(255, 157, 0, .08), transparent 45%);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, .45);
+      position: relative;
+      overflow: hidden;
+    }
+    .hmSection::before{
+      content:"";
+      position:absolute;
+      inset: -40% -10%;
+      background:
+        repeating-linear-gradient(0deg, rgba(255, 157, 0, .06) 0 1px, transparent 1px 18px),
+        repeating-linear-gradient(90deg, rgba(255, 157, 0, .05) 0 1px, transparent 1px 22px);
+      opacity: .35;
+      pointer-events: none;
     }
     .hmHead {
       display: flex;
@@ -29,7 +44,7 @@
     }
     .hmKicker {
       font-size: 11px;
-      letter-spacing: .12em;
+      letter-spacing: .24em;
       text-transform: uppercase;
       opacity: .75;
     }
@@ -37,10 +52,13 @@
       margin: 6px 0 6px;
       font-size: 22px;
       line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: .08em;
     }
     .hmSub {
       margin: 0;
       max-width: 70ch;
+      opacity: .8;
     }
     .hmActions {
       display: flex;
@@ -66,56 +84,68 @@
       .hmActions { justify-content: flex-start; }
     }
     .hmTile {
-    position: relative;
-    padding: 12px;
-    border-radius: 14px;
-    border: 1px solid rgba(0,0,0,.10);
-    background: rgba(255,255,255,.35);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
-    cursor: pointer;
-    text-align: left;
-    min-height: 78px;
-    display: grid;
-    gap: 4px;
-    transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+      position: relative;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 157, 0, .18);
+      background: rgba(8, 8, 8, .88);
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 157, 0, .08),
+        inset 0 12px 18px rgba(0, 0, 0, .28);
+      cursor: pointer;
+      text-align: left;
+      min-height: 78px;
+      display: grid;
+      gap: 4px;
+      transition: transform .12s ease, filter .12s ease, box-shadow .12s ease, border-color .12s ease;
     }
 
     /* Group accent bar (set via data-group in JS) */
-    .hmTile::before { background: transparent; }
+    .hmTile::before {
+      content:"";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--hmGroupBar, transparent);
+      opacity: .8;
+    }
 
     .hmTile:hover {
-    transform: translateY(-3px) scale(1.01);
-    filter: contrast(1.06) saturate(1.05);
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.35),
-        0 14px 28px rgba(0,0,0,.10);
+      transform: translateY(-2px);
+      filter: contrast(1.08) saturate(1.1);
+      border-color: rgba(255, 157, 0, .35);
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 157, 0, .12),
+        0 14px 28px rgba(0,0,0,.45);
     }
 
     .hmTile:active { transform: translateY(-1px) scale(1.005); }
 
     .hmTile:focus-visible {
-    outline: 2px solid rgba(52, 78, 65, .35);
-    outline-offset: 2px;
+      outline: 2px solid rgba(255, 157, 0, .55);
+      outline-offset: 2px;
     }
 
     /* Group accent colors */
-    .hmTile[data-group="index"]  { --hmGroupBar: rgba(52, 78, 65, .32); }
-    .hmTile[data-group="mega"]   { --hmGroupBar: rgba(52, 78, 65, .22); }
-    .hmTile[data-group="large"]  { --hmGroupBar: rgba(52, 78, 65, .20); }
-    .hmTile[data-group="sector"] { --hmGroupBar: rgba(52, 78, 65, .26); }
-    .hmTile[data-group="macro"]  { --hmGroupBar: rgba(52, 78, 65, .18); }
+    .hmTile[data-group="index"]  { --hmGroupBar: rgba(255, 157, 0, .55); }
+    .hmTile[data-group="mega"]   { --hmGroupBar: rgba(255, 157, 0, .38); }
+    .hmTile[data-group="large"]  { --hmGroupBar: rgba(255, 157, 0, .30); }
+    .hmTile[data-group="sector"] { --hmGroupBar: rgba(255, 157, 0, .46); }
+    .hmTile[data-group="macro"]  { --hmGroupBar: rgba(255, 157, 0, .26); }
 
     .hmSym {
-    font-size: 10.5px;
-    letter-spacing: .10em;
-    text-transform: uppercase;
-    opacity: .65;
+      font-size: 10.5px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .7;
     }
     .hmName {
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 650;
-    opacity: .98;
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 600;
+      opacity: .98;
     }
     .hmNums {
       display: flex;
@@ -126,20 +156,20 @@
     }
     .hmPct {
       font-variant-numeric: tabular-nums;
-      font-weight: 750;
+      font-weight: 700;
       font-size: 13px;
-      letter-spacing: .01em;
+      letter-spacing: .02em;
     }
-    .hmPct.is-up { color: rgba(88, 129, 87, .95); }
-    .hmPct.is-dn { color: rgba(180, 65, 65, .95); }
-    .hmPct.is-flat { color: rgba(0, 0, 0, .60); }
+    .hmPct.is-up { color: rgba(255, 157, 0, .98); }
+    .hmPct.is-dn { color: rgba(255, 98, 122, .95); }
+    .hmPct.is-flat { color: rgba(214, 234, 224, .70); }
     .hmPx {
-    font-variant-numeric: tabular-nums;
-    opacity: .78;
-    font-size: 11.5px;
-    letter-spacing: .01em;
-    padding-left: 10px;
-    position: relative;
+      font-variant-numeric: tabular-nums;
+      opacity: .78;
+      font-size: 11.5px;
+      letter-spacing: .01em;
+      padding-left: 10px;
+      position: relative;
     }
     .hmPx::before {
     content: "·";
@@ -152,22 +182,24 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      font-size: 11px;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
       opacity: .75;
       padding: 2px 8px;
       border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.10);
-      background: rgba(255,255,255,.25);
+      border: 1px solid rgba(255, 157, 0, .24);
+      background: rgba(6, 6, 6, .7);
     }
 
     /* Color bands (subtle, not Vegas). */
-    .hmDn3 { background: rgba(180, 65, 65, .36); }
-    .hmDn2 { background: rgba(180, 65, 65, .26); }
-    .hmDn1 { background: rgba(180, 65, 65, .16); }
-    .hmFlat { background: rgba(0, 0, 0, .05); }
-    .hmUp1 { background: rgba(88, 129, 87, .16); }
-    .hmUp2 { background: rgba(88, 129, 87, .26); }
-    .hmUp3 { background: rgba(88, 129, 87, .36); }
+    .hmDn3 { background: rgba(255, 98, 122, .26); }
+    .hmDn2 { background: rgba(255, 98, 122, .18); }
+    .hmDn1 { background: rgba(255, 98, 122, .12); }
+    .hmFlat { background: rgba(10, 10, 10, .45); }
+    .hmUp1 { background: rgba(255, 157, 0, .12); }
+    .hmUp2 { background: rgba(255, 157, 0, .18); }
+    .hmUp3 { background: rgba(255, 157, 0, .26); }
 
     .hmLegend {
       margin-top: 12px;
@@ -181,15 +213,331 @@
     .hmSwatch {
       width: 14px;
       height: 10px;
-      border-radius: 4px;
-      border: 1px solid rgba(0,0,0,.10);
+      border-radius: 3px;
+      border: 1px solid rgba(255, 157, 0, .18);
       display: inline-block;
       vertical-align: middle;
+    }
+
+    .terminalHead {
+      margin-top: 10px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 157, 0, .28);
+      background: rgba(8, 8, 8, .92);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, .5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .terminalHead::before {
+      content: "";
+      position: absolute;
+      inset: -40% -10%;
+      background:
+        repeating-linear-gradient(0deg, rgba(255, 157, 0, .05) 0 1px, transparent 1px 18px),
+        repeating-linear-gradient(90deg, rgba(255, 157, 0, .04) 0 1px, transparent 1px 22px);
+      opacity: .35;
+      pointer-events: none;
+    }
+    .terminalTitle {
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+    }
+    .terminalMeta {
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 10.5px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .78;
+    }
+    .statusDot {
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 157, 0, .6);
+      background: rgba(255, 157, 0, .4);
+      box-shadow: 0 0 12px rgba(255, 157, 0, .55);
+      display: inline-block;
+    }
+    .terminalRight {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      position: relative;
+      z-index: 1;
+    }
+    .kbdRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+    .kbdKey {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 5px 7px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 157, 0, .28);
+      background: rgba(7, 7, 7, .9);
+    }
+    .terminalHint {
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+
+    .tickerStrip {
+      margin-top: 12px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 157, 0, .24);
+      background: rgba(7, 7, 7, .9);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      overflow: hidden;
+    }
+    .tickerLabel {
+      font-size: 10px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: rgba(255, 157, 0, .9);
+    }
+    .tickerTrack {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      flex: 1;
+      padding-bottom: 2px;
+    }
+    .tickerTrack::-webkit-scrollbar { display: none; }
+    .tickerItem {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 157, 0, .2);
+      background: rgba(8, 8, 8, .85);
+      white-space: nowrap;
+    }
+    .tickerSym {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .75;
+    }
+    .tickerPx {
+      font-variant-numeric: tabular-nums;
+      font-size: 12px;
+    }
+    .tickerChg {
+      font-variant-numeric: tabular-nums;
+      font-size: 11px;
+    }
+    .tickerChg.is-up { color: rgba(255, 157, 0, .98); }
+    .tickerChg.is-dn { color: rgba(255, 98, 122, .95); }
+    .tickerChg.is-flat { color: rgba(214, 234, 224, .7); }
+
+    .signalGrid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .signalCard {
+      border-radius: 10px;
+      border: 1px solid rgba(255, 157, 0, .22);
+      background: rgba(8, 8, 8, .9);
+      padding: 10px 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .signalCard::after{
+      content:"";
+      position:absolute;
+      left: 10px;
+      right: 10px;
+      top: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255, 157, 0, .85), rgba(255, 184, 77, .6), transparent);
+      opacity: .8;
+    }
+    .signalLabel {
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+    .signalValue {
+      margin-top: 8px;
+      font-size: 18px;
+      letter-spacing: .06em;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+    .signalMeta {
+      margin-top: 6px;
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .65;
+    }
+    .signalList {
+      margin-top: 8px;
+      display: grid;
+      gap: 6px;
+    }
+    .signalRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 11px;
+    }
+    .signalKey {
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+    .signalVal {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .terminalTables {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .moverGrid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .moverList {
+      display: grid;
+      gap: 6px;
+    }
+    .moverRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 11px;
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(255, 157, 0, .18);
+    }
+    .moverRow:last-child { border-bottom: 0; }
+    .moverSym {
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .75;
+    }
+    .moverName {
+      flex: 1;
+      margin-left: 8px;
+      opacity: .7;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .moverPct {
+      font-variant-numeric: tabular-nums;
+    }
+    .moverPct.is-up { color: rgba(255, 157, 0, .98); }
+    .moverPct.is-dn { color: rgba(255, 98, 122, .95); }
+    .moverPct.is-flat { color: rgba(214, 234, 224, .7); }
+    .termTable {
+      border-radius: 10px;
+      border: 1px solid rgba(255, 157, 0, .22);
+      background: rgba(8, 8, 8, .92);
+      padding: 10px 12px;
+    }
+    .termTableHead {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(255, 157, 0, .28);
+      margin-bottom: 8px;
+    }
+    .termTableTitle {
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .termTableHint {
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+    .gridTable {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    .gridTable th,
+    .gridTable td {
+      padding: 6px 6px;
+      border-bottom: 1px dashed rgba(255, 157, 0, .18);
+    }
+    .gridTable th {
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .7;
+      font-size: 10px;
+    }
+    .gridTable tbody tr:hover {
+      background: rgba(255, 157, 0, .06);
+    }
+    .cellSym {
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .cellPx,
+    .cellChg {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .cellChg.is-up { color: rgba(255, 157, 0, .98); }
+    .cellChg.is-dn { color: rgba(255, 98, 122, .95); }
+    .cellChg.is-flat { color: rgba(214, 234, 224, .7); }
+
+    @media (max-width: 1100px) {
+      .signalGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .terminalTables { grid-template-columns: 1fr; }
+      .moverGrid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .terminalHead { flex-direction: column; align-items: flex-start; }
+      .terminalRight { align-items: flex-start; }
+      .kbdRow { justify-content: flex-start; }
+      .signalGrid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
-<body>
+<body class="markets">
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="topbar">
@@ -206,20 +554,7 @@
       </div>
     </div>
 
-    <nav class="nav">
-      <button class="chip" data-nav="all" type="button" aria-pressed="true">
-        <span class="chipDot" aria-hidden="true"></span> Home
-      </button>
-      <button class="chip" data-nav="trumptracker" type="button" aria-pressed="false">
-        <span class="chipDot" aria-hidden="true"></span> Trump Tracker
-      </button>
-      <button class="chip is-active" data-nav="markets" type="button" aria-pressed="false">
-        <span class="chipDot" aria-hidden="true"></span> Markets
-      </button>
-      <button class="chip" data-nav="model" type="button" aria-pressed="false">
-        <span class="chipDot" aria-hidden="true"></span> Model
-      </button>
-    </nav>
+    <!-- nav removed for terminal vibe -->
 
     <div class="actions">
       <label class="search" aria-label="Search posts">
@@ -237,111 +572,413 @@
   </header>
 
   <main id="main" class="wrap">
-    <section class="hero">
-      <div class="heroLeft">
-        <div class="heroKicker">
-          <span class="pulse" aria-hidden="true"></span>
-          <span id="lastSync">Sync: —</span>
-        </div>
-
-        <h1 class="heroTitle">
-          The right place to think about economics
-          <span class="ghost">without the spin.</span>
-        </h1>
-
-        <p class="heroBody">
-          Short memos, charts, and sanity checks. Built like a blueprint:
-          light ink, clean grid, wireframe iconography.
-        </p>
-
-        <div class="heroMeta">
-          <div class="stat">
-            <div class="statIcon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M192 160L192 144C192 99.8 278 64 384 64C490 64 576 99.8 576 144L576 160C576 190.6 534.7 217.2 474 230.7C471.6 227.9 469.1 225.2 466.6 222.7C451.1 207.4 431.1 195.8 410.2 187.2C368.3 169.7 313.7 160.1 256 160.1C234.1 160.1 212.7 161.5 192.2 164.2C192 162.9 192 161.5 192 160.1zM496 417L496 370.8C511.1 366.9 525.3 362.3 538.2 356.9C551.4 351.4 564.3 344.7 576 336.6L576 352C576 378.8 544.5 402.5 496 417zM496 321L496 288C496 283.5 495.6 279.2 495 275C510.5 271.1 525 266.4 538.2 260.8C551.4 255.2 564.3 248.6 576 240.5L576 255.9C576 282.7 544.5 306.4 496 320.9zM64 304L64 288C64 243.8 150 208 256 208C362 208 448 243.8 448 288L448 304C448 348.2 362 384 256 384C150 384 64 348.2 64 304zM448 400C448 444.2 362 480 256 480C150 480 64 444.2 64 400L64 384.6C75.6 392.7 88.5 399.3 101.8 404.9C143.7 422.4 198.3 432 256 432C313.7 432 368.3 422.3 410.2 404.9C423.4 399.4 436.3 392.7 448 384.6L448 400zM448 480.6L448 496C448 540.2 362 576 256 576C150 576 64 540.2 64 496L64 480.6C75.6 488.7 88.5 495.3 101.8 500.9C143.7 518.4 198.3 528 256 528C313.7 528 368.3 518.3 410.2 500.9C423.4 495.4 436.3 488.7 448 480.6z"/></svg>
-            </div>
-            <div class="statText">
-              <div class="statLabel" id="cpiLabel">CPI (Index)</div>
-              <div class="statValue" id="cpiVal">—</div>
-            </div>
-          </div>
-
-          <div class="stat">
-            <div class="statIcon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 496L128 320C92.7 320 64 291.3 64 256C64 39.5 576 39.5 576 256C576 291.3 547.3 320 512 320L512 496C512 522.5 490.5 544 464 544L176 544C149.5 544 128 522.5 128 496z"/></svg>
-            </div>
-            <div class="statText">
-              <div class="statLabel" id="unrateLabel">U-Rate</div>
-              <div class="statValue" id="unrateVal">—</div>
-            </div>
-          </div>
-
-          <div class="stat">
-            <div class="statIcon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M415.9 344L225 344C227.9 408.5 242.2 467.9 262.5 511.4C273.9 535.9 286.2 553.2 297.6 563.8C308.8 574.3 316.5 576 320.5 576C324.5 576 332.2 574.3 343.4 563.8C354.8 553.2 367.1 535.8 378.5 511.4C398.8 467.9 413.1 408.5 416 344zM224.9 296L415.8 296C413 231.5 398.7 172.1 378.4 128.6C367 104.2 354.7 86.8 343.3 76.2C332.1 65.7 324.4 64 320.4 64C316.4 64 308.7 65.7 297.5 76.2C286.1 86.8 273.8 104.2 262.4 128.6C242.1 172.1 227.8 231.5 224.9 296zM176.9 296C180.4 210.4 202.5 130.9 234.8 78.7C142.7 111.3 74.9 195.2 65.5 296L176.9 296zM65.5 344C74.9 444.8 142.7 528.7 234.8 561.3C202.5 509.1 180.4 429.6 176.9 344L65.5 344zM463.9 344C460.4 429.6 438.3 509.1 406 561.3C498.1 528.6 565.9 444.8 575.3 344L463.9 344zM575.3 296C565.9 195.2 498.1 111.3 406 78.7C438.3 130.9 460.4 210.4 463.9 296L575.3 296z"/></svg>
-            </div>
-            <div class="statText">
-              <div class="statLabel" id="gdpLabel">GDP</div>
-              <div class="statValue" id="gdpVal">—</div>
-            </div>
-          </div>
-
-          <div class="stat">
-            <div class="statIcon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 96C92.7 96 64 124.7 64 160L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 256C576 220.7 547.3 192 512 192L136 192C122.7 192 112 181.3 112 168C112 154.7 122.7 144 136 144L520 144C533.3 144 544 133.3 544 120C544 106.7 533.3 96 520 96L128 96zM480 320C497.7 320 512 334.3 512 352C512 369.7 497.7 384 480 384C462.3 384 448 369.7 448 352C448 334.3 462.3 320 480 320z"/></svg>
-            </div>
-            <div class="statText">
-              <div class="statLabel" id="mincLabel">Median Income</div>
-              <div class="statValue" id="mincVal">—</div>
-            </div>
-          </div>
-
-          <div class="stat">
-            <div class="statIcon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z"/></svg>
-            </div>
-            <div class="statText">
-              <div class="statLabel" id="mhouLabel">Median Home Cost</div>
-              <div class="statValue" id="mhouVal">—</div>
-            </div>
-          </div>
-
-          <div class="stat">
-            <div class="statIcon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M528 320C528 205.1 434.9 112 320 112C205.1 112 112 205.1 112 320C112 434.9 205.1 528 320 528C434.9 528 528 434.9 528 320zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM398.7 448.6C383.7 433 357.6 416 320 416C282.4 416 256.3 433 241.3 448.6C232.1 458.2 216.9 458.5 207.4 449.3C197.9 440.1 197.5 424.9 206.7 415.4C228.8 392.4 266.7 368 320 368C373.3 368 411.2 392.4 433.3 415.4C442.5 425 442.2 440.2 432.6 449.3C423 458.4 407.8 458.2 398.7 448.6zM208 272C208 254.3 222.3 240 240 240C257.7 240 272 254.3 272 272C272 289.7 257.7 304 240 304C222.3 304 208 289.7 208 272zM400 240C417.7 240 432 254.3 432 272C432 289.7 417.7 304 400 304C382.3 304 368 289.7 368 272C368 254.3 382.3 240 400 240z"/></svg>
-            </div>
-            <div class="statText">
-              <div class="statLabel" id="ratioLabel">Housing/Income Ratio</div>
-              <div class="statValue" id="ratioVal">—</div>
-            </div>
-          </div>
-
-
+    <section class="terminalHead" aria-label="Terminal header">
+      <div>
+        <div class="terminalTitle">Markets Terminal</div>
+        <div class="terminalMeta">
+          <span class="statusDot" aria-hidden="true"></span>
+          <span>Session: Global</span>
+          <span>UTC <span id="termUtc">—</span></span>
+          <span>Local <span id="termLocal">—</span></span>
+          <span>Sync <span id="termSync">—</span></span>
         </div>
       </div>
-
-      <aside class="heroRight" aria-label="Mini market panel">
-        <div class="panelHead">
-          <div class="panelTitle">Tape</div>
-          <div class="panelHint">Open/Close Return</div>
+      <div class="terminalRight">
+        <div class="kbdRow" aria-label="Terminal shortcuts">
+          <span class="kbdKey">F1 Index</span>
+          <span class="kbdKey">F2 Mega</span>
+          <span class="kbdKey">F3 Large</span>
+          <span class="kbdKey">F4 Sector</span>
+          <span class="kbdKey">F5 Macro</span>
+          <span class="kbdKey">F6 Reset</span>
         </div>
+        <div class="terminalHint">Cmd + K to filter</div>
+      </div>
+    </section>
 
-        <ul class="tape" id="tape" role="list"></ul>
-
-        <div class="panelFoot">
-          <div class="note">
-            <span class="noteIcon" aria-hidden="true">
-              <!-- wireframe info -->
-              <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M12 11v5"></path>
-                <path d="M12 8h.01"></path>
-              </svg>
-            </span>
-            <span>Press <span class="kbdInline">⌘ + K</span> to focus search.</span>
+    <section class="tickerStrip" aria-label="Market ticker">
+      <div class="tickerLabel">TAPE</div>
+      <div class="tickerMarquee" role="list">
+        <div class="tickerTrack">
+          <div class="tickerItem" role="listitem" data-sym="spy.us">
+            <span class="tickerSym">SPY</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" role="listitem" data-sym="qqq.us">
+            <span class="tickerSym">QQQ</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" role="listitem" data-sym="dia.us">
+            <span class="tickerSym">DIA</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" role="listitem" data-sym="10yusy.b">
+            <span class="tickerSym">10Y</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" role="listitem" data-sym="usdeur">
+            <span class="tickerSym">EURUSD</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" role="listitem" data-sym="cb.f">
+            <span class="tickerSym">BRENT</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" role="listitem" data-sym="xauusd">
+            <span class="tickerSym">GOLD</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" role="listitem" data-sym="btc.v">
+            <span class="tickerSym">BTC</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
           </div>
         </div>
-      </aside>
+        <div class="tickerTrack" aria-hidden="true">
+          <div class="tickerItem" data-sym="spy.us">
+            <span class="tickerSym">SPY</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" data-sym="qqq.us">
+            <span class="tickerSym">QQQ</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" data-sym="dia.us">
+            <span class="tickerSym">DIA</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" data-sym="10yusy.b">
+            <span class="tickerSym">10Y</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" data-sym="usdeur">
+            <span class="tickerSym">EURUSD</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" data-sym="cb.f">
+            <span class="tickerSym">BRENT</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" data-sym="xauusd">
+            <span class="tickerSym">GOLD</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+          <div class="tickerItem" data-sym="btc.v">
+            <span class="tickerSym">BTC</span>
+            <span class="tickerPx js-price">—</span>
+            <span class="tickerChg js-pct is-flat">—</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="newsTicker" aria-label="News ticker">
+      <div class="newsLabel">NEWS</div>
+      <div class="newsMarquee">
+        <div class="newsTrack">
+          <span class="newsItem">FOMC speakers queued through 2pm ET.</span>
+          <span class="newsItem">US 10Y yields steady ahead of CPI print.</span>
+          <span class="newsItem">Energy complex mixed as Brent holds range.</span>
+          <span class="newsItem">Tech leadership rotation: semis vs software.</span>
+          <span class="newsItem">FX: USD/EUR fades as risk bid stabilizes.</span>
+        </div>
+        <div class="newsTrack" aria-hidden="true">
+          <span class="newsItem">FOMC speakers queued through 2pm ET.</span>
+          <span class="newsItem">US 10Y yields steady ahead of CPI print.</span>
+          <span class="newsItem">Energy complex mixed as Brent holds range.</span>
+          <span class="newsItem">Tech leadership rotation: semis vs software.</span>
+          <span class="newsItem">FX: USD/EUR fades as risk bid stabilizes.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="signalGrid" aria-label="Market signals">
+      <div class="signalCard">
+        <div class="signalLabel">Breadth</div>
+        <div class="signalValue" id="sigBreadth">—</div>
+        <div class="signalMeta"><span id="sigAdv">—</span> adv / <span id="sigDec">—</span> dec</div>
+      </div>
+      <div class="signalCard">
+        <div class="signalLabel">Median Move</div>
+        <div class="signalValue" id="sigMedian">—</div>
+        <div class="signalMeta">Across symbols</div>
+      </div>
+      <div class="signalCard">
+        <div class="signalLabel">Dispersion</div>
+        <div class="signalValue" id="sigDisp">—</div>
+        <div class="signalMeta">Std dev</div>
+      </div>
+      <div class="signalCard">
+        <div class="signalLabel">Leaders</div>
+        <div class="signalList">
+          <div class="signalRow">
+            <span class="signalKey">Top Up</span>
+            <span class="signalVal" id="sigTopUp">—</span>
+          </div>
+          <div class="signalRow">
+            <span class="signalKey">Top Dn</span>
+            <span class="signalVal" id="sigTopDn">—</span>
+          </div>
+        </div>
+        <div class="signalMeta">Heatmap</div>
+      </div>
+    </section>
+
+    <section class="moverGrid" aria-label="Top movers">
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Top Gainers</div>
+          <div class="termTableHint">Top 5</div>
+        </div>
+        <div class="moverList" id="gainersList"></div>
+      </div>
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Top Losers</div>
+          <div class="termTableHint">Top 5</div>
+        </div>
+        <div class="moverList" id="losersList"></div>
+      </div>
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Most Volatile</div>
+          <div class="termTableHint">Abs move</div>
+        </div>
+        <div class="moverList" id="volList"></div>
+      </div>
+    </section>
+
+    <section class="terminalTables" aria-label="Market tables">
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Major Indices</div>
+          <div class="termTableHint">Close to close</div>
+        </div>
+        <table class="gridTable" role="table">
+          <thead>
+            <tr>
+              <th>Sym</th>
+              <th>Name</th>
+              <th class="cellPx">Last</th>
+              <th class="cellChg">Chg%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-sym="spy.us">
+              <td class="cellSym">SPY</td>
+              <td>S&amp;P 500</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="qqq.us">
+              <td class="cellSym">QQQ</td>
+              <td>Nasdaq 100</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="iwm.us">
+              <td class="cellSym">IWM</td>
+              <td>Russell 2000</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="dia.us">
+              <td class="cellSym">DIA</td>
+              <td>Dow 30</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="^dax">
+              <td class="cellSym">DAX</td>
+              <td>Germany</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="^ukx">
+              <td class="cellSym">FTSE</td>
+              <td>UK 100</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Macro</div>
+          <div class="termTableHint">Cross asset</div>
+        </div>
+        <table class="gridTable" role="table">
+          <thead>
+            <tr>
+              <th>Sym</th>
+              <th>Name</th>
+              <th class="cellPx">Last</th>
+              <th class="cellChg">Chg%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-sym="10yusy.b">
+              <td class="cellSym">10Y</td>
+              <td>US 10Y</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="usdeur">
+              <td class="cellSym">EURUSD</td>
+              <td>USD/EUR</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="cb.f">
+              <td class="cellSym">BRENT</td>
+              <td>Brent Oil</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="xauusd">
+              <td class="cellSym">GOLD</td>
+              <td>Gold</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="si.f">
+              <td class="cellSym">SILVER</td>
+              <td>Silver</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="btc.v">
+              <td class="cellSym">BTC</td>
+              <td>Bitcoin</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Mega Caps</div>
+          <div class="termTableHint">Close to close</div>
+        </div>
+        <table class="gridTable" role="table">
+          <thead>
+            <tr>
+              <th>Sym</th>
+              <th>Name</th>
+              <th class="cellPx">Last</th>
+              <th class="cellChg">Chg%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-sym="aapl.us">
+              <td class="cellSym">AAPL</td>
+              <td>Apple</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="msft.us">
+              <td class="cellSym">MSFT</td>
+              <td>Microsoft</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="nvda.us">
+              <td class="cellSym">NVDA</td>
+              <td>Nvidia</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="amzn.us">
+              <td class="cellSym">AMZN</td>
+              <td>Amazon</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="googl.us">
+              <td class="cellSym">GOOGL</td>
+              <td>Alphabet</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="meta.us">
+              <td class="cellSym">META</td>
+              <td>Meta</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Sectors</div>
+          <div class="termTableHint">SPDR</div>
+        </div>
+        <table class="gridTable" role="table">
+          <thead>
+            <tr>
+              <th>Sym</th>
+              <th>Name</th>
+              <th class="cellPx">Last</th>
+              <th class="cellChg">Chg%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-sym="xlk.us">
+              <td class="cellSym">XLK</td>
+              <td>Tech</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="xlf.us">
+              <td class="cellSym">XLF</td>
+              <td>Financials</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="xle.us">
+              <td class="cellSym">XLE</td>
+              <td>Energy</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="xly.us">
+              <td class="cellSym">XLY</td>
+              <td>Consumer Disc</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="xlp.us">
+              <td class="cellSym">XLP</td>
+              <td>Staples</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="xlv.us">
+              <td class="cellSym">XLV</td>
+              <td>Health Care</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="hmSection" aria-label="Stock heatmap">
@@ -473,6 +1110,20 @@
       const stamp = document.getElementById("hmStamp");
       const btn = document.getElementById("hmRefresh");
       const searchInput = document.getElementById("q");
+      const termUtc = document.getElementById("termUtc");
+      const termLocal = document.getElementById("termLocal");
+      const termSync = document.getElementById("termSync");
+
+      const sigBreadth = document.getElementById("sigBreadth");
+      const sigAdv = document.getElementById("sigAdv");
+      const sigDec = document.getElementById("sigDec");
+      const sigMedian = document.getElementById("sigMedian");
+      const sigDisp = document.getElementById("sigDisp");
+      const sigTopUp = document.getElementById("sigTopUp");
+      const sigTopDn = document.getElementById("sigTopDn");
+      const gainersList = document.getElementById("gainersList");
+      const losersList = document.getElementById("losersList");
+      const volList = document.getElementById("volList");
 
       if (!grid || !stamp || !btn) return;
 
@@ -481,6 +1132,34 @@
         baseItems: /** @type {Array<any>} */ ([]),
         generatedAt: /** @type {string|null} */ (null),
       };
+
+      function fmtTime(date, timeZone) {
+        if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "—";
+        try {
+          const opts = {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false,
+          };
+          if (timeZone) opts.timeZone = timeZone;
+          return date.toLocaleTimeString("en-US", opts);
+        } catch {
+          return date.toTimeString().slice(0, 8);
+        }
+      }
+
+      function updateClocks() {
+        const now = new Date();
+        if (termUtc) termUtc.textContent = fmtTime(now, "UTC");
+        if (termLocal) termLocal.textContent = fmtTime(now);
+      }
+
+      function updateTermSync(ts) {
+        if (!termSync) return;
+        const d = ts ? new Date(ts) : null;
+        termSync.textContent = d && !Number.isNaN(d.getTime()) ? fmtTime(d) : "—";
+      }
 
       /**
        * Get the current query string from the top search box.
@@ -534,6 +1213,121 @@
         if (Math.abs(px) >= 1000) return px.toFixed(0);
         if (Math.abs(px) >= 100) return px.toFixed(1);
         return px.toFixed(2);
+      }
+
+      function updateSymbolBindings(items) {
+        if (!Array.isArray(items) || !items.length) return;
+        const map = new Map();
+        for (const it of items) {
+          const key = String(it?.sym ?? "").trim().toLowerCase();
+          if (key) map.set(key, it);
+        }
+
+        document.querySelectorAll("[data-sym]").forEach((node) => {
+          const key = String(node.getAttribute("data-sym") ?? "").trim().toLowerCase();
+          const it = map.get(key);
+          if (!it) return;
+
+          const pct = Number(it.deltaPct);
+          const close = Number(it.close);
+          const ok = it.ok !== false && Number.isFinite(pct) && Number.isFinite(close);
+
+          const priceText = ok ? formatValueBySym(it.sym, close) : "—";
+          const pctText = ok ? fmtPct(pct) : "—";
+
+          node.querySelectorAll(".js-price").forEach((el) => {
+            el.textContent = priceText;
+          });
+          node.querySelectorAll(".js-pct").forEach((el) => {
+            el.textContent = pctText;
+            el.classList.remove("is-up", "is-dn", "is-flat");
+            el.classList.add(pctDirClass(pct));
+          });
+        });
+      }
+
+      function updateSignalBlocks(items) {
+        if (!sigBreadth || !Array.isArray(items)) return;
+        const deltas = items
+          .map((it) => Number(it.deltaPct))
+          .filter((v) => Number.isFinite(v))
+          .sort((a, b) => a - b);
+
+        if (!deltas.length) {
+          sigBreadth.textContent = "—";
+          if (sigAdv) sigAdv.textContent = "—";
+          if (sigDec) sigDec.textContent = "—";
+          if (sigMedian) sigMedian.textContent = "—";
+          if (sigDisp) sigDisp.textContent = "—";
+          if (sigTopUp) sigTopUp.textContent = "—";
+          if (sigTopDn) sigTopDn.textContent = "—";
+          return;
+        }
+
+        const adv = deltas.filter((v) => v > 0.05).length;
+        const dec = deltas.filter((v) => v < -0.05).length;
+        const active = adv + dec;
+        const breadth = active ? (adv / active) * 100 : 0;
+
+        const mid = Math.floor(deltas.length / 2);
+        const median = deltas.length % 2 ? deltas[mid] : (deltas[mid - 1] + deltas[mid]) / 2;
+        const mean = deltas.reduce((a, b) => a + b, 0) / deltas.length;
+        const variance = deltas.reduce((a, b) => a + (b - mean) ** 2, 0) / deltas.length;
+        const stdev = Math.sqrt(variance);
+
+        let topUp = null;
+        let topDn = null;
+        for (const it of items) {
+          const pct = Number(it.deltaPct);
+          if (!Number.isFinite(pct)) continue;
+          if (!topUp || pct > topUp.pct) topUp = { sym: it.sym, pct };
+          if (!topDn || pct < topDn.pct) topDn = { sym: it.sym, pct };
+        }
+
+        sigBreadth.textContent = `${breadth.toFixed(0)}%`;
+        if (sigAdv) sigAdv.textContent = String(adv);
+        if (sigDec) sigDec.textContent = String(dec);
+        if (sigMedian) sigMedian.textContent = fmtPct(median);
+        if (sigDisp) sigDisp.textContent = `${stdev.toFixed(2)}%`;
+        if (sigTopUp) sigTopUp.textContent = topUp ? `${String(topUp.sym ?? "").toUpperCase()} ${fmtPct(topUp.pct)}` : "—";
+        if (sigTopDn) sigTopDn.textContent = topDn ? `${String(topDn.sym ?? "").toUpperCase()} ${fmtPct(topDn.pct)}` : "—";
+      }
+
+      function renderMoverList(el, rows) {
+        if (!el) return;
+        if (!rows.length) {
+          el.innerHTML = "<div class=\"moverRow\"><span class=\"moverSym\">—</span><span class=\"moverName\">No data</span><span class=\"moverPct is-flat\">—</span></div>";
+          return;
+        }
+        el.innerHTML = rows.map((row) => {
+          const pctClass = pctDirClass(row.pct);
+          return `
+            <div class="moverRow">
+              <span class="moverSym">${row.sym}</span>
+              <span class="moverName">${row.name}</span>
+              <span class="moverPct ${pctClass}">${fmtPct(row.pct)}</span>
+            </div>
+          `;
+        }).join("");
+      }
+
+      function updateMoverLists(items) {
+        if (!Array.isArray(items)) return;
+        const usable = items
+          .map((it) => ({
+            sym: String(it.sym ?? "").toUpperCase(),
+            name: String(it.name ?? it.sym ?? ""),
+            pct: Number(it.deltaPct),
+          }))
+          .filter((it) => it.sym && Number.isFinite(it.pct));
+
+        const gainers = [...usable].sort((a, b) => b.pct - a.pct).slice(0, 5);
+        const losers = [...usable].sort((a, b) => a.pct - b.pct).slice(0, 5);
+        const vol = [...usable].sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct)).slice(0, 5);
+
+        renderMoverList(gainersList, gainers);
+        renderMoverList(losersList, losers);
+        renderMoverList(volList, vol);
       }
 
       /**
@@ -658,9 +1452,14 @@
        * @param {{generatedAt:string, items:Array<any>}} payload
        */
       function render(payload) {
-        hmState.baseItems = Array.isArray(payload?.items) ? payload.items : [];
+        const items = Array.isArray(payload?.items) ? payload.items : [];
+        hmState.baseItems = items;
         hmState.generatedAt = payload?.generatedAt ?? null;
         applyHeatmapQuery();
+        updateSymbolBindings(items);
+        updateSignalBlocks(items);
+        updateMoverLists(items);
+        updateTermSync(hmState.generatedAt);
       }
 
       /**
@@ -697,6 +1496,8 @@
         });
       }
 
+      updateClocks();
+      setInterval(updateClocks, 1000);
       load();
     })();
   </script>
