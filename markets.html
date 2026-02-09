@@ -859,9 +859,14 @@
     .overviewTop {
       margin-top: 10px;
       display: grid;
-      grid-template-columns: clamp(360px, 31vw, 540px) minmax(0, 1fr);
+      grid-template-columns: minmax(360px, .95fr) minmax(500px, 1.35fr);
       gap: 12px;
-      align-items: start;
+      align-items: stretch;
+    }
+    .overviewColumn {
+      display: grid;
+      gap: 12px;
+      align-content: start;
     }
     .alertConsole {
       margin-top: 0;
@@ -1170,6 +1175,191 @@
       text-transform: uppercase;
       opacity: .66;
     }
+    .globeCard {
+      border-radius: 10px;
+      border: 1px solid rgba(86, 255, 168, .22);
+      background: rgba(8, 8, 8, .9);
+      padding: 10px 12px;
+      overflow: hidden;
+      position: relative;
+    }
+    .globeCard::before {
+      content: "";
+      position: absolute;
+      inset: -40% -10%;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(86, 255, 168, .08), transparent 48%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, .06), transparent 50%);
+      pointer-events: none;
+    }
+    .globeLayout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      justify-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .worldGlobeShell {
+      width: clamp(280px, 38vw, 420px);
+      aspect-ratio: 1 / 1;
+      margin-inline: auto;
+      position: relative;
+      display: grid;
+      place-items: center;
+      filter: drop-shadow(0 20px 28px rgba(0, 0, 0, .5));
+    }
+    .worldGlobe {
+      --session-globe-asia: rgba(230, 246, 239, .35);
+      --session-globe-europe: rgba(230, 246, 239, .35);
+      --session-globe-us: rgba(230, 246, 239, .35);
+      --session-globe-asia-glow: none;
+      --session-globe-europe-glow: none;
+      --session-globe-us-glow: none;
+      --globe-night-angle: 135deg;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(230, 246, 239, .38);
+      background:
+        radial-gradient(circle at 30% 24%, rgba(255, 255, 255, .28), rgba(12, 12, 12, .98) 58%),
+        radial-gradient(circle at 50% 110%, rgba(0, 0, 0, .88), transparent 60%);
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, .06),
+        inset 0 -24px 40px rgba(0, 0, 0, .5),
+        0 14px 30px rgba(0, 0, 0, .45);
+      isolation: isolate;
+    }
+    .worldGlobe::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, .06) 0 1px, transparent 1px 14px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, .06) 0 1px, transparent 1px 14px);
+      opacity: .24;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+    .worldGlobe::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 21% 19%, rgba(255, 255, 255, .34), transparent 46%),
+        radial-gradient(circle at 76% 70%, rgba(0, 0, 0, .66), transparent 58%);
+      pointer-events: none;
+      z-index: 3;
+    }
+    .worldGlobeNight {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(
+        var(--globe-night-angle),
+        rgba(0, 0, 0, .62) 8%,
+        rgba(0, 0, 0, .38) 30%,
+        rgba(0, 0, 0, .08) 46%,
+        rgba(255, 255, 255, .07) 56%,
+        rgba(0, 0, 0, .24) 85%
+      );
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    .worldGlobeRing {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(230, 246, 239, .2);
+      pointer-events: none;
+      z-index: 3;
+    }
+    .worldGlobeRing.is-outer {
+      inset: 6%;
+    }
+    .worldGlobeRing.is-inner {
+      inset: 16%;
+      opacity: .75;
+    }
+    .worldGlobeLayer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .globeStatusList {
+      display: grid;
+      width: 100%;
+      max-width: 980px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      align-content: center;
+    }
+    .globeStatusPill {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(230, 246, 239, .22);
+      background: rgba(7, 7, 7, .88);
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .globeStatusDot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(230, 246, 239, .4);
+      box-shadow: 0 0 8px rgba(86, 255, 168, .2);
+    }
+    .globeStatusName {
+      opacity: .82;
+    }
+    .globeStatusState {
+      opacity: .85;
+      font-variant-numeric: tabular-nums;
+    }
+    .globeStatusPill[data-state="open"] {
+      border-color: rgba(86, 255, 168, .5);
+      background: rgba(10, 12, 10, .95);
+    }
+    .globeStatusPill[data-state="open"] .globeStatusDot {
+      background: rgba(86, 255, 168, .95);
+      box-shadow: 0 0 10px rgba(86, 255, 168, .45);
+    }
+    .globeStatusPill[data-state="pre"],
+    .globeStatusPill[data-state="lunch"] {
+      border-color: rgba(255, 198, 86, .55);
+    }
+    .globeStatusPill[data-state="pre"] .globeStatusDot,
+    .globeStatusPill[data-state="lunch"] .globeStatusDot {
+      background: rgba(255, 198, 86, .9);
+      box-shadow: 0 0 10px rgba(255, 198, 86, .35);
+    }
+    .globeStatusPill[data-state="after"] {
+      border-color: rgba(255, 98, 122, .45);
+    }
+    .globeStatusPill[data-state="after"] .globeStatusDot {
+      background: rgba(255, 98, 122, .85);
+      box-shadow: 0 0 10px rgba(255, 98, 122, .35);
+    }
+    .globeStatusPill[data-state="closed"] .globeStatusDot {
+      background: rgba(230, 246, 239, .35);
+      box-shadow: none;
+    }
+    @keyframes globeTurn {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
     .hotkeysGrid {
       display: grid;
@@ -1337,7 +1527,7 @@
     }
     .boardRow {
       display: grid;
-      grid-template-columns: auto minmax(0, 1fr) minmax(62px, 88px) auto auto;
+      grid-template-columns: auto minmax(0, 1fr) minmax(40px, 52px) auto auto;
       gap: 8px;
       align-items: center;
       font-size: 11px;
@@ -1358,33 +1548,45 @@
       font-variant-numeric: tabular-nums;
       text-align: right;
     }
-    .boardSpark {
+    .boardTrend {
       width: 100%;
       height: 18px;
-      overflow: visible;
-      opacity: .92;
+      border-radius: 999px;
+      border: 1px solid rgba(86, 255, 168, .24);
+      background: rgba(8, 8, 8, .88);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      opacity: .94;
+      box-shadow: inset 0 0 0 1px rgba(86, 255, 168, .07);
     }
-    .boardSparkArea {
-      fill: rgba(86, 255, 168, .12);
+    .boardTrendGlyph {
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 700;
+      color: rgba(86, 255, 168, .9);
+      transform: translateY(-.5px);
     }
-    .boardSparkLine {
-      fill: none;
-      stroke: rgba(86, 255, 168, .85);
-      stroke-width: 1.35;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .boardTrend[data-dir="is-up"] {
+      border-color: rgba(86, 255, 168, .48);
+      background: linear-gradient(90deg, rgba(86, 255, 168, .08), rgba(8, 8, 8, .9));
     }
-    .boardSpark[data-dir="is-dn"] .boardSparkArea {
-      fill: rgba(255, 98, 122, .12);
+    .boardTrend[data-dir="is-up"] .boardTrendGlyph {
+      color: rgba(86, 255, 168, .98);
     }
-    .boardSpark[data-dir="is-dn"] .boardSparkLine {
-      stroke: rgba(255, 98, 122, .9);
+    .boardTrend[data-dir="is-dn"] {
+      border-color: rgba(255, 98, 122, .5);
+      background: linear-gradient(90deg, rgba(255, 98, 122, .10), rgba(8, 8, 8, .9));
     }
-    .boardSpark[data-dir="is-flat"] .boardSparkArea {
-      fill: rgba(230, 246, 239, .08);
+    .boardTrend[data-dir="is-dn"] .boardTrendGlyph {
+      color: rgba(255, 98, 122, .96);
     }
-    .boardSpark[data-dir="is-flat"] .boardSparkLine {
-      stroke: rgba(230, 246, 239, .72);
+    .boardTrend[data-dir="is-flat"] {
+      border-color: rgba(230, 246, 239, .24);
+      background: rgba(8, 8, 8, .9);
+    }
+    .boardTrend[data-dir="is-flat"] .boardTrendGlyph {
+      color: rgba(230, 246, 239, .72);
     }
     .boardChg.is-up { color: rgba(86, 255, 168, .98); }
     .boardChg.is-dn { color: rgba(255, 98, 122, .95); }
@@ -1506,6 +1708,20 @@
       text-align: right;
       font-variant-numeric: tabular-nums;
     }
+    .gridTable th.cellPx,
+    .gridTable td.cellPx {
+      width: 16%;
+      min-width: 92px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .gridTable th.cellChg,
+    .gridTable td.cellChg {
+      width: 14%;
+      min-width: 84px;
+      text-align: right;
+      white-space: nowrap;
+    }
     .cellChg.is-up { color: rgba(86, 255, 168, .98); }
     .cellChg.is-dn { color: rgba(255, 98, 122, .95); }
     .cellChg.is-flat { color: rgba(230, 246, 239, .7); }
@@ -1520,6 +1736,9 @@
     }
     @media (max-width: 960px) {
       .overviewTop { grid-template-columns: 1fr; }
+      .overviewColumn { gap: 10px; }
+      .signalGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .globeStatusList { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
       .terminalHead { flex-direction: column; align-items: flex-start; }
@@ -1527,7 +1746,8 @@
       .kbdRow { justify-content: flex-start; }
       .signalGrid { grid-template-columns: 1fr; }
       .marketBoard { grid-template-columns: 1fr; }
-      .boardRow { grid-template-columns: auto minmax(0, 1fr) minmax(54px, 70px) auto auto; }
+      .boardRow { grid-template-columns: auto minmax(0, 1fr) minmax(40px, 52px) auto auto; }
+      .globeLayout { grid-template-columns: 1fr; }
     }
 
     @keyframes ticker-scroll {
@@ -1745,77 +1965,101 @@
     </section>
 
     <div class="overviewTop view-overview">
-      <section class="alertConsole" aria-label="Alert console">
-        <div class="alertSummary">
-          <div class="alertLabel">Alert Console</div>
-          <div class="alertCount" id="alertCount">—</div>
-          <div class="alertState" id="alertState">Syncing</div>
-        </div>
-        <div class="alertRows" id="alertRows">
-          <div class="alertRow is-offline">
-            <div class="alertTop">
-              <span class="alertRule">Loading rules</span>
-              <span class="alertStatus">WAIT</span>
-            </div>
-            <div class="alertReadouts">
-              <span class="alertMeta">Fetching market data…</span>
+      <div class="overviewColumn">
+        <section class="alertConsole" aria-label="Alert console">
+          <div class="alertSummary">
+            <div class="alertLabel">Alert Console</div>
+            <div class="alertCount" id="alertCount">—</div>
+            <div class="alertState" id="alertState">Syncing</div>
+          </div>
+          <div class="alertRows" id="alertRows">
+            <div class="alertRow is-offline">
+              <div class="alertTop">
+                <span class="alertRule">Loading rules</span>
+                <span class="alertStatus">WAIT</span>
+              </div>
+              <div class="alertReadouts">
+                <span class="alertMeta">Fetching market data…</span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="signalGrid" aria-label="Market signals">
-        <div class="signalCard">
-          <div class="signalLabel">Median Move</div>
-          <div class="signalValue" id="sigMedian">—</div>
-          <div class="signalMeta">Across symbols</div>
-        </div>
-        <div class="signalCard">
-          <div class="signalLabel">Dispersion</div>
-          <div class="signalValue" id="sigDisp">—</div>
-          <div class="signalMeta">Std dev</div>
-        </div>
-        <div class="signalCard">
-          <div class="signalLabel">Leaders</div>
-          <div class="signalList">
-            <div class="signalRow">
-              <span class="signalKey">Top Up</span>
-              <span class="signalVal" id="sigTopUp">—</span>
+        <section class="signalGrid view-overview" aria-label="Market signals">
+          <div class="signalCard">
+            <div class="signalLabel">Median Move</div>
+            <div class="signalValue" id="sigMedian">—</div>
+            <div class="signalMeta">Across symbols</div>
+          </div>
+          <div class="signalCard">
+            <div class="signalLabel">Dispersion</div>
+            <div class="signalValue" id="sigDisp">—</div>
+            <div class="signalMeta">Std dev</div>
+          </div>
+          <div class="signalCard">
+            <div class="signalLabel">Leaders</div>
+            <div class="signalList">
+              <div class="signalRow">
+                <span class="signalKey">Top Up</span>
+                <span class="signalVal" id="sigTopUp">—</span>
+              </div>
+              <div class="signalRow">
+                <span class="signalKey">Top Dn</span>
+                <span class="signalVal" id="sigTopDn">—</span>
+              </div>
             </div>
-            <div class="signalRow">
-              <span class="signalKey">Top Dn</span>
-              <span class="signalVal" id="sigTopDn">—</span>
+            <div class="signalMeta">Heatmap</div>
+          </div>
+          <div class="signalCard">
+            <div class="signalLabel">Risk Radar</div>
+            <div class="riskRow">
+              <div class="riskRing" id="riskRing" aria-hidden="true"></div>
+              <div>
+                <div class="riskValue" id="riskValue">—</div>
+                <div class="riskNote" id="riskNote">Balanced</div>
+              </div>
+            </div>
+            <div class="signalMeta">Breadth × Dispersion</div>
+          </div>
+        </section>
+      </div>
+      <section class="globeCard" aria-label="Session globe">
+          <div class="termTableHead">
+            <div class="termTableTitle">Session Globe</div>
+            <div class="termTableHint">Live open/close states</div>
+          </div>
+          <div class="globeLayout">
+            <div class="worldGlobeShell" aria-hidden="true">
+              <div class="worldGlobe" id="worldSessionGlobe">
+                <div class="worldGlobeLayer" id="worldGlobeLayer"></div>
+                <div class="worldGlobeRing is-outer"></div>
+                <div class="worldGlobeRing is-inner"></div>
+                <div class="worldGlobeNight"></div>
+              </div>
+            </div>
+            <div class="globeStatusList" aria-label="Regional session status">
+              <div class="globeStatusPill" id="globeAsiaBadge" data-state="closed">
+                <span class="globeStatusDot" aria-hidden="true"></span>
+                <span class="globeStatusName">Asia</span>
+                <span class="globeStatusState" id="globeAsiaBadgeState">CLOSED</span>
+              </div>
+              <div class="globeStatusPill" id="globeEuropeBadge" data-state="closed">
+                <span class="globeStatusDot" aria-hidden="true"></span>
+                <span class="globeStatusName">Europe</span>
+                <span class="globeStatusState" id="globeEuropeBadgeState">CLOSED</span>
+              </div>
+              <div class="globeStatusPill" id="globeUsBadge" data-state="closed">
+                <span class="globeStatusDot" aria-hidden="true"></span>
+                <span class="globeStatusName">US</span>
+                <span class="globeStatusState" id="globeUsBadgeState">CLOSED</span>
+              </div>
             </div>
           </div>
-          <div class="signalMeta">Heatmap</div>
-        </div>
-        <div class="signalCard">
-          <div class="signalLabel">Risk Radar</div>
-          <div class="riskRow">
-            <div class="riskRing" id="riskRing" aria-hidden="true"></div>
-            <div>
-              <div class="riskValue" id="riskValue">—</div>
-              <div class="riskNote" id="riskNote">Balanced</div>
-            </div>
-          </div>
-          <div class="signalMeta">Breadth × Dispersion</div>
-        </div>
-      </section>
+        </section>
     </div>
 
     <div class="terminalLayout">
       <div class="terminalMain">
-
-        <section class="corrCard view-overview" aria-label="Correlation matrix">
-          <div class="termTableHead">
-            <div class="termTableTitle">Correlation Matrix</div>
-            <div class="termTableHint">Rolling returns</div>
-          </div>
-          <div class="corrWrap">
-            <table class="corrTable" id="corrTable" role="table" aria-label="Rolling correlation matrix"></table>
-          </div>
-          <div class="corrMeta" id="corrMeta">Waiting for history…</div>
-        </section>
 
         <section class="marketBoard view-overview" aria-label="Market board">
           <div class="boardCard">
@@ -2312,6 +2556,60 @@
           </tbody>
         </table>
       </div>
+      <div class="termTable">
+        <div class="termTableHead">
+          <div class="termTableTitle">Large Caps</div>
+          <div class="termTableHint">US large</div>
+        </div>
+        <table class="gridTable" role="table">
+          <thead>
+            <tr>
+              <th>Sym</th>
+              <th>Name</th>
+              <th class="cellPx">Last</th>
+              <th class="cellChg">Chg%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-sym="tsla.us">
+              <td class="cellSym">TSLA</td>
+              <td>Tesla</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="jpm.us">
+              <td class="cellSym">JPM</td>
+              <td>JPMorgan</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="wmt.us">
+              <td class="cellSym">WMT</td>
+              <td>Walmart</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="hd.us">
+              <td class="cellSym">HD</td>
+              <td>Home Depot</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="jnj.us">
+              <td class="cellSym">JNJ</td>
+              <td>Johnson &amp; Johnson</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+            <tr data-sym="xom.us">
+              <td class="cellSym">XOM</td>
+              <td>Exxon Mobil</td>
+              <td class="cellPx js-price">—</td>
+              <td class="cellChg js-pct is-flat">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
         </section>
 
         <section class="hmSection view-heatmap" aria-label="Stock heatmap">
@@ -2423,6 +2721,7 @@
 
   <script src="app.js?v=4"></script>
   <script src="scripts/chart.js?v=4"></script>
+  <script src="assets/vendor/globe.gl.min.js"></script>
   <script>
     /**
      * Heatmap renderer (reads /heatmap.json generated by scripts/fetch-tape.mjs).
@@ -2497,6 +2796,14 @@
       const sessionAsiaPill = document.getElementById("sessionAsiaPill");
       const sessionEuropePill = document.getElementById("sessionEuropePill");
       const sessionUsPill = document.getElementById("sessionUsPill");
+      const worldSessionGlobe = document.getElementById("worldSessionGlobe");
+      const worldGlobeLayer = document.getElementById("worldGlobeLayer");
+      const globeAsiaBadge = document.getElementById("globeAsiaBadge");
+      const globeEuropeBadge = document.getElementById("globeEuropeBadge");
+      const globeUsBadge = document.getElementById("globeUsBadge");
+      const globeAsiaBadgeState = document.getElementById("globeAsiaBadgeState");
+      const globeEuropeBadgeState = document.getElementById("globeEuropeBadgeState");
+      const globeUsBadgeState = document.getElementById("globeUsBadgeState");
       const clockRing = document.getElementById("clockRing");
       const clockLabel = document.getElementById("clockLabel");
 
@@ -2522,7 +2829,6 @@
       const rateTabs = Array.from(document.querySelectorAll(".js-rate-tab"));
       const ratesRows = document.querySelector(".js-rates-rows");
       const fxRows = document.querySelector(".js-fx-rows");
-      const sparkNs = "http://www.w3.org/2000/svg";
 
       const corrUniverse = [
         { sym: "spy.us", label: "SPY" },
@@ -2532,6 +2838,24 @@
         { sym: "xauusd", label: "GOLD" },
         { sym: "btc.v", label: "BTC" },
       ];
+
+      const globeRegionColors = {
+        us: "rgba(255, 98, 122, 0.9)",
+        europe: "rgba(230, 246, 239, 0.82)",
+        asia: "rgba(230, 246, 239, 0.82)",
+      };
+      const globeRegionStates = {
+        us: "closed",
+        europe: "closed",
+        asia: "closed",
+      };
+      const globeDarkPixelTexture = "data:image/gif;base64,R0lGODlhAQABAIABAAAACP///yH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==";
+      let globe3d = null;
+      let globeCountries = [];
+      let globeWidth = 0;
+      let globeHeight = 0;
+      let globeRadius = 0;
+      let globeReady = false;
 
       const alertRules = [
         {
@@ -2901,6 +3225,173 @@
         return "closed";
       }
 
+      function parseAlphaColor(color, alpha) {
+        if (typeof color !== "string") return `rgba(230, 246, 239, ${alpha})`;
+        const m = color.match(/rgba?\(([^)]+)\)/i);
+        if (!m) return color;
+        const parts = m[1].split(",").map((p) => p.trim());
+        const r = Number(parts[0] ?? 230);
+        const g = Number(parts[1] ?? 246);
+        const b = Number(parts[2] ?? 239);
+        const a = Number.isFinite(alpha) ? alpha : Number(parts[3] ?? 1);
+        return `rgba(${r}, ${g}, ${b}, ${a})`;
+      }
+
+      function normalizeIso2(code) {
+        const value = String(code ?? "").trim().toUpperCase();
+        return /^[A-Z]{2}$/.test(value) ? value : "";
+      }
+
+      function classifySessionRegion(feature) {
+        const continent = String(feature?.properties?.CONTINENT ?? "").toLowerCase();
+        const iso2 = normalizeIso2(feature?.properties?.ISO_A2 ?? feature?.properties?.WB_A2 ?? feature?.properties?.POSTAL);
+        const asiaSessionIso = new Set(["CN", "JP", "KR", "KP"]);
+        const europeExcludedIso = new Set(["RU"]);
+        if (iso2 === "US") return "us";
+        if (asiaSessionIso.has(iso2)) return "asia";
+        if (continent === "europe" && !europeExcludedIso.has(iso2)) return "europe";
+        return "other";
+      }
+
+      function sessionAlphaForRegion(region) {
+        const state = globeRegionStates[region] || "closed";
+        if (state === "open") return 0.98;
+        if (state === "pre" || state === "lunch") return 0.94;
+        if (state === "after") return 0.95;
+        return 0.82;
+      }
+
+      function sessionAltitudeForRegion(region) {
+        const state = globeRegionStates[region] || "closed";
+        if (state === "open") return 0.02;
+        if (state === "pre" || state === "lunch" || state === "after") return 0.017;
+        return 0.013;
+      }
+
+      function hexColorForFeature(feature) {
+        const region = feature?.__sessionRegion || "other";
+        if (region === "other") return "rgba(214, 226, 226, 0.56)";
+        const base = globeRegionColors[region] || "rgba(230, 246, 239, 0.82)";
+        return parseAlphaColor(base, sessionAlphaForRegion(region));
+      }
+
+      async function ensureSessionGlobeData() {
+        if (globeCountries.length) return true;
+        try {
+          const res = await fetch("assets/geo/ne_110m_admin_0_countries.geojson", { cache: "force-cache" });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const geo = await res.json();
+          const features = Array.isArray(geo?.features) ? geo.features : [];
+          globeCountries = features.filter((f) => {
+            const type = String(f?.geometry?.type ?? "");
+            return type === "Polygon" || type === "MultiPolygon";
+          });
+          for (const feature of globeCountries) {
+            feature.__sessionRegion = classifySessionRegion(feature);
+          }
+          return globeCountries.length > 0;
+        } catch (err) {
+          console.warn("Session globe data failed:", err);
+          return false;
+        }
+      }
+
+      function applySessionGlobeColors() {
+        if (!globe3d) return;
+        globe3d
+          .hexPolygonColor((feature) => hexColorForFeature(feature))
+          .hexPolygonAltitude((feature) => {
+            const region = feature?.__sessionRegion || "other";
+            return region === "other" ? 0.0035 : sessionAltitudeForRegion(region);
+          });
+      }
+
+      function styleSessionGlobeCore() {
+        if (!globe3d || !(globe3d.globeMaterial instanceof Function)) return;
+        const mat = globe3d.globeMaterial();
+        if (!mat) return;
+        // Keep an opaque dark sphere so backside hex dots are hidden by depth.
+        if (mat.color?.set) mat.color.set("#060708");
+        if (mat.emissive?.set) mat.emissive.set("#010101");
+        if ("transparent" in mat) mat.transparent = false;
+        if ("opacity" in mat) mat.opacity = 1;
+        if ("shininess" in mat) mat.shininess = 3;
+        if ("depthWrite" in mat) mat.depthWrite = true;
+        if ("depthTest" in mat) mat.depthTest = true;
+        if ("map" in mat) mat.map = null;
+        if ("bumpMap" in mat) mat.bumpMap = null;
+        if ("specularMap" in mat) mat.specularMap = null;
+        mat.needsUpdate = true;
+      }
+
+      function measureSessionGlobe() {
+        if (!(worldGlobeLayer instanceof HTMLElement) || !globe3d) return;
+        const rect = worldGlobeLayer.getBoundingClientRect();
+        if (!(rect.width > 0 && rect.height > 0)) return;
+        globeWidth = rect.width;
+        globeHeight = rect.height;
+        globeRadius = Math.min(globeWidth, globeHeight) * 0.5;
+        globe3d.width(globeWidth).height(globeHeight);
+      }
+
+      async function initSessionGlobe() {
+        if (!(worldGlobeLayer instanceof HTMLElement) || !(window.Globe instanceof Function)) return;
+        const ok = await ensureSessionGlobeData();
+        if (!ok) return;
+
+        if (!globe3d) {
+          globe3d = window.Globe()(worldGlobeLayer)
+            .backgroundColor("rgba(0,0,0,0)")
+            .showGlobe(true)
+            .showAtmosphere(false)
+            .globeImageUrl(globeDarkPixelTexture)
+            .hexPolygonsData(globeCountries)
+            .hexPolygonResolution(3)
+            .hexPolygonMargin(0.28)
+            .hexPolygonUseDots(true)
+            .hexPolygonCurvatureResolution(4)
+            .hexPolygonAltitude(0.013)
+            .hexPolygonsTransitionDuration(220);
+
+          const controls = globe3d.controls && globe3d.controls();
+          if (controls) {
+            controls.enablePan = false;
+            controls.enableZoom = false;
+            controls.enableDamping = true;
+            controls.autoRotate = true;
+            controls.autoRotateSpeed = 0.42;
+            controls.minDistance = 215;
+            controls.maxDistance = 215;
+          }
+
+          globe3d.pointOfView({ lat: 24, lng: 2, altitude: 1.95 }, 0);
+        }
+
+        styleSessionGlobeCore();
+        measureSessionGlobe();
+        applySessionGlobeColors();
+        globeReady = true;
+      }
+
+      function syncSessionGlobeColors() {
+        if (!(worldSessionGlobe instanceof HTMLElement)) return;
+        const regions = [
+          { key: "asia", pill: sessionAsiaPill },
+          { key: "europe", pill: sessionEuropePill },
+          { key: "us", pill: sessionUsPill },
+        ];
+        for (const region of regions) {
+          if (!(region.pill instanceof HTMLElement)) continue;
+          const dot = region.pill.querySelector(".sessionDot");
+          if (!(dot instanceof HTMLElement)) continue;
+          const styles = window.getComputedStyle(dot);
+          const color = styles.backgroundColor || "rgba(230, 246, 239, .35)";
+          globeRegionColors[region.key] = color;
+          globeRegionStates[region.key] = String(region.pill.getAttribute("data-state") || "closed").toLowerCase();
+        }
+        if (globeReady) applySessionGlobeColors();
+      }
+
       function updateSessions() {
         const sessions = [
           {
@@ -2918,6 +3409,8 @@
             timeEl: sessionAsia,
             stateEl: sessionAsiaState,
             pillEl: sessionAsiaPill,
+            badgeEl: globeAsiaBadge,
+            badgeStateEl: globeAsiaBadgeState,
           },
           {
             tz: "Europe/London",
@@ -2932,6 +3425,8 @@
             timeEl: sessionEurope,
             stateEl: sessionEuropeState,
             pillEl: sessionEuropePill,
+            badgeEl: globeEuropeBadge,
+            badgeStateEl: globeEuropeBadgeState,
           },
           {
             tz: "America/New_York",
@@ -2946,6 +3441,8 @@
             timeEl: sessionUs,
             stateEl: sessionUsState,
             pillEl: sessionUsPill,
+            badgeEl: globeUsBadge,
+            badgeStateEl: globeUsBadgeState,
           },
         ];
 
@@ -2958,7 +3455,10 @@
           if (s.timeEl) s.timeEl.textContent = fmtTimeShort(now, s.tz);
           if (s.stateEl) s.stateEl.textContent = state.toUpperCase();
           if (s.pillEl) s.pillEl.setAttribute("data-state", state);
+          if (s.badgeEl) s.badgeEl.setAttribute("data-state", state);
+          if (s.badgeStateEl) s.badgeStateEl.textContent = state.toUpperCase();
         }
+        syncSessionGlobeColors();
       }
 
       function updateClockRing(now) {
@@ -3143,74 +3643,26 @@
         return deduped;
       }
 
-      function latestHistoryValues(it, maxPoints = 24) {
-        const points = normalizeHistory(it);
-        if (!points.length) return [];
-        return points.slice(-maxPoints).map((row) => row.close);
-      }
-
-      function sparkPathFromValues(values, width, height, pad = 1) {
-        if (!Array.isArray(values) || values.length < 2) return null;
-        const min = Math.min(...values);
-        const max = Math.max(...values);
-        const span = max - min || 1;
-        const w = Math.max(1, width - pad * 2);
-        const h = Math.max(1, height - pad * 2);
-        const step = values.length > 1 ? w / (values.length - 1) : 0;
-
-        const points = values.map((v, idx) => {
-          const x = pad + idx * step;
-          const y = pad + (1 - (v - min) / span) * h;
-          return { x, y };
-        });
-
-        const line = points
-          .map((p, idx) => `${idx === 0 ? "M" : "L"}${p.x.toFixed(2)} ${p.y.toFixed(2)}`)
-          .join(" ");
-
-        const baseline = (pad + h).toFixed(2);
-        const area =
-          `${line} L${points[points.length - 1].x.toFixed(2)} ${baseline} ` +
-          `L${points[0].x.toFixed(2)} ${baseline} Z`;
-
-        return { line, area };
-      }
-
-      function drawSparkline(svg, values, dirClass) {
-        if (!(svg instanceof SVGElement)) return;
-        const line = svg.querySelector(".boardSparkLine");
-        const area = svg.querySelector(".boardSparkArea");
-        if (!(line instanceof SVGPathElement) || !(area instanceof SVGPathElement)) return;
-
-        const safeVals = values.filter((v) => Number.isFinite(v));
-        const path = sparkPathFromValues(safeVals, 88, 18, 1);
-        if (!path) {
-          line.setAttribute("d", "");
-          area.setAttribute("d", "");
-          svg.dataset.dir = "is-flat";
-          return;
-        }
-
-        line.setAttribute("d", path.line);
-        area.setAttribute("d", path.area);
-        svg.dataset.dir = dirClass || "is-flat";
+      function drawSparkline(node, dirClass) {
+        if (!(node instanceof HTMLElement)) return;
+        const dir = dirClass || "is-flat";
+        const glyph = node.querySelector(".boardTrendGlyph");
+        if (!(glyph instanceof HTMLElement)) return;
+        node.dataset.dir = dir;
+        glyph.textContent = dir === "is-up" ? "↗" : dir === "is-dn" ? "↘" : "→";
       }
 
       function ensureBoardSparkSlots() {
         document.querySelectorAll(".boardRow").forEach((row) => {
           if (row.querySelector(".js-spark")) return;
-          const spark = document.createElementNS(sparkNs, "svg");
-          spark.classList.add("boardSpark", "js-spark");
-          spark.setAttribute("viewBox", "0 0 88 18");
-          spark.setAttribute("preserveAspectRatio", "none");
+          const spark = document.createElement("span");
+          spark.classList.add("boardTrend", "js-spark");
           spark.setAttribute("aria-hidden", "true");
-
-          const area = document.createElementNS(sparkNs, "path");
-          area.setAttribute("class", "boardSparkArea");
-          const line = document.createElementNS(sparkNs, "path");
-          line.setAttribute("class", "boardSparkLine");
-          spark.appendChild(area);
-          spark.appendChild(line);
+          spark.dataset.dir = "is-flat";
+          const glyph = document.createElement("span");
+          glyph.classList.add("boardTrendGlyph");
+          glyph.textContent = "→";
+          spark.appendChild(glyph);
 
           const price = row.querySelector(".boardPx");
           if (price) row.insertBefore(spark, price);
@@ -3412,7 +3864,7 @@
 
           if (node.classList.contains("boardRow")) {
             const spark = node.querySelector(".js-spark");
-            drawSparkline(spark, latestHistoryValues(it, 24), pctDirClass(pct));
+            drawSparkline(spark, pctDirClass(pct));
           }
         });
       }
@@ -3840,6 +4292,11 @@
           applyHeatmapQuery();
         });
       }
+
+      initSessionGlobe();
+      window.addEventListener("resize", () => {
+        measureSessionGlobe();
+      }, { passive: true });
 
       updateClocks();
       setInterval(updateClocks, 1000);
