@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-02-08T13:08:25.371Z",
+  "generatedAt": "2026-02-09T13:40:26.969Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "S&P is already predicting China&apos;s property slump will be worse than it expected this year",
+      "link": "https://www.cnbc.com/2026/02/09/sp-i-china-property-slump-worse-than-expected.html",
+      "pubDate": "Mon, 09 Feb 2026 11:45:03 GMT"
+    },
+    {
+      "title": "Digital employees, AI bootcamps: America&apos;s oldest bank is spending billions on tech",
+      "link": "https://www.cnbc.com/2026/02/09/digital-employees-ai-bootcamps-americas-oldest-bank-spends-billions-on-tech.html",
+      "pubDate": "Mon, 09 Feb 2026 11:00:01 GMT"
+    },
     {
       "title": "China&apos;s Luckin Coffee opens first high-end store as it takes on Starbucks",
       "link": "https://www.cnbc.com/2026/02/08/chinas-luckin-coffee-opens-its-first-high-end-store.html",
@@ -82,16 +92,6 @@
       "title": "Everything you need to know about Kevin Warsh, Trump&apos;s pick to lead the Federal Reserve",
       "link": "https://www.cnbc.com/2026/01/30/who-is-kevin-warsh-trumps-fed-chair-pick.html",
       "pubDate": "Fri, 30 Jan 2026 18:28:58 GMT"
-    },
-    {
-      "title": "Trump nominates Kevin Warsh for Federal Reserve chair to succeed Jerome Powell",
-      "link": "https://www.cnbc.com/2026/01/30/trump-nominates-kevin-warsh-for-federal-reserve-chair-to-succeed-jerome-powell.html",
-      "pubDate": "Fri, 30 Jan 2026 20:22:43 GMT"
-    },
-    {
-      "title": "World leaders flock to Beijing, hedging against U.S. disruptions",
-      "link": "https://www.cnbc.com/2026/01/30/china-beijing-trade-tariffs-trump-starmer-carney.html",
-      "pubDate": "Fri, 30 Jan 2026 09:39:24 GMT"
     }
   ]
 }
