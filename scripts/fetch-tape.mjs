@@ -148,6 +148,7 @@ const BATCH_JITTER_MS = 2_000;    // random extra pause between batches
 const RETRY_COUNT = 4;            // retries after the initial attempt
 const BACKOFF_BASE_MS = 800;      // exponential backoff base
 const BACKOFF_MAX_MS = 15_000;    // cap backoff so it doesn't explode
+const HISTORY_LIMIT = 45;         // keep payload light but useful for rolling stats
 
 function sleepMs(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -236,12 +237,12 @@ async function fetchTextWithRetry(url, options, label) {
 }
 
 /**
- * Parse Stooq daily CSV and return last close, and optionally prev close.
- * If only one data row exists, prevClose will be null.
+ * Parse Stooq daily CSV and return the latest snapshot plus trailing history.
  * @param {string} csv
- * @returns {{date:string, close:number, prevDate:(string|null), prevClose:(number|null)}}
+ * @param {number} maxPoints
+ * @returns {{date:string, close:number, prevDate:(string|null), prevClose:(number|null), history:Array<{date:string,close:number}>}}
  */
-function parseLastCloseMaybePrev(csv) {
+function parseLastCloseMaybePrev(csv, maxPoints = HISTORY_LIMIT) {
   const lines = csv.trim().split("\n").filter(Boolean);
 
   // Expect at least: header + 1 row
@@ -249,30 +250,45 @@ function parseLastCloseMaybePrev(csv) {
     throw new Error("No daily data returned (header-only CSV)");
   }
 
-  const last = lines[lines.length - 1].split(",");
-  const date = last[0];
-  const close = Number(last[4]);
+  const rows = [];
+  for (const line of lines.slice(1)) {
+    const parts = line.split(",");
+    const date = String(parts[0] ?? "").trim();
+    const close = Number(parts[4]);
+    if (!date || !Number.isFinite(close)) continue;
+    rows.push({ date, close });
+  }
+
+  if (!rows.length) {
+    throw new Error("No numeric close values in daily CSV");
+  }
+
+  const last = rows[rows.length - 1];
+  const date = last.date;
+  const close = last.close;
 
   if (!Number.isFinite(close)) {
     throw new Error("Close value is not numeric");
   }
 
+  const history = rows.slice(-Math.max(2, maxPoints));
+
   // If we have at least two data rows, compute prev
-  if (lines.length >= 3) {
-    const prev = lines[lines.length - 2].split(",");
-    const prevDate = prev[0];
-    const prevClose = Number(prev[4]);
+  if (rows.length >= 2) {
+    const prev = rows[rows.length - 2];
+    const prevDate = prev.date;
+    const prevClose = prev.close;
 
     if (!Number.isFinite(prevClose)) {
       // Treat as missing rather than failing the whole symbol
-      return { date, close, prevDate: null, prevClose: null };
+      return { date, close, prevDate: null, prevClose: null, history };
     }
 
-    return { date, close, prevDate, prevClose };
+    return { date, close, prevDate, prevClose, history };
   }
 
   // Only one data row available
-  return { date, close, prevDate: null, prevClose: null };
+  return { date, close, prevDate: null, prevClose: null, history };
 }
 
 /**
@@ -406,7 +422,7 @@ async function fetchStooqQuote(sym) {
  * Fetch daily history (fallback to quote) and compute last close + prev close + pct.
  * @param {{sym:string,name:string,group?:string}} w
  * @param {Map<string,{date:(string|null),close:number,prevDate:(string|null),prevClose:(number|null)}>} fallbackMap
- * @returns {Promise<{sym:string,name:string,group:(string|null),date?:string,close?:number,prevDate?:(string|null),prevClose?:(number|null),deltaPct?:number,ok:boolean,error?:string}>}
+ * @returns {Promise<{sym:string,name:string,group:(string|null),date?:string,close?:number,prevDate?:(string|null),prevClose?:(number|null),deltaPct?:number,history?:Array<{date:string,close:number}>,ok:boolean,error?:string}>}
  */
 async function fetchOne(w, fallbackMap) {
   try {
@@ -416,6 +432,7 @@ async function fetchOne(w, fallbackMap) {
     const lines = csv.trim().split("\n").filter(Boolean);
 
     let date, close, prevDate = null, prevClose = null, deltaPct = 0;
+    let history = [];
 
     if (lines.length >= 2) {
       const parsed = parseLastCloseMaybePrev(csv);
@@ -423,6 +440,7 @@ async function fetchOne(w, fallbackMap) {
       close = parsed.close;
       prevDate = parsed.prevDate;
       prevClose = parsed.prevClose;
+      history = parsed.history;
 
       if (prevClose !== null && prevClose !== 0) {
         deltaPct = pctChange(close, prevClose);
@@ -433,6 +451,7 @@ async function fetchOne(w, fallbackMap) {
       date = q.date;
       close = q.close;
       deltaPct = 0;
+      history = [{ date: q.date, close: q.close }];
     }
 
     // If header-only daily (lines length == 1), fallback to quote
@@ -443,6 +462,7 @@ async function fetchOne(w, fallbackMap) {
       prevDate = null;
       prevClose = null;
       deltaPct = 0;
+      history = [{ date: q.date, close: q.close }];
     }
 
     const withFallback = applyPrevFallback(
@@ -459,6 +479,7 @@ async function fetchOne(w, fallbackMap) {
       prevDate: withFallback.prevDate,
       prevClose: withFallback.prevClose,
       deltaPct: withFallback.deltaPct,
+      history,
       ok: true,
     };
   } catch (err) {

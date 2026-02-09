@@ -816,22 +816,190 @@
     }
     .newsItem {
       font-size: 10px;
-      letter-spacing: .12em;
+      letter-spacing: .1em;
       text-transform: uppercase;
-      opacity: .72;
+      opacity: .78;
       white-space: nowrap;
       color: inherit;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 8px;
+      padding: 2px 0;
     }
     .newsItem:hover{
       text-decoration: underline;
       text-underline-offset: 3px;
     }
+    .newsText {
+      opacity: .8;
+    }
+    .newsTags {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+    .newsTag {
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(86, 255, 168, .28);
+      background: rgba(8, 8, 8, .9);
+      color: rgba(86, 255, 168, .9);
+    }
+    .newsTag.is-hot {
+      border-color: rgba(255, 198, 86, .6);
+      color: rgba(255, 198, 86, .92);
+    }
+
+    .overviewTop {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: clamp(360px, 31vw, 540px) minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+    .alertConsole {
+      margin-top: 0;
+      border-radius: 10px;
+      border: 1px solid rgba(86, 255, 168, .26);
+      background:
+        linear-gradient(180deg, rgba(8, 10, 9, .95), rgba(6, 6, 6, .95)),
+        repeating-linear-gradient(90deg, rgba(86, 255, 168, .04) 0 1px, transparent 1px 20px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .34);
+      padding: 8px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 7px;
+    }
+    .alertSummary {
+      border-radius: 8px;
+      border: 1px solid rgba(86, 255, 168, .22);
+      background: rgba(7, 9, 8, .92);
+      padding: 6px 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .alertLabel {
+      font-size: 9px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(86, 255, 168, .88);
+    }
+    .alertCount {
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: .03em;
+      font-variant-numeric: tabular-nums;
+    }
+    .alertState {
+      margin-left: auto;
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      opacity: .72;
+      text-align: right;
+    }
+    .alertRows {
+      display: grid;
+      gap: 6px;
+      grid-template-columns: 1fr;
+    }
+    .alertRow {
+      --alertTone: rgba(86, 255, 168, .7);
+      border-radius: 8px;
+      border: 1px solid rgba(86, 255, 168, .22);
+      border-left: 3px solid var(--alertTone);
+      background: rgba(8, 8, 8, .9);
+      padding: 6px 7px;
+      display: grid;
+      gap: 5px;
+    }
+    .alertRow.is-live {
+      --alertTone: rgba(255, 98, 122, .92);
+      box-shadow: inset 0 0 0 1px rgba(255, 98, 122, .18), 0 0 10px rgba(255, 98, 122, .09);
+    }
+    .alertRow.is-watch {
+      --alertTone: rgba(255, 198, 86, .9);
+    }
+    .alertRow.is-offline {
+      --alertTone: rgba(230, 246, 239, .48);
+      opacity: .82;
+    }
+    .alertTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 7px;
+    }
+    .alertRule {
+      font-size: 9px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .9;
+    }
+    .alertStatus {
+      font-size: 8px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 2px 6px;
+      border: 1px solid currentColor;
+      color: var(--alertTone);
+      background: rgba(8, 8, 8, .9);
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .alertReadouts {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      font-size: 9px;
+    }
+    .alertValue {
+      font-variant-numeric: tabular-nums;
+      letter-spacing: .06em;
+      opacity: .92;
+    }
+    .alertDelta {
+      font-variant-numeric: tabular-nums;
+      letter-spacing: .06em;
+    }
+    .alertDelta.is-up { color: rgba(86, 255, 168, .95); }
+    .alertDelta.is-dn { color: rgba(255, 98, 122, .95); }
+    .alertDelta.is-flat { color: rgba(230, 246, 239, .74); }
+    .alertMeta {
+      opacity: .64;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .alertMeter {
+      height: 3px;
+      border-radius: 999px;
+      border: 1px solid rgba(86, 255, 168, .2);
+      background: rgba(4, 4, 4, .9);
+      overflow: hidden;
+    }
+    .alertFill {
+      display: block;
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(17, 207, 162, .9), var(--alertTone));
+      transition: width .25s ease;
+    }
 
     .signalGrid {
-      margin-top: 14px;
+      margin-top: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
     }
     .signalCard {
@@ -924,6 +1092,83 @@
       letter-spacing: .12em;
       text-transform: uppercase;
       opacity: .65;
+    }
+
+    .corrCard {
+      border-radius: 10px;
+      border: 1px solid rgba(86, 255, 168, .22);
+      background: rgba(8, 8, 8, .9);
+      padding: 10px 12px;
+    }
+    .corrWrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid rgba(86, 255, 168, .18);
+      background: rgba(7, 7, 7, .92);
+    }
+    .corrTable {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5px;
+      min-width: 460px;
+    }
+    .corrTable th,
+    .corrTable td {
+      padding: 6px 8px;
+      border-bottom: 1px dashed rgba(86, 255, 168, .16);
+      border-right: 1px dashed rgba(86, 255, 168, .14);
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .corrTable th:last-child,
+    .corrTable td:last-child {
+      border-right: 0;
+    }
+    .corrTable tbody tr:last-child td {
+      border-bottom: 0;
+    }
+    .corrTable th {
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      opacity: .72;
+      background: rgba(6, 6, 6, .94);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .corrRowHead {
+      text-align: left;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .78;
+      background: rgba(6, 6, 6, .92);
+      min-width: 80px;
+    }
+    .corrCell {
+      color: rgba(230, 246, 239, .9);
+    }
+    .corrCell.is-hi {
+      background: rgba(86, 255, 168, .2);
+      color: rgba(86, 255, 168, .98);
+    }
+    .corrCell.is-mid {
+      background: rgba(86, 255, 168, .12);
+      color: rgba(86, 255, 168, .9);
+    }
+    .corrCell.is-neg {
+      background: rgba(255, 98, 122, .14);
+      color: rgba(255, 182, 194, .92);
+    }
+    .corrCell.is-weak {
+      color: rgba(230, 246, 239, .68);
+    }
+    .corrMeta {
+      margin-top: 8px;
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .66;
     }
 
     .hotkeysGrid {
@@ -1092,7 +1337,7 @@
     }
     .boardRow {
       display: grid;
-      grid-template-columns: auto 1fr auto auto;
+      grid-template-columns: auto minmax(0, 1fr) minmax(62px, 88px) auto auto;
       gap: 8px;
       align-items: center;
       font-size: 11px;
@@ -1112,6 +1357,34 @@
     .boardChg {
       font-variant-numeric: tabular-nums;
       text-align: right;
+    }
+    .boardSpark {
+      width: 100%;
+      height: 18px;
+      overflow: visible;
+      opacity: .92;
+    }
+    .boardSparkArea {
+      fill: rgba(86, 255, 168, .12);
+    }
+    .boardSparkLine {
+      fill: none;
+      stroke: rgba(86, 255, 168, .85);
+      stroke-width: 1.35;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .boardSpark[data-dir="is-dn"] .boardSparkArea {
+      fill: rgba(255, 98, 122, .12);
+    }
+    .boardSpark[data-dir="is-dn"] .boardSparkLine {
+      stroke: rgba(255, 98, 122, .9);
+    }
+    .boardSpark[data-dir="is-flat"] .boardSparkArea {
+      fill: rgba(230, 246, 239, .08);
+    }
+    .boardSpark[data-dir="is-flat"] .boardSparkLine {
+      stroke: rgba(230, 246, 239, .72);
     }
     .boardChg.is-up { color: rgba(86, 255, 168, .98); }
     .boardChg.is-dn { color: rgba(255, 98, 122, .95); }
@@ -1245,12 +1518,16 @@
       .terminalTables { grid-template-columns: 1fr; }
       .moverGrid { grid-template-columns: 1fr; }
     }
+    @media (max-width: 960px) {
+      .overviewTop { grid-template-columns: 1fr; }
+    }
     @media (max-width: 720px) {
       .terminalHead { flex-direction: column; align-items: flex-start; }
       .terminalRight { align-items: flex-start; }
       .kbdRow { justify-content: flex-start; }
       .signalGrid { grid-template-columns: 1fr; }
       .marketBoard { grid-template-columns: 1fr; }
+      .boardRow { grid-template-columns: auto minmax(0, 1fr) minmax(54px, 70px) auto auto; }
     }
 
     @keyframes ticker-scroll {
@@ -1467,49 +1744,77 @@
       </div>
     </section>
 
+    <div class="overviewTop view-overview">
+      <section class="alertConsole" aria-label="Alert console">
+        <div class="alertSummary">
+          <div class="alertLabel">Alert Console</div>
+          <div class="alertCount" id="alertCount">—</div>
+          <div class="alertState" id="alertState">Syncing</div>
+        </div>
+        <div class="alertRows" id="alertRows">
+          <div class="alertRow is-offline">
+            <div class="alertTop">
+              <span class="alertRule">Loading rules</span>
+              <span class="alertStatus">WAIT</span>
+            </div>
+            <div class="alertReadouts">
+              <span class="alertMeta">Fetching market data…</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="signalGrid" aria-label="Market signals">
+        <div class="signalCard">
+          <div class="signalLabel">Median Move</div>
+          <div class="signalValue" id="sigMedian">—</div>
+          <div class="signalMeta">Across symbols</div>
+        </div>
+        <div class="signalCard">
+          <div class="signalLabel">Dispersion</div>
+          <div class="signalValue" id="sigDisp">—</div>
+          <div class="signalMeta">Std dev</div>
+        </div>
+        <div class="signalCard">
+          <div class="signalLabel">Leaders</div>
+          <div class="signalList">
+            <div class="signalRow">
+              <span class="signalKey">Top Up</span>
+              <span class="signalVal" id="sigTopUp">—</span>
+            </div>
+            <div class="signalRow">
+              <span class="signalKey">Top Dn</span>
+              <span class="signalVal" id="sigTopDn">—</span>
+            </div>
+          </div>
+          <div class="signalMeta">Heatmap</div>
+        </div>
+        <div class="signalCard">
+          <div class="signalLabel">Risk Radar</div>
+          <div class="riskRow">
+            <div class="riskRing" id="riskRing" aria-hidden="true"></div>
+            <div>
+              <div class="riskValue" id="riskValue">—</div>
+              <div class="riskNote" id="riskNote">Balanced</div>
+            </div>
+          </div>
+          <div class="signalMeta">Breadth × Dispersion</div>
+        </div>
+      </section>
+    </div>
+
     <div class="terminalLayout">
       <div class="terminalMain">
-        <section class="signalGrid view-overview" aria-label="Market signals">
-      <div class="signalCard">
-        <div class="signalLabel">Breadth</div>
-        <div class="signalValue" id="sigBreadth">—</div>
-        <div class="signalMeta"><span id="sigAdv">—</span> adv / <span id="sigDec">—</span> dec</div>
-      </div>
-      <div class="signalCard">
-        <div class="signalLabel">Median Move</div>
-        <div class="signalValue" id="sigMedian">—</div>
-        <div class="signalMeta">Across symbols</div>
-      </div>
-      <div class="signalCard">
-        <div class="signalLabel">Dispersion</div>
-        <div class="signalValue" id="sigDisp">—</div>
-        <div class="signalMeta">Std dev</div>
-      </div>
-      <div class="signalCard">
-        <div class="signalLabel">Leaders</div>
-        <div class="signalList">
-          <div class="signalRow">
-            <span class="signalKey">Top Up</span>
-            <span class="signalVal" id="sigTopUp">—</span>
+
+        <section class="corrCard view-overview" aria-label="Correlation matrix">
+          <div class="termTableHead">
+            <div class="termTableTitle">Correlation Matrix</div>
+            <div class="termTableHint">Rolling returns</div>
           </div>
-          <div class="signalRow">
-            <span class="signalKey">Top Dn</span>
-            <span class="signalVal" id="sigTopDn">—</span>
+          <div class="corrWrap">
+            <table class="corrTable" id="corrTable" role="table" aria-label="Rolling correlation matrix"></table>
           </div>
-        </div>
-        <div class="signalMeta">Heatmap</div>
-      </div>
-      <div class="signalCard">
-        <div class="signalLabel">Risk Radar</div>
-        <div class="riskRow">
-          <div class="riskRing" id="riskRing" aria-hidden="true"></div>
-          <div>
-            <div class="riskValue" id="riskValue">—</div>
-            <div class="riskNote" id="riskNote">Balanced</div>
-          </div>
-        </div>
-        <div class="signalMeta">Breadth × Dispersion</div>
-      </div>
+          <div class="corrMeta" id="corrMeta">Waiting for history…</div>
         </section>
 
         <section class="marketBoard view-overview" aria-label="Market board">
@@ -2195,9 +2500,6 @@
       const clockRing = document.getElementById("clockRing");
       const clockLabel = document.getElementById("clockLabel");
 
-      const sigBreadth = document.getElementById("sigBreadth");
-      const sigAdv = document.getElementById("sigAdv");
-      const sigDec = document.getElementById("sigDec");
       const sigMedian = document.getElementById("sigMedian");
       const sigDisp = document.getElementById("sigDisp");
       const sigTopUp = document.getElementById("sigTopUp");
@@ -2211,10 +2513,70 @@
       const shockList = document.getElementById("shockList");
       const newsTrack = document.getElementById("newsTrack");
       const newsTrackClone = document.getElementById("newsTrackClone");
+      const alertRows = document.getElementById("alertRows");
+      const alertCountEl = document.getElementById("alertCount");
+      const alertStateEl = document.getElementById("alertState");
+      const corrTable = document.getElementById("corrTable");
+      const corrMeta = document.getElementById("corrMeta");
       const hotkeysDialog = document.getElementById("hotkeys");
       const rateTabs = Array.from(document.querySelectorAll(".js-rate-tab"));
       const ratesRows = document.querySelector(".js-rates-rows");
       const fxRows = document.querySelector(".js-fx-rows");
+      const sparkNs = "http://www.w3.org/2000/svg";
+
+      const corrUniverse = [
+        { sym: "spy.us", label: "SPY" },
+        { sym: "qqq.us", label: "QQQ" },
+        { sym: "10yusy.b", label: "10Y" },
+        { sym: "usdeur", label: "EURUSD" },
+        { sym: "xauusd", label: "GOLD" },
+        { sym: "btc.v", label: "BTC" },
+      ];
+
+      const alertRules = [
+        {
+          id: "10y",
+          label: "10Y Yield Pressure",
+          target: "10Y > 4.50%",
+          sym: "10yusy.b",
+          metric: "close",
+          threshold: 4.5,
+        },
+        {
+          id: "spy",
+          label: "SPY Momentum Shock",
+          target: "|SPY| > 1.5%",
+          sym: "spy.us",
+          metric: "absPct",
+          threshold: 1.5,
+        },
+        {
+          id: "brent",
+          label: "Brent Supply Spike",
+          target: "Brent > $90",
+          sym: "cb.f",
+          metric: "close",
+          threshold: 90,
+        },
+        {
+          id: "btc",
+          label: "BTC Volatility Break",
+          target: "|BTC| > 3.0%",
+          sym: "btc.v",
+          metric: "absPct",
+          threshold: 3,
+        },
+      ];
+
+      const headlineTagRules = [
+        { label: "Crypto", re: /\b(bitcoin|crypto|ethereum|token|btc)\b/i },
+        { label: "Rates", re: /\b(fed|federal reserve|powell|rate|yield|treasury|bond)\b/i },
+        { label: "AI", re: /\b(ai|anthropic|model|software|chip)\b/i },
+        { label: "Commod", re: /\b(oil|gold|mineral|commodity|rare earth)\b/i },
+        { label: "FX", re: /\b(dollar|yuan|yen|euro|currency)\b/i },
+        { label: "Macro", re: /\b(trump|tariff|china|beijing|india|election|inflation|jobs)\b/i },
+        { label: "Equity", re: /\b(stock|shares|equity|etf|portfolio|earnings)\b/i },
+      ];
 
       const viewButtons = Array.from(document.querySelectorAll(".js-view"));
       const viewKeyMap = {
@@ -2347,6 +2709,7 @@
       });
 
       if (!grid || !stamp || !btn) return;
+      ensureBoardSparkSlots();
 
       // Heatmap state so we can re-sort without re-fetching.
       const hmState = {
@@ -2680,6 +3043,344 @@
         return Math.min(max, Math.max(min, n));
       }
 
+      function normalizeHistory(it) {
+        const rows = Array.isArray(it?.history) ? it.history : [];
+        const parsed = rows
+          .map((row) => ({
+            date: String(row?.date ?? "").trim(),
+            close: Number(row?.close),
+          }))
+          .filter((row) => row.date && Number.isFinite(row.close))
+          .sort((a, b) => a.date.localeCompare(b.date));
+
+        if (parsed.length) return parsed;
+
+        const date = String(it?.date ?? "").trim();
+        const prevDate = String(it?.prevDate ?? "").trim();
+        const close = Number(it?.close);
+        const prevClose = Number(it?.prevClose);
+        const fallback = [];
+        if (prevDate && Number.isFinite(prevClose)) fallback.push({ date: prevDate, close: prevClose });
+        if (date && Number.isFinite(close)) fallback.push({ date, close });
+        return fallback;
+      }
+
+      function historyToReturns(history) {
+        const out = [];
+        for (let i = 1; i < history.length; i++) {
+          const prev = Number(history[i - 1]?.close);
+          const cur = Number(history[i]?.close);
+          if (!Number.isFinite(prev) || !Number.isFinite(cur) || prev === 0) continue;
+          out.push({
+            date: String(history[i]?.date ?? ""),
+            ret: ((cur / prev) - 1) * 100,
+          });
+        }
+        return out;
+      }
+
+      function pearsonCorrelation(valuesA, valuesB) {
+        if (!Array.isArray(valuesA) || !Array.isArray(valuesB) || valuesA.length !== valuesB.length) return null;
+        if (valuesA.length < 2) return null;
+        const n = valuesA.length;
+        const meanA = valuesA.reduce((a, b) => a + b, 0) / n;
+        const meanB = valuesB.reduce((a, b) => a + b, 0) / n;
+        let cov = 0;
+        let varA = 0;
+        let varB = 0;
+        for (let i = 0; i < n; i++) {
+          const da = valuesA[i] - meanA;
+          const db = valuesB[i] - meanB;
+          cov += da * db;
+          varA += da * da;
+          varB += db * db;
+        }
+        if (varA === 0 || varB === 0) return null;
+        return cov / Math.sqrt(varA * varB);
+      }
+
+      function buildCorrelationPair(seriesA, seriesB, window = 20) {
+        const mapB = new Map(seriesB.map((row) => [row.date, row.ret]));
+        const pairs = [];
+        for (const rowA of seriesA) {
+          const b = mapB.get(rowA.date);
+          if (!Number.isFinite(rowA.ret) || !Number.isFinite(b)) continue;
+          pairs.push([rowA.ret, b]);
+        }
+        const tail = pairs.slice(-window);
+        if (tail.length < 8) return { value: null, n: tail.length };
+        const a = tail.map((row) => row[0]);
+        const b = tail.map((row) => row[1]);
+        return { value: pearsonCorrelation(a, b), n: tail.length };
+      }
+
+      function corrCellClass(v) {
+        if (!Number.isFinite(v)) return "is-weak";
+        if (v <= -0.25) return "is-neg";
+        if (v >= 0.65) return "is-hi";
+        if (v >= 0.35) return "is-mid";
+        return "is-weak";
+      }
+
+      function headlineTagsFor(title) {
+        const tags = [];
+        if (/\b(surge|slashed|plung|crisis|meltdown|sell off|bear market)\b/i.test(title)) {
+          tags.push({ label: "Vol", hot: true });
+        }
+        for (const rule of headlineTagRules) {
+          if (!rule.re.test(title)) continue;
+          tags.push({ label: rule.label, hot: false });
+        }
+        const seen = new Set();
+        const deduped = [];
+        for (const tag of tags) {
+          const key = tag.label.toLowerCase();
+          if (seen.has(key)) continue;
+          seen.add(key);
+          deduped.push(tag);
+          if (deduped.length >= 2) break;
+        }
+        return deduped;
+      }
+
+      function latestHistoryValues(it, maxPoints = 24) {
+        const points = normalizeHistory(it);
+        if (!points.length) return [];
+        return points.slice(-maxPoints).map((row) => row.close);
+      }
+
+      function sparkPathFromValues(values, width, height, pad = 1) {
+        if (!Array.isArray(values) || values.length < 2) return null;
+        const min = Math.min(...values);
+        const max = Math.max(...values);
+        const span = max - min || 1;
+        const w = Math.max(1, width - pad * 2);
+        const h = Math.max(1, height - pad * 2);
+        const step = values.length > 1 ? w / (values.length - 1) : 0;
+
+        const points = values.map((v, idx) => {
+          const x = pad + idx * step;
+          const y = pad + (1 - (v - min) / span) * h;
+          return { x, y };
+        });
+
+        const line = points
+          .map((p, idx) => `${idx === 0 ? "M" : "L"}${p.x.toFixed(2)} ${p.y.toFixed(2)}`)
+          .join(" ");
+
+        const baseline = (pad + h).toFixed(2);
+        const area =
+          `${line} L${points[points.length - 1].x.toFixed(2)} ${baseline} ` +
+          `L${points[0].x.toFixed(2)} ${baseline} Z`;
+
+        return { line, area };
+      }
+
+      function drawSparkline(svg, values, dirClass) {
+        if (!(svg instanceof SVGElement)) return;
+        const line = svg.querySelector(".boardSparkLine");
+        const area = svg.querySelector(".boardSparkArea");
+        if (!(line instanceof SVGPathElement) || !(area instanceof SVGPathElement)) return;
+
+        const safeVals = values.filter((v) => Number.isFinite(v));
+        const path = sparkPathFromValues(safeVals, 88, 18, 1);
+        if (!path) {
+          line.setAttribute("d", "");
+          area.setAttribute("d", "");
+          svg.dataset.dir = "is-flat";
+          return;
+        }
+
+        line.setAttribute("d", path.line);
+        area.setAttribute("d", path.area);
+        svg.dataset.dir = dirClass || "is-flat";
+      }
+
+      function ensureBoardSparkSlots() {
+        document.querySelectorAll(".boardRow").forEach((row) => {
+          if (row.querySelector(".js-spark")) return;
+          const spark = document.createElementNS(sparkNs, "svg");
+          spark.classList.add("boardSpark", "js-spark");
+          spark.setAttribute("viewBox", "0 0 88 18");
+          spark.setAttribute("preserveAspectRatio", "none");
+          spark.setAttribute("aria-hidden", "true");
+
+          const area = document.createElementNS(sparkNs, "path");
+          area.setAttribute("class", "boardSparkArea");
+          const line = document.createElementNS(sparkNs, "path");
+          line.setAttribute("class", "boardSparkLine");
+          spark.appendChild(area);
+          spark.appendChild(line);
+
+          const price = row.querySelector(".boardPx");
+          if (price) row.insertBefore(spark, price);
+          else row.appendChild(spark);
+        });
+      }
+
+      function evaluateAlert(rule, it) {
+        const close = Number(it?.close);
+        const pct = Number(it?.deltaPct);
+        const threshold = Number(rule?.threshold);
+        const metricName = String(rule?.metric ?? "");
+
+        if (!Number.isFinite(threshold) || threshold <= 0) {
+          return {
+            state: "offline",
+            ratio: 0,
+            triggered: false,
+            valueText: "No metric",
+            pctClass: "is-flat",
+            pctText: "—",
+          };
+        }
+
+        const metric = metricName === "absPct" ? Math.abs(pct) : close;
+        if (!Number.isFinite(metric)) {
+          return {
+            state: "offline",
+            ratio: 0,
+            triggered: false,
+            valueText: "No data",
+            pctClass: "is-flat",
+            pctText: "—",
+          };
+        }
+
+        const ratio = clampNum(metric / threshold, 0, 1.4);
+        const triggered = ratio >= 1;
+        const state = triggered ? "live" : ratio >= 0.82 ? "watch" : "idle";
+        const valueText = metricName === "absPct"
+          ? `|Δ| ${fmtPct(metric)}`
+          : formatValueBySym(rule.sym, close);
+
+        return {
+          state,
+          ratio,
+          triggered,
+          valueText,
+          pctClass: pctDirClass(pct),
+          pctText: Number.isFinite(pct) ? fmtPct(pct) : "—",
+        };
+      }
+
+      function renderAlertConsole(items) {
+        if (!alertRows) return;
+        const map = new Map();
+        for (const it of items) {
+          const key = String(it?.sym ?? "").trim().toLowerCase();
+          if (key) map.set(key, it);
+        }
+
+        let triggeredCount = 0;
+
+        const rows = alertRules.map((rule) => {
+          const it = map.get(rule.sym);
+          const result = evaluateAlert(rule, it);
+          if (result.triggered) triggeredCount += 1;
+
+          const rowClass =
+            result.state === "live" ? "is-live" :
+            result.state === "watch" ? "is-watch" :
+            result.state === "offline" ? "is-offline" :
+            "";
+          const statusText =
+            result.state === "live" ? "LIVE" :
+            result.state === "watch" ? "WATCH" :
+            result.state === "offline" ? "OFFLINE" :
+            "IDLE";
+
+          return `
+            <div class="alertRow ${rowClass}">
+              <div class="alertTop">
+                <span class="alertRule">${escapeHtml(rule.label)}</span>
+                <span class="alertStatus">${statusText}</span>
+              </div>
+              <div class="alertReadouts">
+                <span class="alertValue">${escapeHtml(result.valueText)}</span>
+                <span class="alertDelta ${result.pctClass}">${escapeHtml(result.pctText)}</span>
+                <span class="alertMeta">${escapeHtml(rule.target)}</span>
+              </div>
+              <div class="alertMeter"><span class="alertFill" style="width:${Math.round(clampNum(result.ratio * 100, 0, 100))}%"></span></div>
+            </div>
+          `;
+        });
+
+        alertRows.innerHTML = rows.join("");
+        if (alertCountEl) {
+          alertCountEl.textContent = `${triggeredCount}/${alertRules.length}`;
+        }
+        if (alertStateEl) {
+          alertStateEl.textContent = triggeredCount
+            ? `${triggeredCount} active trigger${triggeredCount > 1 ? "s" : ""}`
+            : "No active triggers";
+        }
+      }
+
+      function renderCorrelationMatrix(items) {
+        if (!corrTable) return;
+        const map = new Map();
+        for (const it of items) {
+          const key = String(it?.sym ?? "").trim().toLowerCase();
+          if (key) map.set(key, it);
+        }
+
+        const rows = corrUniverse
+          .map((entry) => {
+            const it = map.get(entry.sym);
+            const history = normalizeHistory(it);
+            const returns = historyToReturns(history);
+            return {
+              ...entry,
+              returns,
+            };
+          })
+          .filter((row) => row.returns.length >= 2);
+
+        if (rows.length < 2) {
+          corrTable.innerHTML = `
+            <thead><tr><th>Pair</th><th>Status</th></tr></thead>
+            <tbody><tr><td class="corrRowHead">Matrix</td><td class="corrCell is-weak">Need more history</td></tr></tbody>
+          `;
+          if (corrMeta) corrMeta.textContent = "Rolling 20-day correlation needs symbols with history arrays.";
+          return;
+        }
+
+        const overlaps = [];
+        const head = rows.map((r) => `<th>${r.label}</th>`).join("");
+        const body = rows
+          .map((rowA, i) => {
+            const cells = rows
+              .map((rowB, j) => {
+                if (i === j) {
+                  return `<td class="corrCell is-hi" title="Same asset">1.00</td>`;
+                }
+                const pair = buildCorrelationPair(rowA.returns, rowB.returns, 20);
+                overlaps.push(pair.n);
+                const value = pair.value;
+                const text = Number.isFinite(value) ? value.toFixed(2) : "—";
+                const klass = corrCellClass(value);
+                const tip = pair.n ? `Overlap: ${pair.n} sessions` : "No overlap";
+                return `<td class="corrCell ${klass}" title="${tip}">${text}</td>`;
+              })
+              .join("");
+            return `<tr><th class="corrRowHead">${rowA.label}</th>${cells}</tr>`;
+          })
+          .join("");
+
+        corrTable.innerHTML = `
+          <thead><tr><th></th>${head}</tr></thead>
+          <tbody>${body}</tbody>
+        `;
+
+        if (corrMeta) {
+          const avg = overlaps.length
+            ? Math.round(overlaps.reduce((a, b) => a + b, 0) / overlaps.length)
+            : 0;
+          corrMeta.textContent = `Computed on overlapping daily returns (up to 20 sessions, avg overlap ${avg}).`;
+        }
+      }
+
       function updateSymbolBindings(items) {
         if (!Array.isArray(items) || !items.length) return;
         const map = new Map();
@@ -2708,20 +3409,22 @@
             el.classList.remove("is-up", "is-dn", "is-flat");
             el.classList.add(pctDirClass(pct));
           });
+
+          if (node.classList.contains("boardRow")) {
+            const spark = node.querySelector(".js-spark");
+            drawSparkline(spark, latestHistoryValues(it, 24), pctDirClass(pct));
+          }
         });
       }
 
       function updateSignalBlocks(items) {
-        if (!sigBreadth || !Array.isArray(items)) return;
+        if (!Array.isArray(items)) return;
         const deltas = items
           .map((it) => Number(it.deltaPct))
           .filter((v) => Number.isFinite(v))
           .sort((a, b) => a - b);
 
         if (!deltas.length) {
-          sigBreadth.textContent = "—";
-          if (sigAdv) sigAdv.textContent = "—";
-          if (sigDec) sigDec.textContent = "—";
           if (sigMedian) sigMedian.textContent = "—";
           if (sigDisp) sigDisp.textContent = "—";
           if (sigTopUp) sigTopUp.textContent = "—";
@@ -2751,9 +3454,6 @@
           if (!topDn || pct < topDn.pct) topDn = { sym: it.sym, pct };
         }
 
-        sigBreadth.textContent = `${breadth.toFixed(0)}%`;
-        if (sigAdv) sigAdv.textContent = String(adv);
-        if (sigDec) sigDec.textContent = String(dec);
         if (sigMedian) sigMedian.textContent = fmtPct(median);
         if (sigDisp) sigDisp.textContent = `${stdev.toFixed(2)}%`;
         if (sigTopUp) sigTopUp.textContent = topUp ? `${String(topUp.sym ?? "").toUpperCase()} ${fmtPct(topUp.pct)}` : "—";
@@ -2856,19 +3556,30 @@
               .map((it) => ({
                 title: String(it?.title ?? "").trim(),
                 link: String(it?.link ?? "").trim(),
+                pubDate: String(it?.pubDate ?? "").trim(),
               }))
               .filter((it) => it.title.length)
           : [];
 
-        if (!cleaned.length) return;
+        if (!cleaned.length) {
+          const empty = "<span class=\"newsItem\"><span class=\"newsText\">No headlines</span></span>";
+          newsTrack.innerHTML = empty;
+          newsTrackClone.innerHTML = empty;
+          return;
+        }
 
         const html = cleaned
           .map((it) => {
             const title = escapeHtml(it.title);
             const link = it.link ? escapeHtml(it.link) : "";
+            const tags = headlineTagsFor(it.title)
+              .map((tag) => `<span class="newsTag ${tag.hot ? "is-hot" : ""}">${escapeHtml(tag.label)}</span>`)
+              .join("");
+            const tagHtml = tags ? `<span class="newsTags">${tags}</span>` : "";
+            const dateAttr = it.pubDate ? ` title="${escapeHtml(it.pubDate)}"` : "";
             return link
-              ? `<a class="newsItem" href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>`
-              : `<span class="newsItem">${title}</span>`;
+              ? `<a class="newsItem" href="${link}" target="_blank" rel="noopener noreferrer"${dateAttr}>${tagHtml}<span class="newsText">${title}</span></a>`
+              : `<span class="newsItem"${dateAttr}>${tagHtml}<span class="newsText">${title}</span></span>`;
           })
           .join("");
 
@@ -3091,6 +3802,8 @@
         updateSymbolBindings(items);
         updateSignalBlocks(items);
         updateMoverLists(items);
+        renderAlertConsole(items);
+        renderCorrelationMatrix(items);
         updateTermSync(hmState.generatedAt);
       }
 
