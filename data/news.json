@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-02-09T13:40:26.969Z",
+  "generatedAt": "2026-02-10T13:44:24.613Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "YouTube star MrBeast buys youth-focused financial services app Step",
+      "link": "https://www.cnbc.com/2026/02/10/youtube-mrbeast-youth-financial-services-app-step-beast-industries-acquires-fintech-app.html",
+      "pubDate": "Tue, 10 Feb 2026 03:03:15 GMT"
+    },
+    {
+      "title": "Alphabet calls out new AI-related risks, as it taps debt market to fund build-out",
+      "link": "https://www.cnbc.com/2026/02/09/alphabet-highlights-new-ai-related-risks-in-tapping-debt-market.html",
+      "pubDate": "Tue, 10 Feb 2026 07:01:17 GMT"
+    },
     {
       "title": "S&P is already predicting China&apos;s property slump will be worse than it expected this year",
       "link": "https://www.cnbc.com/2026/02/09/sp-i-china-property-slump-worse-than-expected.html",
@@ -11,7 +21,7 @@
     {
       "title": "Digital employees, AI bootcamps: America&apos;s oldest bank is spending billions on tech",
       "link": "https://www.cnbc.com/2026/02/09/digital-employees-ai-bootcamps-americas-oldest-bank-spends-billions-on-tech.html",
-      "pubDate": "Mon, 09 Feb 2026 11:00:01 GMT"
+      "pubDate": "Mon, 09 Feb 2026 14:47:59 GMT"
     },
     {
       "title": "China&apos;s Luckin Coffee opens first high-end store as it takes on Starbucks",
@@ -54,11 +64,6 @@
       "pubDate": "Wed, 04 Feb 2026 15:26:53 GMT"
     },
     {
-      "title": "Rocket Companies shares jump 6% after CEO says mortgage loan volume is surging",
-      "link": "https://www.cnbc.com/2026/02/03/rocket-companies-shares-jump-6percent-after-ceo-says-mortgage-loan-volume-is-surging.html",
-      "pubDate": "Tue, 03 Feb 2026 13:32:19 GMT"
-    },
-    {
       "title": "China set to attend India&apos;s upcoming AI summit signaling improving relations with New Delhi",
       "link": "https://www.cnbc.com/2026/02/03/china-india-ai-summit-improving-relations-with-new-delhi.html",
       "pubDate": "Tue, 03 Feb 2026 23:35:36 GMT"
@@ -71,12 +76,12 @@
     {
       "title": "Strategy slides after bitcoin briefly dips below crypto firm&apos;s key breakeven level",
       "link": "https://www.cnbc.com/2026/02/02/strategy-slides-after-bitcoin-briefly-dips-below-crypto-firms-key-breakeven-level-.html",
-      "pubDate": "Mon, 02 Feb 2026 22:39:16 GMT"
+      "pubDate": "Mon, 02 Feb 2026 15:19:30 GMT"
     },
     {
       "title": "Rare earth miners jump as Trump announces establishment of critical mineral reserve",
       "link": "https://www.cnbc.com/2026/02/02/rare-earth-miners-jump-as-trump-is-reportedly-eyeing-mineral-stockpile-.html",
-      "pubDate": "Mon, 02 Feb 2026 21:56:32 GMT"
+      "pubDate": "Mon, 02 Feb 2026 21:55:49 GMT"
     },
     {
       "title": "American Express, credit card provider to the wealthy, wants even more high spenders",
@@ -87,11 +92,6 @@
       "title": "If you missed big international stock market rally in 2025, it&apos;s not too late to start making money overseas",
       "link": "https://www.cnbc.com/2026/01/30/overseas-markets-international-stocks-investing-etfs.html",
       "pubDate": "Fri, 30 Jan 2026 20:09:36 GMT"
-    },
-    {
-      "title": "Everything you need to know about Kevin Warsh, Trump&apos;s pick to lead the Federal Reserve",
-      "link": "https://www.cnbc.com/2026/01/30/who-is-kevin-warsh-trumps-fed-chair-pick.html",
-      "pubDate": "Fri, 30 Jan 2026 18:28:58 GMT"
     }
   ]
 }
