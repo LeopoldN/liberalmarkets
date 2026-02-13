@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-02-12T13:38:57.930Z",
+  "generatedAt": "2026-02-13T13:20:26.871Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "China&apos;s Baidu adds OpenClaw AI into search app for 700 million users ahead of Lunar New Year",
+      "link": "https://www.cnbc.com/2026/02/13/baidu-openclaw-ai-search-app-integration-china-lunar-new-year.html",
+      "pubDate": "Fri, 13 Feb 2026 08:03:24 GMT"
+    },
+    {
+      "title": "Xiaomi&apos;s electric SUV tops China sales in January, sells twice as many as Tesla&apos;s Model Y",
+      "link": "https://www.cnbc.com/2026/02/13/xiaomis-electric-suv-tops-china-sales-in-january-sells-twice-as-many-as-teslas-model-y.html",
+      "pubDate": "Fri, 13 Feb 2026 02:31:38 GMT"
+    },
     {
       "title": "Tech IPO hype gets drowned out on Wall Street by prospect of $1 trillion in debt sales",
       "link": "https://www.cnbc.com/2026/02/12/tech-ipo-hype-drowned-out-by-prospect-of-1-trillion-in-debt-sales.html",
@@ -82,16 +92,6 @@
       "title": "Kalshi expands surveillance, enforcement efforts ahead of Super Bowl 60",
       "link": "https://www.cnbc.com/2026/02/05/kalshi-expands-surveillance-enforcement-efforts.html",
       "pubDate": "Thu, 05 Feb 2026 16:51:40 GMT"
-    },
-    {
-      "title": "Fixed-income ETF provider BondBloxx questions private credit meltdown fears, sees space as sensible way to generate income",
-      "link": "https://www.cnbc.com/2026/02/05/private-credit-meltdown-fears-why-bondbloxx-isnt-worried-.html",
-      "pubDate": "Thu, 05 Feb 2026 12:00:01 GMT"
-    },
-    {
-      "title": "Bitcoin bleeds for second straight day, nearly grazes $72,000",
-      "link": "https://www.cnbc.com/2026/02/04/bitcoin-bleeds-for-second-straight-day-nearly-grazes-72000.html",
-      "pubDate": "Thu, 05 Feb 2026 15:30:35 GMT"
     }
   ]
 }
