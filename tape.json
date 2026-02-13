@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T21:04:09.713Z",
+  "generatedAt": "2026-02-13T21:58:35.617Z",
   "source": "stooq",
   "items": [
     {
@@ -972,14 +972,14 @@
       "name": "Brent Oil",
       "group": null,
       "date": "2026-02-13",
-      "close": 67.68,
+      "close": 67.64,
       "prevDate": "2026-02-12",
       "prevClose": 67.62,
-      "deltaPct": 0.08873114463177068,
+      "deltaPct": 0.029577048210582824,
       "history": [
         {
           "date": "2026-02-13",
-          "close": 67.68
+          "close": 67.64
         }
       ],
       "ok": true
@@ -1375,10 +1375,10 @@
       "name": "ASTS",
       "group": null,
       "date": "2026-02-13",
-      "close": 82.405,
+      "close": 82.56,
       "prevDate": "2026-02-12",
       "prevClose": 82.22,
-      "deltaPct": 0.22500608124544907,
+      "deltaPct": 0.4135246898564926,
       "history": [
         {
           "date": "2025-12-10",
@@ -1558,7 +1558,7 @@
         },
         {
           "date": "2026-02-13",
-          "close": 82.405
+          "close": 82.56
         }
       ],
       "ok": true
