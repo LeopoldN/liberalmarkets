@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-02-13T13:20:26.871Z",
+  "generatedAt": "2026-02-14T13:07:35.608Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "AI disruption could spark a ‘shock to the system’ in credit markets, UBS analyst says",
+      "link": "https://www.cnbc.com/2026/02/13/ai-credit-markets.html",
+      "pubDate": "Fri, 13 Feb 2026 18:19:01 GMT"
+    },
     {
       "title": "China&apos;s Baidu adds OpenClaw AI into search app for 700 million users ahead of Lunar New Year",
       "link": "https://www.cnbc.com/2026/02/13/baidu-openclaw-ai-search-app-integration-china-lunar-new-year.html",
@@ -87,11 +92,6 @@
       "title": "Goldman Sachs taps Anthropic’s Claude to automate accounting, compliance roles",
       "link": "https://www.cnbc.com/2026/02/06/anthropic-goldman-sachs-ai-model-accounting.html",
       "pubDate": "Fri, 06 Feb 2026 18:10:44 GMT"
-    },
-    {
-      "title": "Kalshi expands surveillance, enforcement efforts ahead of Super Bowl 60",
-      "link": "https://www.cnbc.com/2026/02/05/kalshi-expands-surveillance-enforcement-efforts.html",
-      "pubDate": "Thu, 05 Feb 2026 16:51:40 GMT"
     }
   ]
 }
