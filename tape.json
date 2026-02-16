@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T15:38:59.150Z",
+  "generatedAt": "2026-02-16T20:56:28.719Z",
   "source": "stooq",
   "items": [
     {
@@ -393,10 +393,10 @@
       "name": "US 10Y Yield",
       "group": null,
       "date": "2026-02-16",
-      "close": 4.029,
+      "close": 4.04,
       "prevDate": "2026-02-13",
       "prevClose": 4.049,
-      "deltaPct": -0.4939491232403226,
+      "deltaPct": -0.22227710545814627,
       "history": [
         {
           "date": "2025-12-12",
@@ -576,7 +576,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 4.029
+          "close": 4.04
         }
       ],
       "ok": true
@@ -779,10 +779,10 @@
       "name": "USD/EUR",
       "group": null,
       "date": "2026-02-16",
-      "close": 0.843476,
+      "close": 0.843561,
       "prevDate": "2026-02-13",
       "prevClose": 0.842147,
-      "deltaPct": 0.15781092849584955,
+      "deltaPct": 0.16790417824916748,
       "history": [
         {
           "date": "2025-12-15",
@@ -962,7 +962,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 0.843476
+          "close": 0.843561
         }
       ],
       "ok": true
@@ -972,14 +972,14 @@
       "name": "Brent Oil",
       "group": null,
       "date": "2026-02-16",
-      "close": 68.27,
+      "close": 68.64,
       "prevDate": "2026-02-13",
       "prevClose": 67.64,
-      "deltaPct": 0.9314015375517348,
+      "deltaPct": 1.4784151389710232,
       "history": [
         {
           "date": "2026-02-16",
-          "close": 68.27
+          "close": 68.64
         }
       ],
       "ok": true
@@ -1182,10 +1182,10 @@
       "name": "Gold",
       "group": null,
       "date": "2026-02-16",
-      "close": 4977.005,
+      "close": 4992.47,
       "prevDate": "2026-02-13",
       "prevClose": 5032.915,
-      "deltaPct": -1.1108870306770546,
+      "deltaPct": -0.8036098364466615,
       "history": [
         {
           "date": "2025-12-12",
@@ -1365,7 +1365,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 4977.005
+          "close": 4992.47
         }
       ],
       "ok": true

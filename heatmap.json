@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T15:38:59.150Z",
+  "generatedAt": "2026-02-16T20:56:28.719Z",
   "source": "stooq",
   "items": [
     {
@@ -1358,10 +1358,10 @@
       "name": "DAX Germany",
       "group": "Index",
       "date": "2026-02-16",
-      "close": 24876.28,
+      "close": 24812.5,
       "prevDate": "2026-02-13",
       "prevClose": 24914.88,
-      "deltaPct": -0.1549274971422765,
+      "deltaPct": -0.41091909734263243,
       "history": [
         {
           "date": "2025-12-09",
@@ -1541,7 +1541,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 24876.28
+          "close": 24812.5
         }
       ],
       "ok": true
@@ -1551,10 +1551,10 @@
       "name": "FTSE 100 UK",
       "group": "Index",
       "date": "2026-02-16",
-      "close": 10476.9,
+      "close": 10473.7,
       "prevDate": "2026-02-13",
       "prevClose": 10446.35,
-      "deltaPct": 0.2924466440431317,
+      "deltaPct": 0.26181393501079064,
       "history": [
         {
           "date": "2025-12-11",
@@ -1734,7 +1734,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 10476.9
+          "close": 10473.7
         }
       ],
       "ok": true
@@ -6376,10 +6376,10 @@
       "name": "Gold",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 4978.235,
+      "close": 4992.47,
       "prevDate": "2026-02-13",
       "prevClose": 5032.915,
-      "deltaPct": -1.0864479133861793,
+      "deltaPct": -0.8036098364466615,
       "history": [
         {
           "date": "2025-12-12",
@@ -6559,7 +6559,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 4978.235
+          "close": 4992.47
         }
       ],
       "ok": true
@@ -6569,14 +6569,14 @@
       "name": "Brent Oil",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 68.31,
+      "close": 68.64,
       "prevDate": "2026-02-13",
       "prevClose": 67.63,
-      "deltaPct": 1.0054709448469756,
+      "deltaPct": 1.4934200798462305,
       "history": [
         {
           "date": "2026-02-16",
-          "close": 68.31
+          "close": 68.64
         }
       ],
       "ok": true
@@ -6586,14 +6586,14 @@
       "name": "WTI Crude",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 63.31,
+      "close": 63.56,
       "prevDate": "2026-02-13",
       "prevClose": 62.8,
-      "deltaPct": 0.8121019108280336,
+      "deltaPct": 1.2101910828025586,
       "history": [
         {
           "date": "2026-02-16",
-          "close": 63.31
+          "close": 63.56
         }
       ],
       "ok": true
@@ -6603,14 +6603,14 @@
       "name": "Gold (Fut)",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 4998.19,
+      "close": 5013.1,
       "prevDate": "2026-02-13",
       "prevClose": 5063.09,
-      "deltaPct": -1.2818259205347071,
+      "deltaPct": -0.9873417221499037,
       "history": [
         {
           "date": "2026-02-16",
-          "close": 4998.19
+          "close": 5013.1
         }
       ],
       "ok": true
@@ -7006,10 +7006,10 @@
       "name": "US 10Y Yield",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 4.029,
+      "close": 4.04,
       "prevDate": "2026-02-13",
       "prevClose": 4.049,
-      "deltaPct": -0.4939491232403226,
+      "deltaPct": -0.22227710545814627,
       "history": [
         {
           "date": "2025-12-12",
@@ -7189,7 +7189,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 4.029
+          "close": 4.04
         }
       ],
       "ok": true
@@ -7392,10 +7392,10 @@
       "name": "USD/EUR",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 0.843589,
+      "close": 0.843597,
       "prevDate": "2026-02-13",
       "prevClose": 0.842147,
-      "deltaPct": 0.17122901346202646,
+      "deltaPct": 0.17217896637997665,
       "history": [
         {
           "date": "2025-12-15",
@@ -7575,7 +7575,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 0.843589
+          "close": 0.843597
         }
       ],
       "ok": true
@@ -7585,10 +7585,10 @@
       "name": "USD/JPY",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 153.3675,
+      "close": 153.4675,
       "prevDate": "2026-02-13",
       "prevClose": 152.7595,
-      "deltaPct": 0.39801125298262185,
+      "deltaPct": 0.46347363011793874,
       "history": [
         {
           "date": "2025-12-15",
@@ -7768,7 +7768,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 153.3675
+          "close": 153.4675
         }
       ],
       "ok": true
@@ -8164,10 +8164,10 @@
       "name": "Bitcoin",
       "group": "Crypto",
       "date": "2026-02-16",
-      "close": 67416.75,
+      "close": 68455.62,
       "prevDate": "2026-02-15",
       "prevClose": 68919.63,
-      "deltaPct": -2.180626912825856,
+      "deltaPct": -0.6732624652802222,
       "history": [
         {
           "date": "2026-01-03",
@@ -8347,7 +8347,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 67416.75
+          "close": 68455.62
         }
       ],
       "ok": true
@@ -8357,10 +8357,10 @@
       "name": "Ethereum",
       "group": "Crypto",
       "date": "2026-02-16",
-      "close": 1947.62,
+      "close": 1992.381,
       "prevDate": "2026-02-15",
       "prevClose": 1969.482,
-      "deltaPct": -1.1100380709242352,
+      "deltaPct": 1.162691509747238,
       "history": [
         {
           "date": "2026-01-03",
@@ -8540,7 +8540,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 1947.62
+          "close": 1992.381
         }
       ],
       "ok": true
@@ -8550,10 +8550,10 @@
       "name": "Solana",
       "group": "Crypto",
       "date": "2026-02-16",
-      "close": 82.84343,
+      "close": 85.38292,
       "prevDate": "2026-02-15",
       "prevClose": 86.32546,
-      "deltaPct": -4.033607234760184,
+      "deltaPct": -1.0918447466135794,
       "history": [
         {
           "date": "2026-01-03",
@@ -8733,7 +8733,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 82.84343
+          "close": 85.38292
         }
       ],
       "ok": true
@@ -8743,10 +8743,10 @@
       "name": "XRP",
       "group": "Crypto",
       "date": "2026-02-16",
-      "close": 1.46751,
+      "close": 1.4847,
       "prevDate": "2026-02-15",
       "prevClose": 1.48521,
-      "deltaPct": -1.191750661522606,
+      "deltaPct": -0.03433857838285315,
       "history": [
         {
           "date": "2026-01-03",
@@ -8926,7 +8926,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 1.46751
+          "close": 1.4847
         }
       ],
       "ok": true
@@ -8936,10 +8936,10 @@
       "name": "Dogecoin",
       "group": "Crypto",
       "date": "2026-02-16",
-      "close": 0.0991902,
+      "close": 0.10093,
       "prevDate": "2026-02-15",
       "prevClose": 0.103319,
-      "deltaPct": -3.9961672102904466,
+      "deltaPct": -2.312256216184816,
       "history": [
         {
           "date": "2026-01-03",
@@ -9119,7 +9119,7 @@
         },
         {
           "date": "2026-02-16",
-          "close": 0.0991902
+          "close": 0.10093
         }
       ],
       "ok": true
@@ -9129,14 +9129,14 @@
       "name": "Copper",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 578.2,
+      "close": 576.25,
       "prevDate": "2026-02-13",
       "prevClose": 578.52,
-      "deltaPct": -0.0553135587360698,
+      "deltaPct": -0.39238055728409993,
       "history": [
         {
           "date": "2026-02-16",
-          "close": 578.2
+          "close": 576.25
         }
       ],
       "ok": true
@@ -9146,14 +9146,14 @@
       "name": "Silver",
       "group": "Macro",
       "date": "2026-02-16",
-      "close": 7614,
+      "close": 7655.5,
       "prevDate": "2026-02-13",
       "prevClose": 7731.7,
-      "deltaPct": -1.5223042797832265,
+      "deltaPct": -0.9855529831731658,
       "history": [
         {
           "date": "2026-02-16",
-          "close": 7614
+          "close": 7655.5
         }
       ],
       "ok": true
