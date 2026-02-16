@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-02-15T13:09:37.514Z",
+  "generatedAt": "2026-02-16T13:22:53.637Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "In bitcoin price plummet, ETF flows are down but aren&apos;t signaling &apos;crypto winter&apos; investor panic",
+      "link": "https://www.cnbc.com/2026/02/15/bitcoin-price-crash-crypto-winter-investors-etf-flows.html",
+      "pubDate": "Sun, 15 Feb 2026 15:24:48 GMT"
+    },
     {
       "title": "AI disruption could spark a ‘shock to the system’ in credit markets, UBS analyst says",
       "link": "https://www.cnbc.com/2026/02/13/ai-credit-markets.html",
@@ -87,11 +92,6 @@
       "title": "Bitcoin gets slashed in half. What&apos;s behind the crypto&apos;s existential crisis",
       "link": "https://www.cnbc.com/2026/02/06/bitcoin-gets-slashed-in-half-whats-behind-the-cryptos-existential-crisis.html",
       "pubDate": "Fri, 06 Feb 2026 18:50:10 GMT"
-    },
-    {
-      "title": "Goldman Sachs taps Anthropic’s Claude to automate accounting, compliance roles",
-      "link": "https://www.cnbc.com/2026/02/06/anthropic-goldman-sachs-ai-model-accounting.html",
-      "pubDate": "Fri, 06 Feb 2026 18:10:44 GMT"
     }
   ]
 }
