@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-02-18T13:25:22.961Z",
+  "generatedAt": "2026-02-19T13:26:26.250Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Fed officials split on where interest rates should go, minutes say",
+      "link": "https://www.cnbc.com/2026/02/18/fed-minutes-january-2026.html",
+      "pubDate": "Wed, 18 Feb 2026 20:19:23 GMT"
+    },
     {
       "title": "Berkshire Hathaway trims Apple stake, buys NYTimes stock in Buffett&apos;s last moves as CEO",
       "link": "https://www.cnbc.com/2026/02/17/berkshire-hathaway-trims-apple-stake-buys-nytimes-stock-in-buffetts-last-moves-as-ceo.html",
@@ -87,11 +92,6 @@
       "title": "Digital employees, AI bootcamps: America&apos;s oldest bank is spending billions on tech",
       "link": "https://www.cnbc.com/2026/02/09/digital-employees-ai-bootcamps-americas-oldest-bank-spends-billions-on-tech.html",
       "pubDate": "Mon, 09 Feb 2026 14:47:59 GMT"
-    },
-    {
-      "title": "China&apos;s Luckin Coffee opens first high-end store as it takes on Starbucks",
-      "link": "https://www.cnbc.com/2026/02/08/chinas-luckin-coffee-opens-its-first-high-end-store.html",
-      "pubDate": "Sun, 08 Feb 2026 06:26:08 GMT"
     }
   ]
 }
