@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-02-20T13:17:49.865Z",
+  "generatedAt": "2026-02-21T13:06:34.580Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Illiquid loans, investor demands: Blue Owl&apos;s software lending triggers another quake in private credit",
+      "link": "https://www.cnbc.com/2026/02/20/blue-owl-software-lending-private-credit-concerns.html",
+      "pubDate": "Fri, 20 Feb 2026 22:07:13 GMT"
+    },
     {
       "title": "Fed officials split on where interest rates should go, minutes say",
       "link": "https://www.cnbc.com/2026/02/18/fed-minutes-january-2026.html",
@@ -87,11 +92,6 @@
       "title": "S&P is already predicting China&apos;s property slump will be worse than it expected this year",
       "link": "https://www.cnbc.com/2026/02/09/sp-i-china-property-slump-worse-than-expected.html",
       "pubDate": "Mon, 09 Feb 2026 11:45:03 GMT"
-    },
-    {
-      "title": "Digital employees, AI bootcamps: America&apos;s oldest bank is spending billions on tech",
-      "link": "https://www.cnbc.com/2026/02/09/digital-employees-ai-bootcamps-americas-oldest-bank-spends-billions-on-tech.html",
-      "pubDate": "Mon, 09 Feb 2026 14:47:59 GMT"
     }
   ]
 }
