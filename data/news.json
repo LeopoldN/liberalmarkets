@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-02-21T13:06:34.580Z",
+  "generatedAt": "2026-02-22T13:08:14.356Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Here are 3 forces that drove the stock market during Wall Street’s comeback week",
+      "link": "https://www.cnbc.com/2026/02/21/3-forces-that-drove-the-stock-market-during-wall-streets-comeback-week.html",
+      "pubDate": "Sat, 21 Feb 2026 17:46:51 GMT"
+    },
+    {
+      "title": "Market volatility trap? Why this income-first strategy may &apos;leave a lot on the table&apos;",
+      "link": "https://www.cnbc.com/2026/02/21/market-volatility-trap-this-investment-strategy-may-hurt-investors-.html",
+      "pubDate": "Sat, 21 Feb 2026 16:00:01 GMT"
+    },
     {
       "title": "Illiquid loans, investor demands: Blue Owl&apos;s software lending triggers another quake in private credit",
       "link": "https://www.cnbc.com/2026/02/20/blue-owl-software-lending-private-credit-concerns.html",
@@ -82,16 +92,6 @@
       "title": "YouTube star MrBeast buys youth-focused financial services app Step",
       "link": "https://www.cnbc.com/2026/02/10/youtube-mrbeast-youth-financial-services-app-step-beast-industries-acquires-fintech-app.html",
       "pubDate": "Tue, 10 Feb 2026 03:03:15 GMT"
-    },
-    {
-      "title": "Alphabet calls out new AI-related risks, as it taps debt market to fund build-out",
-      "link": "https://www.cnbc.com/2026/02/09/alphabet-highlights-new-ai-related-risks-in-tapping-debt-market.html",
-      "pubDate": "Tue, 10 Feb 2026 07:01:17 GMT"
-    },
-    {
-      "title": "S&P is already predicting China&apos;s property slump will be worse than it expected this year",
-      "link": "https://www.cnbc.com/2026/02/09/sp-i-china-property-slump-worse-than-expected.html",
-      "pubDate": "Mon, 09 Feb 2026 11:45:03 GMT"
     }
   ]
 }
