@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-02-23T13:24:57.536Z",
+  "generatedAt": "2026-02-24T13:26:26.252Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Fed&apos;s Goolsbee calls for a hold on cuts as current rate of inflation is &apos;not good enough&apos;",
+      "link": "https://www.cnbc.com/2026/02/24/feds-goolsbee-calls-for-a-hold-on-cuts-as-current-rate-of-inflation-is-not-good-enough.html",
+      "pubDate": "Tue, 24 Feb 2026 13:00:59 GMT"
+    },
+    {
+      "title": "Jamie Dimon says &apos;watch out’ as lofty asset prices add to economic risks: ‘My anxiety is high’",
+      "link": "https://www.cnbc.com/2026/02/23/jamie-dimon-says-watch-out-as-high-asset-prices-add-to-economic-risks-my-anxiety-is-high.html",
+      "pubDate": "Tue, 24 Feb 2026 13:17:41 GMT"
+    },
+    {
+      "title": "Supreme Court ruling throws Trump administration&apos;s tariff strategy into flux. What it means for global trade, U.S. economy",
+      "link": "https://www.cnbc.com/2026/02/23/what-supreme-court-tariff-ruling-means-for-global-trade-us-economy.html",
+      "pubDate": "Tue, 24 Feb 2026 00:03:54 GMT"
+    },
+    {
+      "title": "Bitcoin falls to nearly $64,000 as 2026 crypto woes continue",
+      "link": "https://www.cnbc.com/2026/02/23/bitcoin-falls-to-nearly-64000-as-2026-crypto-woes-continue-.html",
+      "pubDate": "Mon, 23 Feb 2026 18:02:59 GMT"
+    },
     {
       "title": "Here are 3 forces that drove the stock market during Wall Street’s comeback week",
       "link": "https://www.cnbc.com/2026/02/21/3-forces-that-drove-the-stock-market-during-wall-streets-comeback-week.html",
@@ -72,26 +92,6 @@
       "title": "Vatican Bank makes first foray into equity indexes, setting stage for potential ETF launches",
       "link": "https://www.cnbc.com/2026/02/10/vatican-bank-makes-first-foray-into-equity-indexes-setting-stage-for-potential-etf-launches.html",
       "pubDate": "Tue, 10 Feb 2026 21:27:02 GMT"
-    },
-    {
-      "title": "Bitcoin plunge: Bitwise CIO cites &apos;the four-year cycle&apos; as No. 1 reason for losses",
-      "link": "https://www.cnbc.com/2026/02/10/bitcoin-crash-bitwise-cio-cites-the-four-year-cycle-for-losses.html",
-      "pubDate": "Tue, 10 Feb 2026 20:35:57 GMT"
-    },
-    {
-      "title": "Alphabet boosts debt sale again as total raise exceeds $30 billion, sources say",
-      "link": "https://www.cnbc.com/2026/02/10/alphabet-set-to-raise-over-30-billion-in-global-debt-sale-sources.html",
-      "pubDate": "Tue, 10 Feb 2026 21:25:40 GMT"
-    },
-    {
-      "title": "Michael Saylor downplays Strategy credit risk as bitcoin tumbles: &apos;We&apos;ll refinance the debt&apos;",
-      "link": "https://www.cnbc.com/2026/02/10/michael-saylor-downplays-strategy-credit-risk-as-bitcoin-tumbles-well-refinance-the-debt.html",
-      "pubDate": "Tue, 10 Feb 2026 14:41:34 GMT"
-    },
-    {
-      "title": "YouTube star MrBeast buys youth-focused financial services app Step",
-      "link": "https://www.cnbc.com/2026/02/10/youtube-mrbeast-youth-financial-services-app-step-beast-industries-acquires-fintech-app.html",
-      "pubDate": "Tue, 10 Feb 2026 03:03:15 GMT"
     }
   ]
 }
