@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-02-24T13:26:26.252Z",
+  "generatedAt": "2026-02-25T13:25:35.936Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Trump makes little mention of China in the longest State of the Union speech",
+      "link": "https://www.cnbc.com/2026/02/25/trump-china-state-of-the-union-speech.html",
+      "pubDate": "Wed, 25 Feb 2026 08:42:49 GMT"
+    },
+    {
+      "title": "The global M&A boom is rolling into 2026 as AI sparks deal frenzy — but cash is getting tight",
+      "link": "https://www.cnbc.com/2026/02/25/global-ma-boom-surges-2026-ai-mega-deals-capital-squeeze-merger-and-acquisition.html",
+      "pubDate": "Wed, 25 Feb 2026 02:46:43 GMT"
+    },
+    {
+      "title": "Register now: Applications open for the World&apos;s Top Fintech Companies 2026",
+      "link": "https://www.cnbc.com/2026/02/25/cnbc-worlds-top-fintech-companies-2026-apply-now.html",
+      "pubDate": "Tue, 24 Feb 2026 23:08:25 GMT"
+    },
+    {
+      "title": "PayPal pops nearly 7% on report fintech startup Stripe is weighing an acquisition",
+      "link": "https://www.cnbc.com/2026/02/24/paypal-stock-stripe-acquisition-report.html",
+      "pubDate": "Tue, 24 Feb 2026 22:10:28 GMT"
+    },
+    {
+      "title": "Jamie Dimon says AI is already reshaping JPMorgan Chase&apos;s workforce as bank plans &apos;huge redeployment’",
+      "link": "https://www.cnbc.com/2026/02/24/jpm-ceo-jamie-dimon-ai-reshaping-workforce-redeployment.html",
+      "pubDate": "Tue, 24 Feb 2026 21:33:36 GMT"
+    },
+    {
       "title": "Fed&apos;s Goolsbee calls for a hold on cuts as current rate of inflation is &apos;not good enough&apos;",
       "link": "https://www.cnbc.com/2026/02/24/feds-goolsbee-calls-for-a-hold-on-cuts-as-current-rate-of-inflation-is-not-good-enough.html",
-      "pubDate": "Tue, 24 Feb 2026 13:00:59 GMT"
+      "pubDate": "Tue, 24 Feb 2026 15:58:03 GMT"
     },
     {
       "title": "Jamie Dimon says &apos;watch out’ as lofty asset prices add to economic risks: ‘My anxiety is high’",
@@ -16,7 +41,7 @@
     {
       "title": "Supreme Court ruling throws Trump administration&apos;s tariff strategy into flux. What it means for global trade, U.S. economy",
       "link": "https://www.cnbc.com/2026/02/23/what-supreme-court-tariff-ruling-means-for-global-trade-us-economy.html",
-      "pubDate": "Tue, 24 Feb 2026 00:03:54 GMT"
+      "pubDate": "Tue, 24 Feb 2026 15:36:53 GMT"
     },
     {
       "title": "Bitcoin falls to nearly $64,000 as 2026 crypto woes continue",
@@ -67,31 +92,6 @@
       "title": "China&apos;s Baidu adds OpenClaw AI into search app for 700 million users ahead of Lunar New Year",
       "link": "https://www.cnbc.com/2026/02/13/baidu-openclaw-ai-search-app-integration-china-lunar-new-year.html",
       "pubDate": "Fri, 13 Feb 2026 08:03:24 GMT"
-    },
-    {
-      "title": "Xiaomi&apos;s electric SUV tops China sales in January, sells twice as many as Tesla&apos;s Model Y",
-      "link": "https://www.cnbc.com/2026/02/13/xiaomis-electric-suv-tops-china-sales-in-january-sells-twice-as-many-as-teslas-model-y.html",
-      "pubDate": "Fri, 13 Feb 2026 02:31:38 GMT"
-    },
-    {
-      "title": "Tech IPO hype gets drowned out on Wall Street by prospect of $1 trillion in debt sales",
-      "link": "https://www.cnbc.com/2026/02/12/tech-ipo-hype-drowned-out-by-prospect-of-1-trillion-in-debt-sales.html",
-      "pubDate": "Thu, 12 Feb 2026 13:00:01 GMT"
-    },
-    {
-      "title": "David Einhorn says the Fed will cut &apos;substantially more&apos; than two times. So he&apos;s betting big on gold",
-      "link": "https://www.cnbc.com/2026/02/11/david-einhorn-says-the-fed-will-cut-substantially-more-than-two-times-so-hes-betting-big-on-gold.html",
-      "pubDate": "Wed, 11 Feb 2026 18:09:08 GMT"
-    },
-    {
-      "title": "Crypto&apos;s &apos;age of speculation&apos; may be over, says Galaxy CEO Mike Novogratz",
-      "link": "https://www.cnbc.com/2026/02/10/bitcoin-crypto-trading-speculation-galaxy-ceo-mike-novogratz.html",
-      "pubDate": "Tue, 10 Feb 2026 23:02:07 GMT"
-    },
-    {
-      "title": "Vatican Bank makes first foray into equity indexes, setting stage for potential ETF launches",
-      "link": "https://www.cnbc.com/2026/02/10/vatican-bank-makes-first-foray-into-equity-indexes-setting-stage-for-potential-etf-launches.html",
-      "pubDate": "Tue, 10 Feb 2026 21:27:02 GMT"
     }
   ]
 }
