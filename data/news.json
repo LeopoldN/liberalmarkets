@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-02-25T13:25:35.936Z",
+  "generatedAt": "2026-02-26T13:26:38.572Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Nvidia still hasn&apos;t sold its U.S.-approved China AI chips — and it’s worried local AI rivals could take over",
+      "link": "https://www.cnbc.com/2026/02/26/nvidia-china-chip-sales-export-controls-ai-competition.html",
+      "pubDate": "Thu, 26 Feb 2026 08:23:22 GMT"
+    },
+    {
+      "title": "China holiday spending sends a strong signal on consumer stimulus plans",
+      "link": "https://www.cnbc.com/2026/02/26/china-lunar-new-year-holiday-spending-signal-consumer-stimulus-outlook.html",
+      "pubDate": "Thu, 26 Feb 2026 04:26:21 GMT"
+    },
+    {
+      "title": "Are collectibles a viable asset class? The buyer of the $16.5 million Pokémon card thinks so",
+      "link": "https://www.cnbc.com/2026/02/25/pokmon-card-winner-scaramucci-says-collectibles-are-asset-class.html",
+      "pubDate": "Wed, 25 Feb 2026 21:33:54 GMT"
+    },
     {
       "title": "Trump makes little mention of China in the longest State of the Union speech",
       "link": "https://www.cnbc.com/2026/02/25/trump-china-state-of-the-union-speech.html",
@@ -21,7 +36,7 @@
     {
       "title": "PayPal pops nearly 7% on report fintech startup Stripe is weighing an acquisition",
       "link": "https://www.cnbc.com/2026/02/24/paypal-stock-stripe-acquisition-report.html",
-      "pubDate": "Tue, 24 Feb 2026 22:10:28 GMT"
+      "pubDate": "Wed, 25 Feb 2026 18:11:01 GMT"
     },
     {
       "title": "Jamie Dimon says AI is already reshaping JPMorgan Chase&apos;s workforce as bank plans &apos;huge redeployment’",
@@ -31,7 +46,7 @@
     {
       "title": "Fed&apos;s Goolsbee calls for a hold on cuts as current rate of inflation is &apos;not good enough&apos;",
       "link": "https://www.cnbc.com/2026/02/24/feds-goolsbee-calls-for-a-hold-on-cuts-as-current-rate-of-inflation-is-not-good-enough.html",
-      "pubDate": "Tue, 24 Feb 2026 15:58:03 GMT"
+      "pubDate": "Wed, 25 Feb 2026 19:57:11 GMT"
     },
     {
       "title": "Jamie Dimon says &apos;watch out’ as lofty asset prices add to economic risks: ‘My anxiety is high’",
@@ -77,21 +92,6 @@
       "title": "CFTC defends its right to prediction market enforcement as states challenge platforms",
       "link": "https://www.cnbc.com/2026/02/17/cftc-defends-prediction-market-enforcement-states-challenge.html",
       "pubDate": "Tue, 17 Feb 2026 17:45:51 GMT"
-    },
-    {
-      "title": "In bitcoin price plummet, ETF flows are down but aren&apos;t signaling &apos;crypto winter&apos; investor panic",
-      "link": "https://www.cnbc.com/2026/02/15/bitcoin-price-crash-crypto-winter-investors-etf-flows.html",
-      "pubDate": "Sun, 15 Feb 2026 15:24:48 GMT"
-    },
-    {
-      "title": "AI disruption could spark a ‘shock to the system’ in credit markets, UBS analyst says",
-      "link": "https://www.cnbc.com/2026/02/13/ai-credit-markets.html",
-      "pubDate": "Fri, 13 Feb 2026 18:19:01 GMT"
-    },
-    {
-      "title": "China&apos;s Baidu adds OpenClaw AI into search app for 700 million users ahead of Lunar New Year",
-      "link": "https://www.cnbc.com/2026/02/13/baidu-openclaw-ai-search-app-integration-china-lunar-new-year.html",
-      "pubDate": "Fri, 13 Feb 2026 08:03:24 GMT"
     }
   ]
 }
