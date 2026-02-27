@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-02-26T13:26:38.572Z",
+  "generatedAt": "2026-02-27T13:17:29.821Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Not all strategies belong in an ETF wrapper. Here&apos;s why",
+      "link": "https://www.cnbc.com/2026/02/27/crowded-market-themes-may-have-no-place-in-etfs-.html",
+      "pubDate": "Fri, 27 Feb 2026 12:00:01 GMT"
+    },
+    {
+      "title": "MP Materials selects Texas for rare earth magnet manufacturing site",
+      "link": "https://www.cnbc.com/2026/02/26/mp-materials-selects-texas-for-rare-earth-magnet-manufacturing-site.html",
+      "pubDate": "Thu, 26 Feb 2026 14:25:31 GMT"
+    },
     {
       "title": "Nvidia still hasn&apos;t sold its U.S.-approved China AI chips — and it’s worried local AI rivals could take over",
       "link": "https://www.cnbc.com/2026/02/26/nvidia-china-chip-sales-export-controls-ai-competition.html",
@@ -82,16 +92,6 @@
       "title": "Fed officials split on where interest rates should go, minutes say",
       "link": "https://www.cnbc.com/2026/02/18/fed-minutes-january-2026.html",
       "pubDate": "Thu, 19 Feb 2026 15:47:35 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway trims Apple stake, buys NYTimes stock in Buffett&apos;s last moves as CEO",
-      "link": "https://www.cnbc.com/2026/02/17/berkshire-hathaway-trims-apple-stake-buys-nytimes-stock-in-buffetts-last-moves-as-ceo.html",
-      "pubDate": "Tue, 17 Feb 2026 22:02:39 GMT"
-    },
-    {
-      "title": "CFTC defends its right to prediction market enforcement as states challenge platforms",
-      "link": "https://www.cnbc.com/2026/02/17/cftc-defends-prediction-market-enforcement-states-challenge.html",
-      "pubDate": "Tue, 17 Feb 2026 17:45:51 GMT"
     }
   ]
 }
