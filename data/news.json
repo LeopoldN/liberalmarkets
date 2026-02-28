@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-02-27T13:17:29.821Z",
+  "generatedAt": "2026-02-28T13:02:37.636Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "UBS downgrades the U.S. stock market. Here&apos;s what has the investment bank worried",
+      "link": "https://www.cnbc.com/2026/02/27/ubs-downgrades-the-us-stock-market-heres-what-has-the-investment-bank-worried.html",
+      "pubDate": "Fri, 27 Feb 2026 16:59:22 GMT"
+    },
     {
       "title": "Not all strategies belong in an ETF wrapper. Here&apos;s why",
       "link": "https://www.cnbc.com/2026/02/27/crowded-market-themes-may-have-no-place-in-etfs-.html",
@@ -87,11 +92,6 @@
       "title": "Illiquid loans, investor demands: Blue Owl&apos;s software lending triggers another quake in private credit",
       "link": "https://www.cnbc.com/2026/02/20/blue-owl-software-lending-private-credit-concerns.html",
       "pubDate": "Fri, 20 Feb 2026 22:07:13 GMT"
-    },
-    {
-      "title": "Fed officials split on where interest rates should go, minutes say",
-      "link": "https://www.cnbc.com/2026/02/18/fed-minutes-january-2026.html",
-      "pubDate": "Thu, 19 Feb 2026 15:47:35 GMT"
     }
   ]
 }
