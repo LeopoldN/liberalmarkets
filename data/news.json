@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-02-28T13:02:37.636Z",
+  "generatedAt": "2026-03-01T13:06:12.823Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Berkshire CEO Greg Abel vows to keep Buffett&apos;s culture of disciplined investing in first annual letter",
+      "link": "https://www.cnbc.com/2026/02/28/berkshire-ceo-abel-vows-to-keep-buffetts-culture-of-disciplined-investing-in-first-annual-letter.html",
+      "pubDate": "Sat, 28 Feb 2026 14:44:01 GMT"
+    },
+    {
+      "title": "Berkshire Hathaway operating earnings fell nearly 30% in Warren Buffett&apos;s final quarter as CEO",
+      "link": "https://www.cnbc.com/2026/02/28/berkshire-hathaway-brka-q4-2025-earnings.html",
+      "pubDate": "Sat, 28 Feb 2026 15:04:18 GMT"
+    },
     {
       "title": "UBS downgrades the U.S. stock market. Here&apos;s what has the investment bank worried",
       "link": "https://www.cnbc.com/2026/02/27/ubs-downgrades-the-us-stock-market-heres-what-has-the-investment-bank-worried.html",
@@ -82,16 +92,6 @@
       "title": "Here are 3 forces that drove the stock market during Wall Street’s comeback week",
       "link": "https://www.cnbc.com/2026/02/21/3-forces-that-drove-the-stock-market-during-wall-streets-comeback-week.html",
       "pubDate": "Sat, 21 Feb 2026 17:46:51 GMT"
-    },
-    {
-      "title": "Market volatility trap? Why this income-first strategy may &apos;leave a lot on the table&apos;",
-      "link": "https://www.cnbc.com/2026/02/21/market-volatility-trap-this-investment-strategy-may-hurt-investors-.html",
-      "pubDate": "Sat, 21 Feb 2026 16:00:01 GMT"
-    },
-    {
-      "title": "Illiquid loans, investor demands: Blue Owl&apos;s software lending triggers another quake in private credit",
-      "link": "https://www.cnbc.com/2026/02/20/blue-owl-software-lending-private-credit-concerns.html",
-      "pubDate": "Fri, 20 Feb 2026 22:07:13 GMT"
     }
   ]
 }
