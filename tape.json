@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T14:33:45.070Z",
+  "generatedAt": "2026-03-04T15:38:44.887Z",
   "source": "stooq",
   "items": [
     {
@@ -7,10 +7,10 @@
       "name": "US 2Y Yield",
       "group": null,
       "date": "2026-03-04",
-      "close": 3.514,
+      "close": 3.537,
       "prevDate": "2026-03-03",
       "prevClose": 3.514,
-      "deltaPct": 0,
+      "deltaPct": 0.6545247581104086,
       "history": [
         {
           "date": "2026-01-01",
@@ -190,7 +190,7 @@
         },
         {
           "date": "2026-03-04",
-          "close": 3.514
+          "close": 3.537
         }
       ],
       "ok": true
@@ -200,10 +200,10 @@
       "name": "US 5Y Yield",
       "group": null,
       "date": "2026-03-04",
-      "close": 3.65,
+      "close": 3.668,
       "prevDate": "2026-03-03",
       "prevClose": 3.646,
-      "deltaPct": 0.10970927043334466,
+      "deltaPct": 0.6034009873834512,
       "history": [
         {
           "date": "2025-12-31",
@@ -383,7 +383,7 @@
         },
         {
           "date": "2026-03-04",
-          "close": 3.65
+          "close": 3.668
         }
       ],
       "ok": true
@@ -393,10 +393,10 @@
       "name": "US 10Y Yield",
       "group": null,
       "date": "2026-03-04",
-      "close": 4.072,
+      "close": 4.083,
       "prevDate": "2026-03-03",
       "prevClose": 4.063,
-      "deltaPct": 0.22151119862172663,
+      "deltaPct": 0.49224710804824934,
       "history": [
         {
           "date": "2025-12-31",
@@ -576,7 +576,7 @@
         },
         {
           "date": "2026-03-04",
-          "close": 4.072
+          "close": 4.083
         }
       ],
       "ok": true
@@ -586,10 +586,10 @@
       "name": "US 30Y Yield",
       "group": null,
       "date": "2026-03-04",
-      "close": 4.72,
+      "close": 4.719,
       "prevDate": "2026-03-03",
       "prevClose": 4.705,
-      "deltaPct": 0.31880977683313994,
+      "deltaPct": 0.29755579171095725,
       "history": [
         {
           "date": "2026-01-01",
@@ -769,7 +769,7 @@
         },
         {
           "date": "2026-03-04",
-          "close": 4.72
+          "close": 4.719
         }
       ],
       "ok": true
@@ -779,10 +779,10 @@
       "name": "USD/EUR",
       "group": null,
       "date": "2026-03-04",
-      "close": 0.859431,
+      "close": 0.859342,
       "prevDate": "2026-03-03",
       "prevClose": 0.861141,
-      "deltaPct": -0.19857375273040212,
+      "deltaPct": -0.20890887787249346,
       "history": [
         {
           "date": "2025-12-31",
@@ -962,7 +962,7 @@
         },
         {
           "date": "2026-03-04",
-          "close": 0.859431
+          "close": 0.859342
         }
       ],
       "ok": true
@@ -972,14 +972,14 @@
       "name": "Brent Oil",
       "group": null,
       "date": "2026-03-04",
-      "close": 81.61,
+      "close": 81.04,
       "prevDate": "2026-03-03",
       "prevClose": 82,
-      "deltaPct": -0.4756097560975614,
+      "deltaPct": -1.170731707317063,
       "history": [
         {
           "date": "2026-03-04",
-          "close": 81.61
+          "close": 81.04
         }
       ],
       "ok": true
@@ -989,10 +989,10 @@
       "name": "S&P 500",
       "group": null,
       "date": "2026-03-04",
-      "close": 6841.39,
+      "close": 6868.31,
       "prevDate": "2026-03-03",
       "prevClose": 6816.63,
-      "deltaPct": 0.3632293376639284,
+      "deltaPct": 0.7581458873372915,
       "history": [
         {
           "date": "2025-12-29",
@@ -1172,7 +1172,7 @@
         },
         {
           "date": "2026-03-04",
-          "close": 6841.39
+          "close": 6868.31
         }
       ],
       "ok": true
@@ -1182,10 +1182,10 @@
       "name": "Gold",
       "group": null,
       "date": "2026-03-04",
-      "close": 5178.885,
+      "close": 5157.675,
       "prevDate": "2026-03-03",
       "prevClose": 5088.505,
-      "deltaPct": 1.7761601885033063,
+      "deltaPct": 1.359338351834194,
       "history": [
         {
           "date": "2025-12-31",
@@ -1365,7 +1365,7 @@
         },
         {
           "date": "2026-03-04",
-          "close": 5178.885
+          "close": 5157.675
         }
       ],
       "ok": true
@@ -1374,16 +1374,12 @@
       "sym": "asts.us",
       "name": "ASTS",
       "group": null,
-      "date": "2026-03-03",
-      "close": 92.68,
-      "prevDate": "2026-03-02",
-      "prevClose": 86.92,
-      "deltaPct": 6.626783248964574,
+      "date": "2026-03-04",
+      "close": 102.352,
+      "prevDate": "2026-03-03",
+      "prevClose": 92.68,
+      "deltaPct": 10.435908502373747,
       "history": [
-        {
-          "date": "2025-12-26",
-          "close": 71.95
-        },
         {
           "date": "2025-12-29",
           "close": 71.47
@@ -1559,6 +1555,10 @@
         {
           "date": "2026-03-03",
           "close": 92.68
+        },
+        {
+          "date": "2026-03-04",
+          "close": 102.352
         }
       ],
       "ok": true
