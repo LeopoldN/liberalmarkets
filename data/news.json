@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-03-03T13:17:09.588Z",
+  "generatedAt": "2026-03-04T13:16:11.049Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "China is set to kick off its big policy meeting. What will be the key announcements?",
+      "link": "https://www.cnbc.com/2026/03/04/china-two-sessions-policy-meeting.html",
+      "pubDate": "Wed, 04 Mar 2026 00:07:09 GMT"
+    },
+    {
+      "title": "Blackstone’s Gray: Market ‘noise’ fueled record redemptions from world’s largest private credit fund",
+      "link": "https://www.cnbc.com/2026/03/03/blackstone-private-credit-fund.html",
+      "pubDate": "Tue, 03 Mar 2026 18:55:30 GMT"
+    },
+    {
+      "title": "The momentum trades of 2026 are breaking with gold, silver and South Korea down big",
+      "link": "https://www.cnbc.com/2026/03/03/the-momentum-trades-of-2026-are-breaking-with-gold-silver-and-south-korea-down-big.html",
+      "pubDate": "Tue, 03 Mar 2026 15:30:25 GMT"
+    },
+    {
+      "title": "New York Fed&apos;s Williams says tariff burden falls &apos;overwhelmingly&apos; on U.S. businesses and consumers",
+      "link": "https://www.cnbc.com/2026/03/03/new-york-feds-williams-says-tariff-burden-falls-overwhelmingly-on-us-businesses-and-consumers.html",
+      "pubDate": "Tue, 03 Mar 2026 16:53:43 GMT"
+    },
     {
       "title": "Jamie Dimon says Trump’s $5 billion debanking lawsuit ‘has no merit’ but he’s sympathetic to concerns",
       "link": "https://www.cnbc.com/2026/03/02/dimon-trump-debanking-lawsuit-no-merit-concerns.html",
@@ -72,26 +92,6 @@
       "title": "The global M&A boom is rolling into 2026 as AI sparks deal frenzy — but cash is getting tight",
       "link": "https://www.cnbc.com/2026/02/25/global-ma-boom-surges-2026-ai-mega-deals-capital-squeeze-merger-and-acquisition.html",
       "pubDate": "Wed, 25 Feb 2026 02:46:43 GMT"
-    },
-    {
-      "title": "Register now: Applications open for the World&apos;s Top Fintech Companies 2026",
-      "link": "https://www.cnbc.com/2026/02/25/cnbc-worlds-top-fintech-companies-2026-apply-now.html",
-      "pubDate": "Tue, 24 Feb 2026 23:08:25 GMT"
-    },
-    {
-      "title": "PayPal pops nearly 7% on report fintech startup Stripe is weighing an acquisition",
-      "link": "https://www.cnbc.com/2026/02/24/paypal-stock-stripe-acquisition-report.html",
-      "pubDate": "Wed, 25 Feb 2026 18:11:01 GMT"
-    },
-    {
-      "title": "Jamie Dimon says AI is already reshaping JPMorgan Chase&apos;s workforce as bank plans &apos;huge redeployment’",
-      "link": "https://www.cnbc.com/2026/02/24/jpm-ceo-jamie-dimon-ai-reshaping-workforce-redeployment.html",
-      "pubDate": "Tue, 24 Feb 2026 21:33:36 GMT"
-    },
-    {
-      "title": "Fed&apos;s Goolsbee calls for a hold on cuts as current rate of inflation is &apos;not good enough&apos;",
-      "link": "https://www.cnbc.com/2026/02/24/feds-goolsbee-calls-for-a-hold-on-cuts-as-current-rate-of-inflation-is-not-good-enough.html",
-      "pubDate": "Wed, 25 Feb 2026 19:57:11 GMT"
     }
   ]
 }
