@@ -1,8 +1,33 @@
 {
-  "generatedAt": "2026-03-04T13:16:11.049Z",
+  "generatedAt": "2026-03-05T13:19:39.430Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Berkshire Hathaway begins repurchasing shares, CEO Greg Abel buys $15 million in stock",
+      "link": "https://www.cnbc.com/2026/03/05/berkshire-hathaway-begins-repurchasing-shares-ceo-greg-abel-buys-15-million-in-stock-.html",
+      "pubDate": "Thu, 05 Mar 2026 13:18:29 GMT"
+    },
+    {
+      "title": "Iran war and stocks: Why Global X says &apos;it might be time to double down&apos; on emerging markets",
+      "link": "https://www.cnbc.com/2026/03/05/iran-war-and-stocks-global-x-says-double-down-on-emerging-markets.html",
+      "pubDate": "Thu, 05 Mar 2026 12:00:01 GMT"
+    },
+    {
+      "title": "China to boost defense spending by 7%, slowest pace since 2021",
+      "link": "https://www.cnbc.com/2026/03/05/china-defense-spending-7-percent-2026-budget.html",
+      "pubDate": "Thu, 05 Mar 2026 02:43:33 GMT"
+    },
+    {
+      "title": "Coinbase leads crypto stocks higher after Trump signals support for digital asset market structure bill",
+      "link": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
+      "pubDate": "Wed, 04 Mar 2026 15:19:27 GMT"
+    },
+    {
+      "title": "Trump sides with crypto firms in trillion-dollar battle with banks over stablecoin yield",
+      "link": "https://www.cnbc.com/2026/03/04/trump-crypto-banks-stablecoin-yield.html",
+      "pubDate": "Wed, 04 Mar 2026 19:24:49 GMT"
+    },
     {
       "title": "China is set to kick off its big policy meeting. What will be the key announcements?",
       "link": "https://www.cnbc.com/2026/03/04/china-two-sessions-policy-meeting.html",
@@ -46,7 +71,7 @@
     {
       "title": "Berkshire CEO Greg Abel vows to keep Buffett&apos;s culture of disciplined investing in first annual letter",
       "link": "https://www.cnbc.com/2026/02/28/berkshire-ceo-abel-vows-to-keep-buffetts-culture-of-disciplined-investing-in-first-annual-letter.html",
-      "pubDate": "Sat, 28 Feb 2026 14:44:01 GMT"
+      "pubDate": "Thu, 05 Mar 2026 13:16:05 GMT"
     },
     {
       "title": "Berkshire Hathaway operating earnings fell nearly 30% in Warren Buffett&apos;s final quarter as CEO",
@@ -67,31 +92,6 @@
       "title": "MP Materials selects Texas for rare earth magnet manufacturing site",
       "link": "https://www.cnbc.com/2026/02/26/mp-materials-selects-texas-for-rare-earth-magnet-manufacturing-site.html",
       "pubDate": "Thu, 26 Feb 2026 14:25:31 GMT"
-    },
-    {
-      "title": "Nvidia still hasn&apos;t sold its U.S.-approved China AI chips — and it’s worried local AI rivals could take over",
-      "link": "https://www.cnbc.com/2026/02/26/nvidia-china-chip-sales-export-controls-ai-competition.html",
-      "pubDate": "Thu, 26 Feb 2026 08:23:22 GMT"
-    },
-    {
-      "title": "China holiday spending sends a strong signal on consumer stimulus plans",
-      "link": "https://www.cnbc.com/2026/02/26/china-lunar-new-year-holiday-spending-signal-consumer-stimulus-outlook.html",
-      "pubDate": "Thu, 26 Feb 2026 04:26:21 GMT"
-    },
-    {
-      "title": "Are collectibles a viable asset class? The buyer of the $16.5 million Pokémon card thinks so",
-      "link": "https://www.cnbc.com/2026/02/25/pokmon-card-winner-scaramucci-says-collectibles-are-asset-class.html",
-      "pubDate": "Wed, 25 Feb 2026 21:33:54 GMT"
-    },
-    {
-      "title": "Trump makes little mention of China in the longest State of the Union speech",
-      "link": "https://www.cnbc.com/2026/02/25/trump-china-state-of-the-union-speech.html",
-      "pubDate": "Wed, 25 Feb 2026 08:42:49 GMT"
-    },
-    {
-      "title": "The global M&A boom is rolling into 2026 as AI sparks deal frenzy — but cash is getting tight",
-      "link": "https://www.cnbc.com/2026/02/25/global-ma-boom-surges-2026-ai-mega-deals-capital-squeeze-merger-and-acquisition.html",
-      "pubDate": "Wed, 25 Feb 2026 02:46:43 GMT"
     }
   ]
 }
