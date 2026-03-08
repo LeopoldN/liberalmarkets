@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-03-07T13:04:52.771Z",
+  "generatedAt": "2026-03-08T13:06:30.738Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "China says &apos;thorough preparations&apos; needed as Trump-Xi meeting hangs in the balance amid Iran war",
+      "link": "https://www.cnbc.com/2026/03/08/china-says-thorough-preparations-needed-ahead-of-trump-xi-meeting.html",
+      "pubDate": "Sun, 08 Mar 2026 07:17:53 GMT"
+    },
     {
       "title": "Robinhood&apos;s venture fund, which gives investors access to private companies, tanks 11% on first day",
       "link": "https://www.cnbc.com/2026/03/06/robinhoods-venture-fund-which-gives-investors-access-to-private-companies-tanks-11percent-on-first-day.html",
@@ -87,11 +92,6 @@
       "title": "Jamie Dimon says Trump’s $5 billion debanking lawsuit ‘has no merit’ but he’s sympathetic to concerns",
       "link": "https://www.cnbc.com/2026/03/02/dimon-trump-debanking-lawsuit-no-merit-concerns.html",
       "pubDate": "Mon, 02 Mar 2026 23:01:45 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway shares drop nearly 5% after poor fourth-quarter results, no bold moves by new CEO Abel",
-      "link": "https://www.cnbc.com/2026/03/02/berkshire-hathaway-shares-drop-4percent-after-poor-fourth-quarter-results.html",
-      "pubDate": "Mon, 02 Mar 2026 21:01:06 GMT"
     }
   ]
 }
