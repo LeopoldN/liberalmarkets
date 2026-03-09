@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-03-08T13:06:30.738Z",
+  "generatedAt": "2026-03-09T13:23:20.063Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Why China can withstand oil&apos;s surge past $100 more easily than other countries",
+      "link": "https://www.cnbc.com/2026/03/09/china-oil-shock-iran-war-hormuz-energy-transition.html",
+      "pubDate": "Mon, 09 Mar 2026 13:03:49 GMT"
+    },
     {
       "title": "China says &apos;thorough preparations&apos; needed as Trump-Xi meeting hangs in the balance amid Iran war",
       "link": "https://www.cnbc.com/2026/03/08/china-says-thorough-preparations-needed-ahead-of-trump-xi-meeting.html",
@@ -87,11 +92,6 @@
       "title": "New York Fed&apos;s Williams says tariff burden falls &apos;overwhelmingly&apos; on U.S. businesses and consumers",
       "link": "https://www.cnbc.com/2026/03/03/new-york-feds-williams-says-tariff-burden-falls-overwhelmingly-on-us-businesses-and-consumers.html",
       "pubDate": "Tue, 03 Mar 2026 16:53:43 GMT"
-    },
-    {
-      "title": "Jamie Dimon says Trump’s $5 billion debanking lawsuit ‘has no merit’ but he’s sympathetic to concerns",
-      "link": "https://www.cnbc.com/2026/03/02/dimon-trump-debanking-lawsuit-no-merit-concerns.html",
-      "pubDate": "Mon, 02 Mar 2026 23:01:45 GMT"
     }
   ]
 }
