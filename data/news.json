@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-03-09T13:23:20.063Z",
+  "generatedAt": "2026-03-10T13:20:52.367Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Surging oil prices could wipe out benefits from Trump’s ‘big beautiful bill’",
+      "link": "https://www.cnbc.com/2026/03/10/rising-oil-prices-may-wipe-out-effects-of-trumps-big-beautiful-bill.html",
+      "pubDate": "Tue, 10 Mar 2026 11:56:23 GMT"
+    },
+    {
+      "title": "There&apos;s another energy market that may get hit harder than oil by Strait of Hormuz closure",
+      "link": "https://www.cnbc.com/2026/03/09/theres-another-energy-market-that-may-get-hit-harder-than-oil-by-strait-of-hormuz-closure.html",
+      "pubDate": "Mon, 09 Mar 2026 20:51:55 GMT"
+    },
     {
       "title": "Why China can withstand oil&apos;s surge past $100 more easily than other countries",
       "link": "https://www.cnbc.com/2026/03/09/china-oil-shock-iran-war-hormuz-energy-transition.html",
@@ -82,16 +92,6 @@
       "title": "Blackstone’s Gray: Market ‘noise’ fueled record redemptions from world’s largest private credit fund",
       "link": "https://www.cnbc.com/2026/03/03/blackstone-private-credit-fund.html",
       "pubDate": "Tue, 03 Mar 2026 18:55:30 GMT"
-    },
-    {
-      "title": "The momentum trades of 2026 are breaking with gold, silver and South Korea down big",
-      "link": "https://www.cnbc.com/2026/03/03/the-momentum-trades-of-2026-are-breaking-with-gold-silver-and-south-korea-down-big.html",
-      "pubDate": "Tue, 03 Mar 2026 15:30:25 GMT"
-    },
-    {
-      "title": "New York Fed&apos;s Williams says tariff burden falls &apos;overwhelmingly&apos; on U.S. businesses and consumers",
-      "link": "https://www.cnbc.com/2026/03/03/new-york-feds-williams-says-tariff-burden-falls-overwhelmingly-on-us-businesses-and-consumers.html",
-      "pubDate": "Tue, 03 Mar 2026 16:53:43 GMT"
     }
   ]
 }
