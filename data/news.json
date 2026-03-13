@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-03-12T13:20:54.937Z",
+  "generatedAt": "2026-03-13T13:18:24.079Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Markets&apos; hopes for Fed interest rate cuts are rapidly fading away",
+      "link": "https://www.cnbc.com/2026/03/12/markets-hopes-for-fed-interest-rate-cuts-are-rapidly-fading-away.html",
+      "pubDate": "Thu, 12 Mar 2026 20:41:02 GMT"
+    },
+    {
       "title": "Lobster buffet: China’s tech firms feast on OpenClaw as companies race to deploy AI agents",
       "link": "https://www.cnbc.com/2026/03/12/china-openclaw-ai-agent-adoption-tech-companies-government-support-lobster-shrimp.html",
-      "pubDate": "Thu, 12 Mar 2026 10:08:45 GMT"
+      "pubDate": "Thu, 12 Mar 2026 23:31:34 GMT"
     },
     {
       "title": "JPMorgan Chase reins in lending to private credit firms after marking down software loans",
@@ -87,11 +92,6 @@
       "title": "Coinbase leads crypto stocks higher after Trump signals support for digital asset market structure bill",
       "link": "https://www.cnbc.com/2026/03/04/coinbase-leads-crypto-stocks-higher-after-trump-signals-support-for-digital-asset-market-structure-bill.html",
       "pubDate": "Wed, 04 Mar 2026 15:19:27 GMT"
-    },
-    {
-      "title": "Trump sides with crypto firms in trillion-dollar battle with banks over stablecoin yield",
-      "link": "https://www.cnbc.com/2026/03/04/trump-crypto-banks-stablecoin-yield.html",
-      "pubDate": "Wed, 04 Mar 2026 19:24:49 GMT"
     }
   ]
 }
