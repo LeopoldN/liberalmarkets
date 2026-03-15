@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-03-14T13:10:36.352Z",
+  "generatedAt": "2026-03-15T13:11:42.269Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Bitcoin beat the S&P 500, Nasdaq Composite and gold since the start of the Iran war",
+      "link": "https://www.cnbc.com/2026/03/14/bitcoin-outperforms-sp-500-nasdaq-gold-since-the-start-of-iran-war.html",
+      "pubDate": "Sat, 14 Mar 2026 15:00:01 GMT"
+    },
     {
       "title": "Dividend stocks are catching up to tech stocks on a key earnings metric at a critical time for the market",
       "link": "https://www.cnbc.com/2026/03/13/dividend-stocks-tech-earnings-growth-market.html",
@@ -87,11 +92,6 @@
       "title": "Berkshire Hathaway begins repurchasing shares, CEO Greg Abel buys $15 million in stock",
       "link": "https://www.cnbc.com/2026/03/05/berkshire-hathaway-begins-repurchasing-shares-ceo-greg-abel-buys-15-million-in-stock-.html",
       "pubDate": "Thu, 05 Mar 2026 14:28:23 GMT"
-    },
-    {
-      "title": "Iran war and stocks: Why Global X says &apos;it might be time to double down&apos; on emerging markets",
-      "link": "https://www.cnbc.com/2026/03/05/iran-war-and-stocks-global-x-says-double-down-on-emerging-markets.html",
-      "pubDate": "Thu, 05 Mar 2026 12:00:01 GMT"
     }
   ]
 }
