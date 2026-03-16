@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-03-15T13:11:42.269Z",
+  "generatedAt": "2026-03-16T13:46:27.358Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "China talks up oil sufficiency as Trump seeks Beijing&apos;s help on securing Hormuz energy route",
+      "link": "https://www.cnbc.com/2026/03/16/china-oil-reserves-trump-iran-war-hormuz.html",
+      "pubDate": "Mon, 16 Mar 2026 06:02:59 GMT"
+    },
+    {
+      "title": "Holiday spending, export demand drive China’s economic momentum as Iran war headwinds loom",
+      "link": "https://www.cnbc.com/2026/03/16/china-data-today-retail-sales-property-industrial-production.html",
+      "pubDate": "Mon, 16 Mar 2026 06:11:06 GMT"
+    },
     {
       "title": "Bitcoin beat the S&P 500, Nasdaq Composite and gold since the start of the Iran war",
       "link": "https://www.cnbc.com/2026/03/14/bitcoin-outperforms-sp-500-nasdaq-gold-since-the-start-of-iran-war.html",
@@ -82,16 +92,6 @@
       "title": "States led by New York sue to block Trump&apos;s latest tariffs, calling them an illegal end run around Supreme Court",
       "link": "https://www.cnbc.com/2026/03/05/trump-tariffs-state-ags-sue-supreme-court-decision.html",
       "pubDate": "Thu, 05 Mar 2026 20:19:25 GMT"
-    },
-    {
-      "title": "New Berkshire Hathaway CEO still talks with Warren Buffett nearly every day",
-      "link": "https://www.cnbc.com/2026/03/05/new-berkshire-hathaway-ceo-still-talks-with-warren-buffett-nearly-every-day.html",
-      "pubDate": "Thu, 05 Mar 2026 17:34:19 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway begins repurchasing shares, CEO Greg Abel buys $15 million in stock",
-      "link": "https://www.cnbc.com/2026/03/05/berkshire-hathaway-begins-repurchasing-shares-ceo-greg-abel-buys-15-million-in-stock-.html",
-      "pubDate": "Thu, 05 Mar 2026 14:28:23 GMT"
     }
   ]
 }
