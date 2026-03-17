@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-03-16T13:46:27.358Z",
+  "generatedAt": "2026-03-17T13:43:35.826Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Apollo&apos;s John Zito questions private equity&apos;s software valuations: &apos;All the marks are wrong&apos;",
+      "link": "https://www.cnbc.com/2026/03/16/apollo-john-zito-private-equity-software-valuations.html",
+      "pubDate": "Mon, 16 Mar 2026 17:17:36 GMT"
+    },
+    {
       "title": "China talks up oil sufficiency as Trump seeks Beijing&apos;s help on securing Hormuz energy route",
       "link": "https://www.cnbc.com/2026/03/16/china-oil-reserves-trump-iran-war-hormuz.html",
-      "pubDate": "Mon, 16 Mar 2026 06:02:59 GMT"
+      "pubDate": "Mon, 16 Mar 2026 13:56:51 GMT"
     },
     {
       "title": "Holiday spending, export demand drive China’s economic momentum as Iran war headwinds loom",
@@ -87,11 +92,6 @@
       "title": "Oaktree&apos;s Howard Marks says there&apos;s no systemic problem with private credit",
       "link": "https://www.cnbc.com/2026/03/05/oaktrees-howard-marks-says-theres-no-systemic-problem-with-private-credit.html",
       "pubDate": "Thu, 05 Mar 2026 18:14:21 GMT"
-    },
-    {
-      "title": "States led by New York sue to block Trump&apos;s latest tariffs, calling them an illegal end run around Supreme Court",
-      "link": "https://www.cnbc.com/2026/03/05/trump-tariffs-state-ags-sue-supreme-court-decision.html",
-      "pubDate": "Thu, 05 Mar 2026 20:19:25 GMT"
     }
   ]
 }
