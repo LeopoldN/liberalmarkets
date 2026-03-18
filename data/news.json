@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-03-17T13:43:35.826Z",
+  "generatedAt": "2026-03-18T13:45:30.260Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "The Fed issues its latest interest rate decision Wednesday. Here&apos;s what to expect",
+      "link": "https://www.cnbc.com/2026/03/17/the-fed-issues-its-latest-interest-rate-decision-wednesday-heres-what-to-expect.html",
+      "pubDate": "Tue, 17 Mar 2026 20:29:55 GMT"
+    },
+    {
+      "title": "Orlando Bravo pushes back on private markets criticism: &apos;Everybody&apos;s extremely comfortable&apos;",
+      "link": "https://www.cnbc.com/2026/03/17/orlando-bravo-pushes-back-on-private-markets-criticism-everybodys-extremely-comfortable.html",
+      "pubDate": "Tue, 17 Mar 2026 21:17:31 GMT"
+    },
+    {
+      "title": "Mastercard says it&apos;s acquiring stablecoin startup BVNK in $1.8 billion bet on future of payments",
+      "link": "https://www.cnbc.com/2026/03/17/mastercard-acquiring-stablecoin-startup-bvnk-in-crypto-bet.html",
+      "pubDate": "Tue, 17 Mar 2026 14:40:39 GMT"
+    },
     {
       "title": "Apollo&apos;s John Zito questions private equity&apos;s software valuations: &apos;All the marks are wrong&apos;",
       "link": "https://www.cnbc.com/2026/03/16/apollo-john-zito-private-equity-software-valuations.html",
@@ -77,21 +92,6 @@
       "title": "Fed Governor Miran says job losses in February add to the case for more interest rate cuts",
       "link": "https://www.cnbc.com/2026/03/06/fed-governor-miran-says-job-losses-in-february-add-to-the-case-for-more-interest-rate-cuts.html",
       "pubDate": "Fri, 06 Mar 2026 18:14:50 GMT"
-    },
-    {
-      "title": "U.S.-Iran war exposes big market concentration risk. It isn&apos;t in S&P 500 stocks",
-      "link": "https://www.cnbc.com/2026/03/06/iran-war-oil-energy-emerging-markets-stocks-south-korea.html",
-      "pubDate": "Fri, 06 Mar 2026 17:52:33 GMT"
-    },
-    {
-      "title": "Mortgages in 47 seconds: Better’s new ChatGPT app targets lenders Rocket and UWM",
-      "link": "https://www.cnbc.com/2026/03/05/mortgages-in-47-seconds-betters-new-chatgpt-app-targets-lenders-rocket-and-uwm.html",
-      "pubDate": "Thu, 05 Mar 2026 20:42:54 GMT"
-    },
-    {
-      "title": "Oaktree&apos;s Howard Marks says there&apos;s no systemic problem with private credit",
-      "link": "https://www.cnbc.com/2026/03/05/oaktrees-howard-marks-says-theres-no-systemic-problem-with-private-credit.html",
-      "pubDate": "Thu, 05 Mar 2026 18:14:21 GMT"
     }
   ]
 }
