@@ -1,8 +1,43 @@
 {
-  "generatedAt": "2026-03-18T13:45:30.260Z",
+  "generatedAt": "2026-03-19T13:25:39.283Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "OpenClaw demand in China is driving up the price of used MacBooks",
+      "link": "https://www.cnbc.com/2026/03/19/openclaw-demand-in-china-is-driving-up-the-price-of-secondhand-macbooks.html",
+      "pubDate": "Thu, 19 Mar 2026 11:02:11 GMT"
+    },
+    {
+      "title": "Here are the five key takeaways from this week&apos;s Fed meeting",
+      "link": "https://www.cnbc.com/2026/03/18/here-are-the-five-key-takeaways-from-this-weeks-fed-meeting.html",
+      "pubDate": "Thu, 19 Mar 2026 03:01:27 GMT"
+    },
+    {
+      "title": "Fed still expects to cut rates once this year despite spiking oil prices",
+      "link": "https://www.cnbc.com/2026/03/18/dot-plot-fed-still-expects-to-cut-rates-once-this-year-despite-spiking-oil-prices-.html",
+      "pubDate": "Wed, 18 Mar 2026 18:59:40 GMT"
+    },
+    {
+      "title": "Here&apos;s what changed in the new Fed statement",
+      "link": "https://www.cnbc.com/2026/03/18/federal-reserve-meeting-statement-march.html",
+      "pubDate": "Wed, 18 Mar 2026 18:05:12 GMT"
+    },
+    {
+      "title": "Fed votes to hold rates steady, notes &apos;uncertain&apos; impacts from Iran war",
+      "link": "https://www.cnbc.com/2026/03/18/fed-interest-rate-decision-march-2026.html",
+      "pubDate": "Thu, 19 Mar 2026 03:01:02 GMT"
+    },
+    {
+      "title": "JPMorgan Chase taps A&apos;ja Wilson, Tom Brady for new athlete wealth management push",
+      "link": "https://www.cnbc.com/2026/03/18/jpmorgan-athlete-wealth-management-tom-brady-dwyane-wade.html",
+      "pubDate": "Thu, 19 Mar 2026 13:17:12 GMT"
+    },
+    {
+      "title": "Expectations for the next Fed rate cut get pushed back after hot inflation report",
+      "link": "https://www.cnbc.com/2026/03/18/views-for-next-fed-rate-cut-pushed-back-after-hot-inflation-report.html",
+      "pubDate": "Wed, 18 Mar 2026 18:40:14 GMT"
+    },
     {
       "title": "The Fed issues its latest interest rate decision Wednesday. Here&apos;s what to expect",
       "link": "https://www.cnbc.com/2026/03/17/the-fed-issues-its-latest-interest-rate-decision-wednesday-heres-what-to-expect.html",
@@ -57,41 +92,6 @@
       "title": "Lobster buffet: China’s tech firms feast on OpenClaw as companies race to deploy AI agents",
       "link": "https://www.cnbc.com/2026/03/12/china-openclaw-ai-agent-adoption-tech-companies-government-support-lobster-shrimp.html",
       "pubDate": "Thu, 12 Mar 2026 23:31:34 GMT"
-    },
-    {
-      "title": "JPMorgan Chase reins in lending to private credit firms after marking down software loans",
-      "link": "https://www.cnbc.com/2026/03/11/jpmorgan-reins-lending-private-credit-marks-down-software-loans.html",
-      "pubDate": "Wed, 11 Mar 2026 12:57:44 GMT"
-    },
-    {
-      "title": "Surging oil prices could wipe out benefits from Trump&apos;s &apos;big beautiful bill&apos;",
-      "link": "https://www.cnbc.com/2026/03/10/rising-oil-prices-may-wipe-out-effects-of-trumps-big-beautiful-bill.html",
-      "pubDate": "Tue, 10 Mar 2026 14:16:40 GMT"
-    },
-    {
-      "title": "There&apos;s another energy market that may get hit harder than oil by Strait of Hormuz closure",
-      "link": "https://www.cnbc.com/2026/03/09/theres-another-energy-market-that-may-get-hit-harder-than-oil-by-strait-of-hormuz-closure.html",
-      "pubDate": "Tue, 10 Mar 2026 14:06:17 GMT"
-    },
-    {
-      "title": "Why China can withstand oil&apos;s surge past $100 more easily than other countries",
-      "link": "https://www.cnbc.com/2026/03/09/china-oil-shock-iran-war-hormuz-energy-transition.html",
-      "pubDate": "Mon, 09 Mar 2026 13:03:49 GMT"
-    },
-    {
-      "title": "China says &apos;thorough preparations&apos; needed as Trump-Xi meeting hangs in the balance amid Iran war",
-      "link": "https://www.cnbc.com/2026/03/08/china-says-thorough-preparations-needed-ahead-of-trump-xi-meeting.html",
-      "pubDate": "Sun, 08 Mar 2026 07:17:53 GMT"
-    },
-    {
-      "title": "Robinhood&apos;s venture fund, which gives investors access to private companies, tanks 11% on first day",
-      "link": "https://www.cnbc.com/2026/03/06/robinhoods-venture-fund-which-gives-investors-access-to-private-companies-tanks-11percent-on-first-day.html",
-      "pubDate": "Fri, 06 Mar 2026 23:41:32 GMT"
-    },
-    {
-      "title": "Fed Governor Miran says job losses in February add to the case for more interest rate cuts",
-      "link": "https://www.cnbc.com/2026/03/06/fed-governor-miran-says-job-losses-in-february-add-to-the-case-for-more-interest-rate-cuts.html",
-      "pubDate": "Fri, 06 Mar 2026 18:14:50 GMT"
     }
   ]
 }
