@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-03-19T13:25:39.283Z",
+  "generatedAt": "2026-03-20T13:18:55.460Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Copper joins gold in broad commodities sell-off. There&apos;s a worrying reason behind it",
+      "link": "https://www.cnbc.com/2026/03/19/copper-joins-gold-in-broad-commodities-sell-off-theres-a-worrying-reason-behind-it.html",
+      "pubDate": "Thu, 19 Mar 2026 17:24:32 GMT"
+    },
     {
       "title": "OpenClaw demand in China is driving up the price of used MacBooks",
       "link": "https://www.cnbc.com/2026/03/19/openclaw-demand-in-china-is-driving-up-the-price-of-secondhand-macbooks.html",
@@ -21,7 +26,7 @@
     {
       "title": "Here&apos;s what changed in the new Fed statement",
       "link": "https://www.cnbc.com/2026/03/18/federal-reserve-meeting-statement-march.html",
-      "pubDate": "Wed, 18 Mar 2026 18:05:12 GMT"
+      "pubDate": "Thu, 19 Mar 2026 14:09:38 GMT"
     },
     {
       "title": "Fed votes to hold rates steady, notes &apos;uncertain&apos; impacts from Iran war",
@@ -31,7 +36,7 @@
     {
       "title": "JPMorgan Chase taps A&apos;ja Wilson, Tom Brady for new athlete wealth management push",
       "link": "https://www.cnbc.com/2026/03/18/jpmorgan-athlete-wealth-management-tom-brady-dwyane-wade.html",
-      "pubDate": "Thu, 19 Mar 2026 13:17:12 GMT"
+      "pubDate": "Thu, 19 Mar 2026 14:20:28 GMT"
     },
     {
       "title": "Expectations for the next Fed rate cut get pushed back after hot inflation report",
@@ -87,11 +92,6 @@
       "title": "Markets&apos; hopes for Fed interest rate cuts are rapidly fading away",
       "link": "https://www.cnbc.com/2026/03/12/markets-hopes-for-fed-interest-rate-cuts-are-rapidly-fading-away.html",
       "pubDate": "Thu, 12 Mar 2026 20:41:02 GMT"
-    },
-    {
-      "title": "Lobster buffet: China’s tech firms feast on OpenClaw as companies race to deploy AI agents",
-      "link": "https://www.cnbc.com/2026/03/12/china-openclaw-ai-agent-adoption-tech-companies-government-support-lobster-shrimp.html",
-      "pubDate": "Thu, 12 Mar 2026 23:31:34 GMT"
     }
   ]
 }
