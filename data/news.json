@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-03-20T13:18:55.460Z",
+  "generatedAt": "2026-03-21T13:07:40.937Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Small cap-focused Russell 2000 becomes first U.S. benchmark to enter correction territory",
+      "link": "https://www.cnbc.com/2026/03/20/small-cap-russell-2000-enters-correction-territory.html",
+      "pubDate": "Fri, 20 Mar 2026 21:41:56 GMT"
+    },
+    {
+      "title": "Fed Governor Waller urges caution for now, says rate cuts possible later in the year",
+      "link": "https://www.cnbc.com/2026/03/20/fed-gov-waller-urges-caution-for-now-cuts-possible-later-in-the-year.html",
+      "pubDate": "Fri, 20 Mar 2026 13:36:43 GMT"
+    },
+    {
       "title": "Copper joins gold in broad commodities sell-off. There&apos;s a worrying reason behind it",
       "link": "https://www.cnbc.com/2026/03/19/copper-joins-gold-in-broad-commodities-sell-off-theres-a-worrying-reason-behind-it.html",
-      "pubDate": "Thu, 19 Mar 2026 17:24:32 GMT"
+      "pubDate": "Fri, 20 Mar 2026 14:47:14 GMT"
     },
     {
       "title": "OpenClaw demand in China is driving up the price of used MacBooks",
@@ -82,16 +92,6 @@
       "title": "Dividend stocks are catching up to tech stocks on a key earnings metric at a critical time for the market",
       "link": "https://www.cnbc.com/2026/03/13/dividend-stocks-tech-earnings-growth-market.html",
       "pubDate": "Fri, 13 Mar 2026 16:56:09 GMT"
-    },
-    {
-      "title": "Inside JPMorgan Chase&apos;s push to become the startup world’s new Silicon Valley Bank",
-      "link": "https://www.cnbc.com/2026/03/13/jpmorgan-silicon-valley-bank-startup-bank.html",
-      "pubDate": "Fri, 13 Mar 2026 18:02:26 GMT"
-    },
-    {
-      "title": "Markets&apos; hopes for Fed interest rate cuts are rapidly fading away",
-      "link": "https://www.cnbc.com/2026/03/12/markets-hopes-for-fed-interest-rate-cuts-are-rapidly-fading-away.html",
-      "pubDate": "Thu, 12 Mar 2026 20:41:02 GMT"
     }
   ]
 }
