@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-03-21T13:07:40.937Z",
+  "generatedAt": "2026-03-22T13:09:53.542Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "SEC Commissioner Hester Peirce on ETFs: &apos;We want to work with people on new products&apos;",
+      "link": "https://www.cnbc.com/2026/03/21/crypto-tokenization-and-etfs-secs-peirce-indicates-openness.html",
+      "pubDate": "Sat, 21 Mar 2026 15:00:01 GMT"
+    },
     {
       "title": "Small cap-focused Russell 2000 becomes first U.S. benchmark to enter correction territory",
       "link": "https://www.cnbc.com/2026/03/20/small-cap-russell-2000-enters-correction-territory.html",
@@ -87,11 +92,6 @@
       "title": "Bitcoin beat the S&P 500, Nasdaq Composite and gold since the start of the Iran war",
       "link": "https://www.cnbc.com/2026/03/14/bitcoin-outperforms-sp-500-nasdaq-gold-since-the-start-of-iran-war.html",
       "pubDate": "Sat, 14 Mar 2026 15:00:01 GMT"
-    },
-    {
-      "title": "Dividend stocks are catching up to tech stocks on a key earnings metric at a critical time for the market",
-      "link": "https://www.cnbc.com/2026/03/13/dividend-stocks-tech-earnings-growth-market.html",
-      "pubDate": "Fri, 13 Mar 2026 16:56:09 GMT"
     }
   ]
 }
