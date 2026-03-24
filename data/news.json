@@ -1,8 +1,38 @@
 {
-  "generatedAt": "2026-03-23T13:40:52.083Z",
+  "generatedAt": "2026-03-24T13:42:57.433Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Moody&apos;s cuts rating on private credit fund run by KKR and Future Standard to junk as bad loans grow",
+      "link": "https://www.cnbc.com/2026/03/24/moodys-private-credit-fund-kkr-future-standard-junk.html",
+      "pubDate": "Tue, 24 Mar 2026 13:38:50 GMT"
+    },
+    {
+      "title": "Apollo gives investors only 45% of requested withdrawals from $15 billion private credit fund",
+      "link": "https://www.cnbc.com/2026/03/23/apollo-private-credit-fund-gives-investors-only-45percent-of-requested-withdrawals.html",
+      "pubDate": "Tue, 24 Mar 2026 00:48:12 GMT"
+    },
+    {
+      "title": "Volume in stock and oil futures surged minutes before Trump&apos;s market-turning post",
+      "link": "https://www.cnbc.com/2026/03/23/volume-in-stock-and-oil-futures-surged-minutes-before-trumps-market-turning-post.html",
+      "pubDate": "Mon, 23 Mar 2026 21:27:00 GMT"
+    },
+    {
+      "title": "BlackRock’s Larry Fink warns against market timing, says missing best days can halve returns",
+      "link": "https://www.cnbc.com/2026/03/23/blackrocks-larry-fink-warns-against-trying-to-time-the-market-.html",
+      "pubDate": "Mon, 23 Mar 2026 14:06:43 GMT"
+    },
+    {
+      "title": "U.S. executives, from Apple to Eli Lilly, revamp their push into the world&apos;s second-largest economy at the China Development Forum",
+      "link": "https://www.cnbc.com/2026/03/23/apple-eli-lilly-us-china-market-push-trade-truce.html",
+      "pubDate": "Mon, 23 Mar 2026 14:52:33 GMT"
+    },
+    {
+      "title": "Fed&apos;s Goolsbee says he&apos;s worried about inflation in &apos;fraught but intense&apos; climate",
+      "link": "https://www.cnbc.com/2026/03/23/feds-goolsbee-says-hes-worried-about-inflation-in-fraught-but-intense-climate.html",
+      "pubDate": "Mon, 23 Mar 2026 16:39:56 GMT"
+    },
     {
       "title": "SEC Commissioner Hester Peirce on ETFs: &apos;We want to work with people on new products&apos;",
       "link": "https://www.cnbc.com/2026/03/21/crypto-tokenization-and-etfs-secs-peirce-indicates-openness.html",
@@ -62,36 +92,6 @@
       "title": "The Fed issues its latest interest rate decision Wednesday. Here&apos;s what to expect",
       "link": "https://www.cnbc.com/2026/03/17/the-fed-issues-its-latest-interest-rate-decision-wednesday-heres-what-to-expect.html",
       "pubDate": "Tue, 17 Mar 2026 20:29:55 GMT"
-    },
-    {
-      "title": "Orlando Bravo pushes back on private markets criticism: &apos;Everybody&apos;s extremely comfortable&apos;",
-      "link": "https://www.cnbc.com/2026/03/17/orlando-bravo-pushes-back-on-private-markets-criticism-everybodys-extremely-comfortable.html",
-      "pubDate": "Tue, 17 Mar 2026 21:17:31 GMT"
-    },
-    {
-      "title": "Mastercard says it&apos;s acquiring stablecoin startup BVNK in $1.8 billion bet on future of payments",
-      "link": "https://www.cnbc.com/2026/03/17/mastercard-acquiring-stablecoin-startup-bvnk-in-crypto-bet.html",
-      "pubDate": "Tue, 17 Mar 2026 14:40:39 GMT"
-    },
-    {
-      "title": "Apollo&apos;s John Zito questions private equity&apos;s software valuations: &apos;All the marks are wrong&apos;",
-      "link": "https://www.cnbc.com/2026/03/16/apollo-john-zito-private-equity-software-valuations.html",
-      "pubDate": "Mon, 16 Mar 2026 17:17:36 GMT"
-    },
-    {
-      "title": "China talks up oil sufficiency as Trump seeks Beijing&apos;s help on securing Hormuz energy route",
-      "link": "https://www.cnbc.com/2026/03/16/china-oil-reserves-trump-iran-war-hormuz.html",
-      "pubDate": "Mon, 16 Mar 2026 13:56:51 GMT"
-    },
-    {
-      "title": "Holiday spending, export demand drive China’s economic momentum as Iran war headwinds loom",
-      "link": "https://www.cnbc.com/2026/03/16/china-data-today-retail-sales-property-industrial-production.html",
-      "pubDate": "Mon, 16 Mar 2026 06:11:06 GMT"
-    },
-    {
-      "title": "Bitcoin beat the S&P 500, Nasdaq Composite and gold since the start of the Iran war",
-      "link": "https://www.cnbc.com/2026/03/14/bitcoin-outperforms-sp-500-nasdaq-gold-since-the-start-of-iran-war.html",
-      "pubDate": "Sat, 14 Mar 2026 15:00:01 GMT"
     }
   ]
 }
