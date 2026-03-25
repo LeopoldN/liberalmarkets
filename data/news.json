@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-03-24T13:42:57.433Z",
+  "generatedAt": "2026-03-25T13:42:24.499Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "World has &apos;never experienced&apos; soaring refining margins like this, TotalEnergies CEO tells CNBC",
+      "link": "https://www.cnbc.com/2026/03/24/totalenergies-ceo-world-has-never-experienced-refining-margins-like-this-.html",
+      "pubDate": "Tue, 24 Mar 2026 19:28:56 GMT"
+    },
+    {
+      "title": "Jamie Dimon says Iran war makes Middle East peace prospects better in the long term",
+      "link": "https://www.cnbc.com/2026/03/24/jamie-dimon-iran-war-middle-east-peace-prospects-long-term.html",
+      "pubDate": "Tue, 24 Mar 2026 18:14:24 GMT"
+    },
+    {
       "title": "Moody&apos;s cuts rating on private credit fund run by KKR and Future Standard to junk as bad loans grow",
       "link": "https://www.cnbc.com/2026/03/24/moodys-private-credit-fund-kkr-future-standard-junk.html",
-      "pubDate": "Tue, 24 Mar 2026 13:38:50 GMT"
+      "pubDate": "Tue, 24 Mar 2026 14:55:50 GMT"
     },
     {
       "title": "Apollo gives investors only 45% of requested withdrawals from $15 billion private credit fund",
@@ -82,16 +92,6 @@
       "title": "JPMorgan Chase taps A&apos;ja Wilson, Tom Brady for new athlete wealth management push",
       "link": "https://www.cnbc.com/2026/03/18/jpmorgan-athlete-wealth-management-tom-brady-dwyane-wade.html",
       "pubDate": "Thu, 19 Mar 2026 14:20:28 GMT"
-    },
-    {
-      "title": "Expectations for the next Fed rate cut get pushed back after hot inflation report",
-      "link": "https://www.cnbc.com/2026/03/18/views-for-next-fed-rate-cut-pushed-back-after-hot-inflation-report.html",
-      "pubDate": "Wed, 18 Mar 2026 18:40:14 GMT"
-    },
-    {
-      "title": "The Fed issues its latest interest rate decision Wednesday. Here&apos;s what to expect",
-      "link": "https://www.cnbc.com/2026/03/17/the-fed-issues-its-latest-interest-rate-decision-wednesday-heres-what-to-expect.html",
-      "pubDate": "Tue, 17 Mar 2026 20:29:55 GMT"
     }
   ]
 }
