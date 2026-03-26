@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-03-25T13:42:24.499Z",
+  "generatedAt": "2026-03-26T13:48:46.586Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "The research firm whose AI paper knocked the whole stock market is out with another big call",
+      "link": "https://www.cnbc.com/2026/03/25/the-firm-whose-ai-paper-knocked-the-whole-market-is-out-with-another-big-call.html",
+      "pubDate": "Wed, 25 Mar 2026 16:49:06 GMT"
+    },
+    {
+      "title": "Former SEC Chair Jay Clayton says regulators would scrutinize trading ahead of Trump post",
+      "link": "https://www.cnbc.com/2026/03/25/former-sec-chair-jay-clayton-says-regulators-would-scrutinize-trading-ahead-of-trump-post.html",
+      "pubDate": "Wed, 25 Mar 2026 15:21:44 GMT"
+    },
     {
       "title": "World has &apos;never experienced&apos; soaring refining margins like this, TotalEnergies CEO tells CNBC",
       "link": "https://www.cnbc.com/2026/03/24/totalenergies-ceo-world-has-never-experienced-refining-margins-like-this-.html",
@@ -82,16 +92,6 @@
       "title": "Here&apos;s what changed in the new Fed statement",
       "link": "https://www.cnbc.com/2026/03/18/federal-reserve-meeting-statement-march.html",
       "pubDate": "Thu, 19 Mar 2026 14:09:38 GMT"
-    },
-    {
-      "title": "Fed votes to hold rates steady, notes &apos;uncertain&apos; impacts from Iran war",
-      "link": "https://www.cnbc.com/2026/03/18/fed-interest-rate-decision-march-2026.html",
-      "pubDate": "Thu, 19 Mar 2026 03:01:02 GMT"
-    },
-    {
-      "title": "JPMorgan Chase taps A&apos;ja Wilson, Tom Brady for new athlete wealth management push",
-      "link": "https://www.cnbc.com/2026/03/18/jpmorgan-athlete-wealth-management-tom-brady-dwyane-wade.html",
-      "pubDate": "Thu, 19 Mar 2026 14:20:28 GMT"
     }
   ]
 }
