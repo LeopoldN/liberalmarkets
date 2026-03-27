@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-03-26T13:48:46.586Z",
+  "generatedAt": "2026-03-27T13:24:46.590Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Why one hedge fund veteran is urging investors to &apos;prepare for the worst&apos;",
+      "link": "https://www.cnbc.com/2026/03/27/iran-to-economic-risks-markets-ability-to-forecast-world-in-question.html",
+      "pubDate": "Fri, 27 Mar 2026 11:00:01 GMT"
+    },
+    {
+      "title": "Private credit&apos;s cracks open door for Wall Street banks&apos; comeback: &apos;The tug of war is just starting&apos;",
+      "link": "https://www.cnbc.com/2026/03/27/wall-street-banks-private-credit-market-share-leveraged-loans.html",
+      "pubDate": "Fri, 27 Mar 2026 06:15:02 GMT"
+    },
+    {
+      "title": "Sen. Warren rips Federal Reserve chair pick Kevin Warsh: &apos;You have learned nothing from your failures&apos;",
+      "link": "https://www.cnbc.com/2026/03/26/federal-reserve-kevin-walsh-elizabeth-warren-trump.html",
+      "pubDate": "Fri, 27 Mar 2026 02:05:55 GMT"
+    },
     {
       "title": "The research firm whose AI paper knocked the whole stock market is out with another big call",
       "link": "https://www.cnbc.com/2026/03/25/the-firm-whose-ai-paper-knocked-the-whole-market-is-out-with-another-big-call.html",
@@ -77,21 +92,6 @@
       "title": "OpenClaw demand in China is driving up the price of used MacBooks",
       "link": "https://www.cnbc.com/2026/03/19/openclaw-demand-in-china-is-driving-up-the-price-of-secondhand-macbooks.html",
       "pubDate": "Thu, 19 Mar 2026 11:02:11 GMT"
-    },
-    {
-      "title": "Here are the five key takeaways from this week&apos;s Fed meeting",
-      "link": "https://www.cnbc.com/2026/03/18/here-are-the-five-key-takeaways-from-this-weeks-fed-meeting.html",
-      "pubDate": "Thu, 19 Mar 2026 03:01:27 GMT"
-    },
-    {
-      "title": "Fed still expects to cut rates once this year despite spiking oil prices",
-      "link": "https://www.cnbc.com/2026/03/18/dot-plot-fed-still-expects-to-cut-rates-once-this-year-despite-spiking-oil-prices-.html",
-      "pubDate": "Wed, 18 Mar 2026 18:59:40 GMT"
-    },
-    {
-      "title": "Here&apos;s what changed in the new Fed statement",
-      "link": "https://www.cnbc.com/2026/03/18/federal-reserve-meeting-statement-march.html",
-      "pubDate": "Thu, 19 Mar 2026 14:09:38 GMT"
     }
   ]
 }
