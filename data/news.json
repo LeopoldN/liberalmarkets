@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-03-27T13:24:46.590Z",
+  "generatedAt": "2026-03-28T13:13:38.734Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "As stocks and bonds fall, and oil hits $100, a futures trade that boomed in 2022 may again be a winner",
+      "link": "https://www.cnbc.com/2026/03/28/market-correction-futures-hedging-strategies.html",
+      "pubDate": "Sat, 28 Mar 2026 12:00:01 GMT"
+    },
     {
       "title": "Why one hedge fund veteran is urging investors to &apos;prepare for the worst&apos;",
       "link": "https://www.cnbc.com/2026/03/27/iran-to-economic-risks-markets-ability-to-forecast-world-in-question.html",
@@ -16,7 +21,7 @@
     {
       "title": "Sen. Warren rips Federal Reserve chair pick Kevin Warsh: &apos;You have learned nothing from your failures&apos;",
       "link": "https://www.cnbc.com/2026/03/26/federal-reserve-kevin-walsh-elizabeth-warren-trump.html",
-      "pubDate": "Fri, 27 Mar 2026 02:05:55 GMT"
+      "pubDate": "Fri, 27 Mar 2026 15:52:49 GMT"
     },
     {
       "title": "The research firm whose AI paper knocked the whole stock market is out with another big call",
@@ -87,11 +92,6 @@
       "title": "Copper joins gold in broad commodities sell-off. There&apos;s a worrying reason behind it",
       "link": "https://www.cnbc.com/2026/03/19/copper-joins-gold-in-broad-commodities-sell-off-theres-a-worrying-reason-behind-it.html",
       "pubDate": "Fri, 20 Mar 2026 14:47:14 GMT"
-    },
-    {
-      "title": "OpenClaw demand in China is driving up the price of used MacBooks",
-      "link": "https://www.cnbc.com/2026/03/19/openclaw-demand-in-china-is-driving-up-the-price-of-secondhand-macbooks.html",
-      "pubDate": "Thu, 19 Mar 2026 11:02:11 GMT"
     }
   ]
 }
