@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-30T13:54:01.374Z",
+  "generatedAt": "2026-03-31T13:54:12.576Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Warren Buffett says he sold Apple too soon and would buy more of it, though not in this market",
+      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-he-sold-apple-too-soon-and-would-buy-more-of-it-though-not-in-this-market-.html",
+      "pubDate": "Tue, 31 Mar 2026 13:11:29 GMT"
+    },
+    {
+      "title": "Warren Buffett says he’s still making calls on investments at Berkshire, flags ‘tiny’ new buy",
+      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-hes-still-making-calls-on-investments-at-berkshire-flags-tiny-new-buy.html",
+      "pubDate": "Tue, 31 Mar 2026 13:07:35 GMT"
+    },
+    {
+      "title": "Huawei&apos;s cloud computing revenue dropped in 2025 as Chinese AI lagged U.S. rivals",
+      "link": "https://www.cnbc.com/2026/03/31/huawei-annual-report-2025-cloud-computing-revenue.html",
+      "pubDate": "Tue, 31 Mar 2026 12:00:01 GMT"
+    },
+    {
+      "title": "Warren Buffett teams up with NBA superstar Stephen Curry for charity lunch, reviving iconic auction",
+      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-teams-up-with-stephen-curry-for-charity-lunch.html",
+      "pubDate": "Tue, 31 Mar 2026 13:37:30 GMT"
+    },
+    {
+      "title": "Three niche commodity prices are surging. What they show about China&apos;s grip on supply chains",
+      "link": "https://www.cnbc.com/2026/03/31/commodities-price-of-tungsten-sulfur-and-helium.html",
+      "pubDate": "Tue, 31 Mar 2026 05:29:11 GMT"
+    },
+    {
+      "title": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
+      "link": "https://www.cnbc.com/2026/03/30/powell-sees-inflation-outlook-in-check-no-wider-crisis-yet-in-private-credit.html",
+      "pubDate": "Mon, 30 Mar 2026 19:34:25 GMT"
+    },
+    {
+      "title": "Bill Ackman says it’s one of the best times in a long time to buy quality stocks",
+      "link": "https://www.cnbc.com/2026/03/30/bill-ackman-says-its-one-of-the-best-times-in-a-long-time-to-buy-quality-stocks.html",
+      "pubDate": "Mon, 30 Mar 2026 15:46:33 GMT"
+    },
+    {
+      "title": "Fed Governor Miran still backs cuts, says interest rates could be &apos;about a point&apos; lower this year",
+      "link": "https://www.cnbc.com/2026/03/30/fed-governor-miran-still-backs-cuts-says-interest-rates-could-be-about-a-point-lower-this-year.html",
+      "pubDate": "Mon, 30 Mar 2026 14:54:18 GMT"
+    },
+    {
+      "title": "Watch Fed Chair Jerome Powell speak live to an economics class at Harvard",
+      "link": "https://www.cnbc.com/2026/03/30/watch-fed-chair-jerome-powell-speak-live-to-an-economics-class-at-harvard.html",
+      "pubDate": "Mon, 30 Mar 2026 14:47:39 GMT"
+    },
     {
       "title": "As stocks and bonds fall, and oil hits $100, a futures trade that boomed in 2022 may again be a winner",
       "link": "https://www.cnbc.com/2026/03/28/market-correction-futures-hedging-strategies.html",
@@ -47,51 +92,6 @@
       "title": "Moody&apos;s cuts rating on private credit fund run by KKR and Future Standard to junk as bad loans grow",
       "link": "https://www.cnbc.com/2026/03/24/moodys-private-credit-fund-kkr-future-standard-junk.html",
       "pubDate": "Tue, 24 Mar 2026 14:55:50 GMT"
-    },
-    {
-      "title": "Apollo gives investors only 45% of requested withdrawals from $15 billion private credit fund",
-      "link": "https://www.cnbc.com/2026/03/23/apollo-private-credit-fund-gives-investors-only-45percent-of-requested-withdrawals.html",
-      "pubDate": "Tue, 24 Mar 2026 00:48:12 GMT"
-    },
-    {
-      "title": "Volume in stock and oil futures surged minutes before Trump&apos;s market-turning post",
-      "link": "https://www.cnbc.com/2026/03/23/volume-in-stock-and-oil-futures-surged-minutes-before-trumps-market-turning-post.html",
-      "pubDate": "Mon, 23 Mar 2026 21:27:00 GMT"
-    },
-    {
-      "title": "BlackRock’s Larry Fink warns against market timing, says missing best days can halve returns",
-      "link": "https://www.cnbc.com/2026/03/23/blackrocks-larry-fink-warns-against-trying-to-time-the-market-.html",
-      "pubDate": "Mon, 23 Mar 2026 14:06:43 GMT"
-    },
-    {
-      "title": "U.S. executives, from Apple to Eli Lilly, revamp their push into the world&apos;s second-largest economy at the China Development Forum",
-      "link": "https://www.cnbc.com/2026/03/23/apple-eli-lilly-us-china-market-push-trade-truce.html",
-      "pubDate": "Mon, 23 Mar 2026 14:52:33 GMT"
-    },
-    {
-      "title": "Fed&apos;s Goolsbee says he&apos;s worried about inflation in &apos;fraught but intense&apos; climate",
-      "link": "https://www.cnbc.com/2026/03/23/feds-goolsbee-says-hes-worried-about-inflation-in-fraught-but-intense-climate.html",
-      "pubDate": "Mon, 23 Mar 2026 16:39:56 GMT"
-    },
-    {
-      "title": "SEC Commissioner Hester Peirce on ETFs: &apos;We want to work with people on new products&apos;",
-      "link": "https://www.cnbc.com/2026/03/21/crypto-tokenization-and-etfs-secs-peirce-indicates-openness.html",
-      "pubDate": "Sat, 21 Mar 2026 15:00:01 GMT"
-    },
-    {
-      "title": "Small cap-focused Russell 2000 becomes first U.S. benchmark to enter correction territory",
-      "link": "https://www.cnbc.com/2026/03/20/small-cap-russell-2000-enters-correction-territory.html",
-      "pubDate": "Fri, 20 Mar 2026 21:41:56 GMT"
-    },
-    {
-      "title": "Fed Governor Waller urges caution for now, says rate cuts possible later in the year",
-      "link": "https://www.cnbc.com/2026/03/20/fed-gov-waller-urges-caution-for-now-cuts-possible-later-in-the-year.html",
-      "pubDate": "Fri, 20 Mar 2026 13:36:43 GMT"
-    },
-    {
-      "title": "Copper joins gold in broad commodities sell-off. There&apos;s a worrying reason behind it",
-      "link": "https://www.cnbc.com/2026/03/19/copper-joins-gold-in-broad-commodities-sell-off-theres-a-worrying-reason-behind-it.html",
-      "pubDate": "Fri, 20 Mar 2026 14:47:14 GMT"
     }
   ]
 }
