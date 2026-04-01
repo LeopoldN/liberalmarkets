@@ -1,17 +1,27 @@
 {
-  "generatedAt": "2026-03-31T13:54:12.576Z",
+  "generatedAt": "2026-04-01T13:56:46.333Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Warren Buffett says he sold Apple too soon and would buy more of it, though not in this market",
-      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-he-sold-apple-too-soon-and-would-buy-more-of-it-though-not-in-this-market-.html",
-      "pubDate": "Tue, 31 Mar 2026 13:11:29 GMT"
+      "title": "Visa launches new AI tools to manage the charge dispute process",
+      "link": "https://www.cnbc.com/2026/04/01/visa-ai-tools-dispute-management.html",
+      "pubDate": "Wed, 01 Apr 2026 12:51:58 GMT"
     },
     {
-      "title": "Warren Buffett says he’s still making calls on investments at Berkshire, flags ‘tiny’ new buy",
+      "title": "Warren Buffett says Iran bomb would make nuclear disaster harder to avoid",
+      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-iran-bomb-would-make-nuclear-disaster-harder-to-avoid.html",
+      "pubDate": "Tue, 31 Mar 2026 17:16:22 GMT"
+    },
+    {
+      "title": "Warren Buffett says he sold Apple too soon and would buy more of it, though not in this market",
+      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-he-sold-apple-too-soon-and-would-buy-more-of-it-though-not-in-this-market-.html",
+      "pubDate": "Tue, 31 Mar 2026 15:31:12 GMT"
+    },
+    {
+      "title": "Warren Buffett says he&apos;s still making calls on investments at Berkshire, flags &apos;tiny&apos; new buy",
       "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-hes-still-making-calls-on-investments-at-berkshire-flags-tiny-new-buy.html",
-      "pubDate": "Tue, 31 Mar 2026 13:07:35 GMT"
+      "pubDate": "Tue, 31 Mar 2026 15:02:49 GMT"
     },
     {
       "title": "Huawei&apos;s cloud computing revenue dropped in 2025 as Chinese AI lagged U.S. rivals",
@@ -21,7 +31,7 @@
     {
       "title": "Warren Buffett teams up with NBA superstar Stephen Curry for charity lunch, reviving iconic auction",
       "link": "https://www.cnbc.com/2026/03/31/warren-buffett-teams-up-with-stephen-curry-for-charity-lunch.html",
-      "pubDate": "Tue, 31 Mar 2026 13:37:30 GMT"
+      "pubDate": "Tue, 31 Mar 2026 16:37:47 GMT"
     },
     {
       "title": "Three niche commodity prices are surging. What they show about China&apos;s grip on supply chains",
@@ -82,16 +92,6 @@
       "title": "World has &apos;never experienced&apos; soaring refining margins like this, TotalEnergies CEO tells CNBC",
       "link": "https://www.cnbc.com/2026/03/24/totalenergies-ceo-world-has-never-experienced-refining-margins-like-this-.html",
       "pubDate": "Tue, 24 Mar 2026 19:28:56 GMT"
-    },
-    {
-      "title": "Jamie Dimon says Iran war makes Middle East peace prospects better in the long term",
-      "link": "https://www.cnbc.com/2026/03/24/jamie-dimon-iran-war-middle-east-peace-prospects-long-term.html",
-      "pubDate": "Tue, 24 Mar 2026 18:14:24 GMT"
-    },
-    {
-      "title": "Moody&apos;s cuts rating on private credit fund run by KKR and Future Standard to junk as bad loans grow",
-      "link": "https://www.cnbc.com/2026/03/24/moodys-private-credit-fund-kkr-future-standard-junk.html",
-      "pubDate": "Tue, 24 Mar 2026 14:55:50 GMT"
     }
   ]
 }
