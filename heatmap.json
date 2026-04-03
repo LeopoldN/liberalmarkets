@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T14:37:21.770Z",
+  "generatedAt": "2026-04-03T21:02:13.255Z",
   "source": "stooq",
   "items": [
     {
@@ -636,14 +636,14 @@
       "name": "US 2Y Yield",
       "group": "Macro",
       "date": "2026-04-03",
-      "close": 3.858,
+      "close": 3.833,
       "prevDate": "2026-04-02",
       "prevClose": 3.809,
-      "deltaPct": 1.286426883696512,
+      "deltaPct": 0.6300866369125746,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 3.858
+          "close": 3.833
         }
       ],
       "ok": true
@@ -653,14 +653,14 @@
       "name": "US 5Y Yield",
       "group": "Macro",
       "date": "2026-04-03",
-      "close": 3.997,
+      "close": 3.98,
       "prevDate": "2026-04-02",
       "prevClose": 3.951,
-      "deltaPct": 1.1642622120981994,
+      "deltaPct": 0.7339913945836551,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 3.997
+          "close": 3.98
         }
       ],
       "ok": true
@@ -670,14 +670,14 @@
       "name": "US 10Y Yield",
       "group": "Macro",
       "date": "2026-04-03",
-      "close": 4.348,
+      "close": 4.345,
       "prevDate": "2026-04-02",
       "prevClose": 4.309,
-      "deltaPct": 0.9050823857043255,
+      "deltaPct": 0.8354606637270834,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 4.348
+          "close": 4.345
         }
       ],
       "ok": true
@@ -687,14 +687,14 @@
       "name": "US 30Y Yield",
       "group": "Macro",
       "date": "2026-04-03",
-      "close": 4.914,
+      "close": 4.918,
       "prevDate": "2026-04-02",
       "prevClose": 4.883,
-      "deltaPct": 0.6348556215441281,
+      "deltaPct": 0.7167724759369332,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 4.914
+          "close": 4.918
         }
       ],
       "ok": true
@@ -704,14 +704,14 @@
       "name": "USD/EUR",
       "group": "Macro",
       "date": "2026-04-03",
-      "close": 0.867656,
+      "close": 0.86847,
       "prevDate": "2026-04-02",
       "prevClose": 0.866588,
-      "deltaPct": 0.12324195580828423,
+      "deltaPct": 0.21717355883070777,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 0.867656
+          "close": 0.86847
         }
       ],
       "ok": true
@@ -721,14 +721,14 @@
       "name": "USD/JPY",
       "group": "Macro",
       "date": "2026-04-03",
-      "close": 159.5725,
+      "close": 159.6385,
       "prevDate": "2026-04-02",
       "prevClose": 159.6145,
-      "deltaPct": -0.02631339884534567,
+      "deltaPct": 0.015036227911635613,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 159.5725
+          "close": 159.6385
         }
       ],
       "ok": true
@@ -772,14 +772,14 @@
       "name": "Bitcoin",
       "group": "Crypto",
       "date": "2026-04-03",
-      "close": 66886.71,
+      "close": 66855.45,
       "prevDate": "2026-04-02",
       "prevClose": 66946.23,
-      "deltaPct": -0.08890717221864408,
+      "deltaPct": -0.13560136246656418,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 66886.71
+          "close": 66855.45
         }
       ],
       "ok": true
@@ -789,14 +789,14 @@
       "name": "Ethereum",
       "group": "Crypto",
       "date": "2026-04-03",
-      "close": 2051.98,
+      "close": 2053.615,
       "prevDate": "2026-04-02",
       "prevClose": 2067.443,
-      "deltaPct": -0.7479287216140995,
+      "deltaPct": -0.6688455256082193,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 2051.98
+          "close": 2053.615
         }
       ],
       "ok": true
@@ -806,14 +806,14 @@
       "name": "Solana",
       "group": "Crypto",
       "date": "2026-04-03",
-      "close": 79.88,
+      "close": 80.17,
       "prevDate": "2026-04-02",
       "prevClose": 79.17208,
-      "deltaPct": 0.8941535955604651,
+      "deltaPct": 1.2604443384587105,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 79.88
+          "close": 80.17
         }
       ],
       "ok": true
@@ -823,14 +823,14 @@
       "name": "XRP",
       "group": "Crypto",
       "date": "2026-04-03",
-      "close": 1.31683,
+      "close": 1.31613,
       "prevDate": "2026-04-02",
       "prevClose": 1.31787,
-      "deltaPct": -0.07891521925532663,
+      "deltaPct": -0.13203123221562363,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 1.31683
+          "close": 1.31613
         }
       ],
       "ok": true
@@ -840,14 +840,14 @@
       "name": "Dogecoin",
       "group": "Crypto",
       "date": "2026-04-03",
-      "close": 0.0913591,
+      "close": 0.09199,
       "prevDate": "2026-04-02",
       "prevClose": 0.09057,
-      "deltaPct": 0.87125979905045,
+      "deltaPct": 1.5678480733134714,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 0.0913591
+          "close": 0.09199
         }
       ],
       "ok": true

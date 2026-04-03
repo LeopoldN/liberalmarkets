@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T14:37:21.770Z",
+  "generatedAt": "2026-04-03T21:02:13.255Z",
   "source": "stooq",
   "items": [
     {
@@ -7,14 +7,14 @@
       "name": "US 2Y Yield",
       "group": null,
       "date": "2026-04-03",
-      "close": 3.856,
+      "close": 3.833,
       "prevDate": "2026-04-02",
       "prevClose": 3.809,
-      "deltaPct": 1.2339196639537864,
+      "deltaPct": 0.6300866369125746,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 3.856
+          "close": 3.833
         }
       ],
       "ok": true
@@ -24,14 +24,14 @@
       "name": "US 5Y Yield",
       "group": null,
       "date": "2026-04-03",
-      "close": 3.994,
+      "close": 3.98,
       "prevDate": "2026-04-02",
       "prevClose": 3.951,
-      "deltaPct": 1.0883320678309216,
+      "deltaPct": 0.7339913945836551,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 3.994
+          "close": 3.98
         }
       ],
       "ok": true
@@ -58,14 +58,14 @@
       "name": "US 30Y Yield",
       "group": null,
       "date": "2026-04-03",
-      "close": 4.915,
+      "close": 4.918,
       "prevDate": "2026-04-02",
       "prevClose": 4.883,
-      "deltaPct": 0.6553348351423294,
+      "deltaPct": 0.7167724759369332,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 4.915
+          "close": 4.918
         }
       ],
       "ok": true
@@ -75,14 +75,14 @@
       "name": "USD/EUR",
       "group": null,
       "date": "2026-04-03",
-      "close": 0.867626,
+      "close": 0.86847,
       "prevDate": "2026-04-02",
       "prevClose": 0.866686,
-      "deltaPct": 0.1084591189888906,
+      "deltaPct": 0.20584156199592307,
       "history": [
         {
           "date": "2026-04-03",
-          "close": 0.867626
+          "close": 0.86847
         }
       ],
       "ok": true
