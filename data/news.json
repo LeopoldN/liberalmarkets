@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-04-05T13:16:16.555Z",
+  "generatedAt": "2026-04-06T13:39:25.660Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "JPMorgan CEO Jamie Dimon in annual letter cites risks in geopolitics, AI and private markets",
+      "link": "https://www.cnbc.com/2026/04/06/jpmorgan-ceo-jamie-dimon-annual-letter-risks.html",
+      "pubDate": "Mon, 06 Apr 2026 11:55:38 GMT"
+    },
     {
       "title": "Blue Owl caps private credit funds redemptions at 5% after steep request levels",
       "link": "https://www.cnbc.com/2026/04/02/blue-owl-private-credit-funds-redemptions-requests.html",
@@ -87,11 +92,6 @@
       "title": "The research firm whose AI paper knocked the whole stock market is out with another big call",
       "link": "https://www.cnbc.com/2026/03/25/the-firm-whose-ai-paper-knocked-the-whole-market-is-out-with-another-big-call.html",
       "pubDate": "Wed, 25 Mar 2026 16:49:06 GMT"
-    },
-    {
-      "title": "Former SEC Chair Jay Clayton says regulators would scrutinize trading ahead of Trump post",
-      "link": "https://www.cnbc.com/2026/03/25/former-sec-chair-jay-clayton-says-regulators-would-scrutinize-trading-ahead-of-trump-post.html",
-      "pubDate": "Wed, 25 Mar 2026 15:21:44 GMT"
     }
   ]
 }
