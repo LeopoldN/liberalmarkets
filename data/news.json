@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-04-07T13:51:32.709Z",
+  "generatedAt": "2026-04-08T13:54:02.795Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Ray Dalio: Trump-Xi meeting to focus on trade, capital flows",
+      "link": "https://www.cnbc.com/2026/04/08/ray-dalio-trump-xi-meeting-to-focus-on-trade-capital-flows.html",
+      "pubDate": "Wed, 08 Apr 2026 12:27:58 GMT"
+    },
     {
       "title": "Offbeat Wall Street research firm says it sent an analyst to Strait of Hormuz. Here&apos;s what they learned",
       "link": "https://www.cnbc.com/2026/04/06/wall-street-firm-sends-analyst-to-the-strait-of-hormuz-heres-what-they-found-out.html",
@@ -87,11 +92,6 @@
       "title": "Private credit&apos;s cracks open door for Wall Street banks&apos; comeback: &apos;The tug of war is just starting&apos;",
       "link": "https://www.cnbc.com/2026/03/27/wall-street-banks-private-credit-market-share-leveraged-loans.html",
       "pubDate": "Fri, 27 Mar 2026 06:15:02 GMT"
-    },
-    {
-      "title": "Sen. Warren rips Federal Reserve chair pick Kevin Warsh: &apos;You have learned nothing from your failures&apos;",
-      "link": "https://www.cnbc.com/2026/03/26/federal-reserve-kevin-walsh-elizabeth-warren-trump.html",
-      "pubDate": "Fri, 27 Mar 2026 15:52:49 GMT"
     }
   ]
 }
