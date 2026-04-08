@@ -65,6 +65,20 @@ function renderWireChart(canvas, series, opts = {}) {
   const ink = css.getPropertyValue("--c-ink").trim() || "#344e41";
   const forest = css.getPropertyValue("--c-forest").trim() || "#3a5a40";
   const moss = css.getPropertyValue("--c-moss").trim() || "#588157";
+  const readColor = (name, fallback) => css.getPropertyValue(name).trim() || fallback;
+  const chartText = readColor("--chart-text", ink);
+  const chartTextSoft = readColor("--chart-text-soft", "rgba(52,78,65,0.72)");
+  const chartGridMajor = readColor("--chart-grid-major", "rgba(52,78,65,0.24)");
+  const chartGridMinor = readColor("--chart-grid-minor", "rgba(52,78,65,0.14)");
+  const chartLine = readColor("--chart-line", forest);
+  const chartLineGlow = readColor("--chart-line-glow", "rgba(52,78,65,0.28)");
+  const chartPoint = readColor("--chart-point", moss);
+  const chartCrosshair = readColor("--chart-crosshair", ink);
+  const chartWindowFillTop = readColor("--chart-window-fill-top", "rgba(88,129,87,0.06)");
+  const chartWindowFillBottom = readColor("--chart-window-fill-bottom", "rgba(58,90,64,0.11)");
+  const chartWindowStroke = readColor("--chart-window-stroke", "rgba(52,78,65,0.14)");
+  const chartHazeBottom = readColor("--chart-haze-bottom", "rgba(88,129,87,0.10)");
+  const chartHazeMid = readColor("--chart-haze-mid", "rgba(88,129,87,0.04)");
 
   const ctx = canvas.getContext("2d");
   if (!ctx) return;
@@ -123,14 +137,88 @@ function renderWireChart(canvas, series, opts = {}) {
 
   let data = sliceSeries();
 
-  const pad = { l: 44, r: 18, t: 18, b: 34 };
+  const pad = { l: 64, r: 20, t: 30, b: 42 };
   let hover = null;
 
   /** significant dates state for current slice */
   let sig = [];
   let sigWins = [];
+  let axisMeta = {
+    kind: "number",
+    mag: { divisor: 1, suffix: "", word: "" },
+    unitLabel: "Value",
+  };
 
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+  const hintText = `${canvas.getAttribute("data-title") || opts.title || ""} ${canvas.getAttribute("data-csv") || ""}`.toLowerCase();
+  const explicitUnit = String(
+    canvas.getAttribute("data-unit") ||
+    canvas.getAttribute("data-y-unit") ||
+    ""
+  ).trim().toLowerCase();
+
+  function inferValueKind(maxAbs) {
+    if (explicitUnit === "currency" || explicitUnit === "usd" || explicitUnit === "dollar") return "currency";
+    if (explicitUnit === "percent" || explicitUnit === "pct" || explicitUnit === "%") return "percent";
+    if (explicitUnit === "number" || explicitUnit === "index" || explicitUnit === "count") return "number";
+
+    if (
+      /(^|[^a-z])(rate|yield|percent|percentage|unemployment|cpi yoy|pce yoy|chg%|delta%|pct|lfpr)([^a-z]|$)|%/.test(hintText)
+    ) {
+      return "percent";
+    }
+
+    if (
+      /(^|[^a-z])(employment|jobs?|payroll|labor force|population|persons?|workers?|claims|permits|starts|production|index|ratio|count)([^a-z]|$)/.test(hintText)
+    ) {
+      return "number";
+    }
+
+    if (
+      /(^|[^a-z])(price|gdp|income|wage|earnings|sales|spending|debt|deficit|revenue|exports|imports|rent|gas|oil|electricity|milk|egg|dollar)([^a-z]|$)/.test(hintText)
+    ) {
+      return "currency";
+    }
+
+    return "number";
+  }
+
+  function magnitudeFor(maxAbs, kind) {
+    if (kind === "percent") return { divisor: 1, suffix: "", word: "" };
+    if (maxAbs >= 1_000_000_000_000) return { divisor: 1_000_000_000_000, suffix: "T", word: "Trillions" };
+    if (maxAbs >= 1_000_000_000) return { divisor: 1_000_000_000, suffix: "B", word: "Billions" };
+    if (maxAbs >= 1_000_000) return { divisor: 1_000_000, suffix: "M", word: "Millions" };
+    if (maxAbs >= 1_000) return { divisor: 1_000, suffix: "K", word: "Thousands" };
+    return { divisor: 1, suffix: "", word: "" };
+  }
+
+  function buildAxisMeta(minV, maxV) {
+    const maxAbs = Math.max(Math.abs(minV), Math.abs(maxV));
+    const kind = inferValueKind(maxAbs);
+    const mag = magnitudeFor(maxAbs, kind);
+    const unitLabel =
+      kind === "currency"
+        ? (mag.word ? `USD (${mag.word})` : "USD")
+        : kind === "percent"
+          ? "Percent (%)"
+          : (mag.word ? `Units (${mag.word})` : "Units");
+    return { kind, mag, unitLabel };
+  }
+
+  function formatYValue(value, meta, mode = "axis") {
+    const scaled = value / meta.mag.divisor;
+    const abs = Math.abs(scaled);
+    let maxFrac = abs >= 100 ? 0 : abs >= 10 ? 1 : 2;
+    if (mode === "tooltip" && abs < 1) maxFrac = 3;
+    const num = abs.toLocaleString(undefined, {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: maxFrac,
+    });
+    const sign = scaled < 0 ? "-" : "";
+    if (meta.kind === "currency") return `${sign}$${num}${meta.mag.suffix}`;
+    if (meta.kind === "percent") return `${sign}${num}%`;
+    return `${sign}${num}${meta.mag.suffix}`;
+  }
 
   /**
    * Significant markers you want on the chart.
@@ -211,21 +299,10 @@ function renderWireChart(canvas, series, opts = {}) {
 
     ctx.clearRect(0, 0, w, h);
 
-    // Subtle vignette to make the plot feel "framed"
-    // Bottom-weighted haze (tape-style, subtle)
-    ctx.save();
-    const haze = ctx.createLinearGradient(0, h - pad.b, 0, pad.t);
-    haze.addColorStop(0, "rgba(88,129,87,0.10)");
-    haze.addColorStop(0.45, "rgba(88,129,87,0.04)");
-    haze.addColorStop(1, "rgba(88,129,87,0.00)");
-    ctx.fillStyle = haze;
-    ctx.fillRect(pad.l, pad.t, (w - pad.l - pad.r), (h - pad.t - pad.b));
-    ctx.restore();
-
     // If no data, draw a polite placeholder
     if (data.length < 2) {
       ctx.globalAlpha = 0.85;
-      ctx.fillStyle = ink;
+      ctx.fillStyle = chartTextSoft;
       ctx.font = `12px ${css.getPropertyValue("--mono") || "ui-monospace"}`;
       ctx.fillText("No data to plot.", pad.l, pad.t + 14);
       ctx.globalAlpha = 1;
@@ -235,6 +312,17 @@ function renderWireChart(canvas, series, opts = {}) {
     const minV = Math.min(...data.map(p => p.v));
     const maxV = Math.max(...data.map(p => p.v));
     const spanV = (maxV - minV) || 1;
+    axisMeta = buildAxisMeta(minV, maxV);
+
+    const axisTicks = Array.from({ length: 4 }, (_, i) => minV + (i / 3) * spanV);
+    const axisTickLabels = axisTicks.map(v => formatYValue(v, axisMeta, "axis"));
+    ctx.save();
+    ctx.font = `11px ${css.getPropertyValue("--mono") || "ui-monospace"}`;
+    const widestTick = Math.max(...axisTickLabels.map(t => ctx.measureText(t).width), 0);
+    ctx.font = `10px ${css.getPropertyValue("--mono") || "ui-monospace"}`;
+    const unitW = ctx.measureText(axisMeta.unitLabel).width;
+    ctx.restore();
+    pad.l = clamp(Math.ceil(Math.max(widestTick, unitW) + 30), 68, 132);
 
     const minT = data[0].t;
     const maxT2 = data.at(-1).t;
@@ -242,6 +330,17 @@ function renderWireChart(canvas, series, opts = {}) {
 
     const x = (t) => pad.l + ((t - minT) / spanT) * (w - pad.l - pad.r);
     const y = (v) => pad.t + (1 - (v - minV) / spanV) * (h - pad.t - pad.b);
+
+    // Subtle vignette to make the plot feel "framed"
+    // Bottom-weighted haze (tape-style, subtle)
+    ctx.save();
+    const haze = ctx.createLinearGradient(0, h - pad.b, 0, pad.t);
+    haze.addColorStop(0, chartHazeBottom);
+    haze.addColorStop(0.45, chartHazeMid);
+    haze.addColorStop(1, "rgba(88,129,87,0.00)");
+    ctx.fillStyle = haze;
+    ctx.fillRect(pad.l, pad.t, (w - pad.l - pad.r), (h - pad.t - pad.b));
+    ctx.restore();
 
     // Significant markers (only the ones you want)
     sig = markersInRange(minT, maxT2);
@@ -255,14 +354,14 @@ function renderWireChart(canvas, series, opts = {}) {
         const x1 = x(win.end);
 
         const g = ctx.createLinearGradient(0, pad.t, 0, h - pad.b);
-        g.addColorStop(0, "rgba(88,129,87,0.06)");
-        g.addColorStop(1, "rgba(58,90,64,0.11)");
+        g.addColorStop(0, chartWindowFillTop);
+        g.addColorStop(1, chartWindowFillBottom);
         ctx.fillStyle = g;
 
         ctx.fillRect(x0, pad.t, Math.max(1, x1 - x0), (h - pad.t - pad.b));
 
         // subtle border so it reads as intentional
-        ctx.strokeStyle = "rgba(52,78,65,0.14)";
+        ctx.strokeStyle = chartWindowStroke;
         ctx.lineWidth = 1;
         ctx.strokeRect(
           x0 + 0.5,
@@ -276,13 +375,12 @@ function renderWireChart(canvas, series, opts = {}) {
 
     // Grid: subtle
     ctx.save();
-    ctx.globalAlpha = 0.22;
-    ctx.strokeStyle = ink;
     ctx.lineWidth = 1;
 
     const gridN = 6;
     for (let i = 0; i <= gridN; i++) {
       const yy = pad.t + (i / gridN) * (h - pad.t - pad.b);
+      ctx.strokeStyle = chartGridMajor;
       ctx.beginPath();
       ctx.moveTo(pad.l, yy);
       ctx.lineTo(w - pad.r, yy);
@@ -292,6 +390,7 @@ function renderWireChart(canvas, series, opts = {}) {
     const vN = 8;
     for (let i = 0; i <= vN; i++) {
       const xx = pad.l + (i / vN) * (w - pad.l - pad.r);
+      ctx.strokeStyle = chartGridMinor;
       ctx.beginPath();
       ctx.moveTo(xx, pad.t);
       ctx.lineTo(xx, h - pad.b);
@@ -301,7 +400,8 @@ function renderWireChart(canvas, series, opts = {}) {
 
     // Baseline emphasis
     ctx.save();
-    ctx.strokeStyle = "rgba(52,78,65,0.35)";
+    ctx.strokeStyle = chartGridMajor;
+    ctx.globalAlpha = 0.95;
     ctx.lineWidth = 1.25;
     ctx.beginPath();
     ctx.moveTo(pad.l, h - pad.b);
@@ -312,16 +412,16 @@ function renderWireChart(canvas, series, opts = {}) {
     // Significant marker lines + baseline triangles + labels
     if (sig.length) {
       ctx.save();
-      ctx.strokeStyle = "rgba(52,78,65,0.45)";
-      ctx.fillStyle = "rgba(52,78,65,0.60)";
-      ctx.globalAlpha = 0.85;
+      ctx.strokeStyle = chartTextSoft;
+      ctx.fillStyle = chartTextSoft;
+      ctx.globalAlpha = 0.72;
       ctx.lineWidth = 1;
 
-      ctx.font = `11px ${css.getPropertyValue("--mono") || "ui-monospace"}`;
+      ctx.font = `10px ${css.getPropertyValue("--mono") || "ui-monospace"}`;
 
       // simple label collision avoidance: only label if far enough from previous label
       let lastLabelX = -Infinity;
-      const minLabelGap = 90; // px
+      const minLabelGap = 110; // px
 
       for (const m of sig) {
         const px = clamp(x(m.t), pad.l, w - pad.r);
@@ -345,12 +445,12 @@ function renderWireChart(canvas, series, opts = {}) {
         const label = m.label;
         const tw = ctx.measureText(label).width;
         const lx = clamp(px - tw / 2, pad.l, (w - pad.r) - tw);
-        const ly = pad.t + 12;
+        const ly = pad.t + 14;
 
         if (lx - lastLabelX >= minLabelGap) {
-          ctx.globalAlpha = 0.75;
+          ctx.globalAlpha = 0.64;
           ctx.fillText(label, lx, ly);
-          ctx.globalAlpha = 0.85;
+          ctx.globalAlpha = 0.72;
           lastLabelX = lx;
         }
       }
@@ -360,19 +460,30 @@ function renderWireChart(canvas, series, opts = {}) {
 
     // Axis labels (left)
     ctx.save();
-    ctx.fillStyle = ink;
-    ctx.globalAlpha = 0.85;
+    ctx.fillStyle = chartText;
+    ctx.globalAlpha = 0.94;
     ctx.font = `11px ${css.getPropertyValue("--mono") || "ui-monospace"}`;
+    ctx.textAlign = "right";
+    ctx.textBaseline = "middle";
 
-    for (let i = 0; i <= 3; i++) {
-      const vv = minV + (i / 3) * spanV;
-      const yy = y(vv);
-      ctx.fillText(vv.toFixed(1), 8, yy + 4);
+    for (let i = 0; i < axisTicks.length; i++) {
+      const yy = y(axisTicks[i]);
+      ctx.fillText(axisTickLabels[i], pad.l - 10, yy);
     }
+
+    ctx.fillStyle = chartTextSoft;
+    ctx.globalAlpha = 0.88;
+    ctx.font = `10px ${css.getPropertyValue("--mono") || "ui-monospace"}`;
+    ctx.textAlign = "left";
+    ctx.textBaseline = "alphabetic";
+    ctx.fillText(axisMeta.unitLabel, 10, Math.max(12, pad.t - 14));
 
     // Date range labels
     const d0 = new Date(minT);
     const d1 = new Date(maxT2);
+    ctx.fillStyle = chartTextSoft;
+    ctx.globalAlpha = 0.82;
+    ctx.textAlign = "left";
     ctx.fillText(d0.toISOString().slice(0, 10), pad.l, h - 12);
     const endStr = d1.toISOString().slice(0, 10);
     const endW = ctx.measureText(endStr).width;
@@ -382,9 +493,9 @@ function renderWireChart(canvas, series, opts = {}) {
     // Area gradient (tape-style fade, bottom-weighted)
     ctx.save();
     const grad = ctx.createLinearGradient(0, h - pad.b, 0, pad.t);
-    grad.addColorStop(0, "rgba(58,90,64,0.20)");
-    grad.addColorStop(0.45, "rgba(58,90,64,0.10)");
-    grad.addColorStop(1, "rgba(58,90,64,0.02)");
+    grad.addColorStop(0, "rgba(76,214,155,0.24)");
+    grad.addColorStop(0.45, "rgba(76,214,155,0.12)");
+    grad.addColorStop(1, "rgba(76,214,155,0.02)");
     ctx.fillStyle = grad;
     ctx.beginPath();
     ctx.moveTo(x(data[0].t), h - pad.b);
@@ -396,12 +507,12 @@ function renderWireChart(canvas, series, opts = {}) {
 
     // Line
     ctx.save();
-    ctx.strokeStyle = forest;
-    ctx.lineWidth = 2.25;
+    ctx.strokeStyle = chartLine;
+    ctx.lineWidth = 2.55;
     ctx.lineJoin = "round";
     ctx.lineCap = "round";
-    ctx.shadowColor = "rgba(52,78,65,0.25)";
-    ctx.shadowBlur = 4;
+    ctx.shadowColor = chartLineGlow;
+    ctx.shadowBlur = 6;
     ctx.globalAlpha = hover ? 1 : 0.92;
     ctx.beginPath();
     ctx.moveTo(x(data[0].t), y(data[0].v));
@@ -413,8 +524,8 @@ function renderWireChart(canvas, series, opts = {}) {
 
     // Points (sparingly)
     ctx.save();
-    ctx.fillStyle = forest;
-    ctx.globalAlpha = 0.58;
+    ctx.fillStyle = chartPoint;
+    ctx.globalAlpha = 0.72;
     const step = Math.max(1, Math.floor(data.length / 22));
     for (let i = 0; i < data.length; i += step) {
       const px = x(data[i].t);
@@ -431,8 +542,8 @@ function renderWireChart(canvas, series, opts = {}) {
       const py = y(hover.v);
 
       ctx.save();
-      ctx.strokeStyle = ink;
-      ctx.globalAlpha = 0.55;
+      ctx.strokeStyle = chartCrosshair;
+      ctx.globalAlpha = 0.7;
       ctx.lineWidth = 1;
 
       ctx.beginPath();
@@ -446,7 +557,7 @@ function renderWireChart(canvas, series, opts = {}) {
       ctx.stroke();
 
       ctx.globalAlpha = 1;
-      ctx.fillStyle = forest;
+      ctx.fillStyle = chartLine;
       ctx.beginPath();
       ctx.roundRect(px - 4, py - 4, 8, 8, 3);
       ctx.fill();
@@ -457,7 +568,7 @@ function renderWireChart(canvas, series, opts = {}) {
     if (rangeEl) rangeEl.textContent = `${new Date(minT).toISOString().slice(0, 7)} → ${new Date(maxT2).toISOString().slice(0, 7)}`;
     if (latestEl) {
       const last = data.at(-1);
-      latestEl.textContent = `Latest: ${last.v.toLocaleString(undefined, { maximumFractionDigits: 2 })}`;
+      latestEl.textContent = `Latest: ${formatYValue(last.v, axisMeta, "pill")}`;
     }
     if (titleEl) {
       const t = canvas.getAttribute("data-title");
@@ -531,7 +642,7 @@ function renderWireChart(canvas, series, opts = {}) {
       const sigLabel = nearestSig || inSigWindow;
 
       tip.textContent =
-        `${hover.d}  •  ${hover.v.toLocaleString(undefined, { maximumFractionDigits: 3 })}` +
+        `${hover.d}  •  ${formatYValue(hover.v, axisMeta, "tooltip")}` +
         (sigLabel ? `  •  ${sigLabel}` : "");
     }
   });

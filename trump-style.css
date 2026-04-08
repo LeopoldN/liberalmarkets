@@ -1,18 +1,23 @@
+/* trump-style.css
+   Terminal-themed overrides for trumptracker.html.
+   Keeps layout/behavior from styles.css + scripts/trump.js, but shifts
+   the visual language to match markets.html.
+*/
+
 /* Falling man scroll indicator */
-.fallGuy{
+.fallGuy {
   position: fixed;
-  /* Sit next to the centered content (wrap max-width is 1180px) */
-  left: calc(50% - 590px - 82px);
-  top: 110px; /* below sticky topbar */
-  width: 72px;
+  left: calc(50% - 590px - 84px);
+  top: 108px;
+  width: 74px;
   height: calc(100vh - 140px);
   pointer-events: none;
-  z-index: 9; /* under topbar (10) but above content */
-  opacity: .9;
+  z-index: 9;
+  opacity: 0.82;
 }
-.fallGuy::before{
-  content:"";
-  position:absolute;
+.fallGuy::before {
+  content: "";
+  position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
@@ -20,201 +25,406 @@
   transform: translateX(-50%);
   background: linear-gradient(
     to bottom,
-    rgba(52,78,65,.30),
-    rgba(52,78,65,.10),
-    rgba(52,78,65,.00)
+    rgba(86, 255, 168, 0.52),
+    rgba(86, 255, 168, 0.14),
+    rgba(86, 255, 168, 0)
   );
-  opacity: .5;
 }
-.fallGuyInner{
+.fallGuyInner {
   position: absolute;
   left: 50%;
   top: 0;
   transform: translate(-50%, 0);
   transform-origin: 50% 50%;
   will-change: transform;
-  filter: drop-shadow(0 10px 18px rgba(52,78,65,.18));
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.55));
 }
 .fallGuy svg,
-.fallGuy img{
+.fallGuy img {
   width: 82px;
   height: 82px;
-  display:block;
+  display: block;
 }
 
-/* Hide on very small screens */
-@media (max-width: 700px){
-  .fallGuy{ display:none; }
+/* Hero */
+body.markets.trumptracker {
+  --chart-text: rgba(226, 247, 237, 0.94);
+  --chart-text-soft: rgba(187, 229, 209, 0.82);
+  --chart-grid-major: rgba(100, 209, 162, 0.28);
+  --chart-grid-minor: rgba(100, 209, 162, 0.16);
+  --chart-line: rgba(112, 248, 189, 0.96);
+  --chart-line-glow: rgba(72, 213, 155, 0.42);
+  --chart-point: rgba(112, 248, 189, 0.94);
+  --chart-crosshair: rgba(194, 243, 221, 0.74);
+  --chart-window-fill-top: rgba(92, 220, 173, 0.08);
+  --chart-window-fill-bottom: rgba(76, 179, 141, 0.13);
+  --chart-window-stroke: rgba(119, 220, 179, 0.28);
+  --chart-haze-bottom: rgba(86, 255, 168, 0.13);
+  --chart-haze-mid: rgba(86, 255, 168, 0.06);
 }
 
-@media (prefers-reduced-motion: reduce){
-  .fallGuy{ display:none; }
+body.markets.trumptracker .hero {
+  margin-top: 10px;
+}
+body.markets.trumptracker .heroLeft {
+  border-color: rgba(86, 255, 168, 0.24);
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.95), rgba(6, 6, 6, 0.92)),
+    radial-gradient(circle at 12% 25%, rgba(86, 255, 168, 0.13), transparent 48%),
+    radial-gradient(circle at 86% 18%, rgba(17, 207, 162, 0.1), transparent 44%);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+}
+body.markets.trumptracker .heroTitle {
+  font-size: clamp(24px, 2.6vw, 34px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+body.markets.trumptracker .heroTitle .ghost {
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: rgba(230, 246, 239, 0.62);
+}
+body.markets.trumptracker .heroBody {
+  max-width: 92ch;
+  color: rgba(230, 246, 239, 0.82);
 }
 
 /* Trump Tracker sections */
-.ttGrid{
-  display:flex;
+.ttGrid {
+  display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-top: 18px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
-.ttSection{
-  border-radius: var(--r);
-  border: 1px solid var(--line);
-  background: rgba(218,215,205,.55);
-  box-shadow: var(--shadow);
+body.markets.trumptracker .ttSection {
+  border-radius: 12px;
+  border: 1px solid rgba(86, 255, 168, 0.24);
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.95), rgba(6, 6, 6, 0.92)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(86, 255, 168, 0.025) 0 1px,
+      transparent 1px 18px
+    );
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
   overflow: hidden;
+  position: relative;
+}
+body.markets.trumptracker .ttSection::before {
+  content: "";
+  position: absolute;
+  inset: -30% -8%;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(86, 255, 168, 0.11), transparent 45%),
+    radial-gradient(circle at 78% 72%, rgba(17, 207, 162, 0.08), transparent 42%);
+  pointer-events: none;
 }
 
-.ttSectionHead{
-  display:grid;
+body.markets.trumptracker .ttSectionHead {
+  position: relative;
+  z-index: 1;
+  display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: start;
   gap: 14px;
-  padding: 14px;
-  border-bottom: 1px dashed rgba(52,78,65,.25);
-  background:
-    radial-gradient(circle at 20% 10%, rgba(163,177,138,.20), transparent 55%),
-    radial-gradient(circle at 80% 20%, rgba(88,129,87,.14), transparent 55%),
-    linear-gradient(180deg, rgba(218,215,205,.68), rgba(218,215,205,.52));
+  padding: 12px 14px;
+  border-bottom: 1px dashed rgba(86, 255, 168, 0.24);
+  background: rgba(7, 7, 7, 0.72);
 }
 
-.ttHeadLeft{ flex: 1 1 auto; min-width: 220px; }
-.ttHeadRight{
-  display:flex;
+.ttHeadLeft {
+  min-width: 260px;
+}
+.ttHeadRight {
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
-
-  /* Option 2: don’t reserve a giant column */
   width: auto;
-  max-width: min(720px, 100%);
+  max-width: min(760px, 100%);
   justify-self: end;
 }
 
-.ttKicker{
+.ttKicker {
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: .6px;
-  opacity: .75;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(86, 255, 168, 0.9);
 }
 
-.ttTitle{
-  margin: 6px 0 6px;
-  font-size: 18px;
-  letter-spacing: .2px;
+.ttTitle {
+  margin: 6px 0 5px;
+  font-family: var(--mono);
+  font-size: 17px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
-.ttSub{
+.ttSub {
   margin: 0;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.45;
-  opacity: .82;
-  max-width: 62ch;
+  color: rgba(230, 246, 239, 0.72);
+  max-width: 72ch;
 }
 
-.ttSnapRow{
+.ttSnapRow {
   width: 100%;
-  display:flex;
-  gap: 10px;
+  display: flex;
+  gap: 9px;
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: stretch;
-  position: relative;
-
   max-width: 100%;
-  padding: 2px 2px 6px;
+  padding: 1px 1px 2px;
 }
 
-
-.ttSnap{
+body.markets.trumptracker .ttSnap {
   flex: 0 0 auto;
-  min-width: 170px;
-  max-width: 240px;
-
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 10px 12px;
-  background: rgba(163,177,138,.14);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.22);
-
+  min-width: 160px;
+  max-width: 230px;
+  border: 1px solid rgba(86, 255, 168, 0.24);
+  border-radius: 10px;
+  padding: 8px 10px;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.92), rgba(6, 6, 6, 0.9));
+  box-shadow: inset 0 0 0 1px rgba(86, 255, 168, 0.06);
 }
 
-.ttSnapLabel{
-  font-size: 11px;
-  letter-spacing: .35px;
+.ttSnapLabel {
+  font-size: 10px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  opacity: .75;
+  color: rgba(230, 246, 239, 0.7);
 }
 
-.ttSnapVal{
+.ttSnapVal {
   margin-top: 4px;
   font-family: var(--mono);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
+  color: rgba(230, 246, 239, 0.94);
 }
 
-.ttSnapChg{
-  margin-top: 2px;
+.ttSnapChg {
+  margin-top: 3px;
   font-family: var(--mono);
-  font-size: 11.5px;
-  opacity: .8;
+  font-size: 11px;
+  color: rgba(230, 246, 239, 0.76);
 }
 
-/* Ensure chartRow inside section has padding */
-.ttSection .chartRow{
-  padding: 14px;
-  margin-top: 0;
-}
-
-@media (max-width: 980px){
-  .ttSectionHead{ grid-template-columns: 1fr; }
-    .ttHeadRight{
-    align-items: flex-start;
-    width: auto;
-    max-width: 100%;
-    justify-self: start;
-    }
-  .ttSnapRow{ justify-content: flex-start; }
-}
-/* Option 2: featured snapshots + drawer */
-
-.ttMoreBtn{
-  border: 1px solid rgba(52,78,65,.18);
-  background: rgba(218,215,205,.55);
-  color: var(--ink);
-  padding: 8px 10px;
+.ttMoreBtn {
+  border: 1px solid rgba(86, 255, 168, 0.26);
+  background: rgba(8, 8, 8, 0.85);
+  color: rgba(230, 246, 239, 0.9);
+  padding: 7px 10px;
   border-radius: 999px;
-  font-size: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   cursor: pointer;
   align-self: flex-end;
 }
-.ttMoreBtn:hover{ box-shadow: inset 0 0 0 1px rgba(52,78,65,.12); }
-.ttMoreBtn:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
-
-.ttMore{
-  border-bottom: 1px dashed rgba(52,78,65,.25);
-  background: rgba(218,215,205,.40);
+.ttMoreBtn:hover {
+  box-shadow: inset 0 0 0 1px rgba(86, 255, 168, 0.18);
 }
-.ttMoreInner{
-  padding: 12px 14px 14px;
+.ttMoreBtn:focus-visible {
+  outline: 2px solid rgba(86, 255, 168, 0.75);
+  outline-offset: 2px;
 }
 
-.ttMoreGrid{
+body.markets.trumptracker .ttMore {
+  border-bottom: 1px dashed rgba(86, 255, 168, 0.24);
+  background: rgba(7, 7, 7, 0.7);
+}
+.ttMoreInner {
+  padding: 10px 14px 14px;
+}
+.ttMoreGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 9px;
 }
-
-/* Reuse your existing ttSnap styling, but make it fill the grid nicely */
-.ttMoreGrid .ttSnap{
+body.markets.trumptracker .ttMoreGrid .ttSnap {
   max-width: none;
   min-width: 0;
 }
 
-/* Mobile */
-@media (max-width: 980px){
-  .ttMoreGrid{ grid-template-columns: 1fr; }
-  .ttMoreBtn{ align-self: flex-start; }
+/* Ensure chart rows inside section have consistent spacing */
+body.markets.trumptracker .ttSection .chartRow {
+  padding: 12px 14px;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+body.markets.trumptracker .ttSection .chartRow + .chartRow {
+  padding-top: 0;
+}
+
+/* Hard terminal override block in case any legacy rule wins specificity */
+body.markets.trumptracker .ttSection,
+body.markets.trumptracker .ttSectionHead,
+body.markets.trumptracker .ttSnap,
+body.markets.trumptracker .ttMore,
+body.markets.trumptracker .ttSection .chartCard,
+body.markets.trumptracker .ttSection .wireChart {
+  color: rgba(230, 246, 239, 0.9);
+}
+body.markets.trumptracker .ttSection {
+  border-color: rgba(86, 255, 168, 0.24) !important;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.95), rgba(6, 6, 6, 0.92)) !important;
+}
+body.markets.trumptracker .ttSectionHead {
+  border-bottom-color: rgba(86, 255, 168, 0.24) !important;
+  background: rgba(7, 7, 7, 0.72) !important;
+}
+body.markets.trumptracker .ttSnap {
+  border-color: rgba(86, 255, 168, 0.24) !important;
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.92), rgba(6, 6, 6, 0.9)) !important;
+}
+body.markets.trumptracker .ttSection .chartCard {
+  border-color: rgba(86, 255, 168, 0.22) !important;
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.94), rgba(6, 6, 6, 0.92)) !important;
+}
+
+/* Chart card skin for this page */
+body.markets.trumptracker .ttSection .chartCard {
+  margin-top: 0;
+  border-radius: 10px;
+  border: 1px solid rgba(86, 255, 168, 0.22);
+  background:
+    linear-gradient(180deg, rgba(8, 8, 8, 0.94), rgba(6, 6, 6, 0.92));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+body.markets.trumptracker .ttSection .chartCard::after {
+  opacity: 0.1;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(86, 255, 168, 0.12) 0,
+      rgba(86, 255, 168, 0.12) 1px,
+      transparent 1px,
+      transparent 14px
+    );
+}
+
+body.markets.trumptracker .ttSection .chartHead {
+  padding: 12px 12px 10px;
+  border-bottom: 1px dashed rgba(86, 255, 168, 0.24);
+}
+body.markets.trumptracker .ttSection .chartTitle {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+body.markets.trumptracker .ttSection .chartTitleText {
+  max-width: min(58ch, 56vw);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body.markets.trumptracker .ttSection .chartDot {
+  border-color: rgba(86, 255, 168, 0.6);
+  background: rgba(86, 255, 168, 0.2);
+}
+body.markets.trumptracker .ttSection .chartControls {
+  border-color: rgba(86, 255, 168, 0.24);
+  background: rgba(8, 8, 8, 0.86);
+  box-shadow: inset 0 0 0 1px rgba(86, 255, 168, 0.06);
+}
+body.markets.trumptracker .ttSection .chartTab {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+body.markets.trumptracker .ttSection .chartTab:hover {
+  border-color: rgba(86, 255, 168, 0.25);
+  background: rgba(86, 255, 168, 0.1);
+}
+body.markets.trumptracker .ttSection .chartTab.is-active {
+  border-color: rgba(86, 255, 168, 0.45);
+  background: rgba(86, 255, 168, 0.2);
+  color: rgba(230, 246, 239, 0.95);
+}
+body.markets.trumptracker .ttSection .chartPill {
+  border-color: rgba(86, 255, 168, 0.25);
+  background: rgba(8, 8, 8, 0.86);
+  color: rgba(230, 246, 239, 0.78);
+}
+
+body.markets.trumptracker .ttSection .chartWrap {
+  padding: 12px 14px 14px;
+}
+body.markets.trumptracker .ttSection .wireChart {
+  border-color: rgba(86, 255, 168, 0.2);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 18% 38%, rgba(86, 255, 168, 0.08), transparent 52%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(86, 255, 168, 0.03) 0px,
+      rgba(86, 255, 168, 0.03) 1px,
+      transparent 1px,
+      transparent 16px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(86, 255, 168, 0.025) 0px,
+      rgba(86, 255, 168, 0.025) 1px,
+      transparent 1px,
+      transparent 16px
+    ),
+    rgba(6, 6, 6, 0.9);
+}
+body.markets.trumptracker .ttSection .chartTip {
+  border-color: rgba(86, 255, 168, 0.28);
+  background: rgba(8, 8, 8, 0.94);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.45);
+}
+body.markets.trumptracker .ttSection .chartFoot {
+  border-top: 1px dashed rgba(86, 255, 168, 0.24);
+  padding: 9px 12px 12px;
+}
+
+@media (max-width: 1180px) {
+  .fallGuy {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .ttSectionHead {
+    grid-template-columns: 1fr;
+  }
+  .ttHeadRight {
+    align-items: flex-start;
+    width: auto;
+    max-width: 100%;
+    justify-self: start;
+  }
+  .ttSnapRow {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .ttMoreGrid {
+    grid-template-columns: 1fr;
+  }
+  .ttMoreBtn {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .fallGuy {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fallGuy {
+    display: none;
+  }
 }
