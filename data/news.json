@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-04-09T14:03:34.630Z",
+  "generatedAt": "2026-04-10T13:41:23.200Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "BlackRock rips page from hedge fund playbook, applies it to exchange-traded funds",
+      "link": "https://www.cnbc.com/2026/04/10/blackrock-rips-page-from-hedge-fund-playbook-applies-it-to-etfs.html",
+      "pubDate": "Fri, 10 Apr 2026 11:00:01 GMT"
+    },
+    {
+      "title": "Behind China&apos;s &apos;active efforts&apos; for an Iran ceasefire: Business trumps politics",
+      "link": "https://www.cnbc.com/2026/04/10/china-iran-ceasefire-role-energy-economy-strategy.html",
+      "pubDate": "Fri, 10 Apr 2026 08:51:26 GMT"
+    },
+    {
+      "title": "Alibaba leads $290 million investment for building a new kind of AI model as LLM limits emerge",
+      "link": "https://www.cnbc.com/2026/04/10/alibaba-cloud-invests-world-model-ai-shengshu-vidu.html",
+      "pubDate": "Fri, 10 Apr 2026 02:00:43 GMT"
+    },
     {
       "title": "Fed officials still foresee rate cut this year, despite war impacts, minutes show",
       "link": "https://www.cnbc.com/2026/04/08/fed-officials-still-foresee-rate-cut-this-year-despite-war-impacts-minutes-show.html",
@@ -77,21 +92,6 @@
       "title": "Fed Governor Miran still backs cuts, says interest rates could be &apos;about a point&apos; lower this year",
       "link": "https://www.cnbc.com/2026/03/30/fed-governor-miran-still-backs-cuts-says-interest-rates-could-be-about-a-point-lower-this-year.html",
       "pubDate": "Wed, 01 Apr 2026 14:09:14 GMT"
-    },
-    {
-      "title": "Watch Fed Chair Jerome Powell speak live to an economics class at Harvard",
-      "link": "https://www.cnbc.com/2026/03/30/watch-fed-chair-jerome-powell-speak-live-to-an-economics-class-at-harvard.html",
-      "pubDate": "Mon, 30 Mar 2026 14:47:39 GMT"
-    },
-    {
-      "title": "As stocks and bonds fall, and oil hits $100, a futures trade that boomed in 2022 may again be a winner",
-      "link": "https://www.cnbc.com/2026/03/28/market-correction-futures-hedging-strategies.html",
-      "pubDate": "Sat, 28 Mar 2026 12:00:01 GMT"
-    },
-    {
-      "title": "Why one hedge fund veteran is urging investors to &apos;prepare for the worst&apos;",
-      "link": "https://www.cnbc.com/2026/03/27/iran-to-economic-risks-markets-ability-to-forecast-world-in-question.html",
-      "pubDate": "Fri, 27 Mar 2026 11:00:01 GMT"
     }
   ]
 }
