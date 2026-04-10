@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T14:42:50.034Z",
+  "generatedAt": "2026-04-10T21:03:14.570Z",
   "source": "stooq",
   "items": [
     {
@@ -245,14 +245,14 @@
       "name": "Brent Oil",
       "group": "Macro",
       "date": "2026-04-10",
-      "close": 95.51,
+      "close": 94.33,
       "prevDate": "2026-04-09",
       "prevClose": 96.28,
-      "deltaPct": -0.7997507270461113,
+      "deltaPct": -2.0253427503115984,
       "history": [
         {
           "date": "2026-04-10",
-          "close": 95.51
+          "close": 94.33
         }
       ],
       "ok": true
@@ -262,14 +262,14 @@
       "name": "WTI Crude",
       "group": "Macro",
       "date": "2026-04-10",
-      "close": 98.38,
+      "close": 95.56,
       "prevDate": "2026-04-09",
       "prevClose": 97.98,
-      "deltaPct": 0.408246580934879,
+      "deltaPct": -2.4698918146560556,
       "history": [
         {
           "date": "2026-04-10",
-          "close": 98.38
+          "close": 95.56
         }
       ],
       "ok": true
@@ -279,14 +279,14 @@
       "name": "Gold (Fut)",
       "group": "Macro",
       "date": "2026-04-10",
-      "close": 4808.37,
+      "close": 4772.6,
       "prevDate": "2026-04-09",
       "prevClose": 4790.25,
-      "deltaPct": 0.37826835760137456,
+      "deltaPct": -0.36845676112936543,
       "history": [
         {
           "date": "2026-04-10",
-          "close": 4808.37
+          "close": 4772.6
         }
       ],
       "ok": true
@@ -387,14 +387,14 @@
       "name": "Copper",
       "group": "Macro",
       "date": "2026-04-10",
-      "close": 592.18,
+      "close": 587,
       "prevDate": "2026-04-09",
       "prevClose": 575.53,
-      "deltaPct": 2.8929855958855333,
+      "deltaPct": 1.9929456327211437,
       "history": [
         {
           "date": "2026-04-10",
-          "close": 592.18
+          "close": 587
         }
       ],
       "ok": true
@@ -404,14 +404,14 @@
       "name": "Silver",
       "group": "Macro",
       "date": "2026-04-10",
-      "close": 7659.5,
+      "close": 7605,
       "prevDate": "2026-04-09",
       "prevClose": 7546.5,
-      "deltaPct": 1.4973828927317356,
+      "deltaPct": 0.7751937984496138,
       "history": [
         {
           "date": "2026-04-10",
-          "close": 7659.5
+          "close": 7605
         }
       ],
       "ok": true
