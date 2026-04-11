@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-04-10T13:41:23.200Z",
+  "generatedAt": "2026-04-11T13:16:46.326Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Michael Burry says he&apos;s still betting against Palantir after Trump post boosts stock",
+      "link": "https://www.cnbc.com/2026/04/10/michael-burry-says-hes-still-betting-against-palantir-after-trump-post-boosts-stock.html",
+      "pubDate": "Fri, 10 Apr 2026 20:20:12 GMT"
+    },
+    {
       "title": "BlackRock rips page from hedge fund playbook, applies it to exchange-traded funds",
       "link": "https://www.cnbc.com/2026/04/10/blackrock-rips-page-from-hedge-fund-playbook-applies-it-to-etfs.html",
-      "pubDate": "Fri, 10 Apr 2026 11:00:01 GMT"
+      "pubDate": "Fri, 10 Apr 2026 15:23:50 GMT"
     },
     {
       "title": "Behind China&apos;s &apos;active efforts&apos; for an Iran ceasefire: Business trumps politics",
@@ -87,11 +92,6 @@
       "title": "Bill Ackman says it’s one of the best times in a long time to buy quality stocks",
       "link": "https://www.cnbc.com/2026/03/30/bill-ackman-says-its-one-of-the-best-times-in-a-long-time-to-buy-quality-stocks.html",
       "pubDate": "Mon, 30 Mar 2026 15:46:33 GMT"
-    },
-    {
-      "title": "Fed Governor Miran still backs cuts, says interest rates could be &apos;about a point&apos; lower this year",
-      "link": "https://www.cnbc.com/2026/03/30/fed-governor-miran-still-backs-cuts-says-interest-rates-could-be-about-a-point-lower-this-year.html",
-      "pubDate": "Wed, 01 Apr 2026 14:09:14 GMT"
     }
   ]
 }
