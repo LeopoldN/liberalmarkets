@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-04-11T13:16:46.326Z",
+  "generatedAt": "2026-04-12T13:19:26.919Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "How bond market&apos;s private credit crisis fears are playing out in fixed-income ETFs",
+      "link": "https://www.cnbc.com/2026/04/11/bond-market-private-credit-crisis-fixed-income-etfs.html",
+      "pubDate": "Sat, 11 Apr 2026 21:37:12 GMT"
+    },
     {
       "title": "Michael Burry says he&apos;s still betting against Palantir after Trump post boosts stock",
       "link": "https://www.cnbc.com/2026/04/10/michael-burry-says-hes-still-betting-against-palantir-after-trump-post-boosts-stock.html",
@@ -87,11 +92,6 @@
       "title": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
       "link": "https://www.cnbc.com/2026/03/30/powell-sees-inflation-outlook-in-check-no-wider-crisis-yet-in-private-credit.html",
       "pubDate": "Mon, 30 Mar 2026 19:34:25 GMT"
-    },
-    {
-      "title": "Bill Ackman says it’s one of the best times in a long time to buy quality stocks",
-      "link": "https://www.cnbc.com/2026/03/30/bill-ackman-says-its-one-of-the-best-times-in-a-long-time-to-buy-quality-stocks.html",
-      "pubDate": "Mon, 30 Mar 2026 15:46:33 GMT"
     }
   ]
 }
