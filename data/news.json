@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-04-12T13:19:26.919Z",
+  "generatedAt": "2026-04-13T14:01:55.409Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Goldman Sachs tops estimates on record equities trading — here&apos;s why the stock is falling",
+      "link": "https://www.cnbc.com/2026/04/13/goldman-sachs-gs-earnings-1q-2026.html",
+      "pubDate": "Mon, 13 Apr 2026 13:25:58 GMT"
+    },
     {
       "title": "How bond market&apos;s private credit crisis fears are playing out in fixed-income ETFs",
       "link": "https://www.cnbc.com/2026/04/11/bond-market-private-credit-crisis-fixed-income-etfs.html",
@@ -87,11 +92,6 @@
       "title": "Three niche commodity prices are surging. What they show about China&apos;s grip on supply chains",
       "link": "https://www.cnbc.com/2026/03/31/commodities-price-of-tungsten-sulfur-and-helium.html",
       "pubDate": "Tue, 31 Mar 2026 05:29:11 GMT"
-    },
-    {
-      "title": "Powell sees inflation outlook in check, no need to hike rates because of oil shock",
-      "link": "https://www.cnbc.com/2026/03/30/powell-sees-inflation-outlook-in-check-no-wider-crisis-yet-in-private-credit.html",
-      "pubDate": "Mon, 30 Mar 2026 19:34:25 GMT"
     }
   ]
 }
