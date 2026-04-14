@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T21:13:17.013Z",
+  "generatedAt": "2026-04-14T21:12:57.402Z",
   "source": "stooq",
   "items": [
     {
@@ -41,15 +41,15 @@
       "sym": "cb.f",
       "name": "Brent Oil",
       "group": null,
-      "date": "2026-04-13",
-      "close": 98.05,
-      "prevDate": "2026-04-10",
-      "prevClose": 94.33,
-      "deltaPct": 3.9436022474292454,
+      "date": "2026-04-14",
+      "close": 95.09,
+      "prevDate": "2026-04-13",
+      "prevClose": 98.05,
+      "deltaPct": -3.01886792452829,
       "history": [
         {
-          "date": "2026-04-13",
-          "close": 98.05
+          "date": "2026-04-14",
+          "close": 95.09
         }
       ],
       "ok": true
