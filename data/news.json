@@ -1,17 +1,37 @@
 {
-  "generatedAt": "2026-04-13T14:01:55.409Z",
+  "generatedAt": "2026-04-14T14:04:10.951Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Goldman Sachs tops estimates on record equities trading — here&apos;s why the stock is falling",
+      "title": "Treasury Secretary Bessent now says it&apos;s OK for the Fed to wait to lower rates amid oil surge",
+      "link": "https://www.cnbc.com/2026/04/14/treasury-secretary-bessent-now-says-its-ok-for-the-fed-to-wait-to-lower-rates-amid-oil-surge.html",
+      "pubDate": "Tue, 14 Apr 2026 12:54:14 GMT"
+    },
+    {
+      "title": "Citigroup beats estimates, boosted by gains in fixed income",
+      "link": "https://www.cnbc.com/2026/04/14/citigroup-c-earnings-1q-2026.html",
+      "pubDate": "Tue, 14 Apr 2026 13:45:25 GMT"
+    },
+    {
+      "title": "JPMorgan tops estimates on Wall Street results, Dimon flags &apos;increasingly complex&apos; economic risks",
+      "link": "https://www.cnbc.com/2026/04/14/jpmorgan-chase-jpm-earnings-1q-2026.html",
+      "pubDate": "Tue, 14 Apr 2026 13:14:08 GMT"
+    },
+    {
+      "title": "China exports growth in March misses estimates, imports surge most in over four years",
+      "link": "https://www.cnbc.com/2026/04/14/china-trade-data-march-exports-imports-march.html",
+      "pubDate": "Tue, 14 Apr 2026 05:15:50 GMT"
+    },
+    {
+      "title": "Goldman Sachs tops estimates on record equities trading",
       "link": "https://www.cnbc.com/2026/04/13/goldman-sachs-gs-earnings-1q-2026.html",
-      "pubDate": "Mon, 13 Apr 2026 13:25:58 GMT"
+      "pubDate": "Mon, 13 Apr 2026 21:21:59 GMT"
     },
     {
       "title": "How bond market&apos;s private credit crisis fears are playing out in fixed-income ETFs",
       "link": "https://www.cnbc.com/2026/04/11/bond-market-private-credit-crisis-fixed-income-etfs.html",
-      "pubDate": "Sat, 11 Apr 2026 21:37:12 GMT"
+      "pubDate": "Mon, 13 Apr 2026 21:02:22 GMT"
     },
     {
       "title": "Michael Burry says he&apos;s still betting against Palantir after Trump post boosts stock",
@@ -72,26 +92,6 @@
       "title": "Warren Buffett says he sold Apple too soon and would buy more of it, though not in this market",
       "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-he-sold-apple-too-soon-and-would-buy-more-of-it-though-not-in-this-market-.html",
       "pubDate": "Tue, 31 Mar 2026 15:31:12 GMT"
-    },
-    {
-      "title": "Warren Buffett says he&apos;s still making calls on investments at Berkshire, flags &apos;tiny&apos; new buy",
-      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-hes-still-making-calls-on-investments-at-berkshire-flags-tiny-new-buy.html",
-      "pubDate": "Tue, 31 Mar 2026 15:02:49 GMT"
-    },
-    {
-      "title": "Huawei&apos;s cloud computing revenue dropped in 2025 as Chinese AI lagged U.S. rivals",
-      "link": "https://www.cnbc.com/2026/03/31/huawei-annual-report-2025-cloud-computing-revenue.html",
-      "pubDate": "Thu, 02 Apr 2026 02:33:49 GMT"
-    },
-    {
-      "title": "Warren Buffett teams up with NBA superstar Stephen Curry for charity lunch, reviving iconic auction",
-      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-teams-up-with-stephen-curry-for-charity-lunch.html",
-      "pubDate": "Tue, 31 Mar 2026 16:37:47 GMT"
-    },
-    {
-      "title": "Three niche commodity prices are surging. What they show about China&apos;s grip on supply chains",
-      "link": "https://www.cnbc.com/2026/03/31/commodities-price-of-tungsten-sulfur-and-helium.html",
-      "pubDate": "Tue, 31 Mar 2026 05:29:11 GMT"
     }
   ]
 }
