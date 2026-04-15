@@ -1,17 +1,52 @@
 {
-  "generatedAt": "2026-04-14T14:04:10.951Z",
+  "generatedAt": "2026-04-15T13:57:41.166Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Treasury Secretary Bessent now says it&apos;s OK for the Fed to wait to lower rates amid oil surge",
+      "title": "Morgan Stanley tops estimates as trading revenue exceeds expectations by nearly $1 billion",
+      "link": "https://www.cnbc.com/2026/04/15/morgan-stanley-ms-earnings-1q-2026.html",
+      "pubDate": "Wed, 15 Apr 2026 13:24:39 GMT"
+    },
+    {
+      "title": "Bank of America tops estimates as CEO Brian Moynihan says consumer banking is &apos;healthy&apos;",
+      "link": "https://www.cnbc.com/2026/04/15/bank-of-america-bac-earnings-q1-2026.html",
+      "pubDate": "Wed, 15 Apr 2026 13:35:58 GMT"
+    },
+    {
+      "title": "Chinese robotaxi companies forge ahead with UAE expansion despite Iran war",
+      "link": "https://www.cnbc.com/2026/04/15/china-robotaxi-didi-weride-baidu-dubai-uae-expansion.html",
+      "pubDate": "Wed, 15 Apr 2026 07:46:03 GMT"
+    },
+    {
+      "title": "Prediction markets will grow to $1 trillion by 2030, Bernstein estimates",
+      "link": "https://www.cnbc.com/2026/04/14/prediction-markets-will-grow-to-1-trillion-by-2030-bernstein-says.html",
+      "pubDate": "Tue, 14 Apr 2026 18:12:58 GMT"
+    },
+    {
+      "title": "Jamie Dimon says Anthropic&apos;s Mythos reveals &apos;a lot more vulnerabilities&apos; for cyberattacks",
+      "link": "https://www.cnbc.com/2026/04/14/jamie-dimon-anthropic-mythos-vulnerabilities-cyber-attacks.html",
+      "pubDate": "Tue, 14 Apr 2026 20:55:03 GMT"
+    },
+    {
+      "title": "David Einhorn signals caution as his hedge fund Greenlight prioritizes capital protection",
+      "link": "https://www.cnbc.com/2026/04/14/david-einhorn-signals-caution-as-his-hedge-fund-greenlight-prioritizes-capital-protection.html",
+      "pubDate": "Tue, 14 Apr 2026 18:23:50 GMT"
+    },
+    {
+      "title": "Global recession is inevitable if Strait of Hormuz stays shut, says Citadel&apos;s Ken Griffin",
+      "link": "https://www.cnbc.com/2026/04/14/citadels-ken-griffin-global-recession-inevitable-if-strait-of-hormuz-stays-shut.html",
+      "pubDate": "Tue, 14 Apr 2026 16:04:48 GMT"
+    },
+    {
+      "title": "Treasury Secretary Bessent backs rate cuts but says he understands if the Fed wants to wait",
       "link": "https://www.cnbc.com/2026/04/14/treasury-secretary-bessent-now-says-its-ok-for-the-fed-to-wait-to-lower-rates-amid-oil-surge.html",
-      "pubDate": "Tue, 14 Apr 2026 12:54:14 GMT"
+      "pubDate": "Tue, 14 Apr 2026 16:03:43 GMT"
     },
     {
       "title": "Citigroup beats estimates, boosted by gains in fixed income",
       "link": "https://www.cnbc.com/2026/04/14/citigroup-c-earnings-1q-2026.html",
-      "pubDate": "Tue, 14 Apr 2026 13:45:25 GMT"
+      "pubDate": "Tue, 14 Apr 2026 14:49:56 GMT"
     },
     {
       "title": "JPMorgan tops estimates on Wall Street results, Dimon flags &apos;increasingly complex&apos; economic risks",
@@ -57,41 +92,6 @@
       "title": "Fed officials still foresee rate cut this year, despite war impacts, minutes show",
       "link": "https://www.cnbc.com/2026/04/08/fed-officials-still-foresee-rate-cut-this-year-despite-war-impacts-minutes-show.html",
       "pubDate": "Wed, 08 Apr 2026 18:26:37 GMT"
-    },
-    {
-      "title": "Ray Dalio: Trump-Xi meeting to focus on trade, capital flows",
-      "link": "https://www.cnbc.com/2026/04/08/ray-dalio-trump-xi-meeting-to-focus-on-trade-capital-flows.html",
-      "pubDate": "Wed, 08 Apr 2026 15:07:38 GMT"
-    },
-    {
-      "title": "Offbeat Wall Street research firm says it sent an analyst to Strait of Hormuz. Here&apos;s what they learned",
-      "link": "https://www.cnbc.com/2026/04/06/wall-street-firm-sends-analyst-to-the-strait-of-hormuz-heres-what-they-found-out.html",
-      "pubDate": "Mon, 06 Apr 2026 20:47:02 GMT"
-    },
-    {
-      "title": "JPMorgan CEO Jamie Dimon in annual letter cites risks in geopolitics, AI and private markets",
-      "link": "https://www.cnbc.com/2026/04/06/jpmorgan-ceo-jamie-dimon-annual-letter-risks.html",
-      "pubDate": "Mon, 06 Apr 2026 11:55:38 GMT"
-    },
-    {
-      "title": "Blue Owl caps private credit funds redemptions at 5% after steep request levels",
-      "link": "https://www.cnbc.com/2026/04/02/blue-owl-private-credit-funds-redemptions-requests.html",
-      "pubDate": "Thu, 02 Apr 2026 20:08:15 GMT"
-    },
-    {
-      "title": "Visa launches new AI tools to manage the charge dispute process",
-      "link": "https://www.cnbc.com/2026/04/01/visa-ai-tools-dispute-management.html",
-      "pubDate": "Wed, 01 Apr 2026 15:26:51 GMT"
-    },
-    {
-      "title": "Warren Buffett says Iran bomb would make nuclear disaster harder to avoid",
-      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-iran-bomb-would-make-nuclear-disaster-harder-to-avoid.html",
-      "pubDate": "Tue, 31 Mar 2026 17:16:22 GMT"
-    },
-    {
-      "title": "Warren Buffett says he sold Apple too soon and would buy more of it, though not in this market",
-      "link": "https://www.cnbc.com/2026/03/31/warren-buffett-says-he-sold-apple-too-soon-and-would-buy-more-of-it-though-not-in-this-market-.html",
-      "pubDate": "Tue, 31 Mar 2026 15:31:12 GMT"
     }
   ]
 }
