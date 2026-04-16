@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-04-15T13:57:41.166Z",
+  "generatedAt": "2026-04-16T14:06:16.934Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Goldman Sachs bond traders stumbled as Wall Street rivals thrived: &apos;A fire is being lit under&apos; them",
+      "link": "https://www.cnbc.com/2026/04/15/goldman-sachs-bond-traders-wall-street-rivals.html",
+      "pubDate": "Wed, 15 Apr 2026 21:31:54 GMT"
+    },
+    {
+      "title": "Regulators are reportedly zeroing in on suspicious trades ahead of market-moving Trump post",
+      "link": "https://www.cnbc.com/2026/04/15/regulators-reportedly-zeroing-in-on-suspicious-trades-ahead-of-trump-post.html",
+      "pubDate": "Thu, 16 Apr 2026 11:08:33 GMT"
+    },
     {
       "title": "Morgan Stanley tops estimates as trading revenue exceeds expectations by nearly $1 billion",
       "link": "https://www.cnbc.com/2026/04/15/morgan-stanley-ms-earnings-1q-2026.html",
@@ -11,12 +21,12 @@
     {
       "title": "Bank of America tops estimates as CEO Brian Moynihan says consumer banking is &apos;healthy&apos;",
       "link": "https://www.cnbc.com/2026/04/15/bank-of-america-bac-earnings-q1-2026.html",
-      "pubDate": "Wed, 15 Apr 2026 13:35:58 GMT"
+      "pubDate": "Wed, 15 Apr 2026 14:54:03 GMT"
     },
     {
       "title": "Chinese robotaxi companies forge ahead with UAE expansion despite Iran war",
       "link": "https://www.cnbc.com/2026/04/15/china-robotaxi-didi-weride-baidu-dubai-uae-expansion.html",
-      "pubDate": "Wed, 15 Apr 2026 07:46:03 GMT"
+      "pubDate": "Wed, 15 Apr 2026 14:13:29 GMT"
     },
     {
       "title": "Prediction markets will grow to $1 trillion by 2030, Bernstein estimates",
@@ -82,16 +92,6 @@
       "title": "Behind China&apos;s &apos;active efforts&apos; for an Iran ceasefire: Business trumps politics",
       "link": "https://www.cnbc.com/2026/04/10/china-iran-ceasefire-role-energy-economy-strategy.html",
       "pubDate": "Fri, 10 Apr 2026 08:51:26 GMT"
-    },
-    {
-      "title": "Alibaba leads $290 million investment for building a new kind of AI model as LLM limits emerge",
-      "link": "https://www.cnbc.com/2026/04/10/alibaba-cloud-invests-world-model-ai-shengshu-vidu.html",
-      "pubDate": "Fri, 10 Apr 2026 02:00:43 GMT"
-    },
-    {
-      "title": "Fed officials still foresee rate cut this year, despite war impacts, minutes show",
-      "link": "https://www.cnbc.com/2026/04/08/fed-officials-still-foresee-rate-cut-this-year-despite-war-impacts-minutes-show.html",
-      "pubDate": "Wed, 08 Apr 2026 18:26:37 GMT"
     }
   ]
 }
