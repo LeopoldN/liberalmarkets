@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-04-16T14:06:16.934Z",
+  "generatedAt": "2026-04-17T13:49:27.396Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "If a violent downturn strikes the market, new ETF strategies may be vulnerable. Here&apos;s why",
+      "link": "https://www.cnbc.com/2026/04/17/violent-downturns-could-test-new-etf-strategies-warns-mfs-investment.html",
+      "pubDate": "Fri, 17 Apr 2026 11:00:01 GMT"
+    },
+    {
+      "title": "Retail traders pile into Allbirds after odd AI pivot. History shows it won&apos;t end well",
+      "link": "https://www.cnbc.com/2026/04/16/retail-traders-pile-into-allbirds-after-odd-ai-pivot-history-shows-it-wont-end-well.html",
+      "pubDate": "Thu, 16 Apr 2026 17:04:59 GMT"
+    },
     {
       "title": "Goldman Sachs bond traders stumbled as Wall Street rivals thrived: &apos;A fire is being lit under&apos; them",
       "link": "https://www.cnbc.com/2026/04/15/goldman-sachs-bond-traders-wall-street-rivals.html",
@@ -82,16 +92,6 @@
       "title": "Michael Burry says he&apos;s still betting against Palantir after Trump post boosts stock",
       "link": "https://www.cnbc.com/2026/04/10/michael-burry-says-hes-still-betting-against-palantir-after-trump-post-boosts-stock.html",
       "pubDate": "Fri, 10 Apr 2026 20:20:12 GMT"
-    },
-    {
-      "title": "BlackRock rips page from hedge fund playbook, applies it to exchange-traded funds",
-      "link": "https://www.cnbc.com/2026/04/10/blackrock-rips-page-from-hedge-fund-playbook-applies-it-to-etfs.html",
-      "pubDate": "Fri, 10 Apr 2026 15:23:50 GMT"
-    },
-    {
-      "title": "Behind China&apos;s &apos;active efforts&apos; for an Iran ceasefire: Business trumps politics",
-      "link": "https://www.cnbc.com/2026/04/10/china-iran-ceasefire-role-energy-economy-strategy.html",
-      "pubDate": "Fri, 10 Apr 2026 08:51:26 GMT"
     }
   ]
 }
