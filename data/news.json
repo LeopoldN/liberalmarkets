@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-04-18T13:20:06.576Z",
+  "generatedAt": "2026-04-19T13:20:13.114Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Here are 3 forces that drove a remarkable, record-setting week on Wall Street",
+      "link": "https://www.cnbc.com/2026/04/18/the-3-forces-that-drove-a-remarkable-record-setting-week-on-wall-street.html",
+      "pubDate": "Sat, 18 Apr 2026 14:13:04 GMT"
+    },
     {
       "title": "If a violent downturn strikes the market, new ETF strategies may be vulnerable. Here&apos;s why",
       "link": "https://www.cnbc.com/2026/04/17/violent-downturns-could-test-new-etf-strategies-warns-mfs-investment.html",
@@ -87,11 +92,6 @@
       "title": "How bond market&apos;s private credit crisis fears are playing out in fixed-income ETFs",
       "link": "https://www.cnbc.com/2026/04/11/bond-market-private-credit-crisis-fixed-income-etfs.html",
       "pubDate": "Mon, 13 Apr 2026 21:02:22 GMT"
-    },
-    {
-      "title": "Michael Burry says he&apos;s still betting against Palantir after Trump post boosts stock",
-      "link": "https://www.cnbc.com/2026/04/10/michael-burry-says-hes-still-betting-against-palantir-after-trump-post-boosts-stock.html",
-      "pubDate": "Fri, 10 Apr 2026 20:20:12 GMT"
     }
   ]
 }
