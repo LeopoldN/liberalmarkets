@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-04-20T14:04:40.672Z",
+  "generatedAt": "2026-04-21T14:02:50.084Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Volkswagen announces voice AI in its Chinese cars from later this year",
+      "link": "https://www.cnbc.com/2026/04/21/volkswagen-voice-ai-chinese-cars-automaker.html",
+      "pubDate": "Tue, 21 Apr 2026 13:36:21 GMT"
+    },
+    {
+      "title": "Here&apos;s what to expect from Fed chair nominee Kevin Warsh&apos;s Senate hearing Tuesday",
+      "link": "https://www.cnbc.com/2026/04/21/kevin-warshs-senate-hearing-what-to-expect.html",
+      "pubDate": "Tue, 21 Apr 2026 13:13:52 GMT"
+    },
+    {
+      "title": "JPMorgan expands $1.5 trillion economic security splurge into Europe",
+      "link": "https://www.cnbc.com/2026/04/21/jpmorgan-chase-security-defense-spending-ai-europe-uk-dimon.html",
+      "pubDate": "Tue, 21 Apr 2026 07:49:06 GMT"
+    },
+    {
       "title": "AST SpaceMobile shares drop after its satellite is placed in wrong orbit by Bezos&apos; Blue Origin",
       "link": "https://www.cnbc.com/2026/04/20/ast-falls-after-bezos-blue-origin-places-satellite-in-wrong-orbit.html",
-      "pubDate": "Mon, 20 Apr 2026 12:22:26 GMT"
+      "pubDate": "Mon, 20 Apr 2026 20:01:02 GMT"
     },
     {
       "title": "AI startup Cursor in talks to raise $2 billion funding round at valuation of over $50 billion",
@@ -77,21 +92,6 @@
       "title": "Global recession is inevitable if Strait of Hormuz stays shut, says Citadel&apos;s Ken Griffin",
       "link": "https://www.cnbc.com/2026/04/14/citadels-ken-griffin-global-recession-inevitable-if-strait-of-hormuz-stays-shut.html",
       "pubDate": "Tue, 14 Apr 2026 16:04:48 GMT"
-    },
-    {
-      "title": "Treasury Secretary Bessent backs rate cuts but says he understands if the Fed wants to wait",
-      "link": "https://www.cnbc.com/2026/04/14/treasury-secretary-bessent-now-says-its-ok-for-the-fed-to-wait-to-lower-rates-amid-oil-surge.html",
-      "pubDate": "Tue, 14 Apr 2026 16:03:43 GMT"
-    },
-    {
-      "title": "Citigroup beats estimates, boosted by gains in fixed income",
-      "link": "https://www.cnbc.com/2026/04/14/citigroup-c-earnings-1q-2026.html",
-      "pubDate": "Tue, 14 Apr 2026 14:49:56 GMT"
-    },
-    {
-      "title": "JPMorgan tops estimates on Wall Street results, Dimon flags &apos;increasingly complex&apos; economic risks",
-      "link": "https://www.cnbc.com/2026/04/14/jpmorgan-chase-jpm-earnings-1q-2026.html",
-      "pubDate": "Tue, 14 Apr 2026 13:14:08 GMT"
     }
   ]
 }
