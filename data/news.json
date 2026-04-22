@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-04-21T14:02:50.084Z",
+  "generatedAt": "2026-04-22T14:02:55.529Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Trump administration discussing currency swap line with United Arab Emirates",
+      "link": "https://www.cnbc.com/2026/04/21/trump-iran-war-white-house-uae-currency-swap-line.html",
+      "pubDate": "Tue, 21 Apr 2026 22:09:55 GMT"
+    },
     {
       "title": "Volkswagen announces voice AI in its Chinese cars from later this year",
       "link": "https://www.cnbc.com/2026/04/21/volkswagen-voice-ai-chinese-cars-automaker.html",
@@ -87,11 +92,6 @@
       "title": "David Einhorn signals caution as his hedge fund Greenlight prioritizes capital protection",
       "link": "https://www.cnbc.com/2026/04/14/david-einhorn-signals-caution-as-his-hedge-fund-greenlight-prioritizes-capital-protection.html",
       "pubDate": "Tue, 14 Apr 2026 18:23:50 GMT"
-    },
-    {
-      "title": "Global recession is inevitable if Strait of Hormuz stays shut, says Citadel&apos;s Ken Griffin",
-      "link": "https://www.cnbc.com/2026/04/14/citadels-ken-griffin-global-recession-inevitable-if-strait-of-hormuz-stays-shut.html",
-      "pubDate": "Tue, 14 Apr 2026 16:04:48 GMT"
     }
   ]
 }
