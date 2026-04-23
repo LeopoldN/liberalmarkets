@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-04-22T14:02:55.529Z",
+  "generatedAt": "2026-04-23T14:04:20.590Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Bessent says &apos;many&apos; U.S. allies have asked for currency swaps amid Iran war turbulence",
+      "link": "https://www.cnbc.com/2026/04/22/iran-war-treasury-uae-scott-bessent-currency-swaps.html",
+      "pubDate": "Wed, 22 Apr 2026 18:46:20 GMT"
+    },
     {
       "title": "Trump administration discussing currency swap line with United Arab Emirates",
       "link": "https://www.cnbc.com/2026/04/21/trump-iran-war-white-house-uae-currency-swap-line.html",
@@ -11,7 +16,7 @@
     {
       "title": "Volkswagen announces voice AI in its Chinese cars from later this year",
       "link": "https://www.cnbc.com/2026/04/21/volkswagen-voice-ai-chinese-cars-automaker.html",
-      "pubDate": "Tue, 21 Apr 2026 13:36:21 GMT"
+      "pubDate": "Wed, 22 Apr 2026 22:41:21 GMT"
     },
     {
       "title": "Here&apos;s what to expect from Fed chair nominee Kevin Warsh&apos;s Senate hearing Tuesday",
@@ -87,11 +92,6 @@
       "title": "Jamie Dimon says Anthropic&apos;s Mythos reveals &apos;a lot more vulnerabilities&apos; for cyberattacks",
       "link": "https://www.cnbc.com/2026/04/14/jamie-dimon-anthropic-mythos-vulnerabilities-cyber-attacks.html",
       "pubDate": "Tue, 14 Apr 2026 20:55:03 GMT"
-    },
-    {
-      "title": "David Einhorn signals caution as his hedge fund Greenlight prioritizes capital protection",
-      "link": "https://www.cnbc.com/2026/04/14/david-einhorn-signals-caution-as-his-hedge-fund-greenlight-prioritizes-capital-protection.html",
-      "pubDate": "Tue, 14 Apr 2026 18:23:50 GMT"
     }
   ]
 }
