@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-21T21:11:23.868Z",
+  "generatedAt": "2026-04-23T21:13:13.421Z",
   "source": "stooq",
   "items": [
     {
@@ -244,15 +244,15 @@
       "sym": "cb.f",
       "name": "Brent Oil",
       "group": "Macro",
-      "date": "2026-04-21",
-      "close": 99.28,
-      "prevDate": "2026-04-20",
-      "prevClose": 94.41,
-      "deltaPct": 5.158351869505351,
+      "date": "2026-04-23",
+      "close": 106.48,
+      "prevDate": "2026-04-21",
+      "prevClose": 99.28,
+      "deltaPct": 7.2522159548751075,
       "history": [
         {
-          "date": "2026-04-21",
-          "close": 99.28
+          "date": "2026-04-23",
+          "close": 106.48
         }
       ],
       "ok": true
@@ -261,15 +261,15 @@
       "sym": "cl.f",
       "name": "WTI Crude",
       "group": "Macro",
-      "date": "2026-04-21",
-      "close": 90.22,
-      "prevDate": "2026-04-20",
-      "prevClose": 85.89,
-      "deltaPct": 5.041331936197468,
+      "date": "2026-04-23",
+      "close": 97,
+      "prevDate": "2026-04-21",
+      "prevClose": 90.22,
+      "deltaPct": 7.514963422744403,
       "history": [
         {
-          "date": "2026-04-21",
-          "close": 90.22
+          "date": "2026-04-23",
+          "close": 97
         }
       ],
       "ok": true
@@ -278,15 +278,15 @@
       "sym": "gc.f",
       "name": "Gold (Fut)",
       "group": "Macro",
-      "date": "2026-04-21",
-      "close": 4738.5,
-      "prevDate": "2026-04-20",
-      "prevClose": 4840.85,
-      "deltaPct": -2.1142981088032142,
+      "date": "2026-04-23",
+      "close": 4708.6,
+      "prevDate": "2026-04-21",
+      "prevClose": 4738.5,
+      "deltaPct": -0.6310013717421015,
       "history": [
         {
-          "date": "2026-04-21",
-          "close": 4738.5
+          "date": "2026-04-23",
+          "close": 4708.6
         }
       ],
       "ok": true
@@ -386,15 +386,15 @@
       "sym": "hg.f",
       "name": "Copper",
       "group": "Macro",
-      "date": "2026-04-21",
-      "close": 601.7,
-      "prevDate": "2026-04-20",
-      "prevClose": 604.6,
-      "deltaPct": -0.47965597088983625,
+      "date": "2026-04-23",
+      "close": 602.5,
+      "prevDate": "2026-04-21",
+      "prevClose": 601.7,
+      "deltaPct": 0.1329566229017809,
       "history": [
         {
-          "date": "2026-04-21",
-          "close": 601.7
+          "date": "2026-04-23",
+          "close": 602.5
         }
       ],
       "ok": true
@@ -403,15 +403,15 @@
       "sym": "si.f",
       "name": "Silver",
       "group": "Macro",
-      "date": "2026-04-21",
-      "close": 7667.3,
-      "prevDate": "2026-04-20",
-      "prevClose": 7986.5,
-      "deltaPct": -3.996744506354466,
+      "date": "2026-04-23",
+      "close": 7544.5,
+      "prevDate": "2026-04-21",
+      "prevClose": 7667.3,
+      "deltaPct": -1.6016068237841297,
       "history": [
         {
-          "date": "2026-04-21",
-          "close": 7667.3
+          "date": "2026-04-23",
+          "close": 7544.5
         }
       ],
       "ok": true
