@@ -1,8 +1,38 @@
 {
-  "generatedAt": "2026-04-23T14:04:20.590Z",
+  "generatedAt": "2026-04-24T13:58:56.852Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "The aerospace and defense trade is taking investors deeper into space, and more ETFs are up for the mission",
+      "link": "https://www.cnbc.com/2026/04/24/aerospace-and-defense-as-growth-drivers-for-etfs-amid-iran-war.html",
+      "pubDate": "Fri, 24 Apr 2026 11:00:01 GMT"
+    },
+    {
+      "title": "Foreign car companies bet on technology to hang onto once-lucrative China auto market",
+      "link": "https://www.cnbc.com/2026/04/24/foreign-car-companies-use-technology-to-hang-onto-china-auto-market.html",
+      "pubDate": "Fri, 24 Apr 2026 11:18:47 GMT"
+    },
+    {
+      "title": "NYC Mayor Mamdani knocked Ken Griffin in pied-a-terre tax promo. His firm calls the move &apos;shameful&apos;",
+      "link": "https://www.cnbc.com/2026/04/23/nyc-mayor-mamdani-knocked-ken-griffin-in-pied-a-terre-tax-promo-his-firm-calls-the-move-shameful.html",
+      "pubDate": "Thu, 23 Apr 2026 20:46:42 GMT"
+    },
+    {
+      "title": "Traders are betting on big moves in Intel on earnings",
+      "link": "https://www.cnbc.com/2026/04/23/traders-are-betting-on-big-moves-in-intel-on-earnings.html",
+      "pubDate": "Thu, 23 Apr 2026 17:59:29 GMT"
+    },
+    {
+      "title": "Risky meme trading is back. A trading rule change may have lit the fuse",
+      "link": "https://www.cnbc.com/2026/04/23/risky-meme-trading-is-back-a-trading-rule-change-may-have-lit-the-fuse.html",
+      "pubDate": "Thu, 23 Apr 2026 17:15:49 GMT"
+    },
+    {
+      "title": "Kalshi traders don&apos;t see Strait of Hormuz traffic returning to normal until July",
+      "link": "https://www.cnbc.com/2026/04/23/kalshi-bettors-see-strait-of-hormuz-traffic-normal-by-july.html",
+      "pubDate": "Thu, 23 Apr 2026 14:19:40 GMT"
+    },
     {
       "title": "Bessent says &apos;many&apos; U.S. allies have asked for currency swaps amid Iran war turbulence",
       "link": "https://www.cnbc.com/2026/04/22/iran-war-treasury-uae-scott-bessent-currency-swaps.html",
@@ -62,36 +92,6 @@
       "title": "Goldman Sachs bond traders stumbled as Wall Street rivals thrived: &apos;A fire is being lit under&apos; them",
       "link": "https://www.cnbc.com/2026/04/15/goldman-sachs-bond-traders-wall-street-rivals.html",
       "pubDate": "Wed, 15 Apr 2026 21:31:54 GMT"
-    },
-    {
-      "title": "Regulators are reportedly zeroing in on suspicious trades ahead of market-moving Trump post",
-      "link": "https://www.cnbc.com/2026/04/15/regulators-reportedly-zeroing-in-on-suspicious-trades-ahead-of-trump-post.html",
-      "pubDate": "Thu, 16 Apr 2026 11:08:33 GMT"
-    },
-    {
-      "title": "Morgan Stanley tops estimates as trading revenue exceeds expectations by nearly $1 billion",
-      "link": "https://www.cnbc.com/2026/04/15/morgan-stanley-ms-earnings-1q-2026.html",
-      "pubDate": "Wed, 15 Apr 2026 13:24:39 GMT"
-    },
-    {
-      "title": "Bank of America tops estimates as CEO Brian Moynihan says consumer banking is &apos;healthy&apos;",
-      "link": "https://www.cnbc.com/2026/04/15/bank-of-america-bac-earnings-q1-2026.html",
-      "pubDate": "Wed, 15 Apr 2026 14:54:03 GMT"
-    },
-    {
-      "title": "Chinese robotaxi companies forge ahead with UAE expansion despite Iran war",
-      "link": "https://www.cnbc.com/2026/04/15/china-robotaxi-didi-weride-baidu-dubai-uae-expansion.html",
-      "pubDate": "Wed, 15 Apr 2026 14:13:29 GMT"
-    },
-    {
-      "title": "Prediction markets will grow to $1 trillion by 2030, Bernstein estimates",
-      "link": "https://www.cnbc.com/2026/04/14/prediction-markets-will-grow-to-1-trillion-by-2030-bernstein-says.html",
-      "pubDate": "Tue, 14 Apr 2026 18:12:58 GMT"
-    },
-    {
-      "title": "Jamie Dimon says Anthropic&apos;s Mythos reveals &apos;a lot more vulnerabilities&apos; for cyberattacks",
-      "link": "https://www.cnbc.com/2026/04/14/jamie-dimon-anthropic-mythos-vulnerabilities-cyber-attacks.html",
-      "pubDate": "Tue, 14 Apr 2026 20:55:03 GMT"
     }
   ]
 }
