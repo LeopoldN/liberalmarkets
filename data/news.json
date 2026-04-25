@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-04-24T13:58:56.852Z",
+  "generatedAt": "2026-04-25T13:23:30.556Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "This little-known ETF is up over 600% amid U.S.-Iran war, a better trade than oil or energy stocks",
+      "link": "https://www.cnbc.com/2026/04/25/crude-oil-freight-tanker-strait-hormuz-iran-war-energy-stocks.html",
+      "pubDate": "Sat, 25 Apr 2026 11:53:07 GMT"
+    },
+    {
+      "title": "Bessent defends U.S. dollar swap lines as Iran war harms global finances",
+      "link": "https://www.cnbc.com/2026/04/24/bessent-iran-war-uae-swap-lines-gulf-asia.html",
+      "pubDate": "Fri, 24 Apr 2026 16:54:35 GMT"
+    },
+    {
+      "title": "Nuclear reactor company X-energy shares surge 27% as AI drives interest in its IPO",
+      "link": "https://www.cnbc.com/2026/04/24/nuclear-reactor-company-x-energy-begins-trading-as-ai-drives-interest-in-the-industry.html",
+      "pubDate": "Fri, 24 Apr 2026 21:11:23 GMT"
+    },
+    {
+      "title": "Bettors on Kalshi now see Warsh likely confirmed by mid-May after DOJ drops Powell probe",
+      "link": "https://www.cnbc.com/2026/04/24/kalshi-bettors-see-warsh-confirmed-in-may-after-doj-drops-powell-probe.html",
+      "pubDate": "Fri, 24 Apr 2026 16:20:24 GMT"
+    },
+    {
       "title": "The aerospace and defense trade is taking investors deeper into space, and more ETFs are up for the mission",
       "link": "https://www.cnbc.com/2026/04/24/aerospace-and-defense-as-growth-drivers-for-etfs-amid-iran-war.html",
-      "pubDate": "Fri, 24 Apr 2026 11:00:01 GMT"
+      "pubDate": "Sat, 25 Apr 2026 12:26:41 GMT"
     },
     {
       "title": "Foreign car companies bet on technology to hang onto once-lucrative China auto market",
@@ -26,12 +46,12 @@
     {
       "title": "Risky meme trading is back. A trading rule change may have lit the fuse",
       "link": "https://www.cnbc.com/2026/04/23/risky-meme-trading-is-back-a-trading-rule-change-may-have-lit-the-fuse.html",
-      "pubDate": "Thu, 23 Apr 2026 17:15:49 GMT"
+      "pubDate": "Fri, 24 Apr 2026 15:42:10 GMT"
     },
     {
       "title": "Kalshi traders don&apos;t see Strait of Hormuz traffic returning to normal until July",
       "link": "https://www.cnbc.com/2026/04/23/kalshi-bettors-see-strait-of-hormuz-traffic-normal-by-july.html",
-      "pubDate": "Thu, 23 Apr 2026 14:19:40 GMT"
+      "pubDate": "Fri, 24 Apr 2026 14:05:55 GMT"
     },
     {
       "title": "Bessent says &apos;many&apos; U.S. allies have asked for currency swaps amid Iran war turbulence",
@@ -72,26 +92,6 @@
       "title": "Software stock dogs have joined market rally. There&apos;s a classic investing lesson in the rebound",
       "link": "https://www.cnbc.com/2026/04/19/software-tech-stocks-market-rally-microsoft.html",
       "pubDate": "Sun, 19 Apr 2026 18:38:11 GMT"
-    },
-    {
-      "title": "Here are 3 forces that drove a remarkable, record-setting week on Wall Street",
-      "link": "https://www.cnbc.com/2026/04/18/the-3-forces-that-drove-a-remarkable-record-setting-week-on-wall-street.html",
-      "pubDate": "Sat, 18 Apr 2026 14:13:04 GMT"
-    },
-    {
-      "title": "If a violent downturn strikes the market, new ETF strategies may be vulnerable. Here&apos;s why",
-      "link": "https://www.cnbc.com/2026/04/17/violent-downturns-could-test-new-etf-strategies-warns-mfs-investment.html",
-      "pubDate": "Fri, 17 Apr 2026 11:00:01 GMT"
-    },
-    {
-      "title": "Retail traders pile into Allbirds after odd AI pivot. History shows it won&apos;t end well",
-      "link": "https://www.cnbc.com/2026/04/16/retail-traders-pile-into-allbirds-after-odd-ai-pivot-history-shows-it-wont-end-well.html",
-      "pubDate": "Thu, 16 Apr 2026 17:04:59 GMT"
-    },
-    {
-      "title": "Goldman Sachs bond traders stumbled as Wall Street rivals thrived: &apos;A fire is being lit under&apos; them",
-      "link": "https://www.cnbc.com/2026/04/15/goldman-sachs-bond-traders-wall-street-rivals.html",
-      "pubDate": "Wed, 15 Apr 2026 21:31:54 GMT"
     }
   ]
 }
