@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-04-26T13:24:22.280Z",
+  "generatedAt": "2026-04-27T14:20:31.100Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "This bank CEO let his AI clone handle an earnings call — now he&apos;s signing an OpenAI deal",
+      "link": "https://www.cnbc.com/2026/04/27/openai-partners-with-customers-bank-in-push-to-automate-finance.html",
+      "pubDate": "Mon, 27 Apr 2026 13:30:24 GMT"
+    },
     {
       "title": "This little-known ETF is up over 600% amid U.S.-Iran war, a better trade than oil or energy stocks",
       "link": "https://www.cnbc.com/2026/04/25/crude-oil-freight-tanker-strait-hormuz-iran-war-energy-stocks.html",
@@ -87,11 +92,6 @@
       "title": "AI startup Cursor in talks to raise $2 billion funding round at valuation of over $50 billion",
       "link": "https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html",
       "pubDate": "Sun, 19 Apr 2026 21:19:57 GMT"
-    },
-    {
-      "title": "Software stock dogs have joined market rally. There&apos;s a classic investing lesson in the rebound",
-      "link": "https://www.cnbc.com/2026/04/19/software-tech-stocks-market-rally-microsoft.html",
-      "pubDate": "Sun, 19 Apr 2026 18:38:11 GMT"
     }
   ]
 }
