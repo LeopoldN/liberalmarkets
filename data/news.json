@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-04-27T14:20:31.100Z",
+  "generatedAt": "2026-04-28T14:34:59.173Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "OpenAI reportedly missed revenue targets. Shares of Oracle and these chip stocks are falling",
+      "link": "https://www.cnbc.com/2026/04/28/openai-reportedly-missed-revenue-targets-shares-of-oracle-and-these-chip-stocks-are-falling.html",
+      "pubDate": "Tue, 28 Apr 2026 14:15:22 GMT"
+    },
+    {
+      "title": "&apos;Draconian development&apos; in Meta-Manus deal draws the line in China&apos;s AI race with the U.S.",
+      "link": "https://www.cnbc.com/2026/04/28/china-blocks-meta-manus-deal-ai-tech-rivalry.html",
+      "pubDate": "Tue, 28 Apr 2026 08:31:40 GMT"
+    },
+    {
+      "title": "Saba Capital finds little appetite for tender offer of shares in Blue Owl, Starwood private credit funds",
+      "link": "https://www.cnbc.com/2026/04/27/private-credit-funds-saba-capital-tender-offers-for-shares-are-below-initial-expectations.html",
+      "pubDate": "Mon, 27 Apr 2026 23:02:22 GMT"
+    },
+    {
+      "title": "Ray Dalio says Kevin Warsh shouldn&apos;t cut interest rates in a ‘stagflation’ era",
+      "link": "https://www.cnbc.com/2026/04/27/ray-dalio-says-kevin-warsh-shouldnt-cut-interest-rates-in-a-stagflation-era.html",
+      "pubDate": "Mon, 27 Apr 2026 18:36:16 GMT"
+    },
+    {
       "title": "This bank CEO let his AI clone handle an earnings call — now he&apos;s signing an OpenAI deal",
       "link": "https://www.cnbc.com/2026/04/27/openai-partners-with-customers-bank-in-push-to-automate-finance.html",
-      "pubDate": "Mon, 27 Apr 2026 13:30:24 GMT"
+      "pubDate": "Mon, 27 Apr 2026 18:45:54 GMT"
     },
     {
       "title": "This little-known ETF is up over 600% amid U.S.-Iran war, a better trade than oil or energy stocks",
@@ -72,26 +92,6 @@
       "title": "Volkswagen announces voice AI in its Chinese cars from later this year",
       "link": "https://www.cnbc.com/2026/04/21/volkswagen-voice-ai-chinese-cars-automaker.html",
       "pubDate": "Wed, 22 Apr 2026 22:41:21 GMT"
-    },
-    {
-      "title": "Here&apos;s what to expect from Fed chair nominee Kevin Warsh&apos;s Senate hearing Tuesday",
-      "link": "https://www.cnbc.com/2026/04/21/kevin-warshs-senate-hearing-what-to-expect.html",
-      "pubDate": "Tue, 21 Apr 2026 13:13:52 GMT"
-    },
-    {
-      "title": "JPMorgan expands $1.5 trillion economic security splurge into Europe",
-      "link": "https://www.cnbc.com/2026/04/21/jpmorgan-chase-security-defense-spending-ai-europe-uk-dimon.html",
-      "pubDate": "Tue, 21 Apr 2026 07:49:06 GMT"
-    },
-    {
-      "title": "AST SpaceMobile shares drop after its satellite is placed in wrong orbit by Bezos&apos; Blue Origin",
-      "link": "https://www.cnbc.com/2026/04/20/ast-falls-after-bezos-blue-origin-places-satellite-in-wrong-orbit.html",
-      "pubDate": "Mon, 20 Apr 2026 20:01:02 GMT"
-    },
-    {
-      "title": "AI startup Cursor in talks to raise $2 billion funding round at valuation of over $50 billion",
-      "link": "https://www.cnbc.com/2026/04/19/cursor-ai-2-billion-funding-round.html",
-      "pubDate": "Sun, 19 Apr 2026 21:19:57 GMT"
     }
   ]
 }
