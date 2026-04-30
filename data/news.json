@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-04-29T14:23:37.357Z",
+  "generatedAt": "2026-04-30T14:19:31.054Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Here&apos;s why surging oil prices may not derail the consumer trade",
+      "link": "https://www.cnbc.com/2026/04/30/why-surging-oil-prices-may-not-derail-the-consumer-trade.html",
+      "pubDate": "Thu, 30 Apr 2026 11:16:27 GMT"
+    },
+    {
+      "title": "SoFi CEO defends decision to hold guidance steady",
+      "link": "https://www.cnbc.com/2026/04/29/sofi-ceo-defends-decision-to-hold-guidance-steady.html",
+      "pubDate": "Wed, 29 Apr 2026 22:48:10 GMT"
+    },
+    {
+      "title": "Jerome Powell says he will continue to serve as a Fed governor, calls Trump criticism &apos;unprecedented&apos;",
+      "link": "https://www.cnbc.com/2026/04/29/jerome-powell-says-he-will-continue-to-serve-as-a-fed-governor-even-after-chairmanship-ends-.html",
+      "pubDate": "Wed, 29 Apr 2026 19:32:45 GMT"
+    },
+    {
+      "title": "PayPal&apos;s new CEO makes Venmo a standalone business unit as potential buyers circle",
+      "link": "https://www.cnbc.com/2026/04/29/paypal-restructures-venmo-standalone-unit.html",
+      "pubDate": "Wed, 29 Apr 2026 19:13:31 GMT"
+    },
+    {
+      "title": "Here&apos;s what changed in the new Fed statement",
+      "link": "https://www.cnbc.com/2026/04/29/april-fed-meeting-statement-redline.html",
+      "pubDate": "Wed, 29 Apr 2026 18:06:00 GMT"
+    },
+    {
+      "title": "Fed holds rates steady but with highest level of dissent since 1992",
+      "link": "https://www.cnbc.com/2026/04/29/fed-interest-rate-decision-april-2026.html",
+      "pubDate": "Wed, 29 Apr 2026 19:25:28 GMT"
+    },
+    {
+      "title": "Traders brace for $800 billion in earnings-related stock movement",
+      "link": "https://www.cnbc.com/2026/04/29/traders-brace-for-800-billion-in-earnings-related-stock-movement.html",
+      "pubDate": "Wed, 29 Apr 2026 17:24:27 GMT"
+    },
+    {
+      "title": "Kalshi bettors called it: Powell says he will stay on as Fed governor after chair term ends",
+      "link": "https://www.cnbc.com/2026/04/29/kalshi-bettors-prediction-powell-to-stay-as-fed-governor.html",
+      "pubDate": "Wed, 29 Apr 2026 20:11:46 GMT"
+    },
+    {
+      "title": "Bill Ackman&apos;s Pershing Square USA fund falls sharply in public market debut",
+      "link": "https://www.cnbc.com/2026/04/29/bill-ackmans-5-billion-pershing-square-ipo-to-start-trading-testing-berkshire-style-vision.html",
+      "pubDate": "Wed, 29 Apr 2026 20:07:10 GMT"
+    },
     {
       "title": "Startup Blockworks wants to become the crypto equivalent of Morningstar. How it plans to do it",
       "link": "https://www.cnbc.com/2026/04/29/blockworks-wants-to-become-the-crypto-equivalent-of-morningstar-how-it-plans-to-do-it.html",
@@ -11,7 +56,7 @@
     {
       "title": "Here&apos;s everything to expect when the Fed issues its latest interest rate decision Wednesday",
       "link": "https://www.cnbc.com/2026/04/28/fed-meeting-preview-april-2026.html",
-      "pubDate": "Tue, 28 Apr 2026 20:15:32 GMT"
+      "pubDate": "Wed, 29 Apr 2026 15:35:18 GMT"
     },
     {
       "title": "Jamie Dimon warns of &apos;some kind of bond crisis&apos; ahead as global debt risks build",
@@ -47,51 +92,6 @@
       "title": "This bank CEO let his AI clone handle an earnings call — now he&apos;s signing an OpenAI deal",
       "link": "https://www.cnbc.com/2026/04/27/openai-partners-with-customers-bank-in-push-to-automate-finance.html",
       "pubDate": "Tue, 28 Apr 2026 20:35:57 GMT"
-    },
-    {
-      "title": "This little-known ETF is up over 600% amid U.S.-Iran war, a better trade than oil or energy stocks",
-      "link": "https://www.cnbc.com/2026/04/25/crude-oil-freight-tanker-strait-hormuz-iran-war-energy-stocks.html",
-      "pubDate": "Sat, 25 Apr 2026 11:53:07 GMT"
-    },
-    {
-      "title": "Bessent defends U.S. dollar swap lines as Iran war harms global finances",
-      "link": "https://www.cnbc.com/2026/04/24/bessent-iran-war-uae-swap-lines-gulf-asia.html",
-      "pubDate": "Fri, 24 Apr 2026 16:54:35 GMT"
-    },
-    {
-      "title": "Nuclear reactor company X-energy shares surge 27% as AI drives interest in its IPO",
-      "link": "https://www.cnbc.com/2026/04/24/nuclear-reactor-company-x-energy-begins-trading-as-ai-drives-interest-in-the-industry.html",
-      "pubDate": "Fri, 24 Apr 2026 21:11:23 GMT"
-    },
-    {
-      "title": "Bettors on Kalshi now see Warsh likely confirmed by mid-May after DOJ drops Powell probe",
-      "link": "https://www.cnbc.com/2026/04/24/kalshi-bettors-see-warsh-confirmed-in-may-after-doj-drops-powell-probe.html",
-      "pubDate": "Fri, 24 Apr 2026 16:20:24 GMT"
-    },
-    {
-      "title": "The aerospace and defense trade is taking investors deeper into space, and more ETFs are up for the mission",
-      "link": "https://www.cnbc.com/2026/04/24/aerospace-and-defense-as-growth-drivers-for-etfs-amid-iran-war.html",
-      "pubDate": "Sat, 25 Apr 2026 12:26:41 GMT"
-    },
-    {
-      "title": "Foreign car companies bet on technology to hang onto once-lucrative China auto market",
-      "link": "https://www.cnbc.com/2026/04/24/foreign-car-companies-use-technology-to-hang-onto-china-auto-market.html",
-      "pubDate": "Fri, 24 Apr 2026 11:18:47 GMT"
-    },
-    {
-      "title": "NYC Mayor Mamdani knocked Ken Griffin in pied-a-terre tax promo. His firm calls the move &apos;shameful&apos;",
-      "link": "https://www.cnbc.com/2026/04/23/nyc-mayor-mamdani-knocked-ken-griffin-in-pied-a-terre-tax-promo-his-firm-calls-the-move-shameful.html",
-      "pubDate": "Thu, 23 Apr 2026 20:46:42 GMT"
-    },
-    {
-      "title": "Traders are betting on big moves in Intel on earnings",
-      "link": "https://www.cnbc.com/2026/04/23/traders-are-betting-on-big-moves-in-intel-on-earnings.html",
-      "pubDate": "Thu, 23 Apr 2026 17:59:29 GMT"
-    },
-    {
-      "title": "Risky meme trading is back. A trading rule change may have lit the fuse",
-      "link": "https://www.cnbc.com/2026/04/23/risky-meme-trading-is-back-a-trading-rule-change-may-have-lit-the-fuse.html",
-      "pubDate": "Fri, 24 Apr 2026 15:42:10 GMT"
     }
   ]
 }
