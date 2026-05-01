@@ -1,8 +1,33 @@
 {
-  "generatedAt": "2026-04-30T14:19:31.054Z",
+  "generatedAt": "2026-05-01T13:46:54.003Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Berkshire shares struggle into annual meeting. Can Abel rekindle enthusiasm without Buffett center stage?",
+      "link": "https://www.cnbc.com/2026/05/01/berkshire-hathaway-annual-meeting-new-era-warren-buffett-off-center-stage.html",
+      "pubDate": "Fri, 01 May 2026 11:12:47 GMT"
+    },
+    {
+      "title": "China’s EV price war turns into AI arms race beyond cheaper cars",
+      "link": "https://www.cnbc.com/2026/05/01/china-ev-ai-features-price-war-bytedance-alibaba-doubao-volcano-engine.html",
+      "pubDate": "Fri, 01 May 2026 04:19:25 GMT"
+    },
+    {
+      "title": "China’s self-driving truck leaders say AI breakthroughs won’t accelerate rollout — here’s why",
+      "link": "https://www.cnbc.com/2026/05/01/chinas-self-driving-truck-leaders-say-ai-breakthroughs-wont-accelerate-rollout-heres-why.html",
+      "pubDate": "Fri, 01 May 2026 01:10:28 GMT"
+    },
+    {
+      "title": "Apple execs to talk China and tariffs, but will avoid discussing foldable iPhone, per traders on Kalshi",
+      "link": "https://www.cnbc.com/2026/04/30/what-bettors-think-apple-will-talk-about-on-its-earnings-call.html",
+      "pubDate": "Thu, 30 Apr 2026 17:56:28 GMT"
+    },
+    {
+      "title": "Blue Owl shares surge after private credit firm cites 10X gains from SpaceX",
+      "link": "https://www.cnbc.com/2026/04/30/blue-owl-shares-private-credit-spacex-gains.html",
+      "pubDate": "Thu, 30 Apr 2026 19:36:55 GMT"
+    },
     {
       "title": "Here&apos;s why surging oil prices may not derail the consumer trade",
       "link": "https://www.cnbc.com/2026/04/30/why-surging-oil-prices-may-not-derail-the-consumer-trade.html",
@@ -16,7 +41,7 @@
     {
       "title": "Jerome Powell says he will continue to serve as a Fed governor, calls Trump criticism &apos;unprecedented&apos;",
       "link": "https://www.cnbc.com/2026/04/29/jerome-powell-says-he-will-continue-to-serve-as-a-fed-governor-even-after-chairmanship-ends-.html",
-      "pubDate": "Wed, 29 Apr 2026 19:32:45 GMT"
+      "pubDate": "Thu, 30 Apr 2026 14:36:04 GMT"
     },
     {
       "title": "PayPal&apos;s new CEO makes Venmo a standalone business unit as potential buyers circle",
@@ -39,9 +64,9 @@
       "pubDate": "Wed, 29 Apr 2026 17:24:27 GMT"
     },
     {
-      "title": "Kalshi bettors called it: Powell says he will stay on as Fed governor after chair term ends",
+      "title": "Kalshi users called it: Powell says he will stay on as Fed governor after chair term ends",
       "link": "https://www.cnbc.com/2026/04/29/kalshi-bettors-prediction-powell-to-stay-as-fed-governor.html",
-      "pubDate": "Wed, 29 Apr 2026 20:11:46 GMT"
+      "pubDate": "Thu, 30 Apr 2026 18:50:50 GMT"
     },
     {
       "title": "Bill Ackman&apos;s Pershing Square USA fund falls sharply in public market debut",
@@ -67,31 +92,6 @@
       "title": "Meta shares look &apos;iffy&apos; into earnings. How to trade it",
       "link": "https://www.cnbc.com/2026/04/28/meta-shares-look-iffy-into-earnings-how-to-trade-it.html",
       "pubDate": "Tue, 28 Apr 2026 15:53:55 GMT"
-    },
-    {
-      "title": "OpenAI reportedly missed revenue targets. Shares of Oracle and these chip stocks are falling",
-      "link": "https://www.cnbc.com/2026/04/28/openai-reportedly-missed-revenue-targets-shares-of-oracle-and-these-chip-stocks-are-falling.html",
-      "pubDate": "Tue, 28 Apr 2026 20:14:15 GMT"
-    },
-    {
-      "title": "&apos;Draconian development&apos; in Meta-Manus deal draws the line in China&apos;s AI race with the U.S.",
-      "link": "https://www.cnbc.com/2026/04/28/china-blocks-meta-manus-deal-ai-tech-rivalry.html",
-      "pubDate": "Tue, 28 Apr 2026 08:31:40 GMT"
-    },
-    {
-      "title": "Saba Capital finds little appetite for tender offer of shares in Blue Owl, Starwood private credit funds",
-      "link": "https://www.cnbc.com/2026/04/27/private-credit-funds-saba-capital-tender-offers-for-shares-are-below-initial-expectations.html",
-      "pubDate": "Mon, 27 Apr 2026 23:02:22 GMT"
-    },
-    {
-      "title": "Ray Dalio says Kevin Warsh shouldn&apos;t cut interest rates in a ‘stagflation’ era",
-      "link": "https://www.cnbc.com/2026/04/27/ray-dalio-says-kevin-warsh-shouldnt-cut-interest-rates-in-a-stagflation-era.html",
-      "pubDate": "Mon, 27 Apr 2026 18:36:16 GMT"
-    },
-    {
-      "title": "This bank CEO let his AI clone handle an earnings call — now he&apos;s signing an OpenAI deal",
-      "link": "https://www.cnbc.com/2026/04/27/openai-partners-with-customers-bank-in-push-to-automate-finance.html",
-      "pubDate": "Tue, 28 Apr 2026 20:35:57 GMT"
     }
   ]
 }
