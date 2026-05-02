@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-05-01T13:46:54.003Z",
+  "generatedAt": "2026-05-02T13:39:27.389Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Cautious optimism: Berkshire investors weigh future under new CEO Greg Abel",
+      "link": "https://www.cnbc.com/2026/05/01/berkshire-investors-weigh-future-under-new-ceo-greg-abel.html",
+      "pubDate": "Fri, 01 May 2026 21:39:03 GMT"
+    },
+    {
+      "title": "Berkshire Hathaway’s shopping extravaganza draws lighter crowds as spotlight shifts to Greg Abel",
+      "link": "https://www.cnbc.com/2026/05/01/berkshire-hathaways-shopping-extravaganza-draws-lighter-crowds-as-spotlight-shifts-to-greg-abel.html",
+      "pubDate": "Fri, 01 May 2026 22:18:59 GMT"
+    },
+    {
+      "title": "U.S. oil prices will exceed Iran wartime high to above $125 as conflict drags on, Kalshi traders say",
+      "link": "https://www.cnbc.com/2026/05/01/kalshi-traders-think-us-oil-prices-are-set-to-hit-new-2026-highs.html",
+      "pubDate": "Fri, 01 May 2026 18:12:52 GMT"
+    },
+    {
+      "title": "Six months out, control of the Senate is a dead heat, traders on Kalshi say",
+      "link": "https://www.cnbc.com/2026/05/01/6-months-out-control-of-the-senate-is-50-50-traders-on-kalshi-say.html",
+      "pubDate": "Fri, 01 May 2026 18:03:21 GMT"
+    },
     {
       "title": "Berkshire shares struggle into annual meeting. Can Abel rekindle enthusiasm without Buffett center stage?",
       "link": "https://www.cnbc.com/2026/05/01/berkshire-hathaway-annual-meeting-new-era-warren-buffett-off-center-stage.html",
@@ -72,26 +92,6 @@
       "title": "Bill Ackman&apos;s Pershing Square USA fund falls sharply in public market debut",
       "link": "https://www.cnbc.com/2026/04/29/bill-ackmans-5-billion-pershing-square-ipo-to-start-trading-testing-berkshire-style-vision.html",
       "pubDate": "Wed, 29 Apr 2026 20:07:10 GMT"
-    },
-    {
-      "title": "Startup Blockworks wants to become the crypto equivalent of Morningstar. How it plans to do it",
-      "link": "https://www.cnbc.com/2026/04/29/blockworks-wants-to-become-the-crypto-equivalent-of-morningstar-how-it-plans-to-do-it.html",
-      "pubDate": "Wed, 29 Apr 2026 13:00:01 GMT"
-    },
-    {
-      "title": "Here&apos;s everything to expect when the Fed issues its latest interest rate decision Wednesday",
-      "link": "https://www.cnbc.com/2026/04/28/fed-meeting-preview-april-2026.html",
-      "pubDate": "Wed, 29 Apr 2026 15:35:18 GMT"
-    },
-    {
-      "title": "Jamie Dimon warns of &apos;some kind of bond crisis&apos; ahead as global debt risks build",
-      "link": "https://www.cnbc.com/2026/04/28/jamie-dimon-bond-crisis-global-debt-risks.html",
-      "pubDate": "Tue, 28 Apr 2026 18:44:41 GMT"
-    },
-    {
-      "title": "Meta shares look &apos;iffy&apos; into earnings. How to trade it",
-      "link": "https://www.cnbc.com/2026/04/28/meta-shares-look-iffy-into-earnings-how-to-trade-it.html",
-      "pubDate": "Tue, 28 Apr 2026 15:53:55 GMT"
     }
   ]
 }
