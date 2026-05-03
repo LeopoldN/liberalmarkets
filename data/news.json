@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-05-02T13:39:27.389Z",
+  "generatedAt": "2026-05-03T13:40:58.891Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "JPMorgan&apos;s Jamie Dimon issued vague credit recession warning, but the bond market has more pressing issues",
+      "link": "https://www.cnbc.com/2026/05/02/kevin-warsh-federal-reserve-interest-rates-bonds-fixed-income.html",
+      "pubDate": "Sat, 02 May 2026 23:23:07 GMT"
+    },
     {
       "title": "Cautious optimism: Berkshire investors weigh future under new CEO Greg Abel",
       "link": "https://www.cnbc.com/2026/05/01/berkshire-investors-weigh-future-under-new-ceo-greg-abel.html",
@@ -87,11 +92,6 @@
       "title": "Kalshi users called it: Powell says he will stay on as Fed governor after chair term ends",
       "link": "https://www.cnbc.com/2026/04/29/kalshi-bettors-prediction-powell-to-stay-as-fed-governor.html",
       "pubDate": "Thu, 30 Apr 2026 18:50:50 GMT"
-    },
-    {
-      "title": "Bill Ackman&apos;s Pershing Square USA fund falls sharply in public market debut",
-      "link": "https://www.cnbc.com/2026/04/29/bill-ackmans-5-billion-pershing-square-ipo-to-start-trading-testing-berkshire-style-vision.html",
-      "pubDate": "Wed, 29 Apr 2026 20:07:10 GMT"
     }
   ]
 }
