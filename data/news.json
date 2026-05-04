@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-05-03T13:40:58.891Z",
+  "generatedAt": "2026-05-04T14:23:12.031Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Berkshire shares trade higher as Buffett successor Abel scores good marks at meeting, earnings jump",
+      "link": "https://www.cnbc.com/2026/05/04/berkshire-shares-trade-higher-as-buffett-successor-abel-scores-good-marks-at-meeting-earnings-jump.html",
+      "pubDate": "Mon, 04 May 2026 14:19:16 GMT"
+    },
+    {
+      "title": "World Cup prize pool nears $900 million as FIFA boosts payouts. Here’s who gets what",
+      "link": "https://www.cnbc.com/2026/05/04/fifa-world-cup-team-payouts-ticket-prices.html",
+      "pubDate": "Mon, 04 May 2026 06:11:02 GMT"
+    },
+    {
+      "title": "Greg Abel earns solid scorecard from Berkshire shareholders after first annual meeting",
+      "link": "https://www.cnbc.com/2026/05/03/berkshire-ceo-greg-abel-earns-solid-first-scorecard-after-first-annual-meeting.html",
+      "pubDate": "Sun, 03 May 2026 21:14:08 GMT"
+    },
     {
       "title": "JPMorgan&apos;s Jamie Dimon issued vague credit recession warning, but the bond market has more pressing issues",
       "link": "https://www.cnbc.com/2026/05/02/kevin-warsh-federal-reserve-interest-rates-bonds-fixed-income.html",
@@ -77,21 +92,6 @@
       "title": "Here&apos;s what changed in the new Fed statement",
       "link": "https://www.cnbc.com/2026/04/29/april-fed-meeting-statement-redline.html",
       "pubDate": "Wed, 29 Apr 2026 18:06:00 GMT"
-    },
-    {
-      "title": "Fed holds rates steady but with highest level of dissent since 1992",
-      "link": "https://www.cnbc.com/2026/04/29/fed-interest-rate-decision-april-2026.html",
-      "pubDate": "Wed, 29 Apr 2026 19:25:28 GMT"
-    },
-    {
-      "title": "Traders brace for $800 billion in earnings-related stock movement",
-      "link": "https://www.cnbc.com/2026/04/29/traders-brace-for-800-billion-in-earnings-related-stock-movement.html",
-      "pubDate": "Wed, 29 Apr 2026 17:24:27 GMT"
-    },
-    {
-      "title": "Kalshi users called it: Powell says he will stay on as Fed governor after chair term ends",
-      "link": "https://www.cnbc.com/2026/04/29/kalshi-bettors-prediction-powell-to-stay-as-fed-governor.html",
-      "pubDate": "Thu, 30 Apr 2026 18:50:50 GMT"
     }
   ]
 }
