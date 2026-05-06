@@ -1,22 +1,82 @@
 {
-  "generatedAt": "2026-05-04T14:23:12.031Z",
+  "generatedAt": "2026-05-06T14:35:45.390Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Berkshire shares trade higher as Buffett successor Abel scores good marks at meeting, earnings jump",
+      "title": "Uber and Disney are seeing the same remarkable dynamic in this economy. Both stocks are surging",
+      "link": "https://www.cnbc.com/2026/05/06/uber-and-disney-are-seeing-the-same-remarkable-dynamic-in-this-economy-both-stocks-are-surging.html",
+      "pubDate": "Wed, 06 May 2026 13:43:08 GMT"
+    },
+    {
+      "title": "Intel and Micron are poised to break major milestones",
+      "link": "https://www.cnbc.com/2026/05/05/intel-and-micron-are-poised-to-break-major-milestones.html",
+      "pubDate": "Tue, 05 May 2026 18:55:16 GMT"
+    },
+    {
+      "title": "Anthropic CEO warns of cyber ‘moment of danger’ as AI exposes thousands of vulnerabilities",
+      "link": "https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html",
+      "pubDate": "Tue, 05 May 2026 19:36:16 GMT"
+    },
+    {
+      "title": "SEC advances Trump-backed proposal to end mandatory quarterly earnings reports",
+      "link": "https://www.cnbc.com/2026/05/05/sec-is-close-to-ending-mandatory-quarterly-earnings-reports-that-trump-called-for.html",
+      "pubDate": "Tue, 05 May 2026 18:05:44 GMT"
+    },
+    {
+      "title": "After Coinbase, prediction market traders forecast more tech layoffs ahead",
+      "link": "https://www.cnbc.com/2026/05/05/after-coinbase-prediction-markets-traders-see-more-tech-layoffs.html",
+      "pubDate": "Tue, 05 May 2026 16:26:27 GMT"
+    },
+    {
+      "title": "Milken-adjacent Power100 attendees aim to reclaim the DEI in finance narrative",
+      "link": "https://www.cnbc.com/2026/05/05/dei-diversity-milken-blueprint-capital-power100.html",
+      "pubDate": "Tue, 05 May 2026 11:00:01 GMT"
+    },
+    {
+      "title": "UniCredit CEO says taking control of Commerzbank ‘not the expected scenario’",
+      "link": "https://www.cnbc.com/2026/05/05/unicredit-takeover-commerzbank-ceo-control-scenario.html",
+      "pubDate": "Tue, 05 May 2026 09:19:40 GMT"
+    },
+    {
+      "title": "HSBC shares drop as first-quarter pre-tax profit misses estimates on higher expected credit losses",
+      "link": "https://www.cnbc.com/2026/05/05/hsbc-q1-earnings-banking-finance.html",
+      "pubDate": "Tue, 05 May 2026 08:38:15 GMT"
+    },
+    {
+      "title": "Traders are doubtful Cohen&apos;s GameStop can pull off monster eBay acquisition",
+      "link": "https://www.cnbc.com/2026/05/04/traders-are-doubtful-cohens-gamestop-can-pull-off-monster-ebay-acquisition.html",
+      "pubDate": "Mon, 04 May 2026 19:30:48 GMT"
+    },
+    {
+      "title": "Kalshi traders see April jobs report coming in better than economists&apos; estimates",
+      "link": "https://www.cnbc.com/2026/05/04/kalshi-traders-see-april-jobs-report-coming-in-better-than-economists-estimates.html",
+      "pubDate": "Mon, 04 May 2026 18:48:20 GMT"
+    },
+    {
+      "title": "Traffic in the Strait of Hormuz won’t return to normal until August or later, according to Kalshi traders",
+      "link": "https://www.cnbc.com/2026/05/04/strait-of-hormuz-traffic-disrupted-until-september-kalshi-traders-say.html",
+      "pubDate": "Tue, 05 May 2026 14:17:28 GMT"
+    },
+    {
+      "title": "Anthropic teams with Goldman, Blackstone and others on $1.5 billion AI venture targeting PE-owned firms",
+      "link": "https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html",
+      "pubDate": "Mon, 04 May 2026 18:55:20 GMT"
+    },
+    {
+      "title": "Berkshire shares trade lower even after Abel scores good marks at meeting, earnings jump",
       "link": "https://www.cnbc.com/2026/05/04/berkshire-shares-trade-higher-as-buffett-successor-abel-scores-good-marks-at-meeting-earnings-jump.html",
-      "pubDate": "Mon, 04 May 2026 14:19:16 GMT"
+      "pubDate": "Mon, 04 May 2026 20:03:39 GMT"
     },
     {
       "title": "World Cup prize pool nears $900 million as FIFA boosts payouts. Here’s who gets what",
       "link": "https://www.cnbc.com/2026/05/04/fifa-world-cup-team-payouts-ticket-prices.html",
-      "pubDate": "Mon, 04 May 2026 06:11:02 GMT"
+      "pubDate": "Mon, 04 May 2026 23:14:37 GMT"
     },
     {
       "title": "Greg Abel earns solid scorecard from Berkshire shareholders after first annual meeting",
       "link": "https://www.cnbc.com/2026/05/03/berkshire-ceo-greg-abel-earns-solid-first-scorecard-after-first-annual-meeting.html",
-      "pubDate": "Sun, 03 May 2026 21:14:08 GMT"
+      "pubDate": "Mon, 04 May 2026 17:03:24 GMT"
     },
     {
       "title": "JPMorgan&apos;s Jamie Dimon issued vague credit recession warning, but the bond market has more pressing issues",
@@ -32,66 +92,6 @@
       "title": "Berkshire Hathaway’s shopping extravaganza draws lighter crowds as spotlight shifts to Greg Abel",
       "link": "https://www.cnbc.com/2026/05/01/berkshire-hathaways-shopping-extravaganza-draws-lighter-crowds-as-spotlight-shifts-to-greg-abel.html",
       "pubDate": "Fri, 01 May 2026 22:18:59 GMT"
-    },
-    {
-      "title": "U.S. oil prices will exceed Iran wartime high to above $125 as conflict drags on, Kalshi traders say",
-      "link": "https://www.cnbc.com/2026/05/01/kalshi-traders-think-us-oil-prices-are-set-to-hit-new-2026-highs.html",
-      "pubDate": "Fri, 01 May 2026 18:12:52 GMT"
-    },
-    {
-      "title": "Six months out, control of the Senate is a dead heat, traders on Kalshi say",
-      "link": "https://www.cnbc.com/2026/05/01/6-months-out-control-of-the-senate-is-50-50-traders-on-kalshi-say.html",
-      "pubDate": "Fri, 01 May 2026 18:03:21 GMT"
-    },
-    {
-      "title": "Berkshire shares struggle into annual meeting. Can Abel rekindle enthusiasm without Buffett center stage?",
-      "link": "https://www.cnbc.com/2026/05/01/berkshire-hathaway-annual-meeting-new-era-warren-buffett-off-center-stage.html",
-      "pubDate": "Fri, 01 May 2026 11:12:47 GMT"
-    },
-    {
-      "title": "China’s EV price war turns into AI arms race beyond cheaper cars",
-      "link": "https://www.cnbc.com/2026/05/01/china-ev-ai-features-price-war-bytedance-alibaba-doubao-volcano-engine.html",
-      "pubDate": "Fri, 01 May 2026 04:19:25 GMT"
-    },
-    {
-      "title": "China’s self-driving truck leaders say AI breakthroughs won’t accelerate rollout — here’s why",
-      "link": "https://www.cnbc.com/2026/05/01/chinas-self-driving-truck-leaders-say-ai-breakthroughs-wont-accelerate-rollout-heres-why.html",
-      "pubDate": "Fri, 01 May 2026 01:10:28 GMT"
-    },
-    {
-      "title": "Apple execs to talk China and tariffs, but will avoid discussing foldable iPhone, per traders on Kalshi",
-      "link": "https://www.cnbc.com/2026/04/30/what-bettors-think-apple-will-talk-about-on-its-earnings-call.html",
-      "pubDate": "Thu, 30 Apr 2026 17:56:28 GMT"
-    },
-    {
-      "title": "Blue Owl shares surge after private credit firm cites 10X gains from SpaceX",
-      "link": "https://www.cnbc.com/2026/04/30/blue-owl-shares-private-credit-spacex-gains.html",
-      "pubDate": "Thu, 30 Apr 2026 19:36:55 GMT"
-    },
-    {
-      "title": "Here&apos;s why surging oil prices may not derail the consumer trade",
-      "link": "https://www.cnbc.com/2026/04/30/why-surging-oil-prices-may-not-derail-the-consumer-trade.html",
-      "pubDate": "Thu, 30 Apr 2026 11:16:27 GMT"
-    },
-    {
-      "title": "SoFi CEO defends decision to hold guidance steady",
-      "link": "https://www.cnbc.com/2026/04/29/sofi-ceo-defends-decision-to-hold-guidance-steady.html",
-      "pubDate": "Wed, 29 Apr 2026 22:48:10 GMT"
-    },
-    {
-      "title": "Jerome Powell says he will continue to serve as a Fed governor, calls Trump criticism &apos;unprecedented&apos;",
-      "link": "https://www.cnbc.com/2026/04/29/jerome-powell-says-he-will-continue-to-serve-as-a-fed-governor-even-after-chairmanship-ends-.html",
-      "pubDate": "Thu, 30 Apr 2026 14:36:04 GMT"
-    },
-    {
-      "title": "PayPal&apos;s new CEO makes Venmo a standalone business unit as potential buyers circle",
-      "link": "https://www.cnbc.com/2026/04/29/paypal-restructures-venmo-standalone-unit.html",
-      "pubDate": "Wed, 29 Apr 2026 19:13:31 GMT"
-    },
-    {
-      "title": "Here&apos;s what changed in the new Fed statement",
-      "link": "https://www.cnbc.com/2026/04/29/april-fed-meeting-statement-redline.html",
-      "pubDate": "Wed, 29 Apr 2026 18:06:00 GMT"
     }
   ]
 }
