@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-05-06T14:35:45.390Z",
+  "generatedAt": "2026-05-07T14:39:18.191Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Whirlpool says Iran war causing &apos;recession-level industry decline.&apos; The shares are down 12%",
+      "link": "https://www.cnbc.com/2026/05/07/whirlpool-says-iran-war-causing-recession-level-industry-decline-the-shares-are-down-20percent.html",
+      "pubDate": "Thu, 07 May 2026 13:56:42 GMT"
+    },
+    {
+      "title": "Asian Development Bank&apos;s $70 billion energy and digital infra push puts Southeast Asia center stage",
+      "link": "https://www.cnbc.com/2026/05/07/adb-70-billion-plan-southeast-asia-digital-infrastructure-power.html",
+      "pubDate": "Thu, 07 May 2026 05:47:25 GMT"
+    },
+    {
+      "title": "Goodbye quarterly earnings? Here&apos;s when traders believe this big change will happen",
+      "link": "https://www.cnbc.com/2026/05/06/kalshi-traders-confident-sec-will-end-mandatory-quarterly-earnings-reports.html",
+      "pubDate": "Wed, 06 May 2026 17:48:21 GMT"
+    },
+    {
+      "title": "Apollo CEO Rowan warns of market correction, slams &apos;egregious&apos; practices at rival insurers",
+      "link": "https://www.cnbc.com/2026/05/06/apollo-ceo-rowan-market-correction-rival-insurers.html",
+      "pubDate": "Wed, 06 May 2026 20:33:58 GMT"
+    },
+    {
       "title": "Uber and Disney are seeing the same remarkable dynamic in this economy. Both stocks are surging",
       "link": "https://www.cnbc.com/2026/05/06/uber-and-disney-are-seeing-the-same-remarkable-dynamic-in-this-economy-both-stocks-are-surging.html",
-      "pubDate": "Wed, 06 May 2026 13:43:08 GMT"
+      "pubDate": "Wed, 06 May 2026 20:04:33 GMT"
     },
     {
       "title": "Intel and Micron are poised to break major milestones",
@@ -72,26 +92,6 @@
       "title": "World Cup prize pool nears $900 million as FIFA boosts payouts. Here’s who gets what",
       "link": "https://www.cnbc.com/2026/05/04/fifa-world-cup-team-payouts-ticket-prices.html",
       "pubDate": "Mon, 04 May 2026 23:14:37 GMT"
-    },
-    {
-      "title": "Greg Abel earns solid scorecard from Berkshire shareholders after first annual meeting",
-      "link": "https://www.cnbc.com/2026/05/03/berkshire-ceo-greg-abel-earns-solid-first-scorecard-after-first-annual-meeting.html",
-      "pubDate": "Mon, 04 May 2026 17:03:24 GMT"
-    },
-    {
-      "title": "JPMorgan&apos;s Jamie Dimon issued vague credit recession warning, but the bond market has more pressing issues",
-      "link": "https://www.cnbc.com/2026/05/02/kevin-warsh-federal-reserve-interest-rates-bonds-fixed-income.html",
-      "pubDate": "Sat, 02 May 2026 23:23:07 GMT"
-    },
-    {
-      "title": "Cautious optimism: Berkshire investors weigh future under new CEO Greg Abel",
-      "link": "https://www.cnbc.com/2026/05/01/berkshire-investors-weigh-future-under-new-ceo-greg-abel.html",
-      "pubDate": "Fri, 01 May 2026 21:39:03 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway’s shopping extravaganza draws lighter crowds as spotlight shifts to Greg Abel",
-      "link": "https://www.cnbc.com/2026/05/01/berkshire-hathaways-shopping-extravaganza-draws-lighter-crowds-as-spotlight-shifts-to-greg-abel.html",
-      "pubDate": "Fri, 01 May 2026 22:18:59 GMT"
     }
   ]
 }
