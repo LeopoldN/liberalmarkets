@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-05-07T14:39:18.191Z",
+  "generatedAt": "2026-05-08T14:08:03.760Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Anthropic&apos;s Mythos set off a cybersecurity &apos;hysteria.&apos; Experts say the threat was already here",
+      "link": "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html",
+      "pubDate": "Fri, 08 May 2026 14:04:22 GMT"
+    },
+    {
+      "title": "Iran focus at Trump-Xi summit may delay progress on tariffs, rare earths",
+      "link": "https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html",
+      "pubDate": "Fri, 08 May 2026 11:57:57 GMT"
+    },
+    {
+      "title": "Kalshi traders see odds rising that a U.S.-Iran nuclear deal will be reached by 2027",
+      "link": "https://www.cnbc.com/2026/05/07/kalshi-traders-see-odds-rising-that-a-us-iran-nuclear-deal-will-be-reached-by-2027.html",
+      "pubDate": "Thu, 07 May 2026 16:48:36 GMT"
+    },
+    {
+      "title": "Ryan Cohen&apos;s mysterious bank letter backing GameStop&apos;s eBay bid reveals a big issue with deal",
+      "link": "https://www.cnbc.com/2026/05/07/ryan-cohens-mysterious-bank-letter-backing-his-ebay-bid-reveals-a-big-issue.html",
+      "pubDate": "Thu, 07 May 2026 16:55:23 GMT"
+    },
+    {
       "title": "Whirlpool says Iran war causing &apos;recession-level industry decline.&apos; The shares are down 12%",
       "link": "https://www.cnbc.com/2026/05/07/whirlpool-says-iran-war-causing-recession-level-industry-decline-the-shares-are-down-20percent.html",
-      "pubDate": "Thu, 07 May 2026 13:56:42 GMT"
+      "pubDate": "Thu, 07 May 2026 21:35:53 GMT"
     },
     {
       "title": "Asian Development Bank&apos;s $70 billion energy and digital infra push puts Southeast Asia center stage",
@@ -72,26 +92,6 @@
       "title": "Kalshi traders see April jobs report coming in better than economists&apos; estimates",
       "link": "https://www.cnbc.com/2026/05/04/kalshi-traders-see-april-jobs-report-coming-in-better-than-economists-estimates.html",
       "pubDate": "Mon, 04 May 2026 18:48:20 GMT"
-    },
-    {
-      "title": "Traffic in the Strait of Hormuz won’t return to normal until August or later, according to Kalshi traders",
-      "link": "https://www.cnbc.com/2026/05/04/strait-of-hormuz-traffic-disrupted-until-september-kalshi-traders-say.html",
-      "pubDate": "Tue, 05 May 2026 14:17:28 GMT"
-    },
-    {
-      "title": "Anthropic teams with Goldman, Blackstone and others on $1.5 billion AI venture targeting PE-owned firms",
-      "link": "https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html",
-      "pubDate": "Mon, 04 May 2026 18:55:20 GMT"
-    },
-    {
-      "title": "Berkshire shares trade lower even after Abel scores good marks at meeting, earnings jump",
-      "link": "https://www.cnbc.com/2026/05/04/berkshire-shares-trade-higher-as-buffett-successor-abel-scores-good-marks-at-meeting-earnings-jump.html",
-      "pubDate": "Mon, 04 May 2026 20:03:39 GMT"
-    },
-    {
-      "title": "World Cup prize pool nears $900 million as FIFA boosts payouts. Here’s who gets what",
-      "link": "https://www.cnbc.com/2026/05/04/fifa-world-cup-team-payouts-ticket-prices.html",
-      "pubDate": "Mon, 04 May 2026 23:14:37 GMT"
     }
   ]
 }
