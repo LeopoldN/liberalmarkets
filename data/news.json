@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-05-10T13:47:08.187Z",
+  "generatedAt": "2026-05-11T15:30:59.671Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Michael Burry is not a believer: &apos;For any stocks going parabolic reduce positions almost entirely&apos;",
+      "link": "https://www.cnbc.com/2026/05/11/michael-burry-is-not-a-believer-for-any-stocks-going-parabolic-reduce-positions-almost-entirely.html",
+      "pubDate": "Mon, 11 May 2026 15:08:58 GMT"
+    },
     {
       "title": "How much further does this Teflon market have to go? Here&apos;s what traders say",
       "link": "https://www.cnbc.com/2026/05/08/how-much-further-can-this-teflon-market-go-heres-what-traders-say.html",
@@ -87,11 +92,6 @@
       "title": "UniCredit CEO says taking control of Commerzbank ‘not the expected scenario’",
       "link": "https://www.cnbc.com/2026/05/05/unicredit-takeover-commerzbank-ceo-control-scenario.html",
       "pubDate": "Tue, 05 May 2026 09:19:40 GMT"
-    },
-    {
-      "title": "HSBC shares drop as first-quarter pre-tax profit misses estimates on higher expected credit losses",
-      "link": "https://www.cnbc.com/2026/05/05/hsbc-q1-earnings-banking-finance.html",
-      "pubDate": "Tue, 05 May 2026 08:38:15 GMT"
     }
   ]
 }
