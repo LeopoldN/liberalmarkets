@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-05-11T15:30:59.671Z",
+  "generatedAt": "2026-05-12T14:43:10.391Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Trump is taking more than a dozen U.S. executives to China. Jensen Huang isn&apos;t one of them",
+      "link": "https://www.cnbc.com/2026/05/12/nvidia-ceo-huang-trump-china-trip-chip-sales.html",
+      "pubDate": "Tue, 12 May 2026 11:46:25 GMT"
+    },
+    {
+      "title": "Five things to watch in Asia as Trump prepares to meet China&apos;s Xi this week",
+      "link": "https://www.cnbc.com/2026/05/12/tump-xi-china-summit-taiwan-iran-trade.html",
+      "pubDate": "Tue, 12 May 2026 02:47:29 GMT"
+    },
+    {
+      "title": "Series of court decisions weaken Democrats&apos; odds of winning the House",
+      "link": "https://www.cnbc.com/2026/05/11/series-of-court-decisions-weaken-democrats-odds-of-winning-the-house.html",
+      "pubDate": "Mon, 11 May 2026 17:28:38 GMT"
+    },
+    {
+      "title": "JPMorgan Chase-led bank group reins in credit line to troubled KKR private credit fund as losses mount",
+      "link": "https://www.cnbc.com/2026/05/11/kkr-private-credit-fund-fsk-jpmorgan-chase-credit.html",
+      "pubDate": "Mon, 11 May 2026 19:32:25 GMT"
+    },
+    {
       "title": "Michael Burry is not a believer: &apos;For any stocks going parabolic reduce positions almost entirely&apos;",
       "link": "https://www.cnbc.com/2026/05/11/michael-burry-is-not-a-believer-for-any-stocks-going-parabolic-reduce-positions-almost-entirely.html",
-      "pubDate": "Mon, 11 May 2026 15:08:58 GMT"
+      "pubDate": "Mon, 11 May 2026 16:08:00 GMT"
     },
     {
       "title": "How much further does this Teflon market have to go? Here&apos;s what traders say",
@@ -72,26 +92,6 @@
       "title": "Anthropic CEO warns of cyber ‘moment of danger’ as AI exposes thousands of vulnerabilities",
       "link": "https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html",
       "pubDate": "Tue, 05 May 2026 19:36:16 GMT"
-    },
-    {
-      "title": "SEC advances Trump-backed proposal to end mandatory quarterly earnings reports",
-      "link": "https://www.cnbc.com/2026/05/05/sec-is-close-to-ending-mandatory-quarterly-earnings-reports-that-trump-called-for.html",
-      "pubDate": "Tue, 05 May 2026 18:05:44 GMT"
-    },
-    {
-      "title": "After Coinbase, prediction market traders forecast more tech layoffs ahead",
-      "link": "https://www.cnbc.com/2026/05/05/after-coinbase-prediction-markets-traders-see-more-tech-layoffs.html",
-      "pubDate": "Tue, 05 May 2026 16:26:27 GMT"
-    },
-    {
-      "title": "Milken-adjacent Power100 attendees aim to reclaim the DEI in finance narrative",
-      "link": "https://www.cnbc.com/2026/05/05/dei-diversity-milken-blueprint-capital-power100.html",
-      "pubDate": "Tue, 05 May 2026 11:00:01 GMT"
-    },
-    {
-      "title": "UniCredit CEO says taking control of Commerzbank ‘not the expected scenario’",
-      "link": "https://www.cnbc.com/2026/05/05/unicredit-takeover-commerzbank-ceo-control-scenario.html",
-      "pubDate": "Tue, 05 May 2026 09:19:40 GMT"
     }
   ]
 }
