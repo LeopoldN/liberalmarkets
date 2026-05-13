@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-05-12T14:43:10.391Z",
+  "generatedAt": "2026-05-13T14:53:29.637Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Jensen Huang joins Trump&apos;s China trip after the U.S. president called the Nvidia CEO",
+      "link": "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html",
+      "pubDate": "Wed, 13 May 2026 13:54:12 GMT"
+    },
+    {
+      "title": "Traders believe inflation could near 5% this year",
+      "link": "https://www.cnbc.com/2026/05/12/traders-believe-inflation-could-near-5percent-this-year.html",
+      "pubDate": "Tue, 12 May 2026 19:57:31 GMT"
+    },
     {
       "title": "Trump is taking more than a dozen U.S. executives to China. Jensen Huang isn&apos;t one of them",
       "link": "https://www.cnbc.com/2026/05/12/nvidia-ceo-huang-trump-china-trip-chip-sales.html",
@@ -82,16 +92,6 @@
       "title": "Uber and Disney are seeing the same remarkable dynamic in this economy. Both stocks are surging",
       "link": "https://www.cnbc.com/2026/05/06/uber-and-disney-are-seeing-the-same-remarkable-dynamic-in-this-economy-both-stocks-are-surging.html",
       "pubDate": "Wed, 06 May 2026 20:04:33 GMT"
-    },
-    {
-      "title": "Intel and Micron are poised to break major milestones",
-      "link": "https://www.cnbc.com/2026/05/05/intel-and-micron-are-poised-to-break-major-milestones.html",
-      "pubDate": "Tue, 05 May 2026 18:55:16 GMT"
-    },
-    {
-      "title": "Anthropic CEO warns of cyber ‘moment of danger’ as AI exposes thousands of vulnerabilities",
-      "link": "https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html",
-      "pubDate": "Tue, 05 May 2026 19:36:16 GMT"
     }
   ]
 }
