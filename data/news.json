@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-05-13T14:53:29.637Z",
+  "generatedAt": "2026-05-14T14:32:28.091Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "U.S. can hold AI talks with China because ‘we are in the lead,’ Bessent tells CNBC as nations plan safety protocol",
+      "link": "https://www.cnbc.com/2026/05/14/us-china-ai-rules-bessent-us-lead.html",
+      "pubDate": "Thu, 14 May 2026 11:02:12 GMT"
+    },
+    {
+      "title": "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in &apos;great jeopardy&apos;",
+      "link": "https://www.cnbc.com/2026/05/14/trump-xi-beijing-summit-trade-taiwan-ai-iran-rare-earths-tariffs.html",
+      "pubDate": "Thu, 14 May 2026 14:24:03 GMT"
+    },
+    {
+      "title": "Kevin Warsh wins Senate confirmation as the next Federal Reserve chair",
+      "link": "https://www.cnbc.com/2026/05/13/kevin-warsh-wins-senate-confirmation-as-the-next-federal-reserve-chair.html",
+      "pubDate": "Wed, 13 May 2026 23:21:35 GMT"
+    },
+    {
+      "title": "Trump in China: Traders predict a tariff truce extension and Boeing aircraft purchases",
+      "link": "https://www.cnbc.com/2026/05/13/traders-predict-trump-will-make-major-announcements-during-china-trip.html",
+      "pubDate": "Wed, 13 May 2026 18:13:49 GMT"
+    },
     {
       "title": "Jensen Huang joins Trump&apos;s China trip after the U.S. president called the Nvidia CEO",
       "link": "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html",
@@ -16,7 +36,7 @@
     {
       "title": "Trump is taking more than a dozen U.S. executives to China. Jensen Huang isn&apos;t one of them",
       "link": "https://www.cnbc.com/2026/05/12/nvidia-ceo-huang-trump-china-trip-chip-sales.html",
-      "pubDate": "Tue, 12 May 2026 11:46:25 GMT"
+      "pubDate": "Wed, 13 May 2026 18:19:48 GMT"
     },
     {
       "title": "Five things to watch in Asia as Trump prepares to meet China&apos;s Xi this week",
@@ -72,26 +92,6 @@
       "title": "Whirlpool says Iran war causing &apos;recession-level industry decline.&apos; The shares are down 12%",
       "link": "https://www.cnbc.com/2026/05/07/whirlpool-says-iran-war-causing-recession-level-industry-decline-the-shares-are-down-20percent.html",
       "pubDate": "Thu, 07 May 2026 21:35:53 GMT"
-    },
-    {
-      "title": "Asian Development Bank&apos;s $70 billion energy and digital infra push puts Southeast Asia center stage",
-      "link": "https://www.cnbc.com/2026/05/07/adb-70-billion-plan-southeast-asia-digital-infrastructure-power.html",
-      "pubDate": "Thu, 07 May 2026 05:47:25 GMT"
-    },
-    {
-      "title": "Goodbye quarterly earnings? Here&apos;s when traders believe this big change will happen",
-      "link": "https://www.cnbc.com/2026/05/06/kalshi-traders-confident-sec-will-end-mandatory-quarterly-earnings-reports.html",
-      "pubDate": "Wed, 06 May 2026 17:48:21 GMT"
-    },
-    {
-      "title": "Apollo CEO Rowan warns of market correction, slams &apos;egregious&apos; practices at rival insurers",
-      "link": "https://www.cnbc.com/2026/05/06/apollo-ceo-rowan-market-correction-rival-insurers.html",
-      "pubDate": "Wed, 06 May 2026 20:33:58 GMT"
-    },
-    {
-      "title": "Uber and Disney are seeing the same remarkable dynamic in this economy. Both stocks are surging",
-      "link": "https://www.cnbc.com/2026/05/06/uber-and-disney-are-seeing-the-same-remarkable-dynamic-in-this-economy-both-stocks-are-surging.html",
-      "pubDate": "Wed, 06 May 2026 20:04:33 GMT"
     }
   ]
 }
