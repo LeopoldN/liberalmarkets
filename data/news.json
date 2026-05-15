@@ -1,17 +1,47 @@
 {
-  "generatedAt": "2026-05-14T14:32:28.091Z",
+  "generatedAt": "2026-05-15T14:27:30.370Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Bill Ackman built Microsoft stake in first quarter during sell-off, betting on AI and cloud growth",
+      "link": "https://www.cnbc.com/2026/05/15/bill-ackman-says-he-built-microsoft-position-in-first-quarter.html",
+      "pubDate": "Fri, 15 May 2026 13:28:11 GMT"
+    },
+    {
+      "title": "Trump-Xi summit: The 3 big takeaways from historic meeting in Beijing",
+      "link": "https://www.cnbc.com/2026/05/15/trump-xi-summit-the-3-big-takeaways-from-historic-meeting-in-beijing.html",
+      "pubDate": "Fri, 15 May 2026 11:48:38 GMT"
+    },
+    {
+      "title": "Trump leaves China after talks dominated by trade, oil and Taiwan",
+      "link": "https://www.cnbc.com/2026/05/15/trump-wraps-up-two-day-china-trip-invites-xi-for-a-september-visit.html",
+      "pubDate": "Fri, 15 May 2026 06:46:57 GMT"
+    },
+    {
+      "title": "Fed Governor Miran submits resignation, throws support behind Warsh as new chair",
+      "link": "https://www.cnbc.com/2026/05/14/fed-governor-miran-submits-resignation-throws-support-behind-warsh-as-new-chair.html",
+      "pubDate": "Thu, 14 May 2026 21:47:36 GMT"
+    },
+    {
+      "title": "UFC&apos;s Dana White urges Trump to reverse gambling tax law. His letter moved the prediction market",
+      "link": "https://www.cnbc.com/2026/05/14/ufcs-dana-white-urges-trump-to-reverse-gambling-tax-law.html",
+      "pubDate": "Thu, 14 May 2026 18:45:00 GMT"
+    },
+    {
+      "title": "Some short sellers are seeing opportunity in this tech mania. How they&apos;re spotting fake AI stocks",
+      "link": "https://www.cnbc.com/2026/05/14/some-short-sellers-are-seeing-opportunity-in-this-tech-mania-how-theyre-spotting-fake-ai-stocks.html",
+      "pubDate": "Thu, 14 May 2026 18:35:22 GMT"
+    },
+    {
       "title": "U.S. can hold AI talks with China because ‘we are in the lead,’ Bessent tells CNBC as nations plan safety protocol",
       "link": "https://www.cnbc.com/2026/05/14/us-china-ai-rules-bessent-us-lead.html",
-      "pubDate": "Thu, 14 May 2026 11:02:12 GMT"
+      "pubDate": "Thu, 14 May 2026 14:37:08 GMT"
     },
     {
       "title": "Xi warns Trump: Mishandling Taiwan will put U.S.-China relationship in &apos;great jeopardy&apos;",
       "link": "https://www.cnbc.com/2026/05/14/trump-xi-beijing-summit-trade-taiwan-ai-iran-rare-earths-tariffs.html",
-      "pubDate": "Thu, 14 May 2026 14:24:03 GMT"
+      "pubDate": "Thu, 14 May 2026 15:09:47 GMT"
     },
     {
       "title": "Kevin Warsh wins Senate confirmation as the next Federal Reserve chair",
@@ -62,36 +92,6 @@
       "title": "How much further does this Teflon market have to go? Here&apos;s what traders say",
       "link": "https://www.cnbc.com/2026/05/08/how-much-further-can-this-teflon-market-go-heres-what-traders-say.html",
       "pubDate": "Fri, 08 May 2026 18:19:05 GMT"
-    },
-    {
-      "title": "Michael Burry says the market today feels like &apos;the last months of the 1999-2000 bubble&apos;",
-      "link": "https://www.cnbc.com/2026/05/08/michael-burry-says-the-market-today-feels-like-the-last-months-of-the-1999-2000-bubble.html",
-      "pubDate": "Fri, 08 May 2026 18:54:00 GMT"
-    },
-    {
-      "title": "Anthropic&apos;s Mythos set off a cybersecurity &apos;hysteria.&apos; Experts say the threat was already here",
-      "link": "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html",
-      "pubDate": "Fri, 08 May 2026 20:01:44 GMT"
-    },
-    {
-      "title": "Iran focus at Trump-Xi summit may delay progress on tariffs, rare earths",
-      "link": "https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html",
-      "pubDate": "Fri, 08 May 2026 18:44:26 GMT"
-    },
-    {
-      "title": "Kalshi traders see odds rising that a U.S.-Iran nuclear deal will be reached by 2027",
-      "link": "https://www.cnbc.com/2026/05/07/kalshi-traders-see-odds-rising-that-a-us-iran-nuclear-deal-will-be-reached-by-2027.html",
-      "pubDate": "Thu, 07 May 2026 16:48:36 GMT"
-    },
-    {
-      "title": "Ryan Cohen&apos;s mysterious bank letter backing GameStop&apos;s eBay bid reveals a big issue with deal",
-      "link": "https://www.cnbc.com/2026/05/07/ryan-cohens-mysterious-bank-letter-backing-his-ebay-bid-reveals-a-big-issue.html",
-      "pubDate": "Thu, 07 May 2026 16:55:23 GMT"
-    },
-    {
-      "title": "Whirlpool says Iran war causing &apos;recession-level industry decline.&apos; The shares are down 12%",
-      "link": "https://www.cnbc.com/2026/05/07/whirlpool-says-iran-war-causing-recession-level-industry-decline-the-shares-are-down-20percent.html",
-      "pubDate": "Thu, 07 May 2026 21:35:53 GMT"
     }
   ]
 }
