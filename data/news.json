@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-05-15T14:27:30.370Z",
+  "generatedAt": "2026-05-16T13:49:31.821Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Why Taiwan became the defining issue in the Trump-Xi talks",
+      "link": "https://www.cnbc.com/2026/05/16/trumps-meeting-with-chinas-xi-steers-the-us-away-from-taiwan-again.html",
+      "pubDate": "Sat, 16 May 2026 08:26:02 GMT"
+    },
+    {
+      "title": "Berkshire Hathaway returns to airlines with $2.6 billion stake in Delta Air Lines",
+      "link": "https://www.cnbc.com/2026/05/15/berkshire-hathaway-returns-to-airlines-with-2point6-billion-stake-in-delta-air-lines.html",
+      "pubDate": "Fri, 15 May 2026 20:50:03 GMT"
+    },
+    {
+      "title": "&apos;Biggest bottleneck in the AI buildup&apos; fuels DRAM ETF to record",
+      "link": "https://www.cnbc.com/2026/05/15/biggest-bottleneck-in-the-ai-buildup-fuels-dram-etf-to-record.html",
+      "pubDate": "Fri, 15 May 2026 17:02:06 GMT"
+    },
+    {
+      "title": "NFL wants certain trading contracts banned from prediction markets like &apos;first play of game,&apos; injuries",
+      "link": "https://www.cnbc.com/2026/05/15/prediction-markets-nfl-letter-wants-certain-betting-contracts-banned.html",
+      "pubDate": "Fri, 15 May 2026 16:27:26 GMT"
+    },
+    {
+      "title": "Stephen Miran exits the Fed. How he set the stage for Kevin Warsh.",
+      "link": "https://www.cnbc.com/2026/05/15/stephen-miran-exits-the-fed-how-he-set-the-stage-for-kevin-warsh.html",
+      "pubDate": "Fri, 15 May 2026 19:00:19 GMT"
+    },
+    {
       "title": "Bill Ackman built Microsoft stake in first quarter during sell-off, betting on AI and cloud growth",
       "link": "https://www.cnbc.com/2026/05/15/bill-ackman-says-he-built-microsoft-position-in-first-quarter.html",
-      "pubDate": "Fri, 15 May 2026 13:28:11 GMT"
+      "pubDate": "Sat, 16 May 2026 09:54:15 GMT"
     },
     {
       "title": "Trump-Xi summit: The 3 big takeaways from historic meeting in Beijing",
@@ -67,31 +92,6 @@
       "title": "Trump is taking more than a dozen U.S. executives to China. Jensen Huang isn&apos;t one of them",
       "link": "https://www.cnbc.com/2026/05/12/nvidia-ceo-huang-trump-china-trip-chip-sales.html",
       "pubDate": "Wed, 13 May 2026 18:19:48 GMT"
-    },
-    {
-      "title": "Five things to watch in Asia as Trump prepares to meet China&apos;s Xi this week",
-      "link": "https://www.cnbc.com/2026/05/12/tump-xi-china-summit-taiwan-iran-trade.html",
-      "pubDate": "Tue, 12 May 2026 02:47:29 GMT"
-    },
-    {
-      "title": "Series of court decisions weaken Democrats&apos; odds of winning the House",
-      "link": "https://www.cnbc.com/2026/05/11/series-of-court-decisions-weaken-democrats-odds-of-winning-the-house.html",
-      "pubDate": "Mon, 11 May 2026 17:28:38 GMT"
-    },
-    {
-      "title": "JPMorgan Chase-led bank group reins in credit line to troubled KKR private credit fund as losses mount",
-      "link": "https://www.cnbc.com/2026/05/11/kkr-private-credit-fund-fsk-jpmorgan-chase-credit.html",
-      "pubDate": "Mon, 11 May 2026 19:32:25 GMT"
-    },
-    {
-      "title": "Michael Burry is not a believer: &apos;For any stocks going parabolic reduce positions almost entirely&apos;",
-      "link": "https://www.cnbc.com/2026/05/11/michael-burry-is-not-a-believer-for-any-stocks-going-parabolic-reduce-positions-almost-entirely.html",
-      "pubDate": "Mon, 11 May 2026 16:08:00 GMT"
-    },
-    {
-      "title": "How much further does this Teflon market have to go? Here&apos;s what traders say",
-      "link": "https://www.cnbc.com/2026/05/08/how-much-further-can-this-teflon-market-go-heres-what-traders-say.html",
-      "pubDate": "Fri, 08 May 2026 18:19:05 GMT"
     }
   ]
 }
