@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-05-16T13:49:31.821Z",
+  "generatedAt": "2026-05-17T13:50:12.152Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "AI-related layoffs a boost for stocks? Not necessarily",
+      "link": "https://www.cnbc.com/2026/05/17/ai-related-layoffs-a-boost-for-stocks-not-necessarily.html",
+      "pubDate": "Sun, 17 May 2026 13:36:59 GMT"
+    },
+    {
+      "title": "Kevin Warsh comes into the Fed facing a big &apos;family fight&apos; over cutting interest rates",
+      "link": "https://www.cnbc.com/2026/05/16/kevin-warsh-comes-into-the-fed-facing-a-big-family-fight-over-cutting-interest-rates.html",
+      "pubDate": "Sat, 16 May 2026 13:41:29 GMT"
+    },
     {
       "title": "Why Taiwan became the defining issue in the Trump-Xi talks",
       "link": "https://www.cnbc.com/2026/05/16/trumps-meeting-with-chinas-xi-steers-the-us-away-from-taiwan-again.html",
@@ -82,16 +92,6 @@
       "title": "Jensen Huang joins Trump&apos;s China trip after the U.S. president called the Nvidia CEO",
       "link": "https://www.cnbc.com/2026/05/13/nvidia-says-ceo-jensen-huang-is-joining-trumps-china-trip.html",
       "pubDate": "Wed, 13 May 2026 13:54:12 GMT"
-    },
-    {
-      "title": "Traders believe inflation could near 5% this year",
-      "link": "https://www.cnbc.com/2026/05/12/traders-believe-inflation-could-near-5percent-this-year.html",
-      "pubDate": "Tue, 12 May 2026 19:57:31 GMT"
-    },
-    {
-      "title": "Trump is taking more than a dozen U.S. executives to China. Jensen Huang isn&apos;t one of them",
-      "link": "https://www.cnbc.com/2026/05/12/nvidia-ceo-huang-trump-china-trip-chip-sales.html",
-      "pubDate": "Wed, 13 May 2026 18:19:48 GMT"
     }
   ]
 }
