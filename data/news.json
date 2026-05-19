@@ -1,17 +1,32 @@
 {
-  "generatedAt": "2026-05-18T15:51:16.362Z",
+  "generatedAt": "2026-05-19T15:42:52.824Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Standard Chartered to cut over 15% of corporate functions roles as it targets higher returns",
+      "link": "https://www.cnbc.com/2026/05/19/standard-chartered-job-cuts-corporate-roles-profit-targets.html",
+      "pubDate": "Tue, 19 May 2026 04:40:25 GMT"
+    },
+    {
+      "title": "Nvidia earnings call drama: Will Jensen Huang talk &apos;Trump&apos; and China chips after Xi summit?",
+      "link": "https://www.cnbc.com/2026/05/18/nvidia-earnings-call-drama-will-jensen-huang-talk-trump-and-china-chips-after-xi-summit.html",
+      "pubDate": "Mon, 18 May 2026 17:18:54 GMT"
+    },
+    {
+      "title": "Warren Buffett teased to CNBC a ‘tiny purchase’ in March. Berkshire filing may have revealed it",
+      "link": "https://www.cnbc.com/2026/05/18/warren-buffett-teased-to-cnbc-a-tiny-purchase-in-march-berkshire-filing-may-have-revealed-it.html",
+      "pubDate": "Mon, 18 May 2026 17:59:42 GMT"
+    },
+    {
       "title": "JPMorgan&apos;s summer reading list for the wealthy includes books on AI, leadership and lemons",
       "link": "https://www.cnbc.com/2026/05/18/jpmorgan-summer-reading-list.html",
-      "pubDate": "Mon, 18 May 2026 13:00:01 GMT"
+      "pubDate": "Mon, 18 May 2026 16:50:38 GMT"
     },
     {
       "title": "Berkshire Hathaway has revamped its portfolio — Here&apos;s how the new stocks are trading",
       "link": "https://www.cnbc.com/2026/05/18/berkshire-portfolio-revamp-delta-airlines-macys-unitedhealth.html",
-      "pubDate": "Mon, 18 May 2026 15:29:50 GMT"
+      "pubDate": "Mon, 18 May 2026 19:18:13 GMT"
     },
     {
       "title": "White House touts deals on soybeans and rare earths after Trump-Xi summit, while China talks up tariff cuts",
@@ -21,7 +36,7 @@
     {
       "title": "One of the market&apos;s hottest stock themes is buying everything AI can&apos;t replace",
       "link": "https://www.cnbc.com/2026/05/17/ai-stock-market-trade-halo-investing.html",
-      "pubDate": "Sun, 17 May 2026 14:21:26 GMT"
+      "pubDate": "Mon, 18 May 2026 17:28:03 GMT"
     },
     {
       "title": "AI-related layoffs a boost for stocks? Not necessarily",
@@ -77,21 +92,6 @@
       "title": "Fed Governor Miran submits resignation, throws support behind Warsh as new chair",
       "link": "https://www.cnbc.com/2026/05/14/fed-governor-miran-submits-resignation-throws-support-behind-warsh-as-new-chair.html",
       "pubDate": "Thu, 14 May 2026 21:47:36 GMT"
-    },
-    {
-      "title": "UFC&apos;s Dana White urges Trump to reverse gambling tax law. His letter moved the prediction market",
-      "link": "https://www.cnbc.com/2026/05/14/ufcs-dana-white-urges-trump-to-reverse-gambling-tax-law.html",
-      "pubDate": "Thu, 14 May 2026 18:45:00 GMT"
-    },
-    {
-      "title": "Some short sellers are seeing opportunity in this tech mania. How they&apos;re spotting fake AI stocks",
-      "link": "https://www.cnbc.com/2026/05/14/some-short-sellers-are-seeing-opportunity-in-this-tech-mania-how-theyre-spotting-fake-ai-stocks.html",
-      "pubDate": "Thu, 14 May 2026 18:35:22 GMT"
-    },
-    {
-      "title": "U.S. can hold AI talks with China because ‘we are in the lead,’ Bessent tells CNBC as nations plan safety protocol",
-      "link": "https://www.cnbc.com/2026/05/14/us-china-ai-rules-bessent-us-lead.html",
-      "pubDate": "Thu, 14 May 2026 14:37:08 GMT"
     }
   ]
 }
