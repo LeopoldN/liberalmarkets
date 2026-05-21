@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-05-20T15:49:43.262Z",
+  "generatedAt": "2026-05-21T15:47:10.670Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Retail investors get direct access to SpaceX IPO through major brokerage platforms",
+      "link": "https://www.cnbc.com/2026/05/21/retail-investors-get-direct-access-to-spacex-ipo-through-major-brokerage-platforms.html",
+      "pubDate": "Thu, 21 May 2026 12:16:28 GMT"
+    },
+    {
+      "title": "Japan’s megabanks post record profits, but analysts warn growth may slow as risks mount",
+      "link": "https://www.cnbc.com/2026/05/21/japan-megabanks-profits-growth-risks-sumitomo-mitsui-mizuho-mitsubishi-ufj.html",
+      "pubDate": "Thu, 21 May 2026 06:35:46 GMT"
+    },
+    {
+      "title": "OpenAI takes the lead in AI IPO horse race: &apos;Getting to public markets first is very important&apos;",
+      "link": "https://www.cnbc.com/2026/05/20/openai-takes-the-lead-in-ai-ipo-horse-race-getting-to-public-markets-first-is-very-important.html",
+      "pubDate": "Wed, 20 May 2026 19:05:35 GMT"
+    },
+    {
+      "title": "Fed officials see rate hike ahead if inflation stays elevated, minutes show",
+      "link": "https://www.cnbc.com/2026/05/20/fed-officials-see-rate-hike-ahead-if-inflation-stays-elevated-minutes-show.html",
+      "pubDate": "Wed, 20 May 2026 19:04:09 GMT"
+    },
+    {
       "title": "Fintech firm Mercury hits $5.2 billion valuation after funding round, up 49% in 14 months",
       "link": "https://www.cnbc.com/2026/05/20/fintech-mercury-valuation-fundraise-bank-charter.html",
-      "pubDate": "Wed, 20 May 2026 14:00:01 GMT"
+      "pubDate": "Wed, 20 May 2026 15:57:55 GMT"
     },
     {
       "title": "China confirms order for 200 Boeing planes, calls aviation key area for U.S. cooperation",
@@ -31,7 +51,7 @@
     {
       "title": "Nvidia earnings call drama: Will Jensen Huang talk &apos;Trump&apos; and China chips after Xi summit?",
       "link": "https://www.cnbc.com/2026/05/18/nvidia-earnings-call-drama-will-jensen-huang-talk-trump-and-china-chips-after-xi-summit.html",
-      "pubDate": "Mon, 18 May 2026 17:18:54 GMT"
+      "pubDate": "Wed, 20 May 2026 18:26:47 GMT"
     },
     {
       "title": "Warren Buffett teased to CNBC a ‘tiny purchase’ in March. Berkshire filing may have revealed it",
@@ -72,26 +92,6 @@
       "title": "Why Taiwan became the defining issue in the Trump-Xi talks",
       "link": "https://www.cnbc.com/2026/05/16/trumps-meeting-with-chinas-xi-steers-the-us-away-from-taiwan-again.html",
       "pubDate": "Sat, 16 May 2026 08:26:02 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway returns to airlines with $2.6 billion stake in Delta Air Lines",
-      "link": "https://www.cnbc.com/2026/05/15/berkshire-hathaway-returns-to-airlines-with-2point6-billion-stake-in-delta-air-lines.html",
-      "pubDate": "Fri, 15 May 2026 20:50:03 GMT"
-    },
-    {
-      "title": "&apos;Biggest bottleneck in the AI buildup&apos; fuels DRAM ETF to record",
-      "link": "https://www.cnbc.com/2026/05/15/biggest-bottleneck-in-the-ai-buildup-fuels-dram-etf-to-record.html",
-      "pubDate": "Fri, 15 May 2026 17:02:06 GMT"
-    },
-    {
-      "title": "NFL wants certain trading contracts banned from prediction markets like &apos;first play of game,&apos; injuries",
-      "link": "https://www.cnbc.com/2026/05/15/prediction-markets-nfl-letter-wants-certain-betting-contracts-banned.html",
-      "pubDate": "Fri, 15 May 2026 16:27:26 GMT"
-    },
-    {
-      "title": "Stephen Miran exits the Fed. How he set the stage for Kevin Warsh.",
-      "link": "https://www.cnbc.com/2026/05/15/stephen-miran-exits-the-fed-how-he-set-the-stage-for-kevin-warsh.html",
-      "pubDate": "Fri, 15 May 2026 19:00:19 GMT"
     }
   ]
 }
