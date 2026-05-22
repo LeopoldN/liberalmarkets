@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-05-21T15:47:10.670Z",
+  "generatedAt": "2026-05-22T14:56:06.603Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "U.S. pushes its AI in China and Asia after Trump-Xi meeting",
+      "link": "https://www.cnbc.com/2026/05/22/us-china-ai-apec-asia.html",
+      "pubDate": "Fri, 22 May 2026 11:45:23 GMT"
+    },
+    {
+      "title": "China calls for APEC cooperation as commerce minister skips opening over ‘urgent official business’",
+      "link": "https://www.cnbc.com/2026/05/22/china-apec-trade-meeting-li-chenggang-cooperation-us-china-deals.html",
+      "pubDate": "Fri, 22 May 2026 10:14:21 GMT"
+    },
+    {
+      "title": "Miner Perpetua Resources secures $2.9 billion U.S. loan for Idaho gold, antimony project",
+      "link": "https://www.cnbc.com/2026/05/21/miner-perpetua-resources-secures-2point9-billion-us-loan-for-idaho-gold-antimony-project.html",
+      "pubDate": "Thu, 21 May 2026 23:57:30 GMT"
+    },
+    {
+      "title": "Prediction markets are fueling a high-stakes brawl between states and federal regulators",
+      "link": "https://www.cnbc.com/2026/05/21/where-the-feds-are-fighting-states-over-prediction-markets.html",
+      "pubDate": "Thu, 21 May 2026 20:11:34 GMT"
+    },
+    {
+      "title": "SpaceX, OpenAI valuations could mean they leapfrog Berkshire Hathaway on first day of trading",
+      "link": "https://www.cnbc.com/2026/05/21/spacex-openai-valuations-to-leapfrog-berkshire-hathaway-traders-say.html",
+      "pubDate": "Thu, 21 May 2026 20:28:40 GMT"
+    },
+    {
       "title": "Retail investors get direct access to SpaceX IPO through major brokerage platforms",
       "link": "https://www.cnbc.com/2026/05/21/retail-investors-get-direct-access-to-spacex-ipo-through-major-brokerage-platforms.html",
-      "pubDate": "Thu, 21 May 2026 12:16:28 GMT"
+      "pubDate": "Thu, 21 May 2026 19:40:31 GMT"
     },
     {
       "title": "Japan’s megabanks post record profits, but analysts warn growth may slow as risks mount",
@@ -67,31 +92,6 @@
       "title": "Berkshire Hathaway has revamped its portfolio — Here&apos;s how the new stocks are trading",
       "link": "https://www.cnbc.com/2026/05/18/berkshire-portfolio-revamp-delta-airlines-macys-unitedhealth.html",
       "pubDate": "Mon, 18 May 2026 19:18:13 GMT"
-    },
-    {
-      "title": "White House touts deals on soybeans and rare earths after Trump-Xi summit, while China talks up tariff cuts",
-      "link": "https://www.cnbc.com/2026/05/18/us-china-announce-deals-after-trump-xi-summit.html",
-      "pubDate": "Mon, 18 May 2026 04:58:00 GMT"
-    },
-    {
-      "title": "One of the market&apos;s hottest stock themes is buying everything AI can&apos;t replace",
-      "link": "https://www.cnbc.com/2026/05/17/ai-stock-market-trade-halo-investing.html",
-      "pubDate": "Mon, 18 May 2026 17:28:03 GMT"
-    },
-    {
-      "title": "AI-related layoffs a boost for stocks? Not necessarily",
-      "link": "https://www.cnbc.com/2026/05/17/ai-related-layoffs-a-boost-for-stocks-not-necessarily.html",
-      "pubDate": "Sun, 17 May 2026 13:36:59 GMT"
-    },
-    {
-      "title": "Kevin Warsh comes into the Fed facing a big &apos;family fight&apos; over cutting interest rates",
-      "link": "https://www.cnbc.com/2026/05/16/kevin-warsh-comes-into-the-fed-facing-a-big-family-fight-over-cutting-interest-rates.html",
-      "pubDate": "Sat, 16 May 2026 13:41:29 GMT"
-    },
-    {
-      "title": "Why Taiwan became the defining issue in the Trump-Xi talks",
-      "link": "https://www.cnbc.com/2026/05/16/trumps-meeting-with-chinas-xi-steers-the-us-away-from-taiwan-again.html",
-      "pubDate": "Sat, 16 May 2026 08:26:02 GMT"
     }
   ]
 }
