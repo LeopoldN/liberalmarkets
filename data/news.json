@@ -1,8 +1,43 @@
 {
-  "generatedAt": "2026-05-26T16:01:30.573Z",
+  "generatedAt": "2026-05-27T16:04:24.176Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Jamie Dimon says JPMorgan Chase could spend $20 billion on acquisition: &apos;We are on the lookout&apos;",
+      "link": "https://www.cnbc.com/2026/05/27/jamie-dimon-jpmorgan-chase-acquisition-target-size.html",
+      "pubDate": "Wed, 27 May 2026 15:51:16 GMT"
+    },
+    {
+      "title": "Your AI agent can now trade for you on Robinhood. And buy stuff with your credit card too",
+      "link": "https://www.cnbc.com/2026/05/27/your-ai-agent-can-now-trade-for-you-on-robinhood-and-buy-stuff-with-your-credit-card-too.html",
+      "pubDate": "Wed, 27 May 2026 13:11:43 GMT"
+    },
+    {
+      "title": "Taiwan chip stocks climb after Nvidia announces $150 billion spending plans",
+      "link": "https://www.cnbc.com/2026/05/27/nvidia-taiwan-investment-150-billion-spending.html",
+      "pubDate": "Wed, 27 May 2026 09:41:14 GMT"
+    },
+    {
+      "title": "China industrial profits jump 24.7% in April, fastest gain in over two years despite headwinds",
+      "link": "https://www.cnbc.com/2026/05/27/china-april-industrial-profits-growth.html",
+      "pubDate": "Wed, 27 May 2026 03:20:15 GMT"
+    },
+    {
+      "title": "European companies double down on China manufacturing despite EU de-risking push",
+      "link": "https://www.cnbc.com/2026/05/27/european-companies-expand-china-supply-chains-automation-costs.html",
+      "pubDate": "Wed, 27 May 2026 04:49:15 GMT"
+    },
+    {
+      "title": "Piper Sandler says Strait of Hormuz to remain closed for months and oil to hit new highs",
+      "link": "https://www.cnbc.com/2026/05/26/piper-sandler-says-strait-of-hormuz-to-remain-closed-for-months-and-oil-to-hit-new-highs.html",
+      "pubDate": "Wed, 27 May 2026 14:05:08 GMT"
+    },
+    {
+      "title": "Pope Leo is concerned about AI replacing human work. Traders share his concern long term",
+      "link": "https://www.cnbc.com/2026/05/26/traders-share-pope-leos-worries-on-ais-job-market-impact.html",
+      "pubDate": "Tue, 26 May 2026 19:31:51 GMT"
+    },
     {
       "title": "Huawei plans new smartphone chips this fall as rivalry with Nvidia and Apple heats up",
       "link": "https://www.cnbc.com/2026/05/25/huawei-chip-logicfolding-semiconductor-nvidia-china.html",
@@ -57,41 +92,6 @@
       "title": "SpaceX, OpenAI valuations could mean they leapfrog Berkshire Hathaway on first day of trading",
       "link": "https://www.cnbc.com/2026/05/21/spacex-openai-valuations-to-leapfrog-berkshire-hathaway-traders-say.html",
       "pubDate": "Thu, 21 May 2026 20:28:40 GMT"
-    },
-    {
-      "title": "Retail investors get direct access to SpaceX IPO through major brokerage platforms",
-      "link": "https://www.cnbc.com/2026/05/21/retail-investors-get-direct-access-to-spacex-ipo-through-major-brokerage-platforms.html",
-      "pubDate": "Thu, 21 May 2026 19:40:31 GMT"
-    },
-    {
-      "title": "Japan’s megabanks post record profits, but analysts warn growth may slow as risks mount",
-      "link": "https://www.cnbc.com/2026/05/21/japan-megabanks-profits-growth-risks-sumitomo-mitsui-mizuho-mitsubishi-ufj.html",
-      "pubDate": "Thu, 21 May 2026 06:35:46 GMT"
-    },
-    {
-      "title": "OpenAI takes the lead in AI IPO horse race: &apos;Getting to public markets first is very important&apos;",
-      "link": "https://www.cnbc.com/2026/05/20/openai-takes-the-lead-in-ai-ipo-horse-race-getting-to-public-markets-first-is-very-important.html",
-      "pubDate": "Wed, 20 May 2026 19:05:35 GMT"
-    },
-    {
-      "title": "Fed officials see rate hike ahead if inflation stays elevated, minutes show",
-      "link": "https://www.cnbc.com/2026/05/20/fed-officials-see-rate-hike-ahead-if-inflation-stays-elevated-minutes-show.html",
-      "pubDate": "Wed, 20 May 2026 19:04:09 GMT"
-    },
-    {
-      "title": "Fintech firm Mercury hits $5.2 billion valuation after funding round, up 49% in 14 months",
-      "link": "https://www.cnbc.com/2026/05/20/fintech-mercury-valuation-fundraise-bank-charter.html",
-      "pubDate": "Wed, 20 May 2026 15:57:55 GMT"
-    },
-    {
-      "title": "China confirms order for 200 Boeing planes, calls aviation key area for U.S. cooperation",
-      "link": "https://www.cnbc.com/2026/05/20/china-confirms-200-boeing-aircraft-order.html",
-      "pubDate": "Wed, 20 May 2026 05:22:20 GMT"
-    },
-    {
-      "title": "Alibaba reveals more powerful Zhenwu AI chip, new LLM",
-      "link": "https://www.cnbc.com/2026/05/19/alibaba-reveals-more-powerful-zhenwu-ai-chip-new-llm.html",
-      "pubDate": "Wed, 20 May 2026 07:00:48 GMT"
     }
   ]
 }
