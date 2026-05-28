@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-05-27T16:04:24.176Z",
+  "generatedAt": "2026-05-28T16:19:27.956Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Gaming association says states have lost $1 billion in tax revenue due to prediction markets",
+      "link": "https://www.cnbc.com/2026/05/28/states-have-lost-1-billion-due-to-prediction-markets-gaming-association.html",
+      "pubDate": "Thu, 28 May 2026 15:52:02 GMT"
+    },
+    {
+      "title": "Nio shares jump 10% after releasing first flagship EV in more than two years",
+      "link": "https://www.cnbc.com/2026/05/28/nio-surges-9percent-after-releasing-first-flagship-ev-in-more-than-two-years.html",
+      "pubDate": "Thu, 28 May 2026 09:42:06 GMT"
+    },
+    {
+      "title": "Google employee charged with $1M Polymarket insider trading bet on search term",
+      "link": "https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
+      "pubDate": "Thu, 28 May 2026 00:52:00 GMT"
+    },
+    {
+      "title": "Traders are skeptical of Iran timeline for Strait of Hormuz reopening",
+      "link": "https://www.cnbc.com/2026/05/27/traders-are-skeptical-of-iran-timeline-for-strait-of-hormuz-reopening.html",
+      "pubDate": "Wed, 27 May 2026 22:18:07 GMT"
+    },
     {
       "title": "Jamie Dimon says JPMorgan Chase could spend $20 billion on acquisition: &apos;We are on the lookout&apos;",
       "link": "https://www.cnbc.com/2026/05/27/jamie-dimon-jpmorgan-chase-acquisition-target-size.html",
@@ -72,26 +92,6 @@
       "title": "U.S. pushes its AI in China and Asia after Trump-Xi meeting",
       "link": "https://www.cnbc.com/2026/05/22/us-china-ai-apec-asia.html",
       "pubDate": "Fri, 22 May 2026 11:45:23 GMT"
-    },
-    {
-      "title": "China calls for APEC cooperation as commerce minister skips opening over ‘urgent official business’",
-      "link": "https://www.cnbc.com/2026/05/22/china-apec-trade-meeting-li-chenggang-cooperation-us-china-deals.html",
-      "pubDate": "Fri, 22 May 2026 10:14:21 GMT"
-    },
-    {
-      "title": "Miner Perpetua Resources secures $2.9 billion U.S. loan for Idaho gold, antimony project",
-      "link": "https://www.cnbc.com/2026/05/21/miner-perpetua-resources-secures-2point9-billion-us-loan-for-idaho-gold-antimony-project.html",
-      "pubDate": "Thu, 21 May 2026 23:57:30 GMT"
-    },
-    {
-      "title": "Prediction markets are fueling a high-stakes brawl between states and federal regulators",
-      "link": "https://www.cnbc.com/2026/05/21/where-the-feds-are-fighting-states-over-prediction-markets.html",
-      "pubDate": "Thu, 21 May 2026 20:11:34 GMT"
-    },
-    {
-      "title": "SpaceX, OpenAI valuations could mean they leapfrog Berkshire Hathaway on first day of trading",
-      "link": "https://www.cnbc.com/2026/05/21/spacex-openai-valuations-to-leapfrog-berkshire-hathaway-traders-say.html",
-      "pubDate": "Thu, 21 May 2026 20:28:40 GMT"
     }
   ]
 }
