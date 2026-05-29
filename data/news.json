@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-05-28T16:19:27.956Z",
+  "generatedAt": "2026-05-29T16:02:30.053Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike",
+      "link": "https://www.cnbc.com/2026/05/29/feds-bowman-warns-against-hiking-interest-rates-due-to-inflation-spike.html",
+      "pubDate": "Fri, 29 May 2026 14:06:12 GMT"
+    },
+    {
+      "title": "CFTC sues Rhode Island over actions against prediction markets",
+      "link": "https://www.cnbc.com/2026/05/28/cftc-sues-rhode-island-over-actions-against-prediction-markets.html",
+      "pubDate": "Thu, 28 May 2026 19:57:39 GMT"
+    },
+    {
       "title": "Gaming association says states have lost $1 billion in tax revenue due to prediction markets",
       "link": "https://www.cnbc.com/2026/05/28/states-have-lost-1-billion-due-to-prediction-markets-gaming-association.html",
-      "pubDate": "Thu, 28 May 2026 15:52:02 GMT"
+      "pubDate": "Thu, 28 May 2026 16:51:57 GMT"
     },
     {
       "title": "Nio shares jump 10% after releasing first flagship EV in more than two years",
@@ -82,16 +92,6 @@
       "title": "Despite murky legal landscape, companies are undeterred in their prediction market investments",
       "link": "https://www.cnbc.com/2026/05/22/companies-keep-investing-in-prediction-markets-despite-legal-battle.html",
       "pubDate": "Fri, 22 May 2026 15:14:52 GMT"
-    },
-    {
-      "title": "Surge in &apos;risk-free&apos; treasury yields sends bond investors in search of better opportunities",
-      "link": "https://www.cnbc.com/2026/05/22/treasury-yields-bonds-investing-fed-rate-hikes.html",
-      "pubDate": "Fri, 22 May 2026 15:18:46 GMT"
-    },
-    {
-      "title": "U.S. pushes its AI in China and Asia after Trump-Xi meeting",
-      "link": "https://www.cnbc.com/2026/05/22/us-china-ai-apec-asia.html",
-      "pubDate": "Fri, 22 May 2026 11:45:23 GMT"
     }
   ]
 }
