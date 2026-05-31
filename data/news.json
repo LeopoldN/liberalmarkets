@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-05-30T13:58:26.640Z",
+  "generatedAt": "2026-05-31T14:04:09.028Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Two months, $2.6 billion: How NASA ETF turned SpaceX IPO access into a hot retail trade",
+      "link": "https://www.cnbc.com/2026/05/30/spacex-ipo-invest.html",
+      "pubDate": "Sat, 30 May 2026 15:33:42 GMT"
+    },
     {
       "title": "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike",
       "link": "https://www.cnbc.com/2026/05/29/feds-bowman-warns-against-hiking-interest-rates-due-to-inflation-spike.html",
@@ -87,11 +92,6 @@
       "title": "Which company will the U.S. government take a stake in next? Here’s what traders think",
       "link": "https://www.cnbc.com/2026/05/22/which-company-will-the-us-government-take-a-stake-in-next.html",
       "pubDate": "Fri, 22 May 2026 15:29:39 GMT"
-    },
-    {
-      "title": "Despite murky legal landscape, companies are undeterred in their prediction market investments",
-      "link": "https://www.cnbc.com/2026/05/22/companies-keep-investing-in-prediction-markets-despite-legal-battle.html",
-      "pubDate": "Fri, 22 May 2026 15:14:52 GMT"
     }
   ]
 }
