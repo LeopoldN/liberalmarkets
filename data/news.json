@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-05-31T14:04:09.028Z",
+  "generatedAt": "2026-06-01T18:12:46.061Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Greg Abel just made his first big deal as Berkshire CEO. Why Warren Buffett is happy",
+      "link": "https://www.cnbc.com/2026/06/01/greg-abel-just-made-his-first-big-deal-as-berkshire-ceo-why-warren-buffett-is-happy.html",
+      "pubDate": "Mon, 01 Jun 2026 17:46:28 GMT"
+    },
+    {
+      "title": "Individual traders drove Kalshi’s rise. Now, it’s going for Wall Street",
+      "link": "https://www.cnbc.com/2026/06/01/individual-traders-drove-kalshis-rise-now-its-going-for-wall-street.html",
+      "pubDate": "Mon, 01 Jun 2026 15:22:09 GMT"
+    },
+    {
+      "title": "Rubio odds for GOP 2028 nominee close to overtaking Vance on Kalshi",
+      "link": "https://www.cnbc.com/2026/06/01/rubio-odds-for-gop-2028-nominee-close-to-overtaking-vance-on-kalshi.html",
+      "pubDate": "Mon, 01 Jun 2026 15:03:17 GMT"
+    },
+    {
+      "title": "&apos;Disrupted or dead&apos;: AI is crushing a generation of startups built before ChatGPT",
+      "link": "https://www.cnbc.com/2026/06/01/ai-startup-valuations-pre-chatgpt.html",
+      "pubDate": "Mon, 01 Jun 2026 15:37:30 GMT"
+    },
+    {
+      "title": "Nvidia, Meta and SLB rank among top companies in adopting AI, new study says",
+      "link": "https://www.cnbc.com/2026/06/01/nvidia-meta-walmart-among-top-companies-adopting-ai.html",
+      "pubDate": "Mon, 01 Jun 2026 17:58:25 GMT"
+    },
+    {
+      "title": "Nvidia picks Unitree for humanoid robot platform as Chinese startup eyes IPO",
+      "link": "https://www.cnbc.com/2026/06/01/nvidia-unitree-humanoid-robotics-system-researchers.html",
+      "pubDate": "Mon, 01 Jun 2026 05:45:45 GMT"
+    },
+    {
+      "title": "China’s factory activity beats forecasts in May, private survey shows, despite softer official data",
+      "link": "https://www.cnbc.com/2026/06/01/chinas-factory-activity-beats-forecasts-in-may-private-survey-shows-despite-softer-official-data.html",
+      "pubDate": "Mon, 01 Jun 2026 14:27:11 GMT"
+    },
+    {
+      "title": "Berkshire Hathaway buys Taylor Morrison for $6.8 billion. Buffett touts Abel’s deal-making",
+      "link": "https://www.cnbc.com/2026/06/01/berkshire-hathaway-taylor-morrison-home-acquisition-housing-market.html",
+      "pubDate": "Mon, 01 Jun 2026 14:27:32 GMT"
+    },
+    {
+      "title": "Former Barclays CEO Jes Staley agrees to July 23 interview about Jeffrey Epstein by Oversight panel",
+      "link": "https://www.cnbc.com/2026/05/31/jes-staley-jeffrey-epstein-interview-house-jpmorgan-chase-barclays.html",
+      "pubDate": "Sun, 31 May 2026 15:53:27 GMT"
+    },
     {
       "title": "Two months, $2.6 billion: How NASA ETF turned SpaceX IPO access into a hot retail trade",
       "link": "https://www.cnbc.com/2026/05/30/spacex-ipo-invest.html",
@@ -47,51 +92,6 @@
       "title": "Your AI agent can now trade for you on Robinhood. And buy stuff with your credit card too",
       "link": "https://www.cnbc.com/2026/05/27/your-ai-agent-can-now-trade-for-you-on-robinhood-and-buy-stuff-with-your-credit-card-too.html",
       "pubDate": "Wed, 27 May 2026 13:11:43 GMT"
-    },
-    {
-      "title": "Taiwan chip stocks climb after Nvidia announces $150 billion spending plans",
-      "link": "https://www.cnbc.com/2026/05/27/nvidia-taiwan-investment-150-billion-spending.html",
-      "pubDate": "Wed, 27 May 2026 09:41:14 GMT"
-    },
-    {
-      "title": "China industrial profits jump 24.7% in April, fastest gain in over two years despite headwinds",
-      "link": "https://www.cnbc.com/2026/05/27/china-april-industrial-profits-growth.html",
-      "pubDate": "Wed, 27 May 2026 03:20:15 GMT"
-    },
-    {
-      "title": "European companies double down on China manufacturing despite EU de-risking push",
-      "link": "https://www.cnbc.com/2026/05/27/european-companies-expand-china-supply-chains-automation-costs.html",
-      "pubDate": "Wed, 27 May 2026 04:49:15 GMT"
-    },
-    {
-      "title": "Piper Sandler says Strait of Hormuz to remain closed for months and oil to hit new highs",
-      "link": "https://www.cnbc.com/2026/05/26/piper-sandler-says-strait-of-hormuz-to-remain-closed-for-months-and-oil-to-hit-new-highs.html",
-      "pubDate": "Wed, 27 May 2026 14:05:08 GMT"
-    },
-    {
-      "title": "Pope Leo is concerned about AI replacing human work. Traders share his concern long term",
-      "link": "https://www.cnbc.com/2026/05/26/traders-share-pope-leos-worries-on-ais-job-market-impact.html",
-      "pubDate": "Tue, 26 May 2026 19:31:51 GMT"
-    },
-    {
-      "title": "Huawei plans new smartphone chips this fall as rivalry with Nvidia and Apple heats up",
-      "link": "https://www.cnbc.com/2026/05/25/huawei-chip-logicfolding-semiconductor-nvidia-china.html",
-      "pubDate": "Mon, 25 May 2026 06:48:16 GMT"
-    },
-    {
-      "title": "Three signs from APEC that the U.S. and China remain far apart on trade",
-      "link": "https://www.cnbc.com/2026/05/23/three-signs-from-apec-that-the-us-china-remain-far-apart-on-trade.html",
-      "pubDate": "Sat, 23 May 2026 11:19:52 GMT"
-    },
-    {
-      "title": "Kevin Warsh&apos;s real Fed &apos;regime change&apos; may happen deep inside Wall Street&apos;s plumbing",
-      "link": "https://www.cnbc.com/2026/05/22/kevin-warshs-real-fed-regime-change-may-happen-deep-inside-wall-streets-plumbing.html",
-      "pubDate": "Fri, 22 May 2026 18:23:49 GMT"
-    },
-    {
-      "title": "Which company will the U.S. government take a stake in next? Here’s what traders think",
-      "link": "https://www.cnbc.com/2026/05/22/which-company-will-the-us-government-take-a-stake-in-next.html",
-      "pubDate": "Fri, 22 May 2026 15:29:39 GMT"
     }
   ]
 }
