@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-06-01T18:12:46.061Z",
+  "generatedAt": "2026-06-02T16:49:37.825Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Polymarket closes its first block trade as prediction markets push for Wall Street adoption",
+      "link": "https://www.cnbc.com/2026/06/02/polymarket-closes-first-block-trade-in-push-for-institutional-adoption.html",
+      "pubDate": "Tue, 02 Jun 2026 12:25:12 GMT"
+    },
     {
       "title": "Greg Abel just made his first big deal as Berkshire CEO. Why Warren Buffett is happy",
       "link": "https://www.cnbc.com/2026/06/01/greg-abel-just-made-his-first-big-deal-as-berkshire-ceo-why-warren-buffett-is-happy.html",
@@ -41,7 +46,7 @@
     {
       "title": "Berkshire Hathaway buys Taylor Morrison for $6.8 billion. Buffett touts Abel’s deal-making",
       "link": "https://www.cnbc.com/2026/06/01/berkshire-hathaway-taylor-morrison-home-acquisition-housing-market.html",
-      "pubDate": "Mon, 01 Jun 2026 14:27:32 GMT"
+      "pubDate": "Mon, 01 Jun 2026 20:18:46 GMT"
     },
     {
       "title": "Former Barclays CEO Jes Staley agrees to July 23 interview about Jeffrey Epstein by Oversight panel",
@@ -87,11 +92,6 @@
       "title": "Jamie Dimon says JPMorgan Chase could spend $20 billion on acquisition: &apos;We are on the lookout&apos;",
       "link": "https://www.cnbc.com/2026/05/27/jamie-dimon-jpmorgan-chase-acquisition-target-size.html",
       "pubDate": "Wed, 27 May 2026 15:51:16 GMT"
-    },
-    {
-      "title": "Your AI agent can now trade for you on Robinhood. And buy stuff with your credit card too",
-      "link": "https://www.cnbc.com/2026/05/27/your-ai-agent-can-now-trade-for-you-on-robinhood-and-buy-stuff-with-your-credit-card-too.html",
-      "pubDate": "Wed, 27 May 2026 13:11:43 GMT"
     }
   ]
 }
