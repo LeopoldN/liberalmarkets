@@ -1,8 +1,33 @@
 {
-  "generatedAt": "2026-06-02T16:49:37.825Z",
+  "generatedAt": "2026-06-03T17:06:49.531Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Bitcoin set to slump to new lows for 2026 after recent sell-off, traders forecast",
+      "link": "https://www.cnbc.com/2026/06/03/bitcoin-to-slump-to-new-lows-after-recent-sell-off-traders-predict.html",
+      "pubDate": "Wed, 03 Jun 2026 15:36:20 GMT"
+    },
+    {
+      "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
+      "link": "https://www.cnbc.com/2026/06/03/ai-agents-morgan-stanley-wealth-management-funnel.html",
+      "pubDate": "Wed, 03 Jun 2026 15:32:54 GMT"
+    },
+    {
+      "title": "Fed Chair Warsh makes first hires at central bank, including &apos;Project 2025&apos; author",
+      "link": "https://www.cnbc.com/2026/06/02/fed-chair-warsh-makes-first-hires-at-central-bank-including-project-2025-author.html",
+      "pubDate": "Wed, 03 Jun 2026 14:38:04 GMT"
+    },
+    {
+      "title": "Traders say Karen Bass and Spencer Pratt will advance to runoff in high-profile LA mayoral race",
+      "link": "https://www.cnbc.com/2026/06/02/bass-and-pratt-will-advance-in-la-mayoral-race-traders-say.html",
+      "pubDate": "Wed, 03 Jun 2026 14:09:15 GMT"
+    },
+    {
+      "title": "Goldman Sachs CEO David Solomon says markets are in &apos;greed&apos; mode as AI companies seek billions",
+      "link": "https://www.cnbc.com/2026/06/02/goldman-ceo-david-solomon-greed-mode-ai-firms-ipos.html",
+      "pubDate": "Tue, 02 Jun 2026 19:06:48 GMT"
+    },
     {
       "title": "Polymarket closes its first block trade as prediction markets push for Wall Street adoption",
       "link": "https://www.cnbc.com/2026/06/02/polymarket-closes-first-block-trade-in-push-for-institutional-adoption.html",
@@ -26,7 +51,7 @@
     {
       "title": "&apos;Disrupted or dead&apos;: AI is crushing a generation of startups built before ChatGPT",
       "link": "https://www.cnbc.com/2026/06/01/ai-startup-valuations-pre-chatgpt.html",
-      "pubDate": "Mon, 01 Jun 2026 15:37:30 GMT"
+      "pubDate": "Tue, 02 Jun 2026 17:33:32 GMT"
     },
     {
       "title": "Nvidia, Meta and SLB rank among top companies in adopting AI, new study says",
@@ -67,31 +92,6 @@
       "title": "CFTC sues Rhode Island over actions against prediction markets",
       "link": "https://www.cnbc.com/2026/05/28/cftc-sues-rhode-island-over-actions-against-prediction-markets.html",
       "pubDate": "Thu, 28 May 2026 19:57:39 GMT"
-    },
-    {
-      "title": "Gaming association says states have lost $1 billion in tax revenue due to prediction markets",
-      "link": "https://www.cnbc.com/2026/05/28/states-have-lost-1-billion-due-to-prediction-markets-gaming-association.html",
-      "pubDate": "Thu, 28 May 2026 16:51:57 GMT"
-    },
-    {
-      "title": "Nio shares jump 10% after releasing first flagship EV in more than two years",
-      "link": "https://www.cnbc.com/2026/05/28/nio-surges-9percent-after-releasing-first-flagship-ev-in-more-than-two-years.html",
-      "pubDate": "Thu, 28 May 2026 09:42:06 GMT"
-    },
-    {
-      "title": "Google employee charged with $1M Polymarket insider trading bet on search term",
-      "link": "https://www.cnbc.com/2026/05/27/google-employee-polymarket-insider-trading.html",
-      "pubDate": "Thu, 28 May 2026 00:52:00 GMT"
-    },
-    {
-      "title": "Traders are skeptical of Iran timeline for Strait of Hormuz reopening",
-      "link": "https://www.cnbc.com/2026/05/27/traders-are-skeptical-of-iran-timeline-for-strait-of-hormuz-reopening.html",
-      "pubDate": "Wed, 27 May 2026 22:18:07 GMT"
-    },
-    {
-      "title": "Jamie Dimon says JPMorgan Chase could spend $20 billion on acquisition: &apos;We are on the lookout&apos;",
-      "link": "https://www.cnbc.com/2026/05/27/jamie-dimon-jpmorgan-chase-acquisition-target-size.html",
-      "pubDate": "Wed, 27 May 2026 15:51:16 GMT"
     }
   ]
 }
