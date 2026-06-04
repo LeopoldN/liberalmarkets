@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-06-03T17:06:49.531Z",
+  "generatedAt": "2026-06-04T15:34:51.341Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Kalshi is building a prediction markets &apos;Bloomberg Terminal&apos; for high-end traders, source says",
+      "link": "https://www.cnbc.com/2026/06/04/kalshi-is-building-a-bloomberg-terminal-for-prediction-markets.html",
+      "pubDate": "Thu, 04 Jun 2026 12:47:27 GMT"
+    },
+    {
       "title": "Bitcoin set to slump to new lows for 2026 after recent sell-off, traders forecast",
       "link": "https://www.cnbc.com/2026/06/03/bitcoin-to-slump-to-new-lows-after-recent-sell-off-traders-predict.html",
-      "pubDate": "Wed, 03 Jun 2026 15:36:20 GMT"
+      "pubDate": "Wed, 03 Jun 2026 20:06:54 GMT"
     },
     {
       "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
@@ -51,7 +56,7 @@
     {
       "title": "&apos;Disrupted or dead&apos;: AI is crushing a generation of startups built before ChatGPT",
       "link": "https://www.cnbc.com/2026/06/01/ai-startup-valuations-pre-chatgpt.html",
-      "pubDate": "Tue, 02 Jun 2026 17:33:32 GMT"
+      "pubDate": "Wed, 03 Jun 2026 20:48:40 GMT"
     },
     {
       "title": "Nvidia, Meta and SLB rank among top companies in adopting AI, new study says",
@@ -87,11 +92,6 @@
       "title": "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike",
       "link": "https://www.cnbc.com/2026/05/29/feds-bowman-warns-against-hiking-interest-rates-due-to-inflation-spike.html",
       "pubDate": "Fri, 29 May 2026 16:39:46 GMT"
-    },
-    {
-      "title": "CFTC sues Rhode Island over actions against prediction markets",
-      "link": "https://www.cnbc.com/2026/05/28/cftc-sues-rhode-island-over-actions-against-prediction-markets.html",
-      "pubDate": "Thu, 28 May 2026 19:57:39 GMT"
     }
   ]
 }
