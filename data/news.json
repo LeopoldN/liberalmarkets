@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-06-04T15:34:51.341Z",
+  "generatedAt": "2026-06-05T15:23:01.807Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Where investors may find the next &apos;big wave&apos; for AI trade",
+      "link": "https://www.cnbc.com/2026/06/05/where-investors-may-find-the-next-big-wave-for-ai-trade.html",
+      "pubDate": "Fri, 05 Jun 2026 12:17:43 GMT"
+    },
+    {
+      "title": "China poaches more AI talent from the U.S. as it eyes the next &apos;super-app&apos;",
+      "link": "https://www.cnbc.com/2026/06/05/china-may-move-toward-us-path-on-ai-as-firms-poach-employees.html",
+      "pubDate": "Fri, 05 Jun 2026 07:50:47 GMT"
+    },
     {
       "title": "Kalshi is building a prediction markets &apos;Bloomberg Terminal&apos; for high-end traders, source says",
       "link": "https://www.cnbc.com/2026/06/04/kalshi-is-building-a-bloomberg-terminal-for-prediction-markets.html",
@@ -82,16 +92,6 @@
       "title": "Former Barclays CEO Jes Staley agrees to July 23 interview about Jeffrey Epstein by Oversight panel",
       "link": "https://www.cnbc.com/2026/05/31/jes-staley-jeffrey-epstein-interview-house-jpmorgan-chase-barclays.html",
       "pubDate": "Sun, 31 May 2026 15:53:27 GMT"
-    },
-    {
-      "title": "Two months, $2.6 billion: How NASA ETF turned SpaceX IPO access into a hot retail trade",
-      "link": "https://www.cnbc.com/2026/05/30/spacex-ipo-invest.html",
-      "pubDate": "Sat, 30 May 2026 15:33:42 GMT"
-    },
-    {
-      "title": "Fed Governor Michelle Bowman warns against hiking interest rates because of inflation spike",
-      "link": "https://www.cnbc.com/2026/05/29/feds-bowman-warns-against-hiking-interest-rates-due-to-inflation-spike.html",
-      "pubDate": "Fri, 29 May 2026 16:39:46 GMT"
     }
   ]
 }
