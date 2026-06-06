@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-06-05T15:23:01.807Z",
+  "generatedAt": "2026-06-06T14:01:57.925Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Bitcoin is cratering, but a new Wall Street crypto hype is on the rise",
+      "link": "https://www.cnbc.com/2026/06/06/bitcoin-price-crash-crypto-hype-hyperliquid-etfs.html",
+      "pubDate": "Sat, 06 Jun 2026 13:28:42 GMT"
+    },
+    {
+      "title": "Hot jobs report puts Fed cuts further out of reach as Chair Warsh faces policy tests",
+      "link": "https://www.cnbc.com/2026/06/05/hot-jobs-report-puts-fed-cuts-further-out-of-reach-as-chair-warsh-faces-policy-tests.html",
+      "pubDate": "Fri, 05 Jun 2026 19:09:09 GMT"
+    },
     {
       "title": "Where investors may find the next &apos;big wave&apos; for AI trade",
       "link": "https://www.cnbc.com/2026/06/05/where-investors-may-find-the-next-big-wave-for-ai-trade.html",
@@ -82,16 +92,6 @@
       "title": "China’s factory activity beats forecasts in May, private survey shows, despite softer official data",
       "link": "https://www.cnbc.com/2026/06/01/chinas-factory-activity-beats-forecasts-in-may-private-survey-shows-despite-softer-official-data.html",
       "pubDate": "Mon, 01 Jun 2026 14:27:11 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway buys Taylor Morrison for $6.8 billion. Buffett touts Abel’s deal-making",
-      "link": "https://www.cnbc.com/2026/06/01/berkshire-hathaway-taylor-morrison-home-acquisition-housing-market.html",
-      "pubDate": "Mon, 01 Jun 2026 20:18:46 GMT"
-    },
-    {
-      "title": "Former Barclays CEO Jes Staley agrees to July 23 interview about Jeffrey Epstein by Oversight panel",
-      "link": "https://www.cnbc.com/2026/05/31/jes-staley-jeffrey-epstein-interview-house-jpmorgan-chase-barclays.html",
-      "pubDate": "Sun, 31 May 2026 15:53:27 GMT"
     }
   ]
 }
