@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-06-08T16:11:40.479Z",
+  "generatedAt": "2026-06-09T15:22:43.038Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "JPMorgan Chase plans to deploy more powerful AI agents this year",
+      "link": "https://www.cnbc.com/2026/06/09/jpmorgan-chase-ai-agents.html",
+      "pubDate": "Tue, 09 Jun 2026 14:00:01 GMT"
+    },
+    {
+      "title": "Electric vehicle giant BYD predicts 80% of China car sales will soon be electric",
+      "link": "https://www.cnbc.com/2026/06/09/electric-vehicle-giant-byd-predicts-80percent-of-china-car-sales-will-soon-be-electric.html",
+      "pubDate": "Tue, 09 Jun 2026 06:52:53 GMT"
+    },
     {
       "title": "This startup wants to reduce payment friction on prediction markets",
       "link": "https://www.cnbc.com/2026/06/08/this-startup-wants-to-reduce-payment-friction-on-prediction-markets.html",
@@ -82,16 +92,6 @@
       "title": "Rubio odds for GOP 2028 nominee close to overtaking Vance on Kalshi",
       "link": "https://www.cnbc.com/2026/06/01/rubio-odds-for-gop-2028-nominee-close-to-overtaking-vance-on-kalshi.html",
       "pubDate": "Mon, 01 Jun 2026 15:03:17 GMT"
-    },
-    {
-      "title": "&apos;Disrupted or dead&apos;: AI is crushing a generation of startups built before ChatGPT",
-      "link": "https://www.cnbc.com/2026/06/01/ai-startup-valuations-pre-chatgpt.html",
-      "pubDate": "Wed, 03 Jun 2026 20:48:40 GMT"
-    },
-    {
-      "title": "Nvidia, Meta and SLB rank among top companies in adopting AI, new study says",
-      "link": "https://www.cnbc.com/2026/06/01/nvidia-meta-walmart-among-top-companies-adopting-ai.html",
-      "pubDate": "Mon, 01 Jun 2026 17:58:25 GMT"
     }
   ]
 }
