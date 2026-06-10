@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-06-09T15:22:43.038Z",
+  "generatedAt": "2026-06-10T15:57:45.284Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "North Carolina Treasurer passes on SpaceX citing valuation concerns; favors OpenAI, Anthropic",
+      "link": "https://www.cnbc.com/2026/06/10/north-carolina-treasurer-passes-on-spacex-citing-valuation-concerns-favors-openai-anthropic.html",
+      "pubDate": "Wed, 10 Jun 2026 15:53:54 GMT"
+    },
+    {
+      "title": "Regulators&apos; proposed prediction markets rules ban trading on terrorism, assassinations",
+      "link": "https://www.cnbc.com/2026/06/10/regulators-proposed-prediction-markets-rules-ban-trading-on-terrorism-assassinations.html",
+      "pubDate": "Wed, 10 Jun 2026 14:38:28 GMT"
+    },
+    {
+      "title": "Beijing escalating AI espionage to catch up with the U.S. on tech, cybersecurity firm says",
+      "link": "https://www.cnbc.com/2026/06/10/crowdstrike-warns-of-increasing-chinese-ai-cyberattacks-on-us-tech.html",
+      "pubDate": "Wed, 10 Jun 2026 05:02:45 GMT"
+    },
+    {
+      "title": "Kalshi trading in &apos;perps&apos; crosses $1 billion in volume within a week of launch",
+      "link": "https://www.cnbc.com/2026/06/09/kalshi-perpetual-futures-trading-perps-crosses-1-billion-in-volume-within-a-week-of-launch.html",
+      "pubDate": "Tue, 09 Jun 2026 19:03:54 GMT"
+    },
     {
       "title": "JPMorgan Chase plans to deploy more powerful AI agents this year",
       "link": "https://www.cnbc.com/2026/06/09/jpmorgan-chase-ai-agents.html",
@@ -72,26 +92,6 @@
       "title": "Goldman Sachs CEO David Solomon says markets are in &apos;greed&apos; mode as AI companies seek billions",
       "link": "https://www.cnbc.com/2026/06/02/goldman-ceo-david-solomon-greed-mode-ai-firms-ipos.html",
       "pubDate": "Tue, 02 Jun 2026 19:06:48 GMT"
-    },
-    {
-      "title": "Polymarket closes its first block trade as prediction markets push for Wall Street adoption",
-      "link": "https://www.cnbc.com/2026/06/02/polymarket-closes-first-block-trade-in-push-for-institutional-adoption.html",
-      "pubDate": "Tue, 02 Jun 2026 12:25:12 GMT"
-    },
-    {
-      "title": "Greg Abel just made his first big deal as Berkshire CEO. Why Warren Buffett is happy",
-      "link": "https://www.cnbc.com/2026/06/01/greg-abel-just-made-his-first-big-deal-as-berkshire-ceo-why-warren-buffett-is-happy.html",
-      "pubDate": "Mon, 01 Jun 2026 17:46:28 GMT"
-    },
-    {
-      "title": "Individual traders drove Kalshi’s rise. Now, it’s going for Wall Street",
-      "link": "https://www.cnbc.com/2026/06/01/individual-traders-drove-kalshis-rise-now-its-going-for-wall-street.html",
-      "pubDate": "Mon, 01 Jun 2026 15:22:09 GMT"
-    },
-    {
-      "title": "Rubio odds for GOP 2028 nominee close to overtaking Vance on Kalshi",
-      "link": "https://www.cnbc.com/2026/06/01/rubio-odds-for-gop-2028-nominee-close-to-overtaking-vance-on-kalshi.html",
-      "pubDate": "Mon, 01 Jun 2026 15:03:17 GMT"
     }
   ]
 }
