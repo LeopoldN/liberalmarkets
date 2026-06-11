@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-06-10T15:57:45.284Z",
+  "generatedAt": "2026-06-11T16:16:32.691Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "North Carolina Treasurer passes on SpaceX citing valuation concerns; favors OpenAI, Anthropic",
+      "title": "Gold slumps to 6-month low even as inflation fears rise. Here&apos;s why bullion is out of favor",
+      "link": "https://www.cnbc.com/2026/06/11/gold-slumps-to-6-month-low-even-as-inflation-fears-rise-heres-why-bullion-is-out-of-favor.html",
+      "pubDate": "Thu, 11 Jun 2026 15:51:17 GMT"
+    },
+    {
+      "title": "KKR says AI productivity boom to keep on going — but warns of &apos;extreme&apos; trend not seen since the 19th century",
+      "link": "https://www.cnbc.com/2026/06/11/ais-impact-on-economic-growth-kkr.html",
+      "pubDate": "Thu, 11 Jun 2026 05:39:55 GMT"
+    },
+    {
+      "title": "Citigroup shares outperform down market after Trump endorsement",
+      "link": "https://www.cnbc.com/2026/06/10/citigroup-shares-outperform-down-market-after-trump-endorsement.html",
+      "pubDate": "Thu, 11 Jun 2026 14:49:02 GMT"
+    },
+    {
+      "title": "North Carolina treasurer passes on SpaceX citing valuation concerns; favors OpenAI, Anthropic",
       "link": "https://www.cnbc.com/2026/06/10/north-carolina-treasurer-passes-on-spacex-citing-valuation-concerns-favors-openai-anthropic.html",
-      "pubDate": "Wed, 10 Jun 2026 15:53:54 GMT"
+      "pubDate": "Wed, 10 Jun 2026 17:46:32 GMT"
     },
     {
       "title": "Regulators&apos; proposed prediction markets rules ban trading on terrorism, assassinations",
@@ -21,7 +36,7 @@
     {
       "title": "Kalshi trading in &apos;perps&apos; crosses $1 billion in volume within a week of launch",
       "link": "https://www.cnbc.com/2026/06/09/kalshi-perpetual-futures-trading-perps-crosses-1-billion-in-volume-within-a-week-of-launch.html",
-      "pubDate": "Tue, 09 Jun 2026 19:03:54 GMT"
+      "pubDate": "Wed, 10 Jun 2026 16:43:41 GMT"
     },
     {
       "title": "JPMorgan Chase plans to deploy more powerful AI agents this year",
@@ -77,21 +92,6 @@
       "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
       "link": "https://www.cnbc.com/2026/06/03/ai-agents-morgan-stanley-wealth-management-funnel.html",
       "pubDate": "Wed, 03 Jun 2026 15:32:54 GMT"
-    },
-    {
-      "title": "Fed Chair Warsh makes first hires at central bank, including &apos;Project 2025&apos; author",
-      "link": "https://www.cnbc.com/2026/06/02/fed-chair-warsh-makes-first-hires-at-central-bank-including-project-2025-author.html",
-      "pubDate": "Wed, 03 Jun 2026 14:38:04 GMT"
-    },
-    {
-      "title": "Traders say Karen Bass and Spencer Pratt will advance to runoff in high-profile LA mayoral race",
-      "link": "https://www.cnbc.com/2026/06/02/bass-and-pratt-will-advance-in-la-mayoral-race-traders-say.html",
-      "pubDate": "Wed, 03 Jun 2026 14:09:15 GMT"
-    },
-    {
-      "title": "Goldman Sachs CEO David Solomon says markets are in &apos;greed&apos; mode as AI companies seek billions",
-      "link": "https://www.cnbc.com/2026/06/02/goldman-ceo-david-solomon-greed-mode-ai-firms-ipos.html",
-      "pubDate": "Tue, 02 Jun 2026 19:06:48 GMT"
     }
   ]
 }
