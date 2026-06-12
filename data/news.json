@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-06-11T16:16:32.691Z",
+  "generatedAt": "2026-06-12T15:33:24.874Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "The S&P 500 already made a big call on SpaceX stock and index fund investors need to know it",
+      "link": "https://www.cnbc.com/2026/06/12/spacex-ipo-sp-500-index-funds-investors.html",
+      "pubDate": "Fri, 12 Jun 2026 12:35:55 GMT"
+    },
+    {
+      "title": "SpaceX raising $75 billion in record-setting IPO as Nasdaq debut awaits",
+      "link": "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html",
+      "pubDate": "Fri, 12 Jun 2026 11:34:46 GMT"
+    },
+    {
+      "title": "SpaceX cuts retail IPO allocation to low 20% range, source says",
+      "link": "https://www.cnbc.com/2026/06/11/spacex-cuts-retail-ipo-allocation-to-low-20percent-range-source-says.html",
+      "pubDate": "Fri, 12 Jun 2026 14:50:28 GMT"
+    },
+    {
+      "title": "SpaceX to close above $2 trillion market cap on its debut, prediction market traders say",
+      "link": "https://www.cnbc.com/2026/06/11/spacex-to-close-above-2-trillion-market-cap-on-its-debut-traders-say.html",
+      "pubDate": "Thu, 11 Jun 2026 21:44:43 GMT"
+    },
+    {
+      "title": "From startup to $1.8 trillion: The investors who took a chance on SpaceX now reap the rewards",
+      "link": "https://www.cnbc.com/2026/06/11/spacex-investors-reap-rewards-1-8-trillion-valuation.html",
+      "pubDate": "Fri, 12 Jun 2026 14:46:10 GMT"
+    },
+    {
       "title": "Gold slumps to 6-month low even as inflation fears rise. Here&apos;s why bullion is out of favor",
       "link": "https://www.cnbc.com/2026/06/11/gold-slumps-to-6-month-low-even-as-inflation-fears-rise-heres-why-bullion-is-out-of-favor.html",
-      "pubDate": "Thu, 11 Jun 2026 15:51:17 GMT"
+      "pubDate": "Thu, 11 Jun 2026 19:06:17 GMT"
     },
     {
       "title": "KKR says AI productivity boom to keep on going — but warns of &apos;extreme&apos; trend not seen since the 19th century",
@@ -67,31 +92,6 @@
       "title": "Hot jobs report puts Fed cuts further out of reach as Chair Warsh faces policy tests",
       "link": "https://www.cnbc.com/2026/06/05/hot-jobs-report-puts-fed-cuts-further-out-of-reach-as-chair-warsh-faces-policy-tests.html",
       "pubDate": "Fri, 05 Jun 2026 19:09:09 GMT"
-    },
-    {
-      "title": "Where investors may find the next &apos;big wave&apos; for AI trade",
-      "link": "https://www.cnbc.com/2026/06/05/where-investors-may-find-the-next-big-wave-for-ai-trade.html",
-      "pubDate": "Fri, 05 Jun 2026 12:17:43 GMT"
-    },
-    {
-      "title": "China poaches more AI talent from the U.S. as it eyes the next &apos;super-app&apos;",
-      "link": "https://www.cnbc.com/2026/06/05/china-may-move-toward-us-path-on-ai-as-firms-poach-employees.html",
-      "pubDate": "Fri, 05 Jun 2026 07:50:47 GMT"
-    },
-    {
-      "title": "Kalshi is building a prediction markets &apos;Bloomberg Terminal&apos; for high-end traders, source says",
-      "link": "https://www.cnbc.com/2026/06/04/kalshi-is-building-a-bloomberg-terminal-for-prediction-markets.html",
-      "pubDate": "Thu, 04 Jun 2026 12:47:27 GMT"
-    },
-    {
-      "title": "Bitcoin set to slump to new lows for 2026 after recent sell-off, traders forecast",
-      "link": "https://www.cnbc.com/2026/06/03/bitcoin-to-slump-to-new-lows-after-recent-sell-off-traders-predict.html",
-      "pubDate": "Wed, 03 Jun 2026 20:06:54 GMT"
-    },
-    {
-      "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
-      "link": "https://www.cnbc.com/2026/06/03/ai-agents-morgan-stanley-wealth-management-funnel.html",
-      "pubDate": "Wed, 03 Jun 2026 15:32:54 GMT"
     }
   ]
 }
