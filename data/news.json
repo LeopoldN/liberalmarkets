@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-06-13T14:19:01.155Z",
+  "generatedAt": "2026-06-14T14:21:11.997Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Why TD Securities anticipates even bigger days ahead for SpaceX",
+      "link": "https://www.cnbc.com/2026/06/13/spacex-surges-but-bigger-days-are-ahead-td-securities-.html",
+      "pubDate": "Sat, 13 Jun 2026 15:00:01 GMT"
+    },
     {
       "title": "The S&P 500 already made a big call on SpaceX stock and index fund investors need to know it",
       "link": "https://www.cnbc.com/2026/06/12/spacex-ipo-sp-500-index-funds-investors.html",
@@ -87,11 +92,6 @@
       "title": "Bitcoin is cratering, but a new Wall Street crypto hype is on the rise",
       "link": "https://www.cnbc.com/2026/06/06/bitcoin-price-crash-crypto-hype-hyperliquid-etfs.html",
       "pubDate": "Mon, 08 Jun 2026 15:11:48 GMT"
-    },
-    {
-      "title": "Hot jobs report puts Fed cuts further out of reach as Chair Warsh faces policy tests",
-      "link": "https://www.cnbc.com/2026/06/05/hot-jobs-report-puts-fed-cuts-further-out-of-reach-as-chair-warsh-faces-policy-tests.html",
-      "pubDate": "Fri, 05 Jun 2026 19:09:09 GMT"
     }
   ]
 }
