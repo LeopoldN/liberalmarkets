@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-06-15T17:24:37.948Z",
+  "generatedAt": "2026-06-16T17:15:38.295Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Prediction market traders speculate Anthropic will restore access quickly to AI model after Trump admin directed it to limit reach",
+      "link": "https://www.cnbc.com/2026/06/16/kalshi-traders-think-anthropic-will-restore-access-to-ai-model-quickly.html",
+      "pubDate": "Tue, 16 Jun 2026 15:44:01 GMT"
+    },
+    {
+      "title": "The new oil? Inside the effort to turn AI computing power into a tradeable commodity",
+      "link": "https://www.cnbc.com/2026/06/16/the-new-oil-inside-the-effort-to-turn-ai-computing-power-into-a-tradeable-commodity.html",
+      "pubDate": "Tue, 16 Jun 2026 14:05:26 GMT"
+    },
+    {
+      "title": "People in China are watching the World Cup differently this time",
+      "link": "https://www.cnbc.com/2026/06/16/people-in-china-are-watching-the-world-cup-differently-this-time.html",
+      "pubDate": "Mon, 15 Jun 2026 23:25:29 GMT"
+    },
+    {
+      "title": "CFTC chair Selig defends decision to approve ‘perps’ in U.S.",
+      "link": "https://www.cnbc.com/2026/06/15/cftc-chair-selig-defends-decision-to-approve-perps-in-us.html",
+      "pubDate": "Mon, 15 Jun 2026 22:39:09 GMT"
+    },
+    {
       "title": "SpaceX IPO leaves retail investors with too few shares and a tough hold-or-sell decision",
       "link": "https://www.cnbc.com/2026/06/15/spacex-ipo-leaves-retail-investors-with-too-few-shares-and-a-tough-hold-or-sell-decision.html",
-      "pubDate": "Mon, 15 Jun 2026 17:24:18 GMT"
+      "pubDate": "Tue, 16 Jun 2026 12:51:29 GMT"
     },
     {
       "title": "SpaceX doesn&apos;t have a timeline for its human missions to Mars. Kalshi traders say don&apos;t expect it this decade",
@@ -72,26 +92,6 @@
       "title": "North Carolina treasurer passes on SpaceX citing valuation concerns; favors OpenAI, Anthropic",
       "link": "https://www.cnbc.com/2026/06/10/north-carolina-treasurer-passes-on-spacex-citing-valuation-concerns-favors-openai-anthropic.html",
       "pubDate": "Wed, 10 Jun 2026 17:46:32 GMT"
-    },
-    {
-      "title": "Regulators&apos; proposed prediction markets rules ban trading on terrorism, assassinations",
-      "link": "https://www.cnbc.com/2026/06/10/regulators-proposed-prediction-markets-rules-ban-trading-on-terrorism-assassinations.html",
-      "pubDate": "Wed, 10 Jun 2026 14:38:28 GMT"
-    },
-    {
-      "title": "Beijing escalating AI espionage to catch up with the U.S. on tech, cybersecurity firm says",
-      "link": "https://www.cnbc.com/2026/06/10/crowdstrike-warns-of-increasing-chinese-ai-cyberattacks-on-us-tech.html",
-      "pubDate": "Wed, 10 Jun 2026 05:02:45 GMT"
-    },
-    {
-      "title": "Kalshi trading in &apos;perps&apos; crosses $1 billion in volume within a week of launch",
-      "link": "https://www.cnbc.com/2026/06/09/kalshi-perpetual-futures-trading-perps-crosses-1-billion-in-volume-within-a-week-of-launch.html",
-      "pubDate": "Wed, 10 Jun 2026 16:43:41 GMT"
-    },
-    {
-      "title": "JPMorgan Chase plans to deploy more powerful AI agents this year",
-      "link": "https://www.cnbc.com/2026/06/09/jpmorgan-chase-ai-agents.html",
-      "pubDate": "Tue, 09 Jun 2026 14:00:01 GMT"
     }
   ]
 }
