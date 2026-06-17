@@ -1,17 +1,42 @@
 {
-  "generatedAt": "2026-06-16T17:15:38.295Z",
+  "generatedAt": "2026-06-17T15:56:12.059Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "More united Fed board seen at Warsh&apos;s first meeting, according to Kalshi traders",
+      "link": "https://www.cnbc.com/2026/06/17/more-united-fed-board-seen-at-warshs-first-meeting-according-to-kalshi-traders.html",
+      "pubDate": "Wed, 17 Jun 2026 14:25:31 GMT"
+    },
+    {
+      "title": "CME Group&apos;s Terry Duffy to step down in 2027, CFO Lynne Fitzpatrick to become CEO",
+      "link": "https://www.cnbc.com/2026/06/17/cme-groups-terry-duffy-to-step-down-in-2027-cfo-lynne-fitzpatrick-to-become-ceo.html",
+      "pubDate": "Wed, 17 Jun 2026 14:29:11 GMT"
+    },
+    {
+      "title": "China pushes for AI safety as G7 summit wraps up without Beijing",
+      "link": "https://www.cnbc.com/2026/06/17/china-pushes-for-ai-safety-as-g7-summit-wraps-up-without-beijing.html",
+      "pubDate": "Wed, 17 Jun 2026 08:04:21 GMT"
+    },
+    {
+      "title": "Michael Burry says he&apos;s tempted to bet against SpaceX, but passes on expensive options",
+      "link": "https://www.cnbc.com/2026/06/16/michael-burry-says-hes-tempted-to-bet-against-spacex-but-passes-on-expensive-options.html",
+      "pubDate": "Tue, 16 Jun 2026 20:55:45 GMT"
+    },
+    {
+      "title": "Fed Chair Warsh expected to withhold &apos;dot&apos; from central bank&apos;s interest rate outlook",
+      "link": "https://www.cnbc.com/2026/06/16/fed-chair-warsh-expected-to-withhold-dot-from-central-banks-interest-rate-outlook.html",
+      "pubDate": "Wed, 17 Jun 2026 15:23:38 GMT"
+    },
+    {
       "title": "Prediction market traders speculate Anthropic will restore access quickly to AI model after Trump admin directed it to limit reach",
       "link": "https://www.cnbc.com/2026/06/16/kalshi-traders-think-anthropic-will-restore-access-to-ai-model-quickly.html",
-      "pubDate": "Tue, 16 Jun 2026 15:44:01 GMT"
+      "pubDate": "Wed, 17 Jun 2026 13:27:05 GMT"
     },
     {
       "title": "The new oil? Inside the effort to turn AI computing power into a tradeable commodity",
       "link": "https://www.cnbc.com/2026/06/16/the-new-oil-inside-the-effort-to-turn-ai-computing-power-into-a-tradeable-commodity.html",
-      "pubDate": "Tue, 16 Jun 2026 14:05:26 GMT"
+      "pubDate": "Tue, 16 Jun 2026 18:42:28 GMT"
     },
     {
       "title": "People in China are watching the World Cup differently this time",
@@ -67,31 +92,6 @@
       "title": "SpaceX to close above $2 trillion market cap on its debut, prediction market traders say",
       "link": "https://www.cnbc.com/2026/06/11/spacex-to-close-above-2-trillion-market-cap-on-its-debut-traders-say.html",
       "pubDate": "Thu, 11 Jun 2026 21:44:43 GMT"
-    },
-    {
-      "title": "From startup to $1.8 trillion: The investors who took a chance on SpaceX now reap the rewards",
-      "link": "https://www.cnbc.com/2026/06/11/spacex-investors-reap-rewards-1-8-trillion-valuation.html",
-      "pubDate": "Fri, 12 Jun 2026 14:46:10 GMT"
-    },
-    {
-      "title": "Gold slumps to 6-month low even as inflation fears rise. Here&apos;s why bullion is out of favor",
-      "link": "https://www.cnbc.com/2026/06/11/gold-slumps-to-6-month-low-even-as-inflation-fears-rise-heres-why-bullion-is-out-of-favor.html",
-      "pubDate": "Thu, 11 Jun 2026 19:06:17 GMT"
-    },
-    {
-      "title": "KKR says AI productivity boom to keep on going — but warns of &apos;extreme&apos; trend not seen since the 19th century",
-      "link": "https://www.cnbc.com/2026/06/11/ais-impact-on-economic-growth-kkr.html",
-      "pubDate": "Thu, 11 Jun 2026 05:39:55 GMT"
-    },
-    {
-      "title": "Citigroup shares outperform down market after Trump endorsement",
-      "link": "https://www.cnbc.com/2026/06/10/citigroup-shares-outperform-down-market-after-trump-endorsement.html",
-      "pubDate": "Thu, 11 Jun 2026 14:49:02 GMT"
-    },
-    {
-      "title": "North Carolina treasurer passes on SpaceX citing valuation concerns; favors OpenAI, Anthropic",
-      "link": "https://www.cnbc.com/2026/06/10/north-carolina-treasurer-passes-on-spacex-citing-valuation-concerns-favors-openai-anthropic.html",
-      "pubDate": "Wed, 10 Jun 2026 17:46:32 GMT"
     }
   ]
 }
