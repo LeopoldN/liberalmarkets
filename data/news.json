@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-06-17T15:56:12.059Z",
+  "generatedAt": "2026-06-18T15:46:51.405Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Jeffrey Gundlach says Fed&apos;s Warsh is not going to be the &apos;easy money&apos; chairman many hoped for",
+      "link": "https://www.cnbc.com/2026/06/17/jeffrey-gundlach-says-feds-warsh-is-not-going-to-be-the-easy-money-chairman-many-hoped-for.html",
+      "pubDate": "Wed, 17 Jun 2026 20:26:56 GMT"
+    },
+    {
+      "title": "Chairman Warsh abstains from giving rate forecast as several members signal a hike in 2026",
+      "link": "https://www.cnbc.com/2026/06/17/fed-projections-call-for-a-rate-hike-in-2026-but-chairman-warsh-likely-abstained.html",
+      "pubDate": "Wed, 17 Jun 2026 19:27:43 GMT"
+    },
+    {
+      "title": "Chairman Warsh drastically alters Fed rate statement. Here&apos;s what&apos;s changed",
+      "link": "https://www.cnbc.com/2026/06/17/june-fed-meeting-redline.html",
+      "pubDate": "Wed, 17 Jun 2026 19:25:18 GMT"
+    },
+    {
+      "title": "Fed holds rates steady, pares down statement to remove cutting bias",
+      "link": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html",
+      "pubDate": "Wed, 17 Jun 2026 21:42:28 GMT"
+    },
+    {
       "title": "More united Fed board seen at Warsh&apos;s first meeting, according to Kalshi traders",
       "link": "https://www.cnbc.com/2026/06/17/more-united-fed-board-seen-at-warshs-first-meeting-according-to-kalshi-traders.html",
-      "pubDate": "Wed, 17 Jun 2026 14:25:31 GMT"
+      "pubDate": "Wed, 17 Jun 2026 16:54:08 GMT"
     },
     {
       "title": "CME Group&apos;s Terry Duffy to step down in 2027, CFO Lynne Fitzpatrick to become CEO",
@@ -72,26 +92,6 @@
       "title": "Why TD Securities anticipates even bigger days ahead for SpaceX",
       "link": "https://www.cnbc.com/2026/06/13/spacex-surges-but-bigger-days-are-ahead-td-securities-.html",
       "pubDate": "Sat, 13 Jun 2026 15:00:01 GMT"
-    },
-    {
-      "title": "The S&P 500 already made a big call on SpaceX stock and index fund investors need to know it",
-      "link": "https://www.cnbc.com/2026/06/12/spacex-ipo-sp-500-index-funds-investors.html",
-      "pubDate": "Fri, 12 Jun 2026 15:59:09 GMT"
-    },
-    {
-      "title": "SpaceX raising $75 billion in record-setting IPO as Nasdaq debut awaits",
-      "link": "https://www.cnbc.com/2026/06/11/spacex-raises-75-billion-in-record-setting-ipo-ahead-of-nasdaq-debut.html",
-      "pubDate": "Fri, 12 Jun 2026 11:34:46 GMT"
-    },
-    {
-      "title": "SpaceX cuts retail IPO allocation to low 20% range, source says",
-      "link": "https://www.cnbc.com/2026/06/11/spacex-cuts-retail-ipo-allocation-to-low-20percent-range-source-says.html",
-      "pubDate": "Fri, 12 Jun 2026 14:50:28 GMT"
-    },
-    {
-      "title": "SpaceX to close above $2 trillion market cap on its debut, prediction market traders say",
-      "link": "https://www.cnbc.com/2026/06/11/spacex-to-close-above-2-trillion-market-cap-on-its-debut-traders-say.html",
-      "pubDate": "Thu, 11 Jun 2026 21:44:43 GMT"
     }
   ]
 }
