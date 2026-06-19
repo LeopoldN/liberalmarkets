@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-06-18T15:46:51.405Z",
+  "generatedAt": "2026-06-19T15:36:41.850Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "The average SpaceX buyer post-IPO is almost under water after two-day slide",
+      "link": "https://www.cnbc.com/2026/06/18/the-average-spacex-buyer-post-ipo-is-almost-under-water-after-two-day-slide.html",
+      "pubDate": "Thu, 18 Jun 2026 20:10:47 GMT"
+    },
+    {
+      "title": "Markets are set for a much more hawkish Warsh Fed than expected",
+      "link": "https://www.cnbc.com/2026/06/18/markets-are-set-for-a-much-more-hawkish-warsh-fed-than-expected.html",
+      "pubDate": "Thu, 18 Jun 2026 18:04:41 GMT"
+    },
     {
       "title": "Jeffrey Gundlach says Fed&apos;s Warsh is not going to be the &apos;easy money&apos; chairman many hoped for",
       "link": "https://www.cnbc.com/2026/06/17/jeffrey-gundlach-says-feds-warsh-is-not-going-to-be-the-easy-money-chairman-many-hoped-for.html",
@@ -16,7 +26,7 @@
     {
       "title": "Chairman Warsh drastically alters Fed rate statement. Here&apos;s what&apos;s changed",
       "link": "https://www.cnbc.com/2026/06/17/june-fed-meeting-redline.html",
-      "pubDate": "Wed, 17 Jun 2026 19:25:18 GMT"
+      "pubDate": "Thu, 18 Jun 2026 22:03:50 GMT"
     },
     {
       "title": "Fed holds rates steady, pares down statement to remove cutting bias",
@@ -82,16 +92,6 @@
       "title": "Ron Baron bought $1 billion of SpaceX shares in IPO, lifting stake to $25 billion",
       "link": "https://www.cnbc.com/2026/06/15/ron-baron-bought-1-billion-of-spacex-shares-in-ipo-lifting-stake-to-25-billion.html",
       "pubDate": "Mon, 15 Jun 2026 15:27:00 GMT"
-    },
-    {
-      "title": "Charlie Javice reportedly seeking a pardon from Trump",
-      "link": "https://www.cnbc.com/2026/06/14/charlie-javice-reportedly-seeking-a-pardon-from-trump-.html",
-      "pubDate": "Sun, 14 Jun 2026 20:29:12 GMT"
-    },
-    {
-      "title": "Why TD Securities anticipates even bigger days ahead for SpaceX",
-      "link": "https://www.cnbc.com/2026/06/13/spacex-surges-but-bigger-days-are-ahead-td-securities-.html",
-      "pubDate": "Sat, 13 Jun 2026 15:00:01 GMT"
     }
   ]
 }
