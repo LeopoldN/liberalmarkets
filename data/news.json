@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-06-19T15:36:41.850Z",
+  "generatedAt": "2026-06-20T14:22:58.336Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "The riskiest SpaceX stock trade of all had a big first week",
+      "link": "https://www.cnbc.com/2026/06/19/spacex-stock-risk-buy-sell.html",
+      "pubDate": "Fri, 19 Jun 2026 15:53:11 GMT"
+    },
     {
       "title": "The average SpaceX buyer post-IPO is almost under water after two-day slide",
       "link": "https://www.cnbc.com/2026/06/18/the-average-spacex-buyer-post-ipo-is-almost-under-water-after-two-day-slide.html",
@@ -87,11 +92,6 @@
       "title": "SpaceX doesn&apos;t have a timeline for its human missions to Mars. Kalshi traders say don&apos;t expect it this decade",
       "link": "https://www.cnbc.com/2026/06/15/kalshi-traders-say-spacex-wont-get-to-mars-this-decade.html",
       "pubDate": "Mon, 15 Jun 2026 14:38:19 GMT"
-    },
-    {
-      "title": "Ron Baron bought $1 billion of SpaceX shares in IPO, lifting stake to $25 billion",
-      "link": "https://www.cnbc.com/2026/06/15/ron-baron-bought-1-billion-of-spacex-shares-in-ipo-lifting-stake-to-25-billion.html",
-      "pubDate": "Mon, 15 Jun 2026 15:27:00 GMT"
     }
   ]
 }
