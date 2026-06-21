@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-06-20T14:22:58.336Z",
+  "generatedAt": "2026-06-21T14:27:14.753Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "&apos;Regime change but in a velvet glove&apos;: How Kevin Warsh has set out to remake the Fed",
+      "link": "https://www.cnbc.com/2026/06/21/how-kevin-warsh-has-set-out-to-remake-the-fed.html",
+      "pubDate": "Sun, 21 Jun 2026 11:14:02 GMT"
+    },
+    {
+      "title": "U.S. and Iran begin peace talks amid conflicting claims over Strait of Hormuz",
+      "link": "https://www.cnbc.com/2026/06/20/iran-reportedly-closes-strait-of-hormuz-again-raising-doubt-over-talks.html",
+      "pubDate": "Sun, 21 Jun 2026 12:16:26 GMT"
+    },
+    {
+      "title": "Bitcoin&apos;s future as revolutionary as the smartphone, according to CoinDesk",
+      "link": "https://www.cnbc.com/2026/06/20/bitcoin-as-revolutionary-as-smartphone-according-to-coindesk.html",
+      "pubDate": "Sat, 20 Jun 2026 15:00:01 GMT"
+    },
     {
       "title": "The riskiest SpaceX stock trade of all had a big first week",
       "link": "https://www.cnbc.com/2026/06/19/spacex-stock-risk-buy-sell.html",
@@ -77,21 +92,6 @@
       "title": "People in China are watching the World Cup differently this time",
       "link": "https://www.cnbc.com/2026/06/16/people-in-china-are-watching-the-world-cup-differently-this-time.html",
       "pubDate": "Mon, 15 Jun 2026 23:25:29 GMT"
-    },
-    {
-      "title": "CFTC chair Selig defends decision to approve ‘perps’ in U.S.",
-      "link": "https://www.cnbc.com/2026/06/15/cftc-chair-selig-defends-decision-to-approve-perps-in-us.html",
-      "pubDate": "Mon, 15 Jun 2026 22:39:09 GMT"
-    },
-    {
-      "title": "SpaceX IPO leaves retail investors with too few shares and a tough hold-or-sell decision",
-      "link": "https://www.cnbc.com/2026/06/15/spacex-ipo-leaves-retail-investors-with-too-few-shares-and-a-tough-hold-or-sell-decision.html",
-      "pubDate": "Tue, 16 Jun 2026 12:51:29 GMT"
-    },
-    {
-      "title": "SpaceX doesn&apos;t have a timeline for its human missions to Mars. Kalshi traders say don&apos;t expect it this decade",
-      "link": "https://www.cnbc.com/2026/06/15/kalshi-traders-say-spacex-wont-get-to-mars-this-decade.html",
-      "pubDate": "Mon, 15 Jun 2026 14:38:19 GMT"
     }
   ]
 }
