@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-06-21T14:27:14.753Z",
+  "generatedAt": "2026-06-22T17:08:58.838Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
+      "link": "https://www.cnbc.com/2026/06/22/zuckerberg-seen-as-next-to-join-trillionaire-club-say-kalshi-traders.html",
+      "pubDate": "Mon, 22 Jun 2026 16:45:37 GMT"
+    },
+    {
+      "title": "Alan Greenspan, former chairman of the Fed, dies at age 100",
+      "link": "https://www.cnbc.com/2026/06/22/alan-greenspan-former-chairman-of-the-fed-dies-at-age-100.html",
+      "pubDate": "Mon, 22 Jun 2026 14:39:38 GMT"
+    },
     {
       "title": "&apos;Regime change but in a velvet glove&apos;: How Kevin Warsh has set out to remake the Fed",
       "link": "https://www.cnbc.com/2026/06/21/how-kevin-warsh-has-set-out-to-remake-the-fed.html",
@@ -26,7 +36,7 @@
     {
       "title": "The average SpaceX buyer post-IPO is almost under water after two-day slide",
       "link": "https://www.cnbc.com/2026/06/18/the-average-spacex-buyer-post-ipo-is-almost-under-water-after-two-day-slide.html",
-      "pubDate": "Thu, 18 Jun 2026 20:10:47 GMT"
+      "pubDate": "Mon, 22 Jun 2026 16:32:51 GMT"
     },
     {
       "title": "Markets are set for a much more hawkish Warsh Fed than expected",
@@ -82,16 +92,6 @@
       "title": "Prediction market traders speculate Anthropic will restore access quickly to AI model after Trump admin directed it to limit reach",
       "link": "https://www.cnbc.com/2026/06/16/kalshi-traders-think-anthropic-will-restore-access-to-ai-model-quickly.html",
       "pubDate": "Wed, 17 Jun 2026 13:27:05 GMT"
-    },
-    {
-      "title": "The new oil? Inside the effort to turn AI computing power into a tradeable commodity",
-      "link": "https://www.cnbc.com/2026/06/16/the-new-oil-inside-the-effort-to-turn-ai-computing-power-into-a-tradeable-commodity.html",
-      "pubDate": "Tue, 16 Jun 2026 18:42:28 GMT"
-    },
-    {
-      "title": "People in China are watching the World Cup differently this time",
-      "link": "https://www.cnbc.com/2026/06/16/people-in-china-are-watching-the-world-cup-differently-this-time.html",
-      "pubDate": "Mon, 15 Jun 2026 23:25:29 GMT"
     }
   ]
 }
