@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-06-22T17:08:58.838Z",
+  "generatedAt": "2026-06-23T15:18:36.610Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "U.S. fights with Brazil for China&apos;s giant soybean market",
+      "link": "https://www.cnbc.com/2026/06/23/us-fights-with-brazil-for-chinas-giant-soybean-market.html",
+      "pubDate": "Tue, 23 Jun 2026 09:43:57 GMT"
+    },
+    {
+      "title": "China&apos;s 618 shopping festival growth slows sharply as consumer spending malaise persists",
+      "link": "https://www.cnbc.com/2026/06/23/china-618-shopping-festival-sales-growth-consumer-spending-slowdown-syntun.html",
+      "pubDate": "Tue, 23 Jun 2026 03:19:02 GMT"
+    },
     {
       "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
       "link": "https://www.cnbc.com/2026/06/22/zuckerberg-seen-as-next-to-join-trillionaire-club-say-kalshi-traders.html",
@@ -82,16 +92,6 @@
       "title": "Michael Burry says he&apos;s tempted to bet against SpaceX, but passes on expensive options",
       "link": "https://www.cnbc.com/2026/06/16/michael-burry-says-hes-tempted-to-bet-against-spacex-but-passes-on-expensive-options.html",
       "pubDate": "Tue, 16 Jun 2026 20:55:45 GMT"
-    },
-    {
-      "title": "Fed Chair Warsh expected to withhold &apos;dot&apos; from central bank&apos;s interest rate outlook",
-      "link": "https://www.cnbc.com/2026/06/16/fed-chair-warsh-expected-to-withhold-dot-from-central-banks-interest-rate-outlook.html",
-      "pubDate": "Wed, 17 Jun 2026 15:23:38 GMT"
-    },
-    {
-      "title": "Prediction market traders speculate Anthropic will restore access quickly to AI model after Trump admin directed it to limit reach",
-      "link": "https://www.cnbc.com/2026/06/16/kalshi-traders-think-anthropic-will-restore-access-to-ai-model-quickly.html",
-      "pubDate": "Wed, 17 Jun 2026 13:27:05 GMT"
     }
   ]
 }
