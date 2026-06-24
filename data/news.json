@@ -1,8 +1,38 @@
 {
-  "generatedAt": "2026-06-23T15:18:36.610Z",
+  "generatedAt": "2026-06-24T14:49:09.851Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Kalshi CEO says prediction market thinking about IPO, but not for this year",
+      "link": "https://www.cnbc.com/2026/06/24/kalshi-ceo-says-company-thinking-about-ipo-but-not-for-this-year-.html",
+      "pubDate": "Wed, 24 Jun 2026 13:42:28 GMT"
+    },
+    {
+      "title": "New meme stock Wendy&apos;s soars 30% with trading halted at one point",
+      "link": "https://www.cnbc.com/2026/06/24/wendys-stock-soars-as-meme-traders-target-another-turnaround-play.html",
+      "pubDate": "Wed, 24 Jun 2026 14:41:23 GMT"
+    },
+    {
+      "title": "CFTC sues Kentucky over actions against prediction markets, making it first red state to face federal scrutiny",
+      "link": "https://www.cnbc.com/2026/06/23/cftc-sues-kentucky-over-actions-against-prediction-markets.html",
+      "pubDate": "Tue, 23 Jun 2026 21:31:49 GMT"
+    },
+    {
+      "title": "Mamdani-backed candidates are likely to win in NYC primaries, prediction market traders expect",
+      "link": "https://www.cnbc.com/2026/06/23/prediction-market-traders-expectations-for-the-ny-primaries.html",
+      "pubDate": "Tue, 23 Jun 2026 20:25:32 GMT"
+    },
+    {
+      "title": "SpaceX seeing some interest from short sellers, but many still afraid to bet against Musk",
+      "link": "https://www.cnbc.com/2026/06/23/spacex-seeing-interest-from-short-sellers-but-most-afraid-to-go-against-musk.html",
+      "pubDate": "Tue, 23 Jun 2026 19:33:07 GMT"
+    },
+    {
+      "title": "Meta is building a prediction markets app. These stocks fell in response",
+      "link": "https://www.cnbc.com/2026/06/23/nyt-says-meta-builds-prediction-market-these-stocks-are-falling.html",
+      "pubDate": "Tue, 23 Jun 2026 20:09:00 GMT"
+    },
     {
       "title": "U.S. fights with Brazil for China&apos;s giant soybean market",
       "link": "https://www.cnbc.com/2026/06/23/us-fights-with-brazil-for-chinas-giant-soybean-market.html",
@@ -62,36 +92,6 @@
       "title": "Chairman Warsh abstains from giving rate forecast as several members signal a hike in 2026",
       "link": "https://www.cnbc.com/2026/06/17/fed-projections-call-for-a-rate-hike-in-2026-but-chairman-warsh-likely-abstained.html",
       "pubDate": "Wed, 17 Jun 2026 19:27:43 GMT"
-    },
-    {
-      "title": "Chairman Warsh drastically alters Fed rate statement. Here&apos;s what&apos;s changed",
-      "link": "https://www.cnbc.com/2026/06/17/june-fed-meeting-redline.html",
-      "pubDate": "Thu, 18 Jun 2026 22:03:50 GMT"
-    },
-    {
-      "title": "Fed holds rates steady, pares down statement to remove cutting bias",
-      "link": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html",
-      "pubDate": "Wed, 17 Jun 2026 21:42:28 GMT"
-    },
-    {
-      "title": "More united Fed board seen at Warsh&apos;s first meeting, according to Kalshi traders",
-      "link": "https://www.cnbc.com/2026/06/17/more-united-fed-board-seen-at-warshs-first-meeting-according-to-kalshi-traders.html",
-      "pubDate": "Wed, 17 Jun 2026 16:54:08 GMT"
-    },
-    {
-      "title": "CME Group&apos;s Terry Duffy to step down in 2027, CFO Lynne Fitzpatrick to become CEO",
-      "link": "https://www.cnbc.com/2026/06/17/cme-groups-terry-duffy-to-step-down-in-2027-cfo-lynne-fitzpatrick-to-become-ceo.html",
-      "pubDate": "Wed, 17 Jun 2026 14:29:11 GMT"
-    },
-    {
-      "title": "China pushes for AI safety as G7 summit wraps up without Beijing",
-      "link": "https://www.cnbc.com/2026/06/17/china-pushes-for-ai-safety-as-g7-summit-wraps-up-without-beijing.html",
-      "pubDate": "Wed, 17 Jun 2026 08:04:21 GMT"
-    },
-    {
-      "title": "Michael Burry says he&apos;s tempted to bet against SpaceX, but passes on expensive options",
-      "link": "https://www.cnbc.com/2026/06/16/michael-burry-says-hes-tempted-to-bet-against-spacex-but-passes-on-expensive-options.html",
-      "pubDate": "Tue, 16 Jun 2026 20:55:45 GMT"
     }
   ]
 }
