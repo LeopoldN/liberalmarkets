@@ -1,27 +1,52 @@
 {
-  "generatedAt": "2026-06-24T14:49:09.851Z",
+  "generatedAt": "2026-06-25T14:48:48.086Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "JPMorgan names Doug Petno and Troy Rohrbaugh co-presidents as longtime exec Marianne Lake exits",
+      "link": "https://www.cnbc.com/2026/06/25/jpmorgan-chase-co-presidents-lake-exits.html",
+      "pubDate": "Thu, 25 Jun 2026 14:16:23 GMT"
+    },
+    {
+      "title": "Wendy&apos;s turns lower as meme rally fails to extend to a second day",
+      "link": "https://www.cnbc.com/2026/06/25/wendys-shares-soar-for-a-second-day-as-retail-investors-pile-into-their-new-meme-darling.html",
+      "pubDate": "Thu, 25 Jun 2026 14:30:58 GMT"
+    },
+    {
+      "title": "Investors still seek a human touch even with AI tools at hand: HSBC",
+      "link": "https://www.cnbc.com/2026/06/25/investors-still-seek-a-human-touch-even-with-ai-tools-at-hand-hsbc-.html",
+      "pubDate": "Thu, 25 Jun 2026 03:22:15 GMT"
+    },
+    {
+      "title": "JPMorgan Chase unveils $50 billion buyback, Goldman Sachs raises dividend after Fed stress test",
+      "link": "https://www.cnbc.com/2026/06/24/jpmorgan-goldman-sachs-fed-stress-test.html",
+      "pubDate": "Wed, 24 Jun 2026 21:42:05 GMT"
+    },
+    {
+      "title": "Federal Reserve says U.S. banks can withstand $708 billion in losses amid overhaul of capital rules",
+      "link": "https://www.cnbc.com/2026/06/24/federal-reserve-stress-test-us-banks.html",
+      "pubDate": "Wed, 24 Jun 2026 21:19:27 GMT"
+    },
     {
       "title": "Kalshi CEO says prediction market thinking about IPO, but not for this year",
       "link": "https://www.cnbc.com/2026/06/24/kalshi-ceo-says-company-thinking-about-ipo-but-not-for-this-year-.html",
       "pubDate": "Wed, 24 Jun 2026 13:42:28 GMT"
     },
     {
-      "title": "New meme stock Wendy&apos;s soars 30% with trading halted at one point",
+      "title": "New meme stock Wendy&apos;s soars more than 25% with trading halted at one point",
       "link": "https://www.cnbc.com/2026/06/24/wendys-stock-soars-as-meme-traders-target-another-turnaround-play.html",
-      "pubDate": "Wed, 24 Jun 2026 14:41:23 GMT"
+      "pubDate": "Wed, 24 Jun 2026 20:29:22 GMT"
     },
     {
-      "title": "CFTC sues Kentucky over actions against prediction markets, making it first red state to face federal scrutiny",
+      "title": "CFTC sues Kentucky over prediction markets enforcement actions; first &apos;red state&apos; to face such  lawsuit",
       "link": "https://www.cnbc.com/2026/06/23/cftc-sues-kentucky-over-actions-against-prediction-markets.html",
-      "pubDate": "Tue, 23 Jun 2026 21:31:49 GMT"
+      "pubDate": "Wed, 24 Jun 2026 15:23:23 GMT"
     },
     {
       "title": "Mamdani-backed candidates are likely to win in NYC primaries, prediction market traders expect",
       "link": "https://www.cnbc.com/2026/06/23/prediction-market-traders-expectations-for-the-ny-primaries.html",
-      "pubDate": "Tue, 23 Jun 2026 20:25:32 GMT"
+      "pubDate": "Wed, 24 Jun 2026 15:33:40 GMT"
     },
     {
       "title": "SpaceX seeing some interest from short sellers, but many still afraid to bet against Musk",
@@ -67,31 +92,6 @@
       "title": "Bitcoin&apos;s future as revolutionary as the smartphone, according to CoinDesk",
       "link": "https://www.cnbc.com/2026/06/20/bitcoin-as-revolutionary-as-smartphone-according-to-coindesk.html",
       "pubDate": "Sat, 20 Jun 2026 15:00:01 GMT"
-    },
-    {
-      "title": "The riskiest SpaceX stock trade of all had a big first week",
-      "link": "https://www.cnbc.com/2026/06/19/spacex-stock-risk-buy-sell.html",
-      "pubDate": "Fri, 19 Jun 2026 15:53:11 GMT"
-    },
-    {
-      "title": "The average SpaceX buyer post-IPO is almost under water after two-day slide",
-      "link": "https://www.cnbc.com/2026/06/18/the-average-spacex-buyer-post-ipo-is-almost-under-water-after-two-day-slide.html",
-      "pubDate": "Mon, 22 Jun 2026 16:32:51 GMT"
-    },
-    {
-      "title": "Markets are set for a much more hawkish Warsh Fed than expected",
-      "link": "https://www.cnbc.com/2026/06/18/markets-are-set-for-a-much-more-hawkish-warsh-fed-than-expected.html",
-      "pubDate": "Thu, 18 Jun 2026 18:04:41 GMT"
-    },
-    {
-      "title": "Jeffrey Gundlach says Fed&apos;s Warsh is not going to be the &apos;easy money&apos; chairman many hoped for",
-      "link": "https://www.cnbc.com/2026/06/17/jeffrey-gundlach-says-feds-warsh-is-not-going-to-be-the-easy-money-chairman-many-hoped-for.html",
-      "pubDate": "Wed, 17 Jun 2026 20:26:56 GMT"
-    },
-    {
-      "title": "Chairman Warsh abstains from giving rate forecast as several members signal a hike in 2026",
-      "link": "https://www.cnbc.com/2026/06/17/fed-projections-call-for-a-rate-hike-in-2026-but-chairman-warsh-likely-abstained.html",
-      "pubDate": "Wed, 17 Jun 2026 19:27:43 GMT"
     }
   ]
 }
