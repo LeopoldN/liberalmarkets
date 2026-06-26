@@ -1,17 +1,42 @@
 {
-  "generatedAt": "2026-06-25T14:48:48.086Z",
+  "generatedAt": "2026-06-26T14:40:27.807Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Jeremy Grantham says this is &apos;the most expensive market in &apos;American history&apos;",
+      "link": "https://www.cnbc.com/2026/06/26/jeremy-grantham-says-this-is-the-most-expensive-market-in-american-history.html",
+      "pubDate": "Fri, 26 Jun 2026 14:36:05 GMT"
+    },
+    {
+      "title": "Warsh reaches within the Fed for latest advisory appointments",
+      "link": "https://www.cnbc.com/2026/06/26/warsh-reaches-within-the-fed-for-latest-advisory-appointments.html",
+      "pubDate": "Fri, 26 Jun 2026 13:35:59 GMT"
+    },
+    {
+      "title": "Polymarket annualized revenue surpasses $1 billion six weeks after its U.S. exchange launch",
+      "link": "https://www.cnbc.com/2026/06/26/polymarket-annualized-revenue-1-billion-us-exchange-.html",
+      "pubDate": "Fri, 26 Jun 2026 12:00:11 GMT"
+    },
+    {
+      "title": "Chicago Fed President Goolsbee says inflation is too high; Williams sees price pressures easing",
+      "link": "https://www.cnbc.com/2026/06/25/chicago-fed-president-goolsbee-says-inflation-is-too-high-calls-warsh-a-serious-guy.html",
+      "pubDate": "Thu, 25 Jun 2026 21:03:16 GMT"
+    },
+    {
+      "title": "Bond ETF flows surge in hunt for yield: &apos;Market sniffing out something here,&apos; says BlackRock exec",
+      "link": "https://www.cnbc.com/2026/06/25/inflation-fed-bond-etf-flows-surge-blackrock.html",
+      "pubDate": "Thu, 25 Jun 2026 17:29:00 GMT"
+    },
+    {
       "title": "JPMorgan names Doug Petno and Troy Rohrbaugh co-presidents as longtime exec Marianne Lake exits",
       "link": "https://www.cnbc.com/2026/06/25/jpmorgan-chase-co-presidents-lake-exits.html",
-      "pubDate": "Thu, 25 Jun 2026 14:16:23 GMT"
+      "pubDate": "Fri, 26 Jun 2026 12:32:02 GMT"
     },
     {
       "title": "Wendy&apos;s turns lower as meme rally fails to extend to a second day",
       "link": "https://www.cnbc.com/2026/06/25/wendys-shares-soar-for-a-second-day-as-retail-investors-pile-into-their-new-meme-darling.html",
-      "pubDate": "Thu, 25 Jun 2026 14:30:58 GMT"
+      "pubDate": "Thu, 25 Jun 2026 20:27:33 GMT"
     },
     {
       "title": "Investors still seek a human touch even with AI tools at hand: HSBC",
@@ -67,31 +92,6 @@
       "title": "China&apos;s 618 shopping festival growth slows sharply as consumer spending malaise persists",
       "link": "https://www.cnbc.com/2026/06/23/china-618-shopping-festival-sales-growth-consumer-spending-slowdown-syntun.html",
       "pubDate": "Tue, 23 Jun 2026 03:19:02 GMT"
-    },
-    {
-      "title": "Can anyone join Musk in the trillionaire club? Zuckerberg has best shot, according to prediction markets",
-      "link": "https://www.cnbc.com/2026/06/22/zuckerberg-seen-as-next-to-join-trillionaire-club-say-kalshi-traders.html",
-      "pubDate": "Mon, 22 Jun 2026 16:45:37 GMT"
-    },
-    {
-      "title": "Alan Greenspan, former chairman of the Fed, dies at age 100",
-      "link": "https://www.cnbc.com/2026/06/22/alan-greenspan-former-chairman-of-the-fed-dies-at-age-100.html",
-      "pubDate": "Mon, 22 Jun 2026 14:39:38 GMT"
-    },
-    {
-      "title": "&apos;Regime change but in a velvet glove&apos;: How Kevin Warsh has set out to remake the Fed",
-      "link": "https://www.cnbc.com/2026/06/21/how-kevin-warsh-has-set-out-to-remake-the-fed.html",
-      "pubDate": "Sun, 21 Jun 2026 11:14:02 GMT"
-    },
-    {
-      "title": "U.S. and Iran begin peace talks amid conflicting claims over Strait of Hormuz",
-      "link": "https://www.cnbc.com/2026/06/20/iran-reportedly-closes-strait-of-hormuz-again-raising-doubt-over-talks.html",
-      "pubDate": "Sun, 21 Jun 2026 12:16:26 GMT"
-    },
-    {
-      "title": "Bitcoin&apos;s future as revolutionary as the smartphone, according to CoinDesk",
-      "link": "https://www.cnbc.com/2026/06/20/bitcoin-as-revolutionary-as-smartphone-according-to-coindesk.html",
-      "pubDate": "Sat, 20 Jun 2026 15:00:01 GMT"
     }
   ]
 }
