@@ -1,17 +1,37 @@
 {
-  "generatedAt": "2026-06-26T14:40:27.807Z",
+  "generatedAt": "2026-06-27T14:00:05.412Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Jeremy Grantham says this is &apos;the most expensive market in &apos;American history&apos;",
+      "title": "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand",
+      "link": "https://www.cnbc.com/2026/06/26/spacex-added-to-nasdaq-100-on-hold-on-hold-on-hold.html",
+      "pubDate": "Sat, 27 Jun 2026 12:32:54 GMT"
+    },
+    {
+      "title": "CFTC is conducting an investigation into Polymarket, source says",
+      "link": "https://www.cnbc.com/2026/06/26/cftc-is-conducting-an-investigation-into-polymarket-source-says.html",
+      "pubDate": "Fri, 26 Jun 2026 18:53:17 GMT"
+    },
+    {
+      "title": "Minneapolis Fed President Neel Kashkari says he expects a rate hike this year",
+      "link": "https://www.cnbc.com/2026/06/26/minneapolis-fed-president-neel-kashkari-says-he-expects-a-rate-hike-this-year.html",
+      "pubDate": "Fri, 26 Jun 2026 16:04:42 GMT"
+    },
+    {
+      "title": "OpenAI is reportedly delaying its IPO. Here&apos;s when Kalshi traders think it will announce",
+      "link": "https://www.cnbc.com/2026/06/26/openai-ipo-timeline-delayed-kalshi-predictions.html",
+      "pubDate": "Fri, 26 Jun 2026 17:45:05 GMT"
+    },
+    {
+      "title": "Jeremy Grantham says, &apos;This is the most expensive market in American history&apos;",
       "link": "https://www.cnbc.com/2026/06/26/jeremy-grantham-says-this-is-the-most-expensive-market-in-american-history.html",
-      "pubDate": "Fri, 26 Jun 2026 14:36:05 GMT"
+      "pubDate": "Sat, 27 Jun 2026 12:22:08 GMT"
     },
     {
       "title": "Warsh reaches within the Fed for latest advisory appointments",
       "link": "https://www.cnbc.com/2026/06/26/warsh-reaches-within-the-fed-for-latest-advisory-appointments.html",
-      "pubDate": "Fri, 26 Jun 2026 13:35:59 GMT"
+      "pubDate": "Fri, 26 Jun 2026 16:52:10 GMT"
     },
     {
       "title": "Polymarket annualized revenue surpasses $1 billion six weeks after its U.S. exchange launch",
@@ -72,26 +92,6 @@
       "title": "Mamdani-backed candidates are likely to win in NYC primaries, prediction market traders expect",
       "link": "https://www.cnbc.com/2026/06/23/prediction-market-traders-expectations-for-the-ny-primaries.html",
       "pubDate": "Wed, 24 Jun 2026 15:33:40 GMT"
-    },
-    {
-      "title": "SpaceX seeing some interest from short sellers, but many still afraid to bet against Musk",
-      "link": "https://www.cnbc.com/2026/06/23/spacex-seeing-interest-from-short-sellers-but-most-afraid-to-go-against-musk.html",
-      "pubDate": "Tue, 23 Jun 2026 19:33:07 GMT"
-    },
-    {
-      "title": "Meta is building a prediction markets app. These stocks fell in response",
-      "link": "https://www.cnbc.com/2026/06/23/nyt-says-meta-builds-prediction-market-these-stocks-are-falling.html",
-      "pubDate": "Tue, 23 Jun 2026 20:09:00 GMT"
-    },
-    {
-      "title": "U.S. fights with Brazil for China&apos;s giant soybean market",
-      "link": "https://www.cnbc.com/2026/06/23/us-fights-with-brazil-for-chinas-giant-soybean-market.html",
-      "pubDate": "Tue, 23 Jun 2026 09:43:57 GMT"
-    },
-    {
-      "title": "China&apos;s 618 shopping festival growth slows sharply as consumer spending malaise persists",
-      "link": "https://www.cnbc.com/2026/06/23/china-618-shopping-festival-sales-growth-consumer-spending-slowdown-syntun.html",
-      "pubDate": "Tue, 23 Jun 2026 03:19:02 GMT"
     }
   ]
 }
