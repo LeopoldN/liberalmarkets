@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-06-27T14:00:05.412Z",
+  "generatedAt": "2026-06-28T14:06:53.218Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Why investors may want to prioritize bond markets outside the U.S.",
+      "link": "https://www.cnbc.com/2026/06/27/inflation-as-major-reason-to-invest-in-global-bond-markets.html",
+      "pubDate": "Sat, 27 Jun 2026 15:00:01 GMT"
+    },
+    {
       "title": "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand",
-      "link": "https://www.cnbc.com/2026/06/26/spacex-added-to-nasdaq-100-on-hold-on-hold-on-hold.html",
-      "pubDate": "Sat, 27 Jun 2026 12:32:54 GMT"
+      "link": "https://www.cnbc.com/2026/06/26/spacex-added-to-nasdaq-100.html",
+      "pubDate": "Sat, 27 Jun 2026 21:34:59 GMT"
     },
     {
       "title": "CFTC is conducting an investigation into Polymarket, source says",
@@ -87,11 +92,6 @@
       "title": "CFTC sues Kentucky over prediction markets enforcement actions; first &apos;red state&apos; to face such  lawsuit",
       "link": "https://www.cnbc.com/2026/06/23/cftc-sues-kentucky-over-actions-against-prediction-markets.html",
       "pubDate": "Wed, 24 Jun 2026 15:23:23 GMT"
-    },
-    {
-      "title": "Mamdani-backed candidates are likely to win in NYC primaries, prediction market traders expect",
-      "link": "https://www.cnbc.com/2026/06/23/prediction-market-traders-expectations-for-the-ny-primaries.html",
-      "pubDate": "Wed, 24 Jun 2026 15:33:40 GMT"
     }
   ]
 }
