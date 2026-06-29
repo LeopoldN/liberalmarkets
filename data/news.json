@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-06-28T14:06:53.218Z",
+  "generatedAt": "2026-06-29T16:03:12.011Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "China&apos;s economy picks up in June on rebounding U.S. exports, analysts say",
+      "link": "https://www.cnbc.com/2026/06/29/china-economy-june-trade-exports-manufacturing-tariffs-iran-war-consumption-ai-technology-.html",
+      "pubDate": "Mon, 29 Jun 2026 10:00:02 GMT"
+    },
     {
       "title": "Why investors may want to prioritize bond markets outside the U.S.",
       "link": "https://www.cnbc.com/2026/06/27/inflation-as-major-reason-to-invest-in-global-bond-markets.html",
@@ -11,7 +16,7 @@
     {
       "title": "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand",
       "link": "https://www.cnbc.com/2026/06/26/spacex-added-to-nasdaq-100.html",
-      "pubDate": "Sat, 27 Jun 2026 21:34:59 GMT"
+      "pubDate": "Mon, 29 Jun 2026 13:50:19 GMT"
     },
     {
       "title": "CFTC is conducting an investigation into Polymarket, source says",
@@ -87,11 +92,6 @@
       "title": "New meme stock Wendy&apos;s soars more than 25% with trading halted at one point",
       "link": "https://www.cnbc.com/2026/06/24/wendys-stock-soars-as-meme-traders-target-another-turnaround-play.html",
       "pubDate": "Wed, 24 Jun 2026 20:29:22 GMT"
-    },
-    {
-      "title": "CFTC sues Kentucky over prediction markets enforcement actions; first &apos;red state&apos; to face such  lawsuit",
-      "link": "https://www.cnbc.com/2026/06/23/cftc-sues-kentucky-over-actions-against-prediction-markets.html",
-      "pubDate": "Wed, 24 Jun 2026 15:23:23 GMT"
     }
   ]
 }
