@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-06-29T16:03:12.011Z",
+  "generatedAt": "2026-06-30T14:36:46.118Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Small-cap stocks enjoy their best first half in 35 years. Here&apos;s what&apos;s driving it",
+      "link": "https://www.cnbc.com/2026/06/30/small-cap-stocks-enjoy-best-first-half-since-1991-as-ai-trade-expands.html",
+      "pubDate": "Tue, 30 Jun 2026 13:04:02 GMT"
+    },
     {
       "title": "China&apos;s economy picks up in June on rebounding U.S. exports, analysts say",
       "link": "https://www.cnbc.com/2026/06/29/china-economy-june-trade-exports-manufacturing-tariffs-iran-war-consumption-ai-technology-.html",
@@ -87,11 +92,6 @@
       "title": "Kalshi CEO says prediction market thinking about IPO, but not for this year",
       "link": "https://www.cnbc.com/2026/06/24/kalshi-ceo-says-company-thinking-about-ipo-but-not-for-this-year-.html",
       "pubDate": "Wed, 24 Jun 2026 13:42:28 GMT"
-    },
-    {
-      "title": "New meme stock Wendy&apos;s soars more than 25% with trading halted at one point",
-      "link": "https://www.cnbc.com/2026/06/24/wendys-stock-soars-as-meme-traders-target-another-turnaround-play.html",
-      "pubDate": "Wed, 24 Jun 2026 20:29:22 GMT"
     }
   ]
 }
