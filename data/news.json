@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-06-30T14:36:46.118Z",
+  "generatedAt": "2026-07-01T14:52:42.256Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Xi touts China Communist Party&apos;s global influence in speech marking 105th anniversary",
+      "link": "https://www.cnbc.com/2026/07/01/china-xi-jinping-ccp-105th-anniversary-global-influence-taiwan.html",
+      "pubDate": "Wed, 01 Jul 2026 07:07:57 GMT"
+    },
+    {
+      "title": "China-linked actors target more than technology as AI competition with U.S. intensifies",
+      "link": "https://www.cnbc.com/2026/07/01/china-ai-cyberattacks-startups-insider-risks-espionage.html",
+      "pubDate": "Tue, 30 Jun 2026 23:27:41 GMT"
+    },
+    {
+      "title": "Michael Burry says he&apos;s shorting Caterpillar for the first time after it nearly doubled in the AI-driven rally of 2026",
+      "link": "https://www.cnbc.com/2026/06/30/burry-shorts-caterpillar-after-it-nearly-doubled-in-ai-rally-of-2026.html",
+      "pubDate": "Wed, 01 Jul 2026 14:13:44 GMT"
+    },
+    {
+      "title": "Cleveland Fed President Hammack says AI could fuel inflation, rate hikes may be necessary",
+      "link": "https://www.cnbc.com/2026/06/30/cleveland-fed-president-hammack-sees-ai-fueling-inflation-says-rate-hikes-may-be-necessary.html",
+      "pubDate": "Tue, 30 Jun 2026 18:27:17 GMT"
+    },
+    {
       "title": "Small-cap stocks enjoy their best first half in 35 years. Here&apos;s what&apos;s driving it",
       "link": "https://www.cnbc.com/2026/06/30/small-cap-stocks-enjoy-best-first-half-since-1991-as-ai-trade-expands.html",
-      "pubDate": "Tue, 30 Jun 2026 13:04:02 GMT"
+      "pubDate": "Tue, 30 Jun 2026 23:32:51 GMT"
     },
     {
       "title": "China&apos;s economy picks up in June on rebounding U.S. exports, analysts say",
@@ -72,26 +92,6 @@
       "title": "Wendy&apos;s turns lower as meme rally fails to extend to a second day",
       "link": "https://www.cnbc.com/2026/06/25/wendys-shares-soar-for-a-second-day-as-retail-investors-pile-into-their-new-meme-darling.html",
       "pubDate": "Thu, 25 Jun 2026 20:27:33 GMT"
-    },
-    {
-      "title": "Investors still seek a human touch even with AI tools at hand: HSBC",
-      "link": "https://www.cnbc.com/2026/06/25/investors-still-seek-a-human-touch-even-with-ai-tools-at-hand-hsbc-.html",
-      "pubDate": "Thu, 25 Jun 2026 03:22:15 GMT"
-    },
-    {
-      "title": "JPMorgan Chase unveils $50 billion buyback, Goldman Sachs raises dividend after Fed stress test",
-      "link": "https://www.cnbc.com/2026/06/24/jpmorgan-goldman-sachs-fed-stress-test.html",
-      "pubDate": "Wed, 24 Jun 2026 21:42:05 GMT"
-    },
-    {
-      "title": "Federal Reserve says U.S. banks can withstand $708 billion in losses amid overhaul of capital rules",
-      "link": "https://www.cnbc.com/2026/06/24/federal-reserve-stress-test-us-banks.html",
-      "pubDate": "Wed, 24 Jun 2026 21:19:27 GMT"
-    },
-    {
-      "title": "Kalshi CEO says prediction market thinking about IPO, but not for this year",
-      "link": "https://www.cnbc.com/2026/06/24/kalshi-ceo-says-company-thinking-about-ipo-but-not-for-this-year-.html",
-      "pubDate": "Wed, 24 Jun 2026 13:42:28 GMT"
     }
   ]
 }
