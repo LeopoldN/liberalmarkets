@@ -1,8 +1,33 @@
 {
-  "generatedAt": "2026-07-01T14:52:42.256Z",
+  "generatedAt": "2026-07-02T14:23:04.170Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "SpaceX may emerge as ultimate blueprint for new wave of mega-cap IPOs",
+      "link": "https://www.cnbc.com/2026/07/02/spacex-as-ultimate-blueprint-for-new-wave-of-mega-cap-ipos.html",
+      "pubDate": "Thu, 02 Jul 2026 11:00:01 GMT"
+    },
+    {
+      "title": "Alibaba-affiliate Ant Group rushes into humanoid robots with a dozen deals in 18 months",
+      "link": "https://www.cnbc.com/2026/07/01/alibaba-affiliate-ant-group-enters-the-humanoid-robot-market-with-12-deals.html",
+      "pubDate": "Thu, 02 Jul 2026 01:00:01 GMT"
+    },
+    {
+      "title": "Prolific tech analyst Dan Ives is exiting Wedbush for a new venture",
+      "link": "https://www.cnbc.com/2026/07/01/tech-analyst-dan-ives-is-exiting-wedbush-for-a-new-venture.html",
+      "pubDate": "Wed, 01 Jul 2026 20:40:10 GMT"
+    },
+    {
+      "title": "Warsh faces multiple alternative inflation signs as Fed charts new course",
+      "link": "https://www.cnbc.com/2026/07/01/warsh-faces-multiple-alternative-inflation-signs-as-fed-charts-new-course.html",
+      "pubDate": "Wed, 01 Jul 2026 17:20:22 GMT"
+    },
+    {
+      "title": "Inflation peaked in May as energy prices fell in June, Kalshi traders think",
+      "link": "https://www.cnbc.com/2026/07/01/inflation-peaked-in-may-as-energy-prices-fell-in-june-kalshi-traders-think.html",
+      "pubDate": "Wed, 01 Jul 2026 17:32:16 GMT"
+    },
     {
       "title": "Xi touts China Communist Party&apos;s global influence in speech marking 105th anniversary",
       "link": "https://www.cnbc.com/2026/07/01/china-xi-jinping-ccp-105th-anniversary-global-influence-taiwan.html",
@@ -11,7 +36,7 @@
     {
       "title": "China-linked actors target more than technology as AI competition with U.S. intensifies",
       "link": "https://www.cnbc.com/2026/07/01/china-ai-cyberattacks-startups-insider-risks-espionage.html",
-      "pubDate": "Tue, 30 Jun 2026 23:27:41 GMT"
+      "pubDate": "Wed, 01 Jul 2026 22:55:00 GMT"
     },
     {
       "title": "Michael Burry says he&apos;s shorting Caterpillar for the first time after it nearly doubled in the AI-driven rally of 2026",
@@ -67,31 +92,6 @@
       "title": "Warsh reaches within the Fed for latest advisory appointments",
       "link": "https://www.cnbc.com/2026/06/26/warsh-reaches-within-the-fed-for-latest-advisory-appointments.html",
       "pubDate": "Fri, 26 Jun 2026 16:52:10 GMT"
-    },
-    {
-      "title": "Polymarket annualized revenue surpasses $1 billion six weeks after its U.S. exchange launch",
-      "link": "https://www.cnbc.com/2026/06/26/polymarket-annualized-revenue-1-billion-us-exchange-.html",
-      "pubDate": "Fri, 26 Jun 2026 12:00:11 GMT"
-    },
-    {
-      "title": "Chicago Fed President Goolsbee says inflation is too high; Williams sees price pressures easing",
-      "link": "https://www.cnbc.com/2026/06/25/chicago-fed-president-goolsbee-says-inflation-is-too-high-calls-warsh-a-serious-guy.html",
-      "pubDate": "Thu, 25 Jun 2026 21:03:16 GMT"
-    },
-    {
-      "title": "Bond ETF flows surge in hunt for yield: &apos;Market sniffing out something here,&apos; says BlackRock exec",
-      "link": "https://www.cnbc.com/2026/06/25/inflation-fed-bond-etf-flows-surge-blackrock.html",
-      "pubDate": "Thu, 25 Jun 2026 17:29:00 GMT"
-    },
-    {
-      "title": "JPMorgan names Doug Petno and Troy Rohrbaugh co-presidents as longtime exec Marianne Lake exits",
-      "link": "https://www.cnbc.com/2026/06/25/jpmorgan-chase-co-presidents-lake-exits.html",
-      "pubDate": "Fri, 26 Jun 2026 12:32:02 GMT"
-    },
-    {
-      "title": "Wendy&apos;s turns lower as meme rally fails to extend to a second day",
-      "link": "https://www.cnbc.com/2026/06/25/wendys-shares-soar-for-a-second-day-as-retail-investors-pile-into-their-new-meme-darling.html",
-      "pubDate": "Thu, 25 Jun 2026 20:27:33 GMT"
     }
   ]
 }
