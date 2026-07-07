@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-07-06T15:51:09.621Z",
+  "generatedAt": "2026-07-07T14:55:27.840Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Bitcoin rebounds after Trump says he&apos;s become &apos;a big crypto guy&apos;",
+      "link": "https://www.cnbc.com/2026/07/06/bitcoin-rebounds-after-trump-says-hes-become-a-big-crypto-guy.html",
+      "pubDate": "Mon, 06 Jul 2026 17:24:42 GMT"
+    },
     {
       "title": "Klarna seeks U.S. bank charter in latest push beyond buy now, pay later",
       "link": "https://www.cnbc.com/2026/07/06/klarna-seeks-us-bank-charter-in-push-beyond-buy-now-pay-later.html",
@@ -87,11 +92,6 @@
       "title": "SpaceX to join the Nasdaq-100 in a fast-tracked process that will drive huge ETF buying demand",
       "link": "https://www.cnbc.com/2026/06/26/spacex-added-to-nasdaq-100.html",
       "pubDate": "Mon, 29 Jun 2026 13:50:19 GMT"
-    },
-    {
-      "title": "CFTC is conducting an investigation into Polymarket, source says",
-      "link": "https://www.cnbc.com/2026/06/26/cftc-is-conducting-an-investigation-into-polymarket-source-says.html",
-      "pubDate": "Fri, 26 Jun 2026 18:53:17 GMT"
     }
   ]
 }
