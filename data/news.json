@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-07-08T14:33:24.877Z",
+  "generatedAt": "2026-07-09T15:28:22.800Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Goldman Sachs wins $70 billion in asset management deals with Verizon, Lockheed Martin",
+      "link": "https://www.cnbc.com/2026/07/09/goldman-sachs-asset-management-deals-verizon-lockheed-martin.html",
+      "pubDate": "Thu, 09 Jul 2026 15:00:50 GMT"
+    },
+    {
+      "title": "Michael Burry bets on sportsbooks DraftKings and Flutter, sees prediction markets curbed by regulation",
+      "link": "https://www.cnbc.com/2026/07/08/michael-burry-bets-on-sportsbooks-draftkings-flutter.html",
+      "pubDate": "Wed, 08 Jul 2026 21:59:27 GMT"
+    },
+    {
+      "title": "Fed officials were split on direction of interest rates at last meeting, minutes show",
+      "link": "https://www.cnbc.com/2026/07/08/fed-minutes-june-2026-.html",
+      "pubDate": "Wed, 08 Jul 2026 19:05:47 GMT"
+    },
+    {
       "title": "Strait of Hormuz traffic won&apos;t return to normal until 2027 after latest setback, Kalshi traders predict",
       "link": "https://www.cnbc.com/2026/07/08/kalshi-traders-think-hormuz-traffic-wont-return-to-normal-this-year.html",
-      "pubDate": "Wed, 08 Jul 2026 14:04:56 GMT"
+      "pubDate": "Wed, 08 Jul 2026 17:45:24 GMT"
     },
     {
       "title": "Fed meeting minutes to show &apos;family fight&apos; over rates. The squabble could drag on for a while",
@@ -16,7 +31,7 @@
     {
       "title": "China warns about AI risks with Anthropic&apos;s Claude Code",
       "link": "https://www.cnbc.com/2026/07/08/china-anthropic-ai-claude-code-backdoor-security-threat.html",
-      "pubDate": "Wed, 08 Jul 2026 08:14:28 GMT"
+      "pubDate": "Thu, 09 Jul 2026 01:24:02 GMT"
     },
     {
       "title": "Traders on Kalshi think the Nasdaq-100 will end 2026 above 30,000, predicting a cooler second half of the year",
@@ -77,21 +92,6 @@
       "title": "Inflation peaked in May as energy prices fell in June, Kalshi traders think",
       "link": "https://www.cnbc.com/2026/07/01/inflation-peaked-in-may-as-energy-prices-fell-in-june-kalshi-traders-think.html",
       "pubDate": "Wed, 01 Jul 2026 17:32:16 GMT"
-    },
-    {
-      "title": "Xi touts China Communist Party&apos;s global influence in speech marking 105th anniversary",
-      "link": "https://www.cnbc.com/2026/07/01/china-xi-jinping-ccp-105th-anniversary-global-influence-taiwan.html",
-      "pubDate": "Wed, 01 Jul 2026 07:07:57 GMT"
-    },
-    {
-      "title": "China-linked actors target more than technology as AI competition with U.S. intensifies",
-      "link": "https://www.cnbc.com/2026/07/01/china-ai-cyberattacks-startups-insider-risks-espionage.html",
-      "pubDate": "Wed, 01 Jul 2026 22:55:00 GMT"
-    },
-    {
-      "title": "Michael Burry says he&apos;s shorting Caterpillar for the first time after it nearly doubled in the AI-driven rally of 2026",
-      "link": "https://www.cnbc.com/2026/06/30/burry-shorts-caterpillar-after-it-nearly-doubled-in-ai-rally-of-2026.html",
-      "pubDate": "Wed, 01 Jul 2026 14:13:44 GMT"
     }
   ]
 }
