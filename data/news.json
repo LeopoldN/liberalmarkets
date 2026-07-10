@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-07-09T15:28:22.800Z",
+  "generatedAt": "2026-07-10T14:45:47.058Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Kevin Warsh names members of his Federal Reserve task forces, including Marc Andreessen, Doug McMillon",
+      "link": "https://www.cnbc.com/2026/07/09/kevin-warsh-names-members-of-his-federal-reserve-task-forces-including-marc-andreessen-doug-mcmillon.html",
+      "pubDate": "Thu, 09 Jul 2026 19:53:20 GMT"
+    },
+    {
+      "title": "Prediction markets spark insider trading concerns. Here&apos;s how Goldman and other companies are responding",
+      "link": "https://www.cnbc.com/2026/07/09/prediction-markets-spark-insider-trading-fears-how-firms-are-responding.html",
+      "pubDate": "Fri, 10 Jul 2026 14:22:40 GMT"
+    },
+    {
+      "title": "Kalshi traders think gas prices will stay higher for longer as U.S.-Iran tensions heat back up",
+      "link": "https://www.cnbc.com/2026/07/09/kalshi-traders-see-higher-gas-prices-lasting-through-election-day.html",
+      "pubDate": "Thu, 09 Jul 2026 19:44:17 GMT"
+    },
     {
       "title": "Goldman Sachs wins $70 billion in asset management deals with Verizon, Lockheed Martin",
       "link": "https://www.cnbc.com/2026/07/09/goldman-sachs-asset-management-deals-verizon-lockheed-martin.html",
@@ -77,21 +92,6 @@
       "title": "Alibaba-affiliate Ant Group rushes into humanoid robots with a dozen deals in 18 months",
       "link": "https://www.cnbc.com/2026/07/01/alibaba-affiliate-ant-group-enters-the-humanoid-robot-market-with-12-deals.html",
       "pubDate": "Thu, 02 Jul 2026 01:00:01 GMT"
-    },
-    {
-      "title": "Prolific tech analyst Dan Ives is exiting Wedbush for a new venture",
-      "link": "https://www.cnbc.com/2026/07/01/tech-analyst-dan-ives-is-exiting-wedbush-for-a-new-venture.html",
-      "pubDate": "Wed, 01 Jul 2026 20:40:10 GMT"
-    },
-    {
-      "title": "Warsh faces multiple alternative inflation signs as Fed charts new course",
-      "link": "https://www.cnbc.com/2026/07/01/warsh-faces-multiple-alternative-inflation-signs-as-fed-charts-new-course.html",
-      "pubDate": "Wed, 01 Jul 2026 17:20:22 GMT"
-    },
-    {
-      "title": "Inflation peaked in May as energy prices fell in June, Kalshi traders think",
-      "link": "https://www.cnbc.com/2026/07/01/inflation-peaked-in-may-as-energy-prices-fell-in-june-kalshi-traders-think.html",
-      "pubDate": "Wed, 01 Jul 2026 17:32:16 GMT"
     }
   ]
 }
