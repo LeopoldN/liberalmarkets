@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-07-11T13:44:03.647Z",
+  "generatedAt": "2026-07-12T13:45:44.147Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "These underperforming trades could yield big returns over next six months",
+      "link": "https://www.cnbc.com/2026/07/11/mag-7-and-software-could-boost-portfolio-in-second-half-etf-action.html",
+      "pubDate": "Sat, 11 Jul 2026 15:00:01 GMT"
+    },
     {
       "title": "Kevin Warsh names members of his Federal Reserve task forces, including Marc Andreessen, Doug McMillon",
       "link": "https://www.cnbc.com/2026/07/09/kevin-warsh-names-members-of-his-federal-reserve-task-forces-including-marc-andreessen-doug-mcmillon.html",
@@ -87,11 +92,6 @@
       "title": "SpaceX may emerge as ultimate blueprint for new wave of mega-cap IPOs",
       "link": "https://www.cnbc.com/2026/07/02/spacex-as-ultimate-blueprint-for-new-wave-of-mega-cap-ipos.html",
       "pubDate": "Thu, 02 Jul 2026 11:00:01 GMT"
-    },
-    {
-      "title": "Alibaba-affiliate Ant Group rushes into humanoid robots with a dozen deals in 18 months",
-      "link": "https://www.cnbc.com/2026/07/01/alibaba-affiliate-ant-group-enters-the-humanoid-robot-market-with-12-deals.html",
-      "pubDate": "Thu, 02 Jul 2026 01:00:01 GMT"
     }
   ]
 }
