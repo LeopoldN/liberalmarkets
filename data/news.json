@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-07-12T13:45:44.147Z",
+  "generatedAt": "2026-07-13T14:52:55.619Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Big banks poised to report booming revenue propelled by SpaceX IPO, Iran war volatility",
+      "link": "https://www.cnbc.com/2026/07/13/bank-earnings-jpmorgan-chase-goldman-sachs-bank-of-america.html",
+      "pubDate": "Mon, 13 Jul 2026 13:19:24 GMT"
+    },
+    {
+      "title": "Kalshi launches &apos;Pro&apos; product for users trading multiple markets at same time, perpetual futures",
+      "link": "https://www.cnbc.com/2026/07/13/kalshi-launches-pro-product-for-users-trading-multiple-markets-at-same-time-perpetual-futures.html",
+      "pubDate": "Mon, 13 Jul 2026 11:36:00 GMT"
+    },
     {
       "title": "These underperforming trades could yield big returns over next six months",
       "link": "https://www.cnbc.com/2026/07/11/mag-7-and-software-could-boost-portfolio-in-second-half-etf-action.html",
@@ -82,16 +92,6 @@
       "title": "Don&apos;t throw away your shot to speak to an AI Alexander Hamilton at Boston&apos;s new finance museum",
       "link": "https://www.cnbc.com/2026/07/03/the-museum-of-american-finance-opens-its-doors-in-boston.html",
       "pubDate": "Fri, 03 Jul 2026 13:16:09 GMT"
-    },
-    {
-      "title": "Citadel&apos;s hedge funds post broad first-half gains, top performing strategy sidesteps quant selloff",
-      "link": "https://www.cnbc.com/2026/07/02/citadels-hedge-funds-post-broad-first-half-gains.html",
-      "pubDate": "Thu, 02 Jul 2026 21:11:03 GMT"
-    },
-    {
-      "title": "SpaceX may emerge as ultimate blueprint for new wave of mega-cap IPOs",
-      "link": "https://www.cnbc.com/2026/07/02/spacex-as-ultimate-blueprint-for-new-wave-of-mega-cap-ipos.html",
-      "pubDate": "Thu, 02 Jul 2026 11:00:01 GMT"
     }
   ]
 }
