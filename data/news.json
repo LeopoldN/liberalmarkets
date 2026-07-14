@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-07-13T14:52:55.619Z",
+  "generatedAt": "2026-07-14T14:03:39.659Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Warsh promises inflation will be a &apos;thing of the past,&apos; cites benefits of AI investment boom",
+      "link": "https://www.cnbc.com/2026/07/14/warsh-promises-inflation-will-be-a-thing-of-the-past-cites-benefits-of-ai-investment-boom.html",
+      "pubDate": "Tue, 14 Jul 2026 12:30:21 GMT"
+    },
+    {
+      "title": "Warren Buffett excludes Gates Foundation from his annual donations of Berkshire stock",
+      "link": "https://www.cnbc.com/2026/07/14/warren-buffett-excludes-gates-foundation-from-his-annual-donations-of-berkshire-stock.html",
+      "pubDate": "Tue, 14 Jul 2026 12:41:13 GMT"
+    },
+    {
+      "title": "&apos;Listing is a must&apos;: Chinese humanoid startups are rushing to launch IPOs",
+      "link": "https://www.cnbc.com/2026/07/13/chinese-humanoid-startups-ipo-limx-unitree.html",
+      "pubDate": "Tue, 14 Jul 2026 00:31:01 GMT"
+    },
+    {
+      "title": "A July rate hike from the Fed? The odds are rising",
+      "link": "https://www.cnbc.com/2026/07/13/-a-july-rate-hike-from-the-fed-the-odds-are-rising.html",
+      "pubDate": "Mon, 13 Jul 2026 17:07:51 GMT"
+    },
+    {
+      "title": "Waller says Fed shouldn&apos;t &apos;fight the last war&apos; on inflation but warns hikes still possible",
+      "link": "https://www.cnbc.com/2026/07/13/waller-says-fed-shouldnt-fight-the-last-war-on-inflation-but-warns-hikes-still-possible.html",
+      "pubDate": "Mon, 13 Jul 2026 19:15:25 GMT"
+    },
+    {
       "title": "Big banks poised to report booming revenue propelled by SpaceX IPO, Iran war volatility",
       "link": "https://www.cnbc.com/2026/07/13/bank-earnings-jpmorgan-chase-goldman-sachs-bank-of-america.html",
-      "pubDate": "Mon, 13 Jul 2026 13:19:24 GMT"
+      "pubDate": "Tue, 14 Jul 2026 09:18:28 GMT"
     },
     {
       "title": "Kalshi launches &apos;Pro&apos; product for users trading multiple markets at same time, perpetual futures",
@@ -67,31 +92,6 @@
       "title": "Traders on Kalshi think the Nasdaq-100 will end 2026 above 30,000, predicting a cooler second half of the year",
       "link": "https://www.cnbc.com/2026/07/07/traders-on-kalshi-think-the-nasdaq-100-will-end-2026-above-30000.html",
       "pubDate": "Tue, 07 Jul 2026 21:15:26 GMT"
-    },
-    {
-      "title": "Buy these quality, low-stress stocks for the summer, says Jefferies",
-      "link": "https://www.cnbc.com/2026/07/07/buy-these-quality-low-stress-stocks-for-the-summer-says-jefferies.html",
-      "pubDate": "Tue, 07 Jul 2026 15:45:33 GMT"
-    },
-    {
-      "title": "Bitcoin rebounds after Trump says he&apos;s become &apos;a big crypto guy&apos;",
-      "link": "https://www.cnbc.com/2026/07/06/bitcoin-rebounds-after-trump-says-hes-become-a-big-crypto-guy.html",
-      "pubDate": "Mon, 06 Jul 2026 17:24:42 GMT"
-    },
-    {
-      "title": "Klarna seeks U.S. bank charter in latest push beyond buy now, pay later",
-      "link": "https://www.cnbc.com/2026/07/06/klarna-seeks-us-bank-charter-in-push-beyond-buy-now-pay-later.html",
-      "pubDate": "Mon, 06 Jul 2026 15:36:23 GMT"
-    },
-    {
-      "title": "The World Cup sends prediction market volumes soaring to record highs",
-      "link": "https://www.cnbc.com/2026/07/04/2026-fifa-world-cup-boosts-prediction-market-volumes.html",
-      "pubDate": "Sat, 04 Jul 2026 12:54:04 GMT"
-    },
-    {
-      "title": "Don&apos;t throw away your shot to speak to an AI Alexander Hamilton at Boston&apos;s new finance museum",
-      "link": "https://www.cnbc.com/2026/07/03/the-museum-of-american-finance-opens-its-doors-in-boston.html",
-      "pubDate": "Fri, 03 Jul 2026 13:16:09 GMT"
     }
   ]
 }
