@@ -1,17 +1,67 @@
 {
-  "generatedAt": "2026-07-14T14:03:39.659Z",
+  "generatedAt": "2026-07-15T14:00:36.901Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Warsh promises inflation will be a &apos;thing of the past,&apos; cites benefits of AI investment boom",
+      "title": "Watch Fed Chairman Kevin Warsh testify live before Senate banking committee",
+      "link": "https://www.cnbc.com/2026/07/15/watch-fed-chairman-kevin-warsh-testify-live-before-senate-banking-committee.html",
+      "pubDate": "Wed, 15 Jul 2026 13:47:51 GMT"
+    },
+    {
+      "title": "‘Arsenal of democracy’: Jamie Dimon announces $24 million effort to boost American shipbuilding",
+      "link": "https://www.cnbc.com/2026/07/15/jamie-dimon-jpmorgan-chase-defense.html",
+      "pubDate": "Wed, 15 Jul 2026 13:45:27 GMT"
+    },
+    {
+      "title": "Warren Buffett on the market today: &apos;It&apos;s tough to find values when everybody is preferring gambling&apos;",
+      "link": "https://www.cnbc.com/2026/07/15/warren-buffett-on-the-market-today-its-tough-to-find-values-when-everybody-is-preferring-gambling.html",
+      "pubDate": "Wed, 15 Jul 2026 13:48:15 GMT"
+    },
+    {
+      "title": "New York Fed President Williams says inflation has peaked, rates &apos;well positioned&apos;",
+      "link": "https://www.cnbc.com/2026/07/15/new-york-fed-president-williams-says-inflation-has-peaked-rates-well-positioned.html",
+      "pubDate": "Wed, 15 Jul 2026 12:46:58 GMT"
+    },
+    {
+      "title": "Buffett says Trump&apos;s pick of Kevin Warsh for Fed chair was &apos;good choice&apos;",
+      "link": "https://www.cnbc.com/2026/07/15/buffett-says-trumps-pick-of-kevin-warsh-for-fed-chair-was-good-choice.html",
+      "pubDate": "Wed, 15 Jul 2026 12:21:33 GMT"
+    },
+    {
+      "title": "Star analyst Dan Ives forms Yorkville Ives merchant bank after leaving Wedbush",
+      "link": "https://www.cnbc.com/2026/07/15/star-analyst-dan-ives-forms-yorkville-ives-merchant-bank-after-leaving-wedbush.html",
+      "pubDate": "Wed, 15 Jul 2026 11:51:55 GMT"
+    },
+    {
+      "title": "Warren Buffett calls Bill Gates&apos; actions with Epstein &apos;distasteful,&apos; but people make mistakes",
+      "link": "https://www.cnbc.com/2026/07/15/warren-buffett-calls-bill-gates-actions-with-epstein-distasteful-but-people-make-mistakes.html",
+      "pubDate": "Wed, 15 Jul 2026 12:10:02 GMT"
+    },
+    {
+      "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
+      "link": "https://www.cnbc.com/2026/07/15/morgan-stanley-ms-earnings-q2-2026-.html",
+      "pubDate": "Wed, 15 Jul 2026 13:44:44 GMT"
+    },
+    {
+      "title": "The AI boom just found two new winners: Goldman Sachs and JPMorgan Chase",
+      "link": "https://www.cnbc.com/2026/07/14/goldman-sachs-and-jpmorgan-chase-are-emerging-as-ai-winners.html",
+      "pubDate": "Tue, 14 Jul 2026 19:50:48 GMT"
+    },
+    {
+      "title": "Watch: Fed Chairman Kevin Warsh testifies to House Financial Services committee",
+      "link": "https://www.cnbc.com/2026/07/14/watch-fed-chairman-kevin-warsh-testify-live-to-house-financial-services-committee.html",
+      "pubDate": "Tue, 14 Jul 2026 17:26:37 GMT"
+    },
+    {
+      "title": "Warsh pledges Fed policy &apos;regime change&apos; to rid inflation &apos;tax&apos; on American people",
       "link": "https://www.cnbc.com/2026/07/14/warsh-promises-inflation-will-be-a-thing-of-the-past-cites-benefits-of-ai-investment-boom.html",
-      "pubDate": "Tue, 14 Jul 2026 12:30:21 GMT"
+      "pubDate": "Tue, 14 Jul 2026 17:29:07 GMT"
     },
     {
       "title": "Warren Buffett excludes Gates Foundation from his annual donations of Berkshire stock",
       "link": "https://www.cnbc.com/2026/07/14/warren-buffett-excludes-gates-foundation-from-his-annual-donations-of-berkshire-stock.html",
-      "pubDate": "Tue, 14 Jul 2026 12:41:13 GMT"
+      "pubDate": "Tue, 14 Jul 2026 18:34:31 GMT"
     },
     {
       "title": "&apos;Listing is a must&apos;: Chinese humanoid startups are rushing to launch IPOs",
@@ -42,56 +92,6 @@
       "title": "These underperforming trades could yield big returns over next six months",
       "link": "https://www.cnbc.com/2026/07/11/mag-7-and-software-could-boost-portfolio-in-second-half-etf-action.html",
       "pubDate": "Sat, 11 Jul 2026 15:00:01 GMT"
-    },
-    {
-      "title": "Kevin Warsh names members of his Federal Reserve task forces, including Marc Andreessen, Doug McMillon",
-      "link": "https://www.cnbc.com/2026/07/09/kevin-warsh-names-members-of-his-federal-reserve-task-forces-including-marc-andreessen-doug-mcmillon.html",
-      "pubDate": "Thu, 09 Jul 2026 19:53:20 GMT"
-    },
-    {
-      "title": "Prediction markets spark insider trading concerns. Here&apos;s how Goldman and other companies are responding",
-      "link": "https://www.cnbc.com/2026/07/09/prediction-markets-spark-insider-trading-fears-how-firms-are-responding.html",
-      "pubDate": "Fri, 10 Jul 2026 14:22:40 GMT"
-    },
-    {
-      "title": "Kalshi traders think gas prices will stay higher for longer as U.S.-Iran tensions heat back up",
-      "link": "https://www.cnbc.com/2026/07/09/kalshi-traders-see-higher-gas-prices-lasting-through-election-day.html",
-      "pubDate": "Thu, 09 Jul 2026 19:44:17 GMT"
-    },
-    {
-      "title": "Goldman Sachs wins $70 billion in asset management deals with Verizon, Lockheed Martin",
-      "link": "https://www.cnbc.com/2026/07/09/goldman-sachs-asset-management-deals-verizon-lockheed-martin.html",
-      "pubDate": "Thu, 09 Jul 2026 15:00:50 GMT"
-    },
-    {
-      "title": "Michael Burry bets on sportsbooks DraftKings and Flutter, sees prediction markets curbed by regulation",
-      "link": "https://www.cnbc.com/2026/07/08/michael-burry-bets-on-sportsbooks-draftkings-flutter.html",
-      "pubDate": "Wed, 08 Jul 2026 21:59:27 GMT"
-    },
-    {
-      "title": "Fed officials were split on direction of interest rates at last meeting, minutes show",
-      "link": "https://www.cnbc.com/2026/07/08/fed-minutes-june-2026-.html",
-      "pubDate": "Wed, 08 Jul 2026 19:05:47 GMT"
-    },
-    {
-      "title": "Strait of Hormuz traffic won&apos;t return to normal until 2027 after latest setback, Kalshi traders predict",
-      "link": "https://www.cnbc.com/2026/07/08/kalshi-traders-think-hormuz-traffic-wont-return-to-normal-this-year.html",
-      "pubDate": "Wed, 08 Jul 2026 17:45:24 GMT"
-    },
-    {
-      "title": "Fed meeting minutes to show &apos;family fight&apos; over rates. The squabble could drag on for a while",
-      "link": "https://www.cnbc.com/2026/07/08/with-minutes-due-feds-family-fight-over-interest-rates-could-drag-on.html",
-      "pubDate": "Wed, 08 Jul 2026 14:28:30 GMT"
-    },
-    {
-      "title": "China warns about AI risks with Anthropic&apos;s Claude Code",
-      "link": "https://www.cnbc.com/2026/07/08/china-anthropic-ai-claude-code-backdoor-security-threat.html",
-      "pubDate": "Thu, 09 Jul 2026 01:24:02 GMT"
-    },
-    {
-      "title": "Traders on Kalshi think the Nasdaq-100 will end 2026 above 30,000, predicting a cooler second half of the year",
-      "link": "https://www.cnbc.com/2026/07/07/traders-on-kalshi-think-the-nasdaq-100-will-end-2026-above-30000.html",
-      "pubDate": "Tue, 07 Jul 2026 21:15:26 GMT"
     }
   ]
 }
