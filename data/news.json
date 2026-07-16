@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-07-15T14:00:36.901Z",
+  "generatedAt": "2026-07-16T14:12:07.454Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Watch Fed Chairman Kevin Warsh testify live before Senate banking committee",
+      "title": "Sen. Warren says Trump&apos;s CFPB overhaul has cost Americans $26.5 billion",
+      "link": "https://www.cnbc.com/2026/07/16/trumps-cfpb-overhaul-cost-americans-26point5-billion-sen-warren-says.html",
+      "pubDate": "Thu, 16 Jul 2026 14:04:30 GMT"
+    },
+    {
+      "title": "Anthropic moves closer to mega-IPO as bankers line up investor meetings",
+      "link": "https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html",
+      "pubDate": "Wed, 15 Jul 2026 17:22:51 GMT"
+    },
+    {
+      "title": "Fed Chairman Kevin Warsh&apos;s testimony to Senate banking committee hits on economy, interest rates",
       "link": "https://www.cnbc.com/2026/07/15/watch-fed-chairman-kevin-warsh-testify-live-before-senate-banking-committee.html",
-      "pubDate": "Wed, 15 Jul 2026 13:47:51 GMT"
+      "pubDate": "Wed, 15 Jul 2026 22:05:14 GMT"
     },
     {
       "title": "‘Arsenal of democracy’: Jamie Dimon announces $24 million effort to boost American shipbuilding",
@@ -16,12 +26,12 @@
     {
       "title": "Warren Buffett on the market today: &apos;It&apos;s tough to find values when everybody is preferring gambling&apos;",
       "link": "https://www.cnbc.com/2026/07/15/warren-buffett-on-the-market-today-its-tough-to-find-values-when-everybody-is-preferring-gambling.html",
-      "pubDate": "Wed, 15 Jul 2026 13:48:15 GMT"
+      "pubDate": "Wed, 15 Jul 2026 15:08:40 GMT"
     },
     {
       "title": "New York Fed President Williams says inflation has peaked, rates &apos;well positioned&apos;",
       "link": "https://www.cnbc.com/2026/07/15/new-york-fed-president-williams-says-inflation-has-peaked-rates-well-positioned.html",
-      "pubDate": "Wed, 15 Jul 2026 12:46:58 GMT"
+      "pubDate": "Wed, 15 Jul 2026 17:31:41 GMT"
     },
     {
       "title": "Buffett says Trump&apos;s pick of Kevin Warsh for Fed chair was &apos;good choice&apos;",
@@ -34,9 +44,9 @@
       "pubDate": "Wed, 15 Jul 2026 11:51:55 GMT"
     },
     {
-      "title": "Warren Buffett calls Bill Gates&apos; actions with Epstein &apos;distasteful,&apos; but people make mistakes",
+      "title": "Warren Buffett calls Bill Gates&apos; actions with Epstein &apos;distasteful&apos; but says people make mistakes",
       "link": "https://www.cnbc.com/2026/07/15/warren-buffett-calls-bill-gates-actions-with-epstein-distasteful-but-people-make-mistakes.html",
-      "pubDate": "Wed, 15 Jul 2026 12:10:02 GMT"
+      "pubDate": "Wed, 15 Jul 2026 14:58:54 GMT"
     },
     {
       "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
@@ -46,7 +56,7 @@
     {
       "title": "The AI boom just found two new winners: Goldman Sachs and JPMorgan Chase",
       "link": "https://www.cnbc.com/2026/07/14/goldman-sachs-and-jpmorgan-chase-are-emerging-as-ai-winners.html",
-      "pubDate": "Tue, 14 Jul 2026 19:50:48 GMT"
+      "pubDate": "Wed, 15 Jul 2026 18:45:53 GMT"
     },
     {
       "title": "Watch: Fed Chairman Kevin Warsh testifies to House Financial Services committee",
@@ -82,16 +92,6 @@
       "title": "Big banks poised to report booming revenue propelled by SpaceX IPO, Iran war volatility",
       "link": "https://www.cnbc.com/2026/07/13/bank-earnings-jpmorgan-chase-goldman-sachs-bank-of-america.html",
       "pubDate": "Tue, 14 Jul 2026 09:18:28 GMT"
-    },
-    {
-      "title": "Kalshi launches &apos;Pro&apos; product for users trading multiple markets at same time, perpetual futures",
-      "link": "https://www.cnbc.com/2026/07/13/kalshi-launches-pro-product-for-users-trading-multiple-markets-at-same-time-perpetual-futures.html",
-      "pubDate": "Mon, 13 Jul 2026 11:36:00 GMT"
-    },
-    {
-      "title": "These underperforming trades could yield big returns over next six months",
-      "link": "https://www.cnbc.com/2026/07/11/mag-7-and-software-could-boost-portfolio-in-second-half-etf-action.html",
-      "pubDate": "Sat, 11 Jul 2026 15:00:01 GMT"
     }
   ]
 }
