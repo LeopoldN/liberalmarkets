@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-07-16T14:12:07.454Z",
+  "generatedAt": "2026-07-17T13:55:46.832Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "India&apos;s biggest IPO this year rakes in bids worth $31 billion, powered by institutional frenzy",
+      "link": "https://www.cnbc.com/2026/07/17/indias-biggest-ipo-this-year-rakes-in-bids-worth-31-billion-powered-by-institutional-frenzy.html",
+      "pubDate": "Fri, 17 Jul 2026 03:54:47 GMT"
+    },
+    {
+      "title": "Dallas Fed President Logan calls for &apos;modestly&apos; higher interest rates",
+      "link": "https://www.cnbc.com/2026/07/16/dallas-fed-president-logan-calls-for-modestly-higher-interest-rates.html",
+      "pubDate": "Thu, 16 Jul 2026 18:50:42 GMT"
+    },
+    {
+      "title": "Short sellers load up against SpaceX as stock drops below IPO price",
+      "link": "https://www.cnbc.com/2026/07/16/short-sellers-load-up-against-spacex-as-stock-retreats-back-to-ipo-price.html",
+      "pubDate": "Thu, 16 Jul 2026 18:12:21 GMT"
+    },
+    {
       "title": "Sen. Warren says Trump&apos;s CFPB overhaul has cost Americans $26.5 billion",
       "link": "https://www.cnbc.com/2026/07/16/trumps-cfpb-overhaul-cost-americans-26point5-billion-sen-warren-says.html",
-      "pubDate": "Thu, 16 Jul 2026 14:04:30 GMT"
+      "pubDate": "Thu, 16 Jul 2026 16:36:23 GMT"
     },
     {
       "title": "Anthropic moves closer to mega-IPO as bankers line up investor meetings",
@@ -41,12 +56,12 @@
     {
       "title": "Star analyst Dan Ives forms Yorkville Ives merchant bank after leaving Wedbush",
       "link": "https://www.cnbc.com/2026/07/15/star-analyst-dan-ives-forms-yorkville-ives-merchant-bank-after-leaving-wedbush.html",
-      "pubDate": "Wed, 15 Jul 2026 11:51:55 GMT"
+      "pubDate": "Thu, 16 Jul 2026 14:24:47 GMT"
     },
     {
       "title": "Warren Buffett calls Bill Gates&apos; actions with Epstein &apos;distasteful&apos; but says people make mistakes",
       "link": "https://www.cnbc.com/2026/07/15/warren-buffett-calls-bill-gates-actions-with-epstein-distasteful-but-people-make-mistakes.html",
-      "pubDate": "Wed, 15 Jul 2026 14:58:54 GMT"
+      "pubDate": "Thu, 16 Jul 2026 17:07:36 GMT"
     },
     {
       "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
@@ -77,21 +92,6 @@
       "title": "&apos;Listing is a must&apos;: Chinese humanoid startups are rushing to launch IPOs",
       "link": "https://www.cnbc.com/2026/07/13/chinese-humanoid-startups-ipo-limx-unitree.html",
       "pubDate": "Tue, 14 Jul 2026 00:31:01 GMT"
-    },
-    {
-      "title": "A July rate hike from the Fed? The odds are rising",
-      "link": "https://www.cnbc.com/2026/07/13/-a-july-rate-hike-from-the-fed-the-odds-are-rising.html",
-      "pubDate": "Mon, 13 Jul 2026 17:07:51 GMT"
-    },
-    {
-      "title": "Waller says Fed shouldn&apos;t &apos;fight the last war&apos; on inflation but warns hikes still possible",
-      "link": "https://www.cnbc.com/2026/07/13/waller-says-fed-shouldnt-fight-the-last-war-on-inflation-but-warns-hikes-still-possible.html",
-      "pubDate": "Mon, 13 Jul 2026 19:15:25 GMT"
-    },
-    {
-      "title": "Big banks poised to report booming revenue propelled by SpaceX IPO, Iran war volatility",
-      "link": "https://www.cnbc.com/2026/07/13/bank-earnings-jpmorgan-chase-goldman-sachs-bank-of-america.html",
-      "pubDate": "Tue, 14 Jul 2026 09:18:28 GMT"
     }
   ]
 }
