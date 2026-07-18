@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-07-17T13:55:46.832Z",
+  "generatedAt": "2026-07-18T13:39:06.400Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "&apos;WarshGPT&apos;: How Wall Street is adapting to the Fed&apos;s new era of communication",
+      "link": "https://www.cnbc.com/2026/07/18/warshgpt-federal-reserve-communications-task-force-warsh.html",
+      "pubDate": "Sat, 18 Jul 2026 11:31:03 GMT"
+    },
     {
       "title": "India&apos;s biggest IPO this year rakes in bids worth $31 billion, powered by institutional frenzy",
       "link": "https://www.cnbc.com/2026/07/17/indias-biggest-ipo-this-year-rakes-in-bids-worth-31-billion-powered-by-institutional-frenzy.html",
@@ -87,11 +92,6 @@
       "title": "Warren Buffett excludes Gates Foundation from his annual donations of Berkshire stock",
       "link": "https://www.cnbc.com/2026/07/14/warren-buffett-excludes-gates-foundation-from-his-annual-donations-of-berkshire-stock.html",
       "pubDate": "Tue, 14 Jul 2026 18:34:31 GMT"
-    },
-    {
-      "title": "&apos;Listing is a must&apos;: Chinese humanoid startups are rushing to launch IPOs",
-      "link": "https://www.cnbc.com/2026/07/13/chinese-humanoid-startups-ipo-limx-unitree.html",
-      "pubDate": "Tue, 14 Jul 2026 00:31:01 GMT"
     }
   ]
 }
