@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-07-19T13:41:57.392Z",
+  "generatedAt": "2026-07-20T14:25:42.099Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Coinbase trading results may fall short of expectations, according to prediction markets",
+      "link": "https://www.cnbc.com/2026/07/20/kalshi-traders-think-coinbases-trading-volume-will-fall-again.html",
+      "pubDate": "Mon, 20 Jul 2026 12:41:50 GMT"
+    },
+    {
+      "title": "China&apos;s car market heads for worst year since 2021 as sales plunge 20%",
+      "link": "https://www.cnbc.com/2026/07/20/china-automotive-car-worst-year-sales-fall-20percent.html",
+      "pubDate": "Mon, 20 Jul 2026 08:43:40 GMT"
+    },
     {
       "title": "Kalshi adds 3 million new users as prediction market capitalizes on the World Cup",
       "link": "https://www.cnbc.com/2026/07/19/kalshi-adds-3-million-new-users-as-company-capitalizes-on-world-cup.html",
@@ -82,16 +92,6 @@
       "title": "The AI boom just found two new winners: Goldman Sachs and JPMorgan Chase",
       "link": "https://www.cnbc.com/2026/07/14/goldman-sachs-and-jpmorgan-chase-are-emerging-as-ai-winners.html",
       "pubDate": "Wed, 15 Jul 2026 18:45:53 GMT"
-    },
-    {
-      "title": "Watch: Fed Chairman Kevin Warsh testifies to House Financial Services committee",
-      "link": "https://www.cnbc.com/2026/07/14/watch-fed-chairman-kevin-warsh-testify-live-to-house-financial-services-committee.html",
-      "pubDate": "Tue, 14 Jul 2026 17:26:37 GMT"
-    },
-    {
-      "title": "Warsh pledges Fed policy &apos;regime change&apos; to rid inflation &apos;tax&apos; on American people",
-      "link": "https://www.cnbc.com/2026/07/14/warsh-promises-inflation-will-be-a-thing-of-the-past-cites-benefits-of-ai-investment-boom.html",
-      "pubDate": "Tue, 14 Jul 2026 17:29:07 GMT"
     }
   ]
 }
