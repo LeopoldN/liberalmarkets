@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-07-20T14:25:42.099Z",
+  "generatedAt": "2026-07-21T14:11:16.589Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "As the U.S.-Iran war heats up again, these parts of the stock market and economy could be affected",
+      "link": "https://www.cnbc.com/2026/07/21/iran-war-economy-markets-trump.html",
+      "pubDate": "Tue, 21 Jul 2026 11:56:14 GMT"
+    },
+    {
+      "title": "Jamie Dimon says markets underestimate risks and he wouldn&apos;t buy stocks or Treasurys at current prices",
+      "link": "https://www.cnbc.com/2026/07/21/jpmorgan-chase-ceo-jamie-dimon-market-risk.html",
+      "pubDate": "Tue, 21 Jul 2026 10:24:07 GMT"
+    },
+    {
+      "title": "Capital One bet big on Discover. Now it must prove the gamble was worth it",
+      "link": "https://www.cnbc.com/2026/07/20/capital-one-bet-big-on-discover-now-it-must-prove-the-gamble-was-worth-it-.html",
+      "pubDate": "Mon, 20 Jul 2026 18:14:23 GMT"
+    },
     {
       "title": "Coinbase trading results may fall short of expectations, according to prediction markets",
       "link": "https://www.cnbc.com/2026/07/20/kalshi-traders-think-coinbases-trading-volume-will-fall-again.html",
@@ -77,21 +92,6 @@
       "title": "Star analyst Dan Ives forms Yorkville Ives merchant bank after leaving Wedbush",
       "link": "https://www.cnbc.com/2026/07/15/star-analyst-dan-ives-forms-yorkville-ives-merchant-bank-after-leaving-wedbush.html",
       "pubDate": "Thu, 16 Jul 2026 14:24:47 GMT"
-    },
-    {
-      "title": "Warren Buffett calls Bill Gates&apos; actions with Epstein &apos;distasteful&apos; but says people make mistakes",
-      "link": "https://www.cnbc.com/2026/07/15/warren-buffett-calls-bill-gates-actions-with-epstein-distasteful-but-people-make-mistakes.html",
-      "pubDate": "Thu, 16 Jul 2026 17:07:36 GMT"
-    },
-    {
-      "title": "Morgan Stanley posts record quarterly revenue and profit as equities trading surges 69%",
-      "link": "https://www.cnbc.com/2026/07/15/morgan-stanley-ms-earnings-q2-2026-.html",
-      "pubDate": "Wed, 15 Jul 2026 13:44:44 GMT"
-    },
-    {
-      "title": "The AI boom just found two new winners: Goldman Sachs and JPMorgan Chase",
-      "link": "https://www.cnbc.com/2026/07/14/goldman-sachs-and-jpmorgan-chase-are-emerging-as-ai-winners.html",
-      "pubDate": "Wed, 15 Jul 2026 18:45:53 GMT"
     }
   ]
 }
