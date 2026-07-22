@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-07-21T14:11:16.589Z",
+  "generatedAt": "2026-07-22T14:14:54.935Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Kalshi launches election hub for prediction markets ahead of midterms",
+      "link": "https://www.cnbc.com/2026/07/22/kalshi-launches-election-hub-for-prediction-markets-ahead-of-midterms.html",
+      "pubDate": "Wed, 22 Jul 2026 14:07:47 GMT"
+    },
+    {
+      "title": "Goldman Sachs creates private markets platform as rich investors seek the next SpaceX and Stripe",
+      "link": "https://www.cnbc.com/2026/07/21/goldman-sachs-private-markets-platform.html",
+      "pubDate": "Tue, 21 Jul 2026 20:51:34 GMT"
+    },
+    {
+      "title": "Bets against SpaceX grow to 32% of float as Elon Musk warns short sellers won&apos;t survive",
+      "link": "https://www.cnbc.com/2026/07/21/bets-against-spacex-grow-to-32percent-of-float-as-elon-musk-warns-short-sellers-wont-survive.html",
+      "pubDate": "Tue, 21 Jul 2026 20:01:39 GMT"
+    },
+    {
       "title": "As the U.S.-Iran war heats up again, these parts of the stock market and economy could be affected",
       "link": "https://www.cnbc.com/2026/07/21/iran-war-economy-markets-trump.html",
-      "pubDate": "Tue, 21 Jul 2026 11:56:14 GMT"
+      "pubDate": "Tue, 21 Jul 2026 14:37:08 GMT"
     },
     {
       "title": "Jamie Dimon says markets underestimate risks and he wouldn&apos;t buy stocks or Treasurys at current prices",
@@ -77,21 +92,6 @@
       "title": "Warren Buffett on the market today: &apos;It&apos;s tough to find values when everybody is preferring gambling&apos;",
       "link": "https://www.cnbc.com/2026/07/15/warren-buffett-on-the-market-today-its-tough-to-find-values-when-everybody-is-preferring-gambling.html",
       "pubDate": "Wed, 15 Jul 2026 15:08:40 GMT"
-    },
-    {
-      "title": "New York Fed President Williams says inflation has peaked, rates &apos;well positioned&apos;",
-      "link": "https://www.cnbc.com/2026/07/15/new-york-fed-president-williams-says-inflation-has-peaked-rates-well-positioned.html",
-      "pubDate": "Wed, 15 Jul 2026 17:31:41 GMT"
-    },
-    {
-      "title": "Buffett says Trump&apos;s pick of Kevin Warsh for Fed chair was &apos;good choice&apos;",
-      "link": "https://www.cnbc.com/2026/07/15/buffett-says-trumps-pick-of-kevin-warsh-for-fed-chair-was-good-choice.html",
-      "pubDate": "Wed, 15 Jul 2026 12:21:33 GMT"
-    },
-    {
-      "title": "Star analyst Dan Ives forms Yorkville Ives merchant bank after leaving Wedbush",
-      "link": "https://www.cnbc.com/2026/07/15/star-analyst-dan-ives-forms-yorkville-ives-merchant-bank-after-leaving-wedbush.html",
-      "pubDate": "Thu, 16 Jul 2026 14:24:47 GMT"
     }
   ]
 }
