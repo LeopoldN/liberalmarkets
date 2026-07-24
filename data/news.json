@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-07-23T14:23:39.038Z",
+  "generatedAt": "2026-07-24T14:02:46.498Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "U.S., other nations back open-source AI with &apos;strong security&apos; at China summit",
+      "link": "https://www.cnbc.com/2026/07/24/china-ai-open-source-apec.html",
+      "pubDate": "Fri, 24 Jul 2026 02:42:21 GMT"
+    },
+    {
+      "title": "Odds of Federal Reserve rate hike surge as oil prices rip higher",
+      "link": "https://www.cnbc.com/2026/07/23/fed-interest-rate-odds-oil-jobless-claims.html",
+      "pubDate": "Thu, 23 Jul 2026 20:25:28 GMT"
+    },
+    {
+      "title": "JPMorgan report finds dramatic jump in AI-themed ETFs — despite rough quarter",
+      "link": "https://www.cnbc.com/2026/07/23/jpmorgan-dramatic-jump-in-ai-etfs-despite-rough-quarter.html",
+      "pubDate": "Thu, 23 Jul 2026 17:10:06 GMT"
+    },
+    {
+      "title": "Shortsighted stock market can no longer brush off war: &apos;It&apos;s too hard to ignore $100 oil&apos;",
+      "link": "https://www.cnbc.com/2026/07/23/short-sighted-stock-market-can-no-longer-brush-off-war-investors-say.html",
+      "pubDate": "Thu, 23 Jul 2026 19:19:01 GMT"
+    },
     {
       "title": "John Paulson says we are in the early stages of a long-term bull market for gold",
       "link": "https://www.cnbc.com/2026/07/22/john-paulson-says-we-are-in-early-stages-of-a-long-term-bull-market-for-gold.html",
@@ -72,26 +92,6 @@
       "title": "Short sellers load up against SpaceX as stock drops below IPO price",
       "link": "https://www.cnbc.com/2026/07/16/short-sellers-load-up-against-spacex-as-stock-retreats-back-to-ipo-price.html",
       "pubDate": "Thu, 16 Jul 2026 18:12:21 GMT"
-    },
-    {
-      "title": "Sen. Warren says Trump&apos;s CFPB overhaul has cost Americans $26.5 billion",
-      "link": "https://www.cnbc.com/2026/07/16/trumps-cfpb-overhaul-cost-americans-26point5-billion-sen-warren-says.html",
-      "pubDate": "Thu, 16 Jul 2026 16:36:23 GMT"
-    },
-    {
-      "title": "Anthropic moves closer to mega-IPO as bankers line up investor meetings",
-      "link": "https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html",
-      "pubDate": "Wed, 15 Jul 2026 17:22:51 GMT"
-    },
-    {
-      "title": "Fed Chairman Kevin Warsh&apos;s testimony to Senate banking committee hits on economy, interest rates",
-      "link": "https://www.cnbc.com/2026/07/15/watch-fed-chairman-kevin-warsh-testify-live-before-senate-banking-committee.html",
-      "pubDate": "Wed, 15 Jul 2026 22:05:14 GMT"
-    },
-    {
-      "title": "‘Arsenal of democracy’: Jamie Dimon announces $24 million effort to boost American shipbuilding",
-      "link": "https://www.cnbc.com/2026/07/15/jamie-dimon-jpmorgan-chase-defense.html",
-      "pubDate": "Wed, 15 Jul 2026 13:45:27 GMT"
     }
   ]
 }
