@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-07-24T14:02:46.498Z",
+  "generatedAt": "2026-07-25T13:53:38.536Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Moody&apos;s says &apos;unprecedented&apos; AI spending threatens credit quality of Amazon, Meta, Alphabet and others",
+      "link": "https://www.cnbc.com/2026/07/24/moodys-ai-spending-credit-quality-amazon-meta-alphabet.html",
+      "pubDate": "Fri, 24 Jul 2026 22:43:56 GMT"
+    },
     {
       "title": "U.S., other nations back open-source AI with &apos;strong security&apos; at China summit",
       "link": "https://www.cnbc.com/2026/07/24/china-ai-open-source-apec.html",
@@ -21,7 +26,7 @@
     {
       "title": "Shortsighted stock market can no longer brush off war: &apos;It&apos;s too hard to ignore $100 oil&apos;",
       "link": "https://www.cnbc.com/2026/07/23/short-sighted-stock-market-can-no-longer-brush-off-war-investors-say.html",
-      "pubDate": "Thu, 23 Jul 2026 19:19:01 GMT"
+      "pubDate": "Fri, 24 Jul 2026 14:10:40 GMT"
     },
     {
       "title": "John Paulson says we are in the early stages of a long-term bull market for gold",
@@ -87,11 +92,6 @@
       "title": "Dallas Fed President Logan calls for &apos;modestly&apos; higher interest rates",
       "link": "https://www.cnbc.com/2026/07/16/dallas-fed-president-logan-calls-for-modestly-higher-interest-rates.html",
       "pubDate": "Thu, 16 Jul 2026 18:50:42 GMT"
-    },
-    {
-      "title": "Short sellers load up against SpaceX as stock drops below IPO price",
-      "link": "https://www.cnbc.com/2026/07/16/short-sellers-load-up-against-spacex-as-stock-retreats-back-to-ipo-price.html",
-      "pubDate": "Thu, 16 Jul 2026 18:12:21 GMT"
     }
   ]
 }
