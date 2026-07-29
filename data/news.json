@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-07-28T14:28:06.031Z",
+  "generatedAt": "2026-07-29T14:25:53.208Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "44 states are aligned on one thing in their fight against prediction markets. It&apos;s about sports wagering",
+      "link": "https://www.cnbc.com/2026/07/28/44-states-say-cftc-has-no-authority-over-sports-prediction-markets.html",
+      "pubDate": "Tue, 28 Jul 2026 18:27:43 GMT"
+    },
+    {
+      "title": "Meta likely to highlight smart glasses, avoid social media policy on upcoming earnings call, Kalshi traders say",
+      "link": "https://www.cnbc.com/2026/07/28/meta-q2-earnings-call-mentions-kalshi-market-odds-.html",
+      "pubDate": "Tue, 28 Jul 2026 17:40:03 GMT"
+    },
+    {
+      "title": "The future of Wall Street is here as startups and brokers build AI agents to trade 24/7",
+      "link": "https://www.cnbc.com/2026/07/28/ai-agents-build-to-trade-24/7-the-future-of-wall-street.html",
+      "pubDate": "Tue, 28 Jul 2026 16:16:25 GMT"
+    },
+    {
+      "title": "Visa is cutting 7% of employees in efficiency push as AI reshapes work",
+      "link": "https://www.cnbc.com/2026/07/28/visa-is-cutting-7percent-of-employees-in-efficiency-push-as-ai-reshapes-work.html",
+      "pubDate": "Tue, 28 Jul 2026 15:35:48 GMT"
+    },
     {
       "title": "CME launches single stock futures enabling investors to trade SpaceX, Micron and others 23 hours a day",
       "link": "https://www.cnbc.com/2026/07/27/cme-launches-single-stock-futures-enabling-investors-to-trade-spacex-micron-23-hours-a-day.html",
@@ -72,26 +92,6 @@
       "title": "Coinbase trading results may fall short of expectations, according to prediction markets",
       "link": "https://www.cnbc.com/2026/07/20/kalshi-traders-think-coinbases-trading-volume-will-fall-again.html",
       "pubDate": "Mon, 20 Jul 2026 12:41:50 GMT"
-    },
-    {
-      "title": "China&apos;s car market heads for worst year since 2021 as sales plunge 20%",
-      "link": "https://www.cnbc.com/2026/07/20/china-automotive-car-worst-year-sales-fall-20percent.html",
-      "pubDate": "Mon, 20 Jul 2026 08:43:40 GMT"
-    },
-    {
-      "title": "Kalshi adds 3 million new users as prediction market capitalizes on the World Cup",
-      "link": "https://www.cnbc.com/2026/07/19/kalshi-adds-3-million-new-users-as-company-capitalizes-on-world-cup.html",
-      "pubDate": "Sun, 19 Jul 2026 12:42:30 GMT"
-    },
-    {
-      "title": "&apos;WarshGPT&apos;: How Wall Street is adapting to the Fed&apos;s new era of communication",
-      "link": "https://www.cnbc.com/2026/07/18/warshgpt-federal-reserve-communications-task-force-warsh.html",
-      "pubDate": "Sat, 18 Jul 2026 18:16:42 GMT"
-    },
-    {
-      "title": "India&apos;s biggest IPO this year rakes in bids worth $31 billion, powered by institutional frenzy",
-      "link": "https://www.cnbc.com/2026/07/17/indias-biggest-ipo-this-year-rakes-in-bids-worth-31-billion-powered-by-institutional-frenzy.html",
-      "pubDate": "Fri, 17 Jul 2026 03:54:47 GMT"
     }
   ]
 }
