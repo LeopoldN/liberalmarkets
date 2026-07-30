@@ -1,8 +1,43 @@
 {
-  "generatedAt": "2026-07-29T14:25:53.208Z",
+  "generatedAt": "2026-07-30T14:23:49.015Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "China threatens retaliation against U.S. humanoid robot ban, says it &apos;severely damages&apos; relations",
+      "link": "https://www.cnbc.com/2026/07/30/china-us-robot-humanoid-ban-trump-visit.html",
+      "pubDate": "Thu, 30 Jul 2026 02:52:30 GMT"
+    },
+    {
+      "title": "The U.S. wants Asia to use its AI — but China dominates cheaper models",
+      "link": "https://www.cnbc.com/2026/07/30/us-wants-asia-to-use-its-ai-but-china-dominates-cheaper-models.html",
+      "pubDate": "Wed, 29 Jul 2026 23:10:46 GMT"
+    },
+    {
+      "title": "Here are the last times the Dow dropped by 1,000 points and what happened next",
+      "link": "https://www.cnbc.com/2026/07/29/the-last-times-the-dow-fell-1000-points-and-what-happened-next.html",
+      "pubDate": "Thu, 30 Jul 2026 13:39:36 GMT"
+    },
+    {
+      "title": "Here are the five big takeaways from this week&apos;s Fed meeting",
+      "link": "https://www.cnbc.com/2026/07/29/here-are-the-five-big-takeaways-from-this-weeks-fed-meeting.html",
+      "pubDate": "Wed, 29 Jul 2026 22:54:09 GMT"
+    },
+    {
+      "title": "Jeffrey Gundlach says the bond market is telling Warsh the Fed has to start acting on inflation",
+      "link": "https://www.cnbc.com/2026/07/29/gundlach-says-the-bond-market-is-signaling-the-fed-has-to-act-on-inflation.html",
+      "pubDate": "Wed, 29 Jul 2026 22:20:18 GMT"
+    },
+    {
+      "title": "Here&apos;s what changed in the second Fed statement under Warsh",
+      "link": "https://www.cnbc.com/2026/07/29/fed-decision-redline-heres-what-changed-in-the-second-statement-under-warsh.html",
+      "pubDate": "Thu, 30 Jul 2026 13:42:07 GMT"
+    },
+    {
+      "title": "Divided Fed holds interest rates steady, but three members voted to hike",
+      "link": "https://www.cnbc.com/2026/07/29/fed-rate-decision-july-2026.html",
+      "pubDate": "Wed, 29 Jul 2026 18:58:16 GMT"
+    },
     {
       "title": "44 states are aligned on one thing in their fight against prediction markets. It&apos;s about sports wagering",
       "link": "https://www.cnbc.com/2026/07/28/44-states-say-cftc-has-no-authority-over-sports-prediction-markets.html",
@@ -57,41 +92,6 @@
       "title": "John Paulson says we are in the early stages of a long-term bull market for gold",
       "link": "https://www.cnbc.com/2026/07/22/john-paulson-says-we-are-in-early-stages-of-a-long-term-bull-market-for-gold.html",
       "pubDate": "Wed, 22 Jul 2026 22:06:49 GMT"
-    },
-    {
-      "title": "Kalshi launches election hub for prediction markets ahead of midterms",
-      "link": "https://www.cnbc.com/2026/07/22/kalshi-launches-election-hub-for-prediction-markets-ahead-of-midterms.html",
-      "pubDate": "Wed, 22 Jul 2026 15:23:02 GMT"
-    },
-    {
-      "title": "Goldman Sachs creates private markets platform as rich investors seek the next SpaceX and Stripe",
-      "link": "https://www.cnbc.com/2026/07/21/goldman-sachs-private-markets-platform.html",
-      "pubDate": "Tue, 21 Jul 2026 20:51:34 GMT"
-    },
-    {
-      "title": "Bets against SpaceX grow to 32% of float as Elon Musk warns short sellers won&apos;t survive",
-      "link": "https://www.cnbc.com/2026/07/21/bets-against-spacex-grow-to-32percent-of-float-as-elon-musk-warns-short-sellers-wont-survive.html",
-      "pubDate": "Tue, 21 Jul 2026 20:01:39 GMT"
-    },
-    {
-      "title": "As the U.S.-Iran war heats up again, these parts of the stock market and economy could be affected",
-      "link": "https://www.cnbc.com/2026/07/21/iran-war-economy-markets-trump.html",
-      "pubDate": "Tue, 21 Jul 2026 14:37:08 GMT"
-    },
-    {
-      "title": "Jamie Dimon says markets underestimate risks and he wouldn&apos;t buy stocks or Treasurys at current prices",
-      "link": "https://www.cnbc.com/2026/07/21/jpmorgan-chase-ceo-jamie-dimon-market-risk.html",
-      "pubDate": "Tue, 21 Jul 2026 10:24:07 GMT"
-    },
-    {
-      "title": "Capital One bet big on Discover. Now it must prove the gamble was worth it",
-      "link": "https://www.cnbc.com/2026/07/20/capital-one-bet-big-on-discover-now-it-must-prove-the-gamble-was-worth-it-.html",
-      "pubDate": "Mon, 20 Jul 2026 18:14:23 GMT"
-    },
-    {
-      "title": "Coinbase trading results may fall short of expectations, according to prediction markets",
-      "link": "https://www.cnbc.com/2026/07/20/kalshi-traders-think-coinbases-trading-volume-will-fall-again.html",
-      "pubDate": "Mon, 20 Jul 2026 12:41:50 GMT"
     }
   ]
 }
