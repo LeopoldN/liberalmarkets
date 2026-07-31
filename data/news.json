@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-07-30T14:23:49.015Z",
+  "generatedAt": "2026-07-31T14:26:17.830Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "New York sues Kalshi, says prediction market is running &apos;illegal gambling operation&apos;",
+      "link": "https://www.cnbc.com/2026/07/31/new-york-sues-kalshi-claims-it-is-illegal-gambling-operation.html",
+      "pubDate": "Fri, 31 Jul 2026 14:19:53 GMT"
+    },
+    {
+      "title": "Fed officials who voted to hike rates say action is needed now against inflation",
+      "link": "https://www.cnbc.com/2026/07/31/fed-officials-who-voted-to-hike-rates-say-action-is-needed-now-against-inflation.html",
+      "pubDate": "Fri, 31 Jul 2026 14:08:08 GMT"
+    },
+    {
+      "title": "More consumer companies are staying private for longer, avoiding the IPO road",
+      "link": "https://www.cnbc.com/2026/07/31/private-consumer-companies-ipo.html",
+      "pubDate": "Fri, 31 Jul 2026 11:30:01 GMT"
+    },
+    {
+      "title": "China’s U.S.-bound shipments fall in July after brief recovery, survey shows",
+      "link": "https://www.cnbc.com/2026/07/30/china-us-exports-drop.html",
+      "pubDate": "Thu, 30 Jul 2026 22:01:01 GMT"
+    },
     {
       "title": "China threatens retaliation against U.S. humanoid robot ban, says it &apos;severely damages&apos; relations",
       "link": "https://www.cnbc.com/2026/07/30/china-us-robot-humanoid-ban-trump-visit.html",
@@ -72,26 +92,6 @@
       "title": "U.S., other nations back open-source AI with &apos;strong security&apos; at China summit",
       "link": "https://www.cnbc.com/2026/07/24/china-ai-open-source-apec.html",
       "pubDate": "Fri, 24 Jul 2026 02:42:21 GMT"
-    },
-    {
-      "title": "Odds of Federal Reserve rate hike surge as oil prices rip higher",
-      "link": "https://www.cnbc.com/2026/07/23/fed-interest-rate-odds-oil-jobless-claims.html",
-      "pubDate": "Thu, 23 Jul 2026 20:25:28 GMT"
-    },
-    {
-      "title": "JPMorgan report finds dramatic jump in AI-themed ETFs — despite rough quarter",
-      "link": "https://www.cnbc.com/2026/07/23/jpmorgan-dramatic-jump-in-ai-etfs-despite-rough-quarter.html",
-      "pubDate": "Thu, 23 Jul 2026 17:10:06 GMT"
-    },
-    {
-      "title": "Shortsighted stock market can no longer brush off war: &apos;It&apos;s too hard to ignore $100 oil&apos;",
-      "link": "https://www.cnbc.com/2026/07/23/short-sighted-stock-market-can-no-longer-brush-off-war-investors-say.html",
-      "pubDate": "Fri, 24 Jul 2026 14:10:40 GMT"
-    },
-    {
-      "title": "John Paulson says we are in the early stages of a long-term bull market for gold",
-      "link": "https://www.cnbc.com/2026/07/22/john-paulson-says-we-are-in-early-stages-of-a-long-term-bull-market-for-gold.html",
-      "pubDate": "Wed, 22 Jul 2026 22:06:49 GMT"
     }
   ]
 }
