@@ -1,17 +1,37 @@
 {
-  "generatedAt": "2026-07-31T14:26:17.830Z",
+  "generatedAt": "2026-08-01T13:44:47.874Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Investors may want to focus on front end of yield curve — as Street anticipates next Fed meetings",
+      "link": "https://www.cnbc.com/2026/07/31/top-investment-ideas-as-interest-rate-uncertainty-grips-market-.html",
+      "pubDate": "Fri, 31 Jul 2026 18:46:45 GMT"
+    },
+    {
+      "title": "Fintech broker Clear Street offers investors pre-IPO access to $188 billion AI giant Databricks",
+      "link": "https://www.cnbc.com/2026/07/31/clear-street-pre-ipo-platform-databricks.html",
+      "pubDate": "Fri, 31 Jul 2026 21:49:40 GMT"
+    },
+    {
+      "title": "Why Situational Awareness hedge fund imploded, even in a tame stock market",
+      "link": "https://www.cnbc.com/2026/07/31/why-leopold-aschenbrenner-situational-awareness-hedge-fund-imploded.html",
+      "pubDate": "Fri, 31 Jul 2026 16:14:54 GMT"
+    },
+    {
+      "title": "How Leopold Aschenbrenner built a $45 billion AI hedge fund — and lost most of it in days",
+      "link": "https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html",
+      "pubDate": "Fri, 31 Jul 2026 20:19:03 GMT"
+    },
+    {
       "title": "New York sues Kalshi, says prediction market is running &apos;illegal gambling operation&apos;",
       "link": "https://www.cnbc.com/2026/07/31/new-york-sues-kalshi-claims-it-is-illegal-gambling-operation.html",
-      "pubDate": "Fri, 31 Jul 2026 14:19:53 GMT"
+      "pubDate": "Fri, 31 Jul 2026 15:31:24 GMT"
     },
     {
       "title": "Fed officials who voted to hike rates say action is needed now against inflation",
       "link": "https://www.cnbc.com/2026/07/31/fed-officials-who-voted-to-hike-rates-say-action-is-needed-now-against-inflation.html",
-      "pubDate": "Fri, 31 Jul 2026 14:08:08 GMT"
+      "pubDate": "Fri, 31 Jul 2026 14:35:52 GMT"
     },
     {
       "title": "More consumer companies are staying private for longer, avoiding the IPO road",
@@ -72,26 +92,6 @@
       "title": "The future of Wall Street is here as startups and brokers build AI agents to trade 24/7",
       "link": "https://www.cnbc.com/2026/07/28/ai-agents-build-to-trade-24/7-the-future-of-wall-street.html",
       "pubDate": "Tue, 28 Jul 2026 16:16:25 GMT"
-    },
-    {
-      "title": "Visa is cutting 7% of employees in efficiency push as AI reshapes work",
-      "link": "https://www.cnbc.com/2026/07/28/visa-is-cutting-7percent-of-employees-in-efficiency-push-as-ai-reshapes-work.html",
-      "pubDate": "Tue, 28 Jul 2026 15:35:48 GMT"
-    },
-    {
-      "title": "CME launches single stock futures enabling investors to trade SpaceX, Micron and others 23 hours a day",
-      "link": "https://www.cnbc.com/2026/07/27/cme-launches-single-stock-futures-enabling-investors-to-trade-spacex-micron-23-hours-a-day.html",
-      "pubDate": "Mon, 27 Jul 2026 18:06:35 GMT"
-    },
-    {
-      "title": "Moody&apos;s says &apos;unprecedented&apos; AI spending threatens credit quality of Amazon, Meta, Alphabet and others",
-      "link": "https://www.cnbc.com/2026/07/24/moodys-ai-spending-credit-quality-amazon-meta-alphabet.html",
-      "pubDate": "Fri, 24 Jul 2026 22:43:56 GMT"
-    },
-    {
-      "title": "U.S., other nations back open-source AI with &apos;strong security&apos; at China summit",
-      "link": "https://www.cnbc.com/2026/07/24/china-ai-open-source-apec.html",
-      "pubDate": "Fri, 24 Jul 2026 02:42:21 GMT"
     }
   ]
 }
