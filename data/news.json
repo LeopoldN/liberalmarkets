@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-08-01T13:44:47.874Z",
+  "generatedAt": "2026-08-02T13:44:49.977Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Goldman traders are on pace for a record year. A close-up look at how they&apos;re doing it",
+      "link": "https://www.cnbc.com/2026/08/01/goldman-traders-are-on-pace-for-a-record-year-a-close-up-look-at-how-theyre-doing-it.html",
+      "pubDate": "Sat, 01 Aug 2026 20:22:15 GMT"
+    },
     {
       "title": "Investors may want to focus on front end of yield curve — as Street anticipates next Fed meetings",
       "link": "https://www.cnbc.com/2026/07/31/top-investment-ideas-as-interest-rate-uncertainty-grips-market-.html",
@@ -87,11 +92,6 @@
       "title": "Meta likely to highlight smart glasses, avoid social media policy on upcoming earnings call, Kalshi traders say",
       "link": "https://www.cnbc.com/2026/07/28/meta-q2-earnings-call-mentions-kalshi-market-odds-.html",
       "pubDate": "Tue, 28 Jul 2026 17:40:03 GMT"
-    },
-    {
-      "title": "The future of Wall Street is here as startups and brokers build AI agents to trade 24/7",
-      "link": "https://www.cnbc.com/2026/07/28/ai-agents-build-to-trade-24/7-the-future-of-wall-street.html",
-      "pubDate": "Tue, 28 Jul 2026 16:16:25 GMT"
     }
   ]
 }
