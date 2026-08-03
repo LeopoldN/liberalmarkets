@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-08-02T13:44:49.977Z",
+  "generatedAt": "2026-08-03T15:07:44.295Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Visa to buy cybersecurity firm BioCatch for $2.4 billion amid surge in AI-powered scams",
+      "link": "https://www.cnbc.com/2026/08/03/visa-buys-biocatch-fraud-detection.html",
+      "pubDate": "Mon, 03 Aug 2026 14:11:17 GMT"
+    },
+    {
+      "title": "Tourism price wars threaten to dim a rare bright spot in China&apos;s consumer spending",
+      "link": "https://www.cnbc.com/2026/08/03/china-price-demand-tourism-hotel.html",
+      "pubDate": "Mon, 03 Aug 2026 10:32:09 GMT"
+    },
+    {
       "title": "Goldman traders are on pace for a record year. A close-up look at how they&apos;re doing it",
       "link": "https://www.cnbc.com/2026/08/01/goldman-traders-are-on-pace-for-a-record-year-a-close-up-look-at-how-theyre-doing-it.html",
-      "pubDate": "Sat, 01 Aug 2026 20:22:15 GMT"
+      "pubDate": "Sun, 02 Aug 2026 13:52:33 GMT"
     },
     {
       "title": "Investors may want to focus on front end of yield curve — as Street anticipates next Fed meetings",
@@ -82,16 +92,6 @@
       "title": "Divided Fed holds interest rates steady, but three members voted to hike",
       "link": "https://www.cnbc.com/2026/07/29/fed-rate-decision-july-2026.html",
       "pubDate": "Wed, 29 Jul 2026 18:58:16 GMT"
-    },
-    {
-      "title": "44 states are aligned on one thing in their fight against prediction markets. It&apos;s about sports wagering",
-      "link": "https://www.cnbc.com/2026/07/28/44-states-say-cftc-has-no-authority-over-sports-prediction-markets.html",
-      "pubDate": "Tue, 28 Jul 2026 18:27:43 GMT"
-    },
-    {
-      "title": "Meta likely to highlight smart glasses, avoid social media policy on upcoming earnings call, Kalshi traders say",
-      "link": "https://www.cnbc.com/2026/07/28/meta-q2-earnings-call-mentions-kalshi-market-odds-.html",
-      "pubDate": "Tue, 28 Jul 2026 17:40:03 GMT"
     }
   ]
 }
