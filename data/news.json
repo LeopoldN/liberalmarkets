@@ -1,12 +1,42 @@
 {
-  "generatedAt": "2026-08-03T15:07:44.295Z",
+  "generatedAt": "2026-08-04T14:33:40.951Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Polymarket in talks for fundraising round at more than $20 billion valuation",
+      "link": "https://www.cnbc.com/2026/08/04/polymarket-seeks-fundraising-round-at-more-than-20-billion-valuation.html",
+      "pubDate": "Tue, 04 Aug 2026 13:31:19 GMT"
+    },
+    {
+      "title": "Philadelphia Fed President Paulson content with rates at current level, but keeping an open mind",
+      "link": "https://www.cnbc.com/2026/08/04/philadelphia-fed-president-paulson-content-with-current-rates-but-keeping-an-open-mind.html",
+      "pubDate": "Tue, 04 Aug 2026 13:18:15 GMT"
+    },
+    {
+      "title": "Jeff Bezos just filed to sell $4 billion in Amazon. The shares are falling",
+      "link": "https://www.cnbc.com/2026/08/04/jeff-bezos-just-filed-to-sell-4-billion-in-amazon-the-shares-are-falling.html",
+      "pubDate": "Tue, 04 Aug 2026 13:12:03 GMT"
+    },
+    {
+      "title": "Kalshi strikes partnership with compliance tech firm to help companies police insider trading",
+      "link": "https://www.cnbc.com/2026/08/04/kalshi-makes-partnership-with-comply-compliance-tech-company.html",
+      "pubDate": "Tue, 04 Aug 2026 12:05:41 GMT"
+    },
+    {
+      "title": "Kalshi traders think July jobs report will come in slightly cooler than economists’ predictions",
+      "link": "https://www.cnbc.com/2026/08/03/kalshi-traders-think-july-jobs-will-come-in-cooler-than-estimates.html",
+      "pubDate": "Mon, 03 Aug 2026 15:59:04 GMT"
+    },
+    {
+      "title": "California&apos;s diesel prices have jumped since the Iran war started, with ripple effects across the country",
+      "link": "https://www.cnbc.com/2026/08/03/californias-diesel-prices-have-jumped-since-the-iran-war-started-with-ripple-effects-across-the-country.html",
+      "pubDate": "Mon, 03 Aug 2026 19:20:25 GMT"
+    },
+    {
       "title": "Visa to buy cybersecurity firm BioCatch for $2.4 billion amid surge in AI-powered scams",
       "link": "https://www.cnbc.com/2026/08/03/visa-buys-biocatch-fraud-detection.html",
-      "pubDate": "Mon, 03 Aug 2026 14:11:17 GMT"
+      "pubDate": "Mon, 03 Aug 2026 16:44:25 GMT"
     },
     {
       "title": "Tourism price wars threaten to dim a rare bright spot in China&apos;s consumer spending",
@@ -62,36 +92,6 @@
       "title": "China threatens retaliation against U.S. humanoid robot ban, says it &apos;severely damages&apos; relations",
       "link": "https://www.cnbc.com/2026/07/30/china-us-robot-humanoid-ban-trump-visit.html",
       "pubDate": "Thu, 30 Jul 2026 02:52:30 GMT"
-    },
-    {
-      "title": "The U.S. wants Asia to use its AI — but China dominates cheaper models",
-      "link": "https://www.cnbc.com/2026/07/30/us-wants-asia-to-use-its-ai-but-china-dominates-cheaper-models.html",
-      "pubDate": "Wed, 29 Jul 2026 23:10:46 GMT"
-    },
-    {
-      "title": "Here are the last times the Dow dropped by 1,000 points and what happened next",
-      "link": "https://www.cnbc.com/2026/07/29/the-last-times-the-dow-fell-1000-points-and-what-happened-next.html",
-      "pubDate": "Thu, 30 Jul 2026 13:39:36 GMT"
-    },
-    {
-      "title": "Here are the five big takeaways from this week&apos;s Fed meeting",
-      "link": "https://www.cnbc.com/2026/07/29/here-are-the-five-big-takeaways-from-this-weeks-fed-meeting.html",
-      "pubDate": "Wed, 29 Jul 2026 22:54:09 GMT"
-    },
-    {
-      "title": "Jeffrey Gundlach says the bond market is telling Warsh the Fed has to start acting on inflation",
-      "link": "https://www.cnbc.com/2026/07/29/gundlach-says-the-bond-market-is-signaling-the-fed-has-to-act-on-inflation.html",
-      "pubDate": "Wed, 29 Jul 2026 22:20:18 GMT"
-    },
-    {
-      "title": "Here&apos;s what changed in the second Fed statement under Warsh",
-      "link": "https://www.cnbc.com/2026/07/29/fed-decision-redline-heres-what-changed-in-the-second-statement-under-warsh.html",
-      "pubDate": "Thu, 30 Jul 2026 13:42:07 GMT"
-    },
-    {
-      "title": "Divided Fed holds interest rates steady, but three members voted to hike",
-      "link": "https://www.cnbc.com/2026/07/29/fed-rate-decision-july-2026.html",
-      "pubDate": "Wed, 29 Jul 2026 18:58:16 GMT"
     }
   ]
 }
