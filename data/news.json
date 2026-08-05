@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-08-04T14:33:40.951Z",
+  "generatedAt": "2026-08-05T14:26:21.844Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Situational Awareness hedge fund meltdown was a warning shot for leveraged markets, BofA CEO says",
+      "link": "https://www.cnbc.com/2026/08/05/bofa-brian-moynihan-situational-awareness-meltdown-was-a-warning-shot.html",
+      "pubDate": "Wed, 05 Aug 2026 14:25:31 GMT"
+    },
+    {
+      "title": "Ken Griffin&apos;s Citadel posts best month in years after scooping up Situational Awareness stocks",
+      "link": "https://www.cnbc.com/2026/08/05/ken-griffins-citadel-posts-best-month-in-years-after-scooping-up-situational-awareness-stocks.html",
+      "pubDate": "Wed, 05 Aug 2026 11:13:46 GMT"
+    },
+    {
+      "title": "Michael Burry bets against rally: &apos;We are near a major top, and possible a 1987-type fall&apos;",
+      "link": "https://www.cnbc.com/2026/08/04/michael-burry-bets-against-rally-we-are-near-a-major-top.html",
+      "pubDate": "Tue, 04 Aug 2026 21:39:30 GMT"
+    },
     {
       "title": "Polymarket in talks for fundraising round at more than $20 billion valuation",
       "link": "https://www.cnbc.com/2026/08/04/polymarket-seeks-fundraising-round-at-more-than-20-billion-valuation.html",
@@ -11,12 +26,12 @@
     {
       "title": "Philadelphia Fed President Paulson content with rates at current level, but keeping an open mind",
       "link": "https://www.cnbc.com/2026/08/04/philadelphia-fed-president-paulson-content-with-current-rates-but-keeping-an-open-mind.html",
-      "pubDate": "Tue, 04 Aug 2026 13:18:15 GMT"
+      "pubDate": "Tue, 04 Aug 2026 17:49:24 GMT"
     },
     {
       "title": "Jeff Bezos just filed to sell $4 billion in Amazon. The shares are falling",
       "link": "https://www.cnbc.com/2026/08/04/jeff-bezos-just-filed-to-sell-4-billion-in-amazon-the-shares-are-falling.html",
-      "pubDate": "Tue, 04 Aug 2026 13:12:03 GMT"
+      "pubDate": "Tue, 04 Aug 2026 16:14:49 GMT"
     },
     {
       "title": "Kalshi strikes partnership with compliance tech firm to help companies police insider trading",
@@ -42,11 +57,6 @@
       "title": "Tourism price wars threaten to dim a rare bright spot in China&apos;s consumer spending",
       "link": "https://www.cnbc.com/2026/08/03/china-price-demand-tourism-hotel.html",
       "pubDate": "Mon, 03 Aug 2026 10:32:09 GMT"
-    },
-    {
-      "title": "Goldman traders are on pace for a record year. A close-up look at how they&apos;re doing it",
-      "link": "https://www.cnbc.com/2026/08/01/goldman-traders-are-on-pace-for-a-record-year-a-close-up-look-at-how-theyre-doing-it.html",
-      "pubDate": "Sun, 02 Aug 2026 13:52:33 GMT"
     },
     {
       "title": "Investors may want to focus on front end of yield curve — as Street anticipates next Fed meetings",
@@ -82,16 +92,6 @@
       "title": "More consumer companies are staying private for longer, avoiding the IPO road",
       "link": "https://www.cnbc.com/2026/07/31/private-consumer-companies-ipo.html",
       "pubDate": "Fri, 31 Jul 2026 11:30:01 GMT"
-    },
-    {
-      "title": "China’s U.S.-bound shipments fall in July after brief recovery, survey shows",
-      "link": "https://www.cnbc.com/2026/07/30/china-us-exports-drop.html",
-      "pubDate": "Thu, 30 Jul 2026 22:01:01 GMT"
-    },
-    {
-      "title": "China threatens retaliation against U.S. humanoid robot ban, says it &apos;severely damages&apos; relations",
-      "link": "https://www.cnbc.com/2026/07/30/china-us-robot-humanoid-ban-trump-visit.html",
-      "pubDate": "Thu, 30 Jul 2026 02:52:30 GMT"
     }
   ]
 }
