@@ -1,17 +1,32 @@
 {
-  "generatedAt": "2026-08-05T14:26:21.844Z",
+  "generatedAt": "2026-08-06T14:29:31.597Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Fed Governor Cook says she&apos;s &apos;prepared to act&apos; on rate hike to address inflation",
+      "link": "https://www.cnbc.com/2026/08/05/fed-governor-cook-says-shes-prepared-to-act-on-rate-hike-to-address-inflation.html",
+      "pubDate": "Wed, 05 Aug 2026 20:36:16 GMT"
+    },
+    {
+      "title": "As Warsh and the Fed contemplate fewer meetings, markets brace for potential volatility ahead",
+      "link": "https://www.cnbc.com/2026/08/05/as-warsh-and-the-fed-contemplate-fewer-meetings-markets-brace-for-potential-volatility-ahead.html",
+      "pubDate": "Wed, 05 Aug 2026 22:35:26 GMT"
+    },
+    {
+      "title": "Bank of America spends $250 million a year on GLP-1 drugs for its employees, CEO says",
+      "link": "https://www.cnbc.com/2026/08/05/bank-of-america-ceo-glp-1-drugs-cost.html",
+      "pubDate": "Thu, 06 Aug 2026 13:25:12 GMT"
+    },
+    {
       "title": "Situational Awareness hedge fund meltdown was a warning shot for leveraged markets, BofA CEO says",
       "link": "https://www.cnbc.com/2026/08/05/bofa-brian-moynihan-situational-awareness-meltdown-was-a-warning-shot.html",
-      "pubDate": "Wed, 05 Aug 2026 14:25:31 GMT"
+      "pubDate": "Wed, 05 Aug 2026 15:55:01 GMT"
     },
     {
       "title": "Ken Griffin&apos;s Citadel posts best month in years after scooping up Situational Awareness stocks",
       "link": "https://www.cnbc.com/2026/08/05/ken-griffins-citadel-posts-best-month-in-years-after-scooping-up-situational-awareness-stocks.html",
-      "pubDate": "Wed, 05 Aug 2026 11:13:46 GMT"
+      "pubDate": "Wed, 05 Aug 2026 16:17:55 GMT"
     },
     {
       "title": "Michael Burry bets against rally: &apos;We are near a major top, and possible a 1987-type fall&apos;",
@@ -77,21 +92,6 @@
       "title": "How Leopold Aschenbrenner built a $45 billion AI hedge fund — and lost most of it in days",
       "link": "https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html",
       "pubDate": "Fri, 31 Jul 2026 20:19:03 GMT"
-    },
-    {
-      "title": "New York sues Kalshi, says prediction market is running &apos;illegal gambling operation&apos;",
-      "link": "https://www.cnbc.com/2026/07/31/new-york-sues-kalshi-claims-it-is-illegal-gambling-operation.html",
-      "pubDate": "Fri, 31 Jul 2026 15:31:24 GMT"
-    },
-    {
-      "title": "Fed officials who voted to hike rates say action is needed now against inflation",
-      "link": "https://www.cnbc.com/2026/07/31/fed-officials-who-voted-to-hike-rates-say-action-is-needed-now-against-inflation.html",
-      "pubDate": "Fri, 31 Jul 2026 14:35:52 GMT"
-    },
-    {
-      "title": "More consumer companies are staying private for longer, avoiding the IPO road",
-      "link": "https://www.cnbc.com/2026/07/31/private-consumer-companies-ipo.html",
-      "pubDate": "Fri, 31 Jul 2026 11:30:01 GMT"
     }
   ]
 }
