@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-08-06T14:29:31.597Z",
+  "generatedAt": "2026-08-07T13:20:29.809Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Copper jumps to its highest level ever. What the metal is telling us",
+      "link": "https://www.cnbc.com/2026/08/06/copper-jumps-to-its-highest-level-ever-what-the-metal-is-telling-us-.html",
+      "pubDate": "Thu, 06 Aug 2026 20:07:51 GMT"
+    },
+    {
+      "title": "United Wholesale Mortgage plunges 35% after suspending dividend and raising capital",
+      "link": "https://www.cnbc.com/2026/08/06/united-wholesale-mortgage-plunges-40percent-suspends-dividend-raises-capital-.html",
+      "pubDate": "Thu, 06 Aug 2026 20:37:51 GMT"
+    },
+    {
+      "title": "Traders on Kalshi now think it&apos;s likely that the S&P 500 will hit 8,000 in 2026",
+      "link": "https://www.cnbc.com/2026/08/06/traders-on-kalshi-say-its-likely-sp-500-will-hit-8000-in-2026.html",
+      "pubDate": "Thu, 06 Aug 2026 14:48:42 GMT"
+    },
     {
       "title": "Fed Governor Cook says she&apos;s &apos;prepared to act&apos; on rate hike to address inflation",
       "link": "https://www.cnbc.com/2026/08/05/fed-governor-cook-says-shes-prepared-to-act-on-rate-hike-to-address-inflation.html",
@@ -77,21 +92,6 @@
       "title": "Investors may want to focus on front end of yield curve — as Street anticipates next Fed meetings",
       "link": "https://www.cnbc.com/2026/07/31/top-investment-ideas-as-interest-rate-uncertainty-grips-market-.html",
       "pubDate": "Fri, 31 Jul 2026 18:46:45 GMT"
-    },
-    {
-      "title": "Fintech broker Clear Street offers investors pre-IPO access to $188 billion AI giant Databricks",
-      "link": "https://www.cnbc.com/2026/07/31/clear-street-pre-ipo-platform-databricks.html",
-      "pubDate": "Fri, 31 Jul 2026 21:49:40 GMT"
-    },
-    {
-      "title": "Why Situational Awareness hedge fund imploded, even in a tame stock market",
-      "link": "https://www.cnbc.com/2026/07/31/why-leopold-aschenbrenner-situational-awareness-hedge-fund-imploded.html",
-      "pubDate": "Fri, 31 Jul 2026 16:14:54 GMT"
-    },
-    {
-      "title": "How Leopold Aschenbrenner built a $45 billion AI hedge fund — and lost most of it in days",
-      "link": "https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html",
-      "pubDate": "Fri, 31 Jul 2026 20:19:03 GMT"
     }
   ]
 }
