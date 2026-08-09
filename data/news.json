@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-08-08T13:04:15.173Z",
+  "generatedAt": "2026-08-09T13:06:50.046Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Next big push in ETF industry? Why these risk assets are gaining traction as interest rate uncertainty persists",
+      "link": "https://www.cnbc.com/2026/08/08/rate-uncertainty-sparking-demand-for-clo-exposure-among-etfs-vettafi.html",
+      "pubDate": "Sat, 08 Aug 2026 15:00:01 GMT"
+    },
+    {
+      "title": "Berkshire earnings rose last quarter and CEO Greg Abel is starting to deploy Buffett&apos;s massive cash hoard",
+      "link": "https://www.cnbc.com/2026/08/08/berkshire-hathaway-earnings-q2-2026.html",
+      "pubDate": "Sat, 08 Aug 2026 13:28:00 GMT"
+    },
     {
       "title": "Odds the Fed will hike in September tumble following big July jobs miss",
       "link": "https://www.cnbc.com/2026/08/07/odds-the-fed-hikes-in-september-tumble-following-big-july-jobs-miss.html",
@@ -82,16 +92,6 @@
       "title": "California&apos;s diesel prices have jumped since the Iran war started, with ripple effects across the country",
       "link": "https://www.cnbc.com/2026/08/03/californias-diesel-prices-have-jumped-since-the-iran-war-started-with-ripple-effects-across-the-country.html",
       "pubDate": "Mon, 03 Aug 2026 19:20:25 GMT"
-    },
-    {
-      "title": "Visa to buy cybersecurity firm BioCatch for $2.4 billion amid surge in AI-powered scams",
-      "link": "https://www.cnbc.com/2026/08/03/visa-buys-biocatch-fraud-detection.html",
-      "pubDate": "Mon, 03 Aug 2026 16:44:25 GMT"
-    },
-    {
-      "title": "Tourism price wars threaten to dim a rare bright spot in China&apos;s consumer spending",
-      "link": "https://www.cnbc.com/2026/08/03/china-price-demand-tourism-hotel.html",
-      "pubDate": "Mon, 03 Aug 2026 10:32:09 GMT"
     }
   ]
 }
