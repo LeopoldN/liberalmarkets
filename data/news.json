@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-08-10T13:26:06.711Z",
+  "generatedAt": "2026-08-11T13:22:32.901Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Wall Street just endorsed Jensen Huang&apos;s &apos;big concept&apos; for AI. What now?",
+      "link": "https://www.cnbc.com/2026/08/11/wall-street-endorsed-jensen-huangs-big-concept-for-ai-what-now.html",
+      "pubDate": "Tue, 11 Aug 2026 11:15:16 GMT"
+    },
+    {
+      "title": "Nvidia lines up $500 billion in financing as CEO Jensen Huang tells CNBC his chips are ‘investable asset’",
+      "link": "https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html",
+      "pubDate": "Mon, 10 Aug 2026 22:09:00 GMT"
+    },
+    {
+      "title": "Three reasons Goldman&apos;s co-head of global banking and markets says to stay invested",
+      "link": "https://www.cnbc.com/2026/08/10/three-reasons-goldmans-co-head-of-global-banking-and-markets-says-to-stay-invested.html",
+      "pubDate": "Mon, 10 Aug 2026 18:36:26 GMT"
+    },
     {
       "title": "Next big push in ETF industry? Why these risk assets are gaining traction as interest rate uncertainty persists",
       "link": "https://www.cnbc.com/2026/08/08/rate-uncertainty-sparking-demand-for-clo-exposure-among-etfs-vettafi.html",
@@ -77,21 +92,6 @@
       "title": "Jeff Bezos just filed to sell $4 billion in Amazon. The shares are falling",
       "link": "https://www.cnbc.com/2026/08/04/jeff-bezos-just-filed-to-sell-4-billion-in-amazon-the-shares-are-falling.html",
       "pubDate": "Tue, 04 Aug 2026 16:14:49 GMT"
-    },
-    {
-      "title": "Kalshi strikes partnership with compliance tech firm to help companies police insider trading",
-      "link": "https://www.cnbc.com/2026/08/04/kalshi-makes-partnership-with-comply-compliance-tech-company.html",
-      "pubDate": "Tue, 04 Aug 2026 12:05:41 GMT"
-    },
-    {
-      "title": "Kalshi traders think July jobs report will come in slightly cooler than economists’ predictions",
-      "link": "https://www.cnbc.com/2026/08/03/kalshi-traders-think-july-jobs-will-come-in-cooler-than-estimates.html",
-      "pubDate": "Mon, 03 Aug 2026 15:59:04 GMT"
-    },
-    {
-      "title": "California&apos;s diesel prices have jumped since the Iran war started, with ripple effects across the country",
-      "link": "https://www.cnbc.com/2026/08/03/californias-diesel-prices-have-jumped-since-the-iran-war-started-with-ripple-effects-across-the-country.html",
-      "pubDate": "Mon, 03 Aug 2026 19:20:25 GMT"
     }
   ]
 }
