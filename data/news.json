@@ -1,12 +1,47 @@
 {
-  "generatedAt": "2026-08-11T13:22:32.901Z",
+  "generatedAt": "2026-08-12T13:26:44.083Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "New York City Council announces probe into prediction market platforms’ marketing strategies",
+      "link": "https://www.cnbc.com/2026/08/12/new-york-city-council-probes-prediction-markets-marketing-strategies.html",
+      "pubDate": "Wed, 12 Aug 2026 12:08:39 GMT"
+    },
+    {
+      "title": "EVs dominate China’s car market: 5 takeaways from the country&apos;s latest auto sales data",
+      "link": "https://www.cnbc.com/2026/08/12/china-car-sales-data-byd-tesla-geely-vw.html",
+      "pubDate": "Wed, 12 Aug 2026 01:20:13 GMT"
+    },
+    {
+      "title": "Why Jensen Huang’s $500 billion AI financing plan faces a big risk from China",
+      "link": "https://www.cnbc.com/2026/08/11/nvidia-ai-funding-jensen-huang-china-risk.html",
+      "pubDate": "Tue, 11 Aug 2026 21:01:13 GMT"
+    },
+    {
+      "title": "Is betting on elections using prediction markets illegal? Many states are unsure as midterms approach",
+      "link": "https://www.cnbc.com/2026/08/11/do-state-election-betting-bans-apply-to-prediction-markets.html",
+      "pubDate": "Tue, 11 Aug 2026 18:44:16 GMT"
+    },
+    {
+      "title": "AI computing power is becoming a tradable asset class as CME launches futures contracts",
+      "link": "https://www.cnbc.com/2026/08/11/ai-computing-power-becomes-a-tradable-asset-class-as-cme-starts-futures.html",
+      "pubDate": "Tue, 11 Aug 2026 18:09:08 GMT"
+    },
+    {
+      "title": "Why JPMorgan is investing big in the 2028 LA Olympics",
+      "link": "https://www.cnbc.com/2026/08/11/why-jpmorgan-is-investing-big-in-the-2028-la-olympics.html",
+      "pubDate": "Tue, 11 Aug 2026 18:50:37 GMT"
+    },
+    {
+      "title": "Polymarket makes moves to get house in order before expected boom times for prediction markets this fall",
+      "link": "https://www.cnbc.com/2026/08/11/polymarket-revamps-marketing-expands-us-hiring-ahead-of-fall-events.html",
+      "pubDate": "Tue, 11 Aug 2026 20:26:22 GMT"
+    },
+    {
       "title": "Wall Street just endorsed Jensen Huang&apos;s &apos;big concept&apos; for AI. What now?",
       "link": "https://www.cnbc.com/2026/08/11/wall-street-endorsed-jensen-huangs-big-concept-for-ai-what-now.html",
-      "pubDate": "Tue, 11 Aug 2026 11:15:16 GMT"
+      "pubDate": "Tue, 11 Aug 2026 14:11:05 GMT"
     },
     {
       "title": "Nvidia lines up $500 billion in financing as CEO Jensen Huang tells CNBC his chips are ‘investable asset’",
@@ -57,41 +92,6 @@
       "title": "As Warsh and the Fed contemplate fewer meetings, markets brace for potential volatility ahead",
       "link": "https://www.cnbc.com/2026/08/05/as-warsh-and-the-fed-contemplate-fewer-meetings-markets-brace-for-potential-volatility-ahead.html",
       "pubDate": "Wed, 05 Aug 2026 22:35:26 GMT"
-    },
-    {
-      "title": "Bank of America spends $250 million a year on GLP-1 drugs for its employees, CEO says",
-      "link": "https://www.cnbc.com/2026/08/05/bank-of-america-ceo-glp-1-drugs-cost.html",
-      "pubDate": "Thu, 06 Aug 2026 13:25:12 GMT"
-    },
-    {
-      "title": "Situational Awareness hedge fund meltdown was a warning shot for leveraged markets, BofA CEO says",
-      "link": "https://www.cnbc.com/2026/08/05/bofa-brian-moynihan-situational-awareness-meltdown-was-a-warning-shot.html",
-      "pubDate": "Wed, 05 Aug 2026 15:55:01 GMT"
-    },
-    {
-      "title": "Ken Griffin&apos;s Citadel posts best month in years after scooping up Situational Awareness stocks",
-      "link": "https://www.cnbc.com/2026/08/05/ken-griffins-citadel-posts-best-month-in-years-after-scooping-up-situational-awareness-stocks.html",
-      "pubDate": "Wed, 05 Aug 2026 16:17:55 GMT"
-    },
-    {
-      "title": "Michael Burry bets against rally: &apos;We are near a major top, and possible a 1987-type fall&apos;",
-      "link": "https://www.cnbc.com/2026/08/04/michael-burry-bets-against-rally-we-are-near-a-major-top.html",
-      "pubDate": "Tue, 04 Aug 2026 21:39:30 GMT"
-    },
-    {
-      "title": "Polymarket in talks for fundraising round at more than $20 billion valuation",
-      "link": "https://www.cnbc.com/2026/08/04/polymarket-seeks-fundraising-round-at-more-than-20-billion-valuation.html",
-      "pubDate": "Tue, 04 Aug 2026 13:31:19 GMT"
-    },
-    {
-      "title": "Philadelphia Fed President Paulson content with rates at current level, but keeping an open mind",
-      "link": "https://www.cnbc.com/2026/08/04/philadelphia-fed-president-paulson-content-with-current-rates-but-keeping-an-open-mind.html",
-      "pubDate": "Tue, 04 Aug 2026 17:49:24 GMT"
-    },
-    {
-      "title": "Jeff Bezos just filed to sell $4 billion in Amazon. The shares are falling",
-      "link": "https://www.cnbc.com/2026/08/04/jeff-bezos-just-filed-to-sell-4-billion-in-amazon-the-shares-are-falling.html",
-      "pubDate": "Tue, 04 Aug 2026 16:14:49 GMT"
     }
   ]
 }
