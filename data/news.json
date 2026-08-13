@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-08-12T13:26:44.083Z",
+  "generatedAt": "2026-08-13T13:35:12.233Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "&apos;Big Short&apos; investor Steve Eisman sees an Achilles heel in the AI boom",
+      "link": "https://www.cnbc.com/2026/08/13/big-short-investor-steve-eisman-sees-an-achilles-heel-in-the-ai-boom.html",
+      "pubDate": "Thu, 13 Aug 2026 13:19:00 GMT"
+    },
+    {
+      "title": "Iran looks to ramp up economic alliance with BRICS nations as war with U.S. drags on",
+      "link": "https://www.cnbc.com/2026/08/13/iran-war-brics-bank.html",
+      "pubDate": "Thu, 13 Aug 2026 13:01:37 GMT"
+    },
+    {
+      "title": "This Chinese firm has topped Micron and Kioxia in shipments of crucial NAND memory chips",
+      "link": "https://www.cnbc.com/2026/08/13/chinese-firm-tops-micron-kioxia-shipments-nand-memory-chips.html",
+      "pubDate": "Thu, 13 Aug 2026 02:59:50 GMT"
+    },
+    {
+      "title": "SpaceX short sellers are running out of bullets as stock rebounds more than 40% off low",
+      "link": "https://www.cnbc.com/2026/08/12/spacex-short-sellers-are-running-out-of-bullets-as-stock-rebounds-38percent-off-low.html",
+      "pubDate": "Wed, 12 Aug 2026 19:15:54 GMT"
+    },
     {
       "title": "New York City Council announces probe into prediction market platforms’ marketing strategies",
       "link": "https://www.cnbc.com/2026/08/12/new-york-city-council-probes-prediction-markets-marketing-strategies.html",
@@ -11,7 +31,7 @@
     {
       "title": "EVs dominate China’s car market: 5 takeaways from the country&apos;s latest auto sales data",
       "link": "https://www.cnbc.com/2026/08/12/china-car-sales-data-byd-tesla-geely-vw.html",
-      "pubDate": "Wed, 12 Aug 2026 01:20:13 GMT"
+      "pubDate": "Thu, 13 Aug 2026 01:31:12 GMT"
     },
     {
       "title": "Why Jensen Huang’s $500 billion AI financing plan faces a big risk from China",
@@ -26,7 +46,7 @@
     {
       "title": "AI computing power is becoming a tradable asset class as CME launches futures contracts",
       "link": "https://www.cnbc.com/2026/08/11/ai-computing-power-becomes-a-tradable-asset-class-as-cme-starts-futures.html",
-      "pubDate": "Tue, 11 Aug 2026 18:09:08 GMT"
+      "pubDate": "Wed, 12 Aug 2026 14:14:10 GMT"
     },
     {
       "title": "Why JPMorgan is investing big in the 2028 LA Olympics",
@@ -72,26 +92,6 @@
       "title": "Copper jumps to its highest level ever. What the metal is telling us",
       "link": "https://www.cnbc.com/2026/08/06/copper-jumps-to-its-highest-level-ever-what-the-metal-is-telling-us-.html",
       "pubDate": "Thu, 06 Aug 2026 20:07:51 GMT"
-    },
-    {
-      "title": "United Wholesale Mortgage plunges 35% after suspending dividend and raising capital",
-      "link": "https://www.cnbc.com/2026/08/06/united-wholesale-mortgage-plunges-40percent-suspends-dividend-raises-capital-.html",
-      "pubDate": "Thu, 06 Aug 2026 20:37:51 GMT"
-    },
-    {
-      "title": "Traders on Kalshi now think it&apos;s likely that the S&P 500 will hit 8,000 in 2026",
-      "link": "https://www.cnbc.com/2026/08/06/traders-on-kalshi-say-its-likely-sp-500-will-hit-8000-in-2026.html",
-      "pubDate": "Thu, 06 Aug 2026 14:48:42 GMT"
-    },
-    {
-      "title": "Fed Governor Cook says she&apos;s &apos;prepared to act&apos; on rate hike to address inflation",
-      "link": "https://www.cnbc.com/2026/08/05/fed-governor-cook-says-shes-prepared-to-act-on-rate-hike-to-address-inflation.html",
-      "pubDate": "Wed, 05 Aug 2026 20:36:16 GMT"
-    },
-    {
-      "title": "As Warsh and the Fed contemplate fewer meetings, markets brace for potential volatility ahead",
-      "link": "https://www.cnbc.com/2026/08/05/as-warsh-and-the-fed-contemplate-fewer-meetings-markets-brace-for-potential-volatility-ahead.html",
-      "pubDate": "Wed, 05 Aug 2026 22:35:26 GMT"
     }
   ]
 }
