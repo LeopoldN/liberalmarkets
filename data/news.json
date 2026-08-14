@@ -1,17 +1,27 @@
 {
-  "generatedAt": "2026-08-13T13:35:12.233Z",
+  "generatedAt": "2026-08-14T13:22:56.891Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "&apos;Big Short&apos; investor Steve Eisman sees an Achilles heel in the AI boom",
+      "title": "Uber partners with China&apos;s Pony.ai for 2,000 robotaxis in Europe",
+      "link": "https://www.cnbc.com/2026/08/14/uber-partners-with-chinas-ponyai-for-2000-robotaxis-in-europe.html",
+      "pubDate": "Fri, 14 Aug 2026 01:02:39 GMT"
+    },
+    {
+      "title": "These charts show why stocks keep rallying. Profit margins are the highest on record",
+      "link": "https://www.cnbc.com/2026/08/13/these-charts-show-why-stocks-keep-rallying-profit-margins-are-highest-on-record.html",
+      "pubDate": "Thu, 13 Aug 2026 20:21:51 GMT"
+    },
+    {
+      "title": "&apos;Big Short&apos; investor Steve Eisman sees an Achilles&apos; heel in the AI boom",
       "link": "https://www.cnbc.com/2026/08/13/big-short-investor-steve-eisman-sees-an-achilles-heel-in-the-ai-boom.html",
-      "pubDate": "Thu, 13 Aug 2026 13:19:00 GMT"
+      "pubDate": "Thu, 13 Aug 2026 15:16:00 GMT"
     },
     {
       "title": "Iran looks to ramp up economic alliance with BRICS nations as war with U.S. drags on",
       "link": "https://www.cnbc.com/2026/08/13/iran-war-brics-bank.html",
-      "pubDate": "Thu, 13 Aug 2026 13:01:37 GMT"
+      "pubDate": "Thu, 13 Aug 2026 16:38:06 GMT"
     },
     {
       "title": "This Chinese firm has topped Micron and Kioxia in shipments of crucial NAND memory chips",
@@ -82,16 +92,6 @@
       "title": "Berkshire earnings rose last quarter and CEO Greg Abel is starting to deploy Buffett&apos;s massive cash hoard",
       "link": "https://www.cnbc.com/2026/08/08/berkshire-hathaway-earnings-q2-2026.html",
       "pubDate": "Sat, 08 Aug 2026 13:28:00 GMT"
-    },
-    {
-      "title": "Odds the Fed will hike in September tumble following big July jobs miss",
-      "link": "https://www.cnbc.com/2026/08/07/odds-the-fed-hikes-in-september-tumble-following-big-july-jobs-miss.html",
-      "pubDate": "Fri, 07 Aug 2026 13:34:44 GMT"
-    },
-    {
-      "title": "Copper jumps to its highest level ever. What the metal is telling us",
-      "link": "https://www.cnbc.com/2026/08/06/copper-jumps-to-its-highest-level-ever-what-the-metal-is-telling-us-.html",
-      "pubDate": "Thu, 06 Aug 2026 20:07:51 GMT"
     }
   ]
 }
