@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-08-14T13:22:56.891Z",
+  "generatedAt": "2026-08-15T12:51:56.541Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Berkshire Hathaway boosts Alphabet to a top three holding, ups Delta and housing bets",
+      "link": "https://www.cnbc.com/2026/08/14/berkshire-hathaway-boosts-alphabet-to-a-top-three-holding-ups-delta-and-housing-bets.html",
+      "pubDate": "Fri, 14 Aug 2026 21:06:48 GMT"
+    },
+    {
+      "title": "Goldman’s latest cash cow is all about funding the AI infrastructure boom",
+      "link": "https://www.cnbc.com/2026/08/14/goldmans-latest-cash-cow-is-all-about-funding-the-ai-infrastructure-boom.html",
+      "pubDate": "Fri, 14 Aug 2026 20:05:57 GMT"
+    },
+    {
+      "title": "Regulators and banks step up scrutiny of prediction markets",
+      "link": "https://www.cnbc.com/2026/08/14/prediction-markets-scrutiny-mounts-from-regulators-and-banks.html",
+      "pubDate": "Fri, 14 Aug 2026 19:21:49 GMT"
+    },
     {
       "title": "Uber partners with China&apos;s Pony.ai for 2,000 robotaxis in Europe",
       "link": "https://www.cnbc.com/2026/08/14/uber-partners-with-chinas-ponyai-for-2000-robotaxis-in-europe.html",
@@ -77,21 +92,6 @@
       "title": "Nvidia lines up $500 billion in financing as CEO Jensen Huang tells CNBC his chips are ‘investable asset’",
       "link": "https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html",
       "pubDate": "Mon, 10 Aug 2026 22:09:00 GMT"
-    },
-    {
-      "title": "Three reasons Goldman&apos;s co-head of global banking and markets says to stay invested",
-      "link": "https://www.cnbc.com/2026/08/10/three-reasons-goldmans-co-head-of-global-banking-and-markets-says-to-stay-invested.html",
-      "pubDate": "Mon, 10 Aug 2026 18:36:26 GMT"
-    },
-    {
-      "title": "Next big push in ETF industry? Why these risk assets are gaining traction as interest rate uncertainty persists",
-      "link": "https://www.cnbc.com/2026/08/08/rate-uncertainty-sparking-demand-for-clo-exposure-among-etfs-vettafi.html",
-      "pubDate": "Sat, 08 Aug 2026 15:00:01 GMT"
-    },
-    {
-      "title": "Berkshire earnings rose last quarter and CEO Greg Abel is starting to deploy Buffett&apos;s massive cash hoard",
-      "link": "https://www.cnbc.com/2026/08/08/berkshire-hathaway-earnings-q2-2026.html",
-      "pubDate": "Sat, 08 Aug 2026 13:28:00 GMT"
     }
   ]
 }
