@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-08-18T12:59:55.257Z",
+  "generatedAt": "2026-08-19T13:00:36.768Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Retail investors aren&apos;t entirely giving up on AI trade, but they appear more cautious",
+      "link": "https://www.cnbc.com/2026/08/19/retail-investors-stick-with-ai-trade-but-appear-more-cautious.html",
+      "pubDate": "Wed, 19 Aug 2026 11:09:33 GMT"
+    },
+    {
+      "title": "Goldman studied where AI is squeezing labor markets. Here&apos;s what it found",
+      "link": "https://www.cnbc.com/2026/08/19/goldman-ai-impact-employment-jobs.html",
+      "pubDate": "Wed, 19 Aug 2026 06:55:57 GMT"
+    },
+    {
+      "title": "What Chinese liquor maker Moutai&apos;s slump says about the country&apos;s economy",
+      "link": "https://www.cnbc.com/2026/08/19/china-economy-moutai-ai-property.html",
+      "pubDate": "Tue, 18 Aug 2026 23:58:09 GMT"
+    },
+    {
+      "title": "Analysis: Bond market pressure is squeezing Main Street as Wall Street waits on Warsh",
+      "link": "https://www.cnbc.com/2026/08/18/bond-market-treasury-yields-warsh-main-street.html",
+      "pubDate": "Tue, 18 Aug 2026 16:48:00 GMT"
+    },
+    {
+      "title": "Kalshi seeks to launch ‘perps’ on equity indexes as it moves in on traditional exchanges&apos; turf",
+      "link": "https://www.cnbc.com/2026/08/18/kalshi-wants-to-launch-perps-tied-to-equity-indexes.html",
+      "pubDate": "Tue, 18 Aug 2026 16:49:55 GMT"
+    },
+    {
       "title": "Lakers governor Jeanie Buss says siblings cannot sell family’s stake to Bob Iger, Joshua Kushner",
       "link": "https://www.cnbc.com/2026/08/17/jeanie-buss-opposes-sale-family-stake.html",
-      "pubDate": "Tue, 18 Aug 2026 10:53:25 GMT"
+      "pubDate": "Tue, 18 Aug 2026 21:29:03 GMT"
     },
     {
       "title": "Prediction market traders see roughly 1-in-4 odds Paramount’s bid to buy Warner Bros. Discovery fails",
@@ -67,31 +92,6 @@
       "title": "New York City Council announces probe into prediction market platforms’ marketing strategies",
       "link": "https://www.cnbc.com/2026/08/12/new-york-city-council-probes-prediction-markets-marketing-strategies.html",
       "pubDate": "Wed, 12 Aug 2026 12:08:39 GMT"
-    },
-    {
-      "title": "EVs dominate China’s car market: 5 takeaways from the country&apos;s latest auto sales data",
-      "link": "https://www.cnbc.com/2026/08/12/china-car-sales-data-byd-tesla-geely-vw.html",
-      "pubDate": "Thu, 13 Aug 2026 01:31:12 GMT"
-    },
-    {
-      "title": "Why Jensen Huang’s $500 billion AI financing plan faces a big risk from China",
-      "link": "https://www.cnbc.com/2026/08/11/nvidia-ai-funding-jensen-huang-china-risk.html",
-      "pubDate": "Tue, 11 Aug 2026 21:01:13 GMT"
-    },
-    {
-      "title": "Is betting on elections using prediction markets illegal? Many states are unsure as midterms approach",
-      "link": "https://www.cnbc.com/2026/08/11/do-state-election-betting-bans-apply-to-prediction-markets.html",
-      "pubDate": "Tue, 11 Aug 2026 18:44:16 GMT"
-    },
-    {
-      "title": "AI computing power is becoming a tradable asset class as CME launches futures contracts",
-      "link": "https://www.cnbc.com/2026/08/11/ai-computing-power-becomes-a-tradable-asset-class-as-cme-starts-futures.html",
-      "pubDate": "Wed, 12 Aug 2026 14:14:10 GMT"
-    },
-    {
-      "title": "Why JPMorgan is investing big in the 2028 LA Olympics",
-      "link": "https://www.cnbc.com/2026/08/11/why-jpmorgan-is-investing-big-in-the-2028-la-olympics.html",
-      "pubDate": "Tue, 11 Aug 2026 18:50:37 GMT"
     }
   ]
 }
