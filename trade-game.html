@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Study a country’s trade basket and identify the mystery economy in six guesses.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exportle — Liberal Markets Games</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,600;6..72,700&amp;display=swap">
+  <link rel="stylesheet" href="trade-game.css?v=2">
+  <script src="trade-game.js?v=2" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#game">Skip to game</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Liberal Markets home">
+        <span>Liberal Markets</span>
+      </a>
+      <span class="header-game">Games</span>
+      <div class="header-actions">
+        <div class="unit-toggle" role="group" aria-label="Distance unit">
+          <button type="button" data-distance-unit="km" aria-pressed="true">KM</button>
+          <button type="button" data-distance-unit="mi" aria-pressed="false">MI</button>
+        </div>
+        <button class="header-help" id="open-help" type="button">How to play</button>
+      </div>
+    </div>
+    <nav class="game-switcher" aria-label="Liberal Markets games">
+      <div class="game-switcher-inner">
+        <a class="game-switcher-item is-active" href="trade-game.html" data-game-link="exportle" aria-current="page">Exportle</a>
+        <a class="game-switcher-item" href="trade-game.html?game=importle" data-game-link="importle">Importle</a>
+        <button class="game-switcher-item" type="button" data-upcoming-game="Truddies">Truddies</button>
+        <button class="game-switcher-item" type="button" data-upcoming-game="Then&amp;Now">Then&amp;Now</button>
+        <button class="game-switcher-item" type="button" data-upcoming-game="Pure Trade">Pure Trade</button>
+        <button class="game-switcher-item" type="button" data-upcoming-game="Tradeoffs">Tradeoffs</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="game-shell" id="game">
+    <section class="game-intro" aria-labelledby="page-title">
+      <h1 id="page-title">Exportle</h1>
+      <p id="game-description">Guess the country from the goods it exports.</p>
+      <div class="daily-meta">
+        <span id="today-label">—</span>
+        <span aria-hidden="true">·</span>
+        <span id="puzzle-number">Puzzle #—</span>
+      </div>
+    </section>
+
+    <section class="game-board" aria-labelledby="puzzle-heading">
+      <header class="puzzle-header">
+        <div>
+          <p class="eyebrow">Today’s puzzle</p>
+          <h2 id="puzzle-heading">Which country is this?</h2>
+        </div>
+        <div class="attempt-summary">
+          <strong id="calls-left">6</strong>
+          <span>guesses left</span>
+        </div>
+      </header>
+
+      <div class="attempt-track" aria-label="Six available guesses">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <figure class="export-figure">
+        <figcaption class="chart-toolbar">
+          <div class="chart-path">
+            <button class="chart-back" id="chart-back" type="button" hidden>← All exports</button>
+            <div>
+              <strong id="chart-title">Top export categories</strong>
+              <span id="export-total">Loading trade data…</span>
+            </div>
+          </div>
+          <span class="chart-year" id="figure-year">—</span>
+        </figcaption>
+
+        <div class="treemap-wrap">
+          <div class="treemap" id="treemap" role="group" aria-label="Export products grouped by category"></div>
+          <div class="chart-loading" id="chart-loading" aria-live="polite">
+            <span></span>
+            <p id="chart-loading-copy">Loading exports…</p>
+          </div>
+        </div>
+
+        <div class="category-tabs" id="category-tabs" role="toolbar" aria-label="Choose an export category"></div>
+        <p class="chart-instruction" id="chart-instruction">Leading categories are fitted to the chart; labels show their true export shares.</p>
+      </figure>
+
+      <form class="guess-form" id="guess-form" novalidate>
+        <label for="country-input">Enter a country</label>
+        <div class="guess-controls">
+          <div class="country-combobox" id="country-combobox">
+            <input
+              id="country-input"
+              name="country"
+              type="text"
+              placeholder="Start typing a country name"
+              autocomplete="off"
+              autocapitalize="words"
+              spellcheck="false"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="country-suggestions"
+              aria-activedescendant=""
+              required
+            >
+            <ul class="country-suggestions" id="country-suggestions" role="listbox" hidden></ul>
+          </div>
+          <button class="submit-guess" type="submit">Guess</button>
+        </div>
+        <p class="form-message" id="form-message" role="alert"></p>
+      </form>
+
+      <div class="secondary-actions">
+        <button id="give-up" type="button">Reveal answer</button>
+      </div>
+
+      <section class="calls" aria-labelledby="calls-title">
+        <h3 id="calls-title">Your guesses</h3>
+        <div class="empty-log" id="empty-log">
+          <p>Your distance and direction clues will appear here.</p>
+        </div>
+        <ol class="guess-list" id="guess-list" aria-live="polite"></ol>
+      </section>
+
+      <section class="completed-card" id="completed-card" hidden>
+        <strong id="completed-summary">—</strong>
+        <button type="button" id="view-result">View result</button>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span id="data-year">BACI · —</span>
+    <span>
+      Data: <a href="https://oec.world/en/resources/datasets" target="_blank" rel="noreferrer">CEPII BACI via OEC</a>
+      · CC BY 4.0
+    </span>
+  </footer>
+
+  <dialog class="result-dialog" id="result-dialog">
+    <div class="dialog-card">
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Close result">×</button>
+      <p class="eyebrow" id="result-kicker">Puzzle complete</p>
+      <div class="answer-lockup">
+        <span class="answer-flag" id="answer-flag" aria-hidden="true">◉</span>
+        <h2 id="answer-name">—</h2>
+        <p id="answer-context">—</p>
+      </div>
+      <div class="answer-products" id="answer-products"></div>
+      <div class="result-stats" aria-label="Game statistics">
+        <div><strong id="stat-played">0</strong><span>Played</span></div>
+        <div><strong id="stat-win-rate">0%</strong><span>Win %</span></div>
+        <div><strong id="stat-streak">0</strong><span>Streak</span></div>
+        <div><strong id="stat-max-streak">0</strong><span>Best</span></div>
+      </div>
+      <button class="primary-dialog-button" id="share-result" type="button">Copy results</button>
+      <p class="share-status" id="share-status" role="status"></p>
+    </div>
+  </dialog>
+
+  <dialog class="help-dialog" id="help-dialog">
+    <div class="dialog-card help-card">
+      <button class="dialog-close" type="button" data-close-help aria-label="Close instructions">×</button>
+      <h2>How to play</h2>
+      <ol>
+        <li id="help-overview">The overview emphasizes leading export categories. Tile areas are fitted for readability; printed percentages are the true shares.</li>
+        <li>Use the color bar to open any category, including categories omitted from the overview.</li>
+        <li>Guess a country. A wrong guess shows the distance and direction to the answer.</li>
+        <li>Use KM or MI in the header to choose your distance unit.</li>
+        <li>Find the country in six guesses.</li>
+      </ol>
+      <button class="primary-dialog-button" type="button" data-close-help>Play</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
