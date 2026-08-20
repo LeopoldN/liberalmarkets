@@ -1,17 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Study a country’s trade basket and identify the mystery economy in six guesses.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#151515">
+  <script>
+    try {
+      if (localStorage.getItem("trade-games:theme") === "light") {
+        document.documentElement.dataset.theme = "light";
+        document.querySelector('meta[name="theme-color"]').content = "#ffffff";
+      }
+    } catch {
+      // Dark mode remains the first-visit default when storage is unavailable.
+    }
+  </script>
   <title>Exportle — Liberal Markets Games</title>
   <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,600;6..72,700&amp;display=swap">
-  <link rel="stylesheet" href="trade-game.css?v=7">
-  <script src="trade-game.js?v=9" defer></script>
+  <link rel="stylesheet" href="trade-game.css?v=10">
+  <script src="trade-game.js?v=12" defer></script>
 </head>
 
 <body>
@@ -24,6 +34,7 @@
       </a>
       <span class="header-game">Games</span>
       <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="true">Dark</button>
         <div class="unit-toggle" role="group" aria-label="Distance unit">
           <button type="button" data-distance-unit="km" aria-pressed="true">KM</button>
           <button type="button" data-distance-unit="mi" aria-pressed="false">MI</button>
@@ -132,9 +143,7 @@
 
         <section class="tradeoff-clue" id="tradeoff-clue" aria-label="Country export comparison" hidden>
           <header class="tradeoff-question">
-            <p class="eyebrow">Higher category exports</p>
             <h3 id="tradeoff-category-name">—</h3>
-            <p>Which country exported more?</p>
           </header>
           <div class="tradeoff-countries" id="tradeoff-countries" role="group" aria-label="Choose a country"></div>
           <p class="tradeoff-feedback" id="tradeoff-feedback" aria-live="polite">Choose one country.</p>
@@ -171,7 +180,7 @@
       </section>
 
       <form class="guess-form" id="guess-form" novalidate>
-        <label for="country-input">Enter a country</label>
+        <label class="sr-only" for="country-input">Enter a country</label>
         <div class="guess-controls">
           <div class="country-combobox" id="country-combobox">
             <input

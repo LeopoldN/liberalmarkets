@@ -65,6 +65,7 @@
   const EPOCH_UTC = Date.UTC(2026, 7, 20);
   const GAME_VERSION = `${GAME.id}-v1`;
   const STATS_KEY = `${GAME_VERSION}:stats`;
+  const THEME_KEY = "trade-games:theme";
   const UNIT_KEY = "trade-games:distance-unit";
   const LEGACY_UNIT_KEY = "export-signal:distance-unit";
   const OVERVIEW_TARGET_COVERAGE = 0.95;
@@ -134,6 +135,7 @@
   let puzzleNumber = 0;
   let dataMeta = null;
   let selectedSectionId = null;
+  let colorTheme = document.documentElement.dataset.theme === "light" ? "light" : "dark";
   let distanceUnit = "km";
   let suggestionMatches = [];
   let activeSuggestion = -1;
@@ -204,6 +206,7 @@
       calls: $("calls"),
       openHelp: $("open-help"),
       openStats: $("open-stats"),
+      themeToggle: $("theme-toggle"),
       unitButtons: document.querySelectorAll("[data-distance-unit]"),
       gameLinks: document.querySelectorAll("[data-game-link]"),
       upcomingGames: document.querySelectorAll("[data-upcoming-game]"),
@@ -270,6 +273,8 @@
     el.tradeoffClue.hidden = !isTradeoff;
     el.treemapWrap.hidden = !usesTreemap;
     el.categoryTabs.hidden = !usesTreemap;
+    el.chartInstruction.hidden = usesTreemap || isTradeoff;
+    el.exportTotal.hidden = isTradeoff;
     el.form.hidden = isCategory || isTradeoff;
     el.secondaryActions.hidden = isCategory || isTradeoff;
     el.calls.hidden = isCategory || isTradeoff;
@@ -284,9 +289,8 @@
     if (isTradeoff) {
       el.puzzleHeading.textContent = "Who exported more?";
       el.chartBack.hidden = true;
-      el.chartTitle.textContent = "Matched exporters";
-      el.exportTotal.textContent = "Total goods exports within 10%";
-      el.chartInstruction.textContent = "The featured category ranks among both countries’ five largest export categories. Category values stay hidden until you choose.";
+      el.chartTitle.textContent = "Brothers in Trade";
+      el.exportTotal.textContent = "";
       el.helpOverview.textContent = "Two countries are matched because their total 2024 goods exports are within 10% of each other.";
       el.helpDetail.textContent = "A category that ranks in both countries’ top five is selected for the matchup.";
       el.helpGuess.textContent = "Choose the country that exported more of the featured category.";
@@ -376,6 +380,19 @@
     return `$${Math.round(value).toLocaleString()}`;
   }
 
+  function formatMoneyLong(value) {
+    if (value >= 1_000_000_000_000) {
+      return `$${Number((value / 1_000_000_000_000).toFixed(2)).toLocaleString()} trillion`;
+    }
+    if (value >= 1_000_000_000) {
+      return `$${Number((value / 1_000_000_000).toFixed(1)).toLocaleString()} billion`;
+    }
+    if (value >= 1_000_000) {
+      return `$${Math.round(value / 1_000_000).toLocaleString()} million`;
+    }
+    return `$${Math.round(value).toLocaleString()}`;
+  }
+
   function loadDistanceUnit() {
     try {
       const saved = localStorage.getItem(UNIT_KEY) || localStorage.getItem(LEGACY_UNIT_KEY);
@@ -383,6 +400,36 @@
     } catch {
       return "km";
     }
+  }
+
+  function loadTheme() {
+    try {
+      return localStorage.getItem(THEME_KEY) === "light" ? "light" : "dark";
+    } catch {
+      return "dark";
+    }
+  }
+
+  function renderThemeControl() {
+    const isDark = colorTheme === "dark";
+    document.documentElement.dataset.theme = colorTheme;
+    el.themeToggle.setAttribute("aria-pressed", String(isDark));
+    el.themeToggle.title = isDark ? "Switch to light mode" : "Switch to dark mode";
+    document.querySelector('meta[name="theme-color"]')?.setAttribute(
+      "content",
+      isDark ? "#151515" : "#ffffff"
+    );
+  }
+
+  function setTheme(theme) {
+    if (!["dark", "light"].includes(theme)) return;
+    colorTheme = theme;
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch {
+      // The first-visit dark default is used when storage is unavailable.
+    }
+    renderThemeControl();
   }
 
   function renderDistanceUnitControl() {
@@ -971,8 +1018,8 @@
     el.chartBack.hidden = isOverview;
     el.chartTitle.textContent = isOverview ? `Top ${GAME.direction} categories` : selected.name;
     el.exportTotal.textContent = isOverview
-      ? `${formatMoney(totalTradeValue(answer))} in goods ${directionWord()}`
-      : `${formatMoney(selected.value)} · ${(selected.share * 100).toFixed(1)}% of all ${directionWord()}`;
+      ? `Total ${directionWord()} · ${formatMoneyLong(totalTradeValue(answer))}`
+      : `${formatMoneyLong(selected.value)} · ${(selected.share * 100).toFixed(1)}% of all ${directionWord()}`;
     el.chartInstruction.textContent = isOverview
       ? `Showing ${overview.sections.length} leading categories (${(overview.coverage * 100).toFixed(1)}% of recorded ${directionWord()}). Areas are fitted for clarity; labels show true shares.`
       : `${selected.products.length} products in this category. Percentages remain shares of all ${directionWord()}.`;
@@ -1091,10 +1138,6 @@
     const winner = tradeoffWinner();
     const totalDifference = (answer.totalRatio - 1) * 100;
     el.tradeoffCategoryName.textContent = answer.category.name;
-    el.tradeoffCategoryName.style.setProperty(
-      "--category-color",
-      SECTION_COLORS[answer.category.sectionId] || "#666"
-    );
     el.tradeoffCountries.innerHTML = answer.countries.map((country) => {
       const isWinner = country.iso3 === answer.winnerIso3;
       const isSelected = country.iso3 === selectedIso3;
@@ -1111,7 +1154,7 @@
         >
           <span class="tradeoff-country-flag" aria-hidden="true">${flagEmoji(country.iso2)}</span>
           <strong class="tradeoff-country-name">${escapeHtml(country.name)}</strong>
-          <span class="tradeoff-total-label">Total goods exports</span>
+          <span class="tradeoff-total-label">Total exports</span>
           <strong class="tradeoff-total-value">${formatMoney(country.exportValue)}</strong>
           <span class="tradeoff-category-reveal" ${state.finished ? "" : "hidden"}>
             <small>${escapeHtml(answer.category.name)}</small>
@@ -1657,6 +1700,9 @@
     el.unitButtons.forEach((button) => {
       button.addEventListener("click", () => setDistanceUnit(button.dataset.distanceUnit));
     });
+    el.themeToggle.addEventListener("click", () => {
+      setTheme(colorTheme === "dark" ? "light" : "dark");
+    });
     el.upcomingGames.forEach((button) => {
       button.addEventListener("click", () => showToast(`${button.dataset.upcomingGame} is coming soon`));
     });
@@ -1735,6 +1781,8 @@
 
   async function init() {
     cacheElements();
+    colorTheme = loadTheme();
+    renderThemeControl();
     applyGameMode();
     distanceUnit = loadDistanceUnit();
     renderDistanceUnitControl();
