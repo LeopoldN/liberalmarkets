@@ -58,12 +58,13 @@
     }
   };
   const requestedGame = new URLSearchParams(window.location.search).get("game");
-  const GAME = Object.hasOwn(GAME_MODES, requestedGame) ? GAME_MODES[requestedGame] : GAME_MODES.exportle;
-  const DATA_URL = GAME.dataUrl;
-  const MAX_GUESSES = GAME.maxGuesses || 6;
+  const IS_HUB = !Object.hasOwn(GAME_MODES, requestedGame);
+  const GAME = IS_HUB ? null : GAME_MODES[requestedGame];
+  const DATA_URL = GAME?.dataUrl || "";
+  const MAX_GUESSES = GAME?.maxGuesses || 6;
   const DAY_MS = 86_400_000;
   const EPOCH_UTC = Date.UTC(2026, 7, 20);
-  const GAME_VERSION = `${GAME.id}-v1`;
+  const GAME_VERSION = GAME ? `${GAME.id}-v1` : "games-hub-v1";
   const STATS_KEY = `${GAME_VERSION}:stats`;
   const THEME_KEY = "trade-games:theme";
   const UNIT_KEY = "trade-games:distance-unit";
@@ -141,7 +142,7 @@
   let activeSuggestion = -1;
   let resizeTimer = null;
   let toastTimer = null;
-  let selectedStatsGameId = GAME.tracksGuessDistribution === false ? "exportle" : GAME.id;
+  let selectedStatsGameId = GAME?.tracksGuessDistribution === false ? "exportle" : (GAME?.id || "exportle");
 
   function $(id) {
     return document.getElementById(id);
@@ -149,6 +150,12 @@
 
   function cacheElements() {
     Object.assign(el, {
+      skipLink: document.querySelector(".skip-link"),
+      gamesHub: $("games-hub"),
+      hubPuzzleNumber: $("hub-puzzle-number"),
+      gameShell: $("game"),
+      gameFooter: $("game-footer"),
+      hubFooter: $("hub-footer"),
       todayLabel: $("today-label"),
       pageTitle: $("page-title"),
       gameDescription: $("game-description"),
@@ -237,6 +244,27 @@
       helpLimit: $("help-limit"),
       toast: $("toast")
     });
+  }
+
+  function currentPuzzleNumber() {
+    return Math.max(1, Math.floor((Date.now() - EPOCH_UTC) / DAY_MS) + 1);
+  }
+
+  function renderHub() {
+    const today = new Intl.DateTimeFormat(undefined, {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+      timeZone: "UTC"
+    }).format(new Date());
+    document.title = "Games — Liberal Markets";
+    document.querySelector('meta[name="description"]')?.setAttribute(
+      "content",
+      "Play six daily games about countries, products, and the relationships that shape world trade."
+    );
+    el.skipLink.href = "#games-hub";
+    el.skipLink.textContent = "Skip to games";
+    el.hubPuzzleNumber.textContent = `${today} · Puzzle #${currentPuzzleNumber()}`;
   }
 
   function directionWord() {
@@ -496,7 +524,7 @@
   }
 
   function selectAnswer() {
-    puzzleNumber = Math.max(1, Math.floor((Date.now() - EPOCH_UTC) / DAY_MS) + 1);
+    puzzleNumber = currentPuzzleNumber();
     if (GAME.view === "tradeoff") {
       const index = (puzzleNumber - 1) % tradeoffMatchups.length;
       const cycle = Math.floor((puzzleNumber - 1) / tradeoffMatchups.length);
@@ -1383,7 +1411,7 @@
         const stats = loadStats(gameConfig);
         const winRate = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
         return `
-          <div class="stats-game-row${gameConfig.id === GAME.id ? " is-current" : ""}">
+          <div class="stats-game-row${gameConfig.id === GAME?.id ? " is-current" : ""}">
             <strong>${escapeHtml(gameConfig.name)}</strong>
             <span><b>${stats.played}</b><small>Played</small></span>
             <span><b>${winRate}%</b><small>Win</small></span>
@@ -1654,7 +1682,26 @@
     if (event.target === dialog) dialog.close();
   }
 
+  function bindGlobalEvents() {
+    el.themeToggle.addEventListener("click", () => {
+      setTheme(colorTheme === "dark" ? "light" : "dark");
+    });
+    el.openStats.addEventListener("click", openStats);
+    el.statsGameTabs.addEventListener("click", (event) => {
+      const tab = event.target.closest("[data-stats-game]");
+      if (!tab) return;
+      selectedStatsGameId = tab.dataset.statsGame;
+      renderStatsOverview();
+      el.statsGameTabs.querySelector(`[data-stats-game="${selectedStatsGameId}"]`)?.focus();
+    });
+    document.querySelectorAll("[data-close-stats]").forEach((button) => {
+      button.addEventListener("click", () => el.statsDialog.close());
+    });
+    el.statsDialog.addEventListener("click", (event) => closeOnBackdrop(el.statsDialog, event));
+  }
+
   function bindEvents() {
+    bindGlobalEvents();
     el.form.addEventListener("submit", submitGuess);
     el.input.addEventListener("input", () => {
       el.formMessage.textContent = "";
@@ -1685,13 +1732,6 @@
       const button = event.target.closest("[data-productle-category]");
       if (button) submitProductleGuess(button.dataset.productleCategory);
     });
-    el.statsGameTabs.addEventListener("click", (event) => {
-      const tab = event.target.closest("[data-stats-game]");
-      if (!tab) return;
-      selectedStatsGameId = tab.dataset.statsGame;
-      renderStatsOverview();
-      el.statsGameTabs.querySelector(`[data-stats-game="${selectedStatsGameId}"]`)?.focus();
-    });
     el.tradeoffCountries.addEventListener("click", (event) => {
       const button = event.target.closest("[data-tradeoff-country]");
       if (button) submitTradeoffGuess(button.dataset.tradeoffCountry);
@@ -1699,9 +1739,6 @@
     el.chartBack.addEventListener("click", showAllSections);
     el.unitButtons.forEach((button) => {
       button.addEventListener("click", () => setDistanceUnit(button.dataset.distanceUnit));
-    });
-    el.themeToggle.addEventListener("click", () => {
-      setTheme(colorTheme === "dark" ? "light" : "dark");
     });
     el.upcomingGames.forEach((button) => {
       button.addEventListener("click", () => showToast(`${button.dataset.upcomingGame} is coming soon`));
@@ -1716,7 +1753,6 @@
       if (window.confirm("Reveal which country exported more and end this game?")) finishGame(false, true);
     });
     el.openHelp.addEventListener("click", openHelp);
-    el.openStats.addEventListener("click", openStats);
     el.viewResult.addEventListener("click", showResult);
     el.shareResult.addEventListener("click", copyResult);
     document.querySelectorAll("[data-close-dialog]").forEach((button) => {
@@ -1725,12 +1761,8 @@
     document.querySelectorAll("[data-close-help]").forEach((button) => {
       button.addEventListener("click", () => el.helpDialog.close());
     });
-    document.querySelectorAll("[data-close-stats]").forEach((button) => {
-      button.addEventListener("click", () => el.statsDialog.close());
-    });
     el.resultDialog.addEventListener("click", (event) => closeOnBackdrop(el.resultDialog, event));
     el.helpDialog.addEventListener("click", (event) => closeOnBackdrop(el.helpDialog, event));
-    el.statsDialog.addEventListener("click", (event) => closeOnBackdrop(el.statsDialog, event));
     window.addEventListener("resize", () => {
       window.clearTimeout(resizeTimer);
       resizeTimer = window.setTimeout(renderClue, 120);
@@ -1783,6 +1815,11 @@
     cacheElements();
     colorTheme = loadTheme();
     renderThemeControl();
+    if (IS_HUB) {
+      renderHub();
+      bindGlobalEvents();
+      return;
+    }
     applyGameMode();
     distanceUnit = loadDistanceUnit();
     renderDistanceUnitControl();

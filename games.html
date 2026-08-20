@@ -6,6 +6,9 @@
   <meta name="description" content="Study a country’s trade basket and identify the mystery economy in six guesses.">
   <meta name="theme-color" content="#151515">
   <script>
+    const gameIds = new Set(["exportle", "importle", "truddies", "then-now", "productle", "tradeoffs"]);
+    const requestedGame = new URLSearchParams(window.location.search).get("game");
+    document.documentElement.dataset.page = gameIds.has(requestedGame) ? "game" : "hub";
     try {
       if (localStorage.getItem("trade-games:theme") === "light") {
         document.documentElement.dataset.theme = "light";
@@ -15,13 +18,13 @@
       // Dark mode remains the first-visit default when storage is unavailable.
     }
   </script>
-  <title>Exportle — Liberal Markets Games</title>
+  <title>Games — Liberal Markets</title>
   <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,600;6..72,700&amp;display=swap">
-  <link rel="stylesheet" href="trade-game.css?v=10">
-  <script src="trade-game.js?v=12" defer></script>
+  <link rel="stylesheet" href="trade-game.css?v=12">
+  <script src="trade-game.js?v=14" defer></script>
 </head>
 
 <body>
@@ -32,30 +35,86 @@
       <a class="brand" href="index.html" aria-label="Liberal Markets home">
         <span>Liberal Markets</span>
       </a>
-      <span class="header-game">Games</span>
+      <a class="header-game" href="games.html">Games</a>
       <div class="header-actions">
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="true">Dark</button>
-        <div class="unit-toggle" role="group" aria-label="Distance unit">
+        <div class="unit-toggle" role="group" aria-label="Distance unit" data-game-only>
           <button type="button" data-distance-unit="km" aria-pressed="true">KM</button>
           <button type="button" data-distance-unit="mi" aria-pressed="false">MI</button>
         </div>
         <button class="header-stats" id="open-stats" type="button">Stats</button>
-        <button class="header-help" id="open-help" type="button">How to play</button>
+        <button class="header-help" id="open-help" type="button" data-game-only>How to play</button>
       </div>
     </div>
-    <nav class="game-switcher" aria-label="Liberal Markets games">
-      <div class="game-switcher-inner">
-        <a class="game-switcher-item is-active" href="games.html?game=exportle" data-game-link="exportle" aria-current="page">Exportle</a>
-        <a class="game-switcher-item" href="games.html?game=importle" data-game-link="importle">Importle</a>
-        <a class="game-switcher-item" href="games.html?game=truddies" data-game-link="truddies">Truddies</a>
-        <a class="game-switcher-item" href="games.html?game=then-now" data-game-link="then-now">Then&amp;Now</a>
-        <a class="game-switcher-item" href="games.html?game=productle" data-game-link="productle">Productle</a>
-        <a class="game-switcher-item" href="games.html?game=tradeoffs" data-game-link="tradeoffs">Tradeoffs</a>
-      </div>
-    </nav>
   </header>
 
+  <main class="games-hub" id="games-hub">
+    <header class="games-hub-intro">
+      <p class="eyebrow">Liberal Markets Games</p>
+      <h1>Trade, one puzzle at a time.</h1>
+      <p>Six daily games about the countries, products, and relationships that shape the world economy.</p>
+      <span id="hub-puzzle-number">Today’s puzzles</span>
+    </header>
+
+    <section class="games-catalog" aria-label="Choose a trade game">
+      <a class="game-library-card game-icon-exportle" href="games.html?game=exportle">
+        <span class="game-library-art"><img src="assets/fontawesome/globe.svg" alt=""></span>
+        <span class="game-library-copy">
+          <strong>Exportle</strong>
+          <span>Identify a country from the goods it sends out into the world.</span>
+          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+        </span>
+      </a>
+
+      <a class="game-library-card game-icon-importle" href="games.html?game=importle">
+        <span class="game-library-art"><img src="assets/fontawesome/globe.svg" alt=""></span>
+        <span class="game-library-copy">
+          <strong>Importle</strong>
+          <span>Identify a country from the goods it brings home.</span>
+          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+        </span>
+      </a>
+
+      <a class="game-library-card game-icon-truddies" href="games.html?game=truddies">
+        <span class="game-library-art"><img src="assets/fontawesome/handshake.svg" alt=""></span>
+        <span class="game-library-copy">
+          <strong>Truddies</strong>
+          <span>Use GDP and five leading trade partners to find the country.</span>
+          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+        </span>
+      </a>
+
+      <a class="game-library-card game-icon-then-now" href="games.html?game=then-now">
+        <span class="game-library-art"><img src="assets/fontawesome/industry.svg" alt=""></span>
+        <span class="game-library-copy">
+          <strong>Then&amp;Now</strong>
+          <span>Follow how one country’s export economy changed since 1995.</span>
+          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+        </span>
+      </a>
+
+      <a class="game-library-card game-icon-productle" href="games.html?game=productle">
+        <span class="game-library-art"><img src="assets/fontawesome/box-open.svg" alt=""></span>
+        <span class="game-library-copy">
+          <strong>Productle</strong>
+          <span>Find the export category connecting five different countries.</span>
+          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+        </span>
+      </a>
+
+      <a class="game-library-card game-icon-tradeoffs" href="games.html?game=tradeoffs">
+        <span class="game-library-art"><img src="assets/fontawesome/scale-unbalanced.svg" alt=""></span>
+        <span class="game-library-copy">
+          <strong>Tradeoffs</strong>
+          <span>Choose which matched country exported more of one category.</span>
+          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+        </span>
+      </a>
+    </section>
+  </main>
+
   <main class="game-shell" id="game">
+    <a class="all-games-link" href="games.html">← All Games</a>
     <section class="game-intro" aria-labelledby="page-title">
       <h1 id="page-title">Exportle</h1>
       <p id="game-description">Guess the country from the goods it exports.</p>
@@ -222,14 +281,20 @@
         <button type="button" id="view-result">View result</button>
       </section>
     </section>
+    <a class="all-games-link all-games-link-bottom" href="games.html">← All Games</a>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="game-footer">
     <span id="data-year">BACI · —</span>
     <span id="data-source-copy">
       Data: <a href="https://oec.world/en/resources/datasets" target="_blank" rel="noreferrer">CEPII BACI via OEC</a>
       · CC BY 4.0
     </span>
+  </footer>
+
+  <footer class="site-footer hub-footer" id="hub-footer">
+    <span>Six daily trade puzzles</span>
+    <span>Built with CEPII BACI and World Bank data</span>
   </footer>
 
   <dialog class="result-dialog" id="result-dialog">
