@@ -5,6 +5,7 @@
     exportle: {
       id: "exportle",
       name: "Exportle",
+      view: "treemap",
       direction: "export",
       valueField: "exportValue",
       dataUrl: "data/trade-game/countries.json?v=2024-1",
@@ -13,16 +14,53 @@
     importle: {
       id: "importle",
       name: "Importle",
+      view: "treemap",
       direction: "import",
       valueField: "importValue",
       dataUrl: "data/trade-game/imports.json?v=2024-1",
       description: "Guess the country from the goods it imports."
+    },
+    truddies: {
+      id: "truddies",
+      name: "Truddies",
+      view: "profile",
+      direction: "profile",
+      valueField: "tradeValue",
+      dataUrl: "data/trade-game/truddies.json?v=2024-1",
+      description: "Guess the country from its GDP and leading trading partners."
+    },
+    "then-now": {
+      id: "then-now",
+      name: "Then&Now",
+      view: "comparison",
+      direction: "comparison",
+      dataUrl: "data/trade-game/then-now.json?v=1995-2024-1",
+      description: "Guess the country from how its exports changed between 1995 and 2024."
+    },
+    productle: {
+      id: "productle",
+      name: "Productle",
+      view: "category",
+      direction: "category",
+      dataUrl: "data/trade-game/productle.json?v=2024-1",
+      maxGuesses: 5,
+      description: "Guess the export category from its share across five countries."
+    },
+    tradeoffs: {
+      id: "tradeoffs",
+      name: "Tradeoffs",
+      view: "tradeoff",
+      direction: "tradeoff",
+      dataUrl: "data/trade-game/tradeoffs.json?v=2024-1",
+      maxGuesses: 1,
+      tracksGuessDistribution: false,
+      description: "Choose which matched country exports more of the featured category."
     }
   };
   const requestedGame = new URLSearchParams(window.location.search).get("game");
   const GAME = Object.hasOwn(GAME_MODES, requestedGame) ? GAME_MODES[requestedGame] : GAME_MODES.exportle;
   const DATA_URL = GAME.dataUrl;
-  const MAX_GUESSES = 6;
+  const MAX_GUESSES = GAME.maxGuesses || 6;
   const DAY_MS = 86_400_000;
   const EPOCH_UTC = Date.UTC(2026, 7, 20);
   const GAME_VERSION = `${GAME.id}-v1`;
@@ -88,6 +126,8 @@
 
   const el = {};
   let countries = [];
+  let productleCategories = [];
+  let tradeoffMatchups = [];
   let countryLookup = new Map();
   let answer = null;
   let state = null;
@@ -99,6 +139,7 @@
   let activeSuggestion = -1;
   let resizeTimer = null;
   let toastTimer = null;
+  let selectedStatsGameId = GAME.tracksGuessDistribution === false ? "exportle" : GAME.id;
 
   function $(id) {
     return document.getElementById(id);
@@ -109,10 +150,13 @@
       todayLabel: $("today-label"),
       pageTitle: $("page-title"),
       gameDescription: $("game-description"),
+      puzzleHeading: $("puzzle-heading"),
       dataYear: $("data-year"),
+      dataSourceCopy: $("data-source-copy"),
       figureYear: $("figure-year"),
       puzzleNumber: $("puzzle-number"),
       callsLeft: $("calls-left"),
+      guessLabel: $("guess-label"),
       exportTotal: $("export-total"),
       chartTitle: $("chart-title"),
       chartBack: $("chart-back"),
@@ -120,7 +164,32 @@
       categoryTabs: $("category-tabs"),
       chartLoading: $("chart-loading"),
       chartLoadingCopy: $("chart-loading-copy"),
+      treemapWrap: $("treemap-wrap"),
       treemap: $("treemap"),
+      tradeProfile: $("trade-profile"),
+      gdpValue: $("gdp-value"),
+      gdpYear: $("gdp-year"),
+      partnerList: $("partner-list"),
+      periodComparison: $("period-comparison"),
+      thenHeading: $("then-heading"),
+      nowHeading: $("now-heading"),
+      thenTotal: $("then-total"),
+      nowTotal: $("now-total"),
+      thenCategoryList: $("then-category-list"),
+      nowCategoryList: $("now-category-list"),
+      productleClue: $("productle-clue"),
+      productleCountryList: $("productle-country-list"),
+      productleGuess: $("productle-guess"),
+      productleWordBank: $("productle-word-bank"),
+      productleGuessesLeft: $("productle-guesses-left"),
+      productleMessage: $("productle-message"),
+      productleGiveUp: $("productle-give-up"),
+      tradeoffClue: $("tradeoff-clue"),
+      tradeoffCategoryName: $("tradeoff-category-name"),
+      tradeoffCountries: $("tradeoff-countries"),
+      tradeoffFeedback: $("tradeoff-feedback"),
+      tradeoffGiveUp: $("tradeoff-give-up"),
+      attemptTrackContainer: document.querySelector(".attempt-track"),
       attemptTrack: document.querySelectorAll(".attempt-track span"),
       form: $("guess-form"),
       input: $("country-input"),
@@ -131,7 +200,10 @@
       emptyLog: $("empty-log"),
       guessList: $("guess-list"),
       giveUp: $("give-up"),
+      secondaryActions: $("secondary-actions"),
+      calls: $("calls"),
       openHelp: $("open-help"),
+      openStats: $("open-stats"),
       unitButtons: document.querySelectorAll("[data-distance-unit]"),
       gameLinks: document.querySelectorAll("[data-game-link]"),
       upcomingGames: document.querySelectorAll("[data-upcoming-game]"),
@@ -139,6 +211,10 @@
       completedSummary: $("completed-summary"),
       viewResult: $("view-result"),
       resultDialog: $("result-dialog"),
+      statsDialog: $("stats-dialog"),
+      statsGameGrid: $("stats-game-grid"),
+      statsGameTabs: $("stats-game-tabs"),
+      distributionChart: $("distribution-chart"),
       helpDialog: $("help-dialog"),
       resultKicker: $("result-kicker"),
       answerFlag: $("answer-flag"),
@@ -152,6 +228,10 @@
       shareResult: $("share-result"),
       shareStatus: $("share-status"),
       helpOverview: $("help-overview"),
+      helpDetail: $("help-detail"),
+      helpGuess: $("help-guess"),
+      helpUnits: $("help-units"),
+      helpLimit: $("help-limit"),
       toast: $("toast")
     });
   }
@@ -165,21 +245,97 @@
   }
 
   function applyGameMode() {
+    const isProfile = GAME.view === "profile";
+    const isComparison = GAME.view === "comparison";
+    const isCategory = GAME.view === "category";
+    const isTradeoff = GAME.view === "tradeoff";
+    const usesTreemap = GAME.view === "treemap";
     const tradeWord = directionWord();
     document.title = `${GAME.name} — Liberal Markets Games`;
+    let metaDescription = `Study an ${GAME.direction} basket and identify the mystery economy in six guesses.`;
+    if (isProfile) metaDescription = "Study a country’s GDP and leading trade relationships, then identify it in six guesses.";
+    if (isComparison) metaDescription = "Compare a country’s 1995 and 2024 export structures, then identify it in six guesses.";
+    if (isCategory) metaDescription = "Compare five countries’ export shares and identify the common broad product category in five guesses.";
+    if (isTradeoff) metaDescription = "Choose which of two closely matched countries exports more of a featured top product category.";
     document.querySelector('meta[name="description"]')?.setAttribute(
       "content",
-      `Study an ${GAME.direction} basket and identify the mystery economy in six guesses.`
+      metaDescription
     );
     el.pageTitle.textContent = GAME.name;
     el.gameDescription.textContent = GAME.description;
-    el.chartBack.textContent = `← All ${tradeWord}`;
-    el.chartTitle.textContent = `Top ${GAME.direction} categories`;
-    el.chartLoadingCopy.textContent = `Loading ${tradeWord}…`;
-    el.categoryTabs.setAttribute("aria-label", `Choose an ${GAME.direction} category`);
-    el.treemap.setAttribute("aria-label", `${GAME.name} products grouped by category`);
-    el.chartInstruction.textContent = `Leading categories are fitted to the chart; labels show their true ${GAME.direction} shares.`;
-    el.helpOverview.textContent = `The overview emphasizes leading ${GAME.direction} categories. Tile areas are fitted for readability; printed percentages are the true shares.`;
+    el.tradeProfile.hidden = !isProfile;
+    el.periodComparison.hidden = !isComparison;
+    el.productleClue.hidden = !isCategory;
+    el.productleGuess.hidden = !isCategory;
+    el.tradeoffClue.hidden = !isTradeoff;
+    el.treemapWrap.hidden = !usesTreemap;
+    el.categoryTabs.hidden = !usesTreemap;
+    el.form.hidden = isCategory || isTradeoff;
+    el.secondaryActions.hidden = isCategory || isTradeoff;
+    el.calls.hidden = isCategory || isTradeoff;
+    el.attemptTrackContainer.setAttribute(
+      "aria-label",
+      isTradeoff ? "One available choice" : `${MAX_GUESSES} available guesses`
+    );
+    el.attemptTrackContainer.style.gridTemplateColumns = `repeat(${MAX_GUESSES}, 1fr)`;
+    el.attemptTrack.forEach((marker, index) => { marker.hidden = index >= MAX_GUESSES; });
+    el.guessLabel.textContent = isTradeoff ? "choice remaining" : "guesses left";
+
+    if (isTradeoff) {
+      el.puzzleHeading.textContent = "Who exported more?";
+      el.chartBack.hidden = true;
+      el.chartTitle.textContent = "Matched exporters";
+      el.exportTotal.textContent = "Total goods exports within 10%";
+      el.chartInstruction.textContent = "The featured category ranks among both countries’ five largest export categories. Category values stay hidden until you choose.";
+      el.helpOverview.textContent = "Two countries are matched because their total 2024 goods exports are within 10% of each other.";
+      el.helpDetail.textContent = "A category that ranks in both countries’ top five is selected for the matchup.";
+      el.helpGuess.textContent = "Choose the country that exported more of the featured category.";
+      el.helpUnits.textContent = "After your choice, both category export values and shares are revealed.";
+      el.helpLimit.textContent = "You get one choice per daily puzzle.";
+    } else if (isCategory) {
+      el.puzzleHeading.textContent = "Which export category is this?";
+      el.chartBack.hidden = true;
+      el.chartTitle.textContent = "Five-country signal";
+      el.exportTotal.textContent = "One hidden top export category";
+      el.chartInstruction.textContent = "Each figure is the unknown category’s share of that country’s total goods exports.";
+      el.helpOverview.textContent = "Five countries show the percentage of their goods exports belonging to one hidden broad category.";
+      el.helpDetail.textContent = "The hidden category ranks among the top five export categories for every country shown.";
+      el.helpGuess.textContent = "Choose from the category word bank. Every incorrect choice is grayed out.";
+      el.helpUnits.textContent = "A new category and five new countries are selected for each daily puzzle.";
+      el.helpLimit.textContent = "Find the category in five guesses.";
+    } else if (isProfile) {
+      el.puzzleHeading.textContent = "Which country is this?";
+      el.chartBack.hidden = true;
+      el.chartTitle.textContent = "Economic snapshot";
+      el.exportTotal.textContent = "GDP and goods trade";
+      el.chartInstruction.textContent = "Partners are ranked by combined imports and exports. GDP is shown in current US dollars.";
+      el.helpOverview.textContent = "Use the country’s nominal GDP and five leading trading partners as your clues.";
+      el.helpDetail.textContent = "Partners are ranked by the value of combined goods imports and exports.";
+    } else if (isComparison) {
+      el.puzzleHeading.textContent = "Which country is this?";
+      el.chartBack.hidden = true;
+      el.chartTitle.textContent = "Export transformation";
+      el.exportTotal.textContent = "29 years of structural change";
+      el.chartInstruction.textContent = "Categories are ranked within each year. Percentages show their share of that year’s goods exports.";
+      el.helpOverview.textContent = "Compare the country’s total goods exports and five leading export categories in 1995 and 2024.";
+      el.helpDetail.textContent = "The same category colors are used in both columns so changes are easier to spot.";
+    } else {
+      el.puzzleHeading.textContent = "Which country is this?";
+      el.chartBack.textContent = `← All ${tradeWord}`;
+      el.chartTitle.textContent = `Top ${GAME.direction} categories`;
+      el.chartLoadingCopy.textContent = `Loading ${tradeWord}…`;
+      el.categoryTabs.setAttribute("aria-label", `Choose an ${GAME.direction} category`);
+      el.treemap.setAttribute("aria-label", `${GAME.name} products grouped by category`);
+      el.chartInstruction.textContent = `Leading categories are fitted to the chart; labels show their true ${GAME.direction} shares.`;
+      el.helpOverview.textContent = `The overview emphasizes leading ${GAME.direction} categories. Tile areas are fitted for readability; printed percentages are the true shares.`;
+      el.helpDetail.textContent = "Use the color bar to open any category, including categories omitted from the overview.";
+    }
+
+    if (!isCategory && !isTradeoff) {
+      el.helpGuess.textContent = "Guess a country. A wrong guess shows the distance and direction to the answer.";
+      el.helpUnits.textContent = "Use KM or MI in the header to choose your distance unit.";
+      el.helpLimit.textContent = "Find the country in six guesses.";
+    }
 
     el.gameLinks.forEach((link) => {
       const isActive = link.dataset.gameLink === GAME.id;
@@ -282,8 +438,85 @@
     return shuffled;
   }
 
+  function shuffleWithSeed(list, seed, keySelector) {
+    const shuffled = [...list].sort((a, b) => String(keySelector(a)).localeCompare(String(keySelector(b))));
+    const random = seededRandom(hashSeed(seed));
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
+      const other = Math.floor(random() * (index + 1));
+      [shuffled[index], shuffled[other]] = [shuffled[other], shuffled[index]];
+    }
+    return shuffled;
+  }
+
   function selectAnswer() {
     puzzleNumber = Math.max(1, Math.floor((Date.now() - EPOCH_UTC) / DAY_MS) + 1);
+    if (GAME.view === "tradeoff") {
+      const index = (puzzleNumber - 1) % tradeoffMatchups.length;
+      const cycle = Math.floor((puzzleNumber - 1) / tradeoffMatchups.length);
+      const shuffledMatchups = shuffleWithSeed(
+        tradeoffMatchups,
+        `${GAME_VERSION}:matchups:${cycle}`,
+        (matchup) => matchup.id
+      );
+      const localPreview = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+      const params = new URLSearchParams(window.location.search);
+      const requestedMatchup = localPreview && params.get("matchup")?.toUpperCase();
+      const overrideMatchup = requestedMatchup
+        && tradeoffMatchups.find((matchup) => matchup.id === requestedMatchup);
+      const selected = overrideMatchup || shuffledMatchups[index];
+      const shuffledCategories = shuffleWithSeed(
+        selected.categories,
+        `${GAME_VERSION}:puzzle:${puzzleNumber}:matchup:${selected.id}`,
+        (category) => category.sectionId
+      );
+      const requestedCategory = localPreview && Number(params.get("category"));
+      const overrideCategory = requestedCategory
+        && selected.categories.find((category) => category.sectionId === requestedCategory);
+      const category = overrideCategory || shuffledCategories[0];
+      const displayCountries = shuffleWithSeed(
+        selected.countries,
+        `${GAME_VERSION}:puzzle:${puzzleNumber}:matchup:${selected.id}:sides`,
+        (country) => country.iso3
+      ).map((country) => {
+        const sourceIndex = selected.countries.findIndex((candidate) => candidate.iso3 === country.iso3);
+        return {
+          ...country,
+          categoryValue: category.values[sourceIndex],
+          categoryShare: category.shares[sourceIndex],
+          categoryRank: category.ranks[sourceIndex]
+        };
+      });
+      answer = {
+        id: selected.id,
+        totalRatio: selected.totalRatio,
+        countries: displayCountries,
+        category,
+        winnerIso3: category.winnerIso3
+      };
+      return;
+    }
+
+    if (GAME.view === "category") {
+      const index = (puzzleNumber - 1) % productleCategories.length;
+      const cycle = Math.floor((puzzleNumber - 1) / productleCategories.length);
+      const shuffledCategories = shuffleWithSeed(
+        productleCategories,
+        `${GAME_VERSION}:categories:${cycle}`,
+        (category) => category.sectionId
+      );
+      const localPreview = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+      const requested = localPreview && Number(new URLSearchParams(window.location.search).get("category"));
+      const override = requested && productleCategories.find((category) => category.sectionId === requested);
+      const selected = override || shuffledCategories[index];
+      const clueCountries = shuffleWithSeed(
+        selected.countries,
+        `${GAME_VERSION}:puzzle:${puzzleNumber}:section:${selected.sectionId}`,
+        (country) => country.iso3
+      ).slice(0, dataMeta.clueCountryCount || 5);
+      answer = { ...selected, clueCountries };
+      return;
+    }
+
     const index = (puzzleNumber - 1) % countries.length;
     const cycle = Math.floor((puzzleNumber - 1) / countries.length);
     const shuffled = shuffleForCycle(countries, cycle);
@@ -293,14 +526,20 @@
     answer = override || shuffled[index];
   }
 
+  function answerKey() {
+    if (GAME.view === "tradeoff") return `matchup-${answer.id}-section-${answer.category.sectionId}`;
+    if (GAME.view === "category") return `section-${answer.sectionId}`;
+    return answer.iso3;
+  }
+
   function stateKey() {
-    return `${GAME_VERSION}:puzzle:${puzzleNumber}:${answer.iso3}`;
+    return `${GAME_VERSION}:puzzle:${puzzleNumber}:${answerKey()}`;
   }
 
   function loadState() {
     const fallback = {
       puzzleNumber,
-      answer: answer.iso3,
+      answer: answerKey(),
       guesses: [],
       finished: false,
       won: false,
@@ -310,7 +549,7 @@
 
     try {
       const stored = JSON.parse(localStorage.getItem(stateKey()));
-      if (!stored || stored.answer !== answer.iso3 || !Array.isArray(stored.guesses)) return fallback;
+      if (!stored || stored.answer !== answerKey() || !Array.isArray(stored.guesses)) return fallback;
       return { ...fallback, ...stored, guesses: stored.guesses.slice(0, MAX_GUESSES) };
     } catch {
       return fallback;
@@ -624,7 +863,7 @@
   }
 
   function renderTreemap() {
-    if (!answer || !el.treemap) return;
+    if (GAME.view !== "treemap" || !answer || !el.treemap) return;
     const width = el.treemap.clientWidth;
     const height = el.treemap.clientHeight;
     if (!width || !height) return;
@@ -741,6 +980,173 @@
     el.chartLoading.classList.add("is-hidden");
   }
 
+  function renderTradeProfile() {
+    if (GAME.view !== "profile" || !answer) return;
+    el.gdpValue.textContent = formatMoney(answer.gdpValue);
+    el.gdpYear.textContent = `Current US dollars · ${dataMeta.year}`;
+    el.partnerList.innerHTML = answer.partners.map((partner, index) => `
+      <li>
+        <span class="partner-rank">${String(index + 1).padStart(2, "0")}</span>
+        <span class="partner-flag" aria-hidden="true">${flagEmoji(partner.iso2)}</span>
+        <strong class="partner-name">${escapeHtml(partner.name)}</strong>
+      </li>
+    `).join("");
+    el.tradeProfile.setAttribute(
+      "aria-label",
+      `Nominal GDP ${formatMoney(answer.gdpValue)}. Top trading partners: ${answer.partners.map((partner) => partner.name).join(", ")}.`
+    );
+  }
+
+  function renderPeriodCategoryList(list, categories) {
+    list.innerHTML = categories.map((category, index) => `
+      <li>
+        <span class="period-category-rank">${String(index + 1).padStart(2, "0")}</span>
+        <span class="period-category-dot" style="--category-color:${SECTION_COLORS[category.sectionId] || "#666"}" aria-hidden="true"></span>
+        <strong class="period-category-name">${escapeHtml(category.name)}</strong>
+        <span class="period-category-share">${(category.share * 100).toFixed(1)}%</span>
+      </li>
+    `).join("");
+  }
+
+  function renderTradeComparison() {
+    if (GAME.view !== "comparison" || !answer) return;
+    const [thenYear, nowYear] = dataMeta.years;
+    const then = answer.periods[thenYear];
+    const now = answer.periods[nowYear];
+    el.thenHeading.textContent = thenYear;
+    el.nowHeading.textContent = nowYear;
+    el.thenTotal.textContent = formatMoney(then.exportValue);
+    el.nowTotal.textContent = formatMoney(now.exportValue);
+    renderPeriodCategoryList(el.thenCategoryList, then.categories);
+    renderPeriodCategoryList(el.nowCategoryList, now.categories);
+    el.periodComparison.setAttribute(
+      "aria-label",
+      `${thenYear} goods exports ${formatMoney(then.exportValue)}; leading categories ${then.categories.map((category) => category.name).join(", ")}. ${nowYear} goods exports ${formatMoney(now.exportValue)}; leading categories ${now.categories.map((category) => category.name).join(", ")}.`
+    );
+  }
+
+  function renderProductleClue() {
+    if (GAME.view !== "category" || !answer) return;
+    el.productleCountryList.innerHTML = answer.clueCountries.map((country, index) => `
+      <li class="productle-country-row">
+        <span class="productle-country-rank">${String(index + 1).padStart(2, "0")}</span>
+        <span class="productle-country-flag" aria-hidden="true">${flagEmoji(country.iso2)}</span>
+        <strong class="productle-country-name">${escapeHtml(country.name)}</strong>
+        <span class="productle-country-share">
+          <strong>${(country.share * 100).toFixed(1)}%</strong>
+          <small>of exports</small>
+        </span>
+      </li>
+    `).join("");
+    el.productleClue.setAttribute(
+      "aria-label",
+      answer.clueCountries.map((country) => `${country.name}: ${(country.share * 100).toFixed(1)}% of exports`).join(". ")
+    );
+  }
+
+  function renderProductleWordBank() {
+    if (GAME.view !== "category" || !state) return;
+    const used = new Set(state.guesses.map(Number));
+    el.productleWordBank.innerHTML = productleCategories.map((category) => {
+      const isUsed = used.has(category.sectionId);
+      const isAnswer = category.sectionId === answer.sectionId;
+      const revealCorrect = state.finished && isAnswer;
+      const classes = ["productle-category-button"];
+      if (isUsed && !isAnswer) classes.push("is-used");
+      if (revealCorrect) classes.push("is-correct");
+      return `
+        <button
+          class="${classes.join(" ")}"
+          type="button"
+          data-productle-category="${category.sectionId}"
+          style="--category-color:${SECTION_COLORS[category.sectionId] || "#666"}"
+          ${isUsed || state.finished ? "disabled" : ""}
+        >
+          <span class="productle-category-swatch" aria-hidden="true"></span>
+          <span>${escapeHtml(category.name)}</span>
+        </button>
+      `;
+    }).join("");
+
+    const remaining = state.finished ? 0 : Math.max(0, MAX_GUESSES - state.guesses.length);
+    el.productleGuessesLeft.textContent = `${remaining} ${remaining === 1 ? "guess" : "guesses"} remaining`;
+    el.productleGiveUp.disabled = state.finished;
+    el.productleGiveUp.hidden = state.finished;
+    if (!state.guesses.length) el.productleMessage.textContent = "Select the category that best fits all five percentages.";
+    else if (state.finished && state.won) el.productleMessage.textContent = `Correct — ${answer.name}.`;
+    else if (state.finished) el.productleMessage.textContent = `The category was ${answer.name}.`;
+    else {
+      const latest = productleCategories.find((category) => category.sectionId === Number(state.guesses.at(-1)));
+      el.productleMessage.textContent = `${latest?.name || "That category"} is not the answer.`;
+    }
+  }
+
+  function tradeoffWinner() {
+    return answer?.countries.find((country) => country.iso3 === answer.winnerIso3);
+  }
+
+  function renderTradeoffClue() {
+    if (GAME.view !== "tradeoff" || !answer || !state) return;
+    const selectedIso3 = state.guesses[0];
+    const winner = tradeoffWinner();
+    const totalDifference = (answer.totalRatio - 1) * 100;
+    el.tradeoffCategoryName.textContent = answer.category.name;
+    el.tradeoffCategoryName.style.setProperty(
+      "--category-color",
+      SECTION_COLORS[answer.category.sectionId] || "#666"
+    );
+    el.tradeoffCountries.innerHTML = answer.countries.map((country) => {
+      const isWinner = country.iso3 === answer.winnerIso3;
+      const isSelected = country.iso3 === selectedIso3;
+      const classes = ["tradeoff-country-button"];
+      if (state.finished && isWinner) classes.push("is-correct");
+      if (state.finished && isSelected && !isWinner) classes.push("is-wrong");
+      return `
+        <button
+          class="${classes.join(" ")}"
+          type="button"
+          data-tradeoff-country="${country.iso3}"
+          ${state.finished ? "disabled" : ""}
+          aria-label="${escapeHtml(country.name)}${state.finished ? `, ${formatMoney(country.categoryValue)} in ${answer.category.name} exports` : ""}"
+        >
+          <span class="tradeoff-country-flag" aria-hidden="true">${flagEmoji(country.iso2)}</span>
+          <strong class="tradeoff-country-name">${escapeHtml(country.name)}</strong>
+          <span class="tradeoff-total-label">Total goods exports</span>
+          <strong class="tradeoff-total-value">${formatMoney(country.exportValue)}</strong>
+          <span class="tradeoff-category-reveal" ${state.finished ? "" : "hidden"}>
+            <small>${escapeHtml(answer.category.name)}</small>
+            <strong>${formatMoney(country.categoryValue)}</strong>
+            <span>${(country.categoryShare * 100).toFixed(1)}% of exports · category #${country.categoryRank}</span>
+          </span>
+        </button>
+      `;
+    }).join("");
+
+    if (!state.finished) {
+      el.tradeoffFeedback.textContent = `Their total goods exports differ by only ${totalDifference.toFixed(1)}%. Choose one country.`;
+    } else if (state.won) {
+      el.tradeoffFeedback.textContent = `Correct — ${winner.name} exported ${formatMoney(winner.categoryValue)} in ${answer.category.name}.`;
+    } else {
+      el.tradeoffFeedback.textContent = `${winner.name} exported more ${answer.category.name}: ${formatMoney(winner.categoryValue)}.`;
+    }
+    el.tradeoffGiveUp.disabled = state.finished;
+    el.tradeoffGiveUp.hidden = state.finished;
+    el.tradeoffClue.setAttribute(
+      "aria-label",
+      state.finished
+        ? `${answer.category.name}. ${answer.countries.map((country) => `${country.name}: ${formatMoney(country.categoryValue)}`).join(". ")}`
+        : `${answer.category.name}. Choose between ${answer.countries.map((country) => country.name).join(" and ")}.`
+    );
+  }
+
+  function renderClue() {
+    if (GAME.view === "profile") renderTradeProfile();
+    else if (GAME.view === "comparison") renderTradeComparison();
+    else if (GAME.view === "category") renderProductleClue();
+    else if (GAME.view === "tradeoff") renderTradeoffClue();
+    else renderTreemap();
+  }
+
   function radians(degrees) {
     return degrees * Math.PI / 180;
   }
@@ -786,6 +1192,7 @@
   }
 
   function renderGuesses() {
+    if (GAME.view === "category" || GAME.view === "tradeoff") return;
     el.emptyLog.hidden = state.guesses.length > 0;
     el.guessList.innerHTML = state.guesses.map((iso3, index) => {
       const country = countries.find((candidate) => candidate.iso3 === iso3);
@@ -820,6 +1227,28 @@
   }
 
   function renderFormState() {
+    if (GAME.view === "tradeoff") {
+      el.completedCard.hidden = !state.finished;
+      if (state.finished) {
+        const winner = tradeoffWinner();
+        el.completedSummary.textContent = state.won
+          ? `Correct · ${winner.name} exported more`
+          : `Winner: ${winner.name}`;
+      }
+      return;
+    }
+
+    if (GAME.view === "category") {
+      el.completedCard.hidden = !state.finished;
+      if (state.finished) {
+        const guessWord = state.guesses.length === 1 ? "guess" : "guesses";
+        el.completedSummary.textContent = state.won
+          ? `Solved in ${state.guesses.length} ${guessWord} · ${answer.name}`
+          : `Answer: ${answer.name}`;
+      }
+      return;
+    }
+
     el.input.disabled = state.finished;
     el.submit.disabled = state.finished;
     el.giveUp.disabled = state.finished;
@@ -837,25 +1266,106 @@
 
   function renderGame() {
     renderAttempts();
-    renderGuesses();
+    if (GAME.view === "tradeoff") renderTradeoffClue();
+    else if (GAME.view === "category") renderProductleWordBank();
+    else renderGuesses();
     renderFormState();
   }
 
-  function loadStats() {
+  function statsKeyFor(gameConfig) {
+    return `${gameConfig.id}-v1:stats`;
+  }
+
+  function loadStats(gameConfig = GAME) {
+    const maxGuesses = gameConfig.maxGuesses || 6;
     const fallback = {
       played: 0,
       wins: 0,
       currentStreak: 0,
       maxStreak: 0,
       lastWinPuzzle: 0,
-      distribution: [0, 0, 0, 0, 0, 0]
+      distribution: Array(maxGuesses).fill(0)
     };
     try {
-      const stored = JSON.parse(localStorage.getItem(STATS_KEY));
-      return stored ? { ...fallback, ...stored } : fallback;
+      const stored = JSON.parse(localStorage.getItem(statsKeyFor(gameConfig)));
+      if (!stored) return fallback;
+      return {
+        ...fallback,
+        ...stored,
+        distribution: Array.from(
+          { length: maxGuesses },
+          (_, index) => Number(stored.distribution?.[index]) || 0
+        )
+      };
     } catch {
       return fallback;
     }
+  }
+
+  function renderDistribution(gameConfig) {
+    const stats = loadStats(gameConfig);
+    const distribution = stats.distribution;
+    const maxCount = Math.max(0, ...distribution);
+    el.distributionChart.setAttribute("aria-label", `${gameConfig.name} wins by number of guesses`);
+    el.distributionChart.setAttribute("aria-labelledby", `stats-tab-${gameConfig.id}`);
+    el.distributionChart.innerHTML = `
+      ${distribution.map((count, index) => {
+        const width = maxCount > 0 && count > 0 ? Math.max(8, count / maxCount * 100) : 0;
+        return `
+          <div class="distribution-row">
+            <span class="distribution-attempt">${index + 1}</span>
+            <span class="distribution-track" aria-hidden="true">
+              <span class="distribution-fill" style="width:${width.toFixed(1)}%"></span>
+            </span>
+            <strong>${count}</strong>
+          </div>
+        `;
+      }).join("")}
+      ${maxCount === 0 ? '<p class="distribution-empty">No completed wins yet.</p>' : ""}
+    `;
+  }
+
+  function renderStatsOverview() {
+    const gameConfigs = Object.values(GAME_MODES);
+    const distributionGames = gameConfigs.filter((gameConfig) => gameConfig.tracksGuessDistribution !== false);
+    if (!distributionGames.some((gameConfig) => gameConfig.id === selectedStatsGameId)) {
+      selectedStatsGameId = distributionGames[0].id;
+    }
+
+    el.statsGameGrid.innerHTML = `
+      <div class="stats-game-row is-heading" aria-hidden="true">
+        <span>Game</span><span>Played</span><span>Win %</span><span>Streak</span><span>Best</span>
+      </div>
+      ${gameConfigs.map((gameConfig) => {
+        const stats = loadStats(gameConfig);
+        const winRate = stats.played ? Math.round(stats.wins / stats.played * 100) : 0;
+        return `
+          <div class="stats-game-row${gameConfig.id === GAME.id ? " is-current" : ""}">
+            <strong>${escapeHtml(gameConfig.name)}</strong>
+            <span><b>${stats.played}</b><small>Played</small></span>
+            <span><b>${winRate}%</b><small>Win</small></span>
+            <span><b>${stats.currentStreak}</b><small>Streak</small></span>
+            <span><b>${stats.maxStreak}</b><small>Best</small></span>
+          </div>
+        `;
+      }).join("")}
+    `;
+
+    el.statsGameTabs.innerHTML = distributionGames.map((gameConfig) => {
+      const active = gameConfig.id === selectedStatsGameId;
+      return `
+        <button
+          id="stats-tab-${gameConfig.id}"
+          type="button"
+          role="tab"
+          data-stats-game="${gameConfig.id}"
+          aria-controls="distribution-chart"
+          aria-selected="${active}"
+          tabindex="${active ? "0" : "-1"}"
+        >${escapeHtml(gameConfig.name)}</button>
+      `;
+    }).join("");
+    renderDistribution(GAME_MODES[selectedStatsGameId]);
   }
 
   function recordResult() {
@@ -868,8 +1378,10 @@
       stats.currentStreak = stats.lastWinPuzzle === puzzleNumber - 1 ? stats.currentStreak + 1 : 1;
       stats.maxStreak = Math.max(stats.maxStreak, stats.currentStreak);
       stats.lastWinPuzzle = puzzleNumber;
-      const attempt = Math.max(0, Math.min(MAX_GUESSES - 1, state.guesses.length - 1));
-      stats.distribution[attempt] = (stats.distribution[attempt] || 0) + 1;
+      if (GAME.tracksGuessDistribution !== false) {
+        const attempt = Math.max(0, Math.min(MAX_GUESSES - 1, state.guesses.length - 1));
+        stats.distribution[attempt] = (stats.distribution[attempt] || 0) + 1;
+      }
     } else {
       stats.currentStreak = 0;
     }
@@ -886,20 +1398,73 @@
 
   function renderResult() {
     const stats = loadStats();
-    const topProducts = answer.products.slice(0, 3);
     const guessWord = state.guesses.length === 1 ? "guess" : "guesses";
     el.resultKicker.textContent = state.won
       ? `Solved in ${state.guesses.length} ${guessWord}`
       : "Answer revealed";
-    el.answerFlag.textContent = flagEmoji(answer.iso2);
-    el.answerName.textContent = answer.name;
-    el.answerContext.textContent = `${answer.continent} · ${formatMoney(totalTradeValue(answer))} in goods ${directionWord()} · ${dataMeta.year}`;
-    el.answerProducts.innerHTML = topProducts.map((product) => `
-      <div class="answer-product">
-        <span>${escapeHtml(product.name)}</span>
-        <strong>${(product.share * 100).toFixed(1)}%</strong>
-      </div>
-    `).join("");
+    const isCategory = GAME.view === "category";
+    const isTradeoff = GAME.view === "tradeoff";
+    el.answerFlag.hidden = isCategory || isTradeoff;
+    el.answerFlag.classList.toggle("is-category", isCategory);
+    el.answerProducts.classList.toggle("is-productle", isCategory);
+    el.answerProducts.classList.toggle("is-tradeoff", isTradeoff);
+    el.answerFlag.style.removeProperty("--category-color");
+    el.answerFlag.textContent = isCategory
+      ? SECTION_CODES[answer.sectionId]
+      : (isTradeoff ? "" : flagEmoji(answer.iso2));
+    if (isCategory) el.answerFlag.style.setProperty("--category-color", SECTION_COLORS[answer.sectionId] || "#666");
+    if (isTradeoff) {
+      const winner = tradeoffWinner();
+      el.answerName.textContent = `${winner.name} exported more`;
+      el.answerContext.textContent = `${answer.category.name} · matched 2024 goods exporters`;
+      el.answerProducts.innerHTML = answer.countries.map((country) => `
+        <div class="answer-product">
+          <span>${flagEmoji(country.iso2)} ${escapeHtml(country.name)}</span>
+          <strong>${formatMoney(country.categoryValue)}</strong>
+          <small>${(country.categoryShare * 100).toFixed(1)}% of exports</small>
+        </div>
+      `).join("");
+    } else if (isCategory) {
+      el.answerName.textContent = answer.name;
+      el.answerContext.textContent = `Broad export category · goods exports · ${dataMeta.year}`;
+      el.answerProducts.innerHTML = answer.clueCountries.map((country) => `
+        <div class="answer-product">
+          <span>${flagEmoji(country.iso2)} ${escapeHtml(country.name)}</span>
+          <strong>${(country.share * 100).toFixed(1)}%</strong>
+        </div>
+      `).join("");
+    } else if (GAME.view === "profile") {
+      el.answerName.textContent = answer.name;
+      el.answerContext.textContent = `${answer.continent} · ${formatMoney(answer.gdpValue)} nominal GDP · ${dataMeta.year}`;
+      el.answerProducts.innerHTML = answer.partners.slice(0, 3).map((partner, index) => `
+        <div class="answer-product">
+          <span>Trade partner #${index + 1}</span>
+          <strong>${escapeHtml(partner.name)}</strong>
+        </div>
+      `).join("");
+    } else if (GAME.view === "comparison") {
+      el.answerName.textContent = answer.name;
+      const [thenYear, nowYear] = dataMeta.years;
+      const then = answer.periods[thenYear];
+      const now = answer.periods[nowYear];
+      el.answerContext.textContent = `${answer.continent} · goods exports ${formatMoney(then.exportValue)} → ${formatMoney(now.exportValue)} · ${thenYear}–${nowYear}`;
+      el.answerProducts.innerHTML = now.categories.slice(0, 3).map((category, index) => `
+        <div class="answer-product">
+          <span>${nowYear} category #${index + 1}</span>
+          <strong>${escapeHtml(category.name)}</strong>
+        </div>
+      `).join("");
+    } else {
+      el.answerName.textContent = answer.name;
+      const topProducts = answer.products.slice(0, 3);
+      el.answerContext.textContent = `${answer.continent} · ${formatMoney(totalTradeValue(answer))} in goods ${directionWord()} · ${dataMeta.year}`;
+      el.answerProducts.innerHTML = topProducts.map((product) => `
+        <div class="answer-product">
+          <span>${escapeHtml(product.name)}</span>
+          <strong>${(product.share * 100).toFixed(1)}%</strong>
+        </div>
+      `).join("");
+    }
     el.statPlayed.textContent = stats.played;
     el.statWinRate.textContent = stats.played ? `${Math.round(stats.wins / stats.played * 100)}%` : "0%";
     el.statStreak.textContent = stats.currentStreak;
@@ -952,24 +1517,59 @@
     else el.input.focus();
   }
 
-  function resultGrid() {
+  function submitProductleGuess(sectionId) {
+    if (GAME.view !== "category" || state.finished) return;
+    const category = productleCategories.find((candidate) => candidate.sectionId === Number(sectionId));
+    if (!category || state.guesses.map(Number).includes(category.sectionId)) return;
+
+    state.guesses.push(category.sectionId);
+    saveState();
+    renderGame();
+
+    if (category.sectionId === answer.sectionId) finishGame(true);
+    else if (state.guesses.length >= MAX_GUESSES) finishGame(false);
+  }
+
+  function submitTradeoffGuess(iso3) {
+    if (GAME.view !== "tradeoff" || state.finished) return;
+    const country = answer.countries.find((candidate) => candidate.iso3 === iso3);
+    if (!country) return;
+    state.guesses.push(country.iso3);
+    saveState();
+    finishGame(country.iso3 === answer.winnerIso3);
+  }
+
+  function resultRows() {
+    if (GAME.view === "tradeoff") {
+      return state.guesses.map((iso3) => (
+        iso3 === answer.winnerIso3 ? "🟩🟩🟩🟩🟩" : "⬜⬜⬜⬜⬜"
+      ));
+    }
+    if (GAME.view === "category") {
+      return state.guesses.map((sectionId) => (
+        Number(sectionId) === answer.sectionId ? "🟩🟩🟩🟩🟩" : "⬜⬜⬜⬜⬜"
+      ));
+    }
     return state.guesses.map((iso3) => {
       const country = countries.find((candidate) => candidate.iso3 === iso3);
       const clue = clueFor(country);
-      if (clue.correct) return "🟩";
-      if (clue.proximity >= 80) return "🟧";
-      if (clue.proximity >= 60) return "🟨";
-      if (clue.proximity >= 35) return "🟦";
-      return "⬜";
-    }).join("");
+      if (clue.correct) return "🟩🟩🟩🟩🟩";
+      const greenCount = Math.min(4, Math.floor(clue.proximity / 20));
+      const yellowCount = greenCount < 4 && clue.proximity % 20 >= 10 ? 1 : 0;
+      const blankCount = 5 - greenCount - yellowCount;
+      return `${"🟩".repeat(greenCount)}${"🟨".repeat(yellowCount)}${"⬜".repeat(blankCount)}`;
+    });
   }
 
   function shareText() {
     const score = state.won ? `${state.guesses.length}/${MAX_GUESSES}` : `X/${MAX_GUESSES}`;
+    const gameTag = GAME.name.replace(/[^a-zA-Z0-9]/g, "");
+    const gameUrl = `https://liberal.markets/games.html?game=${encodeURIComponent(GAME.id)}`;
+    const rows = resultRows();
     return [
-      `${GAME.name} #${puzzleNumber} ${score}`,
-      resultGrid() || "⬜",
-      `Guess the country from its ${directionWord()}.`
+      `#${gameTag} #${puzzleNumber} ${score}`,
+      ...(rows.length ? rows : ["⬜⬜⬜⬜⬜"]),
+      gameUrl
     ].join("\n");
   }
 
@@ -1000,6 +1600,11 @@
 
   function openHelp() {
     if (!el.helpDialog.open) el.helpDialog.showModal();
+  }
+
+  function openStats() {
+    renderStatsOverview();
+    if (!el.statsDialog.open) el.statsDialog.showModal();
   }
 
   function closeOnBackdrop(dialog, event) {
@@ -1033,6 +1638,21 @@
       if (tab.dataset.categoryId === "all") showAllSections();
       else zoomToSection(tab.dataset.categoryId);
     });
+    el.productleWordBank.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-productle-category]");
+      if (button) submitProductleGuess(button.dataset.productleCategory);
+    });
+    el.statsGameTabs.addEventListener("click", (event) => {
+      const tab = event.target.closest("[data-stats-game]");
+      if (!tab) return;
+      selectedStatsGameId = tab.dataset.statsGame;
+      renderStatsOverview();
+      el.statsGameTabs.querySelector(`[data-stats-game="${selectedStatsGameId}"]`)?.focus();
+    });
+    el.tradeoffCountries.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-tradeoff-country]");
+      if (button) submitTradeoffGuess(button.dataset.tradeoffCountry);
+    });
     el.chartBack.addEventListener("click", showAllSections);
     el.unitButtons.forEach((button) => {
       button.addEventListener("click", () => setDistanceUnit(button.dataset.distanceUnit));
@@ -1043,7 +1663,14 @@
     el.giveUp.addEventListener("click", () => {
       if (window.confirm("Reveal today’s country and end this game?")) finishGame(false, true);
     });
+    el.productleGiveUp.addEventListener("click", () => {
+      if (window.confirm("Reveal today’s export category and end this game?")) finishGame(false, true);
+    });
+    el.tradeoffGiveUp.addEventListener("click", () => {
+      if (window.confirm("Reveal which country exported more and end this game?")) finishGame(false, true);
+    });
     el.openHelp.addEventListener("click", openHelp);
+    el.openStats.addEventListener("click", openStats);
     el.viewResult.addEventListener("click", showResult);
     el.shareResult.addEventListener("click", copyResult);
     document.querySelectorAll("[data-close-dialog]").forEach((button) => {
@@ -1052,11 +1679,15 @@
     document.querySelectorAll("[data-close-help]").forEach((button) => {
       button.addEventListener("click", () => el.helpDialog.close());
     });
+    document.querySelectorAll("[data-close-stats]").forEach((button) => {
+      button.addEventListener("click", () => el.statsDialog.close());
+    });
     el.resultDialog.addEventListener("click", (event) => closeOnBackdrop(el.resultDialog, event));
     el.helpDialog.addEventListener("click", (event) => closeOnBackdrop(el.helpDialog, event));
+    el.statsDialog.addEventListener("click", (event) => closeOnBackdrop(el.statsDialog, event));
     window.addEventListener("resize", () => {
       window.clearTimeout(resizeTimer);
-      resizeTimer = window.setTimeout(renderTreemap, 120);
+      resizeTimer = window.setTimeout(renderClue, 120);
     });
   }
 
@@ -1068,14 +1699,35 @@
       year: "numeric",
       timeZone: "UTC"
     }).format(now);
-    el.dataYear.textContent = `BACI · ${dataMeta.year}`;
-    el.figureYear.textContent = dataMeta.year;
+    if (GAME.view === "comparison") {
+      const [thenYear, nowYear] = dataMeta.years;
+      el.dataYear.textContent = `BACI · ${thenYear}–${nowYear}`;
+      el.figureYear.textContent = `${thenYear} → ${nowYear}`;
+    } else if (GAME.view === "profile") {
+      el.dataYear.textContent = `BACI + World Bank · ${dataMeta.year}`;
+      el.dataSourceCopy.innerHTML = `Data: <a href="https://oec.world/en/resources/datasets" target="_blank" rel="noreferrer">CEPII BACI via OEC</a> · <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD" target="_blank" rel="noreferrer">World Bank GDP</a> · CC BY 4.0`;
+      el.figureYear.textContent = dataMeta.year;
+    } else {
+      el.dataYear.textContent = `BACI · ${dataMeta.year}`;
+      el.figureYear.textContent = dataMeta.year;
+    }
     el.puzzleNumber.textContent = `Puzzle #${puzzleNumber}`;
   }
 
   function showLoadError(error) {
     console.error(error);
-    el.chartLoading.innerHTML = "<p>Trade data unavailable. Please reload.</p>";
+    if (GAME.view === "tradeoff") {
+      el.tradeoffClue.innerHTML = '<p class="profile-error">Matchup data unavailable. Please reload.</p>';
+    } else if (GAME.view === "category") {
+      el.productleClue.innerHTML = '<p class="profile-error">Category data unavailable. Please reload.</p>';
+      el.productleGuess.hidden = true;
+    } else if (GAME.view === "profile") {
+      el.tradeProfile.innerHTML = '<p class="profile-error">Economic data unavailable. Please reload.</p>';
+    } else if (GAME.view === "comparison") {
+      el.periodComparison.innerHTML = '<p class="profile-error">Historical trade data unavailable. Please reload.</p>';
+    } else {
+      el.chartLoading.innerHTML = "<p>Trade data unavailable. Please reload.</p>";
+    }
     el.exportTotal.textContent = "Could not load trade data";
     el.input.disabled = true;
     el.submit.disabled = true;
@@ -1092,7 +1744,21 @@
       const response = await fetch(DATA_URL);
       if (!response.ok) throw new Error(`Trade data request failed (${response.status})`);
       const payload = await response.json();
-      if (!Array.isArray(payload.countries) || !payload.countries.length) {
+      if (GAME.view === "tradeoff") {
+        if (!Array.isArray(payload.matchups) || !payload.matchups.length) {
+          throw new Error("Tradeoffs data contains no matchups");
+        }
+        if (payload.matchups.some((matchup) => matchup.countries?.length !== 2 || !matchup.categories?.length)) {
+          throw new Error("Tradeoffs data contains an invalid matchup");
+        }
+      } else if (GAME.view === "category") {
+        if (!Array.isArray(payload.categories) || !payload.categories.length) {
+          throw new Error("Productle data contains no categories");
+        }
+        if (payload.categories.some((category) => !Array.isArray(category.countries) || category.countries.length < 5)) {
+          throw new Error("Productle data does not contain enough country clues");
+        }
+      } else if (!Array.isArray(payload.countries) || !payload.countries.length) {
         throw new Error("Trade data contains no countries");
       }
       if (payload.meta?.direction && payload.meta.direction !== GAME.direction) {
@@ -1100,13 +1766,17 @@
       }
 
       dataMeta = payload.meta;
-      countries = payload.countries;
-      buildCountryLookup();
+      if (GAME.view === "tradeoff") tradeoffMatchups = payload.matchups;
+      else if (GAME.view === "category") productleCategories = payload.categories;
+      else {
+        countries = payload.countries;
+        buildCountryLookup();
+      }
       selectAnswer();
       state = loadState();
       renderMetadata();
       renderGame();
-      window.requestAnimationFrame(renderTreemap);
+      window.requestAnimationFrame(renderClue);
     } catch (error) {
       showLoadError(error);
     }
