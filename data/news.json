@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-08-20T13:03:10.076Z",
+  "generatedAt": "2026-08-21T13:02:13.954Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Samsung plans up to $80 billion in shareholder returns after SK Hynix buyback",
+      "link": "https://www.cnbc.com/2026/08/21/samsung-shareholder-return-package-sk-hynix-buyback-ai-chip-boom.html",
+      "pubDate": "Fri, 21 Aug 2026 09:08:18 GMT"
+    },
+    {
+      "title": "Labubu maker Pop Mart shares fall as key ex-China sales data drop, Citi cuts price target",
+      "link": "https://www.cnbc.com/2026/08/21/labubu-maker-pop-mart-shares-fall-after-sales-drop-in-asia-americas-.html",
+      "pubDate": "Fri, 21 Aug 2026 07:18:33 GMT"
+    },
+    {
+      "title": "Chinese humanoid robots&apos; biggest obstacle: Humans are still (mostly) better",
+      "link": "https://www.cnbc.com/2026/08/21/chinese-humanoid-robots-face-challenge-of-their-own-capabilities.html",
+      "pubDate": "Fri, 21 Aug 2026 09:30:55 GMT"
+    },
     {
       "title": "China is defying the global bond yield surge, boosting its diversification appeal",
       "link": "https://www.cnbc.com/2026/08/20/china-defies-global-bond-yield-surge-safe-haven.html",
@@ -77,21 +92,6 @@
       "title": "Uber partners with China&apos;s Pony.ai for 2,000 robotaxis in Europe",
       "link": "https://www.cnbc.com/2026/08/14/uber-partners-with-chinas-ponyai-for-2000-robotaxis-in-europe.html",
       "pubDate": "Fri, 14 Aug 2026 01:02:39 GMT"
-    },
-    {
-      "title": "These charts show why stocks keep rallying. Profit margins are the highest on record",
-      "link": "https://www.cnbc.com/2026/08/13/these-charts-show-why-stocks-keep-rallying-profit-margins-are-highest-on-record.html",
-      "pubDate": "Thu, 13 Aug 2026 20:21:51 GMT"
-    },
-    {
-      "title": "&apos;Big Short&apos; investor Steve Eisman sees an Achilles&apos; heel in the AI boom",
-      "link": "https://www.cnbc.com/2026/08/13/big-short-investor-steve-eisman-sees-an-achilles-heel-in-the-ai-boom.html",
-      "pubDate": "Thu, 13 Aug 2026 15:16:00 GMT"
-    },
-    {
-      "title": "Iran looks to ramp up economic alliance with BRICS nations as war with U.S. drags on",
-      "link": "https://www.cnbc.com/2026/08/13/iran-war-brics-bank.html",
-      "pubDate": "Thu, 13 Aug 2026 16:38:06 GMT"
     }
   ]
 }
