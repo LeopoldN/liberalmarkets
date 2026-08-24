@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-08-23T12:54:18.671Z",
+  "generatedAt": "2026-08-24T13:04:35.550Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Alibaba plunges after announcing $10.2 billion share placement to fund AI push",
+      "link": "https://www.cnbc.com/2026/08/24/alibaba-share-placement-drop-ai-hong-kong.html",
+      "pubDate": "Mon, 24 Aug 2026 08:21:17 GMT"
+    },
     {
       "title": "Wells Fargo and Citigroup have room to buy a big bank. These 5 regionals fit the bill",
       "link": "https://www.cnbc.com/2026/08/23/wells-fargo-citigroup-deals-regional-banks.html",
@@ -87,11 +92,6 @@
       "title": "Credit card issuer Synchrony announces partnership with OpenAI",
       "link": "https://www.cnbc.com/2026/08/17/synchrony-openai.html",
       "pubDate": "Tue, 18 Aug 2026 02:48:33 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway boosts Alphabet to a top three holding, ups Delta and housing bets",
-      "link": "https://www.cnbc.com/2026/08/14/berkshire-hathaway-boosts-alphabet-to-a-top-three-holding-ups-delta-and-housing-bets.html",
-      "pubDate": "Fri, 14 Aug 2026 21:06:48 GMT"
     }
   ]
 }
