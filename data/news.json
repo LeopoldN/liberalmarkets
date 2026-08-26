@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-08-25T13:01:32.404Z",
+  "generatedAt": "2026-08-26T13:06:33.204Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "China&apos;s short-drama producers flood the market with cheap bets — and let audiences pick the winners",
+      "link": "https://www.cnbc.com/2026/08/26/short-drama-china-production-ai-entertainment-economics.html",
+      "pubDate": "Wed, 26 Aug 2026 07:11:25 GMT"
+    },
+    {
+      "title": "HP partners with U.S.-blacklisted Huawei for licensing the Chinese company&apos;s WiFi tech",
+      "link": "https://www.cnbc.com/2026/08/25/hp-partners-huawei-wifi-tech-us-entity-list.html",
+      "pubDate": "Wed, 26 Aug 2026 04:20:31 GMT"
+    },
+    {
       "title": "China needs U.S. dollars but is building a hedge against Washington’s sanctions",
       "link": "https://www.cnbc.com/2026/08/25/china-iran-us-sanctions-banks-cips.html",
-      "pubDate": "Tue, 25 Aug 2026 12:42:15 GMT"
+      "pubDate": "Tue, 25 Aug 2026 16:00:40 GMT"
     },
     {
       "title": "Prediction market traders doubtful Bessent’s bond interventions will push yields lower",
@@ -21,7 +31,7 @@
     {
       "title": "Crypto extends gains after biggest 3-day rally since 2023",
       "link": "https://www.cnbc.com/2026/08/24/crypto-extends-gains-after-biggest-3-day-rally-since-2023.html",
-      "pubDate": "Mon, 24 Aug 2026 20:02:22 GMT"
+      "pubDate": "Tue, 25 Aug 2026 13:53:13 GMT"
     },
     {
       "title": "Alibaba plunges after announcing $10.2 billion share placement to fund AI push",
@@ -82,16 +92,6 @@
       "title": "Goldman studied where AI is squeezing labor markets. Here&apos;s what it found",
       "link": "https://www.cnbc.com/2026/08/19/goldman-ai-impact-employment-jobs.html",
       "pubDate": "Wed, 19 Aug 2026 06:55:57 GMT"
-    },
-    {
-      "title": "What Chinese liquor maker Moutai&apos;s slump says about the country&apos;s economy",
-      "link": "https://www.cnbc.com/2026/08/19/china-economy-moutai-ai-property.html",
-      "pubDate": "Tue, 18 Aug 2026 23:58:09 GMT"
-    },
-    {
-      "title": "Analysis: Bond market pressure is squeezing Main Street as Wall Street waits on Warsh",
-      "link": "https://www.cnbc.com/2026/08/18/bond-market-treasury-yields-warsh-main-street.html",
-      "pubDate": "Tue, 18 Aug 2026 16:48:00 GMT"
     }
   ]
 }
