@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-08-27T22:11:27.591Z",
+  "generatedAt": "2026-08-28T22:12:04.051Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Corn and wheat prices jump to highest prices in more than three years",
+      "link": "https://www.cnbc.com/2026/08/28/corn-and-wheat-prices-jump-to-highest-prices-in-more-than-three-years.html",
+      "pubDate": "Fri, 28 Aug 2026 20:00:56 GMT"
+    },
+    {
+      "title": "U.S. appeals court rules against prediction markets, sets up likely fight at Supreme Court",
+      "link": "https://www.cnbc.com/2026/08/28/appeals-court-rules-against-prediction-markets-tees-up-scotus-fight.html",
+      "pubDate": "Fri, 28 Aug 2026 21:57:47 GMT"
+    },
+    {
+      "title": "September Fed decision is now a coin flip as rate hike odds increase post Warsh",
+      "link": "https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html",
+      "pubDate": "Fri, 28 Aug 2026 15:22:10 GMT"
+    },
+    {
+      "title": "Trump ratchets up rhetoric against Beijing as U.S.-China officials meet for Xi&apos;s Washington visit",
+      "link": "https://www.cnbc.com/2026/08/28/trump-x-meeting-us-china-iran-sanctions.html",
+      "pubDate": "Fri, 28 Aug 2026 01:35:13 GMT"
+    },
+    {
       "title": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here&apos;s what to expect",
       "link": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
-      "pubDate": "Thu, 27 Aug 2026 21:03:08 GMT"
+      "pubDate": "Fri, 28 Aug 2026 11:39:47 GMT"
     },
     {
       "title": "Kansas City Fed&apos;s Schmid says inflation &apos;stubborn&apos; and &apos;sticky,&apos; policy rate not restrictive",
@@ -72,26 +92,6 @@
       "title": "Samsung plans up to $80 billion in shareholder returns after SK Hynix buyback",
       "link": "https://www.cnbc.com/2026/08/21/samsung-shareholder-return-package-sk-hynix-buyback-ai-chip-boom.html",
       "pubDate": "Fri, 21 Aug 2026 09:08:18 GMT"
-    },
-    {
-      "title": "Labubu maker Pop Mart shares fall as key ex-China sales data drop, Citi cuts price target",
-      "link": "https://www.cnbc.com/2026/08/21/labubu-maker-pop-mart-shares-fall-after-sales-drop-in-asia-americas-.html",
-      "pubDate": "Fri, 21 Aug 2026 07:18:33 GMT"
-    },
-    {
-      "title": "Chinese humanoid robots&apos; biggest obstacle: Humans are still (mostly) better",
-      "link": "https://www.cnbc.com/2026/08/21/chinese-humanoid-robots-face-challenge-of-their-own-capabilities.html",
-      "pubDate": "Fri, 21 Aug 2026 09:30:55 GMT"
-    },
-    {
-      "title": "China is defying the global bond yield surge, boosting its diversification appeal",
-      "link": "https://www.cnbc.com/2026/08/20/china-defies-global-bond-yield-surge-safe-haven.html",
-      "pubDate": "Thu, 20 Aug 2026 02:39:14 GMT"
-    },
-    {
-      "title": "Fed officials saw need for rate hike if inflation doesn&apos;t cool, minutes show",
-      "link": "https://www.cnbc.com/2026/08/19/fed-minutes-july-2026-officials-saw-need-for-rate-hike-if-inflation-doesnt-cool.html",
-      "pubDate": "Wed, 19 Aug 2026 18:54:50 GMT"
     }
   ]
 }
