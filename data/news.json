@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-08-31T19:05:14.276Z",
+  "generatedAt": "2026-09-01T16:29:30.676Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Fed Governor Barr says he&apos;ll support rate hike if inflation doesn&apos;t ease",
+      "link": "https://www.cnbc.com/2026/09/01/fed-governor-barr-says-hell-support-rate-hike-if-inflation-doesnt-ease.html",
+      "pubDate": "Tue, 01 Sep 2026 14:01:27 GMT"
+    },
+    {
+      "title": "Hugging Face&apos;s new duck robot is selling fast. A Chinese chip powers it",
+      "link": "https://www.cnbc.com/2026/09/01/hugging-faces-new-duck-robot-is-selling-fast-a-chinese-chip-powers-it.html",
+      "pubDate": "Tue, 01 Sep 2026 07:30:49 GMT"
+    },
+    {
+      "title": "Markets see Warsh endorsing a rate hike in September. Not everyone is convinced",
+      "link": "https://www.cnbc.com/2026/08/31/markets-see-warsh-endorsing-a-rate-hike-in-september-not-everyone-is-convinced.html",
+      "pubDate": "Mon, 31 Aug 2026 19:38:38 GMT"
+    },
     {
       "title": "Aon CEO says insurance broker seeks to build &apos;premiere middle market platform&apos; with purchase of rival USI",
       "link": "https://www.cnbc.com/2026/08/31/aon-ceo-says-usi-deal-seeks-to-build-premiere-middle-market-insurance-platform.html",
@@ -77,21 +92,6 @@
       "title": "China needs U.S. dollars but is building a hedge against Washington’s sanctions",
       "link": "https://www.cnbc.com/2026/08/25/china-iran-us-sanctions-banks-cips.html",
       "pubDate": "Tue, 25 Aug 2026 16:00:40 GMT"
-    },
-    {
-      "title": "Prediction market traders doubtful Bessent’s bond interventions will push yields lower",
-      "link": "https://www.cnbc.com/2026/08/24/prediction-market-traders-skeptical-bessent-will-send-yields-lower.html",
-      "pubDate": "Mon, 24 Aug 2026 18:40:41 GMT"
-    },
-    {
-      "title": "Goldman Sachs partner warns of &apos;huge danger&apos; in letting AI replace bankers&apos; reasoning skills",
-      "link": "https://www.cnbc.com/2026/08/24/goldman-sachs-ai-partner-danger-skills.html",
-      "pubDate": "Mon, 24 Aug 2026 15:50:50 GMT"
-    },
-    {
-      "title": "Crypto extends gains after biggest 3-day rally since 2023",
-      "link": "https://www.cnbc.com/2026/08/24/crypto-extends-gains-after-biggest-3-day-rally-since-2023.html",
-      "pubDate": "Tue, 25 Aug 2026 13:53:13 GMT"
     }
   ]
 }
