@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-09-01T16:29:30.676Z",
+  "generatedAt": "2026-09-02T16:27:59.499Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "New York Fed&apos;s Williams says yield surge due to strong economic prospects",
+      "link": "https://www.cnbc.com/2026/09/02/new-york-feds-williams-says-yield-surge-due-to-strong-economic-prospects.html",
+      "pubDate": "Wed, 02 Sep 2026 15:56:13 GMT"
+    },
+    {
+      "title": "Berkshire CEO Greg Abel says Japanese bond yields not a challenge for trading houses right now",
+      "link": "https://www.cnbc.com/2026/09/02/berkshire-ceo-says-japanese-bond-yields-not-a-challenge-for-trading-houses.html",
+      "pubDate": "Wed, 02 Sep 2026 11:09:15 GMT"
+    },
+    {
+      "title": "Nepal’s mountain tourism industry faces ‘serious warning’ after Himalayan flood disaster",
+      "link": "https://www.cnbc.com/2026/09/02/nepal-tibet-floods-adventure-tourism-economy.html",
+      "pubDate": "Wed, 02 Sep 2026 09:23:18 GMT"
+    },
+    {
+      "title": "Prediction market traders think job creation rebounded in August",
+      "link": "https://www.cnbc.com/2026/09/01/prediction-market-traders-think-job-creation-rebounded-in-august.html",
+      "pubDate": "Tue, 01 Sep 2026 18:57:14 GMT"
+    },
     {
       "title": "Fed Governor Barr says he&apos;ll support rate hike if inflation doesn&apos;t ease",
       "link": "https://www.cnbc.com/2026/09/01/fed-governor-barr-says-hell-support-rate-hike-if-inflation-doesnt-ease.html",
@@ -11,7 +31,7 @@
     {
       "title": "Hugging Face&apos;s new duck robot is selling fast. A Chinese chip powers it",
       "link": "https://www.cnbc.com/2026/09/01/hugging-faces-new-duck-robot-is-selling-fast-a-chinese-chip-powers-it.html",
-      "pubDate": "Tue, 01 Sep 2026 07:30:49 GMT"
+      "pubDate": "Wed, 02 Sep 2026 00:11:14 GMT"
     },
     {
       "title": "Markets see Warsh endorsing a rate hike in September. Not everyone is convinced",
@@ -36,7 +56,7 @@
     {
       "title": "China&apos;s Xi builds diplomatic clout with multiple state visits ahead of Trump summit",
       "link": "https://www.cnbc.com/2026/08/31/china-xi-us-trump-visit-sco-brics-modi-india.html",
-      "pubDate": "Mon, 31 Aug 2026 04:57:24 GMT"
+      "pubDate": "Tue, 01 Sep 2026 18:51:50 GMT"
     },
     {
       "title": "Jackson Hole analyst roundup: Warsh&apos;s speech sends hike chances higher, may put Fed &apos;at odds&apos; with Treasury",
@@ -72,26 +92,6 @@
       "title": "Kansas City Fed&apos;s Schmid says inflation &apos;stubborn&apos; and &apos;sticky,&apos; policy rate not restrictive",
       "link": "https://www.cnbc.com/2026/08/27/kansas-city-feds-schmid-says-inflation-stubborn-and-sticky-policy-rate-not-restrictive.html",
       "pubDate": "Thu, 27 Aug 2026 14:11:29 GMT"
-    },
-    {
-      "title": "Z.ai shares surge 8% after releasing new AI model running only on Chinese chips",
-      "link": "https://www.cnbc.com/2026/08/27/zai-shares-surge-new-ai-model-using-chinese-chips.html",
-      "pubDate": "Thu, 27 Aug 2026 05:34:13 GMT"
-    },
-    {
-      "title": "China&apos;s short-drama producers flood the market with cheap bets — and let audiences pick the winners",
-      "link": "https://www.cnbc.com/2026/08/26/short-drama-china-production-ai-entertainment-economics.html",
-      "pubDate": "Wed, 26 Aug 2026 13:20:34 GMT"
-    },
-    {
-      "title": "HP inks deal with U.S.-blacklisted Huawei for licensing the Chinese company&apos;s WiFi tech",
-      "link": "https://www.cnbc.com/2026/08/25/hp-partners-huawei-wifi-tech-us-entity-list.html",
-      "pubDate": "Thu, 27 Aug 2026 03:42:17 GMT"
-    },
-    {
-      "title": "China needs U.S. dollars but is building a hedge against Washington’s sanctions",
-      "link": "https://www.cnbc.com/2026/08/25/china-iran-us-sanctions-banks-cips.html",
-      "pubDate": "Tue, 25 Aug 2026 16:00:40 GMT"
     }
   ]
 }
