@@ -1,0 +1,30 @@
+.globe-shell { width: min(820px, calc(100% - 40px)); margin: 0 auto; }
+.globe-shell > .all-games-link { display: inline-block; margin-top: 24px; }
+.globe-intro { text-align: center; padding: 12px 0 28px; }
+.globe-intro h1 { margin: 0 0 6px; font: 700 clamp(44px, 7vw, 58px)/1 var(--serif); letter-spacing: -.055em; }
+.preview-label { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+.globe-board { border: 1px solid var(--faint); border-radius: 5px; overflow: hidden; }
+.globe-board-heading { padding: 22px 26px 0; display: flex; justify-content: flex-end; align-items: center; gap: 16px; }
+.live-label { display: flex; align-items: center; gap: 7px; font-size: 10px; color: var(--muted); white-space: nowrap; }
+.live-label i { width: 5px; height: 5px; border-radius: 50%; background: #83b99c; }
+.globe-stage { position: relative; height: clamp(350px, 65vw, 560px); isolation: isolate; }
+#globe { width: 100%; height: 100%; cursor: grab; touch-action: none; }
+#globe:active { cursor: grabbing; }
+#globe canvas { display: block; }
+.globe-loading { position: absolute; inset: 44% 24px auto; text-align: center; font-size: 13px; color: var(--muted); pointer-events: none; }
+.globe-caption { position: absolute; inset: auto 26px 18px; display: flex; justify-content: space-between; pointer-events: none; color: var(--muted); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.globe-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 26px; border-block: 1px solid var(--faint); font-size: 11px; color: var(--muted); }
+.globe-toolbar > div { display: flex; gap: 18px; }
+.globe-toolbar button { background: none; padding: 6px 0; font-size: 11px; cursor: pointer; }
+.globe-selection { padding: 22px 26px 16px; }
+.globe-selection label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+.selection-row { display: flex; gap: 10px; }
+.selection-row select { flex: 1; min-width: 0; height: 43px; padding: 0 12px; border: 1px solid var(--faint); border-radius: 3px; background: var(--white); color: var(--ink); font: 12px var(--sans); }
+.selection-row button { border-radius: 3px; padding: 0 20px; background: var(--ink); color: var(--white); font-size: 12px; cursor: pointer; }
+.selection-row button:disabled { opacity: .35; cursor: default; }
+.globe-selection p { min-height: 17px; color: var(--muted); font-size: 11px; line-height: 1.5; margin: 10px 0 0; }
+.preview-note { text-align: center; margin: 20px 0 32px; font-size: 11px; line-height: 1.6; color: var(--muted); }
+.globe-footer { width: min(820px, calc(100% - 40px)); margin: 0 auto; }
+.globe-shell button:focus-visible, .globe-shell select:focus-visible { outline: 2px solid #83b99c; outline-offset: 4px; }
+.help-card > p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.7; }
+@media(max-width: 540px) { .globe-shell { width: calc(100% - 24px); } .globe-board-heading { padding: 20px 18px 0; } .live-label { display: none; } .globe-toolbar { padding: 10px 18px; flex-wrap: wrap; justify-content: center; } .globe-toolbar > span { width: 100%; text-align: center; } .globe-selection { padding: 20px 18px 16px; } .globe-intro { padding-top: 18px; } .globe-caption { inset-inline: 18px; font-size: 8px; } .header-actions { gap: 8px; } }

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="Explore the next Liberal Markets game, one country at a time.">
+  <title>Globe — Liberal Markets Games</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap">
+  <link rel="stylesheet" href="trade-game.css">
+  <link rel="stylesheet" href="globe-game.css">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('trade-games:theme') === 'light' ? 'light' : 'dark'; } catch {}</script>
+  <script src="assets/vendor/globe.gl.min.js" defer></script>
+  <script src="globe-game.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#game">Skip to globe</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Liberal Markets</a>
+      <a class="header-game" href="games.html">Games</a>
+      <div class="header-actions"><button class="theme-toggle" id="theme-toggle" type="button">Dark</button><button class="header-help" id="open-help" type="button">How to explore</button></div>
+    </div>
+  </header>
+  <main class="globe-shell" id="game">
+    <a class="all-games-link" href="games.html">← All Games</a>
+    <header class="globe-intro">
+      <h1>Globe</h1>
+      <span class="preview-label">Game preview</span>
+    </header>
+    <section class="globe-board" aria-label="Interactive globe">
+      <header class="globe-board-heading"><span class="live-label"><i></i> Interactive globe</span></header>
+      <div class="globe-stage" id="globe-stage">
+        <div id="globe" role="img" aria-label="Interactive dotted globe. Drag to rotate, or select a country using the menu below."></div>
+        <p class="globe-loading" id="globe-loading" role="status">Bringing the world into view…</p>
+        <div class="globe-caption" aria-hidden="true"><span>One world</span><span>Countless connections</span></div>
+      </div>
+      <div class="globe-toolbar"><span>Drag to rotate · Scroll to zoom · Click to select</span><div><button id="ripple" type="button" disabled>Replay wave</button><button id="rotation" type="button" aria-pressed="true">Pause rotation</button><button id="reset" type="button">Reset view ↺</button></div></div>
+      <div class="globe-selection"><label for="country">Put a country in focus</label><div class="selection-row"><select id="country" disabled><option value="">Choose a country</option></select><button id="clear" type="button" disabled>Clear</button></div><p id="selection-status" aria-live="polite">Select a country to highlight it on the globe.</p></div>
+    </section>
+    <p class="preview-note">A new game is taking shape. For now, take the world for a spin.</p>
+  </main>
+  <footer class="site-footer globe-footer"><span>Liberal Markets Games</span><span>Map: Natural Earth</span></footer>
+  <dialog id="help-dialog" class="help-dialog"><div class="dialog-card help-card"><button class="dialog-close" id="close-help" aria-label="Close instructions" type="button">×</button><p class="eyebrow">A little exploration</p><h2>The world at your fingertips.</h2><p>Drag the globe to look around. Scroll or pinch to zoom. Hover to highlight a country, then click to select it. You can also choose a country from the menu.</p><p>This is a preview of the new game page. Daily puzzles will come next.</p><button class="primary-dialog-button" id="start-exploring" type="button">Explore the globe</button></div></dialog>
+</body>
+</html>
