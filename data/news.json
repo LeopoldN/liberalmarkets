@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-09-02T16:27:59.499Z",
+  "generatedAt": "2026-09-03T16:18:43.679Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "China hits back at G20 statement on its reliance on exports, accusing them of &apos;promoting protectionism&apos;",
+      "link": "https://www.cnbc.com/2026/09/03/china-g20-exports-trade.html",
+      "pubDate": "Thu, 03 Sep 2026 11:12:54 GMT"
+    },
+    {
       "title": "New York Fed&apos;s Williams says yield surge due to strong economic prospects",
       "link": "https://www.cnbc.com/2026/09/02/new-york-feds-williams-says-yield-surge-due-to-strong-economic-prospects.html",
-      "pubDate": "Wed, 02 Sep 2026 15:56:13 GMT"
+      "pubDate": "Wed, 02 Sep 2026 17:21:59 GMT"
     },
     {
       "title": "Berkshire CEO Greg Abel says Japanese bond yields not a challenge for trading houses right now",
@@ -87,11 +92,6 @@
       "title": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here&apos;s what to expect",
       "link": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
       "pubDate": "Fri, 28 Aug 2026 11:39:47 GMT"
-    },
-    {
-      "title": "Kansas City Fed&apos;s Schmid says inflation &apos;stubborn&apos; and &apos;sticky,&apos; policy rate not restrictive",
-      "link": "https://www.cnbc.com/2026/08/27/kansas-city-feds-schmid-says-inflation-stubborn-and-sticky-policy-rate-not-restrictive.html",
-      "pubDate": "Thu, 27 Aug 2026 14:11:29 GMT"
     }
   ]
 }
