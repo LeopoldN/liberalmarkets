@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-09-03T16:18:43.679Z",
+  "generatedAt": "2026-09-04T16:14:12.835Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Bitcoin heads for third winning week in a row as macro pressures mount",
+      "link": "https://www.cnbc.com/2026/09/04/bitcoin-heads-for-third-winning-week-in-a-row-as-macro-pressures-mount.html",
+      "pubDate": "Fri, 04 Sep 2026 14:36:48 GMT"
+    },
     {
       "title": "China hits back at G20 statement on its reliance on exports, accusing them of &apos;promoting protectionism&apos;",
       "link": "https://www.cnbc.com/2026/09/03/china-g20-exports-trade.html",
@@ -87,11 +92,6 @@
       "title": "Trump ratchets up rhetoric against Beijing as U.S.-China officials meet for Xi&apos;s Washington visit",
       "link": "https://www.cnbc.com/2026/08/28/trump-x-meeting-us-china-iran-sanctions.html",
       "pubDate": "Fri, 28 Aug 2026 01:35:13 GMT"
-    },
-    {
-      "title": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here&apos;s what to expect",
-      "link": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
-      "pubDate": "Fri, 28 Aug 2026 11:39:47 GMT"
     }
   ]
 }
