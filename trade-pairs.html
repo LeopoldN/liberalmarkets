@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="Match eight countries into four trading pairs. A daily globe puzzle.">
+  <title>Trade Pairs — Liberal Markets Games</title>
+  <link rel="canonical" href="https://liberal.markets/trade-pairs.html">
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap">
+  <link rel="stylesheet" href="trade-game.css">
+  <link rel="stylesheet" href="globe-game.css">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('trade-games:theme') === 'light' ? 'light' : 'dark'; } catch {}</script>
+  <script src="assets/vendor/globe.gl.min.js" defer></script>
+  <script src="trade-pairs-engine.js" defer></script>
+  <script src="trade-pairs-audio.js" defer></script>
+  <script src="globe-game.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#game">Skip to globe</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Liberal Markets</a>
+      <a class="header-game" href="games.html">Games</a>
+      <div class="header-actions"><button class="theme-toggle" id="sound-toggle" type="button" aria-pressed="true" aria-label="Mute sound effects">Sound on</button><button class="theme-toggle" id="theme-toggle" type="button">Dark</button><button class="header-help" id="open-help" type="button">How to play</button></div>
+    </div>
+  </header>
+  <main class="globe-shell" id="game">
+    <a class="all-games-link" href="games.html">← All Games</a>
+    <header class="globe-intro">
+      <h1>Trade Pairs</h1>
+      <p class="pairs-instruction">Match eight countries into four trading pairs.</p>
+      <span class="preview-label" id="puzzle-date"></span>
+    </header>
+    <section class="globe-board" aria-label="Interactive globe">
+      <header class="pairs-score"><span id="pairs-progress">0 / 4 pairs</span><span id="mistakes-left">4 mistakes remaining</span></header>
+      <div class="globe-stage" id="globe-stage">
+        <div id="globe" role="img" aria-label="Interactive globe of today’s eight countries. Select countries here or use the country buttons below."></div>
+        <p class="globe-loading" id="globe-loading" role="status">Bringing the world into view…</p>
+
+      </div>
+      <div class="globe-toolbar"><span>Drag to rotate · Scroll to zoom · Click to select</span><div><button id="rotation" type="button" aria-pressed="true">Pause rotation</button><button id="reset" type="button">Reset view ↺</button></div></div>
+      <section class="pairs-play" aria-label="Match trading partners">
+        <div class="rank-legend" aria-label="Trading partner ranks"><span class="rank-1">1st partner</span><span class="rank-2">2nd partner</span><span class="rank-3">3rd partner</span><span class="rank-4">4th partner</span></div>
+        <div id="solved-pairs" class="solved-pairs" aria-label="Completed pairs"></div>
+        <div id="country-tiles" class="country-tiles" role="group" aria-label="Select two countries"></div>
+        <p id="selection-status" class="pair-message" role="status" aria-live="polite">Loading today’s puzzle…</p>
+        <div class="pair-actions"><button id="shuffle" type="button" disabled>Shuffle</button><button id="clear" type="button" disabled>Deselect</button><button id="match" type="button" disabled>Match pair</button><button id="share" type="button" hidden>Copy result</button></div>
+      </section>
+    </section>
+
+  </main>
+  <footer class="site-footer globe-footer"><span id="trade-source">2024 goods trade · CEPII BACI via <a href="https://oec.world/en/resources/datasets" target="_blank" rel="noreferrer">OEC</a> · CC BY 4.0</span><span>Map: Natural Earth</span></footer>
+  <dialog id="help-dialog" class="help-dialog"><div class="dialog-card help-card"><button class="dialog-close" id="close-help" aria-label="Close instructions" type="button">×</button><h2>How to play</h2><p>Select two countries, then choose Match pair. Find all four pairs before making four mistakes.</p><p>There is one pair for each rank: a country and its 1st, 2nd, 3rd, or 4th largest trading partner. Each country is used once. Pairs can be solved in any order.</p><p>Rankings are directional: one country’s top partner need not rank it first in return. The reveal shows which country the rank belongs to. All four pairs together have one solution.</p><p>Trade means combined goods imports and exports, using the same 2024 data as Truddies. A new puzzle arrives daily at 00:00 UTC. Progress is saved in this browser.</p><button class="primary-dialog-button" id="start-exploring" type="button">Play</button></div></dialog>
+</body>
+</html>

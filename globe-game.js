@@ -3,6 +3,123 @@
   const $ = id => document.getElementById(id);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let globe, countries = [], selected = null, hovered = null;
+  let puzzle, gameState, storageKey, tileOrder = [], picked = [];
+  const rankNames = ['1st', '2nd', '3rd', '4th'];
+  const pairColors = ['#70ae79', '#d0aa43', '#6da0d7', '#a77dd0'];
+  let featuresByCode = new Map(), waveSources = [];
+  const gameOver = () => gameState && (gameState.solved.length === 4 || gameState.wrong.length >= 4);
+  const solvedCodes = () => new Set(puzzle.pairs.filter(p => gameState.solved.includes(p.rank)).flatMap(p => [p.source.iso3, p.partner.iso3]));
+  function featureColor(feature) {
+    const code = feature.__gameISO;
+    if (puzzle) {
+      const pair = puzzle.pairs.find(p => (gameState.solved.includes(p.rank) || gameOver()) && [p.source.iso3, p.partner.iso3].includes(code));
+      if (pair) return pairColors[pair.rank - 1];
+      if (picked.includes(code)) return dark() ? '#ffffff' : '#202b34';
+      if (puzzle.deck.some(c => c.iso3 === code)) return dark() ? '#bdc9c6' : '#536963';
+    }
+    return dark() ? '#465853' : '#afb8b4';
+  }
+  function initGame(data) {
+    const codes = new Set(data.countries.flatMap(c => [c.iso3, ...c.partners.map(p => p.iso3)]));
+    for (const feature of countries) {
+      const p = feature.properties;
+      const code = [p.ISO_A3, p.ISO_A3_EH, p.ADM0_A3].find(code => codes.has(code));
+      if (code) { feature.__gameISO = code; featuresByCode.set(code, feature); }
+    }
+    const date = new Date().toISOString().slice(0,10);
+    puzzle = TradePairs.buildPuzzle(data.countries, date, new Set(featuresByCode.keys()));
+    storageKey = `trade-pairs:v1:${date}`;
+    const signature = puzzle.pairs.map(p => p.key).join('|');
+    gameState = {signature, solved: [], wrong: []};
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey));
+      const ranks = new Set(saved?.solved);
+      const deckCodes = new Set(puzzle.deck.map(c => c.iso3));
+      if (saved?.signature === signature && Array.isArray(saved.solved) && Array.isArray(saved.wrong)
+        && saved.solved.every(r => Number.isInteger(r) && r >= 1 && r <= 4) && ranks.size === saved.solved.length
+        && saved.wrong.length <= 4 && new Set(saved.wrong).size === saved.wrong.length
+        && saved.wrong.every(key => typeof key === 'string' && key.split(':').length === 2 && key.split(':').every(c => deckCodes.has(c)) && !puzzle.pairs.some(p => p.key === key))) gameState = saved;
+    } catch {}
+    tileOrder = puzzle.deck.map(c => c.iso3);
+    $('puzzle-date').textContent = new Date(`${date}T12:00:00Z`).toLocaleDateString(undefined, {day:'numeric', month:'long', year:'numeric', timeZone:'UTC'});
+  }
+  function saveGame() { try { localStorage.setItem(storageKey, JSON.stringify(gameState)); } catch {} }
+  function renderGame(message) {
+    const focusCode = document.activeElement?.dataset?.code;
+    const solved = solvedCodes();
+    $('country-tiles').replaceChildren();
+    for (const code of tileOrder) {
+      if (solved.has(code) || gameOver()) continue;
+      const country = puzzle.deck.find(c => c.iso3 === code);
+      const button = document.createElement('button');
+      button.type = 'button'; button.className = 'country-tile';
+      button.textContent = country.name; button.dataset.code = code;
+      button.setAttribute('aria-pressed', String(picked.includes(code)));
+      button.onclick = () => toggleCountry(code);
+      $('country-tiles').append(button);
+    }
+    $('solved-pairs').replaceChildren();
+    for (const pair of puzzle.pairs) {
+      if (!gameState.solved.includes(pair.rank) && !gameOver()) continue;
+      const row = document.createElement('article'); row.className = `solved-pair rank-${pair.rank}`;
+      const title = document.createElement('strong'); title.textContent = `${pair.source.name} + ${pair.partner.name}`;
+      const detail = document.createElement('span');
+      detail.textContent = `${pair.partner.name} is ${pair.source.name}’s ${rankNames[pair.rank - 1]} trading partner · ${(pair.partner.share * 100).toFixed(1)}% of goods trade${gameState.solved.includes(pair.rank) ? '' : ' · Revealed'}`;
+      row.append(title,detail); $('solved-pairs').append(row);
+    }
+    $('pairs-progress').textContent = `${gameState.solved.length} / 4 pairs`;
+    $('mistakes-left').textContent = `${4 - gameState.wrong.length} mistakes remaining`;
+    $('match').disabled = picked.length !== 2 || gameOver();
+    $('clear').disabled = !picked.length || gameOver();
+    $('shuffle').disabled = gameOver();
+    $('share').hidden = !gameOver();
+    $('match').hidden = $('clear').hidden = $('shuffle').hidden = gameOver();
+    $('selection-status').textContent = message || (gameOver() ? (gameState.solved.length === 4 ? 'All four pairs found. See you tomorrow.' : 'No mistakes remaining. Here are today’s pairs.') : picked.length ? `${picked.length} of 2 selected` : 'Select two countries that belong together.');
+    if (focusCode) $('country-tiles').querySelector(`[data-code="${focusCode}"]`)?.focus({preventScroll:true});
+    recolor();
+    if (globe) globe.labelsData(puzzle.deck.map(c => featuresByCode.get(c.iso3)).filter(f => countrySpan(f) < 2));
+  }
+  function toggleCountry(code) {
+    if (!puzzle || gameOver() || solvedCodes().has(code) || !tileOrder.includes(code)) return;
+    if (picked.includes(code)) picked = picked.filter(c => c !== code);
+    else if (picked.length < 2) picked.push(code);
+    else { $('selection-status').textContent = 'Deselect a country before choosing another.'; return; }
+    window.TradePairsAudio?.play('click');
+    renderGame();
+  }
+  function matchPair() {
+    if (picked.length !== 2 || gameOver()) return;
+    const key = TradePairs.pairKey(...picked);
+    const pair = puzzle.pairs.find(p => p.key === key);
+    if (!pair) {
+      if (gameState.wrong.includes(key)) { renderGame('You already tried that pair. No extra mistake used.'); return; }
+      gameState.wrong.push(key); picked = []; saveGame();
+      window.TradePairsAudio?.play('wrong');
+      renderGame(gameOver() ? undefined : 'That pair doesn’t fit today’s solution. Try another combination.');
+      return;
+    }
+    gameState.solved.push(pair.rank); picked = []; saveGame();
+    window.TradePairsAudio?.play(gameState.solved.length === 4 ? 'win' : 'match');
+    selected = featuresByCode.get(pair.source.iso3);
+    waveSources = [selected, featuresByCode.get(pair.partner.iso3)];
+    renderGame(gameOver() ? undefined : `${rankNames[pair.rank - 1]} trading partner — matched.`);
+    rotate(false);
+    globe.pointOfView({lat: Number(selected.properties.LABEL_Y), lng: Number(selected.properties.LABEL_X), altitude: 1.95}, reducedMotion.matches ? 0 : 700);
+    startWave();
+  }
+  $('match').onclick = matchPair;
+  $('clear').onclick = () => { window.TradePairsAudio?.play('click'); picked = []; renderGame(); };
+  $('shuffle').onclick = () => {
+    window.TradePairsAudio?.play('click');
+    for (let i = tileOrder.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [tileOrder[i], tileOrder[j]] = [tileOrder[j], tileOrder[i]]; }
+    renderGame();
+  };
+  $('share').onclick = async () => {
+    const swatches = ['🟩','🟨','🟦','🟪'];
+    const result = `Trade Pairs · ${puzzle.date}\n${puzzle.pairs.map(p => gameState.solved.includes(p.rank) ? swatches[p.rank-1] : '⬜').join('')}\n${gameState.solved.length}/4 pairs · ${gameState.wrong.length}/4 mistakes\nhttps://liberal.markets/trade-pairs.html`;
+    try { await navigator.clipboard.writeText(result); $('selection-status').textContent = 'Result copied.'; }
+    catch { $('selection-status').textContent = result; }
+  };
   // The bundled globe renderer merges each country's 12-segment dots into one mesh.
   // Give every vertex of a dot the same border distance and radial direction,
   // so the wave lifts whole dots without stretching them or rebuilding geometry.
@@ -37,7 +154,7 @@
     waveFrame = requestAnimationFrame(() => {
       waveFrame = requestAnimationFrame(() => {
         if (generation !== waveGeneration) return;
-        const border = borderSamples(selected);
+        const border = (waveSources.length ? waveSources : [selected]).flatMap(borderSamples);
         globe.scene().traverse(mesh => {
           if (mesh.__globeObjType !== 'hexPolygon') return;
           const geometry = mesh.geometry;
@@ -45,7 +162,7 @@
           if (!position) return;
           const distances = new Float32Array(position.count);
           const directions = new Float32Array(position.count * 3);
-          const isSelected = mesh === selected.__threeObj;
+          const isSelected = (waveSources.length ? waveSources : [selected]).some(f => mesh === f.__threeObj);
           const verticesPerDot = 14; // CircleGeometry: centre + 12 segments + closing vertex.
           for (let i = 0; i < position.count; i += verticesPerDot) {
             const x = position.getX(i), y = position.getY(i), z = position.getZ(i);
@@ -125,6 +242,7 @@
   const dark = () => document.documentElement.dataset.theme === 'dark';
   function hoverCountry(feature) {
     feature = feature?.source || feature;
+    if (puzzle && (!tileOrder.includes(feature?.__gameISO) || solvedCodes().has(feature?.__gameISO) || gameOver())) feature = null;
     if (hovered === feature) return;
     hovered = feature || null;
     $('globe').style.cursor = hovered ? 'pointer' : 'grab';
@@ -133,22 +251,20 @@
   function clickCountry(feature) {
     feature = feature?.source || feature;
     if (!feature) return;
-    const index = countries.indexOf(feature);
-    if (index < 0) return;
-    $('country').value = String(index);
-    selectCountry(String(index));
+    toggleCountry(feature.__gameISO);
   }
   function recolor() {
     if (!globe) return;
     const material = globe.globeMaterial();
     if (!waveColor.value) waveColor.value = material.color.clone();
-    waveColor.value.set(dark() ? '#a6e4bf' : '#175cd3');
+    const wavePair = puzzle?.pairs.find(p => p.source.iso3 === selected?.__gameISO && gameState.solved.includes(p.rank));
+    waveColor.value.set(wavePair ? pairColors[wavePair.rank - 1] : (dark() ? '#a6e4bf' : '#175cd3'));
     material.color.set(dark() ? '#090c0c' : '#edf0f3');
     material.emissive.set(dark() ? '#010202' : '#292c30');
     material.shininess = 0;
     globe.polygonCapColor(f => f.source === hovered ? (dark() ? 'rgba(185,190,195,0.18)' : 'rgba(70,78,88,0.14)') : 'rgba(0,0,0,0)');
-    globe.hexPolygonColor(f => f === selected ? (dark() ? '#a6e4bf' : '#175cd3') : (dark() ? '#6d8983' : '#a3adb7'))
-      .hexPolygonAltitude(f => f === selected ? 0.006 : 0.003)
+    globe.hexPolygonColor(featureColor)
+      .hexPolygonAltitude(0.003)
       .labelColor(() => dark() ? '#a6e4bf' : '#175cd3');
   }
   function syncTheme() {
@@ -171,80 +287,125 @@
     $('rotation').textContent = value ? 'Pause rotation' : 'Resume rotation';
   }
   $('rotation').onclick = () => { if (globe) rotate(!globe.controls().autoRotate); };
-  function selectCountry(value) {
-    stopWave();
-    selected = value === '' ? null : countries[Number(value)];
-    $('clear').disabled = !selected;
-    $('ripple').disabled = !selected || reducedMotion.matches;
-    $('selection-status').textContent = selected ? `${selected.properties.NAME} is highlighted. Drag to explore its neighbours.` : 'Select a country to highlight it on the globe.';
-    recolor();
-    globe.labelsData(selected && countrySpan(selected) < 2 ? [selected] : []);
-    if (selected) {
-      rotate(false);
-      const p = selected.properties;
-      globe.pointOfView({lat: Number(p.LABEL_Y), lng: Number(p.LABEL_X), altitude: Math.max(0.08, Math.min(1.8, countrySpan(selected) * 0.045))}, reducedMotion.matches ? 0 : 900);
-      startWave();
-    }
-  }
-  $('ripple').onclick = startWave;
-  $('country').onchange = event => selectCountry(event.target.value);
-  $('clear').onclick = () => { $('country').value = ''; selectCountry(''); };
   $('reset').onclick = () => {
     if (!globe) return;
-    $('country').value = ''; selectCountry('');
     globe.pointOfView({lat: 20, lng: 10, altitude: 1.95}, reducedMotion.matches ? 0 : 700);
     rotate(!reducedMotion.matches);
   };
-  function initBoats() {
-    // Illustrative sea corridors between coastal capitals, not live ship tracks.
-    // Intermediate offshore waypoints keep the routes away from land.
-    const routes = [
-      [[38.69,-9.2],[38.4,-9.6],[42,-10.3],[48,-10],[50,-7],[51,-5.5],[53.3,-6.1]], // Lisbon–Dublin
-      [[38.69,-9.2],[38.4,-9.6],[33,-12],[24,-19],[14.9,-23.5]], // Lisbon–Praia
-      [[14.9,-23.5],[14.4,-20],[14.5,-17.6],[14.65,-17.4]], // Praia–Dakar
-      [[64.15,-22],[63,-23],[58,-18],[52,-12],[50,-8],[50,-5.5],[53.3,-6.1]], // Reykjavik–Dublin
-      [[59.85,10.65],[59.1,10.6],[58.3,10.7],[57.5,11.4],[56.2,12.3],[55.7,12.65]], // Oslo–Copenhagen
-      [[60.14,24.96],[59.8,25],[59.46,24.77]], // Helsinki–Tallinn
-      [[35.89,14.53],[36.2,14.2],[37.3,12],[37.3,10.7],[36.82,10.32]], // Valletta–Tunis
-      [[1.2,103.85],[1,104.5],[-1,105.7],[-3,106.7],[-5.5,107],[-6.08,106.87]], // Singapore–Jakarta
-      [[35.5,139.85],[35.1,139.8],[34.5,140.4],[30,140],[22,131],[19.5,123.5],[19.5,119],[15,119],[14.5,120.7],[14.58,120.95]], // Tokyo–Manila
-      [[-41.29,174.83],[-41.7,175],[-41.7,177],[-39,179],[-32,179],[-24,179],[-18.2,178.5]], // Wellington–Suva
-    ];
-    const sample = (route, t) => {
-      const total = route.length - 1;
-      const at = Math.max(0, Math.min(total, t * total));
-      const index = Math.min(total - 1, Math.floor(at));
-      const a = route[index], b = route[index + 1], mix = at - index;
-      return [a[0] + (b[0] - a[0]) * mix, a[1] + (b[1] - a[1]) * mix];
+  function initFlights(capitals) {
+    // Decorative routes use only today's eight countries, independent of the answers.
+    const destinations = puzzle.deck.map(c => capitals[c.iso3]).filter(Boolean);
+    if (destinations.length < 2) return;
+    let template;
+    globe.scene().traverse(object => {
+      if (!template && object.isMesh && object.geometry?.getAttribute('position')) template = object;
+    });
+    if (!template) return;
+    const Attribute = template.geometry.getAttribute('position').constructor;
+    function geometryFor(vertices) {
+      const geometry = template.geometry.clone();
+      geometry.setIndex(null);
+      for (const key of Object.keys(geometry.attributes)) geometry.deleteAttribute(key);
+      geometry.setAttribute('position', new Attribute(new Float32Array(vertices), 3));
+      geometry.computeVertexNormals(); geometry.computeBoundingSphere();
+      return geometry;
+    }
+    const planeGeometry = geometryFor([
+      0,1.1,0, -.13,-.8,0, .13,-.8,0,
+      -.95,-.18,0, .95,-.18,0, 0,.38,0,
+      -.4,-.8,0, .4,-.8,0, 0,-.35,0
+    ]);
+    const dotVertices = [];
+    for (let i=0; i<8; i++) {
+      const a=i*Math.PI/4, b=(i+1)*Math.PI/4;
+      dotVertices.push(0,0,0, Math.cos(a)*.13,Math.sin(a)*.13,0, Math.cos(b)*.13,Math.sin(b)*.13,0);
+    }
+    const trailGeometry = geometryFor(dotVertices);
+    const materials = Array.from({length:19}, (_,i) => {
+      const material = globe.globeMaterial().clone();
+      material.side = 2; material.transparent = true; material.depthWrite = false;
+      material.opacity = i === 0 ? 1 : .65 * (1 - i/19);
+      return material;
+    });
+    function makeMesh(geometry, material) {
+      const mesh = new template.constructor(geometry,material);
+      mesh.raycast = () => {};
+      globe.scene().add(mesh);
+      return mesh;
+    }
+    const vector = () => globe.camera().position.clone();
+    const toVector = capital => {
+      const p=globe.getCoords(capital.lat,capital.lng,0);
+      return vector().set(p.x,p.y,p.z).normalize();
     };
-    const dots = routes.flatMap((route, boat) => Array.from({length: 15}, (_, tail) => ({boat, tail, lat: 0, lng: 0})));
-    globe.pointsData(dots).pointAltitude(0.002).pointResolution(8)
-      .pointRadius(d => d.tail === 0 ? 0.28 : 0.12 * (1 - d.tail / 18))
-      .pointColor(d => `rgba(${dark() ? '246,205,134' : '164,92,28'},${d.tail === 0 ? 1 : 0.55 * (1 - d.tail / 15)})`)
-      .pointsTransitionDuration(0);
-    let last = 0, elapsed = 0;
+    function nextLeg(flight) {
+      const options = destinations.filter(c => c !== flight.to && c !== flight.from);
+      flight.from = flight.to;
+      flight.to = options[Math.floor(Math.random()*options.length)] || destinations.find(c => c !== flight.from);
+      flight.a = toVector(flight.from); flight.b = toVector(flight.to);
+      flight.angle = Math.acos(Math.max(-1,Math.min(1,flight.a.dot(flight.b))));
+      flight.duration = (4000 + flight.angle * 3000) / 2;
+      flight.elapsed = 0;
+    }
+    function position(flight,t,out) {
+      t=Math.max(0,Math.min(1,t));
+      const angle=flight.angle, sin=Math.sin(angle);
+      if (Math.abs(sin)<0.00001) out.copy(flight.a).lerp(flight.b,t).normalize();
+      else out.copy(flight.a).multiplyScalar(Math.sin((1-t)*angle)/sin).addScaledVector(flight.b,Math.sin(t*angle)/sin);
+      return out.multiplyScalar(100 * (1.008 + Math.sin(Math.PI*t)*.14));
+    }
+    const flights = Array.from({length:destinations.length},(_,i) => {
+      const flight={to:destinations[i%destinations.length],mesh:makeMesh(planeGeometry,materials[0]),trails:materials.slice(1).map(m=>makeMesh(trailGeometry,m))};
+      nextLeg(flight);
+      return flight;
+    });
+    const ahead=vector(),up=vector(),forward=vector(),right=vector();
+    const basis=flights[0].mesh.matrix.clone();
+    let last=0,theme;
     function animate(now) {
       requestAnimationFrame(animate);
-      if (now - last < 45) return;
-      if (last && !reducedMotion.matches && !document.hidden) elapsed += Math.min(now - last, 100);
-      last = now;
-      for (const dot of dots) {
-        // Each boat travels out and back; its trail follows the same corridor.
-        const phase = elapsed / (70000 + dot.boat * 4100) + dot.boat / 10 - dot.tail * 0.003;
-        const cycle = ((phase % 2) + 2) % 2;
-        const [lat, lng] = sample(routes[dot.boat], cycle <= 1 ? cycle : 2 - cycle);
-        dot.lat = lat; dot.lng = lng;
-        if (dot.__threeObj) dot.__threeObj.raycast = () => {};
+      const delta=last ? Math.min(50,now-last) : 0; last=now;
+      if (theme !== dark()) {
+        theme=dark();
+        for (const material of materials) {
+          material.color.set(theme?'#ffe0a8':'#965519');
+          material.emissive.set(theme?'#ae7130':'#422008');
+          material.emissiveIntensity=.8;
+        }
       }
-      globe.pointLat(d => d.lat).pointLng(d => d.lng);
+      if (document.hidden) return;
+      for (const flight of flights) {
+        if (!reducedMotion.matches) flight.elapsed+=delta;
+        if (flight.elapsed>flight.duration+150) nextLeg(flight);
+        const t=Math.min(1,flight.elapsed/flight.duration);
+        position(flight,t,flight.mesh.position);
+        position(flight,Math.min(1,t+.002),ahead);
+        if (t < 1) {
+          up.copy(flight.mesh.position).normalize();
+          forward.copy(ahead).sub(flight.mesh.position).normalize();
+          right.crossVectors(forward,up).normalize();
+          up.crossVectors(right,forward).normalize();
+          basis.makeBasis(right,forward,up);
+          flight.mesh.quaternion.setFromRotationMatrix(basis);
+        }
+        flight.mesh.scale.setScalar(Math.min(2,Math.max(.12,globe.camera().position.distanceTo(flight.mesh.position)*.012)));
+        flight.trails.forEach((dot,i) => {
+          const trailT=t-(i+1)*.004;
+          dot.visible=trailT>=0;
+          if (!dot.visible) return;
+          position(flight,trailT,dot.position);
+          dot.quaternion.copy(globe.camera().quaternion);
+        });
+      }
     }
     requestAnimationFrame(animate);
   }
   async function init() {
     try {
-      const response = await fetch('assets/geo/ne_50m_admin_0_countries.geojson');
-      if (!response.ok) throw new Error('Map unavailable');
+      const [response, tradeResponse] = await Promise.all([fetch('assets/geo/ne_50m_admin_0_countries.geojson'), fetch('data/trade-game/truddies.json')]);
+      if (!response.ok || !tradeResponse.ok) throw new Error('Game data unavailable');
       countries = (await response.json()).features.filter(f => ['Polygon', 'MultiPolygon'].includes(f.geometry?.type)).sort((a,b) => a.properties.NAME.localeCompare(b.properties.NAME));
+      initGame(await tradeResponse.json());
       const container = $('globe');
       globe = window.Globe()(container).width(container.clientWidth).height(container.clientHeight)
         .backgroundColor('rgba(0,0,0,0)').showAtmosphere(false)
@@ -268,7 +429,10 @@
       controls.addEventListener('start', () => rotate(false));
       globe.pointOfView({lat: 20, lng: 10, altitude: 1.95}, 0);
       recolor(); rotate(!reducedMotion.matches);
-      initBoats();
+      // Flight assets are optional and never block the game.
+      fetch('assets/geo/capitals.json').then(r => r.ok ? r.json() : null)
+        .then(data => { if (data) requestAnimationFrame(() => initFlights(data.capitals)); })
+        .catch(error => console.warn('Flight decoration unavailable:', error));
       // Country polygons handle picking across the gaps between dots. Some
       // tiny countries have an empty hex mesh, which Three cannot raycast.
       const expectedPolygons = countries.reduce((count, f) => count + (f.geometry.type === 'Polygon' ? 1 : f.geometry.coordinates.length), 0);
@@ -292,15 +456,16 @@
         if (hexCount < countries.length || polygonCount < expectedPolygons) requestAnimationFrame(preparePicking);
       }
       requestAnimationFrame(preparePicking);
-      countries.forEach((f, i) => $('country').add(new Option(f.properties.NAME, String(i))));
-      $('country').disabled = false;
+      renderGame();
       $('globe-loading').hidden = true;
       new ResizeObserver(() => globe.width(container.clientWidth).height(container.clientHeight)).observe(container);
-      reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) { rotate(false); stopWave(); } $('ripple').disabled = !selected || reducedMotion.matches; });
+      reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) { rotate(false); stopWave(); } });
     } catch (error) {
-      $('globe-loading').textContent = 'The globe couldn’t load. Please refresh to try again.';
+      $('globe-loading').hidden = false;
+      $('globe-loading').textContent = 'The game couldn’t load. Please refresh to try again.';
+      $('selection-status').textContent = 'Game data is unavailable. Please refresh to retry.';
       $('rotation').disabled = $('reset').disabled = true;
-      console.error('Globe preview:', error);
+      console.error('Trade Pairs:', error);
     }
   }
   init();

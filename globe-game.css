@@ -28,3 +28,27 @@
 .globe-shell button:focus-visible, .globe-shell select:focus-visible { outline: 2px solid #83b99c; outline-offset: 4px; }
 .help-card > p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.7; }
 @media(max-width: 540px) { .globe-shell { width: calc(100% - 24px); } .globe-board-heading { padding: 20px 18px 0; } .live-label { display: none; } .globe-toolbar { padding: 10px 18px; flex-wrap: wrap; justify-content: center; } .globe-toolbar > span { width: 100%; text-align: center; } .globe-selection { padding: 20px 18px 16px; } .globe-intro { padding-top: 18px; } .globe-caption { inset-inline: 18px; font-size: 8px; } .header-actions { gap: 8px; } }
+
+.pairs-instruction { margin: 12px 0; font-size: 13px; color: var(--muted); }
+.pairs-score { display: flex; justify-content: space-between; padding: 18px 24px 0; color: var(--muted); font-size: 11px; }
+.pairs-play { padding: 22px 24px 24px; }
+.rank-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; font-size: 10px; margin-bottom: 20px; color: var(--muted); }
+.rank-legend span::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--pair-color); margin-right: 6px; }
+.rank-1 { --pair-color: #70ae79; --pair-bg: #c4dfc8; }
+.rank-2 { --pair-color: #d0aa43; --pair-bg: #f0df9e; }
+.rank-3 { --pair-color: #6da0d7; --pair-bg: #bcd7ef; }
+.rank-4 { --pair-color: #a77dd0; --pair-bg: #d9c3eb; }
+.country-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
+.country-tile { min-height: 66px; padding: 10px; border: 1px solid var(--faint); border-radius: 4px; background: var(--faint-2); font-size: 12px; font-weight: 600; cursor: pointer; }
+.country-tile:hover { border-color: var(--muted); }
+.country-tile[aria-pressed="true"] { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.solved-pair { background: var(--pair-bg); color: #17201b; border-radius: 4px; padding: 15px 10px; text-align: center; margin-bottom: 9px; }
+.solved-pair strong { display: block; font-size: 13px; margin-bottom: 5px; }
+.solved-pair span { font-size: 11px; line-height: 1.6; }
+.pair-message { min-height: 34px; margin: 16px 0 10px; text-align: center; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.pair-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.pair-actions button { border: 1px solid var(--faint); border-radius: 4px; padding: 11px 18px; background: transparent; font-size: 12px; cursor: pointer; }
+.pair-actions #match, .pair-actions #share { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.pair-actions button:disabled { opacity: .35; cursor: default; }
+.globe-footer { margin-top: 30px; }
+@media(max-width:540px) { .country-tiles { grid-template-columns: repeat(2,1fr); } .pairs-play { padding: 18px 14px; } .rank-legend { gap: 10px; } .globe-stage { height: 350px; } .pair-actions button { padding: 10px 14px; } }
