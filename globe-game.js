@@ -9,7 +9,7 @@
   let featuresByCode = new Map(), waveSources = [];
   const gameOver = () => gameState && (gameState.solved.length === 4 || gameState.wrong.length >= 4);
   const solvedCodes = () => new Set(puzzle.pairs.filter(p => gameState.solved.includes(p.rank)).flatMap(p => [p.source.iso3, p.partner.iso3]));
-  function featureColor(feature) {
+  function baseFeatureColor(feature) {
     const code = feature.__gameISO;
     if (puzzle) {
       const pair = puzzle.pairs.find(p => (gameState.solved.includes(p.rank) || gameOver()) && [p.source.iso3, p.partner.iso3].includes(code));
@@ -18,6 +18,45 @@
       if (puzzle.deck.some(c => c.iso3 === code)) return dark() ? '#bdc9c6' : '#536963';
     }
     return dark() ? '#465853' : '#afb8b4';
+  }
+  let wrongPulse = null, wrongFrame = 0;
+  function featureColor(feature) {
+    const base = baseFeatureColor(feature);
+    if (!wrongPulse?.codes.has(feature.__gameISO)) return base;
+    const red = dark() ? '#ff6969' : '#d92d38';
+    const channels = [1,3,5].map(i => Math.round(parseInt(base.slice(i,i+2),16) * (1-wrongPulse.strength) + parseInt(red.slice(i,i+2),16) * wrongPulse.strength));
+    return `rgb(${channels.join(',')})`;
+  }
+  function refreshWrongCountries(codes) {
+    for (const code of codes) {
+      const feature = featuresByCode.get(code);
+      feature?.__threeObj?.material?.color.set(featureColor(feature));
+    }
+  }
+  function stopWrongPulse() {
+    cancelAnimationFrame(wrongFrame);
+    if (!wrongPulse) return;
+    const codes = wrongPulse.codes;
+    wrongPulse = null;
+    refreshWrongCountries(codes);
+    $('country-tiles').querySelectorAll('.is-wrong').forEach(tile => tile.classList.remove('is-wrong'));
+  }
+  function pulseWrongCountries(codes) {
+    stopWrongPulse(); stopWave();
+    wrongPulse = {codes: new Set(codes), strength: 0};
+    $('country-tiles').querySelectorAll('button').forEach(tile => {
+      if (wrongPulse.codes.has(tile.dataset.code)) tile.classList.add('is-wrong');
+    });
+    const start = performance.now(), cycle = 700;
+    function animate(now) {
+      const elapsed = now-start;
+      if (elapsed >= cycle*3) { stopWrongPulse(); return; }
+      // Three soft pulses; a steady red indication for reduced-motion users.
+      wrongPulse.strength = reducedMotion.matches ? 0.85 : Math.sin(Math.PI * ((elapsed % cycle)/cycle)) ** 2;
+      refreshWrongCountries(wrongPulse.codes);
+      wrongFrame = requestAnimationFrame(animate);
+    }
+    wrongFrame = requestAnimationFrame(animate);
   }
   function initGame(data) {
     const codes = new Set(data.countries.flatMap(c => [c.iso3, ...c.partners.map(p => p.iso3)]));
@@ -89,13 +128,16 @@
   }
   function matchPair() {
     if (picked.length !== 2 || gameOver()) return;
+    stopWrongPulse();
+    const attempted = [...picked];
     const key = TradePairs.pairKey(...picked);
     const pair = puzzle.pairs.find(p => p.key === key);
     if (!pair) {
-      if (gameState.wrong.includes(key)) { renderGame('You already tried that pair. No extra mistake used.'); return; }
+      if (gameState.wrong.includes(key)) { renderGame('You already tried that pair. No extra mistake used.'); pulseWrongCountries(attempted); return; }
       gameState.wrong.push(key); picked = []; saveGame();
       window.TradePairsAudio?.play('wrong');
       renderGame(gameOver() ? undefined : 'That pair doesn’t fit today’s solution. Try another combination.');
+      pulseWrongCountries(attempted);
       return;
     }
     gameState.solved.push(pair.rank); picked = []; saveGame();
