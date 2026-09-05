@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Trading post study — Trade Winds</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #30251c;
+        color: #e9d6ac;
+        font-family: Georgia, serif;
+      }
+      #scene {
+        position: fixed;
+        inset: 0;
+      }
+      canvas {
+        display: block;
+      }
+      header {
+        position: fixed;
+        top: 24px;
+        left: 28px;
+        right: 28px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 15px 20px;
+        background: #241d16e8;
+      }
+      a,
+      button,
+      select {
+        color: inherit;
+        font: inherit;
+      }
+      a {
+        text-decoration: none;
+      }
+      button,
+      select {
+        background: #463526;
+        border: 0;
+        padding: 9px 13px;
+        cursor: pointer;
+      }
+      select {
+        max-width: 170px;
+      }
+      h1 {
+        font-size: 21px;
+        font-weight: normal;
+        margin: 0 auto 0 0;
+      }
+      footer {
+        position: fixed;
+        bottom: 22px;
+        right: 28px;
+        background: #241d16e8;
+        padding: 15px 20px;
+        font-size: 14px;
+        max-width: 330px;
+        line-height: 1.6;
+      }
+      button:focus-visible,
+      a:focus-visible,
+      select:focus-visible {
+        outline: 2px solid #efcc82;
+        outline-offset: 4px;
+      }
+      @media (max-width: 700px) {
+        header {
+          left: 12px;
+          right: 12px;
+          top: 12px;
+          gap: 12px;
+        }
+        h1 {
+          display: none;
+        }
+        footer {
+          right: 12px;
+          bottom: 12px;
+          max-width: 270px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scene" aria-label="Animated voxel merchant and harbor"></div>
+    <header>
+      <a href="trade-winds-models.html">← Workshop</a>
+      <h1>Trading post study</h1>
+      <select id="port" aria-label="Harbor"></select
+      ><button id="motion">Pause motion</button
+      ><button id="greet">Greet captain</button
+      ><a href="trade-winds.html">Play game →</a>
+    </header>
+    <footer>
+      The same animated set used in every port. Merchant, counter, lanterns,
+      moored ships, and harbor buildings are all modeled in 3D.
+    </footer>
+    <script type="module">
+      import { TradingPostScene } from "./trade-winds-market-scene.mjs";
+      import { PORTS } from "./trade-winds-engine.mjs";
+      const scene = new TradingPostScene(document.querySelector("#scene"));
+      const ports = document.querySelector("#port");
+      PORTS.forEach((port) => ports.add(new Option(port.name, port.id)));
+      let port = PORTS[0],
+        playing = true;
+      scene.start(port);
+      ports.onchange = () => {
+        port = PORTS.find((p) => p.id === ports.value);
+        scene.start(port);
+        playing = true;
+        document.querySelector("#motion").textContent = "Pause motion";
+      };
+      document.querySelector("#motion").onclick = (e) => {
+        playing = !playing;
+        if (playing) scene.start(port);
+        else scene.stop();
+        e.currentTarget.textContent = playing
+          ? "Pause motion"
+          : "Resume motion";
+      };
+      document.querySelector("#greet").onclick = () => {
+        scene.acknowledge();
+        if (!playing) {
+          playing = true;
+          scene.start(port);
+          document.querySelector("#motion").textContent = "Pause motion";
+        }
+      };
+    </script>
+  </body>
+</html>

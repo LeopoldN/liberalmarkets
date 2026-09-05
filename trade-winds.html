@@ -18,6 +18,7 @@
       type="image/svg+xml"
     />
     <link rel="stylesheet" href="trade-winds.css" />
+    <link rel="stylesheet" href="trade-winds-market.css" />
   </head>
   <body>
     <main id="ocean" aria-label="Isometric Caribbean sailing world"></main>
@@ -71,61 +72,93 @@
     </section>
     <div id="toast" role="status" aria-live="polite"></div>
     <dialog id="market" aria-labelledby="port-name">
-      <div class="market-top">
+      <div id="trading-post-scene" aria-hidden="true"></div>
+      <header class="market-top wood-frame">
+        <svg class="port-anchor" viewBox="0 0 64 80" aria-hidden="true">
+          <path
+            d="M28 4h8v8h8v8h-8v12h15v7H36v25l13-8v-9h9v16L32 78 6 63V47h9v9l13 8V39H13v-7h15V20h-8v-8h8z"
+            fill="currentColor"
+          />
+        </svg>
         <div>
           <p class="eyebrow" id="port-region"></p>
           <h2 id="port-name"></h2>
+          <p class="post-label">Trading post</p>
         </div>
-        <button class="close-button" id="leave-port" aria-label="Leave port">
-          ×
-        </button>
-      </div>
+      </header>
       <div class="market-body">
-        <aside class="merchant">
-          <div id="portrait" aria-hidden="true"></div>
-          <p class="eyebrow">Your local merchant</p>
+        <aside class="merchant wood-frame">
           <h3 id="merchant-name"></h3>
+          <p class="merchant-role">Local Merchant</p>
           <p class="merchant-quote">
             “Fair winds, captain.<br />Let’s make a little gold.”
           </p>
           <div class="local-advice">
-            <span>FROM THESE SHORES</span>
+            <span>From these shores</span>
             <p id="export-hint"></p>
-            <span>IN HIGH DEMAND</span>
+            <span>In high demand</span>
             <p id="import-hint"></p>
           </div>
         </aside>
-        <section class="trade">
-          <div class="trade-heading">
-            <div class="trade-tabs" role="tablist" aria-label="Trade direction">
-              <button id="buy-tab" role="tab" aria-selected="true">
-                Buy goods</button
-              ><button id="sell-tab" role="tab" aria-selected="false">
-                Sell cargo
+        <section class="trade" aria-label="Merchant ledger">
+          <div class="trade-tabs" role="tablist" aria-label="Trade direction">
+            <button
+              id="buy-tab"
+              class="wood-frame"
+              role="tab"
+              aria-selected="true"
+            >
+              Buy Goods</button
+            ><button
+              id="sell-tab"
+              class="wood-frame"
+              role="tab"
+              aria-selected="false"
+            >
+              Sell Cargo
+            </button>
+          </div>
+          <div class="trade-paper">
+            <button
+              class="close-button wood-frame"
+              id="leave-port"
+              aria-label="Leave port"
+            >
+              ×
+            </button>
+            <div class="goods-header">
+              <span>Goods</span><span>Price (ea)</span><span>Aboard</span
+              ><span>Qty</span>
+            </div>
+            <div id="goods-list"></div>
+          </div>
+          <div class="trade-footer">
+            <div class="hold-panel wood-frame">
+              <span class="cargo-emblem" aria-hidden="true">▤</span>
+              <div><span>Hold</span><strong id="hold"></strong></div>
+            </div>
+            <div class="total-panel wood-frame">
+              <i class="market-gold" aria-hidden="true"></i>
+              <div>
+                <span id="trade-summary">Total cost</span
+                ><strong id="trade-total">0 <small>gold</small></strong>
+              </div>
+            </div>
+            <div class="confirm-panel wood-frame">
+              <button id="confirm-trade" class="primary" disabled>
+                Confirm purchase
               </button>
             </div>
-            <span id="hold"></span>
-          </div>
-          <div class="goods-header">
-            <span>Goods</span><span>Each</span><span>Aboard</span
-            ><span>Quantity</span>
-          </div>
-          <div id="goods-list"></div>
-          <div class="trade-footer">
-            <div>
-              <span id="trade-summary">Select goods to trade</span
-              ><strong id="trade-total">0 <small>gold</small></strong>
-            </div>
-            <button id="confirm-trade" class="primary" disabled>
-              Confirm purchase
-            </button>
           </div>
           <p id="trade-message" role="status"></p>
         </section>
       </div>
       <footer class="market-bottom">
-        <span id="market-coins"></span
-        ><button id="repair" class="text-button"></button
+        <div class="aboard-gold">
+          <i class="market-gold" aria-hidden="true"></i
+          ><span id="market-coins"></span>
+        </div>
+        <button id="repair" class="text-button"></button
         ><button id="set-sail" class="text-button">
           Set sail <span>→</span>
         </button>

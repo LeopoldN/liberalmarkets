@@ -3,6 +3,7 @@
 import * as THREE from "./assets/vendor/three.module.js";
 import {
   KRAKEN_ARMS,
+  KRAKEN_ATTACK_ARMS,
   KRAKEN_TIMING,
   KRAKEN_IMPACT,
   KRAKEN_ATTACK_LENGTH,
@@ -1148,7 +1149,7 @@ export function animateKraken(g, time, attacks = [], waterLevel = null) {
 // Workshop choreography exercises the same rig and strike timing as gameplay.
 export function krakenPreviewAttacks(time) {
   const attacks = [];
-  for (const [index, arm] of [0, 7, 1].entries()) {
+  for (const [index, arm] of KRAKEN_ATTACK_ARMS.entries()) {
     const age = (((time - index * 2.4) % 11) + 11) % 11;
     if (age < KRAKEN_ATTACK_LENGTH)
       attacks.push({ arm, age, target: { x: 16, z: 105 } });

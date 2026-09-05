@@ -1,11 +1,124 @@
-import * as THREE from './assets/vendor/three.module.js';
-import {createTradingPost,animateTradingPost} from './trade-winds-market-models.mjs';
+import * as THREE from "./assets/vendor/three.module.js";
+import {
+  createTradingPost,
+  animateTradingPost,
+} from "./trade-winds-market-models.mjs";
+import {
+  createPortModel,
+  portVariant,
+  disposeModel,
+} from "./trade-winds-models.mjs";
 export class TradingPostScene {
- constructor(container){this.container=container;this.scene=new THREE.Scene();this.scene.background=new THREE.Color(0x8fc6e2);this.scene.fog=new THREE.Fog(0xb7c9c5,45,125);this.camera=new THREE.PerspectiveCamera(38,1,.1,180);this.renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});this.renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=THREE.PCFSoftShadowMap;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.05;container.append(this.renderer.domElement);
- this.scene.add(new THREE.HemisphereLight(0xcde4e3,0x74502e,1.55));const sun=new THREE.DirectionalLight(0xffd19a,3.4);sun.position.set(-15,27,18);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-25,right:25,top:27,bottom:-15,near:1,far:95});sun.shadow.bias=-.0003;sun.shadow.normalBias=.07;this.scene.add(sun,sun.target);sun.target.position.set(-6,6,0);
- this.set=createTradingPost();this.scene.add(this.set);this.water=new THREE.Mesh(new THREE.PlaneGeometry(240,240),new THREE.ShaderMaterial({uniforms:{time:{value:0}},vertexShader:'varying vec2 p;void main(){vec4 w=modelMatrix*vec4(position,1.);p=w.xz;gl_Position=projectionMatrix*viewMatrix*w;}',fragmentShader:'varying vec2 p;uniform float time;void main(){vec2 q=floor(p*2.)/2.;float ripple=step(.85,sin(q.x*.8+q.y*1.3-time));vec3 c=mix(vec3(.035,.25,.32),vec3(.19,.48,.49),ripple*.24);gl_FragColor=vec4(c,1.);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}'}));this.water.rotation.x=-Math.PI/2;this.water.position.set(0,-.65,-40);this.scene.add(this.water);this.time=0;this.gesture=0;this.active=false;this.reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;this.resize=()=>{const width=container.clientWidth,height=container.clientHeight;if(!width||!height)return;this.renderer.setSize(width,height);this.camera.aspect=width/height;this.camera.fov=width<700?52:38;this.camera.position.set(0,8.5,26);this.camera.lookAt(0,7,0);this.camera.updateProjectionMatrix();const halfWidth=26*Math.tan(THREE.MathUtils.degToRad(this.camera.fov/2))*this.camera.aspect;this.set.userData.stand.position.x=-halfWidth*(width<700?.43:.63);this.set.userData.banner.position.x=halfWidth*.84;};this.observer=new ResizeObserver(this.resize);this.observer.observe(container);
- this.tick=ms=>{if(!this.active)return;const dt=Math.min((ms-this.last)/1000||0,.08);this.last=ms;if(!document.hidden){this.time+=dt;this.gesture=Math.max(0,this.gesture-dt);animateTradingPost(this.set,this.time,this.gesture,this.reduced);this.water.material.uniforms.time.value=this.time;this.renderer.render(this.scene,this.camera);}this.frame=requestAnimationFrame(this.tick);};}
- start(port){this.port=port;this.active=true;this.last=performance.now();this.resize();cancelAnimationFrame(this.frame);this.frame=requestAnimationFrame(this.tick);}
- acknowledge(){this.gesture=1.4;}
- stop(){this.active=false;cancelAnimationFrame(this.frame);}
+  constructor(container) {
+    this.container = container;
+    this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color(0x8fc6e2);
+    this.scene.fog = new THREE.Fog(0xb7c9c5, 45, 125);
+    this.camera = new THREE.PerspectiveCamera(38, 1, 0.1, 180);
+    this.renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      powerPreference: "high-performance",
+    });
+    this.renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+    this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    this.renderer.toneMappingExposure = 1.05;
+    container.append(this.renderer.domElement);
+    this.scene.add(new THREE.HemisphereLight(0xcde4e3, 0x74502e, 1.55));
+    const sun = new THREE.DirectionalLight(0xffd19a, 3.4);
+    sun.position.set(-15, 27, 18);
+    sun.castShadow = true;
+    sun.shadow.mapSize.set(2048, 2048);
+    Object.assign(sun.shadow.camera, {
+      left: -25,
+      right: 25,
+      top: 27,
+      bottom: -15,
+      near: 1,
+      far: 95,
+    });
+    sun.shadow.bias = -0.0003;
+    sun.shadow.normalBias = 0.07;
+    this.scene.add(sun, sun.target);
+    sun.target.position.set(-6, 6, 0);
+    this.set = createTradingPost();
+    this.scene.add(this.set);
+    this.water = new THREE.Mesh(
+      new THREE.PlaneGeometry(240, 240),
+      new THREE.ShaderMaterial({
+        uniforms: { time: { value: 0 } },
+        vertexShader:
+          "varying vec2 p;void main(){vec4 w=modelMatrix*vec4(position,1.);p=w.xz;gl_Position=projectionMatrix*viewMatrix*w;}",
+        fragmentShader:
+          "varying vec2 p;uniform float time;void main(){vec2 q=floor(p*2.)/2.;float ripple=step(.85,sin(q.x*.8+q.y*1.3-time));vec3 c=mix(vec3(.035,.25,.32),vec3(.19,.48,.49),ripple*.24);gl_FragColor=vec4(c,1.);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}",
+      }),
+    );
+    this.water.rotation.x = -Math.PI / 2;
+    this.water.position.set(0, -0.65, -40);
+    this.scene.add(this.water);
+    this.time = 0;
+    this.gesture = 0;
+    this.active = false;
+    this.reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.resize = () => {
+      const width = container.clientWidth,
+        height = container.clientHeight;
+      if (!width || !height) return;
+      this.renderer.setSize(width, height);
+      this.camera.aspect = width / height;
+      this.camera.fov = width < 700 ? 52 : 38;
+      this.camera.position.set(0, 8.5, 26);
+      this.camera.lookAt(0, 7, 0);
+      this.camera.updateProjectionMatrix();
+      const halfWidth =
+        26 *
+        Math.tan(THREE.MathUtils.degToRad(this.camera.fov / 2)) *
+        this.camera.aspect;
+      this.set.userData.stand.position.x =
+        -halfWidth * (width < 700 ? 0.43 : 0.63);
+      this.set.userData.banner.position.x = halfWidth * 0.84;
+    };
+    this.observer = new ResizeObserver(this.resize);
+    this.observer.observe(container);
+    this.tick = (ms) => {
+      if (!this.active) return;
+      const dt = Math.min((ms - this.last) / 1000 || 0, 0.08);
+      this.last = ms;
+      if (!document.hidden) {
+        this.time += dt;
+        this.gesture = Math.max(0, this.gesture - dt);
+        animateTradingPost(this.set, this.time, this.gesture, this.reduced);
+        this.water.material.uniforms.time.value = this.time;
+        this.renderer.render(this.scene, this.camera);
+      }
+      this.frame = requestAnimationFrame(this.tick);
+    };
+  }
+  start(port) {
+    this.port = port;
+    const variant = portVariant(port.id);
+    const data = this.set.userData;
+    if (data.city.userData.variant !== variant) {
+      const previous = data.city;
+      data.city = createPortModel(variant);
+      data.city.position.copy(previous.position);
+      data.city.scale.copy(previous.scale);
+      data.harbor.remove(previous);
+      disposeModel(previous);
+      data.harbor.add(data.city);
+    }
+    this.active = true;
+    this.last = performance.now();
+    this.resize();
+    cancelAnimationFrame(this.frame);
+    this.frame = requestAnimationFrame(this.tick);
+  }
+  acknowledge() {
+    this.gesture = 1.4;
+  }
+  stop() {
+    this.active = false;
+    cancelAnimationFrame(this.frame);
+  }
 }

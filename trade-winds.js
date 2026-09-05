@@ -12,10 +12,12 @@ import {
 } from "./trade-winds-models.mjs";
 import {
   atlanticWeight,
+  buoyancyHeight,
   waveHeight,
   OCEAN_GLSL,
 } from "./trade-winds-ocean.mjs";
 import { KrakenEncounter } from "./trade-winds-mobs.mjs";
+import { TradingPostScene } from "./trade-winds-market-scene.mjs";
 import { WakeTrail } from "./trade-winds-wake.mjs";
 import {
   GOODS,
@@ -77,6 +79,7 @@ const encounter = new KrakenEncounter();
 let krakenModel = null,
   atlanticAnnounced = false;
 let waterGridSize = 0;
+let tradingPost;
 const hash = (x, z) => {
   const v = Math.sin(x * 127.1 + z * 311.7) * 43758.5453;
   return v - Math.floor(v);
@@ -351,7 +354,7 @@ function makeWater() {
         c = mix(c, mix(vec3(.007, .035, .065), vec3(.025, .11, .155), depth), ocean * .88);
         float facet = sin(tile.x * .43 + tile.y * .29 - time * .7)
           + sin(tile.y * .71 - tile.x * .21 + time * .51);
-        c *= .98 + floor(facet * 2.) * .018;
+        c *= .98 + facet * .036;
         vec2 uv = (pixel - shoreOrigin) / shoreSize;
         float shore = 0.;
         for (int k = 0; k < 4; k++) {
@@ -362,17 +365,18 @@ function makeWater() {
         }
         shore = clamp(shore, 0., 1.);
         c = mix(c, vec3(.12, .43, .34), floor(shore * 6.) / 6. * .85);
-        // Short broken wavelets, made from square cells rather than smooth stripes.
-        vec2 ripple = floor((pixel + vec2(time * 1.1, -time * .5)) / 4.);
-        float crest = sin(ripple.x * .59 + ripple.y * .77 - time * 1.1
+        // Anchor the square wavelets in world space. Quantizing a time offset
+        // made the entire highlight pattern jump sideways at regular intervals.
+        vec2 ripple = floor(pixel / 4.);
+        float crest = sin(ripple.x * .59 + ripple.y * .77 - time * .65
           + noise(ripple * .12) * 4.);
         float broken = step(.65, hash(floor(ripple / vec2(4., 2.))));
-        float lip = step(.91, crest) * broken;
+        float lip = smoothstep(.78, .99, crest) * broken;
         c = mix(c, vec3(.17, .42, .43), lip * mix(.18, .44, ocean));
-        float cap = step(mix(.985, .81, ocean), hash(floor(ripple / 2.))) * step(.78, crest);
-        float flicker = smoothstep(.3, .9, sin(time * .9 + hash(ripple) * 6.28));
+        float cap = step(mix(.985, .81, ocean), hash(floor(ripple / 2.))) * smoothstep(.62, .98, crest);
+        float flicker = smoothstep(.3, .9, sin(time * .55 + hash(ripple) * 6.28));
         c = mix(c, vec3(.57, .73, .65), cap * flicker * mix(.42, .85, ocean) * mix(.7, 1., fancy));
-        float wash = step(.7, sin(pixel.x * .16 + pixel.y * .23 - time * 1.4));
+        float wash = smoothstep(.4, .92, sin(pixel.x * .16 + pixel.y * .23 - time * 1.4));
         float coastFoam = step(.65, shore) * wash * step(.45, hash(floor(pixel / 3.)));
         c = mix(c, vec3(.59, .77, .64), coastFoam * .36);
         float side = .90 + max(0., face.y) * .10;
@@ -630,6 +634,10 @@ function paused() {
 function frame(ms) {
   const dt = Math.min((ms - lastTime) / 1000 || 0, 0.25);
   lastTime = ms;
+  if ($("market").open) {
+    requestAnimationFrame(frame);
+    return;
+  }
   if (!document.hidden) {
     clockTime += dt;
     if (!paused()) {
@@ -642,7 +650,7 @@ function frame(ms) {
       }
     }
     const roughness = atlanticWeight(state.x, state.z);
-    const seaY = waveHeight(state.x, state.z, clockTime);
+    const seaY = buoyancyHeight(state.x, state.z, clockTime);
     ship.position.set(
       state.x,
       1 + seaY + Math.sin(clockTime * 1.5) * 0.22,
@@ -731,7 +739,8 @@ function updateMobs(dt) {
   if (k && krakenModel) {
     const rise = THREE.MathUtils.smoothstep(k.age, 0, 4);
     const sink = THREE.MathUtils.smoothstep(k.retreat, 0, 5);
-    krakenModel.position.y = -95 * (1 - rise) - 110 * sink;
+    krakenModel.position.set(k.x, -95 * (1 - rise) - 110 * sink, k.z);
+    krakenModel.rotation.y = k.heading;
     const cos = Math.cos(k.heading),
       sin = Math.sin(k.heading);
     animateKraken(
@@ -964,9 +973,6 @@ function begin(resume) {
   );
   saveGame(true);
 }
-function merchantSVG() {
-  return `<svg viewBox="0 0 150 160" xmlns="http://www.w3.org/2000/svg"><path fill="#763e2d" d="M22 112h106v48H22z"/><path fill="#95563a" d="M17 120h20v40H17zm98 0h20v40h-20z"/><path fill="#ddd0a5" d="M57 104h38v56H57z"/><path fill="#bdad86" d="M67 112h17v48H67z"/><path fill="#492f24" d="M41 59h69v50H41z"/><path fill="#b98051" d="M44 58h64v45H44z"/><path fill="#d3a06b" d="M49 66h54v36H49z"/><path fill="#392e23" d="M49 92h13v15h29V92h12v25H91v10H61v-10H49z"/><path fill="#503729" d="M59 87h33v8H59z"/><path fill="#2e2b23" d="M51 71h17v6H51zm33 0h17v6H84z"/><path fill="#f3e4bf" d="M55 78h10v10H55zm31 0h10v10H86z"/><path fill="#2d2b23" d="M60 78h5v10h-5zm26 0h5v10h-5z"/><path fill="#ad784b" d="M69 80h11v13H69z"/><path fill="#252c28" d="M20 55h111v15H20zM36 41h81v22H36zM51 20h50v31H51z"/><path fill="#b99a53" d="M20 54h31v6H20zm31-8h50v7H51zm50 8h30v6h-30z"/><path fill="#e0c47e" d="M43 124h6v7h-6zm0 17h6v7h-6zm60-17h6v7h-6zm0 17h6v7h-6z"/><path fill="#442e22" d="M33 150h84v10H33z"/><path fill="#c6a05b" d="M69 148h16v12H69z"/><path fill="#493a28" d="M73 152h8v5h-8z"/></svg>`;
-}
 function enterPort(p) {
   activePort = p;
   speed = 0;
@@ -976,9 +982,8 @@ function enterPort(p) {
   basket = {};
   if (!state.visited.includes(p.id)) state.visited.push(p.id);
   $("port-name").textContent = p.name;
-  $("port-region").textContent = `${p.region} · Port of call`;
+  $("port-region").textContent = p.region;
   $("merchant-name").textContent = p.merchant;
-  $("portrait").innerHTML = merchantSVG();
   const names = (ids) =>
     ids
       .map((id) => GOODS.find((g) => g.id === id).name.toLowerCase())
@@ -986,11 +991,15 @@ function enterPort(p) {
   $("export-hint").textContent = names(p.exports);
   $("import-hint").textContent = names(p.imports);
   renderMarket();
+  $("trade-message").textContent = "";
   $("market").showModal();
+  tradingPost ||= new TradingPostScene($("trading-post-scene"));
+  tradingPost.start(p);
   saveGame(true);
 }
 function leavePort() {
   ignorePort = activePort.id;
+  tradingPost?.stop();
   $("market").close();
   activePort = null;
   toast("W / arrows to sail · Click the sea to steer · M for your chart", 5000);
@@ -1024,11 +1033,11 @@ function renderMarket() {
   const p = activePort;
   $("buy-tab").setAttribute("aria-selected", String(mode === "buy"));
   $("sell-tab").setAttribute("aria-selected", String(mode === "sell"));
-  $("hold").textContent = `Hold ${cargoCount(state)} / ${state.capacity}`;
+  $("hold").textContent = `${cargoCount(state)} / ${state.capacity}`;
   $("market-coins").textContent = `${state.coins.toLocaleString()} gold aboard`;
   $("goods-list").innerHTML = GOODS.map(
     (g) =>
-      `<div class="goods-row"><span class="goods-name" title="${g.description}">${goodIcon(g)}${g.name}</span><span class="goods-price">${prices(p, g)[mode]}</span><span class="goods-owned">${state.cargo[g.id]}</span><div class="quantity"><button data-good="${g.id}" data-delta="-1" aria-label="Remove one ${g.name}" ${!basket[g.id] ? "disabled" : ""}>−</button><output aria-label="${g.name} quantity">${basket[g.id] || 0}</output><button data-good="${g.id}" data-delta="1" aria-label="Add one ${g.name}" ${canAdd(g) ? "" : "disabled"}>+</button></div></div>`,
+      `<div class="goods-row"><span class="goods-name" title="${g.description}">${goodIcon(g)}${g.name}</span><span class="goods-price"><i class="price-coin" aria-hidden="true"></i>${prices(p, g)[mode]}</span><span class="goods-owned">${state.cargo[g.id]}</span><div class="quantity"><button data-good="${g.id}" data-delta="-1" aria-label="Remove one ${g.name}" ${!basket[g.id] ? "disabled" : ""}>−</button><output aria-label="${g.name} quantity">${basket[g.id] || 0}</output><button data-good="${g.id}" data-delta="1" aria-label="Add one ${g.name}" ${canAdd(g) ? "" : "disabled"}>+</button></div></div>`,
   ).join("");
   const total = GOODS.reduce(
       (n, g) => n + (basket[g.id] || 0) * prices(p, g)[mode],
@@ -1036,9 +1045,8 @@ function renderMarket() {
     ),
     count = Object.values(basket).reduce((a, b) => a + b, 0);
   $("trade-total").innerHTML = `${total.toLocaleString()} <small>gold</small>`;
-  $("trade-summary").textContent = count
-    ? `${count} cargo ${count === 1 ? "unit" : "units"} · ${mode === "buy" ? "to pay" : "to receive"}`
-    : "Select goods to trade";
+  $("trade-summary").textContent =
+    mode === "buy" ? "Total cost" : "Sale proceeds";
   $("confirm-trade").disabled = !count;
   $("confirm-trade").textContent =
     mode === "buy" ? "Confirm purchase" : "Confirm sale";
@@ -1047,6 +1055,7 @@ function renderMarket() {
     ? `Repair hull · ${cost} gold`
     : "Hull in fine condition";
   $("repair").disabled = cost === 0 || cost > state.coins;
+  $("repair").dataset.healthy = String(cost === 0);
 }
 function canAdd(g) {
   if (mode === "sell") return (basket[g.id] || 0) < state.cargo[g.id];
@@ -1086,6 +1095,7 @@ $("confirm-trade").onclick = () => {
       count += basket[g.id];
     }
   state = draft;
+  tradingPost?.acknowledge();
   basket = {};
   updateHUD();
   renderMarket();

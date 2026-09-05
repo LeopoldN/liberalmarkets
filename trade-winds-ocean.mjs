@@ -25,6 +25,14 @@ export function atlanticWeight(x, z) {
   return smooth(-82, -80.8, lon) * smooth(-0.5, 0.5, lat - edge);
 }
 export function waveHeight(x, z, time) {
+  return sampleWaveHeight(x, z, time, true);
+}
+// Boats follow the continuous swell beneath the voxel surface. Using the
+// stepped surface directly snaps the hull vertically at every height boundary.
+export function buoyancyHeight(x, z, time) {
+  return sampleWaveHeight(x, z, time, false);
+}
+function sampleWaveHeight(x, z, time, stepped) {
   const ocean = atlanticWeight(x, z);
   const swell =
     Math.sin(x * 0.036 + z * 0.021 - time * 0.85) * 0.34 +
@@ -32,8 +40,13 @@ export function waveHeight(x, z, time) {
   const rough =
     Math.sin(x * 0.015 + z * 0.023 - time * 1.55) * 1.8 +
     Math.sin(z * 0.044 - x * 0.028 + time * 1.19) * 0.8;
+  const level = (swell + 0.6) * 5;
+  // The center of each quantization interval keeps the smooth hull within
+  // half a voxel step (0.09 world units) of the rendered surface.
   return (
-    Math.floor((swell + 0.6) * 5) * 0.18 - 0.8 + ocean * (swell * 1.8 + rough)
+    (stepped ? Math.floor(level) : level - 0.5) * 0.18 -
+    0.8 +
+    ocean * (swell * 1.8 + rough)
   );
 }
 const f = (n) => Number(n).toFixed(4);

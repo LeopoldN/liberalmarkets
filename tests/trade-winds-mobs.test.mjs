@@ -5,11 +5,14 @@ import { toWorld, VESSELS } from "../trade-winds-engine.mjs";
 import {
   KrakenEncounter,
   KRAKEN_IMPACT,
+  KRAKEN_SPEED,
+  KRAKEN_ATTACK_ARMS,
   strikeHitsShip,
 } from "../trade-winds-mobs.mjs";
 import {
   createKraken,
   animateKraken,
+  krakenPreviewAttacks,
   disposeModel,
 } from "../trade-winds-models.mjs";
 const options = { openWater: () => true, hull: VESSELS.trader };
@@ -170,4 +173,97 @@ test("shared Kraken has eight independent bounded rigs and deterministic variant
   );
   disposeModel(a);
   disposeModel(b);
+});
+
+test("gameplay and workshop strikes use only the two front arms", () => {
+  const { sim, ship, k } = spawn();
+  ship.z = k.z + 120;
+  const used = new Set(),
+    preview = new Set();
+  for (let i = 0; i < 1800; i++) {
+    for (const event of sim.update(1 / 30, ship, options))
+      if (event.type === "windup") used.add(event.arm);
+    for (const attack of krakenPreviewAttacks(i / 30)) preview.add(attack.arm);
+  }
+  assert.deepEqual([...used].sort(), [0, 7]);
+  assert.deepEqual([...preview].sort(), [0, 7]);
+  assert.deepEqual(KRAKEN_ATTACK_ARMS, [0, 7]);
+});
+
+test("pursuit speed is fixed, frame-rate independent, and faster boats pull away", () => {
+  function chase(boatSpeed, fps) {
+    const { sim, ship, k } = spawn();
+    k.age = 5;
+    k.nextAttack = 100;
+    ship.x = k.x;
+    ship.z = k.z + 200;
+    const start = { x: k.x, z: k.z };
+    for (let i = 0; i < fps * 3; i++) {
+      ship.z += boatSpeed / fps;
+      sim.update(1 / fps, ship, options);
+    }
+    return {
+      travelled: Math.hypot(k.x - start.x, k.z - start.z),
+      gap: ship.z - k.z,
+    };
+  }
+  for (const fps of [30, 60, 120]) {
+    const equal = chase(24, fps),
+      faster = chase(40, fps);
+    assert.ok(Math.abs(equal.travelled - KRAKEN_SPEED * 3) < 1e-8);
+    assert.ok(Math.abs(equal.gap - 200) < 1e-8);
+    assert.ok(Math.abs(faster.travelled - KRAKEN_SPEED * 3) < 1e-8);
+    assert.ok(Math.abs(faster.gap - 248) < 1e-8);
+  }
+});
+
+test("pursuit respects strike distance, emergence, and blocked water", () => {
+  const { sim, ship, k } = spawn();
+  const start = { x: k.x, z: k.z };
+  sim.update(1, ship, options);
+  assert.deepEqual(
+    { x: k.x, z: k.z },
+    start,
+    "submerged creature must finish emerging",
+  );
+  k.age = 5;
+  sim.update(1, ship, { ...options, openWater: () => false });
+  assert.deepEqual(
+    { x: k.x, z: k.z },
+    start,
+    "must not swim onto land or into a harbor",
+  );
+  for (let i = 0; i < 300; i++) sim.update(1 / 30, ship, options);
+  assert.ok(Math.abs(Math.hypot(k.x - ship.x, k.z - ship.z) - 120) < 1e-8);
+});
+
+test("a moving, rotating Kraken keeps its animated strike on the locked world target", () => {
+  const { sim, ship, k } = spawn();
+  k.age = 5;
+  k.nextAttack = .2;
+  ship.z = k.z + 120;
+  let attack;
+  for (let i = 0; i < 120 && !attack; i++) {
+    sim.update(1 / 30, ship, options);
+    attack = k.attacks[0];
+  }
+  assert.ok(attack);
+  const locked = { ...attack.worldTarget },
+    start = { x: k.x, z: k.z, heading: k.heading };
+  ship.x += 90;
+  ship.z += 40;
+  for (let i = 0; i < 30; i++) {
+    sim.update(1 / 30, ship, options);
+    const x =
+      k.x +
+      attack.target.x * Math.cos(k.heading) +
+      attack.target.z * Math.sin(k.heading);
+    const z =
+      k.z -
+      attack.target.x * Math.sin(k.heading) +
+      attack.target.z * Math.cos(k.heading);
+    assert.ok(Math.hypot(x - locked.x, z - locked.z) < 1e-8);
+  }
+  assert.ok(Math.hypot(k.x - start.x, k.z - start.z) > 10);
+  assert.notEqual(k.heading, start.heading);
 });

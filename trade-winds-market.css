@@ -1,0 +1,747 @@
+/* The trading ledger sits in a living, full-screen harbor set. */
+#market {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  background: #37271b;
+  color: #e4c998;
+  font-family: Georgia, "Times New Roman", serif;
+}
+#market::backdrop {
+  background: #201a14;
+}
+#trading-post-scene {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+#trading-post-scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#market .wood-frame {
+  border: 7px solid #563b23;
+  background: #30261c url("assets/trade-winds/wood.svg") center/600px 300px;
+  box-shadow:
+    inset 0 0 0 2px #a0784355,
+    inset 0 0 24px #08070499,
+    0 3px 0 #21170e,
+    0 5px 12px #130d0880;
+  position: relative;
+}
+#market .wood-frame::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 5px 5px,
+      #bc9459 0 1px,
+      #342b20 2px 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at calc(100% - 5px) 5px,
+      #bc9459 0 1px,
+      #342b20 2px 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 5px calc(100% - 5px),
+      #bc9459 0 1px,
+      #342b20 2px 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at calc(100% - 5px) calc(100% - 5px),
+      #bc9459 0 1px,
+      #342b20 2px 3px,
+      transparent 4px
+    );
+}
+#market .market-top {
+  position: absolute;
+  left: 2.1%;
+  top: 3.1%;
+  width: 34%;
+  min-height: 132px;
+  height: 16%;
+  padding: 14px 20px;
+  justify-content: center;
+  gap: 22px;
+  transform: rotate(1.3deg);
+  text-align: center;
+}
+#market .port-anchor {
+  width: 64px;
+  height: 80px;
+  flex-shrink: 0;
+  color: #b88b4d;
+  filter: drop-shadow(2px 3px #120e0980);
+}
+#market .market-top .eyebrow {
+  margin: 0 0 7px;
+  font-size: clamp(12px, 1.1vw, 18px);
+  letter-spacing: 0.23em;
+  color: #b9955f;
+}
+#market .market-top h2 {
+  font-size: clamp(24px, 3.2vw, 54px);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+  color: #e0bd81;
+  text-shadow: 2px 3px #130e09;
+}
+#market .post-label {
+  margin: 8px 0 0;
+  color: #b68a4e;
+  font-size: clamp(12px, 1.2vw, 19px);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+#market .market-body {
+  display: block;
+}
+#market .merchant {
+  position: absolute;
+  left: 3.8%;
+  bottom: 11.7%;
+  width: 22.5%;
+  padding: 22px 25px 16px;
+}
+#market .merchant h3 {
+  font-size: clamp(20px, 1.9vw, 31px);
+  font-weight: normal;
+  margin: 0;
+}
+#market .merchant-role {
+  font-size: clamp(15px, 1.35vw, 23px);
+  margin: 4px 0 0;
+  color: #b89e70;
+}
+#market .merchant-quote {
+  margin: 18px 0 0;
+  font-size: clamp(16px, 1.55vw, 24px);
+  color: #d0b786;
+  line-height: 1.35;
+}
+#market .local-advice {
+  margin-top: 23px;
+  padding-top: 22px;
+  position: relative;
+}
+#market .local-advice::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 1px;
+  background: #987447;
+}
+#market .local-advice span {
+  text-transform: uppercase;
+  font-size: clamp(10px, 0.95vw, 15px);
+  letter-spacing: 0.06em;
+  color: #b79b6b;
+}
+#market .local-advice p {
+  font-size: clamp(13px, 1.2vw, 19px);
+  margin: 5px 0 17px;
+  line-height: 1.4;
+}
+#market .trade {
+  position: absolute;
+  left: 37.5%;
+  right: 2.8%;
+  top: 15%;
+  bottom: 11.7%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+#market .trade-tabs {
+  display: flex;
+  gap: 0;
+  height: 72px;
+  min-height: 54px;
+  width: 56%;
+  z-index: 2;
+  margin-left: 14px;
+  margin-bottom: -7px;
+}
+#market .trade-tabs button {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: clamp(18px, 1.7vw, 26px);
+  color: #b8a27f;
+  white-space: nowrap;
+}
+#market .trade-tabs [aria-selected="true"] {
+  color: #241b0e;
+  background: #d8b16b url("assets/trade-winds/parchment.svg") center/500px;
+  box-shadow:
+    inset 0 0 0 2px #dcb775,
+    inset 0 0 24px #9c5c21aa,
+    0 3px 5px #171009;
+}
+#market .trade-paper {
+  position: relative;
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 27px 30px 25px;
+  color: #241e13;
+  border: 8px solid #55391f;
+  background: #d7bb80 url("assets/trade-winds/parchment.svg") center/500px 500px;
+  box-shadow:
+    inset 0 0 4px 3px #85532288,
+    inset 0 0 35px #8a512766,
+    0 0 0 2px #281b0f,
+    0 6px 15px #170e0860;
+}
+#market #leave-port {
+  position: absolute;
+  right: -15px;
+  top: -26px;
+  width: 56px;
+  height: 58px;
+  color: #e1bd7c;
+  font-size: 43px;
+  z-index: 3;
+  line-height: 1;
+}
+#market .goods-header,
+#market .goods-row {
+  grid-template-columns: minmax(140px, 1fr) 91px 76px 158px;
+  gap: 9px;
+}
+#market .goods-header {
+  font-size: clamp(13px, 1.25vw, 19px);
+  color: #302515;
+  padding: 8px 5px 13px;
+  border-bottom: 1px solid #72552b55;
+}
+#market #goods-list {
+  display: grid;
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+  flex: 1;
+  min-height: 0;
+}
+#market .goods-row {
+  min-height: 0;
+  padding: 5px;
+  font-size: clamp(14px, 1.4vw, 22px);
+  border-bottom: 1px solid #715a3038;
+  background: none;
+}
+#market .goods-name {
+  gap: 18px;
+}
+#market .good-icon {
+  width: 35px;
+  height: 39px;
+  background: none;
+  clip-path: none;
+  box-shadow: none;
+  filter: drop-shadow(1px 2px 0 #76552b66);
+}
+#market .goods-price {
+  color: #302513;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  font-variant-numeric: tabular-nums;
+}
+#market .goods-owned {
+  color: #302513;
+}
+#market .quantity {
+  gap: 6px;
+}
+#market .quantity button {
+  width: 42px;
+  height: 42px;
+  background: #73593255;
+  color: #fff0c9;
+  text-shadow: 1px 2px #483418;
+  font-size: 29px;
+  box-shadow: inset 0 0 0 1px #f0d39722;
+}
+#market .quantity button:disabled {
+  opacity: 0.6;
+}
+#market .quantity button:hover:not(:disabled) {
+  background: #76522fa0;
+}
+#market .quantity output {
+  width: 60px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  color: #f3e4c7;
+  font-size: 20px;
+  background: linear-gradient(125deg, #29251e, #4e4130);
+  box-shadow:
+    inset 0 0 0 2px #1e1a1477,
+    0 0 0 1px #ead2a5;
+}
+#market .trade-footer {
+  display: grid;
+  grid-template-columns: 30% 26% 1fr;
+  gap: 8px;
+  margin-top: 13px;
+  padding: 0;
+  height: 110px;
+  flex-shrink: 0;
+}
+#market .trade-footer > div {
+  height: 100%;
+  min-width: 0;
+}
+#market .hold-panel,
+#market .total-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+}
+#market .trade-footer span {
+  font-size: clamp(13px, 1.2vw, 18px);
+  color: #cab184;
+}
+#market #hold,
+#market #trade-total {
+  display: block;
+  font-size: clamp(20px, 1.8vw, 29px);
+  color: #ecd2a1;
+  font-weight: normal;
+  margin-top: 7px;
+  white-space: nowrap;
+}
+#market #trade-total small {
+  font-size: inherit;
+  color: #bb9560;
+}
+#market .trade-footer .cargo-emblem {
+  font-size: 50px;
+  color: #ba894a;
+  text-shadow:
+    3px 3px #5e3b21,
+    -2px -2px #d4a362;
+  transform: rotate(-8deg);
+}
+#market .confirm-panel {
+  padding: 10px;
+}
+#market #confirm-trade {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  white-space: normal;
+  font-size: clamp(13px, 1.2vw, 19px);
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: #e8c183;
+  background: linear-gradient(130deg, #54633a, #35412b);
+  border: 3px solid #9d8247;
+  box-shadow:
+    inset 0 0 0 2px #d5b77333,
+    inset 0 0 18px #18221299;
+}
+#market #confirm-trade:disabled {
+  opacity: 0.75;
+}
+#market #confirm-trade:hover:not(:disabled) {
+  background: linear-gradient(130deg, #667545, #495937);
+}
+#market #trade-message {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 11px 0 0;
+  font-size: 15px;
+  color: #ffedc8;
+  text-shadow: 0 2px 3px #000;
+}
+#market .market-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 7.4%;
+  min-height: 56px;
+  padding: 12px 28px;
+  font-size: 21px;
+  border-top: 4px solid #705034;
+  background: linear-gradient(0deg, #241e18f5, #30251eea);
+}
+#market .aboard-gold {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+#market .market-bottom .text-button {
+  font-size: 21px;
+  padding: 8px 0;
+  color: #e1c28b;
+}
+#market #set-sail span {
+  margin-left: 24px;
+  font-size: 32px;
+}
+#market #repair {
+  font-size: 16px;
+}
+#market #repair[data-healthy="true"] {
+  visibility: hidden;
+}
+#market .price-coin,
+#market .market-gold {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 12px;
+  height: 13px;
+  background: linear-gradient(
+    90deg,
+    #ac711f 0 20%,
+    #ffdb6c 20% 40%,
+    #dca32d 40% 70%,
+    #95601d 70%
+  );
+  border-top: 2px solid #ffe29c;
+  border-bottom: 2px solid #8b591d;
+  box-shadow:
+    2px 0 #b77c25,
+    -2px 0 #b77c25,
+    0 2px #533818;
+}
+#market .market-gold {
+  width: 17px;
+  height: 20px;
+  box-shadow:
+    2px 0 #b77c25,
+    -2px 0 #b77c25,
+    0 2px #533818,
+    8px 7px #b98629,
+    -7px 8px #d7a540;
+  margin: 0 8px 6px;
+}
+#market button:focus-visible {
+  outline: 2px solid #fff0c8;
+  outline-offset: 3px;
+}
+@media (max-width: 1100px) {
+  #market .trade-paper {
+    padding: 20px 16px 16px;
+  }
+  #market .goods-header,
+  #market .goods-row {
+    grid-template-columns: minmax(120px, 1fr) 68px 53px 118px;
+    gap: 5px;
+  }
+  #market .quantity button {
+    width: 31px;
+    height: 35px;
+  }
+  #market .quantity output {
+    width: 43px;
+    height: 36px;
+    font-size: 17px;
+  }
+  #market .good-icon {
+    width: 28px;
+    height: 31px;
+  }
+  #market .goods-name {
+    gap: 10px;
+  }
+  #market .trade-tabs {
+    width: 75%;
+  }
+  #market .merchant {
+    padding: 17px;
+  }
+  #market .trade-footer {
+    height: 90px;
+  }
+  #market .hold-panel,
+  #market .total-panel {
+    gap: 10px;
+  }
+  #market .trade-footer .cargo-emblem {
+    font-size: 35px;
+  }
+  #market .market-top {
+    gap: 12px;
+  }
+  #market .port-anchor {
+    width: 44px;
+  }
+}
+@media (max-height: 850px) and (min-width: 701px) {
+  #market .market-top {
+    min-height: 104px;
+  }
+  #market .merchant {
+    padding: 14px 18px 8px;
+  }
+  #market .merchant-quote {
+    margin-top: 12px;
+    font-size: 17px;
+  }
+  #market .local-advice {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+  #market .local-advice p {
+    margin-bottom: 10px;
+  }
+  #market .trade {
+    top: 12%;
+    bottom: 12.7%;
+  }
+  #market .trade-tabs {
+    height: 56px;
+  }
+  #market .trade-paper {
+    padding-top: 17px;
+    padding-bottom: 12px;
+  }
+  #market .trade-footer {
+    height: 78px;
+    margin-top: 8px;
+  }
+  #market .good-icon {
+    height: 29px;
+  }
+  #market .quantity button,
+  #market .quantity output {
+    height: 32px;
+  }
+  #market .goods-row {
+    padding: 2px 5px;
+  }
+  #market .goods-header {
+    padding-bottom: 8px;
+  }
+  #market #trade-message {
+    margin-top: 7px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 700px) {
+  #market {
+    overflow-y: auto;
+  }
+  #trading-post-scene {
+    position: fixed;
+    height: 670px;
+  }
+  #market .market-top {
+    left: 5%;
+    top: 18px;
+    width: 90%;
+    height: 105px;
+    min-height: 0;
+    padding: 10px;
+  }
+  #market .market-top h2 {
+    font-size: 32px;
+  }
+  #market .market-top .eyebrow {
+    font-size: 12px;
+  }
+  #market .post-label {
+    font-size: 12px;
+  }
+  #market .merchant {
+    left: auto;
+    right: 4%;
+    top: 160px;
+    bottom: auto;
+    width: 43%;
+    padding: 12px;
+  }
+  #market .merchant h3 {
+    font-size: 19px;
+  }
+  #market .merchant-role {
+    font-size: 14px;
+  }
+  #market .merchant-quote {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  #market .local-advice {
+    display: none;
+  }
+  #market .market-body {
+    min-height: 1030px;
+  }
+  #market .trade {
+    top: 360px;
+    left: 12px;
+    right: 12px;
+    bottom: auto;
+    height: 570px;
+  }
+  #market .trade-tabs {
+    width: 90%;
+    height: 56px;
+    margin-left: 0;
+  }
+  #market .trade-tabs button {
+    font-size: 19px;
+    padding: 9px;
+  }
+  #market .trade-paper {
+    padding: 18px 9px 10px;
+    border-width: 5px;
+  }
+  #market .goods-header,
+  #market .goods-row {
+    grid-template-columns: minmax(94px, 1fr) 47px 43px 96px;
+    gap: 3px;
+    font-size: 13px;
+  }
+  #market .goods-name {
+    gap: 6px;
+  }
+  #market .good-icon {
+    width: 23px;
+    height: 28px;
+  }
+  #market .quantity {
+    gap: 3px;
+  }
+  #market .quantity button {
+    width: 27px;
+    height: 34px;
+    font-size: 24px;
+  }
+  #market .quantity output {
+    width: 35px;
+    height: 34px;
+    font-size: 15px;
+  }
+  #market .goods-price {
+    gap: 6px;
+  }
+  #market #leave-port {
+    right: -7px;
+    top: -21px;
+    width: 40px;
+    height: 43px;
+    font-size: 30px;
+  }
+  #market .trade-footer {
+    gap: 5px;
+    grid-template-columns: 25% 29% 1fr;
+    height: 79px;
+  }
+  #market .trade-footer .cargo-emblem,
+  #market .total-panel > .market-gold {
+    display: none;
+  }
+  #market .hold-panel,
+  #market .total-panel {
+    padding: 7px;
+  }
+  #market .wood-frame {
+    border-width: 5px;
+  }
+  #market .confirm-panel {
+    padding: 4px;
+  }
+  #market #confirm-trade {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 4px;
+  }
+  #market #hold,
+  #market #trade-total {
+    font-size: 19px;
+  }
+  #market .trade-footer span {
+    font-size: 12px;
+  }
+  #market .market-bottom {
+    position: fixed;
+    height: 60px;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+  #market .market-bottom,
+  #market .market-bottom .text-button {
+    font-size: 16px;
+  }
+  #market #set-sail span {
+    margin-left: 6px;
+    font-size: 22px;
+  }
+  #market .aboard-gold {
+    gap: 9px;
+  }
+  #market #repair {
+    position: fixed;
+    bottom: 65px;
+    right: 15px;
+    background: #2b231de8;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  #market #trade-message {
+    font-size: 13px;
+  }
+}
+#trading-post-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 42% 42%,
+    transparent 35%,
+    #170f092e 100%
+  );
+}
+@media (max-width: 700px) {
+  #market .merchant {
+    display: block;
+  }
+}
+
+@media (max-height: 850px) and (min-width: 701px) {
+  #market .merchant h3 {
+    font-size: 22px;
+  }
+  #market .merchant-role {
+    font-size: 16px;
+  }
+  #market .local-advice span {
+    font-size: 10px;
+  }
+  #market .local-advice p {
+    font-size: 13px;
+  }
+  #market .goods-row {
+    font-size: 17px;
+  }
+  #market .quantity output {
+    font-size: 17px;
+  }
+}
