@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-09-04T16:14:12.835Z",
+  "generatedAt": "2026-09-05T15:01:50.194Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "White House has vetted candidates for key CFTC vacancies, sources tell CNBC. It&apos;s unclear if they will be filled",
+      "link": "https://www.cnbc.com/2026/09/04/white-house-has-vetted-candidates-for-key-cftc-vacancies-sources-tell-cnbc.html",
+      "pubDate": "Fri, 04 Sep 2026 17:53:07 GMT"
+    },
     {
       "title": "Bitcoin heads for third winning week in a row as macro pressures mount",
       "link": "https://www.cnbc.com/2026/09/04/bitcoin-heads-for-third-winning-week-in-a-row-as-macro-pressures-mount.html",
@@ -87,11 +92,6 @@
       "title": "September Fed decision is now a coin flip as rate hike odds increase post Warsh",
       "link": "https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html",
       "pubDate": "Fri, 28 Aug 2026 15:22:10 GMT"
-    },
-    {
-      "title": "Trump ratchets up rhetoric against Beijing as U.S.-China officials meet for Xi&apos;s Washington visit",
-      "link": "https://www.cnbc.com/2026/08/28/trump-x-meeting-us-china-iran-sanctions.html",
-      "pubDate": "Fri, 28 Aug 2026 01:35:13 GMT"
     }
   ]
 }
