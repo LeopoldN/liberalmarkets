@@ -2,6 +2,10 @@ export const SCALE = 220;
 // Keep the normal pace separate so the temporary testing boost is easy to remove.
 export const BASE_SHIP_SPEED = 14;
 export const SHIP_SPEED = BASE_SHIP_SPEED * 3.5;
+export const VESSELS = {
+  raft: { bow: 9, stern: 9, halfWidth: 6.5 },
+  trader: { bow: 20, stern: 13, halfWidth: 7 },
+};
 export const SAVE_KEY = "liberal-markets:trade-winds:v1";
 export const GOODS = [
   {
@@ -276,6 +280,7 @@ export const cargoCount = (state) =>
 export function newState(position) {
   return {
     version: 1,
+    vessel: "raft",
     x: position.x,
     z: position.z,
     heading: Math.PI,
@@ -358,6 +363,9 @@ export function parseSave(raw) {
       s.visited.some((id) => !PORTS.some((p) => p.id === id))
     )
       return null;
+    // Saves from before rafts were introduced keep their original trading ship.
+    if (s.vessel === undefined) s.vessel = "trader";
+    if (!Object.hasOwn(VESSELS, s.vessel)) return null;
     s.target = PORTS.some((p) => p.id === s.target) ? s.target : null;
     return s;
   } catch {

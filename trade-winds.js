@@ -1,10 +1,28 @@
 import * as THREE from "./assets/vendor/three.module.js";
+import {
+  createKraken,
+  animateKraken,
+  createVessel,
+  createPortModel,
+  portVariant,
+  createGull,
+  appendTree,
+  instanceBlocks,
+  disposeModel,
+} from "./trade-winds-models.mjs";
+import {
+  atlanticWeight,
+  waveHeight,
+  OCEAN_GLSL,
+} from "./trade-winds-ocean.mjs";
+import { KrakenEncounter } from "./trade-winds-mobs.mjs";
 import { WakeTrail } from "./trade-winds-wake.mjs";
 import {
   GOODS,
   PORTS,
   SAVE_KEY,
   SHIP_SPEED as SPEED,
+  VESSELS,
   toWorld,
   toGeo,
   prices,
@@ -50,40 +68,15 @@ let shoreCenter = "",
   ignorePort = null,
   quality = "high";
 const dummy = new THREE.Object3D(),
-  color = new THREE.Color(),
   raycaster = new THREE.Raycaster(),
   seaPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
 const cameraAim = new THREE.Vector3(),
   desiredAim = new THREE.Vector3();
-const cube = new THREE.BoxGeometry(1, 1, 1),
-  material = new THREE.MeshStandardMaterial({
-    roughness: 1,
-    flatShading: true,
-  });
-const mats = new Map();
 const wake = new WakeTrail();
+const encounter = new KrakenEncounter();
+let krakenModel = null,
+  atlanticAnnounced = false;
 let waterGridSize = 0;
-function mat(c) {
-  if (!mats.has(c))
-    mats.set(
-      c,
-      new THREE.MeshStandardMaterial({
-        color: c,
-        roughness: 0.95,
-        flatShading: true,
-      }),
-    );
-  return mats.get(c);
-}
-function block(parent, x, y, z, w, h, d, c) {
-  const m = new THREE.Mesh(cube, mat(c));
-  m.position.set(x, y, z);
-  m.scale.set(w, h, d);
-  m.castShadow = true;
-  m.receiveShadow = true;
-  parent.add(m);
-  return m;
-}
 const hash = (x, z) => {
   const v = Math.sin(x * 127.1 + z * 311.7) * 43758.5453;
   return v - Math.floor(v);
@@ -130,46 +123,6 @@ function terrainHeight(ix, iz) {
     )
       h = 8;
   return { h, depth };
-}
-function instanceBlocks(data, parent) {
-  if (!data.length) return;
-  const mesh = new THREE.InstancedMesh(cube, material, data.length);
-  data.forEach((b, i) => {
-    dummy.position.set(b[0], b[1], b[2]);
-    dummy.scale.set(b[3], b[4], b[5]);
-    dummy.rotation.set(0, b[7] || 0, 0);
-    dummy.updateMatrix();
-    mesh.setMatrixAt(i, dummy.matrix);
-    mesh.setColorAt(i, color.set(b[6]));
-  });
-  mesh.castShadow = true;
-  mesh.receiveShadow = true;
-  mesh.computeBoundingSphere();
-  parent.add(mesh);
-}
-function consolidate(group) {
-  group.updateMatrixWorld(true);
-  const inverse = group.matrixWorld.clone().invert(),
-    items = [];
-  group.traverse((obj) => {
-    if (obj.isMesh)
-      items.push({
-        matrix: inverse.clone().multiply(obj.matrixWorld),
-        color: obj.material.color,
-      });
-  });
-  const retained = group.children.filter((obj) => obj.isLine);
-  group.clear();
-  retained.forEach((obj) => group.add(obj));
-  const mesh = new THREE.InstancedMesh(cube, material, items.length);
-  items.forEach((item, i) => {
-    mesh.setMatrixAt(i, item.matrix);
-    mesh.setColorAt(i, item.color);
-  });
-  mesh.castShadow = true;
-  mesh.receiveShadow = true;
-  mesh.computeBoundingSphere();
-  group.add(mesh);
 }
 function buildChunk(cx, cz) {
   const group = new THREE.Group(),
@@ -225,27 +178,10 @@ function buildChunk(cx, cz) {
             (iz + 0.5) * CELL - p.land.z,
           ) < 65,
       );
-      if (r > 0.925 && !nearTown) {
-        const ht = depth === 0 ? 16 : 20;
-        data.push(
-          [x, h + ht / 2, z, 2.4, ht, 2.4, 0x806340],
-          [x + 1, h + ht, z, 3, 3, 3, 0x69883c],
-        );
-        for (let k = 0; k < 4; k++) {
-          const angle = (k * Math.PI) / 2 + r;
-          const dx = Math.cos(angle),
-            dz = Math.sin(angle);
-          data.push(
-            [x + dx * 5, h + ht + 1, z + dz * 5, 12, 2, 3, 0x54863a, angle],
-            [x + dx * 10, h + ht - 1, z + dz * 10, 7, 2, 3, 0x679344, angle],
-          );
-        }
-      } else if (depth > 1 && r > 0.74 && !nearTown) {
-        data.push(
-          [x, h + 5, z, 3, 10, 3, 0x655331],
-          [x, h + 10, z, 10, 9, 10, r > 0.85 ? 0x487642 : 0x537e40],
-          [x + 1, h + 16, z, 7, 5, 7, 0x648a42],
-        );
+      if (r > 0.945 && !nearTown) {
+        appendTree(data, x, h, z, "palm", r * 100, depth === 0 ? 0.82 : 1);
+      } else if (depth > 1 && r > 0.82 && !nearTown) {
+        appendTree(data, x, h, z, "canopy", r * 100, 0.8 + hash(iz, ix) * 0.25);
       }
     }
   instanceBlocks(data, group);
@@ -346,180 +282,25 @@ function findHarbor(port) {
   );
 }
 function makePort(p) {
-  const g = new THREE.Group();
-  g.position.set(p.land.x, 0, p.land.z);
-  g.rotation.y = Math.atan2(p.normal.x, p.normal.z);
-  p.group = g;
-  // Wooden landing, piers, mooring posts, and stacked cargo.
-  block(g, 0, 5, 19, 15, 3, 54, 0x846346);
-  for (let z = 0; z < 49; z += 5) {
-    block(g, 0, 6.65, z, 15, 0.35, 0.7, 0xa18058);
-    for (const x of [-8, 8]) block(g, x, 3, z, 2, 13, 2, 0x594b36);
-  }
-  for (let i = 0; i < 6; i++) {
-    block(
-      g,
-      -5 + (i % 2) * 4,
-      9 + Math.floor(i / 4) * 4,
-      4 + Math.floor(i / 2) * 5,
-      3.4,
-      4,
-      3.4,
-      i % 2 ? 0xb18b55 : 0x977449,
-    );
-  }
-  block(g, 0, 5, -12, 85, 8, 27, 0xa99b76);
-  block(g, 0, 9.5, -10, 87, 1, 29, 0xccbb8d);
-  for (let i = 0; i < 7; i++) {
-    const x = ((i % 4) - 1.5) * 23,
-      z = -29 - Math.floor(i / 4) * 25,
-      w = 15 + hash(i, p.lon) * 5,
-      h = 15 + hash(i, p.lat) * 13;
-    block(g, x, 8 + h / 2, z, w, h, 17, p.color);
-    block(g, x, 8 + h, z, w + 3, 2, 20, 0xad6b47);
-    for (let r = 0; r < 4; r++)
-      block(g, x, 10 + h + r * 1.7, z, w + 3 - r * 3, 1.8, 20, 0x9e5738);
-    block(g, x, 13, z + 8.6, 4, 9, 0.5, 0x554c38);
-    for (const wx of [-5, 5]) {
-      block(g, x + wx, 17 + h * 0.15, z + 8.7, 3, 4, 0.5, 0x4c6862);
-      block(g, x + wx, 19 + h * 0.15, z + 9, 4, 0.7, 1, 0xeadcb8);
-    }
-    if (i === 2) {
-      block(g, x, 8 + h + 11, z, 8, 16, 8, p.color);
-      block(g, x, 8 + h + 20, z, 10, 2, 10, 0x9b6045);
-      block(g, x, 8 + h + 22, z, 2, 5, 2, 0xd4c1a1);
-    }
-  }
-  // Fort at the headland.
-  block(g, 60, 18, -34, 22, 25, 23, 0xb9ae89);
-  for (let i = 0; i < 4; i++)
-    for (const z of [-45, -23]) block(g, 51 + i * 6, 32, z, 3, 5, 3, 0xd6c69d);
-  block(g, 60, 43, -34, 1, 26, 1, 0x765d42);
-  block(g, 66, 52, -34, 12, 6, 0.7, 0xe6c48a);
-  // Harbor palms and warm lanterns.
-  for (const x of [-43, 43]) {
-    block(g, x, 21, -13, 3, 26, 3, 0x876a44);
-    for (let k = 0; k < 4; k++) {
-      const angle = (k * Math.PI) / 2 + 0.4;
-      const m = block(
-        g,
-        x + Math.cos(angle) * 7,
-        35,
-        -13 + Math.sin(angle) * 7,
-        18,
-        2.2,
-        4,
-        0x61853c,
-      );
-      m.rotation.y = -angle;
-    }
-  }
-  for (const x of [-8, 8]) {
-    block(g, x, 14, 40, 1, 12, 1, 0x514b36);
-    block(g, x, 20, 40, 3, 4, 3, 0xffcc70);
-  }
-  // A small second vessel and locals make the harbor feel inhabited.
-  const boat = new THREE.Group();
-  block(boat, 0, 2, 0, 8, 4, 24, 0x604534);
-  block(boat, 0, 4, 0, 6, 1, 20, 0xab8452);
-  block(boat, 0, 14, 0, 1, 25, 1, 0x67543b);
-  block(boat, 3, 18, 0, 6, 12, 0.8, 0xe7d6aa);
-  boat.position.set(25, 0, 19);
-  g.add(boat);
-  for (let i = 0; i < 5; i++) {
-    const x = -27 + i * 13;
-    block(g, x, 12, -8, 3, 4, 2, i % 2 ? 0x607e79 : 0x96553d);
-    block(g, x, 15, -8, 2.4, 2.4, 2.4, 0xc69567);
-    block(g, x, 16.4, -8, 4, 1, 3, 0x6d6242);
-  }
-  consolidate(g);
-  scene.add(g);
+  p.group = createPortModel(portVariant(p.id));
+  p.group.position.set(p.land.x, 0, p.land.z);
+  p.group.rotation.y = Math.atan2(p.normal.x, p.normal.z);
+  scene.add(p.group);
 }
-function makeShip() {
-  const g = new THREE.Group();
-  block(g, 0, 2, 0, 11, 5, 25, 0x5b3e2b);
-  block(g, 0, 4, 0, 14, 4, 22, 0x765038);
-  block(g, 0, 3, -14, 8, 4, 7, 0x68452f);
-  block(g, 0, 4, -18, 4, 3, 4, 0x765038);
-  block(g, 0, 6, 0, 12, 1.5, 24, 0xbb935a);
-  for (const x of [-6.5, 6.5]) {
-    block(g, x, 7, 1, 1, 3, 23, 0x543e2b);
-    block(g, x, 8.5, 1, 1.4, 0.7, 23, 0xd1ae6c);
+function setVessel() {
+  if (ship?.userData.vessel === state.vessel) return;
+  if (ship) {
+    scene.remove(ship);
+    disposeModel(ship);
   }
-  block(g, 0, 8, 9, 10, 4, 6, 0x83613e);
-  block(g, 0, 10.5, 9, 11, 1, 7, 0xc09c63);
-  block(g, 0, 9, 5.8, 3, 2, 0.5, 0x364f51);
-  block(g, 0, 23, 0, 1.2, 38, 1.2, 0x675039);
-  block(g, 0, 18, 10, 1, 26, 1, 0x725336);
-  block(g, 0, 9, -19, 1, 1, 14, 0x9e7c4e);
-  // Stepped canvas sails with individual cloth bands and a curved belly.
-  for (let j = 0; j < 9; j++) {
-    const w = 17 - j * 0.65;
-    block(
-      g,
-      0,
-      19 + j * 1.9,
-      1.7 + Math.sin((j / 9) * Math.PI) * 1.5,
-      w,
-      2,
-      0.6,
-      j % 3 === 0 ? 0xe8dcb8 : 0xf4e9cd,
-    );
-  }
-  block(g, 0, 37, 1, 18, 0.7, 1, 0x886744);
-  block(g, 0, 18, 1, 20, 0.7, 1, 0x886744);
-  for (let j = 0; j < 6; j++)
-    block(
-      g,
-      0,
-      17 + j * 1.8,
-      10.8 + Math.sin((j / 6) * Math.PI),
-      11 - j * 0.65,
-      1.9,
-      0.6,
-      0xe5d7b0,
-    );
-  for (let j = 0; j < 8; j++)
-    block(g, 0, 12 + j * 1.6, -14 + j * 0.9, 0.6, 1.7, 9 - j * 0.9, 0xf3e5bf);
-  block(g, 2.5, 41, 0, 5, 3, 0.5, 0xb75d41);
-  block(g, 6, 40.5, 0, 2, 2, 0.5, 0xb75d41);
-  for (const x of [-5, 5]) {
-    const pts = [
-      new THREE.Vector3(x, 8, 7),
-      new THREE.Vector3(0, 39, 0),
-      new THREE.Vector3(x, 8, -9),
-    ];
-    g.add(
-      new THREE.Line(
-        new THREE.BufferGeometry().setFromPoints(pts),
-        new THREE.LineBasicMaterial({ color: 0x736247 }),
-      ),
-    );
-  }
-  block(g, -3, 9, 9, 2, 3, 2, 0x3c6970);
-  block(g, -3, 11.5, 9, 1.7, 1.7, 1.7, 0xcb9d71);
-  block(g, -3, 12.6, 9, 3, 0.6, 2, 0x433d30);
-  block(g, 3, 8, -3, 3, 3, 3, 0x937145);
-  block(g, -3, 8, -5, 3, 3, 4, 0xa07c4c);
-  consolidate(g);
-  scene.add(g);
-  return g;
-}
-function waveHeight(x, z, time) {
-  return (
-    Math.floor(
-      (Math.sin(x * 0.036 + z * 0.021 - time * 0.85) * 0.34 +
-        Math.sin(z * 0.057 - x * 0.014 + time * 0.61) * 0.23 +
-        0.6) *
-        5,
-    ) *
-      0.18 -
-    0.8
-  );
+  ship = createVessel(state.vessel);
+  scene.add(ship);
+  wake.reset(state);
 }
 function makeWater() {
   // A shallow cube for each water tile gives the sea real stepped edges.
-  const geometry = new THREE.BoxGeometry(12, 0.9, 12);
+  const geometry = new THREE.BoxGeometry(12, 7, 12);
+  geometry.translate(0, -3.05, 0);
   const m = new THREE.ShaderMaterial({
     uniforms: {
       time: { value: 0 },
@@ -532,12 +313,11 @@ function makeWater() {
       varying vec3 world;
       varying vec3 face;
       uniform float time;
+      ${OCEAN_GLSL}
       void main() {
         vec4 center = modelMatrix * instanceMatrix * vec4(0., 0., 0., 1.);
-        float swell = sin(center.x * .036 + center.z * .021 - time * .85) * .34
-          + sin(center.z * .057 - center.x * .014 + time * .61) * .23;
         vec4 point = instanceMatrix * vec4(position, 1.);
-        point.y += floor((swell + .6) * 5.) * .18 - .8;
+        point.y += seaHeight(center.xz, time);
         world = (modelMatrix * point).xyz;
         face = normal;
         gl_Position = projectionMatrix * viewMatrix * vec4(world, 1.);
@@ -551,6 +331,7 @@ function makeWater() {
       uniform sampler2D shoreMap;
       uniform vec2 shoreOrigin;
       uniform float shoreSize;
+      ${OCEAN_GLSL}
       float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
       float noise(vec2 p) {
         vec2 i = floor(p), f = fract(p);
@@ -560,12 +341,14 @@ function makeWater() {
       }
       void main() {
         vec2 p = world.xz;
+        float ocean = atlantic(p);
         vec2 tile = floor((p + 6.) / 12.);
         vec2 pixel = floor(p / 2.) * 2.;
         // Broad color shoals, then a restrained palette of individual water facets.
         float depth = noise(tile * .085) * .7 + noise(tile * .21) * .3;
         depth = floor(depth * 7.) / 7.;
         vec3 c = mix(vec3(.012, .125, .19), vec3(.028, .265, .29), depth);
+        c = mix(c, mix(vec3(.007, .035, .065), vec3(.025, .11, .155), depth), ocean * .88);
         float facet = sin(tile.x * .43 + tile.y * .29 - time * .7)
           + sin(tile.y * .71 - tile.x * .21 + time * .51);
         c *= .98 + floor(facet * 2.) * .018;
@@ -585,10 +368,10 @@ function makeWater() {
           + noise(ripple * .12) * 4.);
         float broken = step(.65, hash(floor(ripple / vec2(4., 2.))));
         float lip = step(.91, crest) * broken;
-        c = mix(c, vec3(.17, .42, .43), lip * .18);
-        float cap = step(.985, hash(floor(ripple / 2.))) * step(.78, crest);
+        c = mix(c, vec3(.17, .42, .43), lip * mix(.18, .44, ocean));
+        float cap = step(mix(.985, .81, ocean), hash(floor(ripple / 2.))) * step(.78, crest);
         float flicker = smoothstep(.3, .9, sin(time * .9 + hash(ripple) * 6.28));
-        c = mix(c, vec3(.57, .73, .65), cap * flicker * .42 * fancy);
+        c = mix(c, vec3(.57, .73, .65), cap * flicker * mix(.42, .85, ocean) * mix(.7, 1., fancy));
         float wash = step(.7, sin(pixel.x * .16 + pixel.y * .23 - time * 1.4));
         float coastFoam = step(.65, shore) * wash * step(.45, hash(floor(pixel / 3.)));
         c = mix(c, vec3(.59, .77, .64), coastFoam * .36);
@@ -607,7 +390,7 @@ function makeWater() {
     new THREE.MeshBasicMaterial({ color: 0x176c7a }),
   );
   deep.rotation.x = -Math.PI / 2;
-  deep.position.y = -3;
+  deep.position.y = -12;
   scene.add(deep);
   return mesh;
 }
@@ -684,7 +467,7 @@ function makeFoam() {
   return mesh;
 }
 function updateFoam(dt) {
-  wake.update(dt, state);
+  wake.update(dt, state, VESSELS[state.vessel]);
   const life = foam.geometry.attributes.foamLife;
   let count = 0;
   for (const p of wake.particles) {
@@ -713,74 +496,6 @@ function updateFoam(dt) {
   foam.count = count;
   foam.instanceMatrix.needsUpdate = true;
   life.needsUpdate = true;
-}
-function makeGull(index) {
-  const gull = new THREE.Group();
-  gull.name = `gull-${index}`;
-  const body = new THREE.Group();
-  // A rounded, stepped breast, gray mantle, and a distinct forward-facing head.
-  block(body, 0, 0, 0, 2.3, 1.8, 4.6, 0xf4f1df);
-  block(body, 0, -0.65, -0.2, 1.7, 1.1, 3.2, 0xe1e5dd);
-  block(body, 0, 0.85, 0.5, 2.2, 0.7, 3.3, 0xb7c7c8);
-  block(body, 0, 0.45, -2.15, 1.5, 1.8, 1.9, 0xf7f3e7);
-  block(body, 0, 1.05, -3.1, 1.85, 1.65, 1.9, 0xfff9e7);
-  block(body, 0, 0.75, -4.25, 0.75, 0.6, 1.05, 0xe0ad48);
-  block(body, 0, 0.6, -4.9, 0.45, 0.4, 0.4, 0xb98535);
-  for (const side of [-1, 1]) {
-    block(body, side * 0.95, 1.3, -3.5, 0.25, 0.4, 0.4, 0x293737);
-    block(body, side * 0.55, -0.8, 2.0, 0.3, 0.3, 1.25, 0xc78c48);
-  }
-  // Three staggered tail feathers retain a bird silhouette when the wings fold.
-  for (let feather = -1; feather <= 1; feather++) {
-    block(
-      body,
-      feather * 0.65,
-      0.05,
-      3.0,
-      0.65,
-      0.5,
-      2.6 - Math.abs(feather) * 0.4,
-      0xeff1e5,
-    );
-  }
-  consolidate(body);
-  gull.add(body);
-  const wings = [];
-  for (const side of [-1, 1]) {
-    const shoulder = new THREE.Group();
-    shoulder.position.set(side * 0.85, 0.7, -0.25);
-    const inner = new THREE.Group();
-    block(inner, side * 1.7, 0, 0.05, 3.7, 0.65, 2.8, 0xb9c9c9);
-    block(inner, side * 1.7, -0.3, 0.6, 3.5, 0.3, 2.2, 0xf2f1df);
-    block(inner, side * 2.7, 0.05, -0.45, 2.1, 0.5, 1.6, 0xdde5dc);
-    consolidate(inner);
-    shoulder.add(inner);
-    const tip = new THREE.Group();
-    tip.position.set(side * 3.4, 0, 0.25);
-    block(tip, side * 1.35, 0, 0.45, 2.9, 0.5, 2.0, 0xc3ceca);
-    // Swept, dark primary feathers, each offset to form a tapered wingtip.
-    for (let feather = 0; feather < 3; feather++) {
-      block(
-        tip,
-        side * (2.65 + feather * 0.5),
-        -0.08,
-        0.05 + feather * 0.62,
-        2.05 - feather * 0.4,
-        0.4,
-        0.58,
-        feather === 0 ? 0x546568 : 0x37494d,
-      );
-    }
-    block(tip, side * 2.6, 0.16, 0.6, 0.7, 0.22, 0.55, 0xf0efe0);
-    consolidate(tip);
-    shoulder.add(tip);
-    gull.add(shoulder);
-    wings.push({ shoulder, tip, side });
-  }
-  gull.scale.setScalar(0.8 + (index % 3) * 0.1);
-  gull.userData.wings = wings;
-  gull.userData.phase = index * 1.73;
-  return gull;
 }
 function updateBirds(dt) {
   const flock = scene.userData.birds;
@@ -860,18 +575,18 @@ function initScene() {
   foam = makeFoam();
   PORTS.forEach((p) => ports.push({ ...p, ...findHarbor(p) }));
   ports.forEach(makePort);
-  ship = makeShip();
   const home = ports[0];
   state = newState({
     x: home.x + home.normal.x * 20,
     z: home.z + home.normal.z * 20,
   });
   state.heading = Math.atan2(-home.normal.x, -home.normal.z);
+  setVessel();
   cameraAim.set(state.x - 65, 0, state.z - 40);
   updateTerrain(true);
   const birds = new THREE.Group();
   birds.position.set(state.x, 0, state.z);
-  for (let i = 0; i < 7; i++) birds.add(makeGull(i));
+  for (let i = 0; i < 7; i++) birds.add(createGull(i));
   scene.add(birds);
   scene.userData.birds = birds;
   renderer.domElement.addEventListener("pointerdown", pointerDown);
@@ -922,14 +637,21 @@ function frame(ms) {
       while (remaining > 0 && !paused()) {
         const step = Math.min(remaining, 1 / 30);
         updateMovement(step);
+        if (!paused()) updateMobs(step);
         remaining -= step;
       }
     }
-    ship.position.set(state.x, 1 + Math.sin(clockTime * 1.5) * 0.35, state.z);
+    const roughness = atlanticWeight(state.x, state.z);
+    const seaY = waveHeight(state.x, state.z, clockTime);
+    ship.position.set(
+      state.x,
+      1 + seaY + Math.sin(clockTime * 1.5) * 0.22,
+      state.z,
+    );
     ship.rotation.set(
-      Math.sin(clockTime * 1.3) * 0.012,
+      Math.sin(clockTime * 1.3) * (0.012 + roughness * 0.05),
       state.heading,
-      Math.sin(clockTime * 1.6) * 0.025,
+      Math.sin(clockTime * 1.6) * (0.025 + roughness * 0.065),
     );
     const desired = desiredAim.set(state.x, 0, state.z);
     if (!started) desired.add(new THREE.Vector3(-65, 0, -35));
@@ -949,6 +671,81 @@ function frame(ms) {
     renderer.render(scene, camera);
   }
   requestAnimationFrame(frame);
+}
+function clearKraken() {
+  if (!krakenModel) return;
+  scene.remove(krakenModel);
+  disposeModel(krakenModel);
+  krakenModel = null;
+}
+function openMonsterWater(x, z, radius) {
+  if (ports.some((p) => Math.hypot(p.x - x, p.z - z) < radius + 150))
+    return false;
+  // Check the entire encounter footprint, including small islands between rings.
+  for (let dx = -radius; dx <= radius; dx += CELL)
+    for (let dz = -radius; dz <= radius; dz += CELL)
+      if (
+        Math.hypot(dx, dz) <= radius &&
+        tileLand(Math.floor((x + dx) / CELL), Math.floor((z + dz) / CELL))
+      )
+        return false;
+  return true;
+}
+function updateMobs(dt) {
+  const weight = atlanticWeight(state.x, state.z);
+  if (!atlanticAnnounced && weight > 0.8) {
+    atlanticAnnounced = true;
+    toast(
+      "Atlantic Ocean — heavy swells. Keep watch for movement below.",
+      6000,
+    );
+  } else if (weight < 0.2) atlanticAnnounced = false;
+  const events = encounter.update(dt, state, {
+    openWater: openMonsterWater,
+    hull: VESSELS[state.vessel],
+  });
+  for (const event of events) {
+    if (event.type === "spawn") {
+      krakenModel = createKraken(event.kraken.seed);
+      krakenModel.position.set(event.kraken.x, -90, event.kraken.z);
+      krakenModel.rotation.y = event.kraken.heading;
+      scene.add(krakenModel);
+      toast(
+        "Kraken! Watch the raised arms and sail away from their strikes.",
+        7000,
+      );
+    } else if (event.type === "impact" && event.hit) {
+      state.health = Math.max(0, state.health - 12);
+      speed *= 0.6;
+      toast("Tentacle strike! Hull damaged — keep moving.");
+      updateHUD();
+      if (state.health <= 0) {
+        rescue();
+        return;
+      }
+    } else if (event.type === "retreat") {
+      toast("The Kraken slips back into the depths.");
+    } else if (event.type === "despawn") clearKraken();
+  }
+  const k = encounter.active;
+  if (k && krakenModel) {
+    const rise = THREE.MathUtils.smoothstep(k.age, 0, 4);
+    const sink = THREE.MathUtils.smoothstep(k.retreat, 0, 5);
+    krakenModel.position.y = -95 * (1 - rise) - 110 * sink;
+    const cos = Math.cos(k.heading),
+      sin = Math.sin(k.heading);
+    animateKraken(
+      krakenModel,
+      k.age,
+      k.attacks,
+      (x, z) =>
+        waveHeight(
+          k.x + x * cos + z * sin,
+          k.z + z * cos - x * sin,
+          clockTime,
+        ) - krakenModel.position.y,
+    );
+  }
 }
 function angleDelta(a, b) {
   return Math.atan2(Math.sin(a - b), Math.cos(a - b));
@@ -988,18 +785,23 @@ function updateMovement(dt) {
   state.heading = ((state.heading % TAU) + TAU) % TAU;
   const nx = state.x - Math.sin(state.heading) * speed * dt,
     nz = state.z - Math.cos(state.heading) * speed * dt;
-  const fx = nx - Math.sin(state.heading) * 13 * Math.sign(speed),
-    fz = nz - Math.cos(state.heading) * 13 * Math.sign(speed);
+  const hull = VESSELS[state.vessel];
+  const reach = speed >= 0 ? hull.bow : hull.stern;
+  const fx = nx - Math.sin(state.heading) * reach * Math.sign(speed),
+    fz = nz - Math.cos(state.heading) * reach * Math.sign(speed);
   // Collide with the same voxel cells used by terrain, including the hull's width.
   const solid = (x, z) => tileLand(Math.floor(x / CELL), Math.floor(z / CELL));
   if (
     Math.abs(speed) > 0.1 &&
     (solid(fx, fz) ||
       solid(
-        nx + Math.cos(state.heading) * 6,
-        nz - Math.sin(state.heading) * 6,
+        nx + Math.cos(state.heading) * hull.halfWidth,
+        nz - Math.sin(state.heading) * hull.halfWidth,
       ) ||
-      solid(nx - Math.cos(state.heading) * 6, nz + Math.sin(state.heading) * 6))
+      solid(
+        nx - Math.cos(state.heading) * hull.halfWidth,
+        nz + Math.sin(state.heading) * hull.halfWidth,
+      ))
   ) {
     if (state.elapsed - lastImpact > 2 && Math.abs(speed) > 3) {
       state.health = Math.max(0, state.health - 6);
@@ -1041,6 +843,8 @@ function updateMovement(dt) {
   updateCompass();
 }
 function rescue() {
+  clearKraken();
+  encounter.reset();
   const p = ports.reduce((a, b) =>
     Math.hypot(a.x - state.x, a.z - state.z) <
     Math.hypot(b.x - state.x, b.z - state.z)
@@ -1134,6 +938,9 @@ function saveGame(silent = false) {
   }
 }
 function begin(resume) {
+  clearKraken();
+  encounter.reset();
+  atlanticAnnounced = false;
   if (resume && loadedSave) {
     state = loadedSave;
     if (tileLand(Math.floor(state.x / CELL), Math.floor(state.z / CELL))) {
@@ -1142,6 +949,7 @@ function begin(resume) {
     }
     ignorePort = null;
   }
+  setVessel();
   started = true;
   $("intro").hidden = true;
   $("hud").hidden = false;

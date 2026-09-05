@@ -104,3 +104,18 @@ test("coast collision classifies polygon interiors and open sea", () => {
   assert.equal(pointInPolygon(5, 5, p), true);
   assert.equal(pointInPolygon(11, 5, p), false);
 });
+
+test("vessel saves retain rafts and migrate legacy voyages to the original ship", () => {
+  const raft = fresh();
+  assert.equal(raft.vessel, "raft");
+  assert.equal(parseSave(JSON.stringify(raft)).vessel, "raft");
+  const legacy = fresh();
+  delete legacy.vessel;
+  legacy.coins = 431;
+  legacy.cargo.rum = 6;
+  const restored = parseSave(JSON.stringify(legacy));
+  assert.equal(restored.vessel, "trader");
+  assert.equal(restored.coins, 431);
+  assert.equal(restored.cargo.rum, 6);
+  assert.equal(parseSave(JSON.stringify({ ...raft, vessel: "unknown" })), null);
+});

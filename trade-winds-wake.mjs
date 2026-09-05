@@ -30,7 +30,7 @@ export class WakeTrail {
     });
     this.cursor = (this.cursor + 1) % this.particles.length;
   }
-  update(dt, position) {
+  update(dt, position, hull = { bow: 13, stern: 12, halfWidth: 6 }) {
     for (const p of this.particles) {
       if (p.age >= p.life) continue;
       p.age += dt;
@@ -70,7 +70,12 @@ export class WakeTrail {
         const n = Math.sin(this.sequence * 12.9898) * 43758.5453;
         const random = n - Math.floor(n);
         // The trailing end swaps when backing down, so reverse motion has a wake too.
-        const stern = 12;
+        const forward =
+          dx * -Math.sin(position.heading ?? 0) +
+            dz * -Math.cos(position.heading ?? 0) >=
+          0;
+        const stern = forward ? hull.stern : hull.bow;
+        const bow = forward ? hull.bow : hull.stern;
         for (const side of [-1, 1]) {
           for (let layer = 0; layer < 2; layer++) {
             const seed = Math.sin((this.sequence + 1) * 73.17) * 9217.41;
@@ -99,8 +104,8 @@ export class WakeTrail {
         if (intensity > 0.25) {
           for (const side of [-1, 1]) {
             this.spawn(
-              x - ax * 13 + rx * side * 4.8,
-              z - az * 13 + rz * side * 4.8,
+              x - ax * bow + rx * side * hull.halfWidth * 0.8,
+              z - az * bow + rz * side * hull.halfWidth * 0.8,
               rx * side * 2.4 + ax,
               rz * side * 2.4 + az,
               1.3 + random,

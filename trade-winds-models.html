@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Model workshop — Trade Winds</title>
+    <link
+      rel="icon"
+      href="assets/liberalmarketslogo.svg"
+      type="image/svg+xml"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e9e3d6;
+        color: #393d30;
+        font-family: Georgia, serif;
+      }
+      main {
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+      }
+      aside {
+        padding: 32px 24px;
+        background: #f4f0e5;
+        overflow: auto;
+        z-index: 1;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      h1 {
+        font-size: 31px;
+        font-weight: normal;
+        letter-spacing: -0.04em;
+        margin: 38px 0 24px;
+      }
+      h2 {
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #878372;
+        font-weight: normal;
+        margin: 26px 0 9px;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        border: 0;
+        background: none;
+      }
+      nav button {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px 12px;
+        font-size: 15px;
+      }
+      nav button[aria-pressed="true"] {
+        background: #dfdfc8;
+        color: #3e5d45;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 2px solid #8c915a;
+        outline-offset: 3px;
+      }
+      .note {
+        font-size: 12px;
+        line-height: 1.65;
+        color: #888374;
+        margin-top: 30px;
+      }
+      #stage {
+        position: relative;
+        overflow: hidden;
+        min-width: 0;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+      .caption {
+        position: absolute;
+        left: 32px;
+        top: 28px;
+        max-width: 340px;
+        pointer-events: none;
+      }
+      .caption h3 {
+        font-weight: normal;
+        font-size: 28px;
+        margin: 0 0 8px;
+      }
+      .caption p {
+        font-size: 13px;
+        line-height: 1.6;
+        color: #686e5c;
+      }
+      .tools {
+        position: absolute;
+        bottom: 25px;
+        right: 28px;
+        display: flex;
+        gap: 12px;
+      }
+      .tools button {
+        padding: 10px 15px;
+        background: #f4f0e5db;
+        font-size: 13px;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      .ocean-stage .caption h3 {
+        color: #f0e9cf;
+      }
+      .ocean-stage .caption p {
+        color: #b7d1cb;
+      }
+      #mob-controls {
+        border-top: 1px solid #d9d7c8;
+        margin-top: 24px;
+        padding-top: 8px;
+      }
+      #mob-controls button {
+        display: block;
+        padding: 10px 12px;
+        margin: 6px 0;
+        background: #e3e4d6;
+        width: 100%;
+        text-align: left;
+        font-size: 13px;
+      }
+      #mob-controls button[aria-pressed="true"] {
+        background: #244e4b;
+        color: #f4f0e5;
+      }
+      #mob-controls label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin: 16px 0;
+        font-size: 12px;
+      }
+      #mob-controls input {
+        accent-color: #244e4b;
+      }
+      @media (max-width: 700px) {
+        main {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto 1fr;
+        }
+        #mob-controls {
+          margin-top: 8px;
+          padding-top: 4px;
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+        }
+        #mob-controls h2 {
+          display: none;
+        }
+        #mob-controls button {
+          width: auto;
+          font-size: 11px;
+          margin: 0;
+          padding: 7px;
+        }
+        #mob-controls label {
+          margin: 4px 0;
+          font-size: 11px;
+        }
+        aside {
+          padding: 12px 18px;
+          max-height: 210px;
+        }
+        h1 {
+          font-size: 22px;
+          margin: 10px 0;
+        }
+        nav {
+          display: flex;
+          gap: 8px;
+          overflow: auto;
+        }
+        nav section {
+          display: flex;
+          gap: 4px;
+        }
+        nav h2,
+        .note {
+          display: none;
+        }
+        nav button {
+          width: auto;
+          white-space: nowrap;
+          font-size: 12px;
+          padding: 9px;
+        }
+        .caption {
+          top: 16px;
+          left: 18px;
+          max-width: 250px;
+        }
+        .caption h3 {
+          font-size: 23px;
+        }
+        .caption p {
+          font-size: 11px;
+        }
+        .tools {
+          bottom: 15px;
+          right: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <a href="trade-winds.html">← Trade Winds</a>
+        <h1>Model workshop</h1>
+        <nav aria-label="Choose a model">
+          <section>
+            <h2>Vessels</h2>
+            <button data-model="raft" aria-pressed="true">Starting raft</button
+            ><button data-model="trader" aria-pressed="false">
+              Trading sloop
+            </button>
+          </section>
+          <section>
+            <h2>Port cities</h2>
+            <button data-model="merchant" aria-pressed="false">
+              Merchant quay</button
+            ><button data-model="fortress" aria-pressed="false">
+              Fort harbor</button
+            ><button data-model="lagoon" aria-pressed="false">
+              Lagoon settlement
+            </button>
+          </section>
+          <section>
+            <h2>Nature</h2>
+            <button data-model="palm" aria-pressed="false">Coconut palm</button
+            ><button data-model="canopy" aria-pressed="false">
+              Tropical canopy</button
+            ><button data-model="gull" aria-pressed="false">Seagull</button>
+          </section>
+          <section>
+            <h2>NPCs &amp; mobs</h2>
+            <button data-model="kraken" aria-pressed="false">
+              Atlantic Kraken
+            </button>
+          </section>
+        </nav>
+        <div id="mob-controls" hidden>
+          <h2>Creature study</h2>
+          <button id="strikes" aria-pressed="false">Preview strikes</button>
+          <button id="motion" aria-pressed="false">Pause motion</button>
+          <button id="variant">New variant</button>
+          <label
+            ><input type="checkbox" id="ship-scale" checked />Show ship for
+            scale</label
+          >
+        </div>
+        <p class="note">
+          Drag to turn the model.<br />Scroll to zoom.<br /><br />These are the
+          same models used in the game.
+        </p>
+      </aside>
+      <div id="stage">
+        <div class="caption">
+          <h3 id="name"></h3>
+          <p id="description"></p>
+        </div>
+        <div class="tools">
+          <button id="left" aria-label="Rotate left">↶</button
+          ><button id="reset">Reset view</button
+          ><button id="right" aria-label="Rotate right">↷</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="trade-winds-model-viewer.mjs"></script>
+  </body>
+</html>
