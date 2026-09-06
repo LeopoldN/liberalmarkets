@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-09-05T15:01:50.194Z",
+  "generatedAt": "2026-09-06T15:22:17.798Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Sugar is outperforming the stock market this year. Here&apos;s what&apos;s driving it, and where it can go from here",
+      "link": "https://www.cnbc.com/2026/09/06/sugar-is-outperforming-the-stock-market-this-year-whats-driving-it.html",
+      "pubDate": "Sun, 06 Sep 2026 13:19:01 GMT"
+    },
     {
       "title": "White House has vetted candidates for key CFTC vacancies, sources tell CNBC. It&apos;s unclear if they will be filled",
       "link": "https://www.cnbc.com/2026/09/04/white-house-has-vetted-candidates-for-key-cftc-vacancies-sources-tell-cnbc.html",
@@ -87,11 +92,6 @@
       "title": "U.S. appeals court rules against prediction markets, sets up likely fight at Supreme Court",
       "link": "https://www.cnbc.com/2026/08/28/appeals-court-rules-against-prediction-markets-tees-up-scotus-fight.html",
       "pubDate": "Sat, 29 Aug 2026 02:23:52 GMT"
-    },
-    {
-      "title": "September Fed decision is now a coin flip as rate hike odds increase post Warsh",
-      "link": "https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html",
-      "pubDate": "Fri, 28 Aug 2026 15:22:10 GMT"
     }
   ]
 }
