@@ -7,11 +7,12 @@ import {
   animateVessel,
   createPortModel,
   portVariant,
+  PORT_VARIANTS,
   createGull,
   appendTree,
   instanceBlocks,
   disposeModel,
-} from "./trade-winds-models.mjs?v=frigate-1";
+} from "./trade-winds-models.mjs?v=island-post-1";
 import {
   atlanticWeight,
   buoyancyHeight,
@@ -23,13 +24,18 @@ import { SharkEncounters, createShark, animateShark, SHARK_SHADOW_GLSL } from ".
 import { FrigateEncounters, loadFrigateAsset, createFrigate, animateFrigate, disposeFrigate } from "./trade-winds-frigates.mjs?v=wind-2";
 import { FrigateWake } from "./trade-winds-frigate-wake.mjs";
 import { NauticalChartScene } from "./trade-winds-chart.mjs";
+import { findHarborPosition, harborGroundContains } from "./trade-winds-port-placement.mjs";
 import { TradingPostScene } from "./trade-winds-market-scene.mjs?v=clean-harbor-1";
 import { loadTradingPostAsset } from "./trade-winds-market-models.mjs";
 import { WakeTrail } from "./trade-winds-wake.mjs";
+import { TradeWindsAudio } from "./trade-winds-audio.mjs";
+import { ShipyardUI } from "./trade-winds-shipyard-ui.mjs?v=cargo-80";
+import { selectShip } from "./trade-winds-shipyard.mjs?v=cargo-80";
 import {
   GOODS,
   PORTS,
   SAVE_KEY,
+  SHIPYARD_PORT_ID,
   VESSELS,
   toWorld,
   toGeo,
@@ -39,7 +45,7 @@ import {
   transact,
   parseSave,
   pointInPolygon,
-} from "./trade-winds-engine.mjs?v=whirlpool-1";
+} from "./trade-winds-engine.mjs?v=cargo-80";
 
 import { WHIRLPOOL, whirlpoolDistance, whirlpoolCurrent, WhirlpoolHazard } from "./trade-winds-whirlpool-field.mjs?v=pull-2";
 import { createWhirlpool, animateWhirlpool } from "./trade-winds-whirlpool.mjs?v=pull-2";
@@ -86,6 +92,7 @@ const dummy = new THREE.Object3D(),
 const cameraAim = new THREE.Vector3(),
   desiredAim = new THREE.Vector3();
 const wake = new WakeTrail();
+const audio = new TradeWindsAudio();
 const storms = new StormEncounters();
 const stormModels = new Map();
 const stormFields = {value:[new THREE.Vector4(),new THREE.Vector4()]};
@@ -105,6 +112,7 @@ let krakenModel = null,
   atlanticAnnounced = false;
 let waterGridSize = 0;
 let tradingPost;
+let shipyard;
 let nauticalChart;
 const hash = (x, z) => {
   const v = Math.sin(x * 127.1 + z * 311.7) * 43758.5453;
@@ -148,10 +156,14 @@ function terrainHeight(ix, iz) {
   for (const p of ports)
     if (
       Math.hypot((ix + 0.5) * CELL - p.land.x, (iz + 0.5) * CELL - p.land.z) <
-      85
+      (PORT_VARIANTS[portVariant(p.id)].terrainRadius ?? 85)
     )
       h = 8;
-  return { h, depth };
+  const underPort = ports.some(p => harborGroundContains(p,
+    (ix + .5) * CELL, (iz + .5) * CELL, PORT_VARIANTS[portVariant(p.id)].ground, CELL / 2));
+  // Quays and low wooden walks supply their own top surface. Keep terrain and
+  // the raised grass layer beneath them, including cells crossing their edges.
+  return underPort ? { h: 6, depth: 0 } : { h, depth };
 }
 function buildChunk(cx, cz) {
   const group = new THREE.Group(),
@@ -205,7 +217,9 @@ function buildChunk(cx, cz) {
           Math.hypot(
             (ix + 0.5) * CELL - p.land.x,
             (iz + 0.5) * CELL - p.land.z,
-          ) < 65,
+          ) < (PORT_VARIANTS[portVariant(p.id)].treeClearance ?? 65) ||
+          harborGroundContains(p, (ix + .5) * CELL, (iz + .5) * CELL,
+            PORT_VARIANTS[portVariant(p.id)].ground, 12),
       );
       if (r > 0.945 && !nearTown) {
         appendTree(data, x, h, z, "palm", r * 100, depth === 0 ? 0.82 : 1);
@@ -269,46 +283,9 @@ function updateShore(cx, cz, range) {
   water.material.uniforms.shoreSize.value = size * CELL;
 }
 function findHarbor(port) {
-  const ref = toWorld(port.lon, port.lat),
-    ix = Math.floor(ref.x / CELL),
-    iz = Math.floor(ref.z / CELL);
-  let best = null,
-    bestD = Infinity;
-  for (let a = -15; a <= 15; a++)
-    for (let b = -15; b <= 15; b++)
-      if (tileLand(ix + a, iz + b)) {
-        for (const [dx, dz] of [
-          [0, 1],
-          [1, 0],
-          [-1, 0],
-          [0, -1],
-        ])
-          if (
-            !tileLand(ix + a + dx, iz + b + dz) &&
-            !tileLand(ix + a + dx * 5, iz + b + dz * 5)
-          ) {
-            const x = (ix + a + 0.5) * CELL,
-              z = (iz + b + 0.5) * CELL,
-              d = Math.hypot(x - ref.x, z - ref.z);
-            if (d < bestD) {
-              bestD = d;
-              best = {
-                land: { x, z },
-                normal: { x: dx, z: dz },
-                x: x + dx * 55,
-                z: z + dz * 55,
-              };
-            }
-          }
-      }
-  return (
-    best || {
-      land: { x: ref.x, z: ref.z - 30 },
-      normal: { x: 0, z: 1 },
-      x: ref.x,
-      z: ref.z + 25,
-    }
-  );
+  return findHarborPosition(toWorld(port.lon, port.lat), tileLand, {
+    compact: portVariant(port.id) === "island",
+  });
 }
 function makePort(p) {
   p.group = createPortModel(portVariant(p.id));
@@ -573,9 +550,16 @@ function paused() {
     $("chart").open
   );
 }
+function updateAudio(dt = 0) {
+  audio.update(dt, {
+    started, hidden: document.hidden, paused: paused(),
+    atPort: $("market").open, ship: state, speed, storms: storms.active,
+  });
+}
 function frame(ms) {
   const dt = Math.min((ms - lastTime) / 1000 || 0, 0.25);
   lastTime = ms;
+  updateAudio(dt);
   if (paused()) $("salvage").hidden = true;
   if ($("market").open || $("chart").open) {
     requestAnimationFrame(frame);
@@ -1084,6 +1068,8 @@ function saveGame(silent = false) {
   }
 }
 function begin(resume) {
+  audio.unlock();
+  audio.stop();
   whirlpoolHazard.reset();
   clearStorms();
   clearDebris();
@@ -1126,6 +1112,16 @@ function enterPort(p) {
   $("port-name").textContent = p.name;
   $("port-region").textContent = p.region;
   $("merchant-name").textContent = p.merchant;
+  const isShipyard = p.id === SHIPYARD_PORT_ID;
+  $("market").classList.toggle("is-shipyard", isShipyard);
+  $("market").querySelector(".trade").hidden = isShipyard;
+  $("shipyard").hidden = !isShipyard;
+  $("market").querySelector(".post-label").textContent = isShipyard ? "Shipyard" : "Trading post";
+  $("market").querySelector(".merchant-role").textContent = isShipyard ? "Master Shipwright" : "Local Merchant";
+  $("market").querySelector(".merchant-quote").textContent = isShipyard
+    ? "“A fine ship opens a wider world, captain. Let’s find your next command.”"
+    : "“Fair winds, captain. Let’s make a little gold.”";
+  $("market").querySelector(".local-advice").hidden = isShipyard;
   const names = (ids) =>
     ids
       .map((id) => GOODS.find((g) => g.id === id).name.toLowerCase())
@@ -1135,6 +1131,7 @@ function enterPort(p) {
   renderMarket();
   $("trade-message").textContent = "";
   $("market").showModal();
+  updateAudio();
   tradingPost ||= new TradingPostScene($("trading-post-scene"));
   tradingPost.start(p);
   saveGame(true);
@@ -1144,6 +1141,7 @@ function leavePort() {
   tradingPost?.stop();
   $("market").close();
   activePort = null;
+  updateAudio();
   toast("W / arrows to sail · Click the sea to steer · M for your chart", 5000);
   saveGame(true);
 }
@@ -1171,12 +1169,31 @@ function goodIcon(g) {
     art = `<path fill="${g.color}" d="M7 2h10v4H7zM5 6h14v3H5zM3 9h18v12H3zM5 21h14v3H5z"/><path fill="#cfab73" d="M6 5h12v3H6zM5 10h3v9H5z"/><path fill="#513d29" d="M11 12h5v6h-5z"/>`;
   return `<svg class="good-icon" viewBox="0 0 24 26" aria-hidden="true" shape-rendering="crispEdges">${art}</svg>`;
 }
-function renderMarket() {
+function renderMarket(message = "") {
+  $("market-coins").textContent = `${state.coins.toLocaleString()} gold aboard`;
+  const cost = Math.ceil((100 - state.health) * 1.5);
+  $("repair").textContent = cost ? `Repair hull · ${cost} gold` : "Hull in fine condition";
+  $("repair").disabled = cost === 0 || cost > state.coins;
+  $("repair").dataset.healthy = String(cost === 0);
+  if (activePort.id === SHIPYARD_PORT_ID) {
+    shipyard ||= new ShipyardUI($("shipyard"), id => {
+      const result = selectShip(state, activePort, id);
+      if (result.ok) {
+        setVessel();
+        if (result.purchased) audio.playCoin();
+        tradingPost?.acknowledge();
+        updateHUD();
+        saveGame(true);
+      }
+      renderMarket(result.message);
+    }, leavePort);
+    shipyard.render(state, message);
+    return;
+  }
   const p = activePort;
   $("buy-tab").setAttribute("aria-selected", String(mode === "buy"));
   $("sell-tab").setAttribute("aria-selected", String(mode === "sell"));
   $("hold").textContent = `${cargoCount(state)} / ${state.capacity}`;
-  $("market-coins").textContent = `${state.coins.toLocaleString()} gold aboard`;
   $("goods-list").innerHTML = GOODS.map(
     (g) =>
       `<div class="goods-row"><span class="goods-name" title="${g.description}">${goodIcon(g)}${g.name}</span><span class="goods-price"><i class="price-coin" aria-hidden="true"></i>${prices(p, g)[mode]}</span><span class="goods-owned">${state.cargo[g.id]}</span><div class="quantity"><button data-good="${g.id}" data-delta="-1" aria-label="Remove one ${g.name}" ${!basket[g.id] ? "disabled" : ""}>−</button><output aria-label="${g.name} quantity">${basket[g.id] || 0}</output><button data-good="${g.id}" data-delta="1" aria-label="Add one ${g.name}" ${canAdd(g) ? "" : "disabled"}>+</button></div></div>`,
@@ -1192,12 +1209,6 @@ function renderMarket() {
   $("confirm-trade").disabled = !count;
   $("confirm-trade").textContent =
     mode === "buy" ? "Confirm purchase" : "Confirm sale";
-  const cost = Math.ceil((100 - state.health) * 1.5);
-  $("repair").textContent = cost
-    ? `Repair hull · ${cost} gold`
-    : "Hull in fine condition";
-  $("repair").disabled = cost === 0 || cost > state.coins;
-  $("repair").dataset.healthy = String(cost === 0);
 }
 function canAdd(g) {
   if (mode === "sell") return (basket[g.id] || 0) < state.cargo[g.id];
@@ -1225,6 +1236,7 @@ $("goods-list").addEventListener("click", (e) => {
   if (replacement && !replacement.disabled) replacement.focus();
 });
 $("confirm-trade").onclick = () => {
+  if (activePort?.id === SHIPYARD_PORT_ID) return;
   const draft = structuredClone(state);
   let count = 0;
   for (const g of GOODS)
@@ -1237,6 +1249,7 @@ $("confirm-trade").onclick = () => {
       count += basket[g.id];
     }
   state = draft;
+  if (count > 0) audio.playCoin();
   tradingPost?.acknowledge();
   basket = {};
   updateHUD();
@@ -1263,7 +1276,7 @@ $("repair").onclick = () => {
   state.coins -= cost;
   state.health = 100;
   updateHUD();
-  renderMarket();
+  renderMarket("New planks, fresh caulking. Your hull is fully repaired.");
   $("trade-message").textContent =
     "New planks, fresh caulking. Your hull is fully repaired.";
   saveGame(true);
@@ -1276,23 +1289,14 @@ $("market").addEventListener("cancel", (e) => {
 });
 function openSettings() {
   keys.clear();
-  $("test-vessel").value = state.vessel;
   $("voyage-stats").textContent =
-    `Day ${1 + Math.floor(state.elapsed / 180)} at sea · ${state.visited.length} of ${ports.length} ports visited · ${cargoCount(state)} / 40 cargo`;
+    `Day ${1 + Math.floor(state.elapsed / 180)} at sea · ${state.visited.length} of ${ports.length} ports visited · ${cargoCount(state)} / ${state.capacity} cargo`;
   $("save-status").textContent = "";
   $("settings").showModal();
 }
 $("settings-button").onclick = openSettings;
 $("close-settings").onclick = () => $("settings").close();
 $("resume").onclick = () => $("settings").close();
-$("test-vessel").onchange = (e) => {
-  const vessel = e.target.value;
-  if (!Object.hasOwn(VESSELS, vessel) || vessel === state.vessel) return;
-  state.vessel = vessel;
-  setVessel();
-  $("save-status").textContent =
-    `${vessel === "trader" ? "Trading sloop" : "Starting raft"} ready. Resume your voyage to test it.`;
-};
 $("save").onclick = () => {
   $("save-status").textContent = saveGame(true)
     ? "Your voyage has been saved."
@@ -1445,6 +1449,7 @@ function pointerUp(e) {
 }
 window.addEventListener("keydown", (e) => {
   if (!started || e.ctrlKey || e.metaKey || e.altKey) return;
+  audio.unlock();
   const key = e.key.toLowerCase();
   if (
     ["arrowup", "arrowdown", "arrowleft", "arrowright", " "].includes(key) &&
@@ -1480,11 +1485,13 @@ window.addEventListener("keydown", (e) => {
 });
 window.addEventListener("keyup", (e) => keys.delete(e.key.toLowerCase()));
 window.addEventListener("blur", () => keys.clear());
+document.addEventListener("pointerdown", () => { if (started) audio.unlock(); }, { passive: true });
 document.addEventListener("visibilitychange", () => {
   keys.clear();
+  updateAudio();
   if (document.hidden) saveGame(true);
 });
-window.addEventListener("pagehide", () => saveGame(true));
+window.addEventListener("pagehide", () => { audio.stop(); saveGame(true); });
 async function boot() {
   try {
     const [res] = await Promise.all([

@@ -1,0 +1,173 @@
+/* Belize's wood-framed ship catalogue, laid over the shared animated harbor. */
+#market [hidden] { display: none !important; }
+#market #shipyard {
+  position: absolute;
+  top: 5.2%;
+  bottom: 12.7%;
+  left: 37.5%;
+  right: 2%;
+  padding: 30px 20px 24px;
+  overflow-y: auto;
+  color: #241c12;
+  border: 16px solid #52371f;
+  border-image: url('assets/trade-winds/shipyard-frame.svg') 16 stretch;
+  background: linear-gradient(#fff9e8b8, #fff5ddb8), url('assets/trade-winds/parchment.svg') center/600px;
+  box-shadow: inset 0 0 5px 2px #80623999, inset 0 0 35px #94764530, 0 0 0 2px #9c7846, 0 8px 22px #170e0a88;
+  scrollbar-color: #8a673c #e7d7b6;
+}
+#market #shipyard::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  pointer-events: none;
+  background: radial-gradient(circle at 3px 3px, #e1bc75 0 2px, #8c6333 3px, transparent 4px),
+    radial-gradient(circle at calc(100% - 3px) 3px, #e1bc75 0 2px, #8c6333 3px, transparent 4px),
+    radial-gradient(circle at 3px calc(100% - 3px), #e1bc75 0 2px, #8c6333 3px, transparent 4px),
+    radial-gradient(circle at calc(100% - 3px) calc(100% - 3px), #e1bc75 0 2px, #8c6333 3px, transparent 4px);
+}
+#market .shipyard-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 70px;
+  padding: 0 55px 0 10px;
+  margin-bottom: 20px;
+}
+#market .shipyard-heading h3 {
+  font-size: clamp(28px, 3.1vw, 49px);
+  letter-spacing: -.025em;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: bold;
+}
+#market .fleet-count {
+  margin-left: auto;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(22px, 1.9vw, 30px);
+}
+#market .fleet-count small { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; margin-top: 5px; }
+#market .shipyard-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #9f8760;
+  border-radius: 3px;
+  background: #efe0bc;
+  box-shadow: inset 0 0 0 2px #fff3d8, 0 1px 2px #8d734850;
+  color: #44321f;
+  font-size: 30px;
+  line-height: 1;
+  padding: 0;
+}
+#market .shipyard-fleet { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+#market .ship-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid #bda57a;
+  border-radius: 3px;
+  background: linear-gradient(120deg, #fff9e626, #eeddb633);
+  box-shadow: inset 0 0 3px #ae906144, 0 0 2px #ae906133;
+}
+#market .ship-status {
+  position: absolute;
+  right: 14px;
+  top: 15px;
+  z-index: 1;
+  padding: 8px 13px;
+  border-radius: 3px;
+  font-size: clamp(10px, .9vw, 14px);
+  text-transform: uppercase;
+  letter-spacing: .035em;
+  color: #48311a;
+  background: #dfbf7d88;
+}
+#market .is-current .ship-status { color: #294638; background: #bdccb1c9; }
+#market .ship-portrait {
+  height: clamp(180px, 28vh, 310px);
+  margin: 12px 8px 0;
+  padding: 15px 4px 0;
+}
+#market .ship-portrait img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(12px 12px 4px #6750262b); }
+#market .ship-card-copy { padding: 0 20px 20px; }
+#market .ship-card h4 { font-size: clamp(26px, 2.5vw, 40px); line-height: 1.1; margin: 0; font-weight: bold; letter-spacing: -.02em; }
+#market .ship-description { font-size: clamp(13px, 1vw, 16px); line-height: 1.5; margin: 9px 0 17px; color: #433725; }
+#market .ship-specs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 25px; font-size: clamp(12px, 1.05vw, 17px); color: #40372a; }
+#market .ship-specs > span { display: inline-flex; align-items: center; gap: 12px; }
+#market .ship-specs svg { width: 29px; height: 27px; flex-shrink: 0; color: #787463; }
+#market .ship-specs > span:first-child svg { color: #187181; }
+#market .ship-card-purchase { margin: auto 20px 0; border-top: 1px solid #bda47b; padding: 13px 0 28px; }
+#market .ship-price { font-size: clamp(23px, 2vw, 32px); line-height: 1.2; }
+#market .ship-price small { font-size: 1em; }
+#market .ship-gold { width: 34px; height: 34px; vertical-align: -5px; margin-right: 4px; }
+#market .ship-price > span { display: block; font-size: clamp(15px, 1.3vw, 21px); margin: 4px 0 17px; color: #534632; }
+#market .ship-action {
+  width: 100%;
+  min-height: 64px;
+  padding: 10px 7px;
+  border: 2px solid #765015;
+  border-radius: 3px;
+  background: linear-gradient(100deg, #8c6327, #80591f);
+  color: #fff0d0;
+  font: clamp(17px, 1.65vw, 26px) Georgia, serif;
+  box-shadow: inset 0 0 0 1px #e9c278, inset 0 0 10px #bd8e3633;
+}
+#market .ship-action:hover:not(:disabled) { background: linear-gradient(100deg, #a47630, #946a2b); }
+#market .ship-action:disabled { opacity: 1; cursor: default; }
+#market .ship-action[data-kind='current'] { color: #6c6558; background: linear-gradient(120deg, #c4b79c, #bbaf97); border-color: #a0957b; box-shadow: inset 0 0 0 1px #f2e6cc; }
+#market .ship-help { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#market #shipyard-message { font-size: 15px; color: #294d3c; margin: 14px 10px 0; line-height: 1.4; }
+#market #shipyard-message:empty { display: none; }
+#market #shipyard button:focus-visible { outline-color: #294d3c; }
+#market.is-shipyard .merchant-role { text-transform: uppercase; font-size: clamp(12px, 1.05vw, 17px); letter-spacing: .08em; }
+#market.is-shipyard .merchant-quote { position: relative; padding-top: 17px; }
+#market.is-shipyard .merchant-quote::before { content: '— · —'; position: absolute; top: -10px; left: 0; right: 0; text-align: center; color: #af8348; font-size: 18px; font-style: normal; letter-spacing: .06em; }
+#market.is-shipyard .market-bottom { background: #30261c url('assets/trade-winds/wood.svg') center/700px 350px; border-top: 3px solid #a07c45; }
+#market.is-shipyard #set-sail { padding-left: 26px; border-left: 1px solid #9c7a464f; }
+@media (min-width: 701px) and (max-height: 850px) {
+  #market #shipyard { padding-top: 18px; padding-bottom: 18px; }
+  #market .shipyard-heading { min-height: 50px; margin-bottom: 13px; }
+  #market .ship-portrait { height: 25vh; margin-top: 9px; }
+  #market .ship-card-copy { padding-bottom: 14px; }
+  #market .ship-description { margin-bottom: 10px; }
+  #market .ship-card-purchase { padding-bottom: 18px; }
+  #market .ship-action { min-height: 51px; }
+}
+@media (max-width: 1100px) and (min-width: 701px) {
+  #market #shipyard { left: 35%; right: 2%; padding-left: 14px; padding-right: 14px; border-width: 12px; }
+  #market .shipyard-heading { padding-left: 0; padding-right: 30px; }
+  #market .shipyard-fleet { gap: 10px; }
+  #market .ship-card-copy { padding-left: 12px; padding-right: 12px; }
+  #market .ship-card-purchase { margin-left: 12px; margin-right: 12px; }
+  #market .ship-specs { gap: 7px 13px; }
+  #market .ship-specs > span { gap: 7px; }
+  #market .fleet-count small { font-size: 10px; }
+  #market .shipyard-close { width: 30px; height: 30px; right: 8px; top: 8px; }
+}
+@media (max-width: 700px) {
+  #market.is-shipyard .market-body { min-height: 0; }
+  #market.is-shipyard .merchant { top: 158px; width: 55%; }
+  #market #shipyard { position: relative; inset: auto; margin: 350px 10px 100px; padding: 22px 12px; border-width: 10px; overflow: visible; }
+  #market .shipyard-heading { gap: 10px; min-height: 50px; margin: 0 0 20px; padding: 25px 0 0; }
+  #market .shipyard-heading h3 { font-size: 27px; }
+  #market .fleet-count { font-size: 21px; }
+  #market .fleet-count small { font-size: 9px; }
+  #market .shipyard-close { top: 8px; right: 8px; width: 30px; height: 30px; }
+  #market .shipyard-fleet { grid-template-columns: 1fr; gap: 18px; }
+  #market .ship-portrait { height: 260px; padding-top: 20px; }
+  #market .ship-card h4 { font-size: 32px; }
+  #market .ship-card-copy { padding: 0 16px 18px; }
+  #market .ship-description { font-size: 15px; }
+  #market .ship-specs { font-size: 13px; gap: 10px 15px; }
+  #market .ship-specs > span { gap: 8px; }
+  #market .ship-status { font-size: 11px; }
+  #market .ship-card-purchase { margin-left: 16px; margin-right: 16px; padding-bottom: 20px; }
+  #market .ship-price { font-size: 28px; }
+  #market .ship-price > span { font-size: 18px; }
+  #market .ship-action { min-height: 55px; font-size: 21px; }
+  #market.is-shipyard .market-bottom { z-index: 4; }
+}

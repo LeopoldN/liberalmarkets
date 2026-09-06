@@ -19,6 +19,7 @@
     />
     <link rel="stylesheet" href="trade-winds.css" />
     <link rel="stylesheet" href="trade-winds-market.css?v=harbor-arrival-1" />
+    <link rel="stylesheet" href="trade-winds-shipyard.css?v=2" />
     <link rel="stylesheet" href="trade-winds-chart.css" />
   </head>
   <body>
@@ -157,6 +158,7 @@
           </div>
           <p id="trade-message" role="status"></p>
         </section>
+        <section id="shipyard" aria-labelledby="shipyard-title" hidden></section>
       </div>
       <footer class="market-bottom">
         <div class="aboard-gold">
@@ -186,13 +188,6 @@
         ><button id="save">Save voyage <span>↓</span></button
         ><button id="quit">Save & quit <span>↗</span></button>
       </div>
-      <label class="quality"
-        >Swap boat · testing
-        <select id="test-vessel">
-          <option value="raft">Starting raft</option>
-          <option value="trader">Trading sloop</option>
-        </select></label
-      >
       <label class="quality"
         >Water & shadows
         <select id="quality">
@@ -244,6 +239,6 @@
         </div>
       </div>
     </dialog>
-    <script type="module" src="trade-winds.js?v=storms-size-4"></script>
+    <script type="module" src="trade-winds.js?v=harbor-placement-1&amp;shipyard=cargo-80"></script>
   </body>
 </html>

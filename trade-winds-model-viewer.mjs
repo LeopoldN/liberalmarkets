@@ -15,7 +15,7 @@ import {
   createGull,
   PORT_VARIANTS,
   disposeModel,
-} from "./trade-winds-models.mjs?v=frigate-1";
+} from "./trade-winds-models.mjs?v=island-post-1";
 import { loadFrigateAsset, createFrigate, animateFrigate, disposeFrigate } from "./trade-winds-frigates.mjs?v=wind-2";
 import { FrigateWake } from "./trade-winds-frigate-wake.mjs";
 import { createWhirlpool, animateWhirlpool, disposeWhirlpool } from "./trade-winds-whirlpool.mjs?v=pull-2";
@@ -346,6 +346,7 @@ select(
     "merchant",
     "fortress",
     "lagoon",
+    "island",
     "palm",
     "canopy",
     "gull",

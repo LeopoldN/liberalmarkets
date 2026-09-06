@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   GOODS,
   PORTS,
+  SHIPYARD_PORT_ID,
   prices,
   newState,
   transact,
@@ -35,9 +36,10 @@ test("regional supply rewards a genuine port-to-port trade, never same-port flip
   assert.equal(cargoCount(s), 0);
 });
 test("every good has both a low-cost source and a profitable destination", () => {
+  const markets = PORTS.filter(port => port.id !== SHIPYARD_PORT_ID);
   for (const g of GOODS) {
-    const buy = Math.min(...PORTS.map((p) => prices(p, g).buy));
-    const sell = Math.max(...PORTS.map((p) => prices(p, g).sell));
+    const buy = Math.min(...markets.map((p) => prices(p, g).buy));
+    const sell = Math.max(...markets.map((p) => prices(p, g).sell));
     assert.ok(sell > buy, g.id);
   }
 });

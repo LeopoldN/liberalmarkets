@@ -530,26 +530,37 @@ export function createTree(kind = "palm", seed = 1) {
 export const PORT_VARIANTS = {
   merchant: {
     name: "Merchant quay",
+    ground: { halfWidth: 55, back: -65, front: 13 },
     description:
       "Pastel townhouses, shaded balconies, market awnings, and a busy stone waterfront.",
   },
   fortress: {
     name: "Fort harbor",
+    ground: { halfWidth: 60, back: -65, front: 13 },
     description:
       "Coral-stone ramparts, a bell tower, arcaded customs house, and terracotta roofs.",
   },
   lagoon: {
     name: "Lagoon settlement",
+    ground: { halfWidth: 54, back: -54, front: 9 },
     description:
       "Timber houses on stilts, woven palm roofs, fishing skiffs, and branching wooden walks.",
+  },
+  island: {
+    name: "Island trading post",
+    ground: { halfWidth: 11, back: -15, front: 7 },
+    description:
+      "A single sea-green provision shop on a tiny stepped sand bank, with a striped canvas awning, cargo, a coconut palm, and a short timber landing. Used at Key West, Nassau, Bridgetown, and St. George’s.",
+    terrainRadius: 26,
+    treeClearance: 24,
   },
 };
 const PORT_STYLES = {
   royal: "merchant",
   havana: "fortress",
   santiago: "fortress",
-  nassau: "lagoon",
-  keywest: "lagoon",
+  nassau: "island",
+  keywest: "island",
   staugustine: "fortress",
   veracruz: "fortress",
   campeche: "merchant",
@@ -559,8 +570,8 @@ const PORT_STYLES = {
   laguaira: "merchant",
   santodomingo: "merchant",
   sanjuan: "fortress",
-  bridgetown: "merchant",
-  stgeorges: "lagoon",
+  bridgetown: "island",
+  stgeorges: "island",
 };
 export function portVariant(id) {
   return PORT_STYLES[id] || "merchant";
@@ -862,11 +873,95 @@ function lagoonPort(g) {
   person(g, -25, 2, 0x956c49, 7.5);
   person(g, 30, -2, 0x688888, 8);
 }
+function islandPort(g) {
+  // Two terrain cells wide. The broken shoreline avoids a town-sized slab;
+  // the shop stays behind the shore anchor and the landing faces +Z.
+  for (const [x, z, w, d] of [[-5, -5, 10, 20], [5, -7, 10, 16], [8, 2, 6, 6]]) {
+    block(g, x, 2, z, w, 4, d, 0xb8a67a);
+    block(g, x, 6, z, w, 4, d, 0xd6c493);
+    block(g, x, 8.25, z, w, .5, d, 0xe4d4a4);
+  }
+  for (const [x, z] of [[-11, -9], [-11, -3], [10, -12], [11, -6], [8, 6]]) {
+    block(g, x, 1, z, 4, 2, 4, 0xbcba8b);
+    block(g, x, 3, z, 3, 2, 3, 0xd8c797);
+  }
+  // Boarded shop with an open serving hatch, shutters and a weathered roof.
+  block(g, -1.5, 9, -5, 13, 1, 11, 0x8b714d);
+  block(g, -1.5, 14, -5, 12, 9, 10, 0x70958a);
+  for (let row = 0; row < 7; row++) {
+    block(g, -1.5, 10 + row * 1.25, .06, 12, .13, .18, 0x52796e);
+    for (const x of [-7.56, 4.56])
+      block(g, x, 10 + row * 1.25, -5, .18, .13, 10, 0x52796e);
+  }
+  for (const x of [-7.5, 4.5])
+    for (const z of [-10, 0]) block(g, x, 14, z, .7, 9.5, .7, 0xd9cba4);
+  block(g, -3.2, 14.6, .22, 5.4, 4.2, .35, 0x304b43);
+  for (const x of [-6.2, -.2]) block(g, x, 14.6, .5, .5, 4.8, .6, 0xe5d8b4);
+  block(g, -3.2, 17, .5, 6.5, .5, .6, 0xe5d8b4);
+  block(g, -3.2, 12.5, 1.1, 7, .55, 2.3, 0xb6945f);
+  for (const x of [-6.7, .3]) {
+    block(g, x, 14.8, .6, 1, 3.9, .5, 0x416c65);
+    for (let i = 0; i < 5; i++) block(g, x, 13.3 + i * .7, .91, 1, .18, .15, 0x8ca58b);
+  }
+  block(g, 2.3, 12.8, .3, 2.3, 6.5, .5, 0x644f35);
+  block(g, 3, 12.5, .65, .3, .3, .3, 0xd3b16b);
+  for (let tier = 0; tier < 6; tier++) {
+    const w = 14.5 - tier * 2.1;
+    block(g, -1.5, 18.8 + tier * .7, -5, w, .85, 12.3,
+      tier % 2 ? 0xaf7949 : 0xc29158);
+    for (let z = -10.5; z <= .5; z += 1.6)
+      for (const side of [-1, 1])
+        block(g, -1.5 + side * (w / 2 - .3), 19.25 + tier * .7, z, .55, .15, 1.35, 0xd5ab70);
+  }
+  block(g, -1.5, 23, -5, 2.2, .5, 12.7, 0xd8ae72);
+  // Short veranda with individual planks, striped shade and a hanging sign.
+  for (let x = -8; x <= 6; x += 1)
+    block(g, x, 9, 3.5, .91, .5, 6, Math.round(x) % 2 ? 0xb19061 : 0xc3a273);
+  for (const x of [-7.8, 5.8]) block(g, x, 12.9, 6, .45, 8, .45, 0x7d6442);
+  for (let i = 0; i < 10; i++) {
+    const x = -7.65 + i * 1.45;
+    for (let step = 0; step < 3; step++)
+      block(g, x, 17.1 - step * .38, 1.3 + step * 1.9, 1.43, .25, 2,
+        i % 2 ? 0xe7dcbc : 0x4f8780);
+    block(g, x, 15.95, 6.1, 1.43, .65, .23, i % 2 ? 0xe7dcbc : 0x4f8780);
+  }
+  block(g, 6.5, 16, 2, 3, .3, .3, 0x705638);
+  for (const x of [6.3, 7.4]) block(g, x, 15.2, 2, .12, 1.4, .12, 0x605743);
+  block(g, 6.85, 14.1, 2, 2.8, 1.8, .4, 0x89613a);
+  block(g, 6.85, 14.1, 2.23, 1.1, 1, .15, 0xe0c48a);
+  // A narrow landing, low mooring bollards and rope cleats.
+  pier(g, 0, 7, 20, 6);
+  for (let i = 0; i < 3; i++) block(g, 0, 8.5 - i * .7, 6.3 + i, 6.2, .7, 1.2, 0xc0a071);
+  for (const z of [11, 23]) {
+    block(g, 3.5, 8.5, z, 1.1, .4, 1.9, 0x8b9785);
+    for (const dy of [0, .25]) block(g, 3.5, 7.8 + dy, z, 1.8, .18, 1.8, 0xc6b58c);
+  }
+  const cargo = new THREE.Group();
+  barrel(cargo, 0, 0, 0);
+  barrel(cargo, 3.6, 0, -1);
+  crate(cargo, .3, 0, 4, 2.7);
+  cargo.scale.setScalar(.7);
+  cargo.position.set(6.5, 8.5, -4);
+  g.add(cargo);
+  for (let i = 0; i < 3; i++) {
+    crate(g, -5.2 + i * 1.7, 12.8, 1, 1.1);
+    block(g, -5.2 + i * 1.7, 14, 1, .85, .4, .8, [0xc89d4d, 0x738449, 0xb57548][i]);
+  }
+  const merchant = new THREE.Group();
+  person(merchant, 0, 0, 0xa7714b, 0);
+  merchant.scale.setScalar(.65);
+  merchant.position.set(-5, 9.25, 4.7);
+  g.add(merchant);
+  palmAt(g, 8, -11, .48, 5, 8.5);
+  // Small lamp on the veranda; no point light or per-frame work required.
+  block(g, -7.8, 14.3, 5.7, .9, 1.2, .9, 0xe7bc68);
+  block(g, -7.8, 15, 5.7, 1.2, .25, 1.2, 0x595b46);
+}
 export function createPortModel(variant = "merchant") {
   if (!Object.hasOwn(PORT_VARIANTS, variant))
     throw new Error(`Unknown port variant: ${variant}`);
   const g = new THREE.Group();
-  ({ merchant: merchantPort, fortress: fortressPort, lagoon: lagoonPort })[
+  ({ merchant: merchantPort, fortress: fortressPort, lagoon: lagoonPort, island: islandPort })[
     variant
   ](g);
   consolidate(g);

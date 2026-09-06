@@ -2,14 +2,16 @@ export const SCALE = 220;
 // Per-vessel maximum sailing speeds in world units per second, before wind.
 export const VESSELS = {
   // The Blender raft is wider across its lashed logs; the projecting oar is decorative.
-  raft: { speed: 26, bow: 6.75, stern: 6.75, halfWidth: 8.75 },
+  raft: { capacity: 40, speed: 26, bow: 6.75, stern: 6.75, halfWidth: 8.75 },
   trader: {
+    capacity: 80,
     speed: 40,
     bow: 20, stern: 13, halfWidth: 7,
     wake: { bow: 11.8, stern: 11.2, halfWidth: 4.8 },
   },
 };
 export const SAVE_KEY = "liberal-markets:trade-winds:v1";
+export const SHIPYARD_PORT_ID = "belize";
 export const GOODS = [
   {
     id: "rum",
@@ -284,13 +286,14 @@ export function newState(position) {
   return {
     version: 1,
     vessel: "raft",
+    ownedVessels: ["raft"],
     x: position.x,
     z: position.z,
     heading: Math.PI,
     coins: 650,
     health: 100,
     cargo: Object.fromEntries(GOODS.map((g) => [g.id, 0])),
-    capacity: 40,
+    capacity: VESSELS.raft.capacity,
     elapsed: 0,
     visited: ["royal"],
     profit: 0,
@@ -298,6 +301,8 @@ export function newState(position) {
   };
 }
 export function transact(state, port, goodId, mode, quantity) {
+  if (port?.id === SHIPYARD_PORT_ID)
+    return { ok: false, message: "Belize Town is a shipyard. Trade cargo at another port." };
   const good = GOODS.find((g) => g.id === goodId);
   if (
     !good ||
@@ -347,7 +352,6 @@ export function parseSave(raw) {
       !Number.isFinite(s.health) ||
       s.health <= 0 ||
       s.health > 100 ||
-      s.capacity !== 40 ||
       !Number.isFinite(s.elapsed) ||
       s.elapsed < 0
     )
@@ -357,8 +361,7 @@ export function parseSave(raw) {
       GOODS.some(
         (g) => !Number.isInteger(s.cargo[g.id]) || s.cargo[g.id] < 0,
       ) ||
-      Object.keys(s.cargo).length !== GOODS.length ||
-      cargoCount(s) > 40
+      Object.keys(s.cargo).length !== GOODS.length
     )
       return null;
     if (
@@ -367,8 +370,21 @@ export function parseSave(raw) {
     )
       return null;
     // Saves from before rafts were introduced keep their original trading ship.
-    if (s.vessel === undefined) s.vessel = "trader";
+    const legacyVessel = s.vessel === undefined;
+    if (legacyVessel) s.vessel = "trader";
     if (!Object.hasOwn(VESSELS, s.vessel)) return null;
+    const capacity = VESSELS[s.vessel].capacity;
+    // Older sloops had 40 cargo slots. Upgrade them without trusting arbitrary
+    // saved capacities or accepting cargo that exceeded the saved hold.
+    if ((s.capacity !== capacity && !(s.vessel === "trader" && s.capacity === 40)) ||
+      cargoCount(s) > s.capacity) return null;
+    s.capacity = capacity;
+    if (s.ownedVessels === undefined || legacyVessel)
+      s.ownedVessels = s.vessel === "raft" ? ["raft"] : ["raft", s.vessel];
+    if (!Array.isArray(s.ownedVessels) ||
+      !s.ownedVessels.includes("raft") || !s.ownedVessels.includes(s.vessel) ||
+      s.ownedVessels.some(id => !Object.hasOwn(VESSELS, id)) ||
+      new Set(s.ownedVessels).size !== s.ownedVessels.length) return null;
     s.target = PORTS.some((p) => p.id === s.target) ? s.target : null;
     return s;
   } catch {

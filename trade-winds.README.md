@@ -15,23 +15,41 @@ From the repository root, run `python3 -m http.server 8000` and visit `http://lo
 - M: nautical chart. Choose a port to mark its bearing; land still needs to be navigated around.
 - Escape or the gear: settings, save, chart, or save and quit.
 - Enter a harbor to open its market. Buy local exports, sell where they are in demand, and repair collision damage at port.
+- Belize Town is the shipyard: buy the trading sloop for 5,000 gold and switch freely between owned vessels. Cargo trading is available at the other ports.
 
-The world spans Mexico, Florida, Central America, northern South America, and the Caribbean, with sixteen ports. The map uses 220 world units per geographic degree. The raft has a maximum speed of 26 units per second; the trading sloop has a maximum speed of 40. Wind adjusts full-throttle speed to 80–100% of each maximum (20.8–26 for the raft, 32–40 for the sloop). Each vessel holds 40 units of cargo.
+The world spans Mexico, Florida, Central America, northern South America, and the Caribbean, with sixteen ports. The map uses 220 world units per geographic degree. The raft has a maximum speed of 26 units per second; the trading sloop has a maximum speed of 40. Wind adjusts full-throttle speed to 80–100% of each maximum (20.8–26 for the raft, 32–40 for the sloop). The raft holds 40 units of cargo; the trading sloop holds 80.
 
 Saves use browser local storage (`liberal-markets:trade-winds:v1`) every 30 seconds, after trading and destination changes, and when leaving the page. Explicit save-and-quit keeps the game open if storage fails. Saved positions, cargo, health, and money are validated before restoration. Set Sail resumes an existing save when one is available. New voyage replaces the current browser save.
 
 ## Code and verification
 
+- `trade-winds-audio.mjs`: independent Web Audio playback, regional music crossfades, sailing loop, harbor mix, randomized transaction sounds, and storm proximity fades.
+- `trade-winds-shipyard.mjs`: vessel catalogue, purchase and switching rules; `trade-winds-shipyard-ui.mjs` / `trade-winds-shipyard.css`: Belize's model portraits and ship catalogue interface.
 - `trade-winds-engine.mjs`: ports, goods, vessel dimensions, pricing, transactions, save validation, geographic helpers.
-- `trade-winds-models.mjs`: reusable raft, original trading ship, gull, three port styles, palms, and tropical canopy builders.
+- `trade-winds-models.mjs`: reusable raft, original trading ship, gull, four port styles, palms, and tropical canopy builders. The compact `island` post serves Key West, Nassau, Bridgetown, and St. George’s, and is available at `trade-winds-models.html#island`. Its roughly 29-unit width, 20-unit landing, and reduced terrain clearing fit the small islands; the complete model is batched into one instanced mesh.
 - `trade-winds-models.html` / `trade-winds-model-viewer.mjs`: standalone model workshop with rotation, zoom, and direct links to each model.
 - `trade-winds.js`: chunked voxel scenery, stepped water tiles and shaders, voxel foam rendering, ship controls, collision, market, chart, and saves.
+- `trade-winds-port-placement.mjs`: chooses a shoreline anchor and seaward dock direction with an uninterrupted 120-unit approach, checking hull clearance and land behind the settlement. Portobelo faces north into the Caribbean. Rotated model footprints lower terrain beneath platforms and keep grass and generated trees out of the buildings and walks.
 - `trade-winds-wake.mjs`: bounded foam simulation following the actual world-space route, including turns, reverse motion, dispersal, and fading.
 - `trade-winds.css`: minimal HUD, port merchant interface, and responsive dialogs.
 - `tests/trade-winds.test.mjs`: economic, transaction, save, geographic, and collision tests.
 - `tests/trade-winds-wake.test.mjs`: stationary/stop behavior, historical trail persistence, frame-rate independence, capacity bounds, and teleport resets.
 
 Run the unit checks with `node --test tests/*.test.*`. Browser checks should cover entering and leaving port, buying and selling, compass steering, chart destination selection, saving and restoring, save-and-quit, and touch-size layouts. High quality enables soft shadows and water highlights; low quality reduces rendering resolution and disables shadows.
+
+## Audio
+
+Set Sail unlocks audio through the browser's required user gesture. Atlantic music follows the shared ocean boundary, with a small boundary buffer to prevent repeated switching; other waters use background music. Music crossfades, and the sailing loop follows actual forward/reverse speed, fading out at rest. Opening settings or the chart pauses audio, as does hiding the tab.
+
+Entering a trading post immediately stops all sea audio and loops the three `trade_post_*` recordings plus `merchant_cough`. The mix compensates for the supplied files' recorded levels to prioritize cough, main background, voices, then quiet seagulls. Leaving port stops those layers and restores regional music. Each successful buy/sell confirmation plays one randomly chosen coin recording; rejected or empty trades stay silent.
+
+Storm audio fades in before reaching a cloud's rain footprint, increases toward its center, and follows cloud formation/dissipation. Overlapping clouds use the loudest proximity instead of stacking volume. All filenames and gains are configured in `SOUNDTRACK` in the audio module. Only the requested recordings are loaded, on demand; decoded buffers are reused, and unavailable audio never blocks gameplay. The supplied cough is a 20.2-second ambience clip and loops intact alongside the harbor tracks.
+
+## Belize Town shipyard
+
+Belize replaces the cargo ledger with a two-vessel catalogue: the starting raft (already owned, not for sale) and the trading sloop (5,000 gold). Portraits are rendered once from the shared game models and cached as still images, with no additional animation loop. Purchases equip the ship immediately and play a coin sound. Revisit Belize to switch between owned vessels for free. Cargo and current hull condition carry over; switching to the raft requires reducing cargo to 40 units or fewer at a trading port first. Repairs remain available at the dock. The former testing boat selector has been removed from settings.
+
+Ownership is stored in `ownedVessels` alongside the equipped `vessel`, using the existing save slot. Older sloop saves automatically receive the 80-unit hold. Older saves retain their equipped vessel and the starter raft; a missing vessel field still migrates to the original sloop. Invalid ownership lists are rejected. Purchases, switching and cargo-trade restrictions are verified in `tests/trade-winds-shipyard.test.mjs`.
 
 ## Model workflow
 
@@ -47,7 +65,7 @@ All model builders live in `trade-winds-models.mjs`. They return independent Thr
 - `createGull(index)`: the existing articulated bird. Flight and wing animation remain in the game.
 - `block(...)`, `roof(...)`, `house(...)`, and the other internal prop builders are shared modeling primitives. `consolidate(...)` batches static parts, including nested instances, into a single draw call. Use `disposeModel(...)` when replacing a model; shared cube geometry and materials stay alive.
 
-The raft uses its own speed setting and retains the shared trading capacity.
+The raft uses its own speed setting and a 40-unit hold; the trading sloop has an 80-unit hold.
 
 The starting raft now loads `assets/trade-winds/models/seated-raft.glb`, including the seated voyager, cargo, lantern, and weathered sail. Gameplay and the model workshop await `loadRaftAsset()` before creating vessels. Instances share cached geometry and materials. The export uses five vertex-colored mesh batches to preserve the voxel detail with few draw calls. Its uniform scale, forward direction, waterline, and hull footprint are prepared for the sailing world; the outboard oar is decorative. Existing raft saves automatically use this model.
 
