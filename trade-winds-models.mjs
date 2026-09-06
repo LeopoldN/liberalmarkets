@@ -1,6 +1,7 @@
 // Voxel model library. Builders return groups without attaching them to a scene.
 // +Y is up; vessels face -Z; port docks extend toward +Z. Dimensions are world units.
 import * as THREE from "./assets/vendor/three.module.js";
+import { GLTFLoader } from "./assets/vendor/GLTFLoader.js";
 import {
   KRAKEN_ARMS,
   KRAKEN_ATTACK_ARMS,
@@ -91,6 +92,18 @@ function consolidate(group) {
   group.add(mesh);
 }
 export function createTradingShip() {
+  if (sloopAsset) {
+    const g = sloopAsset.scene.clone(true);
+    g.name = "Trading sloop";
+    g.userData.vessel = "trader";
+    const mixer = new THREE.AnimationMixer(g);
+    sloopAsset.animations.forEach((clip) => mixer.clipAction(clip).play());
+    sloopMixers.set(g, mixer);
+    return g;
+  }
+  return createFallbackTradingShip();
+}
+function createFallbackTradingShip() {
   const g = new THREE.Group();
   block(g, 0, 2, 0, 11, 5, 25, 0x5b3e2b);
   block(g, 0, 4, 0, 14, 4, 22, 0x765038);
@@ -266,7 +279,63 @@ export function createGull(index) {
   return gull;
 }
 
+let raftAsset, raftAssetPromise;
+let sloopAsset, sloopAssetPromise;
+const sloopMixers = new WeakMap();
+export function loadTradingSloop() {
+  return (sloopAssetPromise ||= new GLTFLoader()
+    .loadAsync(new URL("./assets/trade-winds/models/trading-sloop.glb", import.meta.url).href)
+    .then((gltf) => {
+      gltf.scene.traverse((object) => {
+        if (!object.isMesh) return;
+        object.castShadow = true;
+        object.receiveShadow = true;
+      });
+      sloopAsset = gltf;
+      return gltf;
+    })
+    .catch((error) => {
+      sloopAssetPromise = null;
+      throw error;
+    }));
+}
+export function loadVesselAssets() {
+  return Promise.all([loadRaftAsset(), loadTradingSloop()]);
+}
+// Absolute clip time avoids accumulated drift and makes pause/resume deterministic.
+export function animateVessel(model, time) {
+  sloopMixers.get(model)?.setTime(Math.max(0, time));
+}
+export function loadRaftAsset() {
+  return (raftAssetPromise ||= new GLTFLoader()
+    .loadAsync(new URL("./assets/trade-winds/models/seated-raft.glb", import.meta.url).href)
+    .then(({ scene }) => {
+      scene.traverse((object) => {
+        if (!object.isMesh) return;
+        object.castShadow = true;
+        object.receiveShadow = true;
+      });
+      raftAsset = scene;
+      return scene;
+    })
+    .catch((error) => {
+      raftAssetPromise = null;
+      throw error;
+    }));
+}
+
 export function createRaft() {
+  if (raftAsset) {
+    // Static geometry/materials stay cached; every vessel owns its transforms.
+    const g = raftAsset.clone(true);
+    g.name = "Starting raft";
+    g.userData.vessel = "raft";
+    return g;
+  }
+  return createFallbackRaft();
+}
+
+function createFallbackRaft() {
   const g = new THREE.Group();
   // Individually lashed logs, with staggered ends and exposed end grain.
   for (let i = -3; i <= 3; i++) {
@@ -806,6 +875,12 @@ export function createPortModel(variant = "merchant") {
   return g;
 }
 export function disposeModel(group) {
+  const mixer = sloopMixers.get(group);
+  if (mixer) {
+    mixer.stopAllAction();
+    mixer.uncacheRoot(group);
+    sloopMixers.delete(group);
+  }
   group.traverse((object) => {
     if (object.isInstancedMesh) object.dispose();
     // Box geometry/materials are shared; only line rigging owns its geometry.
@@ -1155,4 +1230,277 @@ export function krakenPreviewAttacks(time) {
       attacks.push({ arm, age, target: { x: 16, z: 105 } });
   }
   return attacks;
+}
+
+// Waterline is local Y=0. A self-contained salvage prop for future placement;
+// static cargo, cloth and rope share a single instanced voxel batch.
+export function createMerchantDebris() {
+  const g = new THREE.Group();
+  g.name = "Floating merchant debris";
+  g.userData.kind = "merchant-debris";
+  const wood = [0x8a603c, 0xa77747, 0x956b44, 0xb38956, 0x77543a];
+  function rope(points, width = 0.22, tint = 0xb1a07a) {
+    for (let i = 1; i < points.length; i++) {
+      const a = points[i - 1],
+        b = points[i];
+      const steps = Math.max(
+        1,
+        Math.ceil(
+          Math.hypot(b[0] - a[0], b[1] - a[1], b[2] - a[2]) / (width * 0.75),
+        ),
+      );
+      for (let j = 0; j < steps; j++) {
+        const t = j / steps;
+        block(
+          g,
+          a[0] + (b[0] - a[0]) * t,
+          a[1] + (b[1] - a[1]) * t,
+          a[2] + (b[2] - a[2]) * t,
+          width,
+          width,
+          width,
+          tint,
+        );
+      }
+    }
+  }
+  function cask(x, y, z, rx, rz, scale = 1) {
+    const barrel = new THREE.Group();
+    barrel.position.set(x, y, z);
+    barrel.rotation.set(rx, 0.2, rz, "YXZ");
+    barrel.scale.setScalar(scale);
+    g.add(barrel);
+    for (let row = 0; row < 13; row++) {
+      const h = -3.3 + row * 0.55;
+      const radius = 2.15 + 0.55 * Math.sin((row / 12) * Math.PI);
+      const hoop = row === 2 || row === 10;
+      for (let a = -5; a <= 5; a++)
+        for (let b = -5; b <= 5; b++) {
+          const px = a * 0.5,
+            pz = b * 0.5,
+            r = Math.hypot(px, pz);
+          if (r > radius || (r < radius - 0.58 && row !== 0 && row !== 12))
+            continue;
+          const stave = Math.floor(
+            ((Math.atan2(pz, px) + Math.PI) * 8) / Math.PI,
+          );
+          block(
+            barrel,
+            px,
+            h,
+            pz,
+            0.51,
+            0.56,
+            0.51,
+            hoop
+              ? stave % 3
+                ? 0x454f4b
+                : 0x697268
+              : wood[stave % wood.length],
+          );
+        }
+    }
+    // Recessed end boards, raised rim, bung, and a faded merchant's stamp.
+    for (const side of [-1, 1]) {
+      for (let row = -3; row <= 3; row++) {
+        const z = row * 0.5,
+          w = 2 * Math.sqrt(Math.max(0, 1.9 ** 2 - z * z));
+        block(
+          barrel,
+          0,
+          side * 3.62,
+          z,
+          w,
+          0.18,
+          0.45,
+          wood[(row + 5) % wood.length],
+        );
+      }
+      block(barrel, 0.5, side * 3.79, 0.4, 0.65, 0.22, 0.65, 0x6d5036);
+      block(barrel, -0.6, side * 3.73, -0.55, 0.16, 0.06, 1, 0x3d5550);
+      block(barrel, -0.18, side * 3.73, -0.55, 0.75, 0.06, 0.16, 0x3d5550);
+    }
+  }
+  // Splintered deck boards keep the cargo visually connected beneath the net.
+  for (const [x, z, w, d, angle] of [
+    [-5, 0, 2, 18, -0.68],
+    [1, 0, 2.1, 17, 0.42],
+    [4, 0, 1.8, 14, 0.13],
+    [-1, 2, 1.9, 19, 1.2],
+    [5, 5, 1.4, 12, 0.78],
+  ]) {
+    const plank = block(
+      g,
+      x,
+      -0.05,
+      z,
+      w,
+      0.65,
+      d,
+      wood[Math.abs(Math.round(z + x)) % 5],
+    );
+    plank.rotation.y = angle;
+    for (const side of [-1, 1]) {
+      const chip = block(
+        g,
+        x + Math.sin(angle) * side * d * 0.49,
+        0.03,
+        z + Math.cos(angle) * side * d * 0.49,
+        w * 0.43,
+        0.48,
+        1.2,
+        0xc09a69,
+      );
+      chip.rotation.y = angle;
+    }
+  }
+  cask(-6, 1.2, -0.8, 0.08, 1.43, 1);
+  cask(1, 1.1, -5.1, 1.5, -0.15, 0.91);
+  cask(7, 0.4, -1, 0.14, -0.26, 0.8);
+  crate(g, 2, -0.55, 3, 4.8);
+  // Open plank seams and iron nail heads on the exposed crate face.
+  for (let row = 0; row < 5; row++)
+    block(g, 2, 0.1 + row * 0.85, 5.46, 4.35, 0.08, 0.06, 0x624b33);
+  for (const x of [0.28, 3.72])
+    for (const y of [0.35, 3.5])
+      block(g, x, y, 5.6, 0.17, 0.17, 0.12, 0x454b42);
+
+  // Stepped sailcloth slumps across the crate and trails into the water.
+  const clothHeight = (a, b) => {
+    const x = -0.55 + a * 0.55,
+      z = -0.3 + b * 0.55;
+    const drop = Math.max(0, z - 5.1) * 1.8 + Math.max(0, x - 4.15) * 1.65;
+    const fold =
+      Math.sin(a * 1.15) * 0.22 + Math.cos(b * 0.5 + a * 0.25) * 0.12;
+    return Math.max(0.15, Math.round((4.45 - drop + fold) / 0.22) * 0.22);
+  };
+  for (let a = 0; a < 13; a++)
+    for (let b = 0; b < 15; b++) {
+      if ((b === 14 && (a % 4 === 0 || a > 10)) || (a === 12 && b % 4 === 0))
+        continue;
+      const x = -0.55 + a * 0.55,
+        z = -0.3 + b * 0.55;
+      const y = clothHeight(a, b);
+      const stripe = a === 3 || a === 4 || a === 10;
+      const tint = stripe
+        ? a % 2
+          ? 0x456e6a
+          : 0x557f74
+        : (a + b) % 4 === 0
+          ? 0xd9d1bb
+          : 0xece4cd;
+      block(g, x, y, z, 0.57, 0.24, 0.57, tint);
+      // Thin vertical folds join adjacent steps into a continuous sheet.
+      if (b > 0) {
+        const previous = clothHeight(a, b - 1),
+          drop = Math.abs(previous - y);
+        if (drop > 0.2)
+          block(
+            g,
+            x,
+            (y + previous) / 2,
+            z - 0.275,
+            0.57,
+            drop + 0.22,
+            0.16,
+            tint,
+          );
+      }
+      if (a > 0) {
+        const previous = clothHeight(a - 1, b),
+          drop = Math.abs(previous - y);
+        if (drop > 0.2)
+          block(
+            g,
+            x - 0.275,
+            (y + previous) / 2,
+            z,
+            0.16,
+            drop + 0.22,
+            0.57,
+            tint,
+          );
+      }
+      if (b === 13 && a % 2 === 0)
+        block(g, x, y - 0.08, z + 0.42, 0.13, 0.16, 0.42, 0xd6c59b);
+    }
+  function netPoint(u, v) {
+    const x = -6 + u + v,
+      z = 3 + u - v;
+    const y =
+      0.2 + 3.75 * Math.exp(-(((x + 6) / 5.4) ** 4) - ((z + 0.8) / 3.1) ** 2);
+    return [x, y, z];
+  }
+  // A diamond mesh with actual open gaps, knotted intersections and a weighted edge.
+  for (let line = -3; line <= 3; line++) {
+    const u = line * 1.35;
+    const across = [],
+      along = [];
+    for (let j = 0; j <= 48; j++) {
+      const v = -4.05 + (j * 8.1) / 48;
+      across.push(netPoint(u, v));
+      along.push(netPoint(v, u));
+    }
+    rope(across, 0.19, line % 2 ? 0x9b946d : 0xb8aa80);
+    rope(along, 0.19, line % 2 ? 0xa79d76 : 0xc1b28a);
+    for (let col = -3; col <= 3; col++) {
+      const p = netPoint(u, col * 1.35);
+      block(g, p[0], p[1] + 0.05, p[2], 0.31, 0.26, 0.31, 0x807c57);
+    }
+  }
+  const edge = [];
+  for (let j = 0; j <= 48; j++)
+    edge.push(netPoint(4.05, -4.05 + (j * 8.1) / 48));
+  rope(edge, 0.32, 0xa68e61);
+  for (let j = 0; j < 7; j++) {
+    const p = netPoint(4.05, -3.8 + j * 1.25);
+    block(
+      g,
+      p[0],
+      p[1] + 0.15,
+      p[2],
+      0.85,
+      0.6,
+      0.66,
+      j % 2 ? 0xa88148 : 0xc6a15f,
+    );
+    block(g, p[0], p[1] + 0.46, p[2], 0.2, 0.09, 0.68, 0x6e704f);
+  }
+  // Loose coils and a trailing, frayed painter line.
+  const coil = [];
+  for (let j = 0; j <= 160; j++) {
+    const t = j / 160,
+      a = t * Math.PI * 6,
+      r = 1.8 - t * 0.8;
+    coil.push([1.2 + Math.cos(a) * r, 0.35 + t * 0.18, 8 + Math.sin(a) * r]);
+  }
+  rope(coil, 0.29, 0xba9a68);
+  rope(
+    [
+      [2.8, 0.35, 8],
+      [5, 0.2, 9],
+      [6, 0.12, 11],
+      [8, 0.12, 11.5],
+      [9, 0.13, 10.5],
+    ],
+    0.26,
+    0xae9061,
+  );
+  for (let i = 0; i < 3; i++)
+    rope(
+      [
+        [9, 0.13, 10.5],
+        [9.7 + i * 0.25, 0.1, 10.2 + i * 0.35],
+      ],
+      0.12,
+      0xc1ab7d,
+    );
+  consolidate(g);
+  return g;
+}
+
+export function animateMerchantDebris(model, time) {
+  model.position.y = Math.sin(time * 0.8) * 0.17;
+  model.rotation.x = Math.sin(time * 0.65) * 0.035;
+  model.rotation.z = Math.sin(time * 0.83 + 0.6) * 0.045;
 }

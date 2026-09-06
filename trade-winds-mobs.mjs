@@ -1,11 +1,10 @@
-import { atlanticWeight } from "./trade-winds-ocean.mjs";
+import { atlanticWeight } from "./trade-winds-ocean.mjs?v=whirlpool-1";
 
 export const KRAKEN_TIMING = { windup: 1.5, strike: 0.45, recovery: 1.65 };
 export const KRAKEN_IMPACT = KRAKEN_TIMING.windup + KRAKEN_TIMING.strike;
 export const KRAKEN_ATTACK_LENGTH = KRAKEN_IMPACT + KRAKEN_TIMING.recovery;
-// World units per second; deliberately independent of vessel upgrades and
-// the temporary sailing-speed multiplier.
-export const KRAKEN_SPEED = 24;
+// World units per second; independent of vessel upgrades and wind.
+export const KRAKEN_SPEED = 40.1;
 export const KRAKEN_ATTACK_ARMS = [0, 7];
 const PURSUIT_DISTANCE = 120;
 const TURN_SPEED = 0.8;

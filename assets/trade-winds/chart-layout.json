@@ -1,0 +1,108 @@
+{
+  "bounds": {
+    "west": -103,
+    "east": -57,
+    "north": 32,
+    "south": 6
+  },
+  "width": 120,
+  "depth": 72,
+  "ports": [
+    {
+      "id": "royal",
+      "name": "Port Royal",
+      "lon": -76.84,
+      "lat": 17.91
+    },
+    {
+      "id": "havana",
+      "name": "Havana",
+      "lon": -82.37,
+      "lat": 23.15
+    },
+    {
+      "id": "santiago",
+      "name": "Santiago",
+      "lon": -75.87,
+      "lat": 19.96
+    },
+    {
+      "id": "nassau",
+      "name": "Nassau",
+      "lon": -77.35,
+      "lat": 25.08
+    },
+    {
+      "id": "keywest",
+      "name": "Key West",
+      "lon": -81.8,
+      "lat": 24.55
+    },
+    {
+      "id": "staugustine",
+      "name": "St. Augustine",
+      "lon": -81.3,
+      "lat": 29.89
+    },
+    {
+      "id": "veracruz",
+      "name": "Veracruz",
+      "lon": -96.13,
+      "lat": 19.19
+    },
+    {
+      "id": "campeche",
+      "name": "Campeche",
+      "lon": -90.55,
+      "lat": 19.84
+    },
+    {
+      "id": "belize",
+      "name": "Belize Town",
+      "lon": -88.19,
+      "lat": 17.49
+    },
+    {
+      "id": "portobelo",
+      "name": "Portobelo",
+      "lon": -79.65,
+      "lat": 9.56
+    },
+    {
+      "id": "cartagena",
+      "name": "Cartagena",
+      "lon": -75.55,
+      "lat": 10.4
+    },
+    {
+      "id": "laguaira",
+      "name": "La Guaira",
+      "lon": -66.93,
+      "lat": 10.61
+    },
+    {
+      "id": "santodomingo",
+      "name": "Santo Domingo",
+      "lon": -69.88,
+      "lat": 18.46
+    },
+    {
+      "id": "sanjuan",
+      "name": "San Juan",
+      "lon": -66.12,
+      "lat": 18.47
+    },
+    {
+      "id": "bridgetown",
+      "name": "Bridgetown",
+      "lon": -59.62,
+      "lat": 13.1
+    },
+    {
+      "id": "stgeorges",
+      "name": "St. George’s",
+      "lon": -61.75,
+      "lat": 12.05
+    }
+  ]
+}

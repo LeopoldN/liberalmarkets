@@ -3,27 +3,33 @@ import {
   createKraken,
   animateKraken,
   createVessel,
+  loadVesselAssets,
+  animateVessel,
   createPortModel,
   portVariant,
   createGull,
   appendTree,
   instanceBlocks,
   disposeModel,
-} from "./trade-winds-models.mjs";
+} from "./trade-winds-models.mjs?v=frigate-1";
 import {
   atlanticWeight,
   buoyancyHeight,
   waveHeight,
-  OCEAN_GLSL,
-} from "./trade-winds-ocean.mjs";
+} from "./trade-winds-ocean.mjs?v=whirlpool-1";
 import { KrakenEncounter } from "./trade-winds-mobs.mjs";
-import { TradingPostScene } from "./trade-winds-market-scene.mjs";
+import { DebrisEncounters, DEBRIS_REACH, createDebrisVisual, animateDebrisVisual } from "./trade-winds-debris.mjs";
+import { SharkEncounters, createShark, animateShark, SHARK_SHADOW_GLSL } from "./trade-winds-sharks.mjs?v=spawn-3";
+import { FrigateEncounters, loadFrigateAsset, createFrigate, animateFrigate, disposeFrigate } from "./trade-winds-frigates.mjs?v=wind-2";
+import { FrigateWake } from "./trade-winds-frigate-wake.mjs";
+import { NauticalChartScene } from "./trade-winds-chart.mjs";
+import { TradingPostScene } from "./trade-winds-market-scene.mjs?v=clean-harbor-1";
+import { loadTradingPostAsset } from "./trade-winds-market-models.mjs";
 import { WakeTrail } from "./trade-winds-wake.mjs";
 import {
   GOODS,
   PORTS,
   SAVE_KEY,
-  SHIP_SPEED as SPEED,
   VESSELS,
   toWorld,
   toGeo,
@@ -33,8 +39,12 @@ import {
   transact,
   parseSave,
   pointInPolygon,
-} from "./trade-winds-engine.mjs";
+} from "./trade-winds-engine.mjs?v=whirlpool-1";
 
+import { WHIRLPOOL, whirlpoolDistance, whirlpoolCurrent, WhirlpoolHazard } from "./trade-winds-whirlpool-field.mjs?v=pull-2";
+import { createWhirlpool, animateWhirlpool } from "./trade-winds-whirlpool.mjs?v=pull-2";
+import { createVoxelWater } from "./trade-winds-water.mjs?v=storms-1";
+import { StormEncounters, createStorm, animateStorm, disposeStorm, stormOpacity, stormExposure } from "./trade-winds-storms.mjs?v=size-4";
 const $ = (id) => document.getElementById(id);
 const TAU = Math.PI * 2,
   CELL = 10,
@@ -62,6 +72,7 @@ let scene,
 let shoreCenter = "",
   zoom = 1,
   clockTime = 0,
+  vesselAnimationTime = 0,
   lastTime = 0,
   terrainClock = 0,
   saveClock = 0,
@@ -75,11 +86,26 @@ const dummy = new THREE.Object3D(),
 const cameraAim = new THREE.Vector3(),
   desiredAim = new THREE.Vector3();
 const wake = new WakeTrail();
+const storms = new StormEncounters();
+const stormModels = new Map();
+const stormFields = {value:[new THREE.Vector4(),new THREE.Vector4()]};
+const reducedLightning = matchMedia("(prefers-reduced-motion: reduce)");
+const whirlpoolHazard = new WhirlpoolHazard();
+let whirlpool;
 const encounter = new KrakenEncounter();
+const debrisEncounters = new DebrisEncounters();
+const debrisModels = new Map();
+const sharkEncounters = new SharkEncounters();
+const sharkModels = new Map();
+const frigateEncounters = new FrigateEncounters();
+const frigateModels = new Map();
+const frigateWakes = new Map();
+const sharkShadows = { value: Array.from({ length: 3 }, () => new THREE.Vector4(0, 0, 0, 0)) };
 let krakenModel = null,
   atlanticAnnounced = false;
 let waterGridSize = 0;
 let tradingPost;
+let nauticalChart;
 const hash = (x, z) => {
   const v = Math.sin(x * 127.1 + z * 311.7) * 43758.5453;
   return v - Math.floor(v);
@@ -301,100 +327,14 @@ function setVessel() {
   wake.reset(state);
 }
 function makeWater() {
-  // A shallow cube for each water tile gives the sea real stepped edges.
-  const geometry = new THREE.BoxGeometry(12, 7, 12);
-  geometry.translate(0, -3.05, 0);
-  const m = new THREE.ShaderMaterial({
-    uniforms: {
-      time: { value: 0 },
-      fancy: { value: 1 },
-      shoreMap: { value: null },
-      shoreOrigin: { value: new THREE.Vector2() },
-      shoreSize: { value: 1280 },
-    },
-    vertexShader: `
-      varying vec3 world;
-      varying vec3 face;
-      uniform float time;
-      ${OCEAN_GLSL}
-      void main() {
-        vec4 center = modelMatrix * instanceMatrix * vec4(0., 0., 0., 1.);
-        vec4 point = instanceMatrix * vec4(position, 1.);
-        point.y += seaHeight(center.xz, time);
-        world = (modelMatrix * point).xyz;
-        face = normal;
-        gl_Position = projectionMatrix * viewMatrix * vec4(world, 1.);
-      }`,
-    fragmentShader: `
-      precision highp float;
-      varying vec3 world;
-      varying vec3 face;
-      uniform float time;
-      uniform float fancy;
-      uniform sampler2D shoreMap;
-      uniform vec2 shoreOrigin;
-      uniform float shoreSize;
-      ${OCEAN_GLSL}
-      float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
-      float noise(vec2 p) {
-        vec2 i = floor(p), f = fract(p);
-        f = f * f * (3. - 2. * f);
-        return mix(mix(hash(i), hash(i + vec2(1, 0)), f.x),
-          mix(hash(i + vec2(0, 1)), hash(i + 1.), f.x), f.y);
-      }
-      void main() {
-        vec2 p = world.xz;
-        float ocean = atlantic(p);
-        vec2 tile = floor((p + 6.) / 12.);
-        vec2 pixel = floor(p / 2.) * 2.;
-        // Broad color shoals, then a restrained palette of individual water facets.
-        float depth = noise(tile * .085) * .7 + noise(tile * .21) * .3;
-        depth = floor(depth * 7.) / 7.;
-        vec3 c = mix(vec3(.012, .125, .19), vec3(.028, .265, .29), depth);
-        c = mix(c, mix(vec3(.007, .035, .065), vec3(.025, .11, .155), depth), ocean * .88);
-        float facet = sin(tile.x * .43 + tile.y * .29 - time * .7)
-          + sin(tile.y * .71 - tile.x * .21 + time * .51);
-        c *= .98 + facet * .036;
-        vec2 uv = (pixel - shoreOrigin) / shoreSize;
-        float shore = 0.;
-        for (int k = 0; k < 4; k++) {
-          float angle = float(k) * 1.570796;
-          vec2 direction = vec2(cos(angle), sin(angle));
-          shore += texture2D(shoreMap, uv + direction * 15. / shoreSize).r * .55
-            + texture2D(shoreMap, uv + direction * 35. / shoreSize).r * .20;
-        }
-        shore = clamp(shore, 0., 1.);
-        c = mix(c, vec3(.12, .43, .34), floor(shore * 6.) / 6. * .85);
-        // Anchor the square wavelets in world space. Quantizing a time offset
-        // made the entire highlight pattern jump sideways at regular intervals.
-        vec2 ripple = floor(pixel / 4.);
-        float crest = sin(ripple.x * .59 + ripple.y * .77 - time * .65
-          + noise(ripple * .12) * 4.);
-        float broken = step(.65, hash(floor(ripple / vec2(4., 2.))));
-        float lip = smoothstep(.78, .99, crest) * broken;
-        c = mix(c, vec3(.17, .42, .43), lip * mix(.18, .44, ocean));
-        float cap = step(mix(.985, .81, ocean), hash(floor(ripple / 2.))) * smoothstep(.62, .98, crest);
-        float flicker = smoothstep(.3, .9, sin(time * .55 + hash(ripple) * 6.28));
-        c = mix(c, vec3(.57, .73, .65), cap * flicker * mix(.42, .85, ocean) * mix(.7, 1., fancy));
-        float wash = smoothstep(.4, .92, sin(pixel.x * .16 + pixel.y * .23 - time * 1.4));
-        float coastFoam = step(.65, shore) * wash * step(.45, hash(floor(pixel / 3.)));
-        c = mix(c, vec3(.59, .77, .64), coastFoam * .36);
-        float side = .90 + max(0., face.y) * .10;
-        c *= side;
-        gl_FragColor = vec4(c, 1.);
-        #include <tonemapping_fragment>
-        #include <colorspace_fragment>
-      }`,
-  });
-  const mesh = new THREE.InstancedMesh(geometry, m, 1);
-  mesh.frustumCulled = false;
+  const mesh = createVoxelWater(sharkShadows,stormFields);
   scene.add(mesh);
   const deep = new THREE.Mesh(
     new THREE.PlaneGeometry(40000, 40000),
     new THREE.MeshBasicMaterial({ color: 0x176c7a }),
   );
   deep.rotation.x = -Math.PI / 2;
-  deep.position.y = -12;
+  deep.position.y = -160;
   scene.add(deep);
   return mesh;
 }
@@ -485,16 +425,16 @@ function updateFoam(dt) {
     );
     const spread = 1 + age * 0.65;
     const spray = p.lift * Math.max(0, Math.sin(Math.min(p.age * 3, Math.PI)));
-    dummy.position.set(p.x, swell + 0.62 + spray, p.z);
-    dummy.rotation.set(0, 0, 0);
+    dummy.position.set(p.x, swell + (p.surface ? 0.50 : 0.62) + spray, p.z);
+    dummy.rotation.set(0, p.heading, 0);
     dummy.scale.set(
       p.size * spread,
-      0.24 + fade * 0.26,
-      p.size * (0.7 + (p.seed % 3) * 0.2) * spread,
+      p.surface ? 0.08 : 0.24 + fade * 0.26,
+      p.size * (p.surface ? 2.3 : 0.7 + (p.seed % 3) * 0.2) * spread,
     );
     dummy.updateMatrix();
     foam.setMatrixAt(count, dummy.matrix);
-    life.setXY(count, fade * (0.65 + (p.seed % 5) * 0.06), 0.16 + fade * 0.84);
+    life.setXY(count, fade * (p.surface ? 0.52 : 0.65 + (p.seed % 5) * 0.06), 0.16 + fade * 0.84);
     count++;
   }
   foam.count = count;
@@ -576,6 +516,8 @@ function initScene() {
   sun.shadow.normalBias = 0.6;
   scene.add(sun, sun.target);
   water = makeWater();
+  whirlpool = createWhirlpool();
+  scene.add(whirlpool);
   foam = makeFoam();
   PORTS.forEach((p) => ports.push({ ...p, ...findHarbor(p) }));
   ports.forEach(makePort);
@@ -634,26 +576,45 @@ function paused() {
 function frame(ms) {
   const dt = Math.min((ms - lastTime) / 1000 || 0, 0.25);
   lastTime = ms;
-  if ($("market").open) {
+  if (paused()) $("salvage").hidden = true;
+  if ($("market").open || $("chart").open) {
     requestAnimationFrame(frame);
     return;
   }
   if (!document.hidden) {
     clockTime += dt;
     if (!paused()) {
+      vesselAnimationTime += dt;
       let remaining = dt;
       while (remaining > 0 && !paused()) {
         const step = Math.min(remaining, 1 / 30);
+        updateStorms(step);
+        if(paused())break;
+        const previous = { x: state.x, z: state.z };
         updateMovement(step);
+        if (!paused()) updateWhirlpoolHazard(step, previous);
         if (!paused()) updateMobs(step);
         remaining -= step;
       }
     }
+    stormFields.value.forEach(v=>v.set(0,0,0,0));
+    storms.active.forEach((storm,index)=>{
+      const model=stormModels.get(storm.id);if(!model)return;
+      model.position.set(storm.x,0,storm.z);
+      model.scale.set(storm.radius/100,1,storm.radius/100);
+      const opacity=stormOpacity(storm);
+      animateStorm(model,storm.age,{opacity,cloudOpacity:1-.55*stormExposure(storm,state),reducedMotion:reducedLightning.matches,
+        surfaceHeight:(x,z)=>waveHeight(Math.round(x/12)*12,Math.round(z/12)*12,clockTime)+.45});
+      stormFields.value[index].set(storm.x,storm.z,storm.radius,opacity);
+    });
     const roughness = atlanticWeight(state.x, state.z);
+    animateVessel(ship, vesselAnimationTime);
     const seaY = buoyancyHeight(state.x, state.z, clockTime);
+    // Immerse the sloop's lower hull while keeping the raft on the surface.
+    const waterlineOffset = state.vessel === "trader" ? -1.6 : 1;
     ship.position.set(
       state.x,
-      1 + seaY + Math.sin(clockTime * 1.5) * 0.22,
+      waterlineOffset + seaY + Math.sin(clockTime * 1.5) * 0.22,
       state.z,
     );
     ship.rotation.set(
@@ -661,7 +622,21 @@ function frame(ms) {
       state.heading,
       Math.sin(clockTime * 1.6) * (0.025 + roughness * 0.065),
     );
-    const desired = desiredAim.set(state.x, 0, state.z);
+    const whirlDistance = whirlpoolDistance(state.x, state.z);
+    const whirlStrength = whirlpoolCurrent(state.x,state.z).strength;
+    if (whirlStrength > 0) {
+      const sx = Math.sin(state.heading)*8, sz = Math.cos(state.heading)*8;
+      ship.rotation.x += Math.atan2(buoyancyHeight(state.x-sx,state.z-sz,clockTime)-buoyancyHeight(state.x+sx,state.z+sz,clockTime),16);
+      ship.rotation.z += whirlStrength*.12;
+    }
+    whirlpool.visible = whirlDistance < 1500;
+    if (whirlpool.visible) animateWhirlpool(whirlpool, clockTime);
+    const overview = 1 + .65 * (1-THREE.MathUtils.smoothstep(whirlDistance,320,750));
+    const viewHeight = (innerWidth < 700 ? 360 : 400) * zoom * overview;
+    camera.top = THREE.MathUtils.lerp(camera.top,viewHeight/2,1-Math.exp(-dt*2));
+    camera.bottom=-camera.top;camera.right=camera.top*innerWidth/innerHeight;camera.left=-camera.right;
+    camera.updateProjectionMatrix();
+    const desired = desiredAim.set(state.x, seaY*whirlStrength*.4, state.z);
     if (!started) desired.add(new THREE.Vector3(-65, 0, -35));
     cameraAim.lerp(desired, 1 - Math.exp(-dt * 3));
     camera.position.copy(cameraAim).add(new THREE.Vector3(330, 390, 480));
@@ -680,13 +655,122 @@ function frame(ms) {
   }
   requestAnimationFrame(frame);
 }
+function clearStorms() {
+  for(const model of stormModels.values())disposeStorm(model);
+  stormModels.clear();storms.reset();
+  stormFields.value.forEach(v=>v.set(0,0,0,0));
+}
+function updateStorms(dt) {
+  for(const event of storms.update(dt,state,{openWater:openMonsterWater})) {
+    if(event.type==='spawn') {
+      const model=createStorm(event.storm.seed);stormModels.set(event.storm.id,model);scene.add(model);
+    } else if(event.type==='despawn') {
+      const model=stormModels.get(event.id);if(model)disposeStorm(model);stormModels.delete(event.id);
+    } else if(event.type==='enter')toast('Heavy rain — reduced sailing speed. Sail out from beneath the storm.',5000);
+    else if(event.type==='leave')toast('Clear of the storm. Sailing speed restored.',2500);
+    else if(event.type==='damage') {
+      state.health=Math.max(0,state.health-event.damage);updateHUD();
+      if(state.health===0){rescue('The storm finished off your damaged ship. ');return;}
+    }
+  }
+}
 function clearKraken() {
   if (!krakenModel) return;
   scene.remove(krakenModel);
   disposeModel(krakenModel);
   krakenModel = null;
 }
+function removeDebris(id) {
+  const model=debrisModels.get(id);
+  if(model){scene.remove(model);disposeModel(model);debrisModels.delete(id);}
+}
+function clearDebris() {
+  for(const id of debrisModels.keys())removeDebris(id);
+  debrisEncounters.reset();
+  $("salvage").hidden=true;
+}
+function updateDebris(dt) {
+  for(const event of debrisEncounters.update(dt,state,openMonsterWater)) {
+    if(event.type==="spawn") {
+      const model=createDebrisVisual(event.item);
+      debrisModels.set(event.item.id,model);
+      scene.add(model);
+    } else removeDebris(event.id);
+  }
+  for(const item of debrisEncounters.active) {
+    const model=debrisModels.get(item.id);
+    if(model)animateDebrisVisual(model,item,clockTime);
+  }
+  const nearest=debrisEncounters.nearest(state);
+  $("salvage").hidden=paused()||!nearest;
+  const label=cargoCount(state)>=state.capacity?"10 gold · hold full":"10 gold + random cargo";
+  if($("salvage-reward").textContent!==label)$("salvage-reward").textContent=label;
+}
+function salvageDebris(id=debrisEncounters.nearest(state)?.id) {
+  if(paused()||id===undefined)return;
+  const reward=debrisEncounters.collect(id,state);
+  if(!reward)return;
+  removeDebris(reward.id);
+  const good=GOODS.find(g=>g.id===reward.good);
+  toast(reward.quantity
+    ? `Salvaged! +10 gold, +${reward.quantity} ${good.name.toLowerCase()}.${reward.leftBehind?" Hold now full.":""}`
+    : "Salvaged! +10 gold. Hold full — no cargo taken.");
+  updateHUD();
+  $("salvage").hidden=!debrisEncounters.nearest(state);
+  saveGame(true);
+}
+$("salvage").onclick=()=>salvageDebris();
+function clearSharks() {
+  for (const model of sharkModels.values()) {
+    scene.remove(model);
+    disposeModel(model);
+  }
+  sharkModels.clear();
+  sharkShadows.value.forEach(shadow => shadow.set(0, 0, 0, 0));
+  sharkEncounters.reset();
+}
+function clearFrigates() {
+  for (const wake of frigateWakes.values()) wake.dispose();
+  frigateWakes.clear();
+  for (const model of frigateModels.values()) {
+    scene.remove(model);
+    disposeFrigate(model);
+  }
+  frigateModels.clear();
+  frigateEncounters.reset();
+}
+function updateFrigates(dt) {
+  for (const event of frigateEncounters.update(dt, state, { openWater: openMonsterWater })) {
+    if (event.type === "spawn") {
+      const model = createFrigate();
+      frigateModels.set(event.frigate.id, model);
+      scene.add(model);
+      const trail = new FrigateWake();
+      frigateWakes.set(event.frigate.id, trail);
+      scene.add(trail.mesh);
+    } else if (event.type === "despawn") {
+      const model = frigateModels.get(event.id);
+      if (model) { scene.remove(model); disposeFrigate(model); }
+      frigateModels.delete(event.id);
+      frigateWakes.get(event.id)?.dispose();
+      frigateWakes.delete(event.id);
+    }
+  }
+  for (const f of frigateEncounters.active) {
+    const model = frigateModels.get(f.id);
+    if (!model) continue;
+    const opacity = THREE.MathUtils.smoothstep(f.age, 0, 2) *
+      THREE.MathUtils.smoothstep(f.lifetime - f.age, 0, 2) *
+      (1 - THREE.MathUtils.smoothstep(Math.hypot(f.x - state.x, f.z - state.z), 570, 650));
+    model.position.set(f.x, buoyancyHeight(f.x, f.z, clockTime), f.z);
+    model.rotation.set(Math.sin(f.age * .8 + f.phase) * .012, f.heading, Math.sin(f.age + f.phase) * .018);
+    animateFrigate(model, f.age + f.phase, opacity);
+    frigateWakes.get(f.id)?.update(dt, f, (x, z) =>
+      waveHeight(Math.round(x / 12) * 12, Math.round(z / 12) * 12, clockTime) + .45, opacity);
+  }
+}
 function openMonsterWater(x, z, radius) {
+  if (whirlpoolDistance(x,z) < WHIRLPOOL.influence + radius) return false;
   if (ports.some((p) => Math.hypot(p.x - x, p.z - z) < radius + 150))
     return false;
   // Check the entire encounter footprint, including small islands between rings.
@@ -700,6 +784,41 @@ function openMonsterWater(x, z, radius) {
   return true;
 }
 function updateMobs(dt) {
+  updateDebris(dt);
+  updateFrigates(dt);
+  for (const event of sharkEncounters.update(dt, state, {
+    openWater: openMonsterWater,
+    hull: VESSELS[state.vessel],
+  })) {
+    if (event.type === "spawn") {
+      const model = createShark();
+      sharkModels.set(event.shark.id, model);
+      scene.add(model);
+    } else if (event.type === "despawn") {
+      const model = sharkModels.get(event.id);
+      if (model) { scene.remove(model); disposeModel(model); }
+      sharkModels.delete(event.id);
+    } else if (event.type === "chase") {
+      toast("Shark closing in! Keep sailing to outrun it.");
+    } else if (event.type === "bite") {
+      state.health = Math.max(0, state.health - event.damage);
+      toast(`Shark bite! Lost ${event.damage} hull — keep moving.`);
+      updateHUD();
+      if (state.health <= 0) { rescue(); return; }
+    }
+  }
+  sharkShadows.value.forEach(shadow => shadow.set(0, 0, 0, 0));
+  for (const [index, shark] of sharkEncounters.active.entries()) {
+    const model = sharkModels.get(shark.id);
+    if (!model) continue;
+    const rise = THREE.MathUtils.smoothstep(shark.age, 0, 1.2);
+    model.position.set(shark.x, buoyancyHeight(shark.x, shark.z, clockTime) - 7 * (1 - rise), shark.z);
+    model.rotation.y = shark.heading;
+    sharkShadows.value[index].set(shark.x, shark.z, shark.heading, rise);
+    model.userData.shark.wake.visible = rise > .8;
+    animateShark(model, shark.age + shark.phase, shark.mode === "chase", (x, z) =>
+      waveHeight(Math.round(x / 12) * 12, Math.round(z / 12) * 12, clockTime) + .45);
+  }
   const weight = atlanticWeight(state.x, state.z);
   if (!atlanticAnnounced && weight > 0.8) {
     atlanticAnnounced = true;
@@ -787,7 +906,7 @@ function updateMovement(dt) {
   const wind = 0.9 + 0.1 * Math.cos(state.heading + 0.6);
   speed = THREE.MathUtils.damp(
     speed,
-    throttle * SPEED * wind,
+    throttle * VESSELS[state.vessel].speed * wind * storms.speedMultiplier,
     throttle ? 1.2 : 2.2,
     dt,
   );
@@ -851,7 +970,25 @@ function updateMovement(dt) {
   }
   updateCompass();
 }
-function rescue() {
+function updateWhirlpoolHazard(dt, previous) {
+  for (const event of whirlpoolHazard.update(dt,state,VESSELS[state.vessel],previous)) {
+    if (event.type === "warning") toast("Whirlpool! The current is pulling you inward — sail away from the dark center.",6500);
+    if (event.type === "rock") {
+      speed=0;clickTarget=null;updateHUD();
+      toast("Whirlpool rocks! Lost 8 hull — steer clear of the breaking foam.");
+    }
+    if (event.type === "death") {
+      rescue("Your ship was destroyed in the Gulf whirlpool. ");
+      return;
+    }
+  }
+}
+function rescue(reason = "") {
+  whirlpoolHazard.reset();
+  clearStorms();
+  clearDebris();
+  clearSharks();
+  clearFrigates();
   clearKraken();
   encounter.reset();
   const p = ports.reduce((a, b) =>
@@ -871,7 +1008,7 @@ function rescue() {
   updateHUD();
   enterPort(p);
   $("trade-message").textContent =
-    "A harbor tug rescued you. Up to 75 gold paid; hull restored to 55%.";
+    reason + "A harbor tug rescued you. Up to 75 gold paid; hull restored to 55%.";
   saveGame(true);
 }
 function pixelGold(value) {
@@ -947,6 +1084,11 @@ function saveGame(silent = false) {
   }
 }
 function begin(resume) {
+  whirlpoolHazard.reset();
+  clearStorms();
+  clearDebris();
+  clearSharks();
+  clearFrigates();
   clearKraken();
   encounter.reset();
   atlanticAnnounced = false;
@@ -1134,6 +1276,7 @@ $("market").addEventListener("cancel", (e) => {
 });
 function openSettings() {
   keys.clear();
+  $("test-vessel").value = state.vessel;
   $("voyage-stats").textContent =
     `Day ${1 + Math.floor(state.elapsed / 180)} at sea · ${state.visited.length} of ${ports.length} ports visited · ${cargoCount(state)} / 40 cargo`;
   $("save-status").textContent = "";
@@ -1142,6 +1285,14 @@ function openSettings() {
 $("settings-button").onclick = openSettings;
 $("close-settings").onclick = () => $("settings").close();
 $("resume").onclick = () => $("settings").close();
+$("test-vessel").onchange = (e) => {
+  const vessel = e.target.value;
+  if (!Object.hasOwn(VESSELS, vessel) || vessel === state.vessel) return;
+  state.vessel = vessel;
+  setVessel();
+  $("save-status").textContent =
+    `${vessel === "trader" ? "Trading sloop" : "Starting raft"} ready. Resume your voyage to test it.`;
+};
 $("save").onclick = () => {
   $("save-status").textContent = saveGame(true)
     ? "Your voyage has been saved."
@@ -1163,112 +1314,31 @@ $("quality").onchange = (e) => {
 };
 $("start").onclick = () => begin(Boolean(loadedSave));
 $("continue").onclick = () => begin(false);
-// Chart coordinates cover the Gulf of Mexico, Florida, and the full Caribbean.
-const MAP = { west: -103, east: -57, north: 32, south: 6 };
-let mapPoints = [];
+// The Blender chart uses the same geographic projection as the sailing world.
 function drawChart() {
-  const canvas = $("map"),
-    r = canvas.getBoundingClientRect(),
-    ratio = Math.min(devicePixelRatio, 2);
-  canvas.width = r.width * ratio;
-  canvas.height = r.height * ratio;
-  const ctx = canvas.getContext("2d");
-  ctx.scale(ratio, ratio);
-  const w = r.width,
-    h = r.height;
-  const project = (lon, lat) => [
-    ((lon - MAP.west) / (MAP.east - MAP.west)) * w,
-    ((MAP.north - lat) / (MAP.north - MAP.south)) * h,
-  ];
-  ctx.fillStyle = "#e4d4ad";
-  ctx.fillRect(0, 0, w, h);
-  ctx.strokeStyle = "#a89a7040";
-  ctx.lineWidth = 1;
-  for (let lon = -100; lon < -57; lon += 5) {
-    const [x] = project(lon, 10);
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x, h);
-    ctx.stroke();
-    ctx.font = "9px Georgia";
-    ctx.fillStyle = "#978966";
-    ctx.fillText(`${-lon}°W`, x + 4, h - 6);
-  }
-  for (let lat = 10; lat < 32; lat += 5) {
-    const [, y] = project(-100, lat);
-    ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(w, y);
-    ctx.stroke();
-  }
-  ctx.fillStyle = "#999b6b";
-  ctx.strokeStyle = "#7b8056";
-  for (const p of coasts) {
-    ctx.beginPath();
-    p.ring.forEach(([lon, lat], i) => {
-      const [x, y] = project(lon, lat);
-      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
-    });
-    ctx.closePath();
-    ctx.fill();
-    ctx.stroke();
-  }
-  ctx.font = `italic ${w < 500 ? 12 : 17}px Georgia`;
-  ctx.fillStyle = "#918363";
-  ctx.textAlign = "center";
-  const label = (str, lon, lat) => ctx.fillText(str, ...project(lon, lat));
-  label("Gulf of Mexico", -91, 25);
-  label("Caribbean Sea", -75, 14);
-  label("Atlantic Ocean", -66, 27);
-  ctx.font = "10px Georgia";
-  label("MEXICO", -99, 23);
-  label("CUBA", -79, 21.8);
-  label("SOUTH AMERICA", -68, 7.8);
-  const geo = toGeo(state.x, state.z),
-    [sx, sy] = project(geo.lon, geo.lat);
-  const target = ports.find((p) => p.id === state.target);
-  if (target) {
-    const [tx, ty] = project(target.lon, target.lat);
-    ctx.setLineDash([4, 5]);
-    ctx.strokeStyle = "#a06734";
-    ctx.beginPath();
-    ctx.moveTo(sx, sy);
-    ctx.lineTo(tx, ty);
-    ctx.stroke();
-    ctx.setLineDash([]);
-  }
-  mapPoints = ports.map((p, i) => {
-    const [x, y] = project(p.lon, p.lat);
-    ctx.fillStyle = p.id === state.target ? "#a85c31" : "#544f35";
-    ctx.fillRect(x - 3, y - 3, 6, 6);
-    ctx.font = `${p.id === state.target ? "bold " : ""}${w < 500 ? 8 : 10}px Georgia`;
-    ctx.textAlign = p.lon < -90 ? "left" : "right";
-    let offset =
-      p.id === "santiago" || p.id === "sanjuan" || p.id === "stgeorges"
-        ? 13
-        : -9;
-    ctx.fillText(p.name, x + (p.lon < -90 ? 7 : -5), y + offset);
-    return { x, y, p };
-  });
-  ctx.save();
-  ctx.translate(sx, sy);
-  ctx.rotate(-state.heading);
-  ctx.fillStyle = "#a3472e";
-  ctx.beginPath();
-  ctx.moveTo(0, -9);
-  ctx.lineTo(5, 7);
-  ctx.lineTo(0, 4);
-  ctx.lineTo(-5, 7);
-  ctx.closePath();
-  ctx.fill();
-  ctx.restore();
+  nauticalChart?.update(state);
 }
+function layoutChart({ detail: chart }) {
+  const bottom = chart.screen(new THREE.Vector3(-49, 2, 47));
+  const end = chart.screen(new THREE.Vector3(59, 2, 47));
+  const controls = $("chart-stage").querySelector(".chart-bottom");
+  controls.style.left = `${bottom.x}px`;
+  controls.style.top = `${bottom.y - 26}px`;
+  controls.style.width = `${end.x - bottom.x}px`;
+  controls.style.bottom = "auto";
+  controls.style.right = "auto";
+  const routes = chart.screen(new THREE.Vector3(-56, 2, 33));
+  const plaque = $("chart-stage").querySelector(".chart-routes");
+  plaque.style.left = `${routes.x}px`;
+  plaque.style.top = `${routes.y}px`;
+}
+$("chart-stage").addEventListener("chartlayout", layoutChart);
 function selectDestination(id) {
   state.target = id || null;
   const p = ports.find((p) => p.id === id);
   $("destination").value = id || "";
   if (p) {
-    const seconds = Math.hypot(p.x - state.x, p.z - state.z) / (SPEED * 0.92);
+    const seconds = Math.hypot(p.x - state.x, p.z - state.z) / (VESSELS[state.vessel].speed * 0.92);
     $("route-info").textContent =
       `${p.name} · ≈ ${Math.max(1, Math.round(seconds / 60))} min, plus detours around land. Exports: ${p.exports.join(", ")}. High demand: ${p.imports.join(", ")}.`;
   } else
@@ -1282,21 +1352,24 @@ function openChart() {
   keys.clear();
   $("settings").close();
   $("chart").showModal();
+  nauticalChart ||= new NauticalChartScene($("chart-stage"), {
+    onSelect: selectDestination,
+  });
+  nauticalChart.start(state);
   $("destination").value = state.target || "";
   selectDestination(state.target);
 }
 $("open-chart").onclick = openChart;
 $("close-chart").onclick = () => $("chart").close();
 $("destination").onchange = (e) => selectDestination(e.target.value);
-$("map").onclick = (e) => {
-  const r = $("map").getBoundingClientRect(),
-    x = e.clientX - r.left,
-    y = e.clientY - r.top;
-  const near = mapPoints.reduce((a, b) =>
-    Math.hypot(a.x - x, a.y - y) < Math.hypot(b.x - x, b.y - y) ? a : b,
+$("chart").addEventListener("close", () => nauticalChart?.stop());
+$("chart-set-sail").onclick = () => $("chart").close();
+$("chart-stage")
+  .querySelectorAll("[data-route]")
+  .forEach(
+    (button) =>
+      (button.onclick = () => selectDestination(button.dataset.route)),
   );
-  if (Math.hypot(near.x - x, near.y - y) < 30) selectDestination(near.p.id);
-};
 const pointers = new Map();
 let pointerStart = null,
   pinchDistance = 0,
@@ -1352,6 +1425,16 @@ function pointerUp(e) {
   );
   const point = new THREE.Vector3();
   if (raycaster.ray.intersectPlane(seaPlane, point)) {
+    const debris=debrisEncounters.active.find(item=>Math.hypot(item.x-point.x,item.z-point.z)<20);
+    if(debris) {
+      if(Math.hypot(debris.x-state.x,debris.z-state.z)<=DEBRIS_REACH)salvageDebris(debris.id);
+      else {
+        clickTarget={x:debris.x,z:debris.z};
+        toast("Sail closer, then press E or tap Salvage to recover the cargo.");
+      }
+      pointerStart=null;
+      return;
+    }
     if (tileLand(Math.floor(point.x / CELL), Math.floor(point.z / CELL))) {
       toast("Choose open water, captain.");
       return;
@@ -1381,6 +1464,11 @@ window.addEventListener("keydown", (e) => {
     return;
   }
   if (paused()) return;
+  if (key === "e") {
+    e.preventDefault();
+    if(!e.repeat)salvageDebris();
+    return;
+  }
   if (key === " ") {
     speed = 0;
     clickTarget = null;
@@ -1399,7 +1487,12 @@ document.addEventListener("visibilitychange", () => {
 window.addEventListener("pagehide", () => saveGame(true));
 async function boot() {
   try {
-    const res = await fetch("./assets/trade-winds/coast.json");
+    const [res] = await Promise.all([
+      fetch("./assets/trade-winds/coast.json"),
+      loadVesselAssets(),
+      loadFrigateAsset(),
+      loadTradingPostAsset(),
+    ]);
     if (!res.ok) throw Error("Could not load coastlines");
     const polygons = await res.json();
     coasts = polygons.map((ring) => ({

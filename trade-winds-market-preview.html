@@ -102,13 +102,15 @@
       ><a href="trade-winds.html">Play game →</a>
     </header>
     <footer>
-      The same animated set used in every port. Merchant, counter, lanterns,
-      moored ships, and harbor buildings are all modeled in 3D.
+      A living harbor. A blinking shopkeeper, a sailor taking a drink,
+      dockside conversation, swaying ropes, and a gently rocking frigate.
     </footer>
     <script type="module">
-      import { TradingPostScene } from "./trade-winds-market-scene.mjs";
+      import { TradingPostScene } from "./trade-winds-market-scene.mjs?v=clean-harbor-1";
       import { PORTS } from "./trade-winds-engine.mjs";
-      const scene = new TradingPostScene(document.querySelector("#scene"));
+      import { loadTradingPostAsset } from "./trade-winds-market-models.mjs";
+      await loadTradingPostAsset();
+      const scene = new TradingPostScene(document.querySelector("#scene"), { study: true });
       const ports = document.querySelector("#port");
       PORTS.forEach((port) => ports.add(new Option(port.name, port.id)));
       let port = PORTS[0],

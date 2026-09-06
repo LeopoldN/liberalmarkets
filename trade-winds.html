@@ -18,7 +18,8 @@
       type="image/svg+xml"
     />
     <link rel="stylesheet" href="trade-winds.css" />
-    <link rel="stylesheet" href="trade-winds-market.css" />
+    <link rel="stylesheet" href="trade-winds-market.css?v=harbor-arrival-1" />
+    <link rel="stylesheet" href="trade-winds-chart.css" />
   </head>
   <body>
     <main id="ocean" aria-label="Isometric Caribbean sailing world"></main>
@@ -38,6 +39,10 @@
           ><span id="coins">650</span>
         </div>
       </div>
+      <button id="salvage" class="salvage-action" hidden aria-keyshortcuts="E">
+        <span>Salvage debris <kbd>E</kbd></span>
+        <small id="salvage-reward">10 gold + random cargo</small>
+      </button>
       <div class="compass" role="img" aria-label="Ship compass">
         <span class="north">N</span><span class="east">E</span
         ><span class="south">S</span><span class="west">W</span>
@@ -182,6 +187,13 @@
         ><button id="quit">Save & quit <span>↗</span></button>
       </div>
       <label class="quality"
+        >Swap boat · testing
+        <select id="test-vessel">
+          <option value="raft">Starting raft</option>
+          <option value="trader">Trading sloop</option>
+        </select></label
+      >
+      <label class="quality"
         >Water & shadows
         <select id="quality">
           <option value="high">High</option>
@@ -210,26 +222,28 @@
     </dialog>
     <dialog id="chart" aria-labelledby="chart-title">
       <div class="chart-heading">
-        <div>
-          <p class="eyebrow">The West Indies · 1804</p>
-          <h2 id="chart-title">A sea of possibilities.</h2>
-        </div>
-        <button id="close-chart" class="close-button" aria-label="Close chart">
-          ×
-        </button>
+        <h2 id="chart-title">A sea of possibilities.</h2>
       </div>
       <p class="chart-help">
         Choose a port to mark its bearing on your compass. You sail the route.
       </p>
-      <canvas
-        id="map"
-        aria-label="Nautical chart showing your ship and sixteen ports"
-      ></canvas>
-      <div class="chart-bottom">
-        <select id="destination" aria-label="Destination port"></select>
-        <p id="route-info">Chart a course. Follow the gold compass marker.</p>
+      <button id="close-chart" class="close-button" aria-label="Close chart">
+        ×
+      </button>
+      <div id="chart-stage">
+        <aside class="chart-routes">
+          <strong>Popular Routes</strong
+          ><button data-route="royal">▪ Havana → Port Royal</button
+          ><button data-route="cartagena">▪ Port Royal → Cartagena</button
+          ><button data-route="sanjuan">▪ Santo Domingo → San Juan</button>
+        </aside>
+        <div class="chart-bottom">
+          <select id="destination" aria-label="Destination port"></select>
+          <p id="route-info">Chart a course. Follow the gold compass marker.</p>
+          <button id="chart-set-sail">Set Sail</button>
+        </div>
       </div>
     </dialog>
-    <script type="module" src="trade-winds.js"></script>
+    <script type="module" src="trade-winds.js?v=storms-size-4"></script>
   </body>
 </html>

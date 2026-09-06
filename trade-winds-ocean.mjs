@@ -1,3 +1,4 @@
+import { whirlpoolHeight, WHIRLPOOL_GLSL } from './trade-winds-whirlpool-field.mjs?v=pull-2';
 // Stylized Caribbean/Atlantic boundary in geographic coordinates. Kept in one
 // table so the CPU buoyancy, encounters and GPU water agree at every location.
 const EDGE = [
@@ -46,11 +47,12 @@ function sampleWaveHeight(x, z, time, stepped) {
   return (
     (stepped ? Math.floor(level) : level - 0.5) * 0.18 -
     0.8 +
-    ocean * (swell * 1.8 + rough)
+    ocean * (swell * 1.8 + rough) + whirlpoolHeight(x,z,time)
   );
 }
 const f = (n) => Number(n).toFixed(4);
 export const OCEAN_GLSL = `
+  ${WHIRLPOOL_GLSL}
   float atlantic(vec2 p) {
     float lon = p.x / 220. - 80., lat = 22. - p.y / 220.;
     float edge = ${f(EDGE[0][1])};
@@ -67,5 +69,5 @@ export const OCEAN_GLSL = `
       + sin(p.y * .057 - p.x * .014 + time * .61) * .23;
     float rough = sin(p.x * .015 + p.y * .023 - time * 1.55) * 1.8
       + sin(p.y * .044 - p.x * .028 + time * 1.19) * .8;
-    return floor((swell + .6) * 5.) * .18 - .8 + atlantic(p) * (swell * 1.8 + rough);
+    return floor((swell + .6) * 5.) * .18 - .8 + atlantic(p) * (swell * 1.8 + rough) + whirlpoolHeight(p,time);
   }`;

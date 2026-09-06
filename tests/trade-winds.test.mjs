@@ -3,7 +3,6 @@ import assert from "node:assert/strict";
 import {
   GOODS,
   PORTS,
-  BASE_SHIP_SPEED,
   prices,
   newState,
   transact,
@@ -92,7 +91,7 @@ test("geographic conversion is reversible and the Caribbean spans substantial vo
   }
   const a = toWorld(home.lon, home.lat),
     b = toWorld(-75.87, 19.96);
-  assert.ok(Math.hypot(a.x - b.x, a.z - b.z) / BASE_SHIP_SPEED > 30);
+  assert.ok(Math.hypot(a.x - b.x, a.z - b.z) > 400);
 });
 test("coast collision classifies polygon interiors and open sea", () => {
   const p = [

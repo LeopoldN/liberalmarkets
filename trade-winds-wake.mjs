@@ -15,7 +15,7 @@ export class WakeTrail {
     this.carry = 0;
     this.previous = { x: position.x, z: position.z, heading: position.heading };
   }
-  spawn(x, z, vx, vz, life, size, lift = 0) {
+  spawn(x, z, vx, vz, life, size, lift = 0, surface = false, heading = 0) {
     const particle = this.particles[this.cursor];
     Object.assign(particle, {
       x,
@@ -25,6 +25,8 @@ export class WakeTrail {
       life,
       size,
       lift,
+      surface,
+      heading,
       age: 0,
       seed: this.sequence++,
     });
@@ -74,8 +76,40 @@ export class WakeTrail {
           dx * -Math.sin(position.heading ?? 0) +
             dz * -Math.cos(position.heading ?? 0) >=
           0;
-        const stern = forward ? hull.stern : hull.bow;
-        const bow = forward ? hull.bow : hull.stern;
+        const waterline = hull.wake || hull;
+        const stern = forward ? waterline.stern : waterline.bow;
+        const bow = forward ? waterline.bow : waterline.stern;
+        if (hull.wake) {
+          const heading = Math.atan2(ax, az);
+          // Two fine ribbons peel off the immersed quarters, with light churn
+          // between them. The bowsprit is deliberately excluded from this profile.
+          for (const side of [-1, 1]) {
+            const spread = side * (waterline.halfWidth * 0.65 + random * 0.45);
+            this.spawn(
+              x + ax * (stern + random) + rx * spread,
+              z + az * (stern + random) + rz * spread,
+              rx * side * (0.7 + intensity * 0.5),
+              rz * side * (0.7 + intensity * 0.5),
+              3.2 + random * 1.8, 0.65 + random * 0.5, 0, true, heading,
+            );
+            if (intensity > 0.25) {
+              this.spawn(
+                x - ax * bow + rx * side * 1.3,
+                z - az * bow + rz * side * 1.3,
+                rx * side * 2.1 + ax * 1.5,
+                rz * side * 2.1 + az * 1.5,
+                1 + random * 0.6, 0.45 + random * 0.4, 0, true, heading,
+              );
+            }
+          }
+          this.spawn(
+            x + ax * (stern + 1 + random * 2) + rx * (random - 0.5) * 2,
+            z + az * (stern + 1 + random * 2) + rz * (random - 0.5) * 2,
+            ax * 0.2, az * 0.2, 2.5 + random,
+            0.7 + random * 0.5, 0, true, heading,
+          );
+          continue;
+        }
         for (const side of [-1, 1]) {
           for (let layer = 0; layer < 2; layer++) {
             const seed = Math.sin((this.sequence + 1) * 73.17) * 9217.41;

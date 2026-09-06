@@ -1,10 +1,13 @@
 export const SCALE = 220;
-// Keep the normal pace separate so the temporary testing boost is easy to remove.
-export const BASE_SHIP_SPEED = 14;
-export const SHIP_SPEED = BASE_SHIP_SPEED * 3.5;
+// Per-vessel maximum sailing speeds in world units per second, before wind.
 export const VESSELS = {
-  raft: { bow: 9, stern: 9, halfWidth: 6.5 },
-  trader: { bow: 20, stern: 13, halfWidth: 7 },
+  // The Blender raft is wider across its lashed logs; the projecting oar is decorative.
+  raft: { speed: 26, bow: 6.75, stern: 6.75, halfWidth: 8.75 },
+  trader: {
+    speed: 40,
+    bow: 20, stern: 13, halfWidth: 7,
+    wake: { bow: 11.8, stern: 11.2, halfWidth: 4.8 },
+  },
 };
 export const SAVE_KEY = "liberal-markets:trade-winds:v1";
 export const GOODS = [

@@ -1,7 +1,23 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { WakeTrail } from "../trade-winds-wake.mjs";
+import { VESSELS } from "../trade-winds-engine.mjs";
 const active = (wake) => wake.particles.filter((p) => p.age < p.life);
+test("sloop foam originates at the immersed hull, not the bowsprit, in either direction", () => {
+  for (const direction of [-1, 1]) {
+    const wake = new WakeTrail();
+    wake.reset({ x: 0, z: 0, heading: 0 });
+    wake.update(0.1, { x: 0, z: direction * 1.5, heading: 0 }, VESSELS.trader);
+    const foam = active(wake);
+    assert.equal(foam.length, 5);
+    assert.ok(foam.every((p) => p.surface && p.lift === 0));
+    assert.ok(foam.every((p) => Math.abs(p.z - direction * 1.5) < 15));
+    assert.ok(foam.every((p) => Math.abs(p.x) < VESSELS.trader.wake.halfWidth));
+    const oldZ = foam[0].z;
+    wake.update(0.1, { x: 0, z: direction * 1.5, heading: Math.PI / 2 }, VESSELS.trader);
+    assert.equal(foam[0].z, oldZ, "turning does not rotate existing foam");
+  }
+});
 test("a stationary ship never emits foam, and a stopped trail fades away", () => {
   const wake = new WakeTrail();
   wake.update(0.1, { x: 0, z: 0 });

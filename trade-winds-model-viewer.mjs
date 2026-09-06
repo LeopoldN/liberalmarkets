@@ -1,16 +1,26 @@
 import * as THREE from "./assets/vendor/three.module.js";
+import { createShark, animateShark, SHARK_SHADOW_GLSL } from "./trade-winds-sharks.mjs?v=spawn-3";
 import {
+  createMerchantDebris,
+  animateMerchantDebris,
   createKraken,
   animateKraken,
   krakenPreviewAttacks,
   instanceBlocks,
   createVessel,
+  loadVesselAssets,
+  animateVessel,
   createPortModel,
   createTree,
   createGull,
   PORT_VARIANTS,
   disposeModel,
-} from "./trade-winds-models.mjs";
+} from "./trade-winds-models.mjs?v=frigate-1";
+import { loadFrigateAsset, createFrigate, animateFrigate, disposeFrigate } from "./trade-winds-frigates.mjs?v=wind-2";
+import { FrigateWake } from "./trade-winds-frigate-wake.mjs";
+import { createWhirlpool, animateWhirlpool, disposeWhirlpool } from "./trade-winds-whirlpool.mjs?v=pull-2";
+import { WHIRLPOOL } from "./trade-winds-whirlpool-field.mjs?v=pull-2";
+import { createStorm, animateStorm, disposeStorm, STORM_SIZE } from "./trade-winds-storms.mjs?v=size-4";
 const stage = document.querySelector("#stage");
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xe9e3d6);
@@ -45,6 +55,18 @@ ground.rotation.x = -Math.PI / 2;
 ground.position.y = -1.4;
 ground.receiveShadow = true;
 scene.add(ground);
+const previewShadows = { value: Array.from({ length: 3 }, () => new THREE.Vector4(0, 0, 0, 0)) };
+const shadowTime = { value: 0 };
+ground.material.onBeforeCompile = shader => {
+  shader.uniforms.sharkShadows = previewShadows;
+  shader.uniforms.shadowTime = shadowTime;
+  shader.vertexShader = 'varying vec2 shadowPoint;\n' + shader.vertexShader;
+  shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>',
+    '#include <begin_vertex>\nshadowPoint=(modelMatrix*vec4(position,1.)).xz;');
+  shader.fragmentShader = 'varying vec2 shadowPoint;\nuniform float shadowTime;\n' + SHARK_SHADOW_GLSL + shader.fragmentShader;
+  shader.fragmentShader = shader.fragmentShader.replace('#include <color_fragment>',
+    '#include <color_fragment>\ndiffuseColor.rgb *= 1. - sharkShadow(shadowPoint,shadowTime)*.62;');
+};
 let model,
   yaw = 0.7,
   pitch = 0.64,
@@ -53,6 +75,7 @@ let model,
   selected = "raft";
 const target = new THREE.Vector3();
 let previewTime = 0,
+  frigateWake = null,
   lastFrame = 0,
   motion = true,
   striking = false,
@@ -61,11 +84,16 @@ let previewTime = 0,
   oceanStage = null;
 const seaTime = { value: 0 };
 const descriptions = {
+  storm: "A drifting bank of charcoal voxel clouds with random yellow lightning inside, falling blocky rain, and splashes on the sea. Rare storms are three times more frequent in the Atlantic. Heavy rain slows sailing by up to 35% and deals 1 hull damage every six seconds.",
+  whirlpool: "A vast voxel maelstrom in the central Gulf of Mexico. Spiral currents pull ships into a deep, fatal eye. Jagged rocks break the flow into foaming collars and spray. Escape the outer current under sail; the inner pull is stronger than your boat.",
+  debris: "Waterlogged merchant cargo: three iron-bound barrels, broken planks, draped sailcloth, a knotted fishing net with cork floats, and loose coils of rope.",
+  frigate: "An 1812 voxel frigate with wind-filled, rippling sails, a fluttering Union Jack, and a flowing foam wake. Peaceful ships patrol at 16 units per second, keep clear of land and harbors, and appear four times as often in the Atlantic. They hold their patrol course when you sail nearby.",
+  shark: "A slim dorsal fin above a submerged shark silhouette, with broad side fins, a beating tail, and a flowing foam wake. Sharks patrol open water, appear more often in the Atlantic, and chase nearby boats at 26.1 units per second.",
   kraken:
     "A deep-sea giant with a plated mantle, amber eyes, and eight independently moving arms. Pale suckers line each curling limb.",
-  raft: "Lashed logs, a patched sail, a steering oar, and just enough room to start a voyage.",
+  raft: "A seated voyager aboard a timber raft, with a weathered sail, cargo chest, barrel, glowing lantern, and wooden oar.",
   trader:
-    "The original trading ship, preserved with its hull, rigging, canvas sails, and cargo.",
+    "A voxel trading sloop with a raised helm, patched canvas, cargo, and a navy pennant. The sails, helmsman, wheel, lantern, and loose rope move gently.",
   palm: "A curved, ringed trunk with seven tapered fronds and a cluster of coconuts.",
   canopy:
     "Branching hardwood with layered, irregular clusters of sunlit foliage.",
@@ -91,16 +119,22 @@ function render() {
         Math.sin(pitch),
         Math.cos(yaw) * Math.cos(pitch),
       ).multiplyScalar(
-        selected === "kraken" ? Math.max(420, span * zoom) : 220,
+        ["kraken", "whirlpool", "storm"].includes(selected) ? Math.max(1200, span * zoom) : 220,
       ),
     );
   camera.lookAt(target);
   renderer.render(scene, camera);
 }
 function select(id) {
+  frigateWake?.dispose();
+  frigateWake = null;
+  previewShadows.value.forEach(shadow => shadow.set(0, 0, 0, 0));
   if (model) {
     scene.remove(model);
-    disposeModel(model);
+    if (selected === "storm") disposeStorm(model);
+    else if (selected === "whirlpool") disposeWhirlpool(model);
+    else if (selected === "frigate") disposeFrigate(model);
+    else disposeModel(model);
   }
   if (comparison) {
     scene.remove(comparison);
@@ -116,10 +150,17 @@ function select(id) {
   selected = id;
   previewTime = 0;
   document.querySelector("#mob-controls").hidden = id !== "kraken";
-  stage.classList.toggle("ocean-stage", id === "kraken");
-  scene.background.set(id === "kraken" ? 0x173f49 : 0xe9e3d6);
+  document.querySelector("#vessel-motion").hidden = !["trader", "shark", "frigate", "debris", "whirlpool", "storm"].includes(id);
+  document.querySelector("#vessel-motion").textContent = motion ? "Pause motion" : "Resume motion";
+  document.querySelector("#vessel-motion").setAttribute("aria-pressed", String(!motion));
+  stage.classList.toggle("ocean-stage", ["kraken", "shark", "frigate", "debris", "whirlpool", "storm"].includes(id));
+  scene.background.set(["kraken", "shark", "frigate", "debris", "whirlpool", "storm"].includes(id) ? 0x173f49 : 0xe9e3d6);
+  ground.visible = id !== "whirlpool";
   model =
-    id === "kraken"
+    id === "storm" ? createStorm(43) :
+    id === "whirlpool" ? createWhirlpool({water:true}) :
+    id === "debris" ? createMerchantDebris() :
+    id === "frigate" ? createFrigate() : id === "shark" ? createShark() : id === "kraken"
       ? createKraken(variant)
       : id === "raft" || id === "trader"
         ? createVessel(id)
@@ -129,6 +170,10 @@ function select(id) {
             ? createGull(0)
             : createTree(id, 3);
   scene.add(model);
+  if (id === "frigate") {
+    frigateWake = new FrigateWake();
+    scene.add(frigateWake.mesh);
+  }
   if (id === "kraken") {
     comparison = createVessel("trader");
     comparison.position.set(16, 1, 105);
@@ -187,8 +232,20 @@ function select(id) {
     span = Math.max(span, 330);
     target.y = 22;
   }
-  yaw = id === "kraken" ? 0.46 : 0.7;
-  pitch = 0.64;
+  if (id === "shark") {
+    span = 65 * Math.max(1, stage.clientHeight / stage.clientWidth);
+    target.set(0, 1, 0);
+  }
+  if (id === "storm") {
+    span=240*STORM_SIZE*Math.max(1,stage.clientHeight/stage.clientWidth);
+    target.set(0,170,0);
+  }
+  if (id === "whirlpool") {
+    span=790*Math.max(1,stage.clientHeight/stage.clientWidth);
+    target.set(WHIRLPOOL.x,-20,WHIRLPOOL.z);
+  }
+  yaw = id === "frigate" ? 1.2 : id === "kraken" ? 0.46 : id === "raft" ? Math.PI + 0.7 : id === "trader" ? 2.5 : 0.7;
+  pitch = id === "whirlpool" ? .95 : .64;
   zoom = 1;
   const shadowSpan = id === "kraken" ? 210 : 120;
   Object.assign(sun.shadow.camera, {
@@ -200,9 +257,9 @@ function select(id) {
   sun.shadow.camera.updateProjectionMatrix();
   sun.target.position.copy(target);
   sun.position.copy(target).add(new THREE.Vector3(-90, 170, 80));
-  ground.position.y = id === "kraken" ? -5 : -1.4;
+  ground.position.y = ["shark", "frigate", "debris"].includes(id) ? 0 : id === "kraken" ? -5 : -1.4;
   ground.material.color.set(
-    id === "kraken"
+    ["kraken", "shark", "frigate", "debris", "whirlpool", "storm"].includes(id)
       ? 0x173f49
       : PORT_VARIANTS[id] || ["raft", "trader"].includes(id)
         ? 0x5c9fa0
@@ -211,7 +268,12 @@ function select(id) {
   document.querySelector("#name").textContent =
     PORT_VARIANTS[id]?.name ||
     {
+      debris: "Floating merchant debris",
+      whirlpool: "Gulf whirlpool",
+      storm: "Atlantic thunderstorm",
       kraken: "Atlantic Kraken",
+      shark: "Shark fin",
+      frigate: "British frigate",
       raft: "Starting raft",
       trader: "Trading sloop",
       palm: "Coconut palm",
@@ -270,9 +332,15 @@ renderer.domElement.addEventListener(
 );
 window.addEventListener("resize", resize);
 const first = location.hash.slice(1);
+await Promise.all([loadVesselAssets(), loadFrigateAsset()]).catch((error) => console.error("Vessel model could not load:", error));
 select(
   [
+    "debris",
+    "storm",
+    "whirlpool",
     "kraken",
+    "shark",
+    "frigate",
     "raft",
     "trader",
     "merchant",
@@ -287,6 +355,11 @@ select(
 );
 
 document.querySelector("#motion").onclick = (event) => {
+  motion = !motion;
+  event.currentTarget.textContent = motion ? "Pause motion" : "Resume motion";
+  event.currentTarget.setAttribute("aria-pressed", String(!motion));
+};
+document.querySelector("#vessel-motion").onclick = (event) => {
   motion = !motion;
   event.currentTarget.textContent = motion ? "Pause motion" : "Resume motion";
   event.currentTarget.setAttribute("aria-pressed", String(!motion));
@@ -310,6 +383,45 @@ document.querySelector("#ship-scale").onchange = (event) => {
 function animate(ms) {
   const dt = Math.min((ms - lastFrame) / 1000 || 0, 0.05);
   lastFrame = ms;
+  if(selected === "storm" && !document.hidden) {
+    if(motion)previewTime+=dt;
+    animateStorm(model,previewTime,{reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches});
+    render();
+  }
+  if (selected === "whirlpool" && !document.hidden) {
+    if(motion)previewTime+=dt;
+    animateWhirlpool(model,previewTime);
+    render();
+  }
+  if (selected === "debris" && !document.hidden) {
+    if (motion) previewTime += dt;
+    animateMerchantDebris(model, previewTime);
+    render();
+  }
+  if (selected === "shark" && !document.hidden) {
+    if (motion) previewTime += dt;
+    animateShark(model, previewTime, true);
+    model.position.set(Math.sin(previewTime * .4) * 10, 0, Math.cos(previewTime * .4) * 10);
+    model.rotation.y = previewTime * .4 + Math.PI / 2;
+    previewShadows.value[0].set(model.position.x, model.position.z, model.rotation.y, 1);
+    shadowTime.value = previewTime;
+    render();
+  }
+  if (selected === "frigate" && !document.hidden) {
+    if (motion) previewTime += dt;
+    animateFrigate(model, previewTime);
+    model.position.y = Math.sin(previewTime * .8) * .35;
+    model.rotation.x = Math.sin(previewTime * .8) * .012;
+    model.rotation.z = Math.sin(previewTime) * .018;
+    const position = { x: 0, z: -previewTime * 16, heading: 0 };
+    frigateWake.update(motion ? dt : 0, position, () => 0, 1, position);
+    render();
+  }
+  if (selected === "trader" && !document.hidden) {
+    if (motion) previewTime += dt;
+    animateVessel(model, previewTime);
+    render();
+  }
   if (selected === "kraken" && !document.hidden) {
     if (motion) previewTime += dt;
     seaTime.value = previewTime;
@@ -319,6 +431,7 @@ function animate(ms) {
       striking ? krakenPreviewAttacks(previewTime) : [],
     );
     if (comparison) {
+      animateVessel(comparison, previewTime);
       comparison.position.y = 1 + Math.sin(previewTime * 1.5) * 0.4;
       comparison.rotation.z = Math.sin(previewTime) * 0.03;
     }

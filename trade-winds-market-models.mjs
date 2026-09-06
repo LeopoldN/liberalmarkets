@@ -1,6 +1,11 @@
 // Close-up trading-post set. Kept separate from the sailing-world model library.
 import * as THREE from "./assets/vendor/three.module.js";
-import { createTradingShip, createPortModel } from "./trade-winds-models.mjs";
+import { loadHarborSunset, createHarborSunset, animateHarborSunset } from "./trade-winds-harbor.mjs";
+import { createTradingShip, createPortModel, animateVessel } from "./trade-winds-models.mjs";
+const tradingPostAsset = null;
+export function loadTradingPostAsset() {
+  return loadHarborSunset();
+}
 const cube = new THREE.BoxGeometry(1, 1, 1),
   materials = new Map();
 function box(g, x, y, z, w, h, d, color) {
@@ -175,6 +180,17 @@ export function createMerchant() {
   box(head, 2.3, 2.45, 1.6, 1.8, 0.28, 0.3, 0xbc8e3b);
   box(head, -0.9, -0.4, 1.42, 0.45, 1.1, 0.35, 0x563827);
   box(head, 0.9, -0.4, 1.42, 0.45, 1.1, 0.35, 0x563827);
+  for (let i = -4; i <= 4; i++) {
+    box(head, i * 0.24, -0.66 - Math.abs(i % 3) * 0.09, 1.99,
+      0.18, 0.75 + (i % 2 ? 0.12 : 0), 0.12, i % 2 ? 0x66452e : 0x593c28);
+    box(head, i * 0.4, 2.65, 1.26, 0.12, 0.12, 0.08, 0xe1b960);
+  }
+  for (const side of [-1, 1]) {
+    box(head, side * 1.05, 0.37, 1.57, 0.44, 0.2, 0.09, 0xc18752);
+    box(head, side * 0.88, 1.55, 1.73, 0.55, 0.11, 0.07, 0x6a4830);
+  }
+  for (const [x, y, w, h] of [[1.69,-0.05,.12,.55],[1.95,-0.05,.12,.55],[1.82,-.31,.38,.12]])
+    box(head, x, y, 0.45, w, h, 0.14, 0xd8ae52);
   batch(head);
   const eyes = [];
   for (const side of [-1, 1]) {
@@ -203,6 +219,8 @@ export function createMerchant() {
   return actor;
 }
 export function createTradingPost() {
+  const sunset = createHarborSunset();
+  if (sunset) return sunset;
   const root = new THREE.Group(),
     stand = new THREE.Group(),
     wood = new THREE.Group();
@@ -336,7 +354,7 @@ export function createTradingPost() {
   crate(wood, -3.7, 0, -3, 2);
   crate(wood, -3.7, 2, -3, 1.8);
   batch(wood);
-  stand.add(wood);
+  stand.add(tradingPostAsset ? tradingPostAsset.clone(true) : wood);
   const merchant = createMerchant();
   merchant.position.set(0, 2.2, 0.3);
   merchant.scale.setScalar(0.75);
@@ -423,10 +441,12 @@ export function createTradingPost() {
   return root;
 }
 export function animateTradingPost(root, time, gesture = 0, reduced = false) {
+  if (root.userData.harborSunset) return animateHarborSunset(root, time, gesture, reduced);
   const { merchant, lamps, ships, banner, cloth, emblem } = root.userData;
   const motion = reduced ? 0 : 1;
   merchant.position.y = 2.2 + Math.sin(time * 1.4) * 0.055 * motion;
-  merchant.userData.head.rotation.y = Math.sin(time * 0.38) * 0.08 * motion;
+  merchant.userData.head.rotation.y =
+    (merchant.userData.lookYaw || 0) + Math.sin(time * 0.38) * 0.018 * motion;
   merchant.userData.head.rotation.x =
     (Math.sin(time * 0.7) * 0.025 + Math.sin(gesture * Math.PI * 2) * 0.07) *
     motion;
@@ -447,6 +467,7 @@ export function animateTradingPost(root, time, gesture = 0, reduced = false) {
     light.intensity = 12 + pulse * 17 * motion;
   });
   ships.forEach((ship, i) => {
+    animateVessel(ship, reduced ? 0 : time + i * 1.7);
     ship.position.y = -0.35 + Math.sin(time * 0.8 + i) * 0.11 * motion;
     ship.rotation.z = Math.sin(time * 0.6 + i) * 0.013 * motion;
   });

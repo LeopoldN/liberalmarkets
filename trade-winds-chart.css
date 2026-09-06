@@ -1,0 +1,212 @@
+#chart {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #292c30;
+  overflow: auto;
+}
+#chart .chart-heading,
+#chart .chart-help {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+#chart-stage {
+  width: 100%;
+  height: 100%;
+  min-width: 950px;
+  min-height: 700px;
+  position: relative;
+}
+#chart-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.chart-port-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.chart-port {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  pointer-events: auto;
+  background: #dec394 url("assets/trade-winds/parchment.svg") center/240px;
+  color: #282015;
+  padding: 4px 9px;
+  border: 1px solid #b58b51;
+  border-bottom: 3px solid #8d6437;
+  font:
+    bold clamp(11px, 1.05vw, 17px) Georgia,
+    serif;
+  white-space: nowrap;
+  box-shadow: 1px 3px 3px #17160e66;
+}
+.chart-port:hover {
+  background-color: #f0d397;
+  filter: brightness(1.1);
+}
+.chart-port[aria-pressed="true"] {
+  background: #e9c983;
+  border-color: #845127;
+  color: #7a321e;
+  box-shadow:
+    0 0 0 2px #f2d48b88,
+    2px 4px 4px #17160e77;
+}
+#chart .chart-bottom {
+  position: absolute;
+  left: 11%;
+  right: 7%;
+  bottom: 6%;
+  display: grid;
+  grid-template-columns: 23% 1fr 23%;
+  align-items: center;
+  gap: 22px;
+  background: none;
+  margin: 0;
+  padding: 0;
+  pointer-events: auto;
+}
+#chart .chart-bottom select {
+  width: 100%;
+  min-width: 0;
+  background: #3b281c url("assets/trade-winds/wood.svg") center/350px;
+  color: #eacf9b;
+  font:
+    20px Georgia,
+    serif;
+  border: 4px solid #92643b;
+  padding: 12px;
+  box-shadow:
+    inset 0 0 0 2px #342416,
+    0 2px 4px #17120c;
+  border-radius: 0;
+}
+#chart #route-info {
+  font:
+    clamp(12px, 1.1vw, 18px)/1.5 Georgia,
+    serif;
+  color: #e2c58e;
+  margin: 0;
+  text-shadow: 1px 2px #20170f;
+}
+#chart #chart-set-sail {
+  padding: 14px;
+  color: #f5dfac;
+  background: linear-gradient(120deg, #687541, #47552e);
+  border: 5px solid #a17b43;
+  box-shadow:
+    inset 0 0 0 2px #cdb47b77,
+    0 3px 0 #48321e;
+  font:
+    bold 25px Georgia,
+    serif;
+}
+#chart #close-chart {
+  position: fixed;
+  right: 20px;
+  top: 16px;
+  z-index: 4;
+  background: #3d2c20;
+  border: 2px solid #9a7949;
+  width: 40px;
+  height: 40px;
+  color: #e4c689;
+}
+#chart .chart-routes {
+  position: absolute;
+  background: #d4b683 url("assets/trade-winds/parchment.svg") center/350px;
+  box-shadow:
+    inset 0 0 0 3px #87623a66,
+    2px 4px 5px #29201766;
+  padding: 12px 16px;
+  color: #302317;
+  font:
+    14px/1.5 Georgia,
+    serif;
+  transform: translateY(-100%);
+}
+#chart .chart-routes strong {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+#chart .chart-routes button {
+  display: block;
+  font: inherit;
+  padding: 2px 0;
+  color: inherit;
+}
+.chart-load-message {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  color: #efdab1;
+  background: #2f251c;
+  padding: 22px 30px;
+  font:
+    18px Georgia,
+    serif;
+}
+@media (max-height: 800px) {
+  #chart .chart-bottom select {
+    font-size: 17px;
+    padding: 9px;
+  }
+  #chart #chart-set-sail {
+    font-size: 21px;
+    padding: 10px;
+  }
+  #chart .chart-routes {
+    font-size: 12px;
+    padding: 9px 13px;
+  }
+  #chart .chart-routes strong {
+    font-size: 14px;
+  }
+}
+@media (max-width: 700px) {
+  #chart .chart-bottom {
+    position: fixed;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    padding: 12px;
+    background: #35261ef5;
+    grid-template-columns: 1fr 110px;
+    gap: 8px;
+  }
+  #chart #route-info {
+    grid-column: 1/-1;
+    grid-row: 2;
+    font-size: 12px;
+  }
+  #chart .chart-bottom select {
+    font-size: 16px;
+    padding: 8px;
+  }
+  #chart #chart-set-sail {
+    font-size: 18px;
+    padding: 8px;
+  }
+  #chart .chart-routes {
+    display: none;
+  }
+  #chart #close-chart {
+    right: 12px;
+    top: 12px;
+  }
+}

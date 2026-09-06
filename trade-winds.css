@@ -5,6 +5,23 @@
   --wood: #241f17;
   --muted: #b0a18a;
 }
+.salvage-action {
+  position: fixed;
+  left: 50%;
+  bottom: calc(8% + 70px);
+  transform: translateX(-50%);
+  min-width: 220px;
+  max-width: calc(100vw - 36px);
+  padding: 12px 20px;
+  background: #242c26ed;
+  border: 1px solid #a99561;
+  box-shadow: 0 4px 0 #14282477;
+  text-align: center;
+  z-index: 2;
+}
+.salvage-action span { display: block; font-size: 16px; }
+.salvage-action small { display: block; margin-top: 5px; color: #dfc489; font-size: 12px; }
+.salvage-action kbd { margin-left: 8px; padding: 2px 5px; border: 1px solid #9b9278; font: inherit; font-size: 12px; }
 * {
   box-sizing: border-box;
 }

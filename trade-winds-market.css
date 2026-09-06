@@ -17,6 +17,27 @@
 #market::backdrop {
   background: #201a14;
 }
+/* Let the harbor play on its own before revealing the ledger and plaques.
+   Applying this only while open restarts the entrance on every port visit.
+   Visibility also keeps the hidden controls out of keyboard/pointer navigation. */
+#market[open] > :not(#trading-post-scene) {
+  animation: market-ui-arrive 600ms ease-out 1.5s both;
+}
+@keyframes market-ui-arrive {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #market[open] > :not(#trading-post-scene) {
+    animation-duration: 1ms;
+  }
+}
 #trading-post-scene {
   position: absolute;
   inset: 0;

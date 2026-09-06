@@ -257,9 +257,17 @@
           </section>
           <section>
             <h2>NPCs &amp; mobs</h2>
+            <button data-model="frigate" aria-pressed="false">British frigate</button>
+            <button data-model="storm" aria-pressed="false">Thunderstorm</button>
+            <button data-model="whirlpool" aria-pressed="false">Gulf whirlpool</button>
+            <button data-model="shark" aria-pressed="false">Shark fin</button>
             <button data-model="kraken" aria-pressed="false">
               Atlantic Kraken
             </button>
+          </section>
+          <section>
+            <h2>Floating cargo</h2>
+            <button data-model="debris" aria-pressed="false">Merchant debris</button>
           </section>
         </nav>
         <div id="mob-controls" hidden>
@@ -282,6 +290,16 @@
           "
           >Animated trading post →</a
         >
+        <a
+          href="trade-winds-chart-preview.html"
+          style="
+            display: block;
+            padding: 14px 12px;
+            margin-top: 8px;
+            background: #dfdfc8;
+          "
+          >Blender nautical chart →</a
+        >
         <p class="note">
           Drag to turn the model.<br />Scroll to zoom.<br /><br />These are the
           same models used in the game.
@@ -293,12 +311,13 @@
           <p id="description"></p>
         </div>
         <div class="tools">
+          <button id="vessel-motion" aria-pressed="false" hidden>Pause motion</button>
           <button id="left" aria-label="Rotate left">↶</button
           ><button id="reset">Reset view</button
           ><button id="right" aria-label="Rotate right">↷</button>
         </div>
       </div>
     </main>
-    <script type="module" src="trade-winds-model-viewer.mjs"></script>
+    <script type="module" src="trade-winds-model-viewer.mjs?v=storms-size-4"></script>
   </body>
 </html>

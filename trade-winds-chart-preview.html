@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Blender chart — Trade Winds</title>
+    <link rel="stylesheet" href="trade-winds.css" />
+    <link rel="stylesheet" href="trade-winds-chart.css" />
+  </head>
+  <body>
+    <dialog open id="chart" aria-labelledby="chart-title">
+      <div class="chart-heading">
+        <h2 id="chart-title">A sea of possibilities.</h2>
+      </div>
+      <p class="chart-help">
+        Choose a port to mark its bearing on your compass. You sail the route.
+      </p>
+      <button id="close-chart" class="close-button" aria-label="Close chart">
+        ×
+      </button>
+      <div id="chart-stage">
+        <aside class="chart-routes">
+          <strong>Popular Routes</strong
+          ><button data-route="royal">▪ Havana → Port Royal</button
+          ><button data-route="cartagena">▪ Port Royal → Cartagena</button
+          ><button data-route="sanjuan">▪ Santo Domingo → San Juan</button>
+        </aside>
+        <div class="chart-bottom">
+          <select id="destination" aria-label="Destination port"></select>
+          <p id="route-info">Chart a course. Follow the gold compass marker.</p>
+          <button id="chart-set-sail">Set Sail</button>
+        </div>
+      </div>
+    </dialog>
+    <script type="module">
+      import { NauticalChartScene } from "./trade-winds-chart.mjs";
+      import { PORTS, newState, toWorld } from "./trade-winds-engine.mjs";
+      const state = newState(toWorld(-78.6, 16.8));
+      state.target = "royal";
+      const stage = document.querySelector("#chart-stage"),
+        select = document.querySelector("#destination");
+      PORTS.forEach((p) => select.add(new Option(p.name, p.id)));
+      const change = (id) => {
+        state.target = id;
+        select.value = id;
+        chart.update(state);
+        document.querySelector("#route-info").textContent =
+          `${PORTS.find((p) => p.id === id).name} selected. Follow the gold compass marker in the game.`;
+      };
+      const chart = new NauticalChartScene(stage, { onSelect: change });
+      stage.addEventListener("chartlayout", ({ detail: c }) => {
+        const p = c.screen(new THREE.Vector3(-49, 2, 47)),
+          end = c.screen(new THREE.Vector3(59, 2, 47));
+        Object.assign(stage.querySelector(".chart-bottom").style, {
+          left: p.x + "px",
+          top: p.y - 26 + "px",
+          width: end.x - p.x + "px",
+          right: "auto",
+          bottom: "auto",
+        });
+        const r = c.screen(new THREE.Vector3(-56, 2, 33));
+        Object.assign(stage.querySelector(".chart-routes").style, {
+          left: r.x + "px",
+          top: r.y + "px",
+        });
+      });
+      import * as THREE from "./assets/vendor/three.module.js";
+      select.onchange = () => change(select.value);
+      select.value = "royal";
+      stage
+        .querySelectorAll("[data-route]")
+        .forEach((b) => (b.onclick = () => change(b.dataset.route)));
+      document.querySelector("#close-chart").onclick = () =>
+        (location.href = "trade-winds-models.html");
+      document.querySelector("#chart-set-sail").onclick = () =>
+        (location.href = "trade-winds.html");
+      chart.start(state);
+    </script>
+  </body>
+</html>

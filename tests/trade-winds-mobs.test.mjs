@@ -208,8 +208,8 @@ test("pursuit speed is fixed, frame-rate independent, and faster boats pull away
     };
   }
   for (const fps of [30, 60, 120]) {
-    const equal = chase(24, fps),
-      faster = chase(40, fps);
+    const equal = chase(KRAKEN_SPEED, fps),
+      faster = chase(KRAKEN_SPEED + 16, fps);
     assert.ok(Math.abs(equal.travelled - KRAKEN_SPEED * 3) < 1e-8);
     assert.ok(Math.abs(equal.gap - 200) < 1e-8);
     assert.ok(Math.abs(faster.travelled - KRAKEN_SPEED * 3) < 1e-8);
