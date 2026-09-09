@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-09-08T16:32:03.960Z",
+  "generatedAt": "2026-09-09T16:28:20.018Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Adani Enterprises shares jump as airport unit enters into $1 billion fundraising deal",
+      "link": "https://www.cnbc.com/2026/09/09/adani-enterprises-airport-fundraise-shares.html",
+      "pubDate": "Wed, 09 Sep 2026 06:26:59 GMT"
+    },
+    {
+      "title": "China&apos;s EV makers shift gears to focus on humanoids as car market slows",
+      "link": "https://www.cnbc.com/2026/09/09/chinas-ev-makers-shift-gears-to-focus-on-humanoids-as-car-market-slows.html",
+      "pubDate": "Wed, 09 Sep 2026 04:12:51 GMT"
+    },
+    {
+      "title": "How one hedge-fund manager built his firm to be powered entirely by AI agents",
+      "link": "https://www.cnbc.com/2026/09/08/brian-kelly-bracket22-ai-agents.html",
+      "pubDate": "Tue, 08 Sep 2026 21:59:13 GMT"
+    },
     {
       "title": "Visa tells CNBC it is expanding data offering for blockchain lenders as demand for stablecoin-linked cards surges",
       "link": "https://www.cnbc.com/2026/09/08/visa-blockchain-lender-stablecoin-cards.html",
@@ -77,21 +92,6 @@
       "title": "Aon CEO says insurance broker seeks to build &apos;premiere middle market platform&apos; with purchase of rival USI",
       "link": "https://www.cnbc.com/2026/08/31/aon-ceo-says-usi-deal-seeks-to-build-premiere-middle-market-insurance-platform.html",
       "pubDate": "Mon, 31 Aug 2026 15:15:22 GMT"
-    },
-    {
-      "title": "Kalshi partners with brokerage Alpaca as it tries to build its international audience",
-      "link": "https://www.cnbc.com/2026/08/31/kalshi-looks-international-partners-with-brokerage-alpaca.html",
-      "pubDate": "Mon, 31 Aug 2026 18:22:51 GMT"
-    },
-    {
-      "title": "Crypto exchange Gemini not at fault for collapse of Earn lending program, arbitrator says",
-      "link": "https://www.cnbc.com/2026/08/31/gemini-not-at-fault-for-collapse-of-earn-lending-program-arbitrator-says.html",
-      "pubDate": "Mon, 31 Aug 2026 15:22:43 GMT"
-    },
-    {
-      "title": "China&apos;s Xi builds diplomatic clout with multiple state visits ahead of Trump summit",
-      "link": "https://www.cnbc.com/2026/08/31/china-xi-us-trump-visit-sco-brics-modi-india.html",
-      "pubDate": "Tue, 01 Sep 2026 18:51:50 GMT"
     }
   ]
 }
