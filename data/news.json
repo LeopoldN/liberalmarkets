@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-09-09T16:28:20.018Z",
+  "generatedAt": "2026-09-10T16:17:24.966Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Kalshi launches ‘perps’ for gold and silver following CFTC approval, expanding futures offerings",
+      "link": "https://www.cnbc.com/2026/09/10/kalshi-launches-perps-for-gold-and-silver-following-cftc-approval-expanding-futures-offerings.html",
+      "pubDate": "Thu, 10 Sep 2026 14:00:11 GMT"
+    },
+    {
+      "title": "Ant International partners with Visa, Mastercard on developing AI payments",
+      "link": "https://www.cnbc.com/2026/09/10/ant-international-visa-mastercard-ai-agent-payment-standard.html",
+      "pubDate": "Thu, 10 Sep 2026 01:53:50 GMT"
+    },
     {
       "title": "Adani Enterprises shares jump as airport unit enters into $1 billion fundraising deal",
       "link": "https://www.cnbc.com/2026/09/09/adani-enterprises-airport-fundraise-shares.html",
@@ -82,16 +92,6 @@
       "title": "Hugging Face&apos;s new duck robot is selling fast. A Chinese chip powers it",
       "link": "https://www.cnbc.com/2026/09/01/hugging-faces-new-duck-robot-is-selling-fast-a-chinese-chip-powers-it.html",
       "pubDate": "Wed, 02 Sep 2026 00:11:14 GMT"
-    },
-    {
-      "title": "Markets see Warsh endorsing a rate hike in September. Not everyone is convinced",
-      "link": "https://www.cnbc.com/2026/08/31/markets-see-warsh-endorsing-a-rate-hike-in-september-not-everyone-is-convinced.html",
-      "pubDate": "Mon, 31 Aug 2026 19:38:38 GMT"
-    },
-    {
-      "title": "Aon CEO says insurance broker seeks to build &apos;premiere middle market platform&apos; with purchase of rival USI",
-      "link": "https://www.cnbc.com/2026/08/31/aon-ceo-says-usi-deal-seeks-to-build-premiere-middle-market-insurance-platform.html",
-      "pubDate": "Mon, 31 Aug 2026 15:15:22 GMT"
     }
   ]
 }
