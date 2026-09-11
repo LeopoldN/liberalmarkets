@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-09-10T16:17:24.966Z",
+  "generatedAt": "2026-09-11T16:21:32.185Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "A Chinese humanoid startup flips &apos;distillation&apos; claim on OpenAI as it releases a new robotics model",
+      "link": "https://www.cnbc.com/2026/09/11/chinese-humanoid-robot-startup-distillation-claim-openai.html",
+      "pubDate": "Fri, 11 Sep 2026 06:02:40 GMT"
+    },
+    {
+      "title": "The iPhone Duo enters China’s crowded foldable market — and faces a price test",
+      "link": "https://www.cnbc.com/2026/09/11/the-iphone-duo-enters-chinas-crowded-foldable-market.html",
+      "pubDate": "Fri, 11 Sep 2026 14:30:29 GMT"
+    },
+    {
+      "title": "OpenAI targets work of Wall Street junior bankers with new ChatGPT for Financial Services",
+      "link": "https://www.cnbc.com/2026/09/10/openai-chatgpt-for-financial-services-targets-work-of-junior-bankers.html",
+      "pubDate": "Fri, 11 Sep 2026 16:06:31 GMT"
+    },
     {
       "title": "Kalshi launches ‘perps’ for gold and silver following CFTC approval, expanding futures offerings",
       "link": "https://www.cnbc.com/2026/09/10/kalshi-launches-perps-for-gold-and-silver-following-cftc-approval-expanding-futures-offerings.html",
@@ -77,21 +92,6 @@
       "title": "Nepal’s mountain tourism industry faces ‘serious warning’ after Himalayan flood disaster",
       "link": "https://www.cnbc.com/2026/09/02/nepal-tibet-floods-adventure-tourism-economy.html",
       "pubDate": "Wed, 02 Sep 2026 09:23:18 GMT"
-    },
-    {
-      "title": "Prediction market traders think job creation rebounded in August",
-      "link": "https://www.cnbc.com/2026/09/01/prediction-market-traders-think-job-creation-rebounded-in-august.html",
-      "pubDate": "Tue, 01 Sep 2026 18:57:14 GMT"
-    },
-    {
-      "title": "Fed Governor Barr says he&apos;ll support rate hike if inflation doesn&apos;t ease",
-      "link": "https://www.cnbc.com/2026/09/01/fed-governor-barr-says-hell-support-rate-hike-if-inflation-doesnt-ease.html",
-      "pubDate": "Tue, 01 Sep 2026 14:01:27 GMT"
-    },
-    {
-      "title": "Hugging Face&apos;s new duck robot is selling fast. A Chinese chip powers it",
-      "link": "https://www.cnbc.com/2026/09/01/hugging-faces-new-duck-robot-is-selling-fast-a-chinese-chip-powers-it.html",
-      "pubDate": "Wed, 02 Sep 2026 00:11:14 GMT"
     }
   ]
 }
