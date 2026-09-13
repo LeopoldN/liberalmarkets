@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-09-12T15:26:24.815Z",
+  "generatedAt": "2026-09-13T16:06:47.957Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "NFL and midterm elections set up prediction markets for a critical fall season",
+      "link": "https://www.cnbc.com/2026/09/13/nfl-and-midterms-mark-key-fall-season-for-prediction-markets.html",
+      "pubDate": "Sun, 13 Sep 2026 11:52:33 GMT"
+    },
     {
       "title": "Inflation is outpacing wage growth again, squeezing Americans’ paychecks",
       "link": "https://www.cnbc.com/2026/09/12/inflation-is-outpacing-wage-growth-again-squeezing-americans-paychecks.html",
@@ -87,11 +92,6 @@
       "title": "New York Fed&apos;s Williams says yield surge due to strong economic prospects",
       "link": "https://www.cnbc.com/2026/09/02/new-york-feds-williams-says-yield-surge-due-to-strong-economic-prospects.html",
       "pubDate": "Wed, 02 Sep 2026 17:21:59 GMT"
-    },
-    {
-      "title": "Berkshire CEO Greg Abel says Japanese bond yields not a challenge for trading houses right now",
-      "link": "https://www.cnbc.com/2026/09/02/berkshire-ceo-says-japanese-bond-yields-not-a-challenge-for-trading-houses.html",
-      "pubDate": "Wed, 02 Sep 2026 11:09:15 GMT"
     }
   ]
 }
