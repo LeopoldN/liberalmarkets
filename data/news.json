@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-09-13T16:06:47.957Z",
+  "generatedAt": "2026-09-14T18:01:15.517Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Warsh&apos;s credibility is on the line this week as Trump policies put pressure on Fed to hike",
+      "link": "https://www.cnbc.com/2026/09/14/warshs-credibility-is-on-the-line-this-week-as-trump-policies-put-pressure-on-fed-to-hike.html",
+      "pubDate": "Mon, 14 Sep 2026 17:26:21 GMT"
+    },
+    {
+      "title": "Prediction market traders think gas prices will hit new highs for the year",
+      "link": "https://www.cnbc.com/2026/09/14/prediction-markets-traders-think-gas-prices-will-hit-new-highs-in-2026.html",
+      "pubDate": "Mon, 14 Sep 2026 15:49:39 GMT"
+    },
+    {
+      "title": "China says AI CEOs&apos; call for a slowdown is &apos;fear mongering&apos;",
+      "link": "https://www.cnbc.com/2026/09/14/china-ai-slowdown-us-tech-ceos.html",
+      "pubDate": "Mon, 14 Sep 2026 13:18:23 GMT"
+    },
+    {
+      "title": "Prediction markets are becoming more professionalized, but also harder to beat",
+      "link": "https://www.cnbc.com/2026/09/14/prediction-markets-efficient-win-lose-beat.html",
+      "pubDate": "Mon, 14 Sep 2026 01:37:44 GMT"
+    },
+    {
       "title": "NFL and midterm elections set up prediction markets for a critical fall season",
       "link": "https://www.cnbc.com/2026/09/13/nfl-and-midterms-mark-key-fall-season-for-prediction-markets.html",
-      "pubDate": "Sun, 13 Sep 2026 11:52:33 GMT"
+      "pubDate": "Mon, 14 Sep 2026 12:16:52 GMT"
     },
     {
       "title": "Inflation is outpacing wage growth again, squeezing Americans’ paychecks",
@@ -72,26 +92,6 @@
       "title": "Sugar is outperforming the stock market this year. Here&apos;s what&apos;s driving it, and where it can go from here",
       "link": "https://www.cnbc.com/2026/09/06/sugar-is-outperforming-the-stock-market-this-year-whats-driving-it.html",
       "pubDate": "Sun, 06 Sep 2026 13:19:01 GMT"
-    },
-    {
-      "title": "White House has vetted candidates for key CFTC vacancies, sources tell CNBC. It&apos;s unclear if they will be filled",
-      "link": "https://www.cnbc.com/2026/09/04/white-house-has-vetted-candidates-for-key-cftc-vacancies-sources-tell-cnbc.html",
-      "pubDate": "Tue, 08 Sep 2026 12:32:19 GMT"
-    },
-    {
-      "title": "Bitcoin heads for third winning week in a row as macro pressures mount",
-      "link": "https://www.cnbc.com/2026/09/04/bitcoin-heads-for-third-winning-week-in-a-row-as-macro-pressures-mount.html",
-      "pubDate": "Fri, 04 Sep 2026 14:36:48 GMT"
-    },
-    {
-      "title": "China hits back at G20 statement on its reliance on exports, accusing them of &apos;promoting protectionism&apos;",
-      "link": "https://www.cnbc.com/2026/09/03/china-g20-exports-trade.html",
-      "pubDate": "Thu, 03 Sep 2026 11:12:54 GMT"
-    },
-    {
-      "title": "New York Fed&apos;s Williams says yield surge due to strong economic prospects",
-      "link": "https://www.cnbc.com/2026/09/02/new-york-feds-williams-says-yield-surge-due-to-strong-economic-prospects.html",
-      "pubDate": "Wed, 02 Sep 2026 17:21:59 GMT"
     }
   ]
 }
