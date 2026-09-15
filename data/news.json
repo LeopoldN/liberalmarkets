@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-09-14T18:01:15.517Z",
+  "generatedAt": "2026-09-15T16:48:53.753Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "China&apos;s August retail sales miss forecast while investment slump deepens, piling pressure on Beijing",
+      "link": "https://www.cnbc.com/2026/09/15/china-august-retail-sales-industrial-output-investment-exports-.html",
+      "pubDate": "Tue, 15 Sep 2026 09:46:14 GMT"
+    },
+    {
+      "title": "Bank of America expects third-quarter investment banking fees to fall more than 10%; shares slide",
+      "link": "https://www.cnbc.com/2026/09/14/bank-of-america-bac-q3-investment-banking-fees.html",
+      "pubDate": "Mon, 14 Sep 2026 20:34:23 GMT"
+    },
+    {
       "title": "Warsh&apos;s credibility is on the line this week as Trump policies put pressure on Fed to hike",
       "link": "https://www.cnbc.com/2026/09/14/warshs-credibility-is-on-the-line-this-week-as-trump-policies-put-pressure-on-fed-to-hike.html",
-      "pubDate": "Mon, 14 Sep 2026 17:26:21 GMT"
+      "pubDate": "Mon, 14 Sep 2026 20:49:03 GMT"
     },
     {
       "title": "Prediction market traders think gas prices will hit new highs for the year",
@@ -16,7 +26,7 @@
     {
       "title": "China says AI CEOs&apos; call for a slowdown is &apos;fear mongering&apos;",
       "link": "https://www.cnbc.com/2026/09/14/china-ai-slowdown-us-tech-ceos.html",
-      "pubDate": "Mon, 14 Sep 2026 13:18:23 GMT"
+      "pubDate": "Mon, 14 Sep 2026 20:56:15 GMT"
     },
     {
       "title": "Prediction markets are becoming more professionalized, but also harder to beat",
@@ -82,16 +92,6 @@
       "title": "Crypto platforms have lost over $3.63 billion to cyberattacks — even though most of them did security checks",
       "link": "https://www.cnbc.com/2026/09/08/crypto-platforms-lost-billions-to-cyberattacks-many-even-after-audits.html",
       "pubDate": "Tue, 08 Sep 2026 08:16:11 GMT"
-    },
-    {
-      "title": "China says it will pump $54 billion into banks and insurers — but their stocks still fell",
-      "link": "https://www.cnbc.com/2026/09/07/china-state-banks-lenders-insurers-capital-solvency-bankrupt-nim-.html",
-      "pubDate": "Mon, 07 Sep 2026 23:23:10 GMT"
-    },
-    {
-      "title": "Sugar is outperforming the stock market this year. Here&apos;s what&apos;s driving it, and where it can go from here",
-      "link": "https://www.cnbc.com/2026/09/06/sugar-is-outperforming-the-stock-market-this-year-whats-driving-it.html",
-      "pubDate": "Sun, 06 Sep 2026 13:19:01 GMT"
     }
   ]
 }
