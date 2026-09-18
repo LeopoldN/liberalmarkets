@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-09-17T16:48:50.126Z",
+  "generatedAt": "2026-09-18T16:18:10.254Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Warren Buffett steps down as chairman of Berkshire Hathaway: &apos;Father Time always wins&apos;",
+      "link": "https://www.cnbc.com/2026/09/18/buffett-stepping-down-as-berkshire-chairman.html",
+      "pubDate": "Fri, 18 Sep 2026 12:04:02 GMT"
+    },
+    {
+      "title": "Securitize jumps after regulators greenlight some tokenized U.S. stock trading",
+      "link": "https://www.cnbc.com/2026/09/17/securitize-jumps-after-regulators-greenlight-tokenized-us-stocks.html",
+      "pubDate": "Thu, 17 Sep 2026 17:59:51 GMT"
+    },
+    {
       "title": "A Chinese AI company just connected its model to Wall Street&apos;s leading data providers",
       "link": "https://www.cnbc.com/2026/09/17/china-moonshot-kimi-financial-services.html",
-      "pubDate": "Thu, 17 Sep 2026 14:30:25 GMT"
+      "pubDate": "Fri, 18 Sep 2026 08:41:11 GMT"
     },
     {
       "title": "OpenAI and Anthropic are making 10 times more revenue than all Chinese AI models combined, research group Rhodium says",
@@ -82,16 +92,6 @@
       "title": "A Chinese humanoid startup flips &apos;distillation&apos; claim on OpenAI as it releases a new robotics model",
       "link": "https://www.cnbc.com/2026/09/11/chinese-humanoid-robot-startup-distillation-claim-openai.html",
       "pubDate": "Fri, 11 Sep 2026 06:02:40 GMT"
-    },
-    {
-      "title": "The iPhone Duo enters China’s crowded foldable market — and faces a price test",
-      "link": "https://www.cnbc.com/2026/09/11/the-iphone-duo-enters-chinas-crowded-foldable-market.html",
-      "pubDate": "Fri, 11 Sep 2026 14:30:29 GMT"
-    },
-    {
-      "title": "OpenAI targets work of Wall Street junior bankers with new ChatGPT for Financial Services",
-      "link": "https://www.cnbc.com/2026/09/10/openai-chatgpt-for-financial-services-targets-work-of-junior-bankers.html",
-      "pubDate": "Fri, 11 Sep 2026 16:06:31 GMT"
     }
   ]
 }
