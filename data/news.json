@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-09-18T16:18:10.254Z",
+  "generatedAt": "2026-09-19T15:47:55.696Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Three words from Kevin Warsh have Wall Street wondering how far the Fed will go with rate hikes",
+      "link": "https://www.cnbc.com/2026/09/18/three-words-from-kevin-warsh-have-wall-street-wondering-how-far-the-fed-will-go-with-rate-hikes.html",
+      "pubDate": "Fri, 18 Sep 2026 18:28:31 GMT"
+    },
     {
       "title": "Warren Buffett steps down as chairman of Berkshire Hathaway: &apos;Father Time always wins&apos;",
       "link": "https://www.cnbc.com/2026/09/18/buffett-stepping-down-as-berkshire-chairman.html",
@@ -87,11 +92,6 @@
       "title": "Inflation is outpacing wage growth again, squeezing Americans’ paychecks",
       "link": "https://www.cnbc.com/2026/09/12/inflation-is-outpacing-wage-growth-again-squeezing-americans-paychecks.html",
       "pubDate": "Sat, 12 Sep 2026 12:49:15 GMT"
-    },
-    {
-      "title": "A Chinese humanoid startup flips &apos;distillation&apos; claim on OpenAI as it releases a new robotics model",
-      "link": "https://www.cnbc.com/2026/09/11/chinese-humanoid-robot-startup-distillation-claim-openai.html",
-      "pubDate": "Fri, 11 Sep 2026 06:02:40 GMT"
     }
   ]
 }
