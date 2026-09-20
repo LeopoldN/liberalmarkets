@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-09-19T15:47:55.696Z",
+  "generatedAt": "2026-09-20T15:56:03.649Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "‘It&apos;s awful’: How tariffs, soaring fuel costs and higher interest rates are squeezing American companies",
+      "link": "https://www.cnbc.com/2026/09/20/tariffs-fuel-prices-and-interest-rates-squeeze-us-companies.html",
+      "pubDate": "Sun, 20 Sep 2026 12:47:23 GMT"
+    },
     {
       "title": "Three words from Kevin Warsh have Wall Street wondering how far the Fed will go with rate hikes",
       "link": "https://www.cnbc.com/2026/09/18/three-words-from-kevin-warsh-have-wall-street-wondering-how-far-the-fed-will-go-with-rate-hikes.html",
@@ -87,11 +92,6 @@
       "title": "NFL and midterm elections set up prediction markets for a critical fall season",
       "link": "https://www.cnbc.com/2026/09/13/nfl-and-midterms-mark-key-fall-season-for-prediction-markets.html",
       "pubDate": "Mon, 14 Sep 2026 12:16:52 GMT"
-    },
-    {
-      "title": "Inflation is outpacing wage growth again, squeezing Americans’ paychecks",
-      "link": "https://www.cnbc.com/2026/09/12/inflation-is-outpacing-wage-growth-again-squeezing-americans-paychecks.html",
-      "pubDate": "Sat, 12 Sep 2026 12:49:15 GMT"
     }
   ]
 }
