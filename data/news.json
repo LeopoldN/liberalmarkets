@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-09-23T16:43:59.006Z",
+  "generatedAt": "2026-09-24T17:00:58.467Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Philadelphia Fed&apos;s Anna Paulson says &apos;modest&apos; rate moves likely ahead to tame inflation",
+      "link": "https://www.cnbc.com/2026/09/24/philadelphia-feds-anna-paulson-says-modest-rate-moves-likely-ahead-to-tame-inflation.html",
+      "pubDate": "Thu, 24 Sep 2026 17:00:36 GMT"
+    },
+    {
+      "title": "China confirms first AI talks with U.S. have taken place, hints at trade truce extension",
+      "link": "https://www.cnbc.com/2026/09/24/china-confirms-first-ai-talks-with-us-have-taken-place-hints-at-trade-truce-extension.html",
+      "pubDate": "Thu, 24 Sep 2026 14:16:27 GMT"
+    },
+    {
+      "title": "U.S.-China trade truce extended for two months, Bessent says, as Xi begins state visit",
+      "link": "https://www.cnbc.com/2026/09/24/us-china-trade-truce-bessent-trump-xi.html",
+      "pubDate": "Thu, 24 Sep 2026 04:55:59 GMT"
+    },
+    {
       "title": "Trump-Xi meeting: Why China&apos;s self-sufficiency changes the calculus",
       "link": "https://www.cnbc.com/2026/09/23/trump-xi-meeting-why-chinas-self-sufficiency-changes-the-calculus.html",
-      "pubDate": "Wed, 23 Sep 2026 13:29:08 GMT"
+      "pubDate": "Thu, 24 Sep 2026 01:44:14 GMT"
     },
     {
       "title": "CFTC says prediction markets&apos; &apos;mentions&apos; contracts present a higher risk of manipulation",
@@ -21,7 +36,7 @@
     {
       "title": "Here&apos;s who we know is going to the Trump-Xi dinner so far",
       "link": "https://www.cnbc.com/2026/09/22/heres-who-we-know-is-going-to-the-trump-xi-dinner-so-far.html",
-      "pubDate": "Tue, 22 Sep 2026 23:43:43 GMT"
+      "pubDate": "Thu, 24 Sep 2026 01:54:35 GMT"
     },
     {
       "title": "Jamie Dimon says hyperscaler AI spending could hit $1 trillion next year",
@@ -77,21 +92,6 @@
       "title": "Senate is still a toss-up, but Democrats now have slight edge, prediction market traders think",
       "link": "https://www.cnbc.com/2026/09/16/prediction-markets-say-democrats-are-slightly-favored-to-win-senate.html",
       "pubDate": "Wed, 16 Sep 2026 16:26:41 GMT"
-    },
-    {
-      "title": "China&apos;s AI leaders keep quiet despite U.S. &apos;publicity&apos; on tech risks",
-      "link": "https://www.cnbc.com/2026/09/16/chinas-ai-leaders-keep-quiet-despite-us-publicity-on-tech-risks.html",
-      "pubDate": "Wed, 16 Sep 2026 04:01:59 GMT"
-    },
-    {
-      "title": "China&apos;s August retail sales miss forecast while investment slump deepens, piling pressure on Beijing",
-      "link": "https://www.cnbc.com/2026/09/15/china-august-retail-sales-industrial-output-investment-exports-.html",
-      "pubDate": "Tue, 15 Sep 2026 09:46:14 GMT"
-    },
-    {
-      "title": "Bank of America expects third-quarter investment banking fees to fall more than 10%; shares slide",
-      "link": "https://www.cnbc.com/2026/09/14/bank-of-america-bac-q3-investment-banking-fees.html",
-      "pubDate": "Mon, 14 Sep 2026 20:34:23 GMT"
     }
   ]
 }
