@@ -1,0 +1,622 @@
+[
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 67,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.649999618530273,
+      2.5552866458892822,
+      12.007339477539062
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 69,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.649999618530273,
+      1.5048539638519287,
+      14.155969619750977
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 70,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.649999618530273,
+      1.444217562675476,
+      14.279999732971191
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 77,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.387441635131836,
+      3.0861611366271973,
+      10.921452522277832
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 82,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.593358039855957,
+      1.2539736032485962,
+      14.669137001037598
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 83,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.60849666595459,
+      1.1192644834518433,
+      14.944680213928223
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 88,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.005474090576172,
+      3.6174001693725586,
+      9.834818840026855
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 94,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.56315803527832,
+      1.1363459825515747,
+      14.90973949432373
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 95,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.573078155517578,
+      1.0922191143035889,
+      15.0
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 187,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.349999904632568,
+      2.5307507514953613,
+      12.91571044921875
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 188,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.349999904632568,
+      2.2685678005218506,
+      13.472877502441406
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 189,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.349999904632568,
+      1.6381080150604248,
+      14.812675476074219
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 190,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.349999904632568,
+      1.4370243549346924,
+      15.239999771118164
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 197,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.603390693664551,
+      3.1585776805877686,
+      11.581511497497559
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 198,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.590392112731934,
+      3.035022735595703,
+      11.844078063964844
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 202,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.405580520629883,
+      1.2783191204071045,
+      15.577265739440918
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 203,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.38808536529541,
+      1.112015724182129,
+      15.930678367614746
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 208,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.983006000518799,
+      3.758485794067383,
+      10.306641578674316
+    ]
+  },
+  {
+    "rig": "Lower standing shrouds",
+    "segment": 215,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.432184219360352,
+      1.1405967473983765,
+      15.869940757751465
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 295,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -9.76434326171875,
+      3.9277539253234863,
+      9.199999809265137
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 306,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -9.929204940795898,
+      3.7159035205841064,
+      9.633333206176758
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 317,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.09265422821045,
+      3.5040535926818848,
+      10.066666603088379
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 328,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.248560905456543,
+      3.292203187942505,
+      10.5
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 338,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.390931129455566,
+      3.080352783203125,
+      10.933333396911621
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 339,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.340235710144043,
+      3.080352783203125,
+      10.933333396911621
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 349,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.513317108154297,
+      2.868502616882324,
+      11.366666793823242
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 350,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.470680236816406,
+      2.868502616882324,
+      11.366666793823242
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 360,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.612028121948242,
+      2.6566522121429443,
+      11.799999237060547
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 361,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.56123161315918,
+      2.6566522121429443,
+      11.799999237060547
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 372,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.633866310119629,
+      2.4448020458221436,
+      12.233333587646484
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 445,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.622880935668945,
+      1.1737005710601807,
+      14.833333015441895
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 448,
+    "sail": "Reference canvas 0 tier0",
+    "point": [
+      -10.572959899902344,
+      1.1737005710601807,
+      14.833333969116211
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 740,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      5.417120456695557,
+      4.371102809906006,
+      9.004761695861816
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 751,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      5.257781982421875,
+      4.144783973693848,
+      9.485713958740234
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 752,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      5.307760715484619,
+      4.144783973693848,
+      9.485713958740234
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 762,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      5.095822811126709,
+      3.9184648990631104,
+      9.966666221618652
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 763,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      5.146116256713867,
+      3.9184646606445312,
+      9.966666221618652
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 773,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.936572074890137,
+      3.6921463012695312,
+      10.447619438171387
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 774,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.987119674682617,
+      3.692146062850952,
+      10.447619438171387
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 784,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.785556316375732,
+      3.465826988220215,
+      10.928571701049805
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 785,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.836285591125488,
+      3.465826988220215,
+      10.928571701049805
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 795,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.648061752319336,
+      3.2395081520080566,
+      11.409523963928223
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 806,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.52870512008667,
+      3.0131893157958984,
+      11.89047622680664
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 817,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.431057929992676,
+      2.786870002746582,
+      12.371428489685059
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 828,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.357382774353027,
+      2.560551404953003,
+      12.852380752563477
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 840,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.359055519104004,
+      2.3342325687408447,
+      13.333333015441895
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 889,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.3788838386535645,
+      1.4289567470550537,
+      15.257143020629883
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 901,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.370054244995117,
+      1.202637791633606,
+      15.7380952835083
+    ]
+  },
+  {
+    "rig": "Lower ratlines",
+    "segment": 904,
+    "sail": "Reference canvas 1 tier0",
+    "point": [
+      4.419829845428467,
+      1.202637791633606,
+      15.738094329833984
+    ]
+  },
+  {
+    "rig": "Topmast shrouds",
+    "segment": 37,
+    "sail": "Reference canvas 0 tier1",
+    "point": [
+      -10.773179054260254,
+      0.8463541269302368,
+      16.39739418029785
+    ]
+  },
+  {
+    "rig": "Topmast shrouds",
+    "segment": 109,
+    "sail": "Reference canvas 1 tier1",
+    "point": [
+      4.225933074951172,
+      0.8481350541114807,
+      17.46068572998047
+    ]
+  },
+  {
+    "rig": "Topmast ratlines",
+    "segment": 468,
+    "sail": "Reference canvas 1 tier1",
+    "point": [
+      4.266208648681641,
+      0.8600000143051147,
+      17.286666870117188
+    ]
+  },
+  {
+    "rig": "Topmast ratlines",
+    "segment": 469,
+    "sail": "Reference canvas 1 tier1",
+    "point": [
+      4.315845966339111,
+      0.8600000143051147,
+      17.286666870117188
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 6,
+    "sail": "Shaped outer jib",
+    "point": [
+      -21.549999237060547,
+      -8.109160631875056e-08,
+      23.141071319580078
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 12,
+    "sail": "Shaped spritsail",
+    "point": [
+      -27.41277313232422,
+      2.9374593424336126e-08,
+      11.079999923706055
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 14,
+    "sail": "Shaped inner jib",
+    "point": [
+      -23.730690002441406,
+      -2.49761171744467e-08,
+      14.496273040771484
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 18,
+    "sail": "Shaped inner jib",
+    "point": [
+      -18.764190673828125,
+      -1.7706078381252155e-08,
+      19.282428741455078
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 23,
+    "sail": "Reference canvas 0 tier2",
+    "point": [
+      -11.488298416137695,
+      3.8964799387031235e-08,
+      26.66965103149414
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 59,
+    "sail": "Reference canvas 1 tier2",
+    "point": [
+      3.5658559799194336,
+      1.1519677656224303e-08,
+      29.22787857055664
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 70,
+    "sail": "Reference canvas 2 tier1",
+    "point": [
+      13.54114055633545,
+      6.719716338920989e-09,
+      25.173065185546875
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 79,
+    "sail": "Shaped driver",
+    "point": [
+      18.67755126953125,
+      -1.530472459876364e-08,
+      15.770000457763672
+    ]
+  },
+  {
+    "rig": "Sagged masthead stays",
+    "segment": 82,
+    "sail": "Shaped driver",
+    "point": [
+      20.574604034423828,
+      6.389235807091609e-09,
+      9.872685432434082
+    ]
+  }
+]

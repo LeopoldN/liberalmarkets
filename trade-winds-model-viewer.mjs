@@ -16,7 +16,7 @@ import {
   PORT_VARIANTS,
   disposeModel,
 } from "./trade-winds-models.mjs?v=island-post-1";
-import { loadFrigateAsset, createFrigate, animateFrigate, disposeFrigate } from "./trade-winds-frigates.mjs?v=wind-2";
+import { loadFrigateAsset, createFrigate, animateFrigate, disposeFrigate } from "./trade-winds-frigates.mjs?v=forward-rig-1";
 import { FrigateWake } from "./trade-winds-frigate-wake.mjs";
 import { createWhirlpool, animateWhirlpool, disposeWhirlpool } from "./trade-winds-whirlpool.mjs?v=pull-2";
 import { WHIRLPOOL } from "./trade-winds-whirlpool-field.mjs?v=pull-2";
@@ -87,7 +87,7 @@ const descriptions = {
   storm: "A drifting bank of charcoal voxel clouds with random yellow lightning inside, falling blocky rain, and splashes on the sea. Rare storms are three times more frequent in the Atlantic. Heavy rain slows sailing by up to 35% and deals 1 hull damage every six seconds.",
   whirlpool: "A vast voxel maelstrom in the central Gulf of Mexico. Spiral currents pull ships into a deep, fatal eye. Jagged rocks break the flow into foaming collars and spray. Escape the outer current under sail; the inner pull is stronger than your boat.",
   debris: "Waterlogged merchant cargo: three iron-bound barrels, broken planks, draped sailcloth, a knotted fishing net with cork floats, and loose coils of rope.",
-  frigate: "An 1812 voxel frigate with wind-filled, rippling sails, a fluttering Union Jack, and a flowing foam wake. Peaceful ships patrol at 16 units per second, keep clear of land and harbors, and appear four times as often in the Atlantic. They hold their patrol course when you sail nearby.",
+  frigate: "A circa-1800 Royal Navy frigate with forward-facing animated sails, a fluttering White Ensign, gently swaying anchors, flickering stern lanterns, and a flowing foam wake. Peaceful ships patrol at 16 units per second, keep clear of land and harbors, and appear four times as often in the Atlantic. They hold their patrol course when you sail nearby.",
   shark: "A slim dorsal fin above a submerged shark silhouette, with broad side fins, a beating tail, and a flowing foam wake. Sharks patrol open water, appear more often in the Atlantic, and chase nearby boats at 26.1 units per second.",
   kraken:
     "A deep-sea giant with a plated mantle, amber eyes, and eight independently moving arms. Pale suckers line each curling limb.",

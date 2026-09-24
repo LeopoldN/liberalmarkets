@@ -106,25 +106,33 @@
       dockside conversation, swaying ropes, and a gently rocking frigate.
     </footer>
     <script type="module">
-      import { TradingPostScene } from "./trade-winds-market-scene.mjs?v=clean-harbor-1";
+      import { TownBackground } from "./trade-winds-town-background.mjs";
       import { PORTS } from "./trade-winds-engine.mjs";
       import { loadTradingPostAsset } from "./trade-winds-market-models.mjs";
       await loadTradingPostAsset();
-      const scene = new TradingPostScene(document.querySelector("#scene"), { study: true });
+      const scene = new TownBackground(document.querySelector("#scene"), { study: true });
       const ports = document.querySelector("#port");
       PORTS.forEach((port) => ports.add(new Option(port.name, port.id)));
-      let port = PORTS[0],
+      let port = PORTS.find(p => p.id === new URLSearchParams(location.search).get('port')) || PORTS[0],
         playing = true;
+      ports.value = port.id;
+      const describe = () => {
+        document.querySelector('footer').textContent = port.id === 'belize'
+          ? 'Belize Town at sunset. A working shipyard, a crate carrier walking the quay, swaying boats and crane cargo, and softly flickering lanterns.'
+          : 'A living harbor. A blinking shopkeeper, a sailor taking a drink, dockside conversation, swaying ropes, and a gently rocking frigate.';
+      };
+      describe();
       scene.start(port);
       ports.onchange = () => {
         port = PORTS.find((p) => p.id === ports.value);
+        describe();
         scene.start(port);
         playing = true;
         document.querySelector("#motion").textContent = "Pause motion";
       };
       document.querySelector("#motion").onclick = (e) => {
         playing = !playing;
-        if (playing) scene.start(port);
+        if (playing) scene.start(port, { resume: true });
         else scene.stop();
         e.currentTarget.textContent = playing
           ? "Pause motion"
@@ -134,7 +142,7 @@
         scene.acknowledge();
         if (!playing) {
           playing = true;
-          scene.start(port);
+          scene.start(port, { resume: true });
           document.querySelector("#motion").textContent = "Pause motion";
         }
       };

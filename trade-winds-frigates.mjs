@@ -3,7 +3,7 @@ import { GLTFLoader } from './assets/vendor/GLTFLoader.js';
 import { atlanticWeight } from './trade-winds-ocean.mjs?v=whirlpool-1';
 
 export const FRIGATE_SPEED = 16;
-export const FRIGATE_CLEARANCE = 52;
+export const FRIGATE_CLEARANCE = 56;
 const MAX_FRIGATES = 2;
 
 // Ships face local -Z, matching the player's sailing heading. These encounters
@@ -81,7 +81,7 @@ let asset, loading;
 const instances = new WeakMap();
 export function loadFrigateAsset() {
   if (!loading) loading = new GLTFLoader().loadAsync(
-    new URL('./assets/trade-winds/models/british-frigate.glb?v=wind-2', import.meta.url).href,
+    new URL('./assets/trade-winds/models/royal-navy-frigate.glb?v=forward-rig-1', import.meta.url).href,
   ).then(gltf => { asset = gltf; return gltf; }).catch(error => { loading = null; throw error; });
   return loading;
 }
@@ -89,8 +89,11 @@ export function createFrigate() {
   if (!asset) throw new Error('Load the British frigate before creating it');
   const model = new THREE.Group();
   model.name = 'Passive British frigate';
-  const rig = asset.scene.clone(true), materials = new Map();
+  const rig = asset.scene.clone(true), materials = new Map(), lanterns = [];
   rig.traverse(o => {
+    if (o.isLight && o.userData.lantern_flicker) {
+      lanterns.push({ light: o, intensity: o.intensity, phase: o.userData.flicker_phase || 0 });
+    }
     if (!o.isMesh) return;
     o.castShadow = o.receiveShadow = true;
     const clone = material => {
@@ -108,14 +111,23 @@ export function createFrigate() {
   model.add(rig);
   const mixer = new THREE.AnimationMixer(rig);
   asset.animations.forEach(clip => mixer.clipAction(clip).play());
-  instances.set(model, { mixer, rig, materials });
+  instances.set(model, { mixer, rig, materials, lanterns });
   return model;
 }
 export function animateFrigate(model, time, opacity = 1) {
   const instance = instances.get(model);
   if (!instance) return;
   instance.mixer.setTime(time);
-  instance.materials.forEach(m => { m.opacity = THREE.MathUtils.clamp(opacity, 0, 1); });
+  const alpha = THREE.MathUtils.clamp(opacity, 0, 1);
+  instance.materials.forEach(m => {
+    m.opacity = alpha;
+    if (m.name === 'Royal frigate lantern') {
+      m.emissiveIntensity = 3 * (.83 + .1 * Math.sin(time * Math.PI * 2) + .07 * Math.sin(time * Math.PI * 5));
+    }
+  });
+  instance.lanterns.forEach(({ light, intensity, phase }) => {
+    light.intensity = intensity * alpha * (.83 + .1 * Math.sin(time * Math.PI * 2 + phase) + .07 * Math.sin(time * Math.PI * 5 + phase));
+  });
 }
 export function disposeFrigate(model) {
   const instance = instances.get(model);

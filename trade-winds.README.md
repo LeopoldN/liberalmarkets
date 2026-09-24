@@ -28,7 +28,7 @@ Saves use browser local storage (`liberal-markets:trade-winds:v1`) every 30 seco
 - `trade-winds-engine.mjs`: ports, goods, vessel dimensions, pricing, transactions, save validation, geographic helpers.
 - `trade-winds-models.mjs`: reusable raft, original trading ship, gull, four port styles, palms, and tropical canopy builders. The compact `island` post serves Key West, Nassau, Bridgetown, and St. George’s, and is available at `trade-winds-models.html#island`. Its roughly 29-unit width, 20-unit landing, and reduced terrain clearing fit the small islands; the complete model is batched into one instanced mesh.
 - `trade-winds-models.html` / `trade-winds-model-viewer.mjs`: standalone model workshop with rotation, zoom, and direct links to each model.
-- `trade-winds.js`: chunked voxel scenery, stepped water tiles and shaders, voxel foam rendering, ship controls, collision, market, chart, and saves.
+- `trade-winds.js`: application startup, scene/frame orchestration, vessel presentation, HUD, voyage restoration, rescue, and saving. The runtime modules below own terrain, sailing, encounters, input, and dialogs.
 - `trade-winds-port-placement.mjs`: chooses a shoreline anchor and seaward dock direction with an uninterrupted 120-unit approach, checking hull clearance and land behind the settlement. Portobelo faces north into the Caribbean. Rotated model footprints lower terrain beneath platforms and keep grass and generated trees out of the buildings and walks.
 - `trade-winds-wake.mjs`: bounded foam simulation following the actual world-space route, including turns, reverse motion, dispersal, and fading.
 - `trade-winds.css`: minimal HUD, port merchant interface, and responsive dialogs.
@@ -36,6 +36,25 @@ Saves use browser local storage (`liberal-markets:trade-winds:v1`) every 30 seco
 - `tests/trade-winds-wake.test.mjs`: stationary/stop behavior, historical trail persistence, frame-rate independence, capacity bounds, and teleport resets.
 
 Run the unit checks with `node --test tests/*.test.*`. Browser checks should cover entering and leaving port, buying and selling, compass steering, chart destination selection, saving and restoring, save-and-quit, and touch-size layouts. High quality enables soft shadows and water highlights; low quality reduces rendering resolution and disables shadows.
+
+## Runtime organization
+
+The application entry point wires these modules together. They receive explicit dependencies and callbacks; none imports the application entry point or retains a copy of the saved voyage.
+
+| Module | Owns | Main interface |
+| --- | --- | --- |
+| `trade-winds-world.mjs` | Terrain chunks, land cache, port placement/models, shore texture, and replaceable water mesh | `createSailingWorld()`: `update(state)`, `isSolid(x, z)`, `openWater(x, z, radius)`, current `water` |
+| `trade-winds-sailing.mjs` | Speed, steering target, collision cooldown, docking exclusion, and autosave clock | `createSailing()`: `update(dt)`, `stop()`, speed/target/ignored-port accessors |
+| `trade-winds-encounters.mjs` | Transient encounter simulations, associated models/wakes, storm/shark shader fields, salvage, and whirlpool damage | `createEncounters()`: storm/update/render phases, `salvage()`, `reset()` |
+| `trade-winds-input.mjs` | Keyboard, pointer, pinch/wheel, and page visibility bindings | `bindSailingInput()` after the canvas exists |
+| `trade-winds-market-ui.mjs` | Harbor dialog, buy/sell basket, repairs, trading scene, and shipyard UI | `createMarketUI()`: `enter(port)`, `leave()` |
+| `trade-winds-navigation-ui.mjs` | Chart dialog, destination selection, settings, quality controls, and save/quit buttons | `createNavigationUI()`: `openChart()`, `drawChart()`, `openSettings()` |
+
+The entry point owns the current voyage. Trading can replace that object atomically, and resuming can install a restored voyage, so modules call `getState()` when handling an action or simulation step. The market uses `setState()` only after a complete basket succeeds. The world receives the current state on each update and exposes its water mesh through a getter because resizing the water grid replaces the mesh.
+
+The simulation order remains storms → sailing/docking → whirlpool → other encounters, with pause checks between phases and substeps capped at 1/30 second. Rescue and voyage start use the same encounter reset operation; only a voyage start resets the Atlantic announcement. The existing audio, economic, model, asset-loading, and save-format behavior is retained.
+
+`tests/trade-winds-sailing.test.mjs` covers movement, wind/storm speed, reverse, pointer arrival, collision cooldown, docking, replacement voyage state, autosave, rescue ordering, and world bounds. `tests/trade-winds-world.test.mjs` covers harbor clearance, encounter exclusions, water-mesh replacement, and terrain eviction. `tests/trade-winds-encounters.test.mjs` covers model/uniform reset and salvage against replacement state, including pause and duplicate-collection guards. These run alongside the existing subsystem tests.
 
 ## Audio
 
@@ -102,6 +121,14 @@ Preview it at `trade-winds-market-preview.html`, or enter a port in the game. Th
 ```
 
 Refresh the game afterward. The exporter keeps the camera and blink shape keys, batches geometry under the animated pivots, and packs colors and normals without an external decoder. It does not change the Blender source. Browser lighting approximates the Cycles presentation; water and nearby lantern lighting run in Three.js. Reduced-motion mode holds the animation still. The previous harbor assets remain available as backups. See `models/trade-winds/README.md` for editing details.
+
+## Belize Town background
+
+Belize's shipyard uses the finished reference harbor, with the revised shipbuilding hull, shop cargo, lantern supports, frigate, skiff, and animated characters. Other ports keep their existing trading post. Preview Belize at `trade-winds-market-preview.html?port=belize`.
+
+`trade-winds-town-background.mjs` selects the backdrop by port. The roughly 12 MB compressed asset loads on arrival in Belize, with a rendered town image displayed while loading or if the real-time scene is unavailable. Ambient motions repeat every eight seconds; the crate carrier walks forward once per visit and holds the final pose instead of snapping back. Rendering pauses on departure, and reduced motion freezes the scene and lantern flicker.
+
+The editable source is `models/trade-winds/belize-town.blend`; `models/trade-winds/export-belize-town.py` exports it through Blender MCP. See the model README for the export workflow and the distinction between Cycles shading and the browser's real-time materials. No external image or linked-library files are needed.
 
 ## Atlantic wildlife
 

@@ -63,13 +63,14 @@ test('navigation is stable at different frame rates', () => {
   const a=run(1/30),b=run(1/120);assert.ok(Math.hypot(a[0]-b[0],a[1]-b[1])<1e-6);
 });
 test('export is batched and its British flag flutters independently on each correctly oriented ship', async t => {
-  const bytes=readFileSync(new URL('../assets/trade-winds/models/british-frigate.glb',import.meta.url));
+  const bytes=readFileSync(new URL('../assets/trade-winds/models/royal-navy-frigate.glb',import.meta.url));
   const doc=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));
   assert.ok(bytes.length<25*1024*1024);
   assert.ok(doc.meshes.reduce((n,m)=>n+m.primitives.length,0)<=9);
   assert.equal(doc.cameras,undefined);assert.equal(doc.images,undefined);
   const root=doc.nodes.find(n=>n.extras?.npc==='passive-frigate');
-  assert.equal(root.extras.sails,'fully lowered');assert.equal(root.extras.stern_flag,'Union Jack');
+  assert.equal(root.extras.sails,'fully lowered');assert.equal(root.extras.stern_flag,'White Ensign');
+  assert.equal(root.extras.sail_direction,'forward');
   let requests=0;
   t.mock.method(globalThis,'fetch',async()=>{requests++;return new Response(bytes);});
   const previous=globalThis.ProgressEvent;
@@ -87,8 +88,21 @@ test('export is batched and its British flag flutters independently on each corr
   a.traverse(o=>{if(o.userData.wind_animated)sailsA.push(o);});
   b.traverse(o=>{if(o.userData.wind_animated)sailsB.push(o);});
   assert.equal(sailsA.length,2,'square canvas and headsails both have wind animation');
+  const anchorA = a.getObjectByName('Anchor_Port'), anchorB = b.getObjectByName('Anchor_Port');
+  assert.ok(anchorA && anchorB, 'independent anchor assemblies survive export');
+  const anchorRest = anchorB.quaternion.toArray();
+  const lightsA = [], lightsB = [];
+  a.traverse(o => { if (o.isLight) lightsA.push(o); });
+  b.traverse(o => { if (o.isLight) lightsB.push(o); });
+  assert.equal(lightsA.length, 2);
+  const lightRest = lightsB.map(o => o.intensity);
   const sailRest=sailsA.map(o=>[...o.morphTargetInfluences]);
   animateFrigate(a,1);
+  assert.notDeepEqual(anchorA.quaternion.toArray(), anchorRest);
+  assert.deepEqual(anchorB.quaternion.toArray(), anchorRest);
+  animateFrigate(a,1.25);
+  assert.notDeepEqual(lightsA.map(o => o.intensity), lightRest);
+  assert.deepEqual(lightsB.map(o => o.intensity), lightRest);
   sailsA.forEach((o,i)=>{
     assert.notDeepEqual(o.morphTargetInfluences,sailRest[i]);
     assert.deepEqual(sailsB[i].morphTargetInfluences,sailRest[i]);

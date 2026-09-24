@@ -28,6 +28,18 @@ Refresh the browser after export. The exporter does not modify the Blender sourc
 
 The previous `harbor-sunset.blend` / `harbor-sunset.glb` and `trading-post.blend` remain available. Their build scripts are for those older scenes; they do not update the current harbor. Subsequent edits to the separate file in `Documents/Blender` must first be copied into `clean-character-harbor.blend` before exporting.
 
+## Belize Town harbor
+
+`belize-town.blend` is the self-contained source copied from the finished harbor scene (revision 44). It includes the revised construction hull, corrected shop cargo and lantern supports, royal navy frigate, skiff, merchant, workers, and all authored animations. It needs no external textures or linked Blender files. Keep the scene camera and the `Idle42`, `Motion43`, `Lantern41`, and `Walk44` controls when editing.
+
+The browser uses `assets/trade-winds/models/belize-town.glb.gz` (about 12 MB), `assets/trade-winds/belize/poster.png`, and the matching `scene.json` manifest. The poster is a frame-one Cycles render used while loading or if WebGL/asset loading fails. Other towns retain the earlier trading-post asset.
+
+To update the scene, save this repository's `.blend`, then execute `export-belize-town.py` through Blender MCP with this file open. Pass the script's absolute filename as `__file__` when executing it. The script creates a temporary export scene, samples frames 1–193 at 24 fps, batches static geometry beneath moving controls, runs the adjacent `pack-harbor-glb.py`, and writes the gzip asset and manifest. It restores the open scene and does not save or overwrite the source. The intermediate uncompressed GLB is removed after compression. Regenerate the poster from the same source camera at frame 1 after visual edits.
+
+`trade-winds-belize.mjs` loads and inflates the asset using browser `DecompressionStream`; no CDN or external decoder is required. `trade-winds-belize-scene.mjs` supplies real-time wood grain, sunset sky, water, shadows, focus, and lantern flicker. Cycles lighting/procedural materials are approximated in Three.js. The ambient clip repeats every eight seconds. The carrier walks 4.8 m forward once per visit and holds his final pose; he is deliberately excluded from the ambient loop to avoid teleporting backward. Leaving town pauses rendering, re-entry restarts the shot, and reduced-motion mode holds frame one with steady lamps.
+
+Preview at `trade-winds-market-preview.html?port=belize`. Test with `node --test tests/trade-winds-belize.test.mjs`.
+
 ## Nautical chart
 
 Open `west-indies-chart.blend` in Blender. The scene **West Indies · Chart Table** contains the editable asset collection **Nautical Chart · Game Asset**, plus a presentation camera and studio lights. It uses modeled geometry and material colors, with no external textures. The original starter scene is retained separately.

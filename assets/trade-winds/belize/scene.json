@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "source": "models/trade-winds/belize-town.blend",
+  "asset": "assets/trade-winds/models/belize-town.glb.gz",
+  "duration": 8,
+  "fps": 24,
+  "waterLevel": -0.5,
+  "compositionAspect": 1.7768331562167907,
+  "surfaceKinds": [
+    "flame",
+    "flame_left",
+    "flame_right",
+    "glass",
+    "metal",
+    "pigment",
+    "sky",
+    "sun",
+    "wood"
+  ],
+  "drawBatches": 52,
+  "ambientClip": "Belize ambient",
+  "carrierClip": "Belize cargo delivery",
+  "carrierPlayback": "once per visit, forward only",
+  "lights": 2
+}
