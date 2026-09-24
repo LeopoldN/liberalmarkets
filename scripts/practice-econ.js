@@ -3,6 +3,9 @@
   const $ = id => document.getElementById(id);
   const svg = $('map'), world = $('map-world'), select = $('country-select');
   const ns = 'http://www.w3.org/2000/svg';
+  const mobileView = matchMedia('(max-width: 600px)');
+  let desktopTheme = 'dark';
+  try { desktopTheme = localStorage.getItem('trade-games:theme') === 'light' ? 'light' : 'dark'; } catch {}
   const colors = ['#899077','#a39b79','#8a9e97','#a18b7c','#81927e','#b0a389','#8195a0','#99947c','#a18e96','#a7ab8c','#859a8c','#a99a83','#8d8c9b'];
   // Map colors from the supplied HOI4 palette (not color_ui). Keys are ISO3.
   // SOV → Russia; CHI → Taiwan; PRC → China. Historical-only tags are omitted.
@@ -110,11 +113,14 @@
   let countries = [], selected = null, scale = 1, tx = 0, ty = 0, drag = null, labels = true;
   const make = (tag, attrs, parent) => { const el = document.createElementNS(ns, tag); Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k,v)); parent.append(el); return el; };
   const project = ([lon, lat]) => [(lon + 180) * 4, (90 - lat) * 4];
+  let viewWidth = 1440, viewHeight = 720;
+  const minScale = () => Math.max(1, viewWidth / 1440);
   function update() {
-    tx = Math.max(1440 * (1-scale), Math.min(0, tx));
-    ty = Math.max(720 * (1-scale), Math.min(0, ty));
+    scale = Math.max(minScale(), scale);
+    tx = Math.max(viewWidth - 1440*scale, Math.min(0, tx));
+    ty = Math.max(viewHeight - 720*scale, Math.min(0, ty));
     world.setAttribute('transform', `translate(${tx} ${ty}) scale(${scale})`);
-    $('zoom-out').disabled = scale === 1;
+    $('zoom-out').disabled = scale <= minScale();
     $('zoom-in').disabled = scale === 10;
     updateLabels();
   }
@@ -139,13 +145,14 @@
   let labelView = '';
   function updateLabels() {
     const pixelsPerUnit = svg.getScreenCTM().a;
-    const view = `${scale}:${pixelsPerUnit}:${labels}`;
+    const showLabels = mobileView.matches || labels;
+    const view = `${scale}:${pixelsPerUnit}:${showLabels}`;
     if (view === labelView) return;
     labelView = view;
     const occupied = [];
     [...countries].sort((a,b) => a.rank-b.rank).forEach(c => {
-      c.label.style.display = labels ? '' : 'none';
-      if (!labels) return;
+      c.label.style.display = showLabels ? '' : 'none';
+      if (!showLabels) return;
       const size = Math.max(10, c.fontSize) / (scale * pixelsPerUnit);
       c.label.setAttribute('font-size', size);
       c.label.style.letterSpacing = `${size * .12}px`;
@@ -159,9 +166,17 @@
       if (fits && !overlaps) occupied.push(bounds);
     });
   }
-  new ResizeObserver(() => { if (countries.length) updateLabels(); }).observe(svg);
+  new ResizeObserver(() => {
+    const bounds=svg.getBoundingClientRect();
+    if (!bounds.width || !bounds.height) return;
+    const centerX=(viewWidth/2-tx)/scale, centerY=(viewHeight/2-ty)/scale;
+    viewWidth=720*bounds.width/bounds.height;
+    svg.setAttribute('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
+    tx=viewWidth/2-centerX*scale; ty=viewHeight/2-centerY*scale;
+    update();
+  }).observe(svg);
 
-  function zoom(factor, x = 720, y = 360) { const next = Math.max(1, Math.min(10, scale * factor)); tx = x - (x-tx)*next/scale; ty = y - (y-ty)*next/scale; scale = next; update(); }
+  function zoom(factor, x = viewWidth/2, y = viewHeight/2) { const next = Math.max(minScale(), Math.min(10, scale * factor)); tx = x - (x-tx)*next/scale; ty = y - (y-ty)*next/scale; scale = next; update(); }
   function choose(index, focus = false) {
     if (roundDone) return;
     selected?.path.classList.remove('selected');
@@ -178,16 +193,38 @@
     select.value = profile.iso3;
     $('submit-guess').disabled = roundDone;
     const p = selected.properties;
-    if (focus) { const [x,y] = project([p.LABEL_X,p.LABEL_Y]); scale = 3; tx = 720-x*scale; ty=360-y*scale; update(); }
+    if (focus) { const [x,y] = project([p.LABEL_X,p.LABEL_Y]); scale = 3; tx = viewWidth/2-x*scale; ty=viewHeight/2-y*scale; update(); }
   }
   function point(e) { const p = new DOMPoint(e.clientX,e.clientY).matrixTransform(svg.getScreenCTM().inverse()); return [p.x,p.y]; }
-  svg.addEventListener('pointerdown', e => { if (e.button !== 0) return; const [x,y]=point(e); drag={id:e.pointerId,x,y,tx,ty,target:e.target,moved:false}; svg.setPointerCapture(e.pointerId); svg.classList.add('dragging'); });
-  svg.addEventListener('pointermove', e => { if (!drag || drag.id !== e.pointerId) return; const [x,y]=point(e); if (Math.hypot(x-drag.x,y-drag.y)>4) drag.moved=true; tx=drag.tx+x-drag.x; ty=drag.ty+y-drag.y; update(); });
-  svg.addEventListener('pointerup', e => { if (!drag || drag.id!==e.pointerId) return; if (!drag.moved && drag.target.dataset.index !== undefined) choose(drag.target.dataset.index); drag=null; svg.classList.remove('dragging'); });
-  svg.addEventListener('lostpointercapture', () => { drag=null; svg.classList.remove('dragging'); });
+  const pointers=new Map();
+  let pinch=null;
+  const pinchPoints=()=>{const [a,b]=[...pointers.values()];return {x:(a[0]+b[0])/2,y:(a[1]+b[1])/2,d:Math.hypot(a[0]-b[0],a[1]-b[1])};};
+  svg.addEventListener('pointerdown', e => {
+    if(e.button!==0) return;
+    const [x,y]=point(e); pointers.set(e.pointerId,[x,y]); svg.setPointerCapture(e.pointerId);
+    if(pointers.size===1) drag={id:e.pointerId,x,y,tx,ty,target:e.target,moved:false};
+    else {drag=null;pinch=pinchPoints();}
+    svg.classList.add('dragging');
+  });
+  svg.addEventListener('pointermove',e=>{
+    if(!pointers.has(e.pointerId)) return;
+    const [x,y]=point(e);pointers.set(e.pointerId,[x,y]);
+    if(pointers.size>=2){const next=pinchPoints();if(pinch?.d){zoom(next.d/pinch.d,pinch.x,pinch.y);tx+=next.x-pinch.x;ty+=next.y-pinch.y;update();}pinch=next;return;}
+    if(!drag) return;
+    if(Math.hypot(x-drag.x,y-drag.y)>4) drag.moved=true;
+    tx=drag.tx+x-drag.x;ty=drag.ty+y-drag.y;update();
+  });
+  function endPointer(e){
+    if(!pointers.has(e.pointerId)) return;
+    if(e.type==='pointerup' && drag && !drag.moved && drag.target.dataset.index!==undefined) choose(drag.target.dataset.index);
+    pointers.delete(e.pointerId);pinch=null;drag=null;
+    if(pointers.size===1){const [id,[x,y]]=[...pointers.entries()][0];drag={id,x,y,tx,ty,moved:true};}
+    if(!pointers.size) svg.classList.remove('dragging');
+  }
+  ['pointerup','pointercancel','lostpointercapture'].forEach(type=>svg.addEventListener(type,endPointer));
   svg.addEventListener('wheel', e => { e.preventDefault(); zoom(Math.exp(-e.deltaY*.0015), ...point(e)); }, {passive:false});
   svg.addEventListener('keydown', e => { if (['+','=','-','ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(e.key)) e.preventDefault(); else return; if (e.key==='+' || e.key==='=') zoom(1.3); else if(e.key==='-') zoom(1/1.3); else if(e.key==='Home') reset(); else { tx+=e.key==='ArrowLeft'?60:e.key==='ArrowRight'?-60:0; ty+=e.key==='ArrowUp'?60:e.key==='ArrowDown'?-60:0; update(); } });
-  function reset() { scale=1; tx=ty=0; update(); }
+  function reset() { scale=minScale(); tx=viewWidth/2-760*scale; ty=viewHeight/2-320*scale; update(); }
   $('zoom-in').onclick=()=>zoom(1.4); $('zoom-out').onclick=()=>zoom(1/1.4); $('reset-map').onclick=reset;
   select.onchange=()=>{
     const profile=profiles.find(c=>c.iso3===select.value);
@@ -198,9 +235,23 @@
     }
     $('submit-guess').disabled=!profile || roundDone;
   };
-  $('labels-toggle').onclick=()=>{ labels=!labels; $('labels-toggle').setAttribute('aria-pressed',labels); $('labels-toggle').textContent=`Labels ${labels?'on':'off'}`; update(); };
-  function theme() { const dark=document.documentElement.dataset.theme==='dark'; $('theme-toggle').textContent=dark?'Dark':'Light'; $('theme-toggle').setAttribute('aria-pressed',dark); $('theme-toggle').setAttribute('aria-label', 'Dark mode'); document.querySelector('meta[name="theme-color"]').content=dark?'#151515':'#ffffff'; }
-  $('theme-toggle').onclick=()=>{ const next=document.documentElement.dataset.theme==='dark'?'light':'dark'; document.documentElement.dataset.theme=next; try{localStorage.setItem('trade-games:theme',next);}catch{} theme(); }; theme();
+  $('labels-toggle').onclick=()=>{ if(mobileView.matches) return; labels=!labels; $('labels-toggle').setAttribute('aria-pressed',labels); $('labels-toggle').textContent=`Labels ${labels?'on':'off'}`; update(); };
+  function theme() {
+    const dark=mobileView.matches || desktopTheme==='dark';
+    document.documentElement.dataset.theme=dark?'dark':'light';
+    $('theme-toggle').textContent=dark?'Dark':'Light';
+    $('theme-toggle').setAttribute('aria-pressed',dark);
+    $('theme-toggle').setAttribute('aria-label','Dark mode');
+    document.querySelector('meta[name="theme-color"]').content=dark?'#151515':'#ffffff';
+  }
+  $('theme-toggle').onclick=()=>{
+    if(mobileView.matches) return;
+    desktopTheme=desktopTheme==='dark'?'light':'dark';
+    try{localStorage.setItem('trade-games:theme',desktopTheme);}catch{}
+    theme();
+  };
+  mobileView.addEventListener('change',()=>{theme();update();});
+  theme();
   async function load() {
     $('map-message').textContent='Bringing the world into view…';
     try {
@@ -248,7 +299,7 @@
     select.value=''; select.disabled=false; $('submit-guess').disabled=true;
     $('reveal-answer').disabled=false; $('reveal-answer').hidden=false; $('next-round').hidden=true;
     $('answer-profile').hidden=true; $('answer-profile').replaceChildren();
-    $('round-clues').replaceChildren();
+    $('round-clues').hidden=false; $('round-clues').replaceChildren();
     for (const fact of round.clues) { const list=document.createElement('dl'); renderFact(fact,list); $('round-clues').append(list); }
     $('round-status').textContent='';
     $('round-score').textContent=`Round ${roundNumber} · ${solved} solved`;
@@ -256,13 +307,14 @@
   }
   function finish(correct, attempts=0) {
     roundDone=true; if(correct) solved++;
+    $('round-clues').hidden=true;
     $('round-status').textContent=correct ? `Correct — ${round.country.name}. ${attempts} ${attempts===1?'guess':'guesses'}.` : `The answer is ${round.country.name}.`;
     $('round-score').textContent=`Round ${roundNumber} · ${solved} solved`;
     $('submit-guess').disabled=true; select.disabled=true;
     $('reveal-answer').hidden=true; $('next-round').hidden=false;
     selected?.path.classList.remove('selected'); selected=null;
     const target=countries.find(c=>round.country.mapIds.includes(c.properties.ADM0_A3));
-    if(target) { target.path.classList.add('answer'); const [x,y]=project([round.country.longitude,round.country.latitude]); scale=3; tx=720-x*scale; ty=360-y*scale; update(); }
+    if(target) { target.path.classList.add('answer'); const [x,y]=project([round.country.longitude,round.country.latitude]); scale=3; tx=viewWidth/2-x*scale; ty=viewHeight/2-y*scale; update(); }
     const heading=document.createElement('h2'); heading.textContent=round.country.name;
     const list=document.createElement('dl');
     PracticeEcon.facts(round.country).forEach(fact=>renderFact(fact,list));
@@ -280,7 +332,7 @@
     else if(result.status==='invalid') $('round-status').textContent='Choose a country first.';
   };
   $('reveal-answer').onclick=()=>{if(game && !roundDone) {game.reveal(); finish(false);} };
-  $('next-round').onclick=()=>{nextRound(); $('round-clues').scrollIntoView({block:'nearest'});};
+  $('next-round').onclick=()=>{nextRound(); select.focus({preventScroll:true});};
   $('retry-data').onclick=load;
   load();
 })();

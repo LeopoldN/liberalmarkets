@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#151515">
   <meta name="description" content="Explore the world on an interactive political map. Practice Econ, a Liberal Markets game in development.">
   <title>Practice Econ — Liberal Markets Games</title>
@@ -12,22 +12,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap">
   <link rel="stylesheet" href="trade-game.css">
   <link rel="stylesheet" href="practice-econ.css">
-  <script>try { document.documentElement.dataset.theme = localStorage.getItem('trade-games:theme') === 'light' ? 'light' : 'dark'; } catch {}</script>
+  <script>try { document.documentElement.dataset.theme = !matchMedia('(max-width: 600px)').matches && localStorage.getItem('trade-games:theme') === 'light' ? 'light' : 'dark'; } catch {}</script>
   <script src="scripts/practice-econ-engine.js" defer></script>
   <script src="scripts/practice-econ.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#map">Skip to map</a>
-  <header class="site-header"><div class="header-inner">
-    <a class="brand" href="index.html">Liberal Markets</a>
-    <a class="header-game" href="games.html">Games</a>
-    <div class="header-actions"><button class="theme-toggle" id="theme-toggle" type="button">Dark</button></div>
-  </div></header>
+  <nav class="floating-nav" aria-label="Game navigation"><a href="games.html">← Games</a><button id="theme-toggle" type="button">Dark</button></nav>
   <main class="econ-shell">
-    <a class="all-games-link" href="games.html">← All Games</a>
-    <section class="round-panel" aria-label="Guess the country">
-      <div class="round-heading"><h1>Which country?</h1><span id="round-score">Round 1 · 0 solved</span></div>
-    </section>
     <section class="map-board" aria-label="World map explorer">
       <div class="map-heading"><button id="labels-toggle" aria-pressed="true" type="button">Labels on</button></div>
       <div class="map-stage">
@@ -41,15 +33,16 @@
         <span class="map-corner" aria-hidden="true">LIBERAL MARKETS · WORLD ATLAS</span>
       </div>
       <div class="round-info">
+      <div class="round-heading"><h1>Which country?</h1><span id="round-score">Round 1 · 0 solved</span></div>
       <div id="round-clues" class="round-clues" aria-live="polite"></div>
       <p id="round-status" role="status">Loading country facts…</p>
       <button id="retry-data" type="button" hidden>Retry loading</button>
+      <section id="answer-profile" class="answer-profile" aria-label="Country facts" hidden></section>
       </div>
       <form class="map-selection" id="guess-form"><div><label for="country-select">Your guess</label><select id="country-select" disabled><option value="">Select a country…</option></select></div><div class="guess-actions"><button id="submit-guess" type="submit" disabled>Guess</button><button id="reveal-answer" type="button" disabled>Reveal answer</button><button id="next-round" type="button" hidden>Next country →</button></div></form>
-      <section id="answer-profile" class="answer-profile" aria-label="Country facts" hidden></section>
     </section>
     <details class="data-notes"><summary>Data &amp; coverage</summary><p id="data-coverage"></p><p>GDP is nominal; exports cover goods only. Each figure shows its year. IMF GDP and older population estimates fill some gaps; unavailable facts are never used as clues. Subregions follow the country dataset. Countries with multiple capitals can list more than one.</p><p>Sources: <a href="https://oec.world/en/resources/datasets">CEPII BACI via OEC</a> (2024, HS4 products; CC BY 4.0), <a href="https://data.worldbank.org">World Bank</a> (CC BY 4.0), <a href="https://www.imf.org/external/datamapper/NGDPD@WEO">IMF WEO</a>, <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain), and <a href="https://github.com/mledoze/countries">mledoze/countries</a> (ODbL). <a href="data/trade-game/practice-econ.json">Download profiles</a> · <a href="data/trade-game/practice-econ.LICENSE.txt">Database license</a>.</p></details>
   </main>
-  <footer class="econ-footer"><span>Practice Econ · Unlimited</span><span>Map: Natural Earth · Present-day boundaries</span></footer>
+
 </body>
 </html>
