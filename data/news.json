@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-09-24T17:00:58.467Z",
+  "generatedAt": "2026-09-25T17:02:47.332Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Crypto platform Bitget suspects North Korea is responsible for $352 million hack",
+      "link": "https://www.cnbc.com/2026/09/25/crypto-platform-bitget-suspects-north-korea-in-352-million-hack.html",
+      "pubDate": "Fri, 25 Sep 2026 06:13:35 GMT"
+    },
+    {
+      "title": "China&apos;s Xi urges U.S. to cooperate on AI",
+      "link": "https://www.cnbc.com/2026/09/25/chinas-xi-urges-us-to-cooperate-on-ai.html",
+      "pubDate": "Fri, 25 Sep 2026 01:22:17 GMT"
+    },
+    {
+      "title": "Here&apos;s who attended the Trump-Xi state dinner",
+      "link": "https://www.cnbc.com/2026/09/25/heres-who-is-attending-the-trump-xi-state-dinner.html",
+      "pubDate": "Fri, 25 Sep 2026 14:41:24 GMT"
+    },
+    {
       "title": "Philadelphia Fed&apos;s Anna Paulson says &apos;modest&apos; rate moves likely ahead to tame inflation",
       "link": "https://www.cnbc.com/2026/09/24/philadelphia-feds-anna-paulson-says-modest-rate-moves-likely-ahead-to-tame-inflation.html",
-      "pubDate": "Thu, 24 Sep 2026 17:00:36 GMT"
+      "pubDate": "Thu, 24 Sep 2026 17:12:04 GMT"
     },
     {
       "title": "China confirms first AI talks with U.S. have taken place, hints at trade truce extension",
@@ -77,21 +92,6 @@
       "title": "Here are five key takeaways from Wednesday&apos;s Fed rate hike",
       "link": "https://www.cnbc.com/2026/09/16/here-are-five-key-takeaways-from-wednesdays-fed-rate-hike.html",
       "pubDate": "Wed, 16 Sep 2026 21:23:51 GMT"
-    },
-    {
-      "title": "Here is what changed in the new Fed statement under Warsh",
-      "link": "https://www.cnbc.com/2026/09/16/september-fed-statement-redline.html",
-      "pubDate": "Wed, 16 Sep 2026 18:18:54 GMT"
-    },
-    {
-      "title": "Fed approves interest rate hike, signals one more to come this year",
-      "link": "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
-      "pubDate": "Wed, 16 Sep 2026 21:07:51 GMT"
-    },
-    {
-      "title": "Senate is still a toss-up, but Democrats now have slight edge, prediction market traders think",
-      "link": "https://www.cnbc.com/2026/09/16/prediction-markets-say-democrats-are-slightly-favored-to-win-senate.html",
-      "pubDate": "Wed, 16 Sep 2026 16:26:41 GMT"
     }
   ]
 }
