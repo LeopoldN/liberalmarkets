@@ -22,9 +22,10 @@
   }
   const signature = fact => `${fact.key}:${fact.value}:${fact.note}`;
   function createGame(countries, random = Math.random) {
-    const pool = countries.filter(c=>c.playable && facts(c).length >= 2);
+    const pool = countries.filter(c=>c.playable && c.exports?.value > 0 && c.topExports?.length === 3);
     // Compare the facts as displayed, so rounded numbers cannot create unfair rounds.
-    const options = pool.map(country => ({country, facts:facts(country)}));
+    // Game rounds currently use only the two export facts; profiles retain all facts.
+    const options = pool.map(country => ({country, facts:facts(country).filter(f=>f.key==='exports' || f.key==='topExports')}));
     const rounds = options.map(entry => {
       const pairs = [];
       for (let i=0;i<entry.facts.length;i++) for(let j=i+1;j<entry.facts.length;j++) {
@@ -34,27 +35,47 @@
       return {country:entry.country,pairs};
     }).filter(entry=>entry.pairs.length);
     if (!rounds.length) throw new Error('No countries have two distinct usable clues.');
-    let bag=[], last=null, current=null, guesses=new Set(), done=false;
+    const regions = [...new Set(rounds.map(r=>r.country.region))];
+    const shuffle = items => {
+      const result=items.slice();
+      for(let i=result.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}
+      return result;
+    };
+    let regionBag=[], bag=[], activeRegion=null, regionTotal=0, current=null, guesses=new Set(), done=false;
     function next() {
       if (!bag.length) {
-        bag=rounds.slice();
-        for(let i=bag.length-1;i>0;i--) { const j=Math.floor(random()*(i+1)); [bag[i],bag[j]]=[bag[j],bag[i]]; }
-        if (bag.length>1 && bag[bag.length-1].country.iso3===last) [bag[0],bag[bag.length-1]]=[bag[bag.length-1],bag[0]];
+        if (!regionBag.length) {
+          regionBag=shuffle(regions);
+          if(regionBag.length>1 && regionBag[regionBag.length-1]===activeRegion) [regionBag[0],regionBag[regionBag.length-1]]=[regionBag[regionBag.length-1],regionBag[0]];
+        }
+        activeRegion=regionBag.pop();
+        bag=shuffle(rounds.filter(r=>r.country.region===activeRegion));
+        regionTotal=bag.length;
       }
       const entry=bag.pop();
-      current={country:entry.country,clues:entry.pairs[Math.floor(random()*entry.pairs.length)]};
-      last=current.country.iso3; guesses=new Set(); done=false;
+      current={country:entry.country,clues:entry.pairs[Math.floor(random()*entry.pairs.length)],region:activeRegion,regionIndex:regionTotal-bag.length,regionTotal};
+      guesses=new Set(); done=false;
       return current;
+    }
+    function selectRegion(region) {
+      if (!regions.includes(region)) throw new Error('Unknown subregion');
+      if (region===activeRegion) return;
+      if (!regionBag.length) regionBag=shuffle(regions);
+      regionBag=regionBag.filter(name=>name!==region);
+      activeRegion=region;
+      bag=shuffle(rounds.filter(r=>r.country.region===region));
+      regionTotal=bag.length;
+      current=null;guesses=new Set();done=false;
     }
     function guess(code) {
       if (!current || done) return {status:'finished'};
-      if (!pool.some(c=>c.iso3===code)) return {status:'invalid'};
+      if (!pool.some(c=>c.iso3===code && c.region===activeRegion)) return {status:'invalid'};
       if (guesses.has(code)) return {status:'duplicate'};
       guesses.add(code); done=code===current.country.iso3;
       return {status:done?'correct':'wrong',attempts:guesses.size};
     }
     function reveal() { done=true; return current?.country; }
-    return {next,guess,reveal,countries:rounds.map(r=>r.country)};
+    return {next,guess,reveal,selectRegion,regions:regions.slice().sort(),countries:rounds.map(r=>r.country)};
   }
   return {facts,createGame};
 });

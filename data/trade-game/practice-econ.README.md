@@ -1,6 +1,6 @@
 # Practice Econ profiles
 
-`practice-econ.json` contains 253 country/territory profiles, including every feature in the existing Natural Earth map. There is no GDP/export-size cutoff. All independent countries in the country identity source are playable; 233 countries and inhabited territories have enough facts for rounds. Microstates without map polygons remain selectable in the country picker.
+`practice-econ.json` contains 253 country/territory profiles, including every feature in the existing Natural Earth map. There is no GDP/export-size cutoff. The data marks 233 countries and inhabited territories as generally playable. The current export-only game further requires both goods exports and three leading export products; Explore retains every profile. Microstates without map polygons remain selectable in the country picker.
 
 ## Fields and provenance
 
@@ -26,8 +26,14 @@ Requires Python 3 and curl. Downloads source snapshots into the system temporary
 
 ## Game rules
 
-Each round selects a country from a shuffled bag and samples two different available fact categories. Top-three exports form one clue. Only clue pairs that uniquely identify the country among playable profiles **as displayed, including number rounding**, are eligible. Attempts are unlimited; repeated wrong guesses do not count again. Correct answers or Reveal expose the profile and enable Next country. The bag reshuffles after exhaustion without an immediate repeat. Progress is session-only, with no daily gate.
+Game mode shuffles the subregions, then completes a shuffled bag of every playable country in each subregion before advancing. After all subregions are completed, a new world cycle starts. The picker is restricted to the current subregion. Each round displays goods exports and top three exports, in that order. Countries missing either are excluded from the game pool. Explore profiles retain all six categories. Top-three exports form one clue. Only clue pairs that uniquely identify the country among playable profiles **as displayed, including number rounding**, are eligible. Attempts are unlimited; repeated wrong guesses do not count again. Correct answers or Reveal expose the profile and enable Next country. The bag reshuffles after exhaustion without an immediate repeat. Progress is session-only, with no daily gate.
 
 ```sh
 node --test tests/practice-econ.test.cjs
 ```
+
+Explore mode makes all 253 profiles selectable, including non-playable territories and missing values. Map clicks and the picker show the six fact categories without a guessing step. Switching back to Game resumes the same round, attempts, selection, and map view.
+
+Game mode outlines the active subregion using `assets/geo/practice-econ-regions.geojson`. These boundaries are precomputed by dissolving the mapped countries with Shapely, removing shared internal borders. Disconnected islands retain separate outer boundaries. Rebuild with `python3 scripts/build-practice-econ-regions.py` (requires `shapely>=2,<3`) after changing regions or map geometry. Explore mode hides the outline.
+
+Completed countries retain green (first-try correct), yellow (correct after multiple distinct guesses), or red (revealed) fills until advancing to another subregion. Explore temporarily hides those fills and restores them on return. Settings lets the player jump to any playable subregion, starting its country sequence from the beginning; switching regions clears the previous region's fills. Totals remain session-wide.

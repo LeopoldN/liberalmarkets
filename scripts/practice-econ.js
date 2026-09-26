@@ -109,20 +109,37 @@
     PAK: '#152642', // PAK
     BLR: '#b4dcbe', // BLR
   };
+  let mode='game', savedGame=null;
+  const regionPaths=new Map();
+  const regionResults=new Map();
   let game = null, round = null, profiles = [], roundNumber = 0, solved = 0, roundDone = false;
   let countries = [], selected = null, scale = 1, tx = 0, ty = 0, drag = null, labels = true;
   const make = (tag, attrs, parent) => { const el = document.createElementNS(ns, tag); Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k,v)); parent.append(el); return el; };
   const project = ([lon, lat]) => [(lon + 180) * 4, (90 - lat) * 4];
   let viewWidth = 1440, viewHeight = 720;
   const minScale = () => Math.max(1, viewWidth / 1440);
+  let renderFrame = 0, labelTimer = 0;
   function update() {
     scale = Math.max(minScale(), scale);
-    tx = Math.max(viewWidth - 1440*scale, Math.min(0, tx));
+    // Horizontal translation is unbounded; the renderer wraps repeated world tiles.
     ty = Math.max(viewHeight - 720*scale, Math.min(0, ty));
-    world.setAttribute('transform', `translate(${tx} ${ty}) scale(${scale})`);
-    $('zoom-out').disabled = scale <= minScale();
-    $('zoom-in').disabled = scale === 10;
-    updateLabels();
+    // Input can arrive faster than the display refreshes (including twice per pinch).
+    // Clamp latitude synchronously; paint only the latest state per frame.
+    if (renderFrame) return;
+    renderFrame = requestAnimationFrame(() => {
+      renderFrame = 0;
+      const period=1440*scale;
+      const wrappedX=((tx % period)+period)%period-period;
+      world.setAttribute('transform', `translate(${wrappedX} ${ty}) scale(${scale})`);
+      $('zoom-out').disabled = scale <= minScale();
+      $('zoom-in').disabled = scale === 10;
+      const nextView = `${scale}:${svg.getScreenCTM().a}:${mobileView.matches || labels}`;
+      if (nextView !== labelView) {
+        clearTimeout(labelTimer);
+        // Keep the existing labels during the gesture; refine their fit once it settles.
+        labelTimer = setTimeout(updateLabels, 120);
+      }
+    });
   }
   // Reject a label rectangle if any coastline, border, or hole enters it.
   // Checking only its corners would miss narrow bays and concave borders.
@@ -149,23 +166,33 @@
     const view = `${scale}:${pixelsPerUnit}:${showLabels}`;
     if (view === labelView) return;
     labelView = view;
-    const occupied = [];
-    [...countries].sort((a,b) => a.rank-b.rank).forEach(c => {
+    const ordered = [...countries].sort((a,b) => a.rank-b.rank);
+    // Batch writes, then reads: alternating these for every country forced repeated layout.
+    for (const c of ordered) {
       c.label.style.display = showLabels ? '' : 'none';
-      if (!showLabels) return;
-      const size = Math.max(10, c.fontSize) / (scale * pixelsPerUnit);
-      c.label.setAttribute('font-size', size);
-      c.label.style.letterSpacing = `${size * .12}px`;
-      const box = c.label.getBBox(), pad = size * .18;
-      const bounds = {x:box.x-pad,y:box.y-pad,w:box.width+2*pad,h:box.height+2*pad};
+      if (!showLabels) continue;
+      c.labelSize = Math.max(10, c.fontSize) / (scale * pixelsPerUnit);
+      c.label.setAttribute('font-size', c.labelSize);
+      c.label.style.letterSpacing = `${c.labelSize * .12}px`;
+    }
+    if (!showLabels) return;
+    const boundsList = ordered.map(c => {
+      const box = c.label.getBBox(), pad = c.labelSize * .18;
+      return {x:box.x-pad,y:box.y-pad,w:box.width+2*pad,h:box.height+2*pad};
+    });
+    const occupied = [];
+    const visible = ordered.map((c,index) => {
+      const bounds = boundsList[index];
       const center = new DOMPoint(bounds.x+bounds.w/2, bounds.y+bounds.h/2);
       const fits = c.path.isPointInFill(center) && !c.rings.some(ring =>
         ring.some((point, i) => segmentEntersBox(point, ring[(i+1)%ring.length], bounds)));
       const overlaps = occupied.some(b => bounds.x < b.x+b.w && bounds.x+bounds.w > b.x && bounds.y < b.y+b.h && bounds.y+bounds.h > b.y);
-      c.label.style.display = fits && !overlaps ? '' : 'none';
       if (fits && !overlaps) occupied.push(bounds);
+      return fits && !overlaps;
     });
+    ordered.forEach((c,index) => { c.label.style.display = visible[index] ? '' : 'none'; });
   }
+
   new ResizeObserver(() => {
     const bounds=svg.getBoundingClientRect();
     if (!bounds.width || !bounds.height) return;
@@ -177,17 +204,38 @@
   }).observe(svg);
 
   function zoom(factor, x = viewWidth/2, y = viewHeight/2) { const next = Math.max(minScale(), Math.min(10, scale * factor)); tx = x - (x-tx)*next/scale; ty = y - (y-ty)*next/scale; scale = next; update(); }
+  const pulseTimers=new Map();
+  function clearPulses() {
+    for(const [path,timer] of pulseTimers){clearTimeout(timer);path.classList.remove('country-pulse-a','country-pulse-b');}
+    pulseTimers.clear();
+  }
+  function pulseCountry(country,color='#fff0b2') {
+    const path=country.path;
+    clearTimeout(pulseTimers.get(path));
+    const next=path.classList.contains('country-pulse-a')?'country-pulse-b':'country-pulse-a';
+    path.classList.remove('country-pulse-a','country-pulse-b');
+    path.style.setProperty('--pulse-color',color);
+    path.classList.add(next);
+    pulseTimers.set(path,setTimeout(()=>{path.classList.remove(next);pulseTimers.delete(path);},2400));
+  }
+  function pulseProfile(profile,color) {
+    countries.filter(c=>profile?.mapIds.includes(c.properties.ADM0_A3)).forEach(c=>pulseCountry(c,color));
+  }
   function choose(index, focus = false) {
-    if (roundDone) return;
+    if (mode==='game' && roundDone) return;
     selected?.path.classList.remove('selected');
     selected = countries[index] || null;
     if (!selected) return;
     selected.path.classList.add('selected');
+    pulseCountry(selected);
     const profile = profiles.find(c => c.mapIds.includes(selected.properties.ADM0_A3));
-    if (!profile || !game?.countries.some(c=>c.iso3===profile.iso3)) {
+    if (mode==='explore' && profile) {
+      select.value=profile.iso3; renderProfile(profile); $('round-status').textContent=''; return;
+    }
+    if (!profile || !game?.countries.some(c=>c.iso3===profile.iso3 && c.region===round.region)) {
       select.value = '';
       $('submit-guess').disabled = true;
-      if (!roundDone) $('round-status').textContent = 'This territory is not in the guessing pool. Choose another country.';
+      if (!roundDone) $('round-status').textContent = `Choose a country in ${round.region}.`;
       return;
     }
     select.value = profile.iso3;
@@ -214,9 +262,19 @@
     if(Math.hypot(x-drag.x,y-drag.y)>4) drag.moved=true;
     tx=drag.tx+x-drag.x;ty=drag.ty+y-drag.y;update();
   });
+  function pickCountry(x,y) {
+    // SVG <use> retargets events to the instance, so hit-test in canonical map coordinates.
+    const px=(((x-tx)/scale)%1440+1440)%1440, py=(y-ty)/scale;
+    const point=new DOMPoint(px,py);
+    const index=countries.findIndex(c=>{
+      const b=c.bounds;
+      return px>=b.x && px<=b.x+b.width && py>=b.y && py<=b.y+b.height && c.path.isPointInFill(point);
+    });
+    if(index>=0) choose(index);
+  }
   function endPointer(e){
     if(!pointers.has(e.pointerId)) return;
-    if(e.type==='pointerup' && drag && !drag.moved && drag.target.dataset.index!==undefined) choose(drag.target.dataset.index);
+    if(e.type==='pointerup' && drag && !drag.moved) pickCountry(...point(e));
     pointers.delete(e.pointerId);pinch=null;drag=null;
     if(pointers.size===1){const [id,[x,y]]=[...pointers.entries()][0];drag={id,x,y,tx,ty,moved:true};}
     if(!pointers.size) svg.classList.remove('dragging');
@@ -232,6 +290,7 @@
     if (profile) {
       const index=countries.findIndex(c=>profile.mapIds.includes(c.properties.ADM0_A3));
       if (index>=0) choose(index);
+      else if(mode==='explore') {renderProfile(profile); $('round-status').textContent='';}
     }
     $('submit-guess').disabled=!profile || roundDone;
   };
@@ -255,17 +314,22 @@
   async function load() {
     $('map-message').textContent='Bringing the world into view…';
     try {
-      const [data, profileData] = await Promise.all(['assets/geo/ne_50m_admin_0_countries.geojson','data/trade-game/practice-econ.json'].map(async url=>{
+      const [data, profileData, regionData] = await Promise.all(['assets/geo/ne_50m_admin_0_countries.geojson','data/trade-game/practice-econ.json','assets/geo/practice-econ-regions.geojson'].map(async url=>{
         const response=await fetch(url);
         if (!response.ok) throw new Error(`Unable to load ${url}`);
         return response.json();
       }));
+      regionPaths.clear();
+      for(const feature of regionData.features) {
+        const polygons=feature.geometry.type==='Polygon'?[feature.geometry.coordinates]:feature.geometry.coordinates;
+        regionPaths.set(feature.properties.region,polygons.map(polygon=>polygon.map(ring=>ring.map((coord,i)=>`${i?'L':'M'}${project(coord).map(n=>n.toFixed(2)).join(',')}`).join('')+'Z').join('')).join(''));
+      }
       profiles=profileData.countries;
       game=PracticeEcon.createGame(profiles);
+      $('region-select').replaceChildren(...game.regions.map(region=>new Option(region,region)));
+      $('region-select').disabled=false;
       $('countries').replaceChildren(); $('country-labels').replaceChildren();
-      select.replaceChildren(new Option('Select a country…',''));
-      for (const profile of game.countries.slice().sort((a,b)=>a.name.localeCompare(b.name))) select.add(new Option(profile.name,profile.iso3));
-      $('data-coverage').textContent=`${profiles.length} country and territory profiles; ${game.countries.length} playable. No minimum GDP or export size. Every round uses two available facts with a unique matching country in this dataset.`;
+      $('data-coverage').textContent=`${profiles.length} country and territory profiles; ${game.countries.length} playable. No minimum GDP or export size. Every round shows goods exports and top three exports. Countries without both export facts are excluded from rounds.`;
       const features=data.features.filter(f=>['Polygon','MultiPolygon'].includes(f.geometry?.type) && f.properties.ADM0_A3!=='ATA').sort((a,b)=>a.properties.NAME.localeCompare(b.properties.NAME));
       countries=features.map((f,index)=>{
         const p=f.properties, polygons=f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;
@@ -273,11 +337,12 @@
         const path=make('path',{d,fill:countryColors[p.ISO_A3_EH] || countryColors[p.ISO_A3] || countryColors[p.ADM0_A3] || colors[(p.MAPCOLOR13-1+13)%13],class:'country','data-index':index,'fill-rule':'evenodd'},$('countries'));
         make('title',{},path).textContent=p.NAME_LONG || p.NAME;
         const [x,y]=project([p.LABEL_X,p.LABEL_Y]);
-        const label=make('text',{x,y,class:'country-label','font-size':p.LABELRANK<=2?11:p.LABELRANK<=4?8:5},$('country-labels'));
+        const label=make('text',{x,y,class:'country-label',style:'display:none','font-size':p.LABELRANK<=2?11:p.LABELRANK<=4?8:5},$('country-labels'));
         label.textContent=p.NAME.toUpperCase();
         return {path,label,rings:polygons.flatMap(polygon=>polygon.map(ring=>ring.map(coord=>project(coord).map(n=>Number(n.toFixed(2)))))),properties:p,rank:p.LABELRANK,fontSize:p.LABELRANK<=2?11:p.LABELRANK<=4?8:5};
       });
-      select.disabled=false; $('map-message').hidden=true; $('retry-data').hidden=true; labelView=''; update(); nextRound();
+      countries.forEach(c=>{c.bounds=c.path.getBBox();});
+      $('mode-game').disabled=false; $('mode-explore').disabled=false; select.disabled=false; $('map-message').hidden=true; $('retry-data').hidden=true; labelView=''; update(); nextRound();
     } catch(error) {
       $('map-message').textContent='The map could not be loaded. Please try again.';
       const retry=document.createElement('button'); retry.textContent='Retry'; retry.onclick=load; $('map-message').append(retry);
@@ -292,47 +357,139 @@
     if (fact.note) { const note=document.createElement('small'); note.textContent=fact.note; value.append(note); }
     wrapper.append(term,value); parent.append(wrapper);
   }
+  function populatePicker() {
+    const pool=mode==='explore'?profiles:game.countries.filter(c=>c.region===round.region);
+    select.replaceChildren(new Option(mode==='explore'?'Select a country…':`Choose in ${round.region}…`,''));
+    pool.slice().sort((a,b)=>a.name.localeCompare(b.name)).forEach(c=>select.add(new Option(c.name,c.iso3)));
+  }
+  function renderProfile(profile) {
+    const heading=document.createElement('h2'); heading.textContent=profile.name;
+    const list=document.createElement('dl');
+    PracticeEcon.facts(profile).forEach(fact=>renderFact(fact,list));
+    const missingLabels={gdp:'Total GDP',exports:'Goods exports',topExports:'Top three exports',population:'Population',region:'Subregion',capitals:'Capital'};
+    profile.missing.forEach(key=>renderFact({label:missingLabels[key],value:'Unavailable',note:''},list));
+    const details=document.createElement('details'); details.className='profile-details';
+    details.open=mode==='explore' || !mobileView.matches;
+    const summary=document.createElement('summary');
+    const cue=document.createElement('span'); cue.className='profile-cue'; cue.textContent='Facts';
+    summary.append(heading,cue);details.append(summary,list);
+    $('answer-profile').replaceChildren(details); $('answer-profile').hidden=false;
+  }
+  function updateRegionOutline() {
+    const d=mode==='game' && round ? regionPaths.get(round.region) || '' : '';
+    $('region-outline').setAttribute('d',d);
+    $('region-outline-shadow').setAttribute('d',d);
+  }
+  function paintResults() {
+    for(const country of countries) {
+      country.path.classList.remove('result-first','result-later','result-revealed');
+      const result=regionResults.get(country.properties.ADM0_A3);
+      if(mode==='game' && result) country.path.classList.add(`result-${result}`);
+    }
+  }
+  function renderRound() {
+    $('region-select').value=round.region;
+    updateRegionOutline();
+    document.querySelector('.round-heading h1').textContent=round.region;
+    $('round-score').textContent=`Country ${round.regionIndex} / ${round.regionTotal} · ${solved} solved`;
+    populatePicker();
+    select.disabled=roundDone; $('submit-guess').disabled=true;
+    $('reveal-answer').disabled=false; $('reveal-answer').hidden=roundDone; $('next-round').hidden=!roundDone;
+    $('answer-profile').hidden=!roundDone;
+    $('round-clues').hidden=roundDone; $('round-clues').replaceChildren();
+    for(const fact of round.clues){const list=document.createElement('dl');renderFact(fact,list);$('round-clues').append(list);}
+    if(roundDone) renderProfile(round.country);
+  }
+  function focusRegion(region) {
+    const points=game.countries.filter(c=>c.region===region).map(c=>project([c.longitude,c.latitude]));
+    if(!points.length) return;
+    // Cut at the largest empty longitude gap so Pacific regions straddling
+    // the date line are centered together, rather than on the opposite hemisphere.
+    const xs=points.map(p=>((p[0]%1440)+1440)%1440).sort((a,b)=>a-b);
+    let gap=-1,start=xs[0];
+    xs.forEach((x,i)=>{const next=xs[(i+1)%xs.length]+(i===xs.length-1?1440:0);if(next-x>gap){gap=next-x;start=next%1440;}});
+    const width=1440-gap;
+    const ys=points.map(p=>p[1]), top=Math.min(...ys), bottom=Math.max(...ys);
+    scale=Math.max(minScale(),Math.min(5,viewWidth*.78/(width+80),viewHeight*.65/(bottom-top+80)));
+    tx=viewWidth/2-(start+width/2)*scale;
+    ty=viewHeight*.53-(top+bottom)/2*scale;
+    update();
+  }
   function nextRound() {
+    clearPulses();
+    const previousRegion=round?.region;
     round=game.next(); roundNumber++; roundDone=false;
+    if(previousRegion!==round.region) regionResults.clear();
+    paintResults();
     selected?.path.classList.remove('selected'); selected=null;
     countries.forEach(c=>c.path.classList.remove('answer'));
-    select.value=''; select.disabled=false; $('submit-guess').disabled=true;
-    $('reveal-answer').disabled=false; $('reveal-answer').hidden=false; $('next-round').hidden=true;
-    $('answer-profile').hidden=true; $('answer-profile').replaceChildren();
-    $('round-clues').hidden=false; $('round-clues').replaceChildren();
-    for (const fact of round.clues) { const list=document.createElement('dl'); renderFact(fact,list); $('round-clues').append(list); }
-    $('round-status').textContent='';
-    $('round-score').textContent=`Round ${roundNumber} · ${solved} solved`;
-    reset();
+    renderRound(); $('round-status').textContent='';
+    if(previousRegion!==round.region) focusRegion(round.region);
   }
+  function setMode(next) {
+    if(!game || next===mode) return;
+    clearPulses();
+    if(next==='explore') savedGame={code:select.value,status:$('round-status').textContent,scale,tx,ty};
+    mode=next;
+    paintResults();
+    $('game-settings').hidden=mode==='explore';
+    $('game-settings').open=false;
+    updateRegionOutline();
+    $('mode-game').setAttribute('aria-pressed',mode==='game');
+    $('mode-explore').setAttribute('aria-pressed',mode==='explore');
+    document.querySelector('.guess-actions').hidden=mode==='explore';
+    document.querySelector('label[for="country-select"]').textContent=mode==='explore'?'Explore a country':'Your guess';
+    selected?.path.classList.remove('selected'); selected=null;
+    countries.forEach(c=>c.path.classList.remove('answer'));
+    if(mode==='explore') {
+      document.querySelector('.round-heading h1').textContent='Explore';
+      $('round-score').textContent='Country profiles';
+      $('round-clues').hidden=true; $('answer-profile').hidden=true;
+      $('round-status').textContent='Select a country to see its facts.';
+      populatePicker();select.disabled=false;
+    } else {
+      renderRound(); select.value=savedGame.code; $('round-status').textContent=savedGame.status;
+      if(!roundDone && select.value) select.onchange();
+      ({scale,tx,ty}=savedGame);update();
+    }
+  }
+  $('mode-game').onclick=()=>setMode('game');
+  $('mode-explore').onclick=()=>setMode('explore');
   function finish(correct, attempts=0) {
     roundDone=true; if(correct) solved++;
+    const result=correct?(attempts===1?'first':'later'):'revealed';
+    round.country.mapIds.forEach(id=>regionResults.set(id,result));
+    paintResults();
+    clearPulses();
+    pulseProfile(round.country,correct?(attempts===1?'#a1f0b6':'#ffe58c'):'#ffaaa0');
     $('round-clues').hidden=true;
-    $('round-status').textContent=correct ? `Correct — ${round.country.name}. ${attempts} ${attempts===1?'guess':'guesses'}.` : `The answer is ${round.country.name}.`;
-    $('round-score').textContent=`Round ${roundNumber} · ${solved} solved`;
+    $('round-status').textContent=correct ? `Correct · ${attempts} ${attempts===1?'guess':'guesses'}` : 'Answer revealed';
+    $('round-score').textContent=`Country ${round.regionIndex} / ${round.regionTotal} · ${solved} solved`;
     $('submit-guess').disabled=true; select.disabled=true;
     $('reveal-answer').hidden=true; $('next-round').hidden=false;
     selected?.path.classList.remove('selected'); selected=null;
-    const target=countries.find(c=>round.country.mapIds.includes(c.properties.ADM0_A3));
-    if(target) { target.path.classList.add('answer'); const [x,y]=project([round.country.longitude,round.country.latitude]); scale=3; tx=viewWidth/2-x*scale; ty=viewHeight/2-y*scale; update(); }
-    const heading=document.createElement('h2'); heading.textContent=round.country.name;
-    const list=document.createElement('dl');
-    PracticeEcon.facts(round.country).forEach(fact=>renderFact(fact,list));
-    const missingLabels={gdp:'Total GDP',exports:'Goods exports',topExports:'Top three exports',population:'Population',region:'Subregion',capitals:'Capital'};
-    round.country.missing.forEach(key=>renderFact({label:missingLabels[key],value:'Unavailable',note:'Not used as a clue'},list));
-    $('answer-profile').replaceChildren(heading,list); $('answer-profile').hidden=false;
+    renderProfile(round.country);
     $('next-round').focus({preventScroll:true});
   }
   $('guess-form').onsubmit=e=>{
-    e.preventDefault(); if (!game || roundDone) return;
+    e.preventDefault(); if (!game || roundDone || mode!=='game') return;
     const result=game.guess(select.value);
     if(result.status==='correct') finish(true,result.attempts);
-    else if(result.status==='wrong') $('round-status').textContent=`Not ${profiles.find(c=>c.iso3===select.value).name}. Try another country, or reveal the answer.`;
+    else if(result.status==='wrong') {
+      const profile=profiles.find(c=>c.iso3===select.value);
+      pulseProfile(profile,'#ffaaa0');
+      $('round-status').textContent=`Not ${profile.name}. Try another country, or reveal the answer.`;
+    }
     else if(result.status==='duplicate') $('round-status').textContent='You already tried that country. Choose another.';
     else if(result.status==='invalid') $('round-status').textContent='Choose a country first.';
   };
-  $('reveal-answer').onclick=()=>{if(game && !roundDone) {game.reveal(); finish(false);} };
+  $('reveal-answer').onclick=()=>{if(game && !roundDone && mode==='game') {game.reveal(); finish(false);} };
   $('next-round').onclick=()=>{nextRound(); select.focus({preventScroll:true});};
+  $('region-select').onchange=()=>{
+    if(!game || mode!=='game' || $('region-select').value===round.region) return;
+    game.selectRegion($('region-select').value);
+    nextRound(); $('game-settings').open=false;
+  };
   $('retry-data').onclick=load;
   load();
 })();
