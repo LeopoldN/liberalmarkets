@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-09-26T16:15:59.865Z",
+  "generatedAt": "2026-09-27T16:52:13.649Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Debt-hungry AI companies face increased risk as bond yields spike",
+      "link": "https://www.cnbc.com/2026/09/27/debt-hungry-data-center-companies-increased-risk-bond-yields-spike.html",
+      "pubDate": "Sun, 27 Sep 2026 15:35:34 GMT"
+    },
     {
       "title": "This may be the ‘missing piece’ for investors looking to boost AI exposure",
       "link": "https://www.cnbc.com/2026/09/26/ai-portfolios-may-need-china-to-grab-the-biggest-gains.html",
@@ -87,11 +92,6 @@
       "title": "Three words from Kevin Warsh have Wall Street wondering how far the Fed will go with rate hikes",
       "link": "https://www.cnbc.com/2026/09/18/three-words-from-kevin-warsh-have-wall-street-wondering-how-far-the-fed-will-go-with-rate-hikes.html",
       "pubDate": "Fri, 18 Sep 2026 18:28:31 GMT"
-    },
-    {
-      "title": "Warren Buffett steps down as chairman of Berkshire Hathaway: &apos;Father Time always wins&apos;",
-      "link": "https://www.cnbc.com/2026/09/18/buffett-stepping-down-as-berkshire-chairman.html",
-      "pubDate": "Fri, 18 Sep 2026 12:04:02 GMT"
     }
   ]
 }
