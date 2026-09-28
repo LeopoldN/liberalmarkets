@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-09-27T16:52:13.649Z",
+  "generatedAt": "2026-09-28T19:34:37.834Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Nearly half the stocks in the S&P 500 are at cross purposes with the rest of the market",
+      "link": "https://www.cnbc.com/2026/09/28/nearly-half-of-the-stocks-in-the-sp-500-are-working-against-it.html",
+      "pubDate": "Mon, 28 Sep 2026 17:53:31 GMT"
+    },
+    {
+      "title": "U.S., China to lower tariffs on $60 billion of goods. Here&apos;s what qualifies",
+      "link": "https://www.cnbc.com/2026/09/28/us-china-lower-tariffs-trump-xi-meeting.html",
+      "pubDate": "Mon, 28 Sep 2026 08:31:33 GMT"
+    },
+    {
+      "title": "Trump-Xi summit analysis: &apos;Tangible outcomes&apos; needed for U.S.-China truce to hold",
+      "link": "https://www.cnbc.com/2026/09/28/trump-xi-summit-tangible-outcomes-us-china-truce.html",
+      "pubDate": "Mon, 28 Sep 2026 07:22:06 GMT"
+    },
     {
       "title": "Debt-hungry AI companies face increased risk as bond yields spike",
       "link": "https://www.cnbc.com/2026/09/27/debt-hungry-data-center-companies-increased-risk-bond-yields-spike.html",
@@ -77,21 +92,6 @@
       "title": "Here&apos;s who we know is going to the Trump-Xi dinner so far",
       "link": "https://www.cnbc.com/2026/09/22/heres-who-we-know-is-going-to-the-trump-xi-dinner-so-far.html",
       "pubDate": "Thu, 24 Sep 2026 01:54:35 GMT"
-    },
-    {
-      "title": "Jamie Dimon says hyperscaler AI spending could hit $1 trillion next year",
-      "link": "https://www.cnbc.com/2026/09/21/jamie-dimon-jpm-jpmorgan-indiaconference.html",
-      "pubDate": "Tue, 22 Sep 2026 01:30:01 GMT"
-    },
-    {
-      "title": "‘It&apos;s awful’: How tariffs, soaring fuel costs and higher interest rates are squeezing American companies",
-      "link": "https://www.cnbc.com/2026/09/20/tariffs-fuel-prices-and-interest-rates-squeeze-us-companies.html",
-      "pubDate": "Mon, 21 Sep 2026 15:04:04 GMT"
-    },
-    {
-      "title": "Three words from Kevin Warsh have Wall Street wondering how far the Fed will go with rate hikes",
-      "link": "https://www.cnbc.com/2026/09/18/three-words-from-kevin-warsh-have-wall-street-wondering-how-far-the-fed-will-go-with-rate-hikes.html",
-      "pubDate": "Fri, 18 Sep 2026 18:28:31 GMT"
     }
   ]
 }
