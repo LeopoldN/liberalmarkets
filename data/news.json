@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-09-28T19:34:37.834Z",
+  "generatedAt": "2026-09-29T18:00:54.406Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Polymarket taps Goldman Sachs veteran Lisa Mantil to attract Wall Street liquidity",
+      "link": "https://www.cnbc.com/2026/09/29/polymarket-lisa-mantil-institutional-growth.html",
+      "pubDate": "Tue, 29 Sep 2026 12:00:33 GMT"
+    },
+    {
+      "title": "Trump’s municipal bond portfolio reaches as much as $1 billion as policy overlaps mount",
+      "link": "https://www.cnbc.com/2026/09/29/trump-municipal-bond-portfolio.html",
+      "pubDate": "Tue, 29 Sep 2026 14:37:07 GMT"
+    },
+    {
+      "title": "China has three new criteria for humanoid robot IPOs. Few, if any, meet them",
+      "link": "https://www.cnbc.com/2026/09/29/china-criteria-humanoid-robot-ipos.html",
+      "pubDate": "Tue, 29 Sep 2026 07:19:38 GMT"
+    },
     {
       "title": "Nearly half the stocks in the S&P 500 are at cross purposes with the rest of the market",
       "link": "https://www.cnbc.com/2026/09/28/nearly-half-of-the-stocks-in-the-sp-500-are-working-against-it.html",
@@ -77,21 +92,6 @@
       "title": "Trump-Xi meeting: Why China&apos;s self-sufficiency changes the calculus",
       "link": "https://www.cnbc.com/2026/09/23/trump-xi-meeting-why-chinas-self-sufficiency-changes-the-calculus.html",
       "pubDate": "Thu, 24 Sep 2026 01:44:14 GMT"
-    },
-    {
-      "title": "CFTC says prediction markets&apos; &apos;mentions&apos; contracts present a higher risk of manipulation",
-      "link": "https://www.cnbc.com/2026/09/22/cftc-prediction-markets-mentions-contracts-have-manipulation-risk.html",
-      "pubDate": "Wed, 23 Sep 2026 00:58:16 GMT"
-    },
-    {
-      "title": "Kalshi asks CFTC to allow margin trading on its platform, letting users buy with borrowed funds",
-      "link": "https://www.cnbc.com/2026/09/22/kalshi-asks-cftc-to-allow-margin-trading-on-its-platform-letting-users-buy-with-borrowed-funds.html",
-      "pubDate": "Tue, 22 Sep 2026 12:28:51 GMT"
-    },
-    {
-      "title": "Here&apos;s who we know is going to the Trump-Xi dinner so far",
-      "link": "https://www.cnbc.com/2026/09/22/heres-who-we-know-is-going-to-the-trump-xi-dinner-so-far.html",
-      "pubDate": "Thu, 24 Sep 2026 01:54:35 GMT"
     }
   ]
 }
