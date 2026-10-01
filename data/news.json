@@ -1,12 +1,17 @@
 {
-  "generatedAt": "2026-09-30T17:56:40.282Z",
+  "generatedAt": "2026-10-01T18:22:13.323Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Kalshi, Polymarket trading volumes on some products raises questions amid massive growth",
+      "title": "Fed&apos;s Kashkari says inflation is &apos;still too high&apos; even after softer-than-expected PCE data, labor market is &apos;pretty good&apos;",
+      "link": "https://www.cnbc.com/2026/09/30/watch-minneapolis-fed-president-neel-kashkari.html",
+      "pubDate": "Wed, 30 Sep 2026 23:44:28 GMT"
+    },
+    {
+      "title": "Kalshi, Polymarket trading volumes on some products raise questions amid massive growth",
       "link": "https://www.cnbc.com/2026/09/30/kalshi-polymarket-trading-volume-scrutiny.html",
-      "pubDate": "Wed, 30 Sep 2026 14:31:26 GMT"
+      "pubDate": "Thu, 01 Oct 2026 14:24:36 GMT"
     },
     {
       "title": "Singapore&apos;s Temasek to expand Middle East presence, open Abu Dhabi, Riyadh offices",
@@ -87,11 +92,6 @@
       "title": "Crypto platform Bitget suspects North Korea is responsible for $352 million hack",
       "link": "https://www.cnbc.com/2026/09/25/crypto-platform-bitget-suspects-north-korea-in-352-million-hack.html",
       "pubDate": "Fri, 25 Sep 2026 06:13:35 GMT"
-    },
-    {
-      "title": "China&apos;s Xi urges U.S. to cooperate on AI",
-      "link": "https://www.cnbc.com/2026/09/25/chinas-xi-urges-us-to-cooperate-on-ai.html",
-      "pubDate": "Fri, 25 Sep 2026 01:22:17 GMT"
     }
   ]
 }
