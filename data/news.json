@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-10-01T18:22:13.323Z",
+  "generatedAt": "2026-10-02T17:47:42.700Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Traders now see little chance of a Fed rate hike in October after weak jobs report",
+      "link": "https://www.cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html",
+      "pubDate": "Fri, 02 Oct 2026 13:29:27 GMT"
+    },
+    {
+      "title": "&apos;The hottest skill on Wall Street’: Demand for this AI ability jumped 1,721% as banks embrace agents",
+      "link": "https://www.cnbc.com/2026/10/02/ai-skills-most-in-demand-at-jpmorgan-chase-citigroup-capital-one.html",
+      "pubDate": "Fri, 02 Oct 2026 11:03:31 GMT"
+    },
+    {
+      "title": "How AI is redefining Wall Street jobs — and boosting demand for this new &apos;hottest skill&apos; by 1,721%",
+      "link": "https://www.cnbc.com/2026/10/02/ai-redefining-wall-street-jobs.html",
+      "pubDate": "Fri, 02 Oct 2026 12:24:27 GMT"
+    },
+    {
+      "title": "Bitget &apos;not expecting to recover a lot&apos; from $388 million hack, CEO tells CNBC",
+      "link": "https://www.cnbc.com/2026/10/02/bitget-crypto-stolen-hack-recovery.html",
+      "pubDate": "Fri, 02 Oct 2026 06:03:23 GMT"
+    },
     {
       "title": "Fed&apos;s Kashkari says inflation is &apos;still too high&apos; even after softer-than-expected PCE data, labor market is &apos;pretty good&apos;",
       "link": "https://www.cnbc.com/2026/09/30/watch-minneapolis-fed-president-neel-kashkari.html",
@@ -72,26 +92,6 @@
       "title": "This may be the ‘missing piece’ for investors looking to boost AI exposure",
       "link": "https://www.cnbc.com/2026/09/26/ai-portfolios-may-need-china-to-grab-the-biggest-gains.html",
       "pubDate": "Sat, 26 Sep 2026 15:00:01 GMT"
-    },
-    {
-      "title": "The 10-year Treasury yield is at its highest in nearly two decades. How we got here",
-      "link": "https://www.cnbc.com/2026/09/26/10-year-treasury-yield-is-at-its-highest-in-19-years-how-we-got-here.html",
-      "pubDate": "Sat, 26 Sep 2026 13:30:06 GMT"
-    },
-    {
-      "title": "Why Xi believes the U.S. and China can overcome the &apos;Thucydides Trap&apos;",
-      "link": "https://www.cnbc.com/2026/09/26/xi-trump-thucydides-trap-us-china.html",
-      "pubDate": "Sat, 26 Sep 2026 05:00:01 GMT"
-    },
-    {
-      "title": "Appeals court rules that states can regulate Kalshi’s sports prediction markets, dealing another legal blow to platforms",
-      "link": "https://www.cnbc.com/2026/09/25/appeals-court-rules-states-can-regulate-sports-prediction-markets.html",
-      "pubDate": "Fri, 25 Sep 2026 23:28:42 GMT"
-    },
-    {
-      "title": "Crypto platform Bitget suspects North Korea is responsible for $352 million hack",
-      "link": "https://www.cnbc.com/2026/09/25/crypto-platform-bitget-suspects-north-korea-in-352-million-hack.html",
-      "pubDate": "Fri, 25 Sep 2026 06:13:35 GMT"
     }
   ]
 }
