@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-10-03T16:07:44.397Z",
+  "generatedAt": "2026-10-04T16:47:01.740Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Sports betting is increasingly the norm for Gen Z.  Here’s why some financial and mental health experts are worried",
+      "link": "https://www.cnbc.com/2026/10/04/gen-z-sports-betting-financial-and-mental-health-risks.html",
+      "pubDate": "Sun, 04 Oct 2026 12:57:45 GMT"
+    },
     {
       "title": "Lula or Bolsonaro: Wall Street braces for two wildly different results in Brazil election",
       "link": "https://www.cnbc.com/2026/10/03/lula-or-bolsonaro-wall-street-braces-for-two-wildly-different-results-in-brazil-election.html",
@@ -87,11 +92,6 @@
       "title": "Trump-Xi summit analysis: &apos;Tangible outcomes&apos; needed for U.S.-China truce to hold",
       "link": "https://www.cnbc.com/2026/09/28/trump-xi-summit-tangible-outcomes-us-china-truce.html",
       "pubDate": "Mon, 28 Sep 2026 07:22:06 GMT"
-    },
-    {
-      "title": "Debt-hungry AI companies face increased risk as bond yields spike",
-      "link": "https://www.cnbc.com/2026/09/27/debt-hungry-data-center-companies-increased-risk-bond-yields-spike.html",
-      "pubDate": "Sun, 27 Sep 2026 15:35:34 GMT"
     }
   ]
 }
