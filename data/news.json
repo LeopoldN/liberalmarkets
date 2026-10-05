@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-10-04T16:47:01.740Z",
+  "generatedAt": "2026-10-05T20:36:37.132Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Brazilian stocks jump as Bolsonaro now seen as heavy favorite to win presidency",
+      "link": "https://www.cnbc.com/2026/10/05/brazilian-stocks-jump-bolsonaro-now-heavy-favorite-to-win-presidency.html",
+      "pubDate": "Mon, 05 Oct 2026 15:47:42 GMT"
+    },
     {
       "title": "Sports betting is increasingly the norm for Gen Z.  Here’s why some financial and mental health experts are worried",
       "link": "https://www.cnbc.com/2026/10/04/gen-z-sports-betting-financial-and-mental-health-risks.html",
@@ -87,11 +92,6 @@
       "title": "U.S., China to lower tariffs on $60 billion of goods. Here&apos;s what qualifies",
       "link": "https://www.cnbc.com/2026/09/28/us-china-lower-tariffs-trump-xi-meeting.html",
       "pubDate": "Mon, 28 Sep 2026 08:31:33 GMT"
-    },
-    {
-      "title": "Trump-Xi summit analysis: &apos;Tangible outcomes&apos; needed for U.S.-China truce to hold",
-      "link": "https://www.cnbc.com/2026/09/28/trump-xi-summit-tangible-outcomes-us-china-truce.html",
-      "pubDate": "Mon, 28 Sep 2026 07:22:06 GMT"
     }
   ]
 }
