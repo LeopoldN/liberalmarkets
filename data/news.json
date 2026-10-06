@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-10-05T20:36:37.132Z",
+  "generatedAt": "2026-10-06T18:16:40.752Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Goldman: Diesel prices set to stay high through 2027 as refineries struggle to meet demand",
+      "link": "https://www.cnbc.com/2026/10/06/diesel-oil-refinery-price-capacity-demand.html",
+      "pubDate": "Tue, 06 Oct 2026 08:47:30 GMT"
+    },
+    {
+      "title": "House Democrat targets candidate prediction market trades after opponent’s Kalshi penalty",
+      "link": "https://www.cnbc.com/2026/10/05/don-davis-prediction-market-candidate-trading.html",
+      "pubDate": "Mon, 05 Oct 2026 21:24:25 GMT"
+    },
+    {
       "title": "Brazilian stocks jump as Bolsonaro now seen as heavy favorite to win presidency",
       "link": "https://www.cnbc.com/2026/10/05/brazilian-stocks-jump-bolsonaro-now-heavy-favorite-to-win-presidency.html",
-      "pubDate": "Mon, 05 Oct 2026 15:47:42 GMT"
+      "pubDate": "Mon, 05 Oct 2026 20:41:23 GMT"
     },
     {
       "title": "Sports betting is increasingly the norm for Gen Z.  Here’s why some financial and mental health experts are worried",
@@ -82,16 +92,6 @@
       "title": "China has three new criteria for humanoid robot IPOs. Few, if any, meet them",
       "link": "https://www.cnbc.com/2026/09/29/china-criteria-humanoid-robot-ipos.html",
       "pubDate": "Wed, 30 Sep 2026 02:50:35 GMT"
-    },
-    {
-      "title": "Nearly half the stocks in the S&P 500 are at cross purposes with the rest of the market",
-      "link": "https://www.cnbc.com/2026/09/28/nearly-half-of-the-stocks-in-the-sp-500-are-working-against-it.html",
-      "pubDate": "Mon, 28 Sep 2026 17:53:31 GMT"
-    },
-    {
-      "title": "U.S., China to lower tariffs on $60 billion of goods. Here&apos;s what qualifies",
-      "link": "https://www.cnbc.com/2026/09/28/us-china-lower-tariffs-trump-xi-meeting.html",
-      "pubDate": "Mon, 28 Sep 2026 08:31:33 GMT"
     }
   ]
 }
