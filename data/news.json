@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-10-06T18:16:40.752Z",
+  "generatedAt": "2026-10-07T18:49:11.090Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Fed officials see another hike coming, but no sign as to when, minutes show",
+      "link": "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html",
+      "pubDate": "Wed, 07 Oct 2026 18:42:36 GMT"
+    },
+    {
+      "title": "Why AI is both the hope and the hazard for world leaders, according to IMF chief Georgieva",
+      "link": "https://www.cnbc.com/2026/10/07/economy-inflation-ai-trade-imf-iran-hormuz-trump-.html",
+      "pubDate": "Wed, 07 Oct 2026 06:16:39 GMT"
+    },
+    {
+      "title": "Chart: A look at the S&P 500&apos;s remarkable and defiant trip to a new record",
+      "link": "https://www.cnbc.com/2026/10/06/chart-a-look-at-the-sp-500s-remarkable-and-defiant-trip-a-new-record.html",
+      "pubDate": "Tue, 06 Oct 2026 22:23:01 GMT"
+    },
+    {
+      "title": "How event contract bundles are boosting volume on prediction markets",
+      "link": "https://www.cnbc.com/2026/10/06/prediction-market-combo-contract-volume.html",
+      "pubDate": "Tue, 06 Oct 2026 18:46:16 GMT"
+    },
     {
       "title": "Goldman: Diesel prices set to stay high through 2027 as refineries struggle to meet demand",
       "link": "https://www.cnbc.com/2026/10/06/diesel-oil-refinery-price-capacity-demand.html",
@@ -56,7 +76,7 @@
     {
       "title": "Kalshi, Polymarket trading volumes on some products raise questions amid massive growth",
       "link": "https://www.cnbc.com/2026/09/30/kalshi-polymarket-trading-volume-scrutiny.html",
-      "pubDate": "Thu, 01 Oct 2026 14:24:36 GMT"
+      "pubDate": "Tue, 06 Oct 2026 18:41:32 GMT"
     },
     {
       "title": "Singapore&apos;s Temasek to expand Middle East presence, open Abu Dhabi, Riyadh offices",
@@ -72,26 +92,6 @@
       "title": "Goldman Sachs CEO succession planning faces one big problem",
       "link": "https://www.cnbc.com/2026/09/29/goldman-sachs-ceo-succession-planning.html",
       "pubDate": "Tue, 29 Sep 2026 20:50:10 GMT"
-    },
-    {
-      "title": "Prediction market traders think the U.S. added more jobs in September than economists estimate",
-      "link": "https://www.cnbc.com/2026/09/29/prediction-market-traders-september-jobs-report-will-beat-estimates.html",
-      "pubDate": "Tue, 29 Sep 2026 20:33:08 GMT"
-    },
-    {
-      "title": "Polymarket taps Goldman Sachs veteran Lisa Mantil to attract Wall Street liquidity",
-      "link": "https://www.cnbc.com/2026/09/29/polymarket-lisa-mantil-institutional-growth.html",
-      "pubDate": "Tue, 29 Sep 2026 12:00:33 GMT"
-    },
-    {
-      "title": "Trump’s municipal bond portfolio reaches as much as $1 billion as policy overlaps mount",
-      "link": "https://www.cnbc.com/2026/09/29/trump-municipal-bond-portfolio.html",
-      "pubDate": "Tue, 29 Sep 2026 14:37:07 GMT"
-    },
-    {
-      "title": "China has three new criteria for humanoid robot IPOs. Few, if any, meet them",
-      "link": "https://www.cnbc.com/2026/09/29/china-criteria-humanoid-robot-ipos.html",
-      "pubDate": "Wed, 30 Sep 2026 02:50:35 GMT"
     }
   ]
 }
