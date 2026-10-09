@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-10-08T18:47:01.046Z",
+  "generatedAt": "2026-10-09T18:17:17.272Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Blockchain.com seeks U.S. approval for prediction markets, crypto derivatives trading",
+      "link": "https://www.cnbc.com/2026/10/09/blockchain-com-cftc-prediction-markets.html",
+      "pubDate": "Fri, 09 Oct 2026 12:01:26 GMT"
+    },
+    {
+      "title": "Tokenization could unleash tens of billions of dollars in trapped capital, Nasdaq CEO says",
+      "link": "https://www.cnbc.com/2026/10/09/nasdaq-ceo-tokenization-could-unleash-billions-in-trapped-capital-.html",
+      "pubDate": "Fri, 09 Oct 2026 06:30:01 GMT"
+    },
     {
       "title": "Little relief expected for gas prices ahead of Election Day, according to prediction markets",
       "link": "https://www.cnbc.com/2026/10/08/little-relief-expected-for-gas-prices-ahead-of-election-day.html",
@@ -82,16 +92,6 @@
       "title": "Bitget &apos;not expecting to recover a lot&apos; from $388 million hack, CEO tells CNBC",
       "link": "https://www.cnbc.com/2026/10/02/bitget-crypto-stolen-hack-recovery.html",
       "pubDate": "Fri, 02 Oct 2026 06:03:23 GMT"
-    },
-    {
-      "title": "Fed&apos;s Kashkari says inflation is &apos;still too high&apos; even after softer-than-expected PCE data, labor market is &apos;pretty good&apos;",
-      "link": "https://www.cnbc.com/2026/09/30/watch-minneapolis-fed-president-neel-kashkari.html",
-      "pubDate": "Wed, 30 Sep 2026 23:44:28 GMT"
-    },
-    {
-      "title": "Kalshi, Polymarket trading volumes on some products raise questions amid massive growth",
-      "link": "https://www.cnbc.com/2026/09/30/kalshi-polymarket-trading-volume-scrutiny.html",
-      "pubDate": "Tue, 06 Oct 2026 18:41:32 GMT"
     }
   ]
 }
