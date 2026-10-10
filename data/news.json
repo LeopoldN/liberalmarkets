@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-10-09T18:17:17.272Z",
+  "generatedAt": "2026-10-10T17:16:38.649Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "JPMorgan makes bullish call in fixed income space, suggests it&apos;s a once in a generation opportunity",
+      "link": "https://www.cnbc.com/2026/10/10/jpmorgan-sees-once-in-a-generation-opportunity-in-fixed-income-space.html",
+      "pubDate": "Sat, 10 Oct 2026 15:00:01 GMT"
+    },
     {
       "title": "Blockchain.com seeks U.S. approval for prediction markets, crypto derivatives trading",
       "link": "https://www.cnbc.com/2026/10/09/blockchain-com-cftc-prediction-markets.html",
@@ -87,11 +92,6 @@
       "title": "How AI is redefining Wall Street jobs — and boosting demand for this new &apos;hottest skill&apos; by 1,721%",
       "link": "https://www.cnbc.com/2026/10/02/ai-redefining-wall-street-jobs.html",
       "pubDate": "Fri, 02 Oct 2026 18:49:03 GMT"
-    },
-    {
-      "title": "Bitget &apos;not expecting to recover a lot&apos; from $388 million hack, CEO tells CNBC",
-      "link": "https://www.cnbc.com/2026/10/02/bitget-crypto-stolen-hack-recovery.html",
-      "pubDate": "Fri, 02 Oct 2026 06:03:23 GMT"
     }
   ]
 }
