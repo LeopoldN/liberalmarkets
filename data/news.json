@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-10-11T17:38:51.641Z",
+  "generatedAt": "2026-10-12T21:12:35.641Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "The bull market turned 4 years old on Monday. Investors say reaching a fifth birthday could be challenging",
+      "link": "https://www.cnbc.com/2026/10/12/the-bull-market-just-turned-four-after-climbing-a-wall-of-worry.html",
+      "pubDate": "Mon, 12 Oct 2026 18:18:39 GMT"
+    },
+    {
+      "title": "Higher rates could be needed to avoid &apos;inflationary mindset&apos; taking hold, says Fed&apos;s Hammack",
+      "link": "https://www.cnbc.com/2026/10/12/beth-hammack-fed-inflation-policy.html",
+      "pubDate": "Mon, 12 Oct 2026 17:15:21 GMT"
+    },
+    {
+      "title": "Inflation likely peaked for 2026 but will remain sticky, according to prediction markets",
+      "link": "https://www.cnbc.com/2026/10/12/inflation-will-remain-sticky-in-2026-according-to-prediction-markets.html",
+      "pubDate": "Mon, 12 Oct 2026 15:37:26 GMT"
+    },
     {
       "title": "JPMorgan makes bullish call in fixed income space, suggests it&apos;s a once in a generation opportunity",
       "link": "https://www.cnbc.com/2026/10/10/jpmorgan-sees-once-in-a-generation-opportunity-in-fixed-income-space.html",
@@ -77,21 +92,6 @@
       "title": "Lula or Bolsonaro: Wall Street braces for two wildly different results in Brazil election",
       "link": "https://www.cnbc.com/2026/10/03/lula-or-bolsonaro-wall-street-braces-for-two-wildly-different-results-in-brazil-election.html",
       "pubDate": "Sat, 03 Oct 2026 13:12:27 GMT"
-    },
-    {
-      "title": "Traders now see little chance of a Fed rate hike in October after weak jobs report",
-      "link": "https://www.cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html",
-      "pubDate": "Fri, 02 Oct 2026 13:29:27 GMT"
-    },
-    {
-      "title": "&apos;The hottest skill on Wall Street’: Demand for this AI ability jumped 1,721% as banks embrace agents",
-      "link": "https://www.cnbc.com/2026/10/02/ai-skills-most-in-demand-at-jpmorgan-chase-citigroup-capital-one.html",
-      "pubDate": "Fri, 02 Oct 2026 11:03:31 GMT"
-    },
-    {
-      "title": "How AI is redefining Wall Street jobs — and boosting demand for this new &apos;hottest skill&apos; by 1,721%",
-      "link": "https://www.cnbc.com/2026/10/02/ai-redefining-wall-street-jobs.html",
-      "pubDate": "Fri, 02 Oct 2026 18:49:03 GMT"
     }
   ]
 }
