@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-10-12T21:12:35.641Z",
+  "generatedAt": "2026-10-13T19:11:15.489Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts",
+      "link": "https://www.cnbc.com/2026/10/13/jpmorgan-ai-agents-account-access.html",
+      "pubDate": "Tue, 13 Oct 2026 18:46:27 GMT"
+    },
+    {
+      "title": "Visa gets Beijing&apos;s green light for bank card business after 40 years of working with China",
+      "link": "https://www.cnbc.com/2026/10/13/visa-china-green-light-bank-card-business-.html",
+      "pubDate": "Tue, 13 Oct 2026 06:20:55 GMT"
+    },
+    {
+      "title": "&apos;Boring is not bad&apos;: CEO of Southeast Asia&apos;s largest bank pitches Singapore as a haven amid global turmoil",
+      "link": "https://www.cnbc.com/2026/10/13/singapore-war-geopolitics-dbs-bank-ceo.html",
+      "pubDate": "Tue, 13 Oct 2026 01:26:41 GMT"
+    },
     {
       "title": "The bull market turned 4 years old on Monday. Investors say reaching a fifth birthday could be challenging",
       "link": "https://www.cnbc.com/2026/10/12/the-bull-market-just-turned-four-after-climbing-a-wall-of-worry.html",
@@ -11,7 +26,7 @@
     {
       "title": "Higher rates could be needed to avoid &apos;inflationary mindset&apos; taking hold, says Fed&apos;s Hammack",
       "link": "https://www.cnbc.com/2026/10/12/beth-hammack-fed-inflation-policy.html",
-      "pubDate": "Mon, 12 Oct 2026 17:15:21 GMT"
+      "pubDate": "Tue, 13 Oct 2026 02:58:11 GMT"
     },
     {
       "title": "Inflation likely peaked for 2026 but will remain sticky, according to prediction markets",
@@ -77,21 +92,6 @@
       "title": "House Democrat targets candidate prediction market trades after opponent’s Kalshi penalty",
       "link": "https://www.cnbc.com/2026/10/05/don-davis-prediction-market-candidate-trading.html",
       "pubDate": "Mon, 05 Oct 2026 21:24:25 GMT"
-    },
-    {
-      "title": "Brazilian stocks jump as Bolsonaro now seen as heavy favorite to win presidency",
-      "link": "https://www.cnbc.com/2026/10/05/brazilian-stocks-jump-bolsonaro-now-heavy-favorite-to-win-presidency.html",
-      "pubDate": "Mon, 05 Oct 2026 20:41:23 GMT"
-    },
-    {
-      "title": "Sports betting is increasingly the norm for Gen Z.  Here’s why some financial and mental health experts are worried",
-      "link": "https://www.cnbc.com/2026/10/04/gen-z-sports-betting-financial-and-mental-health-risks.html",
-      "pubDate": "Sun, 04 Oct 2026 12:57:45 GMT"
-    },
-    {
-      "title": "Lula or Bolsonaro: Wall Street braces for two wildly different results in Brazil election",
-      "link": "https://www.cnbc.com/2026/10/03/lula-or-bolsonaro-wall-street-braces-for-two-wildly-different-results-in-brazil-election.html",
-      "pubDate": "Sat, 03 Oct 2026 13:12:27 GMT"
     }
   ]
 }
