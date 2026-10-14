@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-10-13T19:11:15.489Z",
+  "generatedAt": "2026-10-14T17:01:01.432Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
+      "link": "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html",
+      "pubDate": "Wed, 14 Oct 2026 15:49:35 GMT"
+    },
+    {
+      "title": "Bank of America shares drop 8% after third-quarter revenue miss and regulatory penalty",
+      "link": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
+      "pubDate": "Wed, 14 Oct 2026 16:49:11 GMT"
+    },
+    {
+      "title": "China&apos;s exports and imports surge past expectations in September",
+      "link": "https://www.cnbc.com/2026/10/14/chinas-exports-likely-grew-by-double-digits-in-september.html",
+      "pubDate": "Wed, 14 Oct 2026 03:41:36 GMT"
+    },
+    {
+      "title": "Goldman says investors are looking for &apos;profitable&apos; Chinese business growth overseas",
+      "link": "https://www.cnbc.com/2026/10/14/goldman-says-investors-seek-profitable-chinese-business-growth-abroad.html",
+      "pubDate": "Tue, 13 Oct 2026 23:05:12 GMT"
+    },
+    {
+      "title": "Williams says Fed may not have to hike rates in 2027, at odds with traders",
+      "link": "https://www.cnbc.com/2026/10/13/john-williams-fed-rate-hikes-2027.html",
+      "pubDate": "Tue, 13 Oct 2026 19:46:12 GMT"
+    },
+    {
       "title": "JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts",
       "link": "https://www.cnbc.com/2026/10/13/jpmorgan-ai-agents-account-access.html",
-      "pubDate": "Tue, 13 Oct 2026 18:46:27 GMT"
+      "pubDate": "Tue, 13 Oct 2026 20:48:37 GMT"
     },
     {
       "title": "Visa gets Beijing&apos;s green light for bank card business after 40 years of working with China",
@@ -67,31 +92,6 @@
       "title": "Fed officials see another hike coming, but no sign as to when, minutes show",
       "link": "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html",
       "pubDate": "Wed, 07 Oct 2026 18:42:36 GMT"
-    },
-    {
-      "title": "Why AI is both the hope and the hazard for world leaders, according to IMF chief Georgieva",
-      "link": "https://www.cnbc.com/2026/10/07/economy-inflation-ai-trade-imf-iran-hormuz-trump-.html",
-      "pubDate": "Wed, 07 Oct 2026 06:16:39 GMT"
-    },
-    {
-      "title": "Chart: A look at the S&P 500&apos;s remarkable and defiant trip to a new record",
-      "link": "https://www.cnbc.com/2026/10/06/chart-a-look-at-the-sp-500s-remarkable-and-defiant-trip-a-new-record.html",
-      "pubDate": "Tue, 06 Oct 2026 22:23:01 GMT"
-    },
-    {
-      "title": "How event contract bundles are boosting volume on prediction markets",
-      "link": "https://www.cnbc.com/2026/10/06/prediction-market-combo-contract-volume.html",
-      "pubDate": "Tue, 06 Oct 2026 18:46:16 GMT"
-    },
-    {
-      "title": "Goldman: Diesel prices set to stay high through 2027 as refineries struggle to meet demand",
-      "link": "https://www.cnbc.com/2026/10/06/diesel-oil-refinery-price-capacity-demand.html",
-      "pubDate": "Tue, 06 Oct 2026 08:47:30 GMT"
-    },
-    {
-      "title": "House Democrat targets candidate prediction market trades after opponent’s Kalshi penalty",
-      "link": "https://www.cnbc.com/2026/10/05/don-davis-prediction-market-candidate-trading.html",
-      "pubDate": "Mon, 05 Oct 2026 21:24:25 GMT"
     }
   ]
 }
