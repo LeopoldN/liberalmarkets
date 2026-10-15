@@ -1,17 +1,27 @@
 {
-  "generatedAt": "2026-10-14T17:01:01.432Z",
+  "generatedAt": "2026-10-15T16:48:45.964Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
-      "link": "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html",
-      "pubDate": "Wed, 14 Oct 2026 15:49:35 GMT"
+      "title": "China indicates rare earths will keep flowing to EU, regardless of U.S. trade deal expiration",
+      "link": "https://www.cnbc.com/2026/10/15/china-rare-earth-exports-europe.html",
+      "pubDate": "Thu, 15 Oct 2026 09:02:31 GMT"
     },
     {
-      "title": "Bank of America shares drop 8% after third-quarter revenue miss and regulatory penalty",
+      "title": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic&apos;s Mythos",
+      "link": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html",
+      "pubDate": "Wed, 14 Oct 2026 20:06:28 GMT"
+    },
+    {
+      "title": "Morgan Stanley tops estimates as equities trading revenue beats expectations by $909 million",
+      "link": "https://www.cnbc.com/2026/10/14/morgan-stanley-ms-q3-2026-earnings.html",
+      "pubDate": "Wed, 14 Oct 2026 20:22:09 GMT"
+    },
+    {
+      "title": "Bank of America shares drop after third-quarter revenue miss and regulatory penalty",
       "link": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
-      "pubDate": "Wed, 14 Oct 2026 16:49:11 GMT"
+      "pubDate": "Wed, 14 Oct 2026 20:20:46 GMT"
     },
     {
       "title": "China&apos;s exports and imports surge past expectations in September",
@@ -82,16 +92,6 @@
       "title": "After a yearslong slump, China&apos;s real estate market may be set for a turnaround",
       "link": "https://www.cnbc.com/2026/10/08/chinas-real-estate-market-may-be-set-for-a-turnaround-sp-says.html",
       "pubDate": "Thu, 08 Oct 2026 09:27:31 GMT"
-    },
-    {
-      "title": "Huawei doubles down on smartphones as EV sales slow",
-      "link": "https://www.cnbc.com/2026/10/08/huawei-china-smartphone-ev-slow.html",
-      "pubDate": "Thu, 08 Oct 2026 08:04:11 GMT"
-    },
-    {
-      "title": "Fed officials see another hike coming, but no sign as to when, minutes show",
-      "link": "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html",
-      "pubDate": "Wed, 07 Oct 2026 18:42:36 GMT"
     }
   ]
 }
