@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-10-15T16:48:45.964Z",
+  "generatedAt": "2026-10-16T16:30:53.673Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "U.S. raises Mastercard, Citigroup China market access in bilateral Bangkok talks, official says",
+      "link": "https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html",
+      "pubDate": "Fri, 16 Oct 2026 16:11:09 GMT"
+    },
+    {
+      "title": "People in China are spending nearly as much of their income as Americans on healthcare",
+      "link": "https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html",
+      "pubDate": "Thu, 15 Oct 2026 23:00:01 GMT"
+    },
+    {
+      "title": "Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",
+      "link": "https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html",
+      "pubDate": "Thu, 15 Oct 2026 19:53:49 GMT"
+    },
     {
       "title": "China indicates rare earths will keep flowing to EU, regardless of U.S. trade deal expiration",
       "link": "https://www.cnbc.com/2026/10/15/china-rare-earth-exports-europe.html",
@@ -77,21 +92,6 @@
       "title": "Blockchain.com seeks U.S. approval for prediction markets, crypto derivatives trading",
       "link": "https://www.cnbc.com/2026/10/09/blockchain-com-cftc-prediction-markets.html",
       "pubDate": "Fri, 09 Oct 2026 12:01:26 GMT"
-    },
-    {
-      "title": "Tokenization could unleash tens of billions of dollars in trapped capital, Nasdaq CEO says",
-      "link": "https://www.cnbc.com/2026/10/09/nasdaq-ceo-tokenization-could-unleash-billions-in-trapped-capital-.html",
-      "pubDate": "Fri, 09 Oct 2026 06:30:01 GMT"
-    },
-    {
-      "title": "Little relief expected for gas prices ahead of Election Day, according to prediction markets",
-      "link": "https://www.cnbc.com/2026/10/08/little-relief-expected-for-gas-prices-ahead-of-election-day.html",
-      "pubDate": "Thu, 08 Oct 2026 17:51:51 GMT"
-    },
-    {
-      "title": "After a yearslong slump, China&apos;s real estate market may be set for a turnaround",
-      "link": "https://www.cnbc.com/2026/10/08/chinas-real-estate-market-may-be-set-for-a-turnaround-sp-says.html",
-      "pubDate": "Thu, 08 Oct 2026 09:27:31 GMT"
     }
   ]
 }
