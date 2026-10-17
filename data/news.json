@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-10-16T16:30:53.673Z",
+  "generatedAt": "2026-10-17T15:24:56.178Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "U.S. raises Mastercard, Citigroup China market access in bilateral Bangkok talks, official says",
+      "title": "&apos;Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
+      "link": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
+      "pubDate": "Sat, 17 Oct 2026 15:00:01 GMT"
+    },
+    {
+      "title": "Software’s new consolidator gets big vote of confidence from Berkshire",
+      "link": "https://www.cnbc.com/2026/10/17/bending-spoons-wants-to-revive-software-castoffs-berkshire-investing.html",
+      "pubDate": "Sat, 17 Oct 2026 15:11:30 GMT"
+    },
+    {
+      "title": "U.S. presses China on Mastercard, Citigroup market access in bilateral Bangkok talks, official says",
       "link": "https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html",
-      "pubDate": "Fri, 16 Oct 2026 16:11:09 GMT"
+      "pubDate": "Fri, 16 Oct 2026 16:46:18 GMT"
     },
     {
       "title": "People in China are spending nearly as much of their income as Americans on healthcare",
@@ -82,16 +92,6 @@
       "title": "Inflation likely peaked for 2026 but will remain sticky, according to prediction markets",
       "link": "https://www.cnbc.com/2026/10/12/inflation-will-remain-sticky-in-2026-according-to-prediction-markets.html",
       "pubDate": "Mon, 12 Oct 2026 15:37:26 GMT"
-    },
-    {
-      "title": "JPMorgan makes bullish call in fixed income space, suggests it&apos;s a once in a generation opportunity",
-      "link": "https://www.cnbc.com/2026/10/10/jpmorgan-sees-once-in-a-generation-opportunity-in-fixed-income-space.html",
-      "pubDate": "Sat, 10 Oct 2026 15:00:01 GMT"
-    },
-    {
-      "title": "Blockchain.com seeks U.S. approval for prediction markets, crypto derivatives trading",
-      "link": "https://www.cnbc.com/2026/10/09/blockchain-com-cftc-prediction-markets.html",
-      "pubDate": "Fri, 09 Oct 2026 12:01:26 GMT"
     }
   ]
 }
