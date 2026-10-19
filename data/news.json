@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-10-18T15:45:33.734Z",
+  "generatedAt": "2026-10-19T18:39:58.864Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Anthropic is AI trade&apos;s last big hope for a major IPO this year",
+      "link": "https://www.cnbc.com/2026/10/19/anthropic-ipo-ai-trade.html",
+      "pubDate": "Mon, 19 Oct 2026 16:42:14 GMT"
+    },
+    {
+      "title": "Robot factories and hypersonic missiles: JPMorgan Chase&apos;s first $5 billion of defense investments",
+      "link": "https://www.cnbc.com/2026/10/19/jpmorgan-security-defense-investments.html",
+      "pubDate": "Mon, 19 Oct 2026 12:34:01 GMT"
+    },
     {
       "title": "&apos;Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds",
       "link": "https://www.cnbc.com/2026/10/17/dead-money-for-a-decade-hedge-fund-approach-that-may-trump-bonds.html",
@@ -82,16 +92,6 @@
       "title": "The bull market turned 4 years old on Monday. Investors say reaching a fifth birthday could be challenging",
       "link": "https://www.cnbc.com/2026/10/12/the-bull-market-just-turned-four-after-climbing-a-wall-of-worry.html",
       "pubDate": "Mon, 12 Oct 2026 18:18:39 GMT"
-    },
-    {
-      "title": "Higher rates could be needed to avoid &apos;inflationary mindset&apos; taking hold, says Fed&apos;s Hammack",
-      "link": "https://www.cnbc.com/2026/10/12/beth-hammack-fed-inflation-policy.html",
-      "pubDate": "Tue, 13 Oct 2026 02:58:11 GMT"
-    },
-    {
-      "title": "Inflation likely peaked for 2026 but will remain sticky, according to prediction markets",
-      "link": "https://www.cnbc.com/2026/10/12/inflation-will-remain-sticky-in-2026-according-to-prediction-markets.html",
-      "pubDate": "Mon, 12 Oct 2026 15:37:26 GMT"
     }
   ]
 }
