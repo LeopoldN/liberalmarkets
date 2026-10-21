@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-10-20T16:47:19.779Z",
+  "generatedAt": "2026-10-21T17:03:14.754Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here&apos;s their edge",
+      "link": "https://www.cnbc.com/2026/10/21/goldman-sachs-jpmorgan-morgan-stanley-ai-trading.html",
+      "pubDate": "Wed, 21 Oct 2026 15:30:50 GMT"
+    },
     {
       "title": "HSBC CEO warns the AI boom won’t make every data center a good bet",
       "link": "https://www.cnbc.com/2026/10/20/data-center-financing-ai-debt-hsbc.html",
@@ -87,11 +92,6 @@
       "title": "JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts",
       "link": "https://www.cnbc.com/2026/10/13/jpmorgan-ai-agents-account-access.html",
       "pubDate": "Tue, 13 Oct 2026 20:48:37 GMT"
-    },
-    {
-      "title": "Visa gets Beijing&apos;s green light for bank card business after 40 years of working with China",
-      "link": "https://www.cnbc.com/2026/10/13/visa-china-green-light-bank-card-business-.html",
-      "pubDate": "Tue, 13 Oct 2026 06:20:55 GMT"
     }
   ]
 }
