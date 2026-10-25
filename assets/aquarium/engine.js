@@ -8,6 +8,9 @@ const MAX_STEPS = 4;
 /**
  * Wires World + AsciiRenderer to a canvas: fixed-timestep loop, resize,
  * pointer input, pausing off-screen, and prefers-reduced-motion.
+ *
+ * Options: sharks (SharkSpec[]), fishCount, vertical (tall side tank) and
+ * theme (one of THEMES from renderer.js).
  */
 export class OceanEngine {
   world;
@@ -20,11 +23,13 @@ export class OceanEngine {
   resizeObserver;
   intersectionObserver;
   disposed = false;
+  paused = false;
 
-  constructor(canvas, sharks) {
+  constructor(canvas, { sharks, fishCount, vertical = false, theme } = {}) {
     this.canvas = canvas;
-    this.world = new World(sharks);
+    this.world = new World(sharks, fishCount, vertical);
     this.renderer = new AsciiRenderer(canvas);
+    if (theme) this.renderer.setTheme(theme);
     this.renderer.setFontFamily(getComputedStyle(canvas).fontFamily);
     this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -71,9 +76,25 @@ export class OceanEngine {
     if (this.reducedMotion.matches) this.drawStill();
   }
 
+  setTheme(theme) {
+    this.renderer.setTheme(theme);
+    if (this.paused || this.reducedMotion.matches) this.renderer.render(this.world, 0);
+  }
+
+  /** Stop the loop (the page's fish toggle); play() picks up where it left off. */
+  pause() {
+    this.paused = true;
+    cancelAnimationFrame(this.raf);
+  }
+
+  play() {
+    this.paused = false;
+    this.schedule();
+  }
+
   schedule() {
     cancelAnimationFrame(this.raf);
-    if (this.disposed || !this.visible || this.reducedMotion.matches) return;
+    if (this.disposed || this.paused || !this.visible || this.reducedMotion.matches) return;
     this.last = performance.now();
     this.raf = requestAnimationFrame(this.frame);
   }
