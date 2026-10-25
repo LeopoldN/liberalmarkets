@@ -103,7 +103,7 @@ export class World {
       const orbitRadius = minSide * rand(0.28, 0.4);
       const a = (i / sharkCount) * TAU + rand(-0.4, 0.4);
       const orbitDir = i % 2 === 0 ? 1 : -1;
-      const x = W / 2 + Math.cos(a) * orbitRadius * (W / minSide) * 0.9;
+      const x = W / 2 + Math.cos(a) * orbitRadius * (this.vertical ? 0.4 : W / minSide) * 0.9;
       const y = H / 2 + Math.sin(a) * orbitRadius * (H / minSide) * 0.9;
       const heading = a + (orbitDir * Math.PI) / 2;
       const nodes = new Float32Array(SHARK_NODES * 2);
@@ -457,8 +457,9 @@ export class World {
         hunting = true;
         closing = clamp(1 - d / (L * 0.9), 0, 1);
       } else {
-        // Patrol: a lazy circuit around the headline.
-        const rx = (hx - cxW) / (W / minSide);
+        // Patrol: a lazy circuit around the headline (in a vertical tank, a tall,
+        // narrow loop up one side and down the other).
+        const rx = (hx - cxW) / (this.vertical ? 0.4 : W / minSide);
         const ry = (hy - cyW) / (H / minSide);
         const r = Math.hypot(rx, ry) || 1;
         const radius = sh.orbitRadius * (1 + 0.15 * Math.sin(time * 0.05 + sh.id));
@@ -496,7 +497,9 @@ export class World {
 
       // Turn back once the snout leaves the frame, so bodies dip off-screen
       // now and then but the sharks never wander away for good.
-      const over = Math.max(-hx, hx - W, -hy, hy - H);
+      // A narrow tank turns them back sooner on the sides, so fins stay in view.
+      const side = this.vertical ? W * 0.22 : 0;
+      const over = Math.max(side - hx, hx - (W - side), -hy, hy - H);
       if (over > -L * 0.05) {
         const w = clamp((over + L * 0.05) / (L * 0.35), 0, 1) * 3.5;
         const toX = cxW - hx;
