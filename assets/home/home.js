@@ -1,5 +1,5 @@
-// Page wiring for the homepage, the article archive and article pages: theme and aquarium toggles,
-// the news ticker, then whichever sections the page has fill themselves in.
+// Page wiring for the homepage, the article archive, article pages and the Trump Tracker: theme and
+// aquarium toggles, the news ticker, then whichever sections the page has fill themselves in.
 import { startTanks } from "./tanks.js";
 import { renderWire } from "./wire.js";
 import { renderIndicators } from "./desk.js";
@@ -90,4 +90,11 @@ const articles = loadArticles().then((list) => {
   renderNext({ list: $("[data-next]"), section: $("[data-next-section]") }, list);
   return articleEntries(list);
 });
-startSearch({ sources: [articles, posts, desk, wire] });
+// The tracker, or any page with a chart figure, loads the chart template only when it needs it.
+const trackerRoot = $("[data-tracker]");
+const charts = trackerRoot
+  ? import("./tracker.js?v=20261025b").then((m) => m.startTracker(trackerRoot))
+  : $("figure[data-chart]")
+    ? import("./chart.js?v=20261025b").then((m) => m.mountAll()).then(() => [])
+    : Promise.resolve([]);
+startSearch({ sources: [articles, posts, desk, wire, charts.catch(() => [])] });

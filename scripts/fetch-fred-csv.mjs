@@ -51,6 +51,7 @@ const SERIES = [
   { id: "GFDEGDQ188S", name: "Debt as % of GDP" },
   { id: "FYFSD", name: "Federal Deficit" },
   { id: "FEDFUNDS", name: "Federal Funds Rate" },
+  { id: "MORTGAGE30US", name: "30-Year Mortgage Rate" },
 ];
 
 /**

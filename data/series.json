@@ -1,0 +1,48 @@
+{
+  "_readme": "Every chart on the site reads its title, units and source from here. To chart a new FRED series: add its id to scripts/fetch-fred-csv.mjs, add an entry below, then put <figure class=\"chart\" data-chart=\"SERIES_ID\"></figure> on any page. unit: usd | cents | pct | jobsK (thousands of people) | usdM (millions of dollars) | usdB (billions) | usd0 (whole dollars) | ratio. good: which direction counts as better (up, down, or null to leave it unscored). transform: yoy charts the % change on a year earlier. kind: line (default) or column. period: fy labels annual points as fiscal years.",
+  "series": {
+    "CPIAUCSL": { "title": "Inflation", "sub": "Consumer prices, % change on a year earlier", "source": "BLS", "unit": "pct", "digits": 1, "transform": "yoy", "good": "down", "ref": { "value": 2, "label": "2% target" } },
+    "APU000074714": { "title": "Gasoline", "sub": "Regular unleaded, US city average, $ per gallon", "source": "BLS", "unit": "usd", "digits": 2, "good": "down" },
+    "APU000072610": { "title": "Electricity", "sub": "Average price, cents per kilowatt-hour", "source": "BLS", "unit": "cents", "digits": 1, "good": "down" },
+    "APU0000708111": { "title": "Eggs", "sub": "Grade A large, $ per dozen", "source": "BLS", "unit": "usd", "digits": 2, "good": "down" },
+    "APU0000709112": { "title": "Milk", "sub": "Whole, $ per gallon", "source": "BLS", "unit": "usd", "digits": 2, "good": "down" },
+    "APU0000717311": { "title": "Coffee", "sub": "Ground roast, $ per pound", "source": "BLS", "unit": "usd", "digits": 2, "good": "down" },
+    "APU0000FN1101": { "title": "Soft drinks", "sub": "$ per 2-litre bottle", "source": "BLS", "unit": "usd", "digits": 2, "good": "down" },
+    "APU0000718311": { "title": "Potato chips", "sub": "$ per 16-ounce bag", "source": "BLS", "unit": "usd", "digits": 2, "good": "down" },
+    "CUSR0000SAF113": { "title": "Fruit and vegetables", "sub": "Consumer prices, % change on a year earlier", "source": "BLS", "unit": "pct", "digits": 1, "transform": "yoy", "good": "down" },
+    "CUSR0000SAH3": { "title": "Household furnishings", "sub": "Consumer prices, % change on a year earlier", "source": "BLS", "unit": "pct", "digits": 1, "transform": "yoy", "good": "down" },
+    "CUSR0000SAD": { "title": "Durable goods", "sub": "Consumer prices, % change on a year earlier", "source": "BLS", "unit": "pct", "digits": 1, "transform": "yoy", "good": "down" },
+
+    "UNRATE": { "title": "Unemployment rate", "sub": "% of the labor force", "source": "BLS", "unit": "pct", "digits": 1, "good": "down" },
+    "PAYEMS": { "title": "Payrolls", "sub": "Total nonfarm employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "LNS11300060": { "title": "Prime-age participation", "sub": "Share of 25 to 54-year-olds in the labor force, %", "source": "BLS", "unit": "pct", "digits": 1, "good": "up" },
+    "USGOVT": { "title": "Government jobs", "sub": "Federal, state and local employment", "source": "BLS", "unit": "jobsK", "good": null },
+    "CES9091000001": { "title": "Federal jobs", "sub": "Federal government employment", "source": "BLS", "unit": "jobsK", "good": null },
+
+    "MANEMP": { "title": "Manufacturing", "sub": "Factory employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "CES3133600101": { "title": "Motor vehicles and parts", "sub": "Employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "CES1021210001": { "title": "Coal mining", "sub": "Employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "USMINE": { "title": "Mining and logging", "sub": "Employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "USCONS": { "title": "Construction", "sub": "Employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "CES4348400001": { "title": "Trucking", "sub": "Truck transportation employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "USINFO": { "title": "Information", "sub": "Publishing, broadcasting, telecoms and data employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "USFIRE": { "title": "Finance", "sub": "Financial activities employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+    "CES6562000101": { "title": "Health care", "sub": "Employment", "source": "BLS", "unit": "jobsK", "good": "up" },
+
+    "GDPC1": { "title": "Real GDP", "sub": "Annual rate, chained 2017 dollars", "source": "BEA", "unit": "usdB", "good": "up" },
+    "A939RX0Q048SBEA": { "title": "Real GDP per person", "sub": "Chained 2017 dollars", "source": "BEA", "unit": "usd0", "good": "up" },
+    "TLMFGCONS": { "title": "Factory building", "sub": "Construction spending on manufacturing, annual rate", "source": "Census Bureau", "unit": "usdM", "good": "up" },
+
+    "MSPUS": { "title": "Median home price", "sub": "Houses sold, quarterly", "source": "Census Bureau and HUD", "unit": "usd0", "good": null },
+    "MEHOINUSA646N": { "title": "Median household income", "sub": "Current dollars, annual", "source": "Census Bureau", "unit": "usd0", "good": "up" },
+    "HOUSE_TO_INCOME_RATIO": { "title": "Price to income", "sub": "Median home price over median household income", "source": "Liberal Markets, from Census Bureau data", "unit": "ratio", "digits": 2, "good": "down", "fred": false },
+
+    "FYFSD": { "title": "Federal deficit", "sub": "Surplus or deficit, fiscal years to September", "source": "Treasury and OMB", "unit": "usdM", "kind": "column", "period": "fy", "good": "up" },
+    "GFDEBTN": { "title": "Federal debt", "sub": "Total public debt outstanding", "source": "Treasury", "unit": "usdM", "good": "down" },
+    "GFDEGDQ188S": { "title": "Debt to GDP", "sub": "Total public debt, % of GDP", "source": "OMB and St. Louis Fed", "unit": "pct", "digits": 1, "good": "down" },
+    "BOPGSTB": { "title": "Trade balance", "sub": "Goods and services, monthly", "source": "Census Bureau and BEA", "unit": "usdM", "good": "up" },
+
+    "FEDFUNDS": { "title": "Fed funds rate", "sub": "Effective rate, monthly average, %", "source": "Federal Reserve", "unit": "pct", "digits": 2, "good": null },
+    "MORTGAGE30US": { "title": "30-year mortgage rate", "sub": "Fixed rate, weekly average, %", "source": "Freddie Mac", "unit": "pct", "digits": 2, "good": "down" }
+  }
+}

@@ -1,1161 +1,220 @@
-<!-- trumptracker.html -->
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Liberal Markets — Trump Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Trump economy in charts: prices, jobs, industries, growth, housing, debt and rates from FRED, each measured from the day he took office.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff1e5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+  <title>Trump Tracker · Liberal Markets</title>
   <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
-  <meta name="description" content="Economic indicators dashboard in the Liberal Markets wireframe style." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=4" />
-  <link rel="stylesheet" href="trump-style.css?v=5" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..500&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+  <script>
+    // Apply saved preferences before first paint so nothing flashes.
+    (function () {
+      var d = document.documentElement;
+      try {
+        var theme = localStorage.getItem("lm-theme");
+        if (theme === "light" || theme === "dark") d.dataset.theme = theme;
+        if (localStorage.getItem("lm-fish") === "off") d.dataset.fish = "off";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/home/home.css?v=20261025b">
+  <script type="module" src="assets/home/home.js?v=20261025b"></script>
 </head>
-
-<body class="markets trumptracker">
-  <!-- Falling man scroll indicator -->
-  <div class="fallGuy" aria-hidden="true">
-    <div class="fallGuyInner" id="fallGuy">
-      <svg viewBox="0 0 640 640">
-        <path fill="#fc745e" d="M384 96C384 78.3 369.7 64 352 64C334.3 64 320 78.3 320 96L320 101.4C320 146.4 296.4 188 257.9 211.2L253.3 214C195.4 248.7 160 311.1 160 378.6L160 448C160 465.7 174.3 480 192 480C209.7 480 224 465.7 224 448L224 378.6C224 361.9 227.3 345.6 233.4 330.6L423.2 564.2C434.3 577.9 454.5 580 468.2 568.9C481.9 557.8 484 537.6 472.9 523.9L359.2 384L464 384L502.4 435.2C513 449.3 533.1 452.2 547.2 441.6C561.3 431 564.2 410.9 553.6 396.8L510.4 339.2C501.3 327.1 487.1 320 472 320L383 320L320.1 244.5C360.4 208.5 384 156.6 384 101.4L384 96zM168 208C198.9 208 224 182.9 224 152C224 121.1 198.9 96 168 96C137.1 96 112 121.1 112 152C112 182.9 137.1 208 168 208z"/>
-      </svg>
-    </div>
-  </div>
-
+<body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">
-        <!-- Same inline logo from index.html -->
-        <svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
-          <path d="m655.45 328.74v77.062-0.046875c0 9.375-7.5469 16.969-16.922 16.969h-77.062c-4.5 0-8.8125-1.7812-11.953-4.9688-3.1875-3.1875-4.9688-7.5-4.9688-12v-77.016c0-4.5 1.7812-8.8125 4.9688-12 3.1406-3.1875 7.4531-4.9688 11.953-4.9688h77.062c9.375 0 16.922 7.5938 16.922 16.969zm-279.94 0v77.062-0.046875c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1875-7.4531 4.9688-11.953 4.9688h-78.656c-4.4531 0-8.7656-1.7812-11.953-4.9688s-4.9688-7.5-4.9219-12v-77.016c-0.046875-4.5 1.7344-8.8125 4.9219-12s7.5-4.9688 11.953-4.9688h78.656c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1875 4.9688 7.5 4.9688 12zm488.29-99.094v-78.656c0-4.5 1.7812-8.7656 4.9219-11.953 3.1875-3.1875 7.5-4.9688 12-4.9688h215.44c9.375 0 16.922 7.5938 16.922 16.922v898.03c0 9.3281-7.5469 16.922-16.922 16.922h-215.44c-4.5 0-8.8125-1.7812-12-4.9688-3.1406-3.1875-4.9219-7.4531-4.9219-11.953v-77.016c0-9.3281 7.5469-16.922 16.922-16.922h119.91v-708.52h-119.91c-9.375 0-16.922-7.5938-16.922-16.922zm-664.45 725.39v-708.47h119.91c9.375 0 16.922-7.5938 16.922-16.922v-78.656c0-4.5-1.7812-8.7656-4.9219-11.953-3.1875-3.1875-7.5-4.9688-12-4.9688h-215.44c-9.375 0-16.922 7.5938-16.922 16.922v898.03c0 9.3281 7.5469 16.922 16.922 16.922h215.44c4.5 0 8.8125-1.7812 12-4.9688 3.1406-3.1875 4.9219-7.4531 4.9219-11.953v-77.016c0-9.3281-7.5469-16.922-16.922-16.922zm737.58-160.78 0.046875-0.046875c0-9.3281-7.5938-16.922-16.922-16.922h-78.656c-9.3281 0-16.922 7.5938-16.922 16.922v78.609c0 9.375 7.5938 16.922 16.922 16.969h78.656c9.3281 0 16.922-7.5938 16.922-16.969v-78.562zm-281.53 0v78.609l0.046875-0.046875c0 9.375-7.5469 16.969-16.922 16.969h-77.062c-4.5 0-8.8125-1.7812-11.953-4.9688-3.1875-3.1875-4.9688-7.5-4.9688-12v-78.562c0-4.5 1.7812-8.8125 4.9688-12 3.1406-3.1875 7.4531-4.9688 11.953-4.9688h77.062c9.375 0 16.922 7.5938 16.922 16.969zm-279.94 0v78.609l0.046875-0.046875c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1875-7.4531 4.9688-11.953 4.9688h-78.656c-4.4531 0-8.7656-1.7812-11.953-4.9688s-4.9688-7.5-4.9219-12v-78.562c-0.046875-4.5 1.7344-8.8125 4.9219-12s7.5-4.9688 11.953-4.9688h78.656c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1875 4.9688 7.5 4.9688 12zm561.47-232.78 0.046875-0.046874c0-4.5-1.7812-8.8125-4.9688-12-3.1875-3.1406-7.5-4.9219-11.953-4.9219h-78.656c-9.3281 0-16.922 7.5469-16.922 16.922v78.656-0.046876c0 9.375 7.5938 16.922 16.922 16.922h78.656c4.4531 0 8.7656-1.7812 11.953-4.9219 3.1875-3.1875 4.9688-7.5 4.9688-12v-78.562zm-281.53 0v78.656l0.046875-0.09375c0 4.5-1.7812 8.8125-4.9688 12-3.1406 3.1406-7.4531 4.9219-11.953 4.9219h-77.062c-9.3281 0-16.922-7.5469-16.922-16.922v-78.562c0-9.3281 7.5938-16.922 16.922-16.922h77.062c4.5 0 8.8125 1.7812 11.953 4.9688 3.1875 3.1406 4.9688 7.4531 4.9688 11.953zm-279.94 0v78.656l0.046875-0.09375c0 9.375-7.5938 16.922-16.922 16.922h-78.656c-9.3281 0-16.875-7.5469-16.875-16.922v-78.562c0-9.3281 7.5469-16.922 16.875-16.922h78.656c9.3281 0 16.922 7.5938 16.922 16.922zm561.47-232.78 0.046875-0.09375c0-9.3281-7.5938-16.922-16.922-16.922h-78.656c-9.3281 0-16.922 7.5938-16.922 16.922v77.062c0 9.3281 7.5938 16.922 16.922 16.922h78.656c9.3281 0 16.922-7.5469 16.922-16.922z" fill-rule="evenodd"/>
-        </svg>
-      </div>
-      <div class="brandText">
-        <div class="brandName">Liberal Markets</div>
-        <div class="brandTag">trump tracker</div>
+  <header class="bar">
+    <div class="bar__inner">
+      <a class="wordmark" href="index.html">Liberal Markets</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="articles.html">Articles</a>
+        <a href="trumptracker.html" aria-current="page">Trump Tracker</a>
+        <a href="markets.html">Markets</a>
+        <a href="games.html">Games</a>
+      </nav>
+      <div class="controls">
+        <button class="control" type="button" data-search-open aria-haspopup="dialog">Search <kbd>/</kbd></button>
+        <button class="control" type="button" data-theme-toggle>Night</button>
+        <button class="control control--fish" type="button" data-fish-toggle aria-pressed="true">Fish</button>
       </div>
     </div>
-
-    <nav class="nav">
-      <button class="chip" data-nav="all" type="button" aria-pressed="true">
-        <span class="chipDot" aria-hidden="true"></span> Home
-      </button>
-      <button class="chip is-active" data-nav="trumptracker" type="button" aria-pressed="true">
-        <span class="chipDot" aria-hidden="true"></span> Trump Tracker
-      </button>
-      <button class="chip" data-nav="markets" type="button" aria-pressed="false">
-        <span class="chipDot" aria-hidden="true"></span> Markets
-      </button>
-      <button class="chip" data-nav="model" type="button" aria-pressed="false">
-        <span class="chipDot" aria-hidden="true"></span> Model
-      </button>
-    </nav>
-
-    <div class="actions">
-      <label class="search" aria-label="Search charts">
-        <span class="searchIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="7"></circle>
-            <path d="M20 20l-3.2-3.2"></path>
-          </svg>
-        </span>
-        <input id="q" type="search" placeholder="Filter charts… (e.g., “CPI”, “GDP”)" autocomplete="off" />
-        <span class="kbd" aria-hidden="true">⌘K</span>
-      </label>
+    <div class="ticker" role="region" aria-label="Latest headlines">
+      <span class="ticker__label">Latest</span>
+      <div class="ticker__viewport">
+        <div class="ticker__track" data-wire></div>
+      </div>
     </div>
   </header>
 
-  <main id="main" class="wrap">
-    <section class="hero" style="grid-template-columns: 1fr;">
-      <div class="heroLeft">
-        <div class="heroKicker">
-          <span class="pulse" aria-hidden="true"></span>
-          <span>Trump Tracker</span>
-        </div>
+  <div class="tank tank--left" aria-hidden="true"><canvas></canvas></div>
+  <div class="tank tank--right" aria-hidden="true"><canvas></canvas></div>
 
-        <h1 class="heroTitle">
-          How well do you know whats going on?
-          <span class="ghost">Data doesn't lie, people do</span>
-        </h1>
+  <main id="main" class="page page--tracker" data-tracker>
+    <header class="tracker-head">
+      <p class="tracker-head__meta"><span>Trump Tracker</span><span data-updated>Data from FRED</span></p>
+      <h1 class="tracker-head__title">The Trump economy, by the numbers</h1>
+      <p class="tracker-head__dek">Prices, jobs, growth, housing and the public finances, each measured from the day he returned to office on 20 January 2025. Shaded bands mark his two terms, and the line turns red while he is in charge.</p>
+    </header>
 
-        <p class="heroBody">
-          This page is just charts. No prose, no drama. Use it as a dashboard while you pretend politics is data-driven.
-        </p>
+    <section class="block" aria-labelledby="card-title">
+      <header class="block__head">
+        <h2 id="card-title">Report card</h2>
+        <span>Since January 2025</span>
+      </header>
+      <p class="tally" data-tally></p>
+      <div class="card" data-card></div>
+      <p class="card__key" aria-hidden="true">
+        <span><i class="card__tile is-good">▲</i><i class="card__tile is-good">▼</i>Better</span>
+        <span><i class="card__tile is-bad">▲</i><i class="card__tile is-bad">▼</i>Worse</span>
+        <span><i class="card__tile is-even">▲</i>Not scored</span>
+        <span>Arrows show which way each number moved. Pick a square to see its chart.</span>
+      </p>
+    </section>
+
+    <div class="tracker-tools">
+      <nav class="tracker-nav" aria-label="Tracker sections">
+        <a href="#prices">Prices</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#industries">Industries</a>
+        <a href="#growth">Growth</a>
+        <a href="#housing">Housing</a>
+        <a href="#fiscal">Debt</a>
+        <a href="#rates">Rates</a>
+      </nav>
+      <div class="tracker-range" role="group" aria-label="Period shown" data-range-control></div>
+    </div>
+
+    <section class="block tracker-section" id="prices" data-section aria-labelledby="prices-title">
+      <header class="block__head">
+        <h2 id="prices-title">Prices</h2>
+        <span data-section-score></span>
+      </header>
+      <p class="tracker-section__dek">What things cost at the checkout, at the pump and on the power bill.</p>
+      <div class="explorer">
+        <ul class="explorer__list" aria-label="Prices: pick a measure to chart" data-explorer="CPIAUCSL APU000074714 APU000072610 APU0000708111 APU0000709112 APU0000717311 APU0000FN1101 APU0000718311 CUSR0000SAF113 CUSR0000SAH3 CUSR0000SAD"></ul>
+        <figure class="chart chart--lead" id="prices-chart" data-chart="CPIAUCSL" aria-live="polite"></figure>
       </div>
     </section>
 
-    <section class="ttGrid" id="chartGrid" aria-label="Economic indicator sections">
-
-      <!-- PRICES -->
-      <section class="ttSection" data-section="prices" aria-label="Prices">
-        <header class="ttSectionHead">
-          <div class="ttHeadLeft">
-            <div class="ttKicker">SECTION</div>
-            <h2 class="ttTitle">Prices</h2>
-            <p class="ttSub">Inflation and cost-of-living pressure. Slow-moving, loud consequences.</p>
-          </div>
-
-          <div class="ttHeadRight">
-            <button class="ttMoreBtn" type="button" data-tt-more aria-expanded="false" aria-controls="ttMore-prices">
-              Show all
-            </button>
-
-            <div class="ttSnapRow" aria-label="Latest snapshot">
-              <div class="ttSnap" data-csv="data/CPIAUCSL.csv" data-label="CPI">
-                <div class="ttSnapLabel">CPI</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-
-              <!-- Add more price snapshots later and they will go into the drawer automatically -->
-            </div>
-          </div>
-        </header>
-
-        <div class="ttMore" id="ttMore-prices" hidden>
-          <div class="ttMoreInner" aria-label="All snapshots">
-            <div class="ttMoreGrid" data-tt-more-grid></div>
-          </div>
-        </div>
-
-        <div class="chartRow">
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle">
-                <span class="chartDot" aria-hidden="true"></span>
-                <span class="chartTitleText">CPI (CPIAUCSL)</span>
-              </div>
-
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-
-              <div class="chartMeta">
-                <span class="chartPill chartRange">—</span>
-                <span class="chartPill chartLatest">—</span>
-              </div>
-            </div>
-
-            <div class="chartWrap">
-              <canvas class="wireChart"
-                width="1100"
-                height="360"
-                data-csv="data/CPIAUCSL.csv"
-                data-title="CPI"
-                data-height="260"
-                data-view="level"
-              ></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-
-            <div class="chartFoot">
-              <span class="muted">Source: FRED CSV • rendered client-side</span>
-            </div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Gas -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Gas Price (APU000074714)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/APU000074714.csv" data-title="Gas Price" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Electricity -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Electricity Price (APU000072610)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/APU000072610.csv" data-title="Electricity Price" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Eggs -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Egg Price/doz (APU0000708111)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/APU0000708111.csv" data-title="Egg Price/doz" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Milk -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Whole Milk Price/gal (APU0000709112)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/APU0000709112.csv" data-title="Whole Milk Price/gal" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Coffee -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Coffee Prices/lb (APU0000717311)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/APU0000717311.csv" data-title="Coffee Prices/lb" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Soda -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">2 Litre Soda Price (APU0000FN1101)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/APU0000FN1101.csv" data-title="2 Litre Soda Price" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Chips -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">16oz Chip bag (APU0000718311)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/APU0000718311.csv" data-title="16oz Chip bag" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- CPI Basket: Fruits & Veggies -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Fruits & Veggies Basket (CUSR0000SAF113)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/CUSR0000SAF113.csv" data-title="Fruits & Veggies Basket" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Household Furnishings -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Household Furnishings basket (CUSR0000SAH3)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/CUSR0000SAH3.csv" data-title="Household Furnishings basket" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Durables -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Durables basket (CUSR0000SAD)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/CUSR0000SAD.csv" data-title="Durables basket" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-      </section>
-
-      <!-- LABOR -->
-      <section class="ttSection" data-section="labor" aria-label="Labor">
-        <header class="ttSectionHead">
-          <div class="ttHeadLeft">
-            <div class="ttKicker">SECTION</div>
-            <h2 class="ttTitle">Labor</h2>
-            <p class="ttSub">Employment, slack, and what people can actually get away with asking for in wages.</p>
-          </div>
-
-          <div class="ttHeadRight">
-            <button class="ttMoreBtn" type="button" data-tt-more aria-expanded="false" aria-controls="ttMore-labor">
-              Show all
-            </button>
-
-            <div class="ttSnapRow" aria-label="Latest snapshot">
-              <div class="ttSnap" data-csv="data/UNRATE.csv" data-label="Unemployment">
-                <div class="ttSnapLabel">Unemployment</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <div class="ttMore" id="ttMore-labor" hidden>
-          <div class="ttMoreInner" aria-label="All snapshots">
-            <div class="ttMoreGrid" data-tt-more-grid></div>
-          </div>
-        </div>
-
-        <div class="chartRow">
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle">
-                <span class="chartDot" aria-hidden="true"></span>
-                <span class="chartTitleText">Unemployment (UNRATE)</span>
-              </div>
-
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-
-              <div class="chartMeta">
-                <span class="chartPill chartRange">—</span>
-                <span class="chartPill chartLatest">—</span>
-              </div>
-            </div>
-
-            <div class="chartWrap">
-              <canvas class="wireChart"
-                width="1100"
-                height="360"
-                data-csv="data/UNRATE.csv"
-                data-title="Unemployment Rate"
-                data-height="260"
-                data-view="level"
-              ></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-
-            <div class="chartFoot">
-              <span class="muted">Source: FRED CSV • rendered client-side</span>
-            </div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Prime Age LFPR -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Prime Age LFPR (LNS11300060)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/LNS11300060.csv" data-title="Prime Age LFPR" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Total Nonfarm Employment -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Total Nonfarm Employment (PAYEMS)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/PAYEMS.csv" data-title="Total Nonfarm Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Total Government Employment -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Total Government Employment (USGOVT)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/USGOVT.csv" data-title="Total Government Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Total Federal Employment -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Total Federal Employment (CES9091000001)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/CES9091000001.csv" data-title="Total Federal Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Total Manufacturing Employment -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Total Manufacturing Employment (MANEMP)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/MANEMP.csv" data-title="Total Manufacturing Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Total Manufacturing Spending -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Total Manufacturing Spending (TLMFGCONS)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/TLMFGCONS.csv" data-title="Total Manufacturing Spending" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Construction -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Total Construction Employment (USCONS)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/USCONS.csv" data-title="Total Construction Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Mining/Logging -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Mining/Logging Employment (USMINE)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/USMINE.csv" data-title="Mining/Logging Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Coal -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Total Coal Employment (CES1021210001)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/CES1021210001.csv" data-title="Total Coal Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Car Manufacturing -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Car Manufacturing Employment (CES3133600101)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/CES3133600101.csv" data-title="Car Manufacturing Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Trucking -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Trucking Employment (CES4348400001)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/CES4348400001.csv" data-title="Trucking Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- IT -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">IT Employment (USINFO)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/USINFO.csv" data-title="IT Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Finance -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Finance Employment (USFIRE)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/USFIRE.csv" data-title="Finance Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Healthcare -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Healthcare Employment (CES6562000101)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/CES6562000101.csv" data-title="Healthcare Employment" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-      </section>
-
-      <!-- GROWTH -->
-      <section class="ttSection" data-section="growth" aria-label="Growth">
-        <header class="ttSectionHead">
-          <div class="ttHeadLeft">
-            <div class="ttKicker">SECTION</div>
-            <h2 class="ttTitle">Growth</h2>
-            <p class="ttSub">Output and activity. Quarterly truth, monthly anxiety.</p>
-          </div>
-
-          <div class="ttHeadRight">
-            <button class="ttMoreBtn" type="button" data-tt-more aria-expanded="false" aria-controls="ttMore-growth">
-              Show all
-            </button>
-
-            <div class="ttSnapRow" aria-label="Latest snapshot">
-              <div class="ttSnap" data-csv="data/GDPC1.csv" data-label="Real GDP">
-                <div class="ttSnapLabel">Real GDP</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <div class="ttMore" id="ttMore-growth" hidden>
-          <div class="ttMoreInner" aria-label="All snapshots">
-            <div class="ttMoreGrid" data-tt-more-grid></div>
-          </div>
-        </div>
-
-        <div class="chartRow">
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle">
-                <span class="chartDot" aria-hidden="true"></span>
-                <span class="chartTitleText">Real GDP (GDPC1)</span>
-              </div>
-
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-
-              <div class="chartMeta">
-                <span class="chartPill chartRange">—</span>
-                <span class="chartPill chartLatest">—</span>
-              </div>
-            </div>
-
-            <div class="chartWrap">
-              <canvas class="wireChart"
-                width="1100"
-                height="360"
-                data-csv="data/GDPC1.csv"
-                data-title="Real GDP"
-                data-height="260"
-                data-view="level"
-              ></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-
-            <div class="chartFoot">
-              <span class="muted">Source: FRED CSV • rendered client-side</span>
-            </div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Real GDP per Capita -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Real GDP per Capita (A939RX0Q048SBEA)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/A939RX0Q048SBEA.csv" data-title="Real GDP per Capita" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-      </section>
-
-      <!-- HOUSING -->
-      <section class="ttSection" data-section="housing" aria-label="Housing">
-        <header class="ttSectionHead">
-          <div class="ttHeadLeft">
-            <div class="ttKicker">SECTION</div>
-            <h2 class="ttTitle">Housing</h2>
-            <p class="ttSub">Prices, incomes, and the ratio that quietly decides whether a generation gets to breathe.</p>
-          </div>
-
-          <div class="ttHeadRight">
-            <button class="ttMoreBtn" type="button" data-tt-more aria-expanded="false" aria-controls="ttMore-housing">
-              Show all
-            </button>
-
-            <div class="ttSnapRow" aria-label="Latest snapshot">
-              <div class="ttSnap" data-csv="data/MSPUS.csv" data-label="Home Price">
-                <div class="ttSnapLabel">Home Price</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-
-              <div class="ttSnap" data-csv="data/MEHOINUSA646N.csv" data-label="Income">
-                <div class="ttSnapLabel">Income</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-
-              <div class="ttSnap" data-csv="data/HOUSE_TO_INCOME_RATIO.csv" data-label="Ratio">
-                <div class="ttSnapLabel">House/Income</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-
-              <!-- Add more housing snapshots later and they will go into the drawer automatically -->
-            </div>
-          </div>
-        </header>
-
-        <div class="ttMore" id="ttMore-housing" hidden>
-          <div class="ttMoreInner" aria-label="All snapshots">
-            <div class="ttMoreGrid" data-tt-more-grid></div>
-          </div>
-        </div>
-
-        <div class="chartRow">
-          <!-- MSPUS -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle">
-                <span class="chartDot" aria-hidden="true"></span>
-                <span class="chartTitleText">Median Home Price (MSPUS)</span>
-              </div>
-
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-
-              <div class="chartMeta">
-                <span class="chartPill chartRange">—</span>
-                <span class="chartPill chartLatest">—</span>
-              </div>
-            </div>
-
-            <div class="chartWrap">
-              <canvas class="wireChart"
-                width="1100"
-                height="360"
-                data-csv="data/MSPUS.csv"
-                data-title="Median Home Price"
-                data-height="260"
-                data-view="level"
-              ></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-
-            <div class="chartFoot">
-              <span class="muted">Source: FRED CSV • rendered client-side</span>
-            </div>
-          </section>
-
-          <!-- MEHOINUSA646N -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle">
-                <span class="chartDot" aria-hidden="true"></span>
-                <span class="chartTitleText">Median Income (MEHOINUSA646N)</span>
-              </div>
-
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-
-              <div class="chartMeta">
-                <span class="chartPill chartRange">—</span>
-                <span class="chartPill chartLatest">—</span>
-              </div>
-            </div>
-
-            <div class="chartWrap">
-              <canvas class="wireChart"
-                width="1100"
-                height="360"
-                data-csv="data/MEHOINUSA646N.csv"
-                data-title="Median Income"
-                data-height="260"
-                data-view="level"
-              ></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-
-            <div class="chartFoot">
-              <span class="muted">Source: FRED CSV • rendered client-side</span>
-            </div>
-          </section>
-
-          <!-- RATIO -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle">
-                <span class="chartDot" aria-hidden="true"></span>
-                <span class="chartTitleText">Housing / Income Ratio</span>
-              </div>
-
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-
-              <div class="chartMeta">
-                <span class="chartPill chartRange">—</span>
-                <span class="chartPill chartLatest">—</span>
-              </div>
-            </div>
-
-            <div class="chartWrap">
-              <canvas class="wireChart"
-                width="1100"
-                height="360"
-                data-csv="data/HOUSE_TO_INCOME_RATIO.csv"
-                data-title="Housing/Income Ratio"
-                data-height="260"
-                data-view="level"
-              ></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-
-            <div class="chartFoot">
-              <span class="muted">Source: Derived CSV • rendered client-side</span>
-            </div>
-          </section>
-        </div>
-      </section>
-
-      <!-- FISCAL & TRADE -->
-      <section class="ttSection" data-section="fiscal" aria-label="Fiscal and Trade">
-        <header class="ttSectionHead">
-          <div class="ttHeadLeft">
-            <div class="ttKicker">SECTION</div>
-            <h2 class="ttTitle">Fiscal & Trade</h2>
-            <p class="ttSub">Deficits, debt, and the external balance. Spreadsheet realities with election-year marketing.</p>
-          </div>
-
-          <div class="ttHeadRight">
-            <button class="ttMoreBtn" type="button" data-tt-more aria-expanded="false" aria-controls="ttMore-fiscal">
-              Show all
-            </button>
-
-            <div class="ttSnapRow" aria-label="Latest snapshot">
-              <div class="ttSnap" data-csv="data/FYFSD.csv" data-label="Deficit">
-                <div class="ttSnapLabel">Deficit</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-              <div class="ttSnap" data-csv="data/GFDEBTN.csv" data-label="Debt">
-                <div class="ttSnapLabel">Debt</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-              <div class="ttSnap" data-csv="data/BOPGSTB.csv" data-label="Trade">
-                <div class="ttSnapLabel">Trade</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <div class="ttMore" id="ttMore-fiscal" hidden>
-          <div class="ttMoreInner" aria-label="All snapshots">
-            <div class="ttMoreGrid" data-tt-more-grid></div>
-          </div>
-        </div>
-
-        <div class="chartRow">
-          <!-- Federal Deficit -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Federal Deficit (FYFSD)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/FYFSD.csv" data-title="Federal Deficit" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- Total US Debt -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Total US Debt (GFDEBTN)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/GFDEBTN.csv" data-title="Total US Debt" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-
-        <div class="chartRow">
-          <!-- Debt as % of GDP -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Debt as % of GDP (GFDEGDQ188S)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/GFDEGDQ188S.csv" data-title="Debt as % of GDP" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-
-          <!-- US Trade Deficit -->
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">US Trade Deficit (BOPGSTB)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/BOPGSTB.csv" data-title="US Trade Deficit" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-      </section>
-
-      <!-- RATES -->
-      <section class="ttSection" data-section="rates" aria-label="Rates">
-        <header class="ttSectionHead">
-          <div class="ttHeadLeft">
-            <div class="ttKicker">SECTION</div>
-            <h2 class="ttTitle">Rates</h2>
-            <p class="ttSub">Policy rate and the cost of money. The knob everyone argues about like it’s a volume slider.</p>
-          </div>
-
-          <div class="ttHeadRight">
-            <button class="ttMoreBtn" type="button" data-tt-more aria-expanded="false" aria-controls="ttMore-rates">
-              Show all
-            </button>
-
-            <div class="ttSnapRow" aria-label="Latest snapshot">
-              <div class="ttSnap" data-csv="data/FEDFUNDS.csv" data-label="Fed Funds">
-                <div class="ttSnapLabel">Fed Funds</div>
-                <div class="ttSnapVal">—</div>
-                <div class="ttSnapChg">—</div>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <div class="ttMore" id="ttMore-rates" hidden>
-          <div class="ttMoreInner" aria-label="All snapshots">
-            <div class="ttMoreGrid" data-tt-more-grid></div>
-          </div>
-        </div>
-
-        <div class="chartRow">
-          <section class="chartCard" aria-label="Chart">
-            <div class="chartHead">
-              <div class="chartTitle"><span class="chartDot" aria-hidden="true"></span><span class="chartTitleText">Federal Funds Rate (FEDFUNDS)</span></div>
-              <div class="chartControls" role="tablist" aria-label="Chart range">
-                <button class="chartTab is-active" type="button" data-range="1y">1y</button>
-                <button class="chartTab" type="button" data-range="5y">5y</button>
-                <button class="chartTab" type="button" data-range="10y">10y</button>
-                <button class="chartTab" type="button" data-range="all">all</button>
-              </div>
-              <div class="chartMeta"><span class="chartPill chartRange">—</span><span class="chartPill chartLatest">—</span></div>
-            </div>
-            <div class="chartWrap">
-              <canvas class="wireChart" width="1100" height="360" data-csv="data/FEDFUNDS.csv" data-title="Federal Funds Rate" data-height="260" data-view="level"></canvas>
-              <div class="chartTip" role="status" aria-live="polite"></div>
-            </div>
-            <div class="chartFoot"><span class="muted">Source: FRED CSV • rendered client-side</span></div>
-          </section>
-        </div>
-      </section>
-
+    <section class="block tracker-section" id="jobs" data-section aria-labelledby="jobs-title">
+      <header class="block__head">
+        <h2 id="jobs-title">Jobs</h2>
+        <span data-section-score></span>
+      </header>
+      <p class="tracker-section__dek">How many people are working, how many are looking, and how many work for the government.</p>
+      <div class="explorer">
+        <ul class="explorer__list" aria-label="Jobs: pick a measure to chart" data-explorer="UNRATE PAYEMS LNS11300060 USGOVT CES9091000001"></ul>
+        <figure class="chart chart--lead" id="jobs-chart" data-chart="UNRATE" aria-live="polite"></figure>
+      </div>
     </section>
 
-    <footer class="footer">
-      <div class="footerLeft">
-        <span class="footMark" aria-hidden="true"></span>
-        <span>Liberal Markets</span>
-        <span class="muted">© <span id="year"></span></span>
+    <section class="block tracker-section" id="industries" data-section aria-labelledby="industries-title">
+      <header class="block__head">
+        <h2 id="industries-title">Industries</h2>
+        <span data-section-score></span>
+      </header>
+      <p class="tracker-section__dek">Employment by industry, from factories and coal mines to hospitals.</p>
+      <div class="explorer">
+        <ul class="explorer__list" aria-label="Industries: pick a measure to chart" data-explorer="MANEMP CES3133600101 CES1021210001 USMINE USCONS CES4348400001 USINFO USFIRE CES6562000101"></ul>
+        <figure class="chart chart--lead" id="industries-chart" data-chart="MANEMP" aria-live="polite"></figure>
       </div>
-      <div class="footerRight">
-        <a class="footLink" href="index.html">Back to home</a>
-        <span class="muted">No trackers. No noise.</span>
+    </section>
+
+    <section class="block tracker-section" id="growth" data-section aria-labelledby="growth-title">
+      <header class="block__head">
+        <h2 id="growth-title">Growth</h2>
+        <span data-section-score></span>
+      </header>
+      <p class="tracker-section__dek">What the economy produces, what that comes to per person, and what is being spent on new factories.</p>
+      <div class="explorer">
+        <ul class="explorer__list" aria-label="Growth: pick a measure to chart" data-explorer="GDPC1 A939RX0Q048SBEA TLMFGCONS"></ul>
+        <figure class="chart chart--lead" id="growth-chart" data-chart="GDPC1" aria-live="polite"></figure>
       </div>
-    </footer>
+    </section>
+
+    <section class="block tracker-section" id="housing" data-section aria-labelledby="housing-title">
+      <header class="block__head">
+        <h2 id="housing-title">Housing</h2>
+        <span data-section-score></span>
+      </header>
+      <p class="tracker-section__dek">What a home costs, what a household earns, and how far apart the two have drifted.</p>
+      <div class="explorer">
+        <ul class="explorer__list" aria-label="Housing: pick a measure to chart" data-explorer="MSPUS MEHOINUSA646N HOUSE_TO_INCOME_RATIO"></ul>
+        <figure class="chart chart--lead" id="housing-chart" data-chart="MSPUS" aria-live="polite"></figure>
+      </div>
+    </section>
+
+    <section class="block tracker-section" id="fiscal" data-section aria-labelledby="fiscal-title">
+      <header class="block__head">
+        <h2 id="fiscal-title">Debt, deficits and trade</h2>
+        <span data-section-score></span>
+      </header>
+      <p class="tracker-section__dek">What Washington borrows each year, what it owes in total, and the gap between imports and exports.</p>
+      <div class="explorer">
+        <ul class="explorer__list" aria-label="Debt, deficits and trade: pick a measure to chart" data-explorer="FYFSD GFDEBTN GFDEGDQ188S BOPGSTB"></ul>
+        <figure class="chart chart--lead" id="fiscal-chart" data-chart="FYFSD" aria-live="polite"></figure>
+      </div>
+    </section>
+
+    <section class="block tracker-section" id="rates" data-section aria-labelledby="rates-title">
+      <header class="block__head">
+        <h2 id="rates-title">Rates</h2>
+        <span data-section-score></span>
+      </header>
+      <p class="tracker-section__dek">The Federal Reserve’s policy rate, and what it costs to borrow for a house.</p>
+      <div class="explorer">
+        <ul class="explorer__list" aria-label="Rates: pick a measure to chart" data-explorer="FEDFUNDS MORTGAGE30US"></ul>
+        <figure class="chart chart--lead" id="rates-chart" data-chart="FEDFUNDS" aria-live="polite"></figure>
+      </div>
+    </section>
+
+    <section class="block" id="ledger" aria-labelledby="ledger-title">
+      <details class="ledger-details">
+        <summary class="block__head">
+          <h2 id="ledger-title">Every number</h2>
+          <span class="ledger-details__toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="ledger-wrap">
+          <table class="ledger">
+            <thead>
+              <tr>
+                <th scope="col">Measure</th>
+                <th scope="col" class="num ledger__base">When he took office</th>
+                <th scope="col" class="num">Latest</th>
+                <th scope="col" class="num">Change</th>
+              </tr>
+            </thead>
+            <tbody data-ledger></tbody>
+          </table>
+        </div>
+      </details>
+      <p class="block__note">Source: FRED, Federal Reserve Bank of St. Louis, and the agencies named under each chart. “When he took office” means January 2025 for monthly and weekly data, and the last full quarter or year before it for slower series. Home prices, government payrolls and the Fed funds rate are shown but not scored as better or worse.</p>
+    </section>
   </main>
 
-  <script>
-    // tiny footer year without depending on app.js
-    document.getElementById("year").textContent = String(new Date().getFullYear());
-  </script>
+  <footer class="foot">
+    <div class="foot__inner">
+      <span class="wordmark wordmark--small">Liberal Markets</span>
+      <p>Headlines from CNBC. Economic data from FRED. The aquarium is adapted from <a href="https://github.com/stackedlol/ascii-sharks">ascii-sharks</a> (MIT).</p>
+    </div>
+  </footer>
 
-  <script src="app.js?v=3"></script>
-  <script src="scripts/chart.js?v=6"></script>
-  <script src="scripts/trump.js?v=4"></script>
+  <div class="search" data-search hidden>
+    <div class="search__scrim" data-search-close></div>
+    <div class="search__panel" role="dialog" aria-modal="true" aria-label="Search Liberal Markets">
+      <label class="search__field">
+        <span class="visually-hidden">Search</span>
+        <input id="site-search" type="search" placeholder="Search stories, tools, games, indicators" autocomplete="off" spellcheck="false" aria-controls="search-results" data-search-input>
+        <kbd>esc</kbd>
+      </label>
+      <ul class="search__results" id="search-results" role="listbox" data-search-results></ul>
+    </div>
+  </div>
 </body>
 </html>
