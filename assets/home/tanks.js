@@ -38,7 +38,7 @@ export function startTanks({ isDark }) {
     if (tall) sharks.push({ kind: kinds[i], size: 0.72 });
     const area = Math.max(1, (window.innerWidth - 1120) / 2) * window.innerHeight;
     const fishCount = Math.round(Math.min(150, Math.max(50, area / 2600)));
-    const engine = new OceanEngine(canvas, { sharks, fishCount, vertical: true, theme: paletteFor(isDark()) });
+    const engine = new OceanEngine(canvas, { sharks, fishCount, vertical: true, cellSize: 6, theme: paletteFor(isDark()) });
     return { engine, hud: tank.querySelector("[data-hud]"), name: NAMES[kinds[i]] };
   });
 

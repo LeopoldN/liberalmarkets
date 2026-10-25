@@ -9,8 +9,8 @@ const MAX_STEPS = 4;
  * Wires World + AsciiRenderer to a canvas: fixed-timestep loop, resize,
  * pointer input, pausing off-screen, and prefers-reduced-motion.
  *
- * Options: sharks (SharkSpec[]), fishCount, vertical (tall side tank) and
- * theme (one of THEMES from renderer.js).
+ * Options: sharks (SharkSpec[]), fishCount, vertical (tall side tank),
+ * theme (one of THEMES from renderer.js) and cellSize (px per column).
  */
 export class OceanEngine {
   world;
@@ -25,10 +25,11 @@ export class OceanEngine {
   disposed = false;
   paused = false;
 
-  constructor(canvas, { sharks, fishCount, vertical = false, theme } = {}) {
+  constructor(canvas, { sharks, fishCount, vertical = false, theme, cellSize } = {}) {
     this.canvas = canvas;
     this.world = new World(sharks, fishCount, vertical);
     this.renderer = new AsciiRenderer(canvas);
+    if (cellSize) this.renderer.cellSize = cellSize;
     if (theme) this.renderer.setTheme(theme);
     this.renderer.setFontFamily(getComputedStyle(canvas).fontFamily);
     this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");

@@ -93,7 +93,7 @@ export class World {
     const { width: W, height: H } = this;
     const minSide = Math.min(W, H);
     // A narrow tank still wants a shark that fills its width.
-    const baseLength = this.vertical ? clamp(minSide * 0.95, 170, 300) : clamp(minSide * 0.44, 170, 430);
+    const baseLength = this.vertical ? clamp(minSide * 1.15, 170, 340) : clamp(minSide * 0.44, 170, 430);
     const sharkCount = this.sharkSpecs.length;
 
     this.sharks = [];
