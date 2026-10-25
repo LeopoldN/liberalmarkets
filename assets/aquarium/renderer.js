@@ -26,6 +26,40 @@ const WAKE = DOT_RGB.length - 1;
 
 const ACCENTS = ["#e0892c", "#e03a32", "#b44ae0", "#33c8cc", "#3cb54a", "#3150e8", "#d9c14a"];
 
+/**
+ * Palettes. "dark" is the upstream look on the page's night background; "light"
+ * inverts the sharks into ink on paper. Sharks are shaded as a brightness level
+ * (0 shadow → 255 highlight) and each palette maps that level to a colour.
+ */
+export const THEMES = {
+  dark: {
+    bg: "#000",
+    grid: "rgba(255,255,255,0.055)",
+    fish: [230, 238, 255],
+    wake: [110, 230, 255],
+    heat: ["255,120,60", "220,40,40"],
+    accents: ACCENTS,
+    eye: "#9aa0ad",
+    glint: "#ffffff",
+    carve: ["#0e0f13", "#1b1d24"],
+    lo: [0, 0, 0],
+    hi: [255, 255, 255],
+  },
+  light: {
+    bg: "#fff1e5",
+    grid: "rgba(51,48,46,0.05)",
+    fish: [38, 42, 51],
+    wake: [13, 118, 128],
+    heat: ["242,95,32", "153,15,61"],
+    accents: ["#990f3d", "#0d7680", "#0f5499", "#f25f20", "#593380"],
+    eye: "#fff1e5",
+    glint: "#fff1e5",
+    carve: ["#1a2533", "rgba(255,241,229,0.6)"],
+    lo: [22, 32, 46],
+    hi: [222, 206, 192],
+  },
+};
+
 // Sparse glyphs on bright skin, dense glyphs in shadow, so the texture
 // reinforces the shading instead of fighting it.
 const SKIN_RAMP = ":;t%SX8#@";
@@ -225,9 +259,9 @@ function inTriangle(
 }
 
 /** Visible dark-grey cell grid, snapped to device pixels. Shared with the sidebar backdrop. */
-export function paintGrid(g, W, H, cw, ch, dpr) {
+export function paintGrid(g, W, H, cw, ch, dpr, stroke = THEMES.dark.grid) {
   g.setTransform(1, 0, 0, 1, 0, 0);
-  g.strokeStyle = "rgba(255,255,255,0.055)";
+  g.strokeStyle = stroke;
   g.lineWidth = 1;
   g.beginPath();
   for (let c = 0; c <= Math.ceil(W / cw); c++) {
@@ -292,7 +326,8 @@ export class AsciiRenderer {
   frameId = 0;
   /** Fish cells bucketed by brightness, so each bucket is one fillStyle. */
   fishBuckets = FISH_ALPHAS.map(() => []);
-  fishStyles = FISH_ALPHAS.map((a) => `rgba(230,238,255,${a})`);
+  fishStyles = [];
+  theme = THEMES.dark;
 
   constructor(canvas) {
     this.canvas = canvas;
@@ -300,14 +335,33 @@ export class AsciiRenderer {
     if (!ctx) throw new Error("2D canvas unavailable");
     this.ctx = ctx;
     this.bg = document.createElement("canvas");
+    this.setTheme(THEMES.dark);
+  }
 
+  /** Swap palettes; theme is one of THEMES, optionally with bg overridden to match the page. */
+  setTheme(theme) {
+    this.theme = theme;
+    this.dotStyles = [];
     for (let c = 0; c < DOT_RGB.length; c++) {
-      const [r, g, b] = DOT_RGB[c];
+      const [r, g, b] = c === WAKE ? theme.wake : DOT_RGB[c];
       for (let l = 0; l < ALPHA_LEVELS; l++) {
         const a = (DOT_BASE_ALPHA[c] * (l + 1)) / ALPHA_LEVELS;
         this.dotStyles.push(`rgba(${r},${g},${b},${a.toFixed(3)})`);
       }
     }
+    const [fr, fg, fb] = theme.fish;
+    this.fishStyles = FISH_ALPHAS.map((a) => `rgba(${fr},${fg},${fb},${a})`);
+    if (this.cols) this.paintBackground();
+  }
+
+  /** Map a shark brightness level (0–255) through the palette, tinted per species. */
+  tone(level, tr, tg, tb, lift = 4) {
+    const { lo, hi } = this.theme;
+    const v = clamp(level / 255, 0, 1);
+    const r = Math.min(255, Math.round((lo[0] + (hi[0] - lo[0]) * v) * tr));
+    const g = Math.min(255, Math.round((lo[1] + (hi[1] - lo[1]) * v) * tg));
+    const b = Math.min(255, Math.round((lo[2] + (hi[2] - lo[2]) * v) * tb + lift));
+    return `rgb(${r},${g},${b})`;
   }
 
   get cellWidth() {
@@ -373,9 +427,9 @@ export class AsciiRenderer {
     if (!g) return;
     const { width: W, height: H, dpr, cw, ch } = this;
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
-    g.fillStyle = "#000";
+    g.fillStyle = this.theme.bg;
     g.fillRect(0, 0, W, H);
-    paintGrid(g, W, H, cw, ch, dpr);
+    paintGrid(g, W, H, cw, ch, dpr, this.theme.grid);
   }
 
   render(world, dt) {
@@ -730,6 +784,7 @@ export class AsciiRenderer {
 
   drawSharks(t) {
     const { ctx, cols, rows, cw, ch, sharkFlag, sharkShade, sharkKey, sharkDepth, sharkKind } = this;
+    const { accents, eye, glint, carve } = this.theme;
     const n = cols * rows;
     for (let i = 0; i < n; i++) {
       const flag = sharkFlag[i];
@@ -751,10 +806,7 @@ export class AsciiRenderer {
         // Soft, anti-aliased silhouette: no block, just a light glyph.
         const set = shade >= 0.5 ? EDGE_HEAVY : EDGE_LIGHT;
         const g = (70 + shade * 80) * dim;
-        ctx.fillStyle =
-          roll < 0.07
-            ? ACCENTS[key % ACCENTS.length]
-            : `rgb(${Math.round(g * tr)},${Math.round(g * tg)},${Math.min(255, Math.round(g * tb + 6))})`;
+        ctx.fillStyle = roll < 0.07 ? accents[key % accents.length] : this.tone(g, tr, tg, tb, 6);
         ctx.fillText(set[(key >>> 8) % set.length], x + cw / 2, y + ch / 2 + 1);
         continue;
       }
@@ -780,15 +832,15 @@ export class AsciiRenderer {
       }
       level *= dim;
       // Tinted per species; the classic tint is a cool blue-grey, like a back seen through deep water.
-      ctx.fillStyle = `rgb(${Math.min(255, Math.round(level * tr))},${Math.min(255, Math.round(level * tg))},${Math.min(255, Math.round(level * tb + 4))})`;
+      ctx.fillStyle = this.tone(level, tr, tg, tb);
       ctx.fillRect(x + 1, y + 1, cw - 1, ch - 1);
 
       let color;
-      if (flag === FLAG_EYE) color = "#9aa0ad";
-      else if (flag === FLAG_MARK) color = `rgb(${Math.round(70 * tr)},${Math.round(70 * tg)},${Math.round(70 * tb)})`;
-      else if (roll < 0.09) color = ACCENTS[key % ACCENTS.length];
-      else if (roll < 0.13) color = "#ffffff";
-      else color = shade > 0.55 ? "#0e0f13" : "#1b1d24";
+      if (flag === FLAG_EYE) color = eye;
+      else if (flag === FLAG_MARK) color = this.tone(70, tr, tg, tb, 0);
+      else if (roll < 0.09) color = accents[key % accents.length];
+      else if (roll < 0.13) color = glint;
+      else color = shade > 0.55 ? carve[0] : carve[1];
       ctx.fillStyle = color;
       ctx.fillText(glyph, x + cw / 2, y + ch / 2 + 1);
     }
@@ -837,7 +889,8 @@ export class AsciiRenderer {
       if (h < 0.08) continue;
       const col = i % cols;
       const row = (i / cols) | 0;
-      ctx.fillStyle = h > 0.5 ? `rgba(255,120,60,${h.toFixed(2)})` : `rgba(220,40,40,${(h * 1.6).toFixed(2)})`;
+      const [hot, warm] = this.theme.heat;
+      ctx.fillStyle = h > 0.5 ? `rgba(${hot},${h.toFixed(2)})` : `rgba(${warm},${Math.min(1, h * 1.6).toFixed(2)})`;
       ctx.fillText(h > 0.6 ? "*" : "·", col * cw + cw / 2, row * ch + ch / 2 + 1);
     }
   }
