@@ -14,7 +14,7 @@
   --down: #b42318;
   --scrim: rgba(255, 241, 229, 0.72);
 
-  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --display: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
   --sans: "Geist", "Helvetica Neue", Arial, sans-serif;
   --mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
@@ -126,7 +126,7 @@ kbd {
 
 .wordmark {
   flex: none;
-  font: 500 26px/1 var(--display);
+  font: 600 24px/1 var(--display);
   font-variation-settings: "opsz" 40;
   letter-spacing: -0.01em;
   text-decoration: none;
@@ -235,8 +235,8 @@ kbd {
 
 .lead__title {
   margin: 0;
-  font: 400 clamp(40px, 6.4vw, 72px)/1.02 var(--display);
-  font-variation-settings: "opsz" 96;
+  font: 500 clamp(38px, 5.6vw, 64px)/1.05 var(--display);
+  font-variation-settings: "opsz" 60;
   letter-spacing: -0.025em;
   text-wrap: balance;
 }
@@ -279,7 +279,7 @@ kbd {
 }
 .block__head h2 {
   margin: 0;
-  font: 400 30px/1.1 var(--display);
+  font: 600 28px/1.1 var(--display);
   font-variation-settings: "opsz" 48;
   letter-spacing: -0.015em;
 }
@@ -436,7 +436,7 @@ kbd {
 }
 .games strong {
   display: block;
-  font: 400 21px/1.2 var(--display);
+  font: 600 20px/1.2 var(--display);
   font-variation-settings: "opsz" 28;
 }
 .games a:hover strong { text-decoration: underline; text-decoration-thickness: 1px; }
