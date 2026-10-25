@@ -1,8 +1,4 @@
-// "From Liberal Markets": stories and tools listed in data/stories.json.
-
-function formatDate(iso) {
-  return new Date(`${iso}T12:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-}
+// Stories and tools listed in data/stories.json: the Tools list on the homepage, and search entries.
 
 /** Fills the list and resolves to search entries for every story. */
 export async function renderPosts(list) {
@@ -12,39 +8,25 @@ export async function renderPosts(list) {
     const { stories = [] } = await res.json();
 
     if (list) {
+      // The homepage lists the tools; dated stories run as the lead, games have their own section.
       list.textContent = "";
-      for (const story of stories) {
+      for (const story of stories.filter((s) => !s.dateISO && s.href !== "games.html")) {
         const li = document.createElement("li");
-        li.className = "post";
-
-        const date = document.createElement("span");
-        date.className = "post__date";
-        date.textContent = story.dateISO ? formatDate(story.dateISO) : "Interactive";
-
-        const body = document.createElement("div");
-        const h3 = document.createElement("h3");
-        h3.className = "post__title";
         const a = document.createElement("a");
         a.href = story.href;
-        a.textContent = story.title;
-        h3.append(a);
-        const dek = document.createElement("p");
-        dek.className = "post__dek";
+        const title = document.createElement("strong");
+        title.textContent = story.title;
+        const dek = document.createElement("span");
         dek.textContent = story.dek;
-        body.append(h3, dek);
-
-        const tag = document.createElement("span");
-        tag.className = "post__tag";
-        tag.textContent = story.minutes ? `${story.tag} · ${story.minutes} min` : story.tag;
-
-        li.append(date, body, tag);
+        a.append(title, dek);
+        li.append(a);
         list.append(li);
       }
     }
 
     return stories.map((s) => ({ type: s.tag, title: s.title, sub: s.dek, href: s.href, keywords: s.keywords }));
   } catch (err) {
-    if (list) list.innerHTML = '<li class="post"><span></span><p class="post__dek">Stories could not be loaded.</p></li>';
+    if (list) list.innerHTML = "<li>Tools could not be loaded.</li>";
     return [];
   }
 }

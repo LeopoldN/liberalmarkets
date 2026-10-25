@@ -1,4 +1,4 @@
-// Data desk: six headline indicators from the FRED series in data/, each a stat tile with a sparkline.
+// Indicators table: six headline numbers from the FRED series in data/, each with a three-year sparkline.
 
 const MONTHS = 36;
 
@@ -74,6 +74,7 @@ const INDICATORS = [
   },
   {
     label: "Federal debt to GDP",
+    note: "quarterly",
     source: "GFDEGDQ188S",
     load: (s) => s,
     value: (v) => [pct(v), "%"],
@@ -95,15 +96,16 @@ function el(tag, cls, text) {
 }
 
 function sparkline(points, ind) {
-  const wrap = el("div", "stat__spark");
+  const wrap = el("div", "spark");
   const values = points.map((p) => p.value);
   let lo = Math.min(...values);
   let hi = Math.max(...values);
   if (ind.zero) { lo = Math.min(lo, 0); hi = Math.max(hi, 0); }
-  const pad = (hi - lo || 1) * 0.12;
+  const pad = (hi - lo || 1) * 0.1;
   lo -= pad;
   hi += pad;
-  const x = (i) => (i / (points.length - 1)) * 100;
+  const last = points.length - 1;
+  const x = (i) => (i / last) * 100;
   const y = (v) => (1 - (v - lo) / (hi - lo)) * 100;
 
   const svg = document.createElementNS(SVG, "svg");
@@ -112,91 +114,73 @@ function sparkline(points, ind) {
   svg.setAttribute("aria-hidden", "true");
   const line = points.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(2)},${y(p.value).toFixed(2)}`).join("");
   const base = ind.zero ? y(0) : 100;
-  const area = document.createElementNS(SVG, "path");
-  area.setAttribute("class", "spark-area");
-  area.setAttribute("d", `${line}L100,${base}L0,${base}Z`);
-  svg.append(area);
-  if (ind.zero) {
-    const zero = document.createElementNS(SVG, "line");
-    zero.setAttribute("class", "spark-zero");
-    zero.setAttribute("x1", "0");
-    zero.setAttribute("x2", "100");
-    zero.setAttribute("y1", String(y(0)));
-    zero.setAttribute("y2", String(y(0)));
-    svg.append(zero);
-  }
-  const path = document.createElementNS(SVG, "path");
-  path.setAttribute("class", "spark-line");
-  path.setAttribute("d", line);
-  const cross = document.createElementNS(SVG, "line");
-  cross.setAttribute("class", "spark-cross");
-  cross.setAttribute("y1", "0");
-  cross.setAttribute("y2", "100");
-  svg.append(path, cross);
+  const shape = (tag, cls, attrs) => {
+    const node = document.createElementNS(SVG, tag);
+    node.setAttribute("class", cls);
+    for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, String(v));
+    svg.append(node);
+    return node;
+  };
+  shape("path", "spark__area", { d: `${line}L100,${base}L0,${base}Z` });
+  if (ind.zero) shape("line", "spark__zero", { x1: 0, x2: 100, y1: y(0), y2: y(0) });
+  shape("path", "spark__line", { d: line });
+  const cross = shape("line", "spark__cross", { y1: 0, y2: 100 });
 
-  const last = el("span", "spark-last");
-  const lastIdx = points.length - 1;
-  last.style.left = `${x(lastIdx)}%`;
-  last.style.top = `${y(points[lastIdx].value)}%`;
-  const dot = el("span", "spark-dot");
-  const tip = el("span", "spark-tip");
-  wrap.append(svg, last, dot, tip);
+  const end = el("span", "spark__end");
+  end.style.left = `${x(last)}%`;
+  end.style.top = `${y(points[last].value)}%`;
+  const dot = el("span", "spark__dot");
+  const tip = el("span", "spark__tip");
+  wrap.append(svg, end, dot, tip);
 
-  // Crosshair + tooltip: snap to the nearest point under the pointer.
+  // Crosshair and readout, snapped to the nearest point under the pointer.
   wrap.addEventListener("pointermove", (e) => {
     const rect = wrap.getBoundingClientRect();
-    const i = Math.round(((e.clientX - rect.left) / rect.width) * lastIdx);
-    const p = points[Math.max(0, Math.min(lastIdx, i))];
-    const px = x(points.indexOf(p));
-    cross.setAttribute("x1", String(px));
-    cross.setAttribute("x2", String(px));
-    dot.style.left = `${px}%`;
+    const i = Math.max(0, Math.min(last, Math.round(((e.clientX - rect.left) / rect.width) * last)));
+    const p = points[i];
+    cross.setAttribute("x1", String(x(i)));
+    cross.setAttribute("x2", String(x(i)));
+    dot.style.left = `${x(i)}%`;
     dot.style.top = `${y(p.value)}%`;
     const [v, unit] = ind.value(p.value);
-    tip.textContent = `${ind.period(p.date)} · ${v}${unit}`;
-    tip.style.left = `${Math.max(18, Math.min(82, px))}%`;
+    tip.textContent = `${ind.period(p.date)}  ${v}${unit}`;
+    tip.style.left = `${Math.max(20, Math.min(80, x(i)))}%`;
     wrap.classList.add("is-hover");
   });
   wrap.addEventListener("pointerleave", () => wrap.classList.remove("is-hover"));
   return wrap;
 }
 
-function tile(ind, all) {
-  const points = all.slice(-(ind.points || MONTHS));
+function row(ind, all) {
   const now = all[all.length - 1];
   const then = all[all.length - 1 - ind.yearAgo];
   const [value, unit] = ind.value(now.value);
+  const tr = document.createElement("tr");
 
-  const a = el("a", "stat");
-  a.href = "trumptracker.html";
-  a.append(el("span", "stat__label", ind.label));
+  const name = el("td", "ind__name", ind.label);
+  name.append(el("small", null, `${ind.source} · ${ind.period(now.date)}${ind.note ? ` · ${ind.note}` : ""}`));
 
-  const v = el("span", "stat__value", value);
+  const v = el("td", "num ind__value", value);
   v.append(el("small", null, unit));
-  a.append(v);
 
-  const delta = el("span", "stat__delta");
+  const d = el("td", "num ind__delta");
   if (then) {
     const change = now.value - then.value;
-    const arrow = el("i", null, change > 0 ? "▲ " : change < 0 ? "▼ " : "■ ");
+    const arrow = el("span", null, change > 0 ? "▲ " : change < 0 ? "▼ " : "");
     if (ind.goodWhenUp != null && change !== 0) arrow.className = (change > 0) === ind.goodWhenUp ? "is-good" : "is-bad";
-    delta.append(arrow, ind.delta(now.value, then.value), el("span", null, "vs a year earlier"));
+    d.append(arrow, ind.delta(now.value, then.value));
   }
-  a.append(delta);
 
-  a.append(sparkline(points, ind));
-  const foot = el("span", "stat__foot");
-  foot.append(el("span", null, `FRED · ${ind.source}`), el("span", null, ind.period(now.date)));
-  a.append(foot);
-  a.setAttribute("aria-label", `${ind.label}: ${value}${unit} in ${ind.period(now.date)}${then ? `, ${ind.delta(now.value, then.value)} vs a year earlier` : ""}. Open the Trump Tracker.`);
-  return a;
+  const trend = el("td", "ind__trend");
+  trend.append(sparkline(all.slice(-(ind.points || MONTHS)), ind));
+  tr.append(name, v, d, trend);
+  return tr;
 }
 
-/** Fills the grid and resolves to search entries for each indicator. */
-export async function renderDesk(grid) {
-  if (!grid) return [];
-  grid.innerHTML = INDICATORS.map(() => '<div class="stat"><span class="skeleton" style="width:50%"></span><span class="skeleton" style="height:28px;width:40%;margin-top:10px"></span><span class="skeleton" style="height:48px;margin-top:14px;grid-column:1/-1"></span></div>').join("");
-  const tiles = await Promise.all(
+/** Fills the table body and resolves to search entries for each indicator. */
+export async function renderIndicators(body) {
+  if (!body) return [];
+  const rows = await Promise.all(
     INDICATORS.map(async (ind) => {
       try {
         const all = ind.load(await series(ind.source));
@@ -204,7 +188,7 @@ export async function renderDesk(grid) {
         const now = all[all.length - 1];
         const [value, unit] = ind.value(now.value);
         return {
-          node: tile(ind, all),
+          node: row(ind, all),
           entry: { type: "Data", title: ind.label, sub: `${value}${unit} in ${ind.period(now.date)} · FRED ${ind.source}`, href: "trumptracker.html", keywords: ind.source },
         };
       } catch (err) {
@@ -212,7 +196,7 @@ export async function renderDesk(grid) {
       }
     }),
   );
-  grid.textContent = "";
-  for (const t of tiles) if (t) grid.append(t.node);
-  return tiles.filter(Boolean).map((t) => t.entry);
+  body.textContent = "";
+  for (const r of rows) if (r) body.append(r.node);
+  return rows.filter(Boolean).map((r) => r.entry);
 }

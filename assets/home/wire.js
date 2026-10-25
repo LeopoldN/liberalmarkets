@@ -21,8 +21,7 @@ function ago(date, now) {
 /** Fills the list and resolves to search entries for every headline. */
 export async function renderWire(list, meta) {
   if (!list) return [];
-  list.innerHTML = Array.from({ length: 5 }, () =>
-    '<li><span class="skeleton" style="width:36px"></span><span><span class="skeleton"></span><span class="skeleton" style="width:70%"></span></span></li>').join("");
+  list.innerHTML = '<li class="wire__empty"><span></span><span>Loading headlines…</span></li>';
 
   try {
     const res = await fetch("data/news.json", { cache: "no-cache" });
@@ -49,12 +48,12 @@ export async function renderWire(list, meta) {
       li.append(time, a);
       list.append(li);
     }
-    if (meta) meta.textContent = `${data.source ? data.source.replace(/ RSS$/, "") : "Newswire"}`;
+    if (meta) meta.textContent = data.source ? data.source.replace(/ RSS$/, "") : "";
 
     return items.map((item) => ({ type: "Headline", title: item.title, sub: "CNBC Finance", href: item.link, external: true }));
   } catch (err) {
     list.innerHTML = '<li class="wire__empty"><span></span><span>Headlines are unavailable right now.</span></li>';
-    if (meta) meta.textContent = "Offline";
+    if (meta) meta.textContent = "";
     return [];
   }
 }

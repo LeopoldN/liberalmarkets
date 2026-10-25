@@ -1,9 +1,8 @@
 // Homepage wiring: theme and aquarium toggles, then each section fills itself in.
 import { startTanks } from "./tanks.js";
 import { renderWire } from "./wire.js";
-import { renderDesk } from "./desk.js";
+import { renderIndicators } from "./desk.js";
 import { renderPosts } from "./posts.js";
-import { startOrbit } from "./orbit.js";
 import { startSearch } from "./search.js";
 
 const root = document.documentElement;
@@ -25,7 +24,7 @@ const today = document.querySelector("[data-today]");
 if (today) {
   const now = new Date();
   today.dateTime = now.toISOString().slice(0, 10);
-  today.textContent = now.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  today.textContent = now.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
 }
 
 // ── Aquarium ────────────────────────────────────────────────────────────
@@ -35,7 +34,7 @@ const fishBtn = document.querySelector("[data-fish-toggle]");
 function syncFish() {
   const on = root.dataset.fish !== "off";
   fishBtn?.setAttribute("aria-pressed", String(on));
-  if (fishBtn) fishBtn.title = on ? "Hide the aquarium" : "Show the aquarium";
+  fishBtn?.setAttribute("aria-label", on ? "Fish on. Hide the aquarium" : "Fish off. Show the aquarium");
   tanks?.setEnabled(on);
 }
 
@@ -53,8 +52,10 @@ const themeBtn = document.querySelector("[data-theme-toggle]");
 
 function syncTheme() {
   const dark = isDark();
-  themeBtn?.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
-  if (themeBtn) themeBtn.title = dark ? "Day mode" : "Night mode";
+  if (themeBtn) {
+    themeBtn.textContent = dark ? "Day" : "Night";
+    themeBtn.setAttribute("aria-label", dark ? "Switch to day mode" : "Switch to night mode");
+  }
   tanks?.setTheme();
   document.dispatchEvent(new CustomEvent("lm:theme", { detail: { dark } }));
 }
@@ -77,8 +78,7 @@ systemDark.addEventListener("change", () => {
 syncTheme();
 
 // ── Sections ────────────────────────────────────────────────────────────
-startOrbit(document.querySelector("[data-orbit]"));
 const wire = renderWire(document.querySelector("[data-wire]"), document.querySelector("[data-wire-meta]"));
 const posts = renderPosts(document.querySelector("[data-posts]"));
-const desk = renderDesk(document.querySelector("[data-desk]"));
+const desk = renderIndicators(document.querySelector("[data-indicators]"));
 startSearch({ sources: [posts, desk, wire] });
