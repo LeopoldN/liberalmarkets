@@ -80,5 +80,5 @@ syncTheme();
 startOrbit(document.querySelector("[data-orbit]"));
 const wire = renderWire(document.querySelector("[data-wire]"), document.querySelector("[data-wire-meta]"));
 const posts = renderPosts(document.querySelector("[data-posts]"));
-renderDesk(document.querySelector("[data-desk]"));
-startSearch({ sources: [posts, wire] });
+const desk = renderDesk(document.querySelector("[data-desk]"));
+startSearch({ sources: [posts, desk, wire] });

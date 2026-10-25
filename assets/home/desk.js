@@ -192,19 +192,27 @@ function tile(ind, all) {
   return a;
 }
 
+/** Fills the grid and resolves to search entries for each indicator. */
 export async function renderDesk(grid) {
-  if (!grid) return;
+  if (!grid) return [];
   grid.innerHTML = INDICATORS.map(() => '<div class="stat"><span class="skeleton" style="width:50%"></span><span class="skeleton" style="height:28px;width:40%;margin-top:10px"></span><span class="skeleton" style="height:48px;margin-top:14px;grid-column:1/-1"></span></div>').join("");
   const tiles = await Promise.all(
     INDICATORS.map(async (ind) => {
       try {
         const all = ind.load(await series(ind.source));
-        return all.length > ind.yearAgo ? tile(ind, all) : null;
+        if (all.length <= ind.yearAgo) return null;
+        const now = all[all.length - 1];
+        const [value, unit] = ind.value(now.value);
+        return {
+          node: tile(ind, all),
+          entry: { type: "Data", title: ind.label, sub: `${value}${unit} in ${ind.period(now.date)} · FRED ${ind.source}`, href: "trumptracker.html", keywords: ind.source },
+        };
       } catch (err) {
         return null;
       }
     }),
   );
   grid.textContent = "";
-  for (const t of tiles) if (t) grid.append(t);
+  for (const t of tiles) if (t) grid.append(t.node);
+  return tiles.filter(Boolean).map((t) => t.entry);
 }

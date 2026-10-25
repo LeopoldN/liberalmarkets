@@ -63,7 +63,14 @@ export function startSearch({ sources }) {
 
   let index = [...PAGES, ...gamesFromPage()];
   Promise.all(sources).then((groups) => {
-    index = [...groups[0], ...PAGES, ...gamesFromPage(), ...groups.slice(1).flat()];
+    // Stories first; a section or game that a story already covers is dropped.
+    const seen = new Set();
+    index = [...groups[0], ...PAGES, ...gamesFromPage(), ...groups.slice(1).flat()].filter((item) => {
+      const key = item.type === "Data" ? `${item.href}#${item.title}` : item.href;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
     if (!overlay.hidden) update();
   });
 
