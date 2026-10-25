@@ -29,16 +29,19 @@ const WAKE = DOT_RGB.length - 1;
 const ACCENTS = ["#e0892c", "#e03a32", "#b44ae0", "#33c8cc", "#3cb54a", "#3150e8", "#d9c14a"];
 
 /**
- * Palettes. "dark" is the upstream look on the page's night background; "light"
- * inverts the sharks into ink on paper. Sharks are shaded as a brightness level
- * (0 shadow → 255 highlight) and each palette maps that level to a colour.
+ * Palettes. "classic" is the upstream look: shaded blocks on black with colour
+ * glints. "light" and "dark" are monochrome and glyph-only, so the water reads as
+ * part of the page: ink on paper by day, pale glyphs on night by night. Sharks are
+ * shaded as a brightness level (0 shadow → 255 highlight) that each palette maps
+ * to a colour between lo and hi.
  */
 export const THEMES = {
-  dark: {
+  classic: {
     bg: "#000",
     grid: "rgba(255,255,255,0.055)",
     fish: [230, 238, 255],
     wake: [110, 230, 255],
+    wakeAlpha: 1,
     heat: ["255,120,60", "220,40,40"],
     accents: ACCENTS,
     eye: "#9aa0ad",
@@ -46,19 +49,33 @@ export const THEMES = {
     carve: ["#0e0f13", "#1b1d24"],
     lo: [0, 0, 0],
     hi: [255, 255, 255],
+    blocks: true,
   },
   light: {
     bg: "#fff1e5",
-    grid: "rgba(51,48,46,0.05)",
-    fish: [38, 42, 51],
-    wake: [13, 118, 128],
-    heat: ["242,95,32", "153,15,61"],
-    accents: ["#990f3d", "#0d7680", "#0f5499", "#f25f20", "#593380"],
-    eye: "#fff1e5",
-    glint: "#fff1e5",
-    carve: ["#1a2533", "rgba(255,241,229,0.6)"],
-    lo: [22, 32, 46],
-    hi: [222, 206, 192],
+    grid: null,
+    fish: [26, 24, 23],
+    wake: [26, 24, 23],
+    wakeAlpha: 0.22,
+    heat: ["26,24,23", "26,24,23"],
+    accents: null,
+    eye: "#1a1817",
+    lo: [26, 24, 23],
+    hi: [205, 190, 178],
+    blocks: false,
+  },
+  dark: {
+    bg: "#101113",
+    grid: null,
+    fish: [236, 231, 224],
+    wake: [236, 231, 224],
+    wakeAlpha: 0.22,
+    heat: ["236,231,224", "236,231,224"],
+    accents: null,
+    eye: "#f4efe8",
+    lo: [44, 45, 48],
+    hi: [244, 239, 232],
+    blocks: false,
   },
 };
 
@@ -261,7 +278,7 @@ function inTriangle(
 }
 
 /** Visible dark-grey cell grid, snapped to device pixels. Shared with the sidebar backdrop. */
-export function paintGrid(g, W, H, cw, ch, dpr, stroke = THEMES.dark.grid) {
+export function paintGrid(g, W, H, cw, ch, dpr, stroke = THEMES.classic.grid) {
   g.setTransform(1, 0, 0, 1, 0, 0);
   g.strokeStyle = stroke;
   g.lineWidth = 1;
@@ -330,7 +347,7 @@ export class AsciiRenderer {
   /** Fish cells bucketed by brightness, so each bucket is one fillStyle. */
   fishBuckets = FISH_ALPHAS.map(() => []);
   fishStyles = [];
-  theme = THEMES.dark;
+  theme = THEMES.classic;
 
   constructor(canvas) {
     this.canvas = canvas;
@@ -338,7 +355,7 @@ export class AsciiRenderer {
     if (!ctx) throw new Error("2D canvas unavailable");
     this.ctx = ctx;
     this.bg = document.createElement("canvas");
-    this.setTheme(THEMES.dark);
+    this.setTheme(THEMES.classic);
   }
 
   /** Swap palettes; theme is one of THEMES, optionally with bg overridden to match the page. */
@@ -348,7 +365,7 @@ export class AsciiRenderer {
     for (let c = 0; c < DOT_RGB.length; c++) {
       const [r, g, b] = c === WAKE ? theme.wake : DOT_RGB[c];
       for (let l = 0; l < ALPHA_LEVELS; l++) {
-        const a = (DOT_BASE_ALPHA[c] * (l + 1)) / ALPHA_LEVELS;
+        const a = (DOT_BASE_ALPHA[c] * (l + 1) * (c === WAKE ? theme.wakeAlpha : 1)) / ALPHA_LEVELS;
         this.dotStyles.push(`rgba(${r},${g},${b},${a.toFixed(3)})`);
       }
     }
@@ -434,7 +451,7 @@ export class AsciiRenderer {
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     g.fillStyle = this.theme.bg;
     g.fillRect(0, 0, W, H);
-    paintGrid(g, W, H, cw, ch, dpr, this.theme.grid);
+    if (this.theme.grid) paintGrid(g, W, H, cw, ch, dpr, this.theme.grid);
   }
 
   render(world, dt) {
@@ -789,7 +806,7 @@ export class AsciiRenderer {
 
   drawSharks(t) {
     const { ctx, cols, rows, cw, ch, sharkFlag, sharkShade, sharkKey, sharkDepth, sharkKind } = this;
-    const { accents, eye, glint, carve } = this.theme;
+    const { accents, eye, glint, carve, blocks } = this.theme;
     const n = cols * rows;
     for (let i = 0; i < n; i++) {
       const flag = sharkFlag[i];
@@ -801,7 +818,8 @@ export class AsciiRenderer {
       const key = sharkKey[i];
       const shade = sharkShade[i];
       const dim = 0.7 + 0.3 * sharkDepth[i];
-      const [tr, tg, tb] = SHAPES[KINDS[sharkKind[i]]].tint;
+      // Monochrome palettes skip the per-species tint.
+      const [tr, tg, tb] = blocks ? SHAPES[KINDS[sharkKind[i]]].tint : [1, 1, 1];
 
       // Colours re-roll on a staggered clock so the hide shimmers.
       const tick = Math.floor(t * 2.4 + (key % 997) / 97);
@@ -811,7 +829,7 @@ export class AsciiRenderer {
         // Soft, anti-aliased silhouette: no block, just a light glyph.
         const set = shade >= 0.5 ? EDGE_HEAVY : EDGE_LIGHT;
         const g = (70 + shade * 80) * dim;
-        ctx.fillStyle = roll < 0.07 ? accents[key % accents.length] : this.tone(g, tr, tg, tb, 6);
+        ctx.fillStyle = accents && roll < 0.07 ? accents[key % accents.length] : this.tone(g, tr, tg, tb, 6);
         ctx.fillText(set[(key >>> 8) % set.length], x + cw / 2, y + ch / 2 + 1);
         continue;
       }
@@ -836,11 +854,17 @@ export class AsciiRenderer {
         glyph = SKIN_RAMP[clamp(Math.floor((1 - shade) * 8.99) + jitter, 0, SKIN_RAMP.length - 1)];
       }
       level *= dim;
+      let color;
+      if (!blocks) {
+        // Glyph-only: the glyph itself carries the shading.
+        ctx.fillStyle = flag === FLAG_EYE ? eye : this.tone(level, tr, tg, tb, 0);
+        ctx.fillText(glyph, x + cw / 2, y + ch / 2 + 1);
+        continue;
+      }
       // Tinted per species; the classic tint is a cool blue-grey, like a back seen through deep water.
       ctx.fillStyle = this.tone(level, tr, tg, tb);
       ctx.fillRect(x + 1, y + 1, cw - 1, ch - 1);
 
-      let color;
       if (flag === FLAG_EYE) color = eye;
       else if (flag === FLAG_MARK) color = this.tone(70, tr, tg, tb, 0);
       else if (roll < 0.09) color = accents[key % accents.length];
