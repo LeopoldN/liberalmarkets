@@ -56,10 +56,15 @@ export class World {
   lastSpawn = 0;
   tmp = { x: 0, y: 0 };
 
-  /** fishCount overrides the area-based population (the sidebar wants a single small school). */
-  constructor(sharkSpecs = DEFAULT_SHARKS, fishCount) {
+  /**
+   * fishCount overrides the area-based population (the sidebar wants a single small school).
+   * vertical turns the world on its side for tall, narrow tanks: fish cruise up and down
+   * instead of sideways, and there is no headline to keep clear.
+   */
+  constructor(sharkSpecs = DEFAULT_SHARKS, fishCount, vertical = false) {
     this.sharkSpecs = sharkSpecs;
     this.fishCount = fishCount;
+    this.vertical = vertical;
   }
 
   resize(width, height, cellW, cellH) {
@@ -67,8 +72,10 @@ export class World {
     this.width = width;
     this.height = height;
     // Spacing is set in grid cells so every fish lands in its own cell.
-    this.sepX = SPECIES.map((sp) => sp.spacing[0] * cellW);
-    this.sepY = SPECIES.map((sp) => sp.spacing[1] * cellH);
+    // spacing is [along, across] the usual direction of travel.
+    const [a, b] = this.vertical ? [1, 0] : [0, 1];
+    this.sepX = SPECIES.map((sp) => sp.spacing[a] * cellW);
+    this.sepY = SPECIES.map((sp) => sp.spacing[b] * cellH);
     this.perception = Math.max(cellH * 3, cellW * 5.5);
     this.foreignSep = cellW * 3;
 
@@ -96,7 +103,7 @@ export class World {
       const a = (i / sharkCount) * TAU + rand(-0.4, 0.4);
       const orbitDir = i % 2 === 0 ? 1 : -1;
       const x = W / 2 + Math.cos(a) * orbitRadius * (W / minSide) * 0.9;
-      const y = H / 2 + Math.sin(a) * orbitRadius;
+      const y = H / 2 + Math.sin(a) * orbitRadius * (H / minSide) * 0.9;
       const heading = a + (orbitDir * Math.PI) / 2;
       const nodes = new Float32Array(SHARK_NODES * 2);
       const seg = length / (SHARK_NODES - 1);
@@ -134,12 +141,14 @@ export class World {
       const millDir = Math.random() < 0.5 ? 1 : -1;
       const cx = rand(W * 0.06, W * 0.94);
       const cy = rand(H * 0.08, H * 0.92);
-      // Mostly level headings: fish cruise sideways far more than up or down.
-      const dir = (Math.random() < 0.5 ? 0 : Math.PI) + rand(-0.5, 0.5);
+      // Mostly level headings: fish cruise sideways far more than up or down
+      // (or, in a vertical tank, up and down far more than sideways).
+      const dir = (Math.random() < 0.5 ? 0 : Math.PI) + (this.vertical ? Math.PI / 2 : 0) + rand(-0.5, 0.5);
+      const [spreadX, spreadY] = this.vertical ? [0.6, 1] : [1, 0.6];
       for (let k = 0; k < size; k++) {
         this.fish.push({
-          x: cx + rand(-1, 1) * this.sepX[species] * Math.sqrt(size),
-          y: cy + rand(-1, 1) * this.sepY[species] * Math.sqrt(size) * 0.6,
+          x: cx + rand(-1, 1) * this.sepX[species] * Math.sqrt(size) * spreadX,
+          y: cy + rand(-1, 1) * this.sepY[species] * Math.sqrt(size) * spreadY,
           vx: Math.cos(dir) * sp.cruise,
           vy: Math.sin(dir) * sp.cruise,
           species,
@@ -378,7 +387,8 @@ export class World {
       ax += cur.x * 0.5 + (Math.random() - 0.5) * sp.jitter;
       ay += cur.y * 0.5 + (Math.random() - 0.5) * sp.jitter;
       // Swim level, except when bolting from danger.
-      ay -= f.vy * sp.verticalDrag * (1 - 0.7 * f.alarm);
+      if (this.vertical) ax -= f.vx * sp.verticalDrag * (1 - 0.7 * f.alarm);
+      else ay -= f.vy * sp.verticalDrag * (1 - 0.7 * f.alarm);
 
       // Relax toward a preferred speed that rises with panic.
       const preferred = sp.cruise * (1 + 1.3 * f.alarm);
@@ -448,7 +458,7 @@ export class World {
       } else {
         // Patrol: a lazy circuit around the headline.
         const rx = (hx - cxW) / (W / minSide);
-        const ry = hy - cyW;
+        const ry = (hy - cyW) / (H / minSide);
         const r = Math.hypot(rx, ry) || 1;
         const radius = sh.orbitRadius * (1 + 0.15 * Math.sin(time * 0.05 + sh.id));
         const radial = clamp((radius - r) / radius, -1, 1);
@@ -476,7 +486,7 @@ export class World {
       const ex = (hx - cxW) / (W * 0.3);
       const ey = (hy - cyW) / (H * 0.16);
       const e2 = ex * ex + ey * ey;
-      if (e2 < 1) {
+      if (e2 < 1 && !this.vertical) {
         const e = Math.sqrt(e2) || 1e-3;
         const w = (1 - e) * (hunting ? 1 : 2.5);
         dx += (ex / e) * w;
@@ -588,7 +598,7 @@ export class World {
     this.lastSpawn = time;
 
     // A new school swims in from a random edge.
-    const side = randInt(0, 3);
+    const side = this.vertical ? randInt(2, 3) : randInt(0, 3);
     const along = rand(0.15, 0.85);
     const x = side === 0 ? -20 : side === 1 ? W + 20 : along * W;
     const y = side === 2 ? -20 : side === 3 ? H + 20 : along * H;
