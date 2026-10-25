@@ -200,6 +200,7 @@ kbd {
   transition: color .15s;
 }
 .nav a:hover { color: var(--ink); text-decoration: underline; }
+.nav a[aria-current="page"] { color: var(--ink); }
 
 .controls {
   display: flex;
@@ -446,7 +447,7 @@ kbd {
 .filter:hover { color: var(--ink); }
 .filter[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
 
-.archive { margin: 0; padding: 0; list-style: none; display: grid; gap: 40px; }
+.archive { margin: 24px 0 0; padding: 0; list-style: none; display: grid; gap: 40px; }
 .archive__heading {
   margin: 0;
   padding-bottom: 10px;
