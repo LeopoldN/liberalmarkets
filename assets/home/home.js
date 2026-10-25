@@ -1,9 +1,11 @@
-// Homepage wiring: theme and aquarium toggles, then each section fills itself in.
+// Page wiring for the homepage and the article archive: theme and aquarium toggles,
+// the news ticker, then whichever sections the page has fill themselves in.
 import { startTanks } from "./tanks.js";
 import { renderWire } from "./wire.js";
 import { renderIndicators } from "./desk.js";
 import { renderPosts } from "./posts.js";
 import { startSearch } from "./search.js";
+import { loadArticles, renderRecent, renderArchive, articleEntries } from "./articles.js";
 
 const root = document.documentElement;
 const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -78,7 +80,13 @@ systemDark.addEventListener("change", () => {
 syncTheme();
 
 // ── Sections ────────────────────────────────────────────────────────────
-const wire = renderWire(document.querySelector("[data-wire]"), document.querySelector("[data-wire-meta]"));
-const posts = renderPosts(document.querySelector("[data-posts]"));
-const desk = renderIndicators(document.querySelector("[data-indicators]"));
-startSearch({ sources: [posts, desk, wire] });
+const $ = (sel) => document.querySelector(sel);
+const wire = renderWire($("[data-wire]"));
+const posts = renderPosts($("[data-posts]"));
+const desk = renderIndicators($("[data-indicators]"));
+const articles = loadArticles().then((list) => {
+  renderRecent({ list: $("[data-recent]"), input: $("[data-recent-search]"), more: $("[data-recent-more]"), status: $("[data-recent-status]") }, list);
+  renderArchive({ list: $("[data-archive]"), input: $("[data-archive-search]"), topics: $("[data-archive-topics]"), count: $("[data-archive-count]") }, list);
+  return articleEntries(list);
+});
+startSearch({ sources: [articles, posts, desk, wire] });

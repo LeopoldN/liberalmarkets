@@ -1,6 +1,6 @@
-// The Wire: latest finance headlines from data/news.json (refreshed daily by scripts/fetch-news.mjs).
+// News ticker: the latest finance headlines from data/news.json (refreshed daily by scripts/fetch-news.mjs).
 
-const LIMIT = 7;
+const LIMIT = 12;
 
 function decode(text) {
   const el = document.createElement("textarea");
@@ -18,42 +18,54 @@ function ago(date, now) {
   return date.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
 }
 
-/** Fills the list and resolves to search entries for every headline. */
-export async function renderWire(list, meta) {
-  if (!list) return [];
-  list.innerHTML = '<li class="wire__empty"><span></span><span>Loading headlines…</span></li>';
+const SPEED = 45; // px per second
 
+function item(entry, now, hidden) {
+  const a = document.createElement("a");
+  a.className = "ticker__item";
+  a.href = entry.link;
+  a.rel = "noopener";
+  a.target = "_blank";
+  if (hidden) a.tabIndex = -1;
+  const time = document.createElement("time");
+  time.dateTime = entry.date.toISOString();
+  time.textContent = ago(entry.date, now);
+  a.append(time, entry.title);
+  return a;
+}
+
+/**
+ * Fills the news ticker under the top bar and resolves to search entries for every headline.
+ * The headlines run twice in one track, so sliding it by half loops without a seam.
+ */
+export async function renderWire(track) {
+  if (!track) return [];
   try {
     const res = await fetch("data/news.json", { cache: "no-cache" });
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
     const now = Date.now();
     const items = (data.items || [])
-      .map((item) => ({ title: decode(item.title || ""), link: item.link, date: new Date(item.pubDate) }))
-      .filter((item) => item.title && /^https?:/.test(item.link || ""))
-      .sort((a, b) => b.date - a.date);
+      .map((entry) => ({ title: decode(entry.title || ""), link: entry.link, date: new Date(entry.pubDate) }))
+      .filter((entry) => entry.title && /^https?:/.test(entry.link || ""))
+      .sort((a, b) => b.date - a.date)
+      .slice(0, LIMIT);
 
-    list.textContent = "";
-    for (const item of items.slice(0, LIMIT)) {
-      const li = document.createElement("li");
-      const time = document.createElement("time");
-      time.className = "wire__time";
-      time.dateTime = item.date.toISOString();
-      time.textContent = ago(item.date, now);
-      const a = document.createElement("a");
-      a.href = item.link;
-      a.rel = "noopener";
-      a.target = "_blank";
-      a.textContent = item.title;
-      li.append(time, a);
-      list.append(li);
-    }
-    if (meta) meta.textContent = data.source ? data.source.replace(/ RSS$/, "") : "";
+    const first = document.createElement("div");
+    first.className = "ticker__run";
+    first.append(...items.map((entry) => item(entry, now, false)));
+    const second = first.cloneNode(false);
+    second.setAttribute("aria-hidden", "true");
+    second.append(...items.map((entry) => item(entry, now, true)));
+    track.replaceChildren(first, second);
 
-    return items.map((item) => ({ type: "Headline", title: item.title, sub: "CNBC Finance", href: item.link, external: true }));
+    const setSpeed = () => track.style.setProperty("--ticker-duration", `${Math.max(20, first.scrollWidth / SPEED)}s`);
+    setSpeed();
+    document.fonts?.ready.then(setSpeed);
+
+    return items.map((entry) => ({ type: "Headline", title: entry.title, sub: "CNBC Finance", href: entry.link, external: true }));
   } catch (err) {
-    list.innerHTML = '<li class="wire__empty"><span></span><span>Headlines are unavailable right now.</span></li>';
-    if (meta) meta.textContent = "";
+    track.replaceChildren(Object.assign(document.createElement("span"), { className: "ticker__item", textContent: "Headlines are unavailable right now." }));
     return [];
   }
 }
