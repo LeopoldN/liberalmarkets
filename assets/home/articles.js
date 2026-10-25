@@ -69,7 +69,9 @@ export function renderRecent({ list, input, more, status }, articles) {
   const update = () => {
     const q = input?.value.trim() || "";
     const hits = articles.filter((a) => matches(a, q));
-    list.replaceChildren(...(hits.length ? hits.slice(0, RECENT).map(row) : [empty(`No articles match “${q}”.`)]));
+    // The newest article already runs as the lead, so the unfiltered list starts after it.
+    const shown = q ? hits : hits.slice(1);
+    list.replaceChildren(...(shown.length ? shown.slice(0, RECENT).map(row) : [empty(q ? `No articles match “${q}”.` : "More articles are on the way.")]));
     if (more) {
       more.href = q ? `articles.html?q=${encodeURIComponent(q)}` : "articles.html";
       more.textContent = q && hits.length > RECENT ? `All ${hits.length} results →` : `All ${articles.length} articles →`;

@@ -418,6 +418,7 @@ kbd {
 
 /* ── Archive page ────────────────────────────────────────────────────── */
 
+.page--archive { gap: 32px; }
 .archive-head { display: grid; gap: 12px; }
 .archive-head h1 {
   margin: 0;
