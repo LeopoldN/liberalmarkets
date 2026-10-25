@@ -63,9 +63,9 @@ export function startSearch({ sources }) {
 
   let index = [...PAGES, ...gamesFromPage()];
   Promise.all(sources).then((groups) => {
-    // Stories first; a section or game that a story already covers is dropped.
+    // Articles and tools first; a section or game that one already covers is dropped.
     const seen = new Set();
-    index = [...groups[0], ...PAGES, ...gamesFromPage(), ...groups.slice(1).flat()].filter((item) => {
+    index = [...groups[0], ...groups[1], ...PAGES, ...gamesFromPage(), ...groups.slice(2).flat()].filter((item) => {
       const key = item.type === "Data" ? `${item.href}#${item.title}` : item.href;
       if (seen.has(key)) return false;
       seen.add(key);

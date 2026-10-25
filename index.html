@@ -33,6 +33,7 @@
     <div class="bar__inner">
       <a class="wordmark" href="index.html">Liberal Markets</a>
       <nav class="nav" aria-label="Sections">
+        <a href="articles.html">Articles</a>
         <a href="trumptracker.html">Trump Tracker</a>
         <a href="markets.html">Markets</a>
         <a href="games.html">Games</a>
@@ -41,6 +42,12 @@
         <button class="control" type="button" data-search-open aria-haspopup="dialog">Search <kbd>/</kbd></button>
         <button class="control" type="button" data-theme-toggle>Night</button>
         <button class="control control--fish" type="button" data-fish-toggle aria-pressed="true">Fish</button>
+      </div>
+    </div>
+    <div class="ticker" role="region" aria-label="Latest headlines">
+      <span class="ticker__label">Latest</span>
+      <div class="ticker__viewport">
+        <div class="ticker__track" data-wire></div>
       </div>
     </div>
   </header>
@@ -56,6 +63,21 @@
       <p class="lead__byline">By Nicholas Leopold · <time datetime="2026-10-10">10 October 2026</time> · 5 min read</p>
       <p class="lead__also">Also: <a href="asts.html">track an ASTS position</a> or <a href="model.html">run the numbers through a DCF</a>.</p>
     </article>
+
+    <section class="block" aria-labelledby="recent-title">
+      <header class="block__head">
+        <h2 id="recent-title">Recent articles</h2>
+        <a href="articles.html" data-recent-more>All articles →</a>
+      </header>
+      <div class="finder">
+        <label class="finder__field" for="recent-search">
+          <span class="visually-hidden">Search articles</span>
+          <input id="recent-search" type="search" placeholder="Search articles" autocomplete="off" spellcheck="false" data-recent-search>
+        </label>
+        <span class="finder__status" role="status" data-recent-status></span>
+      </div>
+      <ol class="articles" data-recent></ol>
+    </section>
 
     <section class="block" aria-labelledby="ind-title">
       <header class="block__head">
@@ -76,22 +98,12 @@
       <p class="block__note">Source: FRED, Federal Reserve Bank of St. Louis. Monthly unless noted.</p>
     </section>
 
-    <div class="pair">
-      <section class="block" aria-labelledby="wire-title">
-        <header class="block__head">
-          <h2 id="wire-title">The wire</h2>
-          <span data-wire-meta></span>
-        </header>
-        <ol class="wire" data-wire></ol>
-      </section>
-
-      <section class="block" aria-labelledby="tools-title">
-        <header class="block__head">
-          <h2 id="tools-title">Tools</h2>
-        </header>
-        <ul class="tools" data-posts></ul>
-      </section>
-    </div>
+    <section class="block" aria-labelledby="tools-title">
+      <header class="block__head">
+        <h2 id="tools-title">Tools</h2>
+      </header>
+      <ul class="tools" data-posts></ul>
+    </section>
 
     <section class="block" aria-labelledby="games-title">
       <header class="block__head">
