@@ -533,7 +533,7 @@ kbd {
   padding: 12px 18px;
   text-decoration: none;
 }
-.search__results [aria-selected="true"] a { background: var(--line); }
+.search__results [aria-selected="true"] a { background: color-mix(in srgb, var(--ink) 6%, transparent); }
 .search__results .r-type {
   font: 400 11px/1.6 var(--mono);
   letter-spacing: 0.06em;
