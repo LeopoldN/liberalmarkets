@@ -1,1 +1,8 @@
 .DS_Store
+
+# Trade Winds lives in its own repo (~/Documents/GitHub/trade-winds)
+/trade-winds*
+/godot-trade-winds/
+/models/trade-winds/
+/assets/trade-winds/
+/tests/trade-winds*
