@@ -138,18 +138,18 @@ export class World {
       const dir = (Math.random() < 0.5 ? 0 : Math.PI) + rand(-0.5, 0.5);
       for (let k = 0; k < size; k++) {
         this.fish.push({
-  x: cx + rand(-1, 1) * this.sepX[species] * Math.sqrt(size),
-  y: cy + rand(-1, 1) * this.sepY[species] * Math.sqrt(size) * 0.6,
-  vx: Math.cos(dir) * sp.cruise,
-  vy: Math.sin(dir) * sp.cruise,
-  species,
-  alarm: 0,
-  alive: true,
-  respawnAt: 0,
-  phase: rand(0, TAU),
-  turn: 0,
-  depth: rand(0.55, 1),
-  millDir,
+          x: cx + rand(-1, 1) * this.sepX[species] * Math.sqrt(size),
+          y: cy + rand(-1, 1) * this.sepY[species] * Math.sqrt(size) * 0.6,
+          vx: Math.cos(dir) * sp.cruise,
+          vy: Math.sin(dir) * sp.cruise,
+          species,
+          alarm: 0,
+          alive: true,
+          respawnAt: 0,
+          phase: rand(0, TAU),
+          turn: 0,
+          depth: rand(0.55, 1),
+          millDir,
         });
       }
     }
@@ -256,8 +256,8 @@ export class World {
       const br = clamp(Math.floor(f.y / size) + 2, 0, rows - 1);
       for (let r = Math.max(0, br - 1); r <= Math.min(rows - 1, br + 1); r++) {
         for (let c = Math.max(0, bc - 1); c <= Math.min(cols - 1, bc + 1); c++) {
-  let j = head[r * cols + c];
-  while (j !== -1) {
+          let j = head[r * cols + c];
+          while (j !== -1) {
             if (j !== i) {
               const o = fish[j];
               const dx = o.x - f.x;
@@ -307,9 +307,9 @@ export class World {
         ay += (avy / n - f.vy) * alignK + (cy / n) * cohesionK;
         if (sp.mill > 0) {
           // Circle the local centre: the school spins into a bait ball.
-  const cl = Math.hypot(cx, cy) || 1;
-  ax += (-cy / cl) * f.millDir * sp.mill * (1 - f.alarm);
-  ay += (cx / cl) * f.millDir * sp.mill * (1 - f.alarm);
+          const cl = Math.hypot(cx, cy) || 1;
+          ax += (-cy / cl) * f.millDir * sp.mill * (1 - f.alarm);
+          ay += (cx / cl) * f.millDir * sp.mill * (1 - f.alarm);
         }
       }
 
@@ -322,10 +322,10 @@ export class World {
         let bx = 0;
         let by = 0;
         for (let k = 0; k <= 12; k += 3) {
-  const nx = sh.nodes[k * 2];
-  const ny = sh.nodes[k * 2 + 1];
-  const d2 = (f.x - nx) ** 2 + (f.y - ny) ** 2;
-  if (d2 < best) {
+          const nx = sh.nodes[k * 2];
+          const ny = sh.nodes[k * 2 + 1];
+          const d2 = (f.x - nx) ** 2 + (f.y - ny) ** 2;
+          if (d2 < best) {
             best = d2;
             bx = nx;
             by = ny;
@@ -352,10 +352,10 @@ export class World {
         const dy = f.y - pointer.y;
         const d = Math.hypot(dx, dy);
         if (d < pr && d > 1e-3) {
-  const w = (1 - d / pr) ** 2;
-  ax += (dx / d) * FISH_FLEE_K * w;
-  ay += (dy / d) * FISH_FLEE_K * w;
-  fear = Math.max(fear, Math.sqrt(w) * 0.8);
+          const w = (1 - d / pr) ** 2;
+          ax += (dx / d) * FISH_FLEE_K * w;
+          ay += (dy / d) * FISH_FLEE_K * w;
+          fear = Math.max(fear, Math.sqrt(w) * 0.8);
         }
       }
 
@@ -460,11 +460,11 @@ export class World {
       for (const other of sharks) {
         if (other === sh) continue;
         for (let k = 0; k < SHARK_NODES; k += 4) {
-  const ox = hx - other.nodes[k * 2];
-  const oy = hy - other.nodes[k * 2 + 1];
-  const d = Math.hypot(ox, oy);
-  const range = (L + other.length) * 0.45;
-  if (d < range && d > 1e-3) {
+          const ox = hx - other.nodes[k * 2];
+          const oy = hy - other.nodes[k * 2 + 1];
+          const d = Math.hypot(ox, oy);
+          const range = (L + other.length) * 0.45;
+          if (d < range && d > 1e-3) {
             const w = (1 - d / range) * 3;
             dx += (ox / d) * w;
             dy += (oy / d) * w;
@@ -532,8 +532,8 @@ export class World {
         const mx = nodes[0];
         const my = nodes[1];
         for (const f of this.fish) {
-  if (!f.alive) continue;
-  if ((f.x - mx) ** 2 + (f.y - my) ** 2 < mouthR * mouthR) {
+          if (!f.alive) continue;
+          if ((f.x - mx) ** 2 + (f.y - my) ** 2 < mouthR * mouthR) {
             f.alive = false;
             f.respawnAt = time + rand(3, 8);
             sh.hunger = Math.max(0, sh.hunger - 0.16);

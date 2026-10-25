@@ -654,8 +654,8 @@ export class AsciiRenderer {
       arc[0] = 0;
       for (let k = 1; k < N; k++) {
         arc[k] =
-  arc[k - 1] +
-  Math.hypot(spine[k * 2] - spine[(k - 1) * 2], spine[k * 2 + 1] - spine[(k - 1) * 2 + 1]);
+          arc[k - 1] +
+          Math.hypot(spine[k * 2] - spine[(k - 1) * 2], spine[k * 2 + 1] - spine[(k - 1) * 2 + 1]);
       }
       this.arcTotal = arc[N - 1] || 1;
 
@@ -689,30 +689,30 @@ export class AsciiRenderer {
 
       for (let r = r0; r <= r1; r++) {
         for (let c = c0; c <= c1; c++) {
-  const x = c * cw;
-  const y = r * ch;
-  const centerHit = this.sampleShark(x + cw / 2, y + ch / 2, L);
-  if (!centerHit && this.hitDist > skipBeyond) continue;
-  const flag = this.hitFlag;
-  const shade = this.hitShade;
-  const s = this.hitS;
-  const v = this.hitV;
+          const x = c * cw;
+          const y = r * ch;
+          const centerHit = this.sampleShark(x + cw / 2, y + ch / 2, L);
+          if (!centerHit && this.hitDist > skipBeyond) continue;
+          const flag = this.hitFlag;
+          const shade = this.hitShade;
+          const s = this.hitS;
+          const v = this.hitV;
 
-  let hits = centerHit ? 1 : 0;
-  for (let k = 0; k < SUBSAMPLES.length; k += 2) {
+          let hits = centerHit ? 1 : 0;
+          for (let k = 0; k < SUBSAMPLES.length; k += 2) {
             if (this.sampleShark(x + SUBSAMPLES[k] * cw, y + SUBSAMPLES[k + 1] * ch, L)) hits++;
           }
-  if (hits === 0) continue;
-  const coverage = hits / 5;
+          if (hits === 0) continue;
+          const coverage = hits / 5;
 
-  const i = r * cols + c;
+          const i = r * cols + c;
           // Body-anchored key so each glyph rides along with the skin.
-  const key = (hash3(Math.round(s * 52), Math.round(v / (cw * 0.9)), sh.id) * 4294967295) >>> 0;
-  sharkKey[i] = key;
-  sharkDepth[i] = sh.depth;
-  sharkKind[i] = kindIndex;
+          const key = (hash3(Math.round(s * 52), Math.round(v / (cw * 0.9)), sh.id) * 4294967295) >>> 0;
+          sharkKey[i] = key;
+          sharkDepth[i] = sh.depth;
+          sharkKind[i] = kindIndex;
 
-  if (centerHit && coverage >= 0.6) {
+          if (centerHit && coverage >= 0.6) {
             sharkFlag[i] = flag;
             const flicker = (hash3(c, r, Math.floor(t * 6)) - 0.5) * 0.06;
             sharkShade[i] = clamp(shade + flicker, 0, 1);
@@ -752,7 +752,7 @@ export class AsciiRenderer {
         const set = shade >= 0.5 ? EDGE_HEAVY : EDGE_LIGHT;
         const g = (70 + shade * 80) * dim;
         ctx.fillStyle =
-  roll < 0.07
+          roll < 0.07
             ? ACCENTS[key % ACCENTS.length]
             : `rgb(${Math.round(g * tr)},${Math.round(g * tg)},${Math.min(255, Math.round(g * tb + 6))})`;
         ctx.fillText(set[(key >>> 8) % set.length], x + cw / 2, y + ch / 2 + 1);
