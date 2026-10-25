@@ -46,7 +46,7 @@ export function startOrbit(pre) {
     const cx = cols / 2;
     const cy = rows / 2;
     // Radius in rows; columns are narrower, so x is stretched by the cell aspect.
-    const R = Math.min(rows * 0.36, (cols * aspect) * 0.3);
+    const R = Math.min(rows * 0.4, cols * aspect * 0.34);
     const spin = t * 0.18;
     const grid = Array.from({ length: rows }, () => Array(cols).fill(" "));
     const cls = Array.from({ length: rows }, () => Array(cols).fill(""));

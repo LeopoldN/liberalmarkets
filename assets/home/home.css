@@ -306,13 +306,24 @@ kbd {
   display: flex;
   justify-content: space-between;
   gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
   font: 500 10px/1 var(--mono);
   letter-spacing: .08em;
-  color: var(--faint);
+  color: var(--muted);
   pointer-events: none;
   white-space: nowrap;
-  overflow: hidden;
 }
+.tank__hud span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 6px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+.tank__hud span:first-child { color: var(--accent-2); }
 
 /* ── Page ────────────────────────────────────────────────────────────── */
 
@@ -396,7 +407,8 @@ kbd {
 
 .lead {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
   grid-template-areas:
     "kicker art"
     "title art"
@@ -439,12 +451,14 @@ kbd {
   color: var(--muted);
 }
 .byline span { margin: 0 4px; color: var(--faint); }
+.byline time, .byline { white-space: nowrap; }
+@media (max-width: 1100px) { .byline { white-space: normal; } }
 
 .lead__art {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 300px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--paper-2);
   border: 1px solid var(--rule);
@@ -461,7 +475,7 @@ kbd {
 
 .ascii-art {
   margin: 0;
-  font: 500 11px/1 var(--mono);
+  font: 500 12px/1 var(--mono);
   letter-spacing: 0;
   color: var(--ink);
   user-select: none;
@@ -884,7 +898,7 @@ kbd {
 
 @media (max-width: 1100px) {
   .lead { grid-template-columns: 1fr; grid-template-areas: "kicker" "title" "dek" "byline" "art"; }
-  .lead__art { min-height: 240px; margin-top: 24px; }
+  .lead__art { aspect-ratio: 16 / 9; margin-top: 24px; }
   .search-trigger { min-width: 0; }
 }
 

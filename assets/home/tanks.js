@@ -45,7 +45,8 @@ export function startTanks({ isDark }) {
   const updateHud = () => {
     for (const { engine, hud, name } of engines) {
       const alive = engine.world.fish.reduce((n, f) => n + (f.alive ? 1 : 0), 0);
-      hud.textContent = `${alive} FISH · ${engine.world.sharks.length}× ${name}`;
+      const n = engine.world.sharks.length;
+      hud.textContent = `${alive} FISH · ${n} ${name}${n > 1 ? "S" : ""}`;
     }
   };
   updateHud();
