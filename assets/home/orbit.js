@@ -27,6 +27,8 @@ export function startOrbit(pre) {
   let raf = 0;
   let last = 0;
   let visible = true;
+  const isDark = () => getComputedStyle(document.documentElement).colorScheme === "dark";
+  let dark = isDark();
   const start = performance.now();
 
   function measure() {
@@ -67,8 +69,8 @@ export function startOrbit(pre) {
         const light = Math.max(0, x * L[0] + y * L[1] + z * L[2]);
         const h = land(lon, lat);
         if (h > 0) {
-          // Ink on paper: shadowed land is dense, sunlit land is sparse.
-          const v = Math.min(1, 0.15 + (1 - light) * 0.85);
+          // Ink on paper: shadowed land is dense, sunlit land sparse. Light on night: the reverse.
+          const v = Math.min(1, 0.15 + (dark ? light : 1 - light) * 0.85);
           grid[r][c] = LAND[Math.min(LAND.length - 1, Math.floor(v * (LAND.length - 1)) + 1)];
         } else {
           // Sea: a graticule every 30°, faint on the night side.
@@ -154,5 +156,6 @@ export function startOrbit(pre) {
   new ResizeObserver(() => { measure(); draw((performance.now() - start) / 1000); }).observe(box);
   new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; schedule(); }).observe(box);
   reduced.addEventListener("change", schedule);
+  document.addEventListener("lm:theme", () => { dark = isDark(); draw((performance.now() - start) / 1000); });
   document.fonts?.ready.then(() => { measure(); draw((performance.now() - start) / 1000); });
 }
