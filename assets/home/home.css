@@ -691,25 +691,24 @@ kbd {
   :root { --gutter: 16px; --bar-h: 56px; }
   .bar__inner { gap: 16px; }
   .wordmark { font-size: 22px; }
+  .bar__inner { flex-wrap: wrap; height: auto; row-gap: 0; padding-top: 14px; }
   .nav {
-    position: absolute;
-    top: 100%;
-    left: 0; right: 0;
-    justify-content: center;
+    order: 3;
+    width: 100%;
     gap: 22px;
-    padding: 10px var(--gutter);
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
+    margin: 0;
+    padding: 10px 0 12px;
+    overflow-x: auto;
   }
   .controls { margin-left: auto; gap: 16px; }
   .control kbd { display: none; }
-  .page { padding-top: 88px; gap: 56px; }
+  .page { padding-top: 40px; gap: 56px; }
   .lead__dek { font-size: 18px; }
   .games, .tools { grid-template-columns: minmax(0, 1fr); }
   .article__link { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .article__meta { order: -1; }
   .article__date { order: -2; }
-  .page { padding-top: 96px; }
+
   .ind__trend-h, .ind__trend { width: 28%; }
   .ind .num { padding-right: 14px; }
   .ind__name small { display: none; }
