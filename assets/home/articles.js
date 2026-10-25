@@ -1,6 +1,8 @@
-// Articles from data/articles.json: the homepage's recent list and the full archive on articles.html.
+// Articles from data/articles.json: the homepage's recent list, the full archive on articles.html,
+// and the read-next list under each article.
 
 const RECENT = 6;
+const NEXT = 3;
 
 function el(tag, cls, text) {
   const node = document.createElement(tag);
@@ -140,6 +142,16 @@ export function renderArchive({ list, input, topics, count }, articles) {
 
   input?.addEventListener("input", update);
   update();
+}
+
+/** Article pages: a few other articles to read next. The section stays hidden when there are none. */
+export function renderNext({ list, section }, articles) {
+  if (!list || !articles) return;
+  const here = location.pathname.split("/").pop();
+  const others = articles.filter((a) => a.href !== here && !a.placeholder);
+  if (!others.length) return;
+  list.replaceChildren(...others.slice(0, NEXT).map(row));
+  if (section) section.hidden = false;
 }
 
 /** Search entries for the site-wide search overlay. */

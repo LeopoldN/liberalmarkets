@@ -1,0 +1,152 @@
+<!doctype html>
+<!--
+  Article template. To publish a new article:
+    1. Copy this file and name it after the piece, e.g. asts-update-oct-26.html.
+    2. Fill in every [bracketed] value below: the <title> and description, the kicker,
+       headline, dek, byline and copy. Delete the sample components you don't use.
+    3. Remove the robots "noindex" line, which only keeps this template out of search engines.
+    4. Add an entry to the top of data/articles.json with the same title, dek, topic, date,
+       minutes and href. The homepage, the archive and the read-next lists all read from there.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="[One sentence on what the article argues.]">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff1e5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+  <title>[Short headline] · Liberal Markets</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..500&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+  <script>
+    // Apply saved preferences before first paint so nothing flashes.
+    (function () {
+      var d = document.documentElement;
+      try {
+        var theme = localStorage.getItem("lm-theme");
+        if (theme === "light" || theme === "dark") d.dataset.theme = theme;
+        if (localStorage.getItem("lm-fish") === "off") d.dataset.fish = "off";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/home/home.css">
+  <script type="module" src="assets/home/home.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="bar__inner">
+      <a class="wordmark" href="index.html">Liberal Markets</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="articles.html" aria-current="page">Articles</a>
+        <a href="trumptracker.html">Trump Tracker</a>
+        <a href="markets.html">Markets</a>
+        <a href="games.html">Games</a>
+      </nav>
+      <div class="controls">
+        <button class="control" type="button" data-search-open aria-haspopup="dialog">Search <kbd>/</kbd></button>
+        <button class="control" type="button" data-theme-toggle>Night</button>
+        <button class="control control--fish" type="button" data-fish-toggle aria-pressed="true">Fish</button>
+      </div>
+    </div>
+    <div class="ticker" role="region" aria-label="Latest headlines">
+      <span class="ticker__label">Latest</span>
+      <div class="ticker__viewport">
+        <div class="ticker__track" data-wire></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="tank tank--left" aria-hidden="true"><canvas></canvas></div>
+  <div class="tank tank--right" aria-hidden="true"><canvas></canvas></div>
+
+  <main id="main" class="page page--story">
+    <article class="story">
+      <header class="story__head">
+        <p class="story__kicker">
+          <!-- The topic must match the article's "topic" in data/articles.json so the link filters the archive. -->
+          <a href="articles.html?topic=[Topic]">[Topic]</a>
+          <span>[Subject, e.g. a company or ticker]</span>
+        </p>
+        <h1 class="story__title">[Headline: say what happened and why it matters]</h1>
+        <p class="story__dek">[Dek: two sentences that give the argument away. Readers who stop here should still know the point.]</p>
+        <p class="story__byline">
+          <span class="story__author">By [Author]</span>
+          <time datetime="[YYYY-MM-DD]">[D Month YYYY]</time>
+          <span>[N] min read</span>
+        </p>
+      </header>
+
+      <div class="story__body">
+        <p>[Opening paragraph. Body copy sets in the serif at a reading measure, so paragraphs can run long.]</p>
+
+        <p>[Links look like <a href="index.html">this</a>. Use <strong>strong</strong> and <em>em</em> sparingly.]</p>
+
+        <!-- Section heading. The part label is optional; delete the span for a plain subhead. -->
+        <h2><span class="story__part">Part 1</span>[Section heading]</h2>
+
+        <p>[Section copy.]</p>
+
+        <!-- Pull quote: a line from the piece worth repeating large. -->
+        <blockquote>
+          <p>[A sentence worth pulling out.]</p>
+        </blockquote>
+
+        <h3>[Smaller subhead, if a section needs one]</h3>
+
+        <ul>
+          <li>[List item]</li>
+          <li>[List item]</li>
+        </ul>
+
+        <!-- Figure: a chart or image with a caption and source. -->
+        <figure>
+          <img src="[path/to/chart.png]" alt="[What the chart shows]" width="1360" height="760">
+          <figcaption>[Caption]. Source: [source]</figcaption>
+        </figure>
+
+        <!-- Section break without a heading. -->
+        <hr>
+
+        <p>[Closing paragraph.]</p>
+      </div>
+
+      <!-- Optional: point readers to related tools. Delete if there are none. -->
+      <p class="story__also">Also: <a href="[tool.html]">[a related tool]</a>.</p>
+    </article>
+
+    <!-- Fills itself from data/articles.json and stays hidden until there is another article to show. -->
+    <section class="block" aria-labelledby="next-title" data-next-section hidden>
+      <header class="block__head">
+        <h2 id="next-title">Read next</h2>
+        <a href="articles.html">All articles →</a>
+      </header>
+      <ol class="articles" data-next></ol>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot__inner">
+      <span class="wordmark wordmark--small">Liberal Markets</span>
+      <p>Headlines from CNBC. Economic data from FRED. The aquarium is adapted from <a href="https://github.com/stackedlol/ascii-sharks">ascii-sharks</a> (MIT).</p>
+    </div>
+  </footer>
+
+  <div class="search" data-search hidden>
+    <div class="search__scrim" data-search-close></div>
+    <div class="search__panel" role="dialog" aria-modal="true" aria-label="Search Liberal Markets">
+      <label class="search__field">
+        <span class="visually-hidden">Search</span>
+        <input id="site-search" type="search" placeholder="Search stories, tools, games, indicators" autocomplete="off" spellcheck="false" aria-controls="search-results" data-search-input>
+        <kbd>esc</kbd>
+      </label>
+      <ul class="search__results" id="search-results" role="listbox" data-search-results></ul>
+    </div>
+  </div>
+</body>
+</html>

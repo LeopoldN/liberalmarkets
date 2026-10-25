@@ -459,6 +459,148 @@ kbd {
   color: var(--ink-3);
 }
 
+/* ── Story (article pages) ───────────────────────────────────────────── */
+
+.page--story { gap: 64px; }
+
+.story { min-width: 0; }
+
+.story__head {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 36px;
+}
+
+.story__kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0;
+  font: 400 12px/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.story__kicker a { color: var(--claret); text-decoration: none; }
+.story__kicker a:hover { text-decoration: underline; }
+
+.story__title {
+  margin: 0;
+  font: 500 clamp(36px, 5.2vw, 58px)/1.06 var(--display);
+  font-variation-settings: "opsz" 60;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.story__dek {
+  max-width: 34em;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.story__byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 18px;
+  margin: 8px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--ink-3);
+}
+.story__author { font-weight: 500; color: var(--ink); }
+
+/* Long-form copy sets in the serif, at a reading measure inside the column. */
+.story__body {
+  max-width: 34em;
+  font: 400 20px/1.65 var(--display);
+  font-variation-settings: "opsz" 20;
+  text-wrap: pretty;
+}
+.story__body > * { margin: 0 0 1.05em; }
+.story__body > :last-child { margin-bottom: 0; }
+
+.story__body a {
+  text-decoration-color: var(--claret);
+  text-decoration-thickness: 1px;
+}
+.story__body a:hover { color: var(--claret); }
+
+.story__body h2 {
+  margin: 2.1em 0 0.7em;
+  font: 600 28px/1.2 var(--display);
+  font-variation-settings: "opsz" 40;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.story__body h3 {
+  margin: 1.6em 0 0.5em;
+  font: 600 21px/1.3 var(--display);
+  font-variation-settings: "opsz" 28;
+}
+.story__part {
+  display: block;
+  margin-bottom: 10px;
+  font: 400 12px/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.story__body ul,
+.story__body ol { padding-left: 1.2em; }
+.story__body li { margin-bottom: 0.4em; }
+.story__body li::marker { color: var(--ink-3); }
+
+.story__body blockquote {
+  margin: 1.6em 0;
+  padding: 0.9em 0;
+  border-block: 1px solid var(--line-strong);
+  font: 500 italic 26px/1.35 var(--display);
+  font-variation-settings: "opsz" 40;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.story__body blockquote p { margin: 0; }
+.story__body blockquote cite {
+  display: block;
+  margin-top: 12px;
+  font: 400 12px/1 var(--mono);
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.story__body figure { margin: 1.8em 0; }
+.story__body img { display: block; max-width: 100%; height: auto; }
+.story__body figcaption {
+  margin-top: 10px;
+  font: 400 12px/1.5 var(--mono);
+  color: var(--ink-3);
+}
+
+.story__body hr {
+  width: 48px;
+  margin: 2.2em 0;
+  border: 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.story__also {
+  max-width: 34em;
+  margin: 48px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--ink-3);
+}
+.story__also a { color: var(--ink); }
+
 /* ── Indicators ──────────────────────────────────────────────────────── */
 
 .ind {
@@ -704,6 +846,12 @@ kbd {
   .control kbd { display: none; }
   .page { padding-top: 40px; gap: 56px; }
   .lead__dek { font-size: 18px; }
+  .page--story { gap: 48px; }
+  .story__head { padding-bottom: 28px; }
+  .story__dek { font-size: 18px; }
+  .story__body { font-size: 18px; line-height: 1.6; }
+  .story__body h2 { font-size: 24px; }
+  .story__body blockquote { font-size: 22px; }
   .games, .tools { grid-template-columns: minmax(0, 1fr); }
   .article__link { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .article__meta { order: -1; }
@@ -724,5 +872,7 @@ kbd {
 }
 
 @media print {
-  .bar, .tank, .search { display: none !important; }
+  .bar, .tank, .search, .foot, [data-next-section] { display: none !important; }
+  .page { padding-top: 0; }
+  .story__body { max-width: none; font-size: 12pt; }
 }
