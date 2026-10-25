@@ -1,0 +1,48 @@
+{
+  "stories": [
+    {
+      "title": "ASTS Update: why the stock fell, and why Starlink’s politics are its opening",
+      "dek": "No news, bad news and rising rates have dragged a pre-revenue stock down with its peers. The case for buying weekly stands.",
+      "tag": "Equities",
+      "dateISO": "2026-10-10",
+      "minutes": 5,
+      "href": "asts-update-oct-26.html",
+      "keywords": "AST SpaceMobile ASTS Starlink Elon Musk satellites rates"
+    },
+    {
+      "title": "ASTS portfolio tracker",
+      "dek": "A spreadsheet-style snapshot of an AST SpaceMobile position: shares, average cost and today’s value.",
+      "tag": "Tool",
+      "href": "asts.html",
+      "keywords": "AST SpaceMobile portfolio holdings shares cost basis"
+    },
+    {
+      "title": "Trump Tracker",
+      "dek": "Prices, labor, growth, housing, rates, the deficit and trade. Just the charts.",
+      "tag": "Tracker",
+      "href": "trumptracker.html",
+      "keywords": "economy inflation CPI unemployment jobs GDP housing mortgage fed funds deficit debt trade dashboard"
+    },
+    {
+      "title": "Markets heatmap",
+      "dek": "The stock market as a heatmap: who is up, who is down, and by how much.",
+      "tag": "Markets",
+      "href": "markets.html",
+      "keywords": "stocks heatmap S&P sectors movers"
+    },
+    {
+      "title": "DCF model",
+      "dek": "A discounted cash flow model you can push around: growth, margins, discount rate, terminal value.",
+      "tag": "Model",
+      "href": "model.html",
+      "keywords": "discounted cash flow valuation DCF WACC terminal value"
+    },
+    {
+      "title": "Liberal Markets Games",
+      "dek": "Seven daily puzzles about the goods, places and relationships that connect the world.",
+      "tag": "Games",
+      "href": "games.html",
+      "keywords": "games puzzles daily Exportle Importle Productle Truddies Tradeoffs Then and Now Trade Pairs Practice Econ trade"
+    }
+  ]
+}

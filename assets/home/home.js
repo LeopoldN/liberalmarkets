@@ -1,0 +1,84 @@
+// Homepage wiring: theme and aquarium toggles, then each section fills itself in.
+import { startTanks } from "./tanks.js";
+import { renderWire } from "./wire.js";
+import { renderIndicators } from "./desk.js";
+import { renderPosts } from "./posts.js";
+import { startSearch } from "./search.js";
+
+const root = document.documentElement;
+const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+function store(key, value) {
+  try {
+    if (value == null) localStorage.removeItem(key);
+    else localStorage.setItem(key, value);
+  } catch (e) {
+    // Private mode or blocked storage: the toggle still works for this visit.
+  }
+}
+
+const isDark = () => (root.dataset.theme ? root.dataset.theme === "dark" : systemDark.matches);
+
+// ── Date ────────────────────────────────────────────────────────────────
+const today = document.querySelector("[data-today]");
+if (today) {
+  const now = new Date();
+  today.dateTime = now.toISOString().slice(0, 10);
+  today.textContent = now.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
+}
+
+// ── Aquarium ────────────────────────────────────────────────────────────
+const tanks = startTanks({ isDark });
+const fishBtn = document.querySelector("[data-fish-toggle]");
+
+function syncFish() {
+  const on = root.dataset.fish !== "off";
+  fishBtn?.setAttribute("aria-pressed", String(on));
+  fishBtn?.setAttribute("aria-label", on ? "Fish on. Hide the aquarium" : "Fish off. Show the aquarium");
+  tanks?.setEnabled(on);
+}
+
+fishBtn?.addEventListener("click", () => {
+  const on = root.dataset.fish === "off";
+  if (on) delete root.dataset.fish;
+  else root.dataset.fish = "off";
+  store("lm-fish", on ? null : "off");
+  syncFish();
+});
+syncFish();
+
+// ── Theme ───────────────────────────────────────────────────────────────
+const themeBtn = document.querySelector("[data-theme-toggle]");
+
+function syncTheme() {
+  const dark = isDark();
+  if (themeBtn) {
+    themeBtn.textContent = dark ? "Day" : "Night";
+    themeBtn.setAttribute("aria-label", dark ? "Switch to day mode" : "Switch to night mode");
+  }
+  tanks?.setTheme();
+  document.dispatchEvent(new CustomEvent("lm:theme", { detail: { dark } }));
+}
+
+themeBtn?.addEventListener("click", () => {
+  const next = isDark() ? "light" : "dark";
+  // Back to following the system when the choice matches it.
+  if ((next === "dark") === systemDark.matches) {
+    delete root.dataset.theme;
+    store("lm-theme", null);
+  } else {
+    root.dataset.theme = next;
+    store("lm-theme", next);
+  }
+  syncTheme();
+});
+systemDark.addEventListener("change", () => {
+  if (!root.dataset.theme) syncTheme();
+});
+syncTheme();
+
+// ── Sections ────────────────────────────────────────────────────────────
+const wire = renderWire(document.querySelector("[data-wire]"), document.querySelector("[data-wire-meta]"));
+const posts = renderPosts(document.querySelector("[data-posts]"));
+const desk = renderIndicators(document.querySelector("[data-indicators]"));
+startSearch({ sources: [posts, desk, wire] });
