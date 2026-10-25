@@ -12,6 +12,8 @@ import { SHARK_NODES } from "./world.js";
 
 const ALPHA_LEVELS = 6;
 const FISH_ALPHAS = [0.28, 0.42, 0.58, 0.74, 0.9];
+/** Fish dashes lean with the fish's heading: sideways, rising right, vertical, rising left. */
+const FISH_GLYPHS = "-/|\\";
 
 // Dot colour classes: blue, green, red, pale; the last entry is the cyan wake.
 const DOT_RGB = [
@@ -323,6 +325,7 @@ export class AsciiRenderer {
 
   /** Cells holding a fish this frame (frame stamp); dots skip them. */
   fishStamp = new Uint32Array(0);
+  fishGlyph = new Uint8Array(0);
   frameId = 0;
   /** Fish cells bucketed by brightness, so each bucket is one fillStyle. */
   fishBuckets = FISH_ALPHAS.map(() => []);
@@ -409,6 +412,7 @@ export class AsciiRenderer {
       this.sharkKind = new Uint8Array(n);
       this.sharkShadow = new Uint8Array(n);
       this.fishStamp = new Uint32Array(n);
+      this.fishGlyph = new Uint8Array(n);
     }
 
     for (let i = 0; i < n; i++) {
@@ -863,6 +867,9 @@ export class AsciiRenderer {
         const i = this.cellIndex(f.x, f.y);
         if (i < 0 || fishStamp[i] === frame || sharkFlag[i]) continue;
         fishStamp[i] = frame;
+        // Screen y points down, so negate vy to get the visual angle; fold to [0, PI).
+        const ang = (Math.atan2(-f.vy, f.vx) + Math.PI) % Math.PI;
+        this.fishGlyph[i] = Math.round(ang / (Math.PI / 4)) % 4;
         const glint = clamp(Math.abs(f.turn) / 3.5, 0, 1);
         const v = 0.3 + (0.4 * (f.depth - 0.55)) / 0.45 + 0.3 * Math.max(glint, f.alarm);
         fishBuckets[clamp(Math.floor(v * FISH_ALPHAS.length), 0, FISH_ALPHAS.length - 1)].push(i);
@@ -877,7 +884,7 @@ export class AsciiRenderer {
       if (!bucket.length) continue;
       ctx.fillStyle = this.fishStyles[b];
       for (const i of bucket) {
-        ctx.fillText("-", (i % cols) * cw + cw / 2, ((i / cols) | 0) * ch + ch / 2 + 1);
+        ctx.fillText(FISH_GLYPHS[this.fishGlyph[i]], (i % cols) * cw + cw / 2, ((i / cols) | 0) * ch + ch / 2 + 1);
       }
     }
   }
