@@ -67,7 +67,8 @@ export function startOrbit(pre) {
         const light = Math.max(0, x * L[0] + y * L[1] + z * L[2]);
         const h = land(lon, lat);
         if (h > 0) {
-          const v = Math.min(1, 0.25 + light * 0.85);
+          // Ink on paper: shadowed land is dense, sunlit land is sparse.
+          const v = Math.min(1, 0.15 + (1 - light) * 0.85);
           grid[r][c] = LAND[Math.min(LAND.length - 1, Math.floor(v * (LAND.length - 1)) + 1)];
         } else {
           // Sea: a graticule every 30°, faint on the night side.

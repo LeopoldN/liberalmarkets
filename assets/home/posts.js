@@ -19,7 +19,7 @@ export async function renderPosts(list) {
 
         const date = document.createElement("span");
         date.className = "post__date";
-        date.textContent = story.dateISO ? formatDate(story.dateISO) : "Always on";
+        date.textContent = story.dateISO ? formatDate(story.dateISO) : "Interactive";
 
         const body = document.createElement("div");
         const h3 = document.createElement("h3");
