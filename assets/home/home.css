@@ -1,0 +1,315 @@
+/* Liberal Markets homepage. Salmon paper by day, ink by night, an aquarium in the margins. */
+
+:root {
+  --paper: #fff1e5;
+  --paper-2: #f2dfce;
+  --paper-3: #e9d3c0;
+  --ink: #33302e;
+  --ink-strong: #1a1817;
+  --muted: #66605c;
+  --faint: #8f8580;
+  --rule: #d9c8b9;
+  --rule-strong: #1a1817;
+  --accent: #990f3d;
+  --accent-2: #0d7680;
+  --up: #0a7a52;
+  --down: #c0392b;
+  --focus: #0f5499;
+  --bar-bg: rgba(255, 241, 229, 0.86);
+  --shadow: 0 24px 60px -24px rgba(51, 48, 46, 0.35);
+
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --content: 1120px;
+  --gutter: 24px;
+  --bar-h: 60px;
+  --tank-w: 0px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1013;
+    --paper-2: #151920;
+    --paper-3: #1d222a;
+    --ink: #e4ded6;
+    --ink-strong: #fbf7f2;
+    --muted: #a39c94;
+    --faint: #7b756f;
+    --rule: #262c34;
+    --rule-strong: #e4ded6;
+    --accent: #ff7096;
+    --accent-2: #5ce1e6;
+    --up: #3ddc97;
+    --down: #ff6b5e;
+    --focus: #5ce1e6;
+    --bar-bg: rgba(14, 16, 19, 0.82);
+    --shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #0e1013;
+  --paper-2: #151920;
+  --paper-3: #1d222a;
+  --ink: #e4ded6;
+  --ink-strong: #fbf7f2;
+  --muted: #a39c94;
+  --faint: #7b756f;
+  --rule: #262c34;
+  --rule-strong: #e4ded6;
+  --accent: #ff7096;
+  --accent-2: #5ce1e6;
+  --up: #3ddc97;
+  --down: #ff6b5e;
+  --focus: #5ce1e6;
+  --bar-bg: rgba(14, 16, 19, 0.82);
+  --shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
+  color-scheme: dark;
+}
+
+/* The tanks need room: they open up once the margins are wide enough. */
+@media (min-width: 1280px) {
+  :root:not([data-fish="off"]) {
+    --content: min(1120px, calc(100vw - 2 * 150px));
+    --tank-w: calc((100vw - var(--content)) / 2 - var(--gutter));
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--bar-h) + 16px);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background: var(--paper);
+  font: 400 16px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color .35s ease, color .35s ease;
+}
+
+body::before {
+  /* A hairline of accent across the very top, like a ticker tape. */
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  z-index: 60;
+  background: linear-gradient(90deg, var(--accent) 0 33%, var(--accent-2) 33% 66%, var(--ink-strong) 66%);
+}
+
+a { color: inherit; }
+
+img, svg { display: block; }
+
+button { font: inherit; color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip {
+  position: absolute;
+  left: 12px; top: -60px;
+  z-index: 100;
+  padding: 10px 14px;
+  background: var(--ink-strong);
+  color: var(--paper);
+  font: 600 13px var(--sans);
+  text-decoration: none;
+}
+.skip:focus { top: 12px; }
+
+kbd {
+  display: inline-grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border: 1px solid var(--rule);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font: 500 11px var(--mono);
+  color: var(--muted);
+}
+
+/* ── Top bar ─────────────────────────────────────────────────────────── */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--bar-h);
+  margin-top: 3px;
+  background: var(--bar-bg);
+  border-bottom: 1px solid var(--rule-strong);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  backdrop-filter: saturate(1.4) blur(14px);
+}
+
+.bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: min(100% - 2 * var(--gutter), max(var(--content), 1120px));
+  height: 100%;
+  margin: 0 auto;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex: none;
+}
+
+.brand__mark {
+  width: 26px;
+  height: 26px;
+}
+:root[data-theme="dark"] .brand__mark { filter: invert(1); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .brand__mark { filter: invert(1); }
+}
+
+.brand__name {
+  font: 600 21px/1 var(--serif);
+  letter-spacing: -0.01em;
+  color: var(--ink-strong);
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-right: auto;
+}
+
+.nav a {
+  position: relative;
+  padding: 8px 12px;
+  font: 600 13px var(--sans);
+  letter-spacing: .01em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 12px; right: 12px; bottom: 2px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s cubic-bezier(.2,.7,.2,1);
+}
+.nav a:hover::after, .nav a:focus-visible::after { transform: scaleX(1); }
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 36px;
+  min-width: 220px;
+  padding: 0 8px 0 12px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: 500 13px var(--sans);
+  cursor: pointer;
+  transition: border-color .2s, background-color .2s;
+}
+.search-trigger:hover { border-color: var(--ink); background: var(--paper-2); }
+.search-trigger svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.search-trigger__label { margin-right: auto; }
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color .2s, background-color .2s, color .2s;
+}
+.icon-btn:hover { border-color: var(--ink); background: var(--paper-2); }
+.icon-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+.i-sun { display: none !important; }
+:root[data-theme="dark"] .i-sun { display: block !important; }
+:root[data-theme="dark"] .i-moon { display: none !important; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .i-sun { display: block !important; }
+  :root:not([data-theme="light"]) .i-moon { display: none !important; }
+}
+
+.fish-btn[aria-pressed="true"] { color: var(--accent-2); border-color: currentColor; }
+/* No room for tanks below this width, so no toggle either. */
+@media (max-width: 1279px) { .fish-btn { display: none; } }
+
+/* ── Tanks ───────────────────────────────────────────────────────────── */
+
+.tank {
+  position: fixed;
+  top: calc(var(--bar-h) + 3px);
+  bottom: 0;
+  z-index: 1;
+  width: var(--tank-w);
+  display: none;
+}
+.tank--left { left: 0; border-right: 1px solid var(--rule); }
+.tank--right { right: 0; border-left: 1px solid var(--rule); }
+
+@media (min-width: 1280px) {
+  :root:not([data-fish="off"]) .tank { display: block; }
+}
+
+.tank__canvas {
+  width: 100%;
+  height: 100%;
+  font-family: var(--mono);
+  cursor: crosshair;
+}
+
+.tank__hud {
+  position: absolute;
+  left: 10px; right: 10px; bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font: 500 10px/1 var(--mono);
+  letter-spacing: .08em;
+  color: var(--faint);
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
