@@ -1,11 +1,11 @@
-// Page wiring for the homepage and the article archive: theme and aquarium toggles,
+// Page wiring for the homepage, the article archive and article pages: theme and aquarium toggles,
 // the news ticker, then whichever sections the page has fill themselves in.
 import { startTanks } from "./tanks.js";
 import { renderWire } from "./wire.js";
 import { renderIndicators } from "./desk.js";
 import { renderPosts } from "./posts.js";
 import { startSearch } from "./search.js";
-import { loadArticles, renderRecent, renderArchive, articleEntries } from "./articles.js";
+import { loadArticles, renderRecent, renderArchive, renderNext, articleEntries } from "./articles.js";
 
 const root = document.documentElement;
 const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -87,6 +87,7 @@ const desk = renderIndicators($("[data-indicators]"));
 const articles = loadArticles().then((list) => {
   renderRecent({ list: $("[data-recent]"), input: $("[data-recent-search]"), more: $("[data-recent-more]"), status: $("[data-recent-status]") }, list);
   renderArchive({ list: $("[data-archive]"), input: $("[data-archive-search]"), topics: $("[data-archive-topics]"), count: $("[data-archive-count]") }, list);
+  renderNext({ list: $("[data-next]"), section: $("[data-next-section]") }, list);
   return articleEntries(list);
 });
 startSearch({ sources: [articles, posts, desk, wire] });
