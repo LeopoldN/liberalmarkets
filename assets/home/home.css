@@ -1233,6 +1233,286 @@ a.card__tile:hover, a.card__tile:focus-visible { transform: translateY(-3px); }
 }
 .ledger tbody th small { font-family: var(--sans); font-size: 12px; font-weight: 400; }
 
+/* ── Elon Time (assets/home/claims.js) ───────────────────────────────── */
+
+/* The clock: one line per dated promise. A ring on the day he said it, a tick at the deadline,
+   then claret for every day past it. Promises that did arrive, late, settle to grey. */
+.clock { display: grid; gap: 18px; min-width: 0; }
+.clock__head {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.clock__title {
+  margin: 0;
+  font: 600 28px/1.1 var(--display);
+  font-variation-settings: "opsz" 48;
+  letter-spacing: -0.015em;
+}
+.clock__sub {
+  max-width: 38em;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.clock__tally {
+  max-width: 25em;
+  min-height: 2.7em;
+  margin: 6px 0 0;
+  font: 400 26px/1.35 var(--display);
+  font-variation-settings: "opsz" 36;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  text-wrap: pretty;
+}
+.clock__tally strong { font-weight: 600; color: var(--claret); }
+.clock__controls { display: flex; gap: 20px; }
+
+.clock__chart {
+  --lw: 216px;
+  --gap: 24px;
+  position: relative;
+  min-width: 0;
+  margin-top: 4px;
+}
+.clock__axis,
+.clock__row {
+  display: grid;
+  grid-template-columns: var(--lw) minmax(0, 1fr);
+  column-gap: var(--gap);
+}
+.clock__axis {
+  position: relative;
+  z-index: 2;
+  align-items: end;
+  height: 52px;
+  border-bottom: 1px solid var(--line);
+}
+.clock__axis-label,
+.clock__tick {
+  font: 400 11px/1 var(--mono);
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+.clock__axis-label { padding-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em; }
+.clock__scale { position: relative; height: 100%; }
+.clock__tick {
+  position: absolute;
+  bottom: 8px;
+  padding-left: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The date line's label doubles as its handle; the range input over the axis does the work. */
+.clock__tag {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding: 4px 7px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 500 11px/1 var(--mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.clock__tag::before { content: "‹ "; opacity: 0.55; }
+.clock__tag::after { content: " ›"; opacity: 0.55; }
+.clock__tag.is-start { transform: translateX(-12px); }
+.clock__tag.is-end { transform: translateX(calc(-100% + 12px)); }
+.clock__scrub {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}
+.clock__scale:has(.clock__scrub:focus-visible) .clock__tag { outline: 2px solid var(--claret); outline-offset: 2px; }
+
+.clock__rows { margin: 0; padding: 8px 0 0; list-style: none; }
+.clock__row { align-items: center; padding-block: 5px; transition: opacity .35s ease; }
+.clock__row.is-future { opacity: 0.3; }
+.clock__label { display: grid; gap: 2px; min-width: 0; text-decoration: none; }
+.clock__name { font: 500 14px/1.3 var(--sans); color: var(--ink); }
+a.clock__label:hover .clock__name { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.clock__meta {
+  font: 400 11px/1.35 var(--mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+}
+.clock__row.is-overdue .clock__meta { color: var(--claret); }
+
+.clock__track { position: relative; height: 26px; cursor: ew-resize; touch-action: pan-y; }
+.clock__wait {
+  position: absolute;
+  top: 50%;
+  height: 0;
+  border-top: 1px dashed var(--ink-3);
+}
+.clock__late {
+  position: absolute;
+  top: calc(50% - 3px);
+  height: 6px;
+  background: var(--claret);
+}
+.clock__row.is-done .clock__late { background: var(--hist); }
+.clock__said,
+.clock__done {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+}
+.clock__said { border: 1.5px solid var(--ink-2); background: var(--paper); }
+.clock__done { background: var(--ink-2); box-shadow: 0 0 0 2px var(--paper); }
+.clock__due {
+  position: absolute;
+  top: calc(50% - 8px);
+  height: 16px;
+  margin-left: -1px;
+  border-left: 2px solid var(--ink);
+}
+
+.clock__row--others { margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+.clock__mark {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  background: var(--claret);
+  transform: rotate(45deg);
+  transition: opacity .35s ease;
+}
+.clock__mark.is-figure { background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--claret); }
+.clock__mark::after { content: ""; position: absolute; inset: -7px; }
+.clock__mark.is-future { opacity: 0.15; }
+.clock__mark:hover { background: var(--ink); }
+
+.clock__layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--lw) + var(--gap));
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.clock__grid { position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--line); }
+.clock__cursor { position: absolute; top: 0; bottom: 0; margin-left: -0.5px; border-left: 1px solid var(--ink); }
+
+/* The file: every claim, what came of it, and the source. */
+.file { display: grid; min-width: 0; }
+.file__note {
+  margin: 14px 0 0;
+  font: 400 12px/1.5 var(--mono);
+  color: var(--claret);
+}
+.file__filters { display: grid; }
+.file__filters .filters:empty { display: none; }
+.file__list { margin: 22px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.file__list.is-empty::after {
+  content: "Nothing matches both filters.";
+  display: block;
+  padding-block: 28px;
+  font-size: 15px;
+  color: var(--ink-3);
+}
+
+.claim {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 8px 24px;
+  padding-block: 30px;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: calc(var(--bar-h) + var(--ticker-h) + 24px);
+}
+.claim:target { animation: claim-found 2.4s ease-out; }
+@keyframes claim-found {
+  from { background: color-mix(in srgb, var(--claret) 9%, transparent); box-shadow: 0 0 0 14px color-mix(in srgb, var(--claret) 9%, transparent); }
+  to { background: transparent; box-shadow: 0 0 0 14px transparent; }
+}
+.claim__when {
+  display: grid;
+  gap: 5px;
+  align-content: start;
+  padding-top: 2px;
+  font: 400 12px/1.3 var(--mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+}
+.claim__when time { color: var(--ink); }
+.claim__main { display: grid; gap: 10px; min-width: 0; max-width: 36em; }
+.claim__verdict {
+  margin: 0;
+  font: 400 12px/1.35 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+}
+.claim__verdict.is-bad { color: var(--claret); }
+.claim__verdict.is-late { color: var(--ink-2); }
+.claim__verdict.is-kept { color: var(--up); }
+.claim__quote {
+  margin: 0;
+  font: 500 24px/1.32 var(--display);
+  font-variation-settings: "opsz" 36;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+.claim__quote p { margin: 0; text-indent: -0.42em; }
+.claim__where { margin: 0; font-size: 13px; color: var(--ink-3); }
+.claim__outcome { margin: 4px 0 0; font-size: 16px; line-height: 1.55; color: var(--ink-2); text-wrap: pretty; }
+.claim__sources { margin: 0; font: 400 12px/1.5 var(--mono); color: var(--ink-3); }
+.claim__sources a { color: var(--ink-2); text-decoration-color: var(--line); }
+.claim__sources a:hover { color: var(--ink); text-decoration-color: currentColor; }
+
+/* Claimed against actual, to one scale: the claim is an outline, what happened is solid. */
+.compare { display: grid; gap: 8px; max-width: 32em; margin-top: 6px; }
+.compare__row {
+  display: grid;
+  grid-template-columns: 12em minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.compare__label { color: var(--ink-2); }
+.compare__track { height: 12px; }
+.compare__bar { display: block; height: 100%; }
+.is-claimed .compare__bar { box-shadow: inset 0 0 0 1.5px var(--ink-3); }
+.is-actual .compare__bar { background: var(--claret); }
+.compare__value {
+  min-width: 8ch;
+  font: 400 13px/1 var(--mono);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .clock__chart { --lw: 0px; --gap: 0px; }
+  .clock__axis,
+  .clock__row { grid-template-columns: minmax(0, 1fr); }
+  .clock__axis-label { display: none; }
+  .clock__tick.is-minor { display: none; }
+  .clock__row { padding-block: 8px 2px; }
+  .clock__tally { font-size: 21px; }
+  .claim { grid-template-columns: minmax(0, 1fr); padding-block: 24px; }
+  .claim__when { display: flex; gap: 12px; }
+  .claim__quote { font-size: 21px; }
+  .compare__row { grid-template-columns: minmax(0, 1fr) auto; row-gap: 4px; }
+  .compare__label { grid-column: 1 / -1; }
+}
+
 /* ── Narrow ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 760px) {

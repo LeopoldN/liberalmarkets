@@ -1,0 +1,146 @@
+<!doctype html>
+<!-- Elon Time. Keep the robots noindex line until the sample entries in data/elon-claims.json are replaced. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Elon Musk’s deadlines, claims and numbers, set against what actually happened.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff1e5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+  <title>Elon Time · Liberal Markets</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..500&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+  <script>
+    // Apply saved preferences before first paint so nothing flashes.
+    (function () {
+      var d = document.documentElement;
+      try {
+        var theme = localStorage.getItem("lm-theme");
+        if (theme === "light" || theme === "dark") d.dataset.theme = theme;
+        if (localStorage.getItem("lm-fish") === "off") d.dataset.fish = "off";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/home/home.css?v=20261026c">
+  <script type="module" src="assets/home/home.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="bar__inner">
+      <a class="wordmark" href="index.html">Liberal Markets</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="articles.html" aria-current="page">Articles</a>
+        <a href="trumptracker.html">Trump Tracker</a>
+        <a href="markets.html">Markets</a>
+        <a href="games.html">Games</a>
+      </nav>
+      <div class="controls">
+        <button class="control" type="button" data-search-open aria-haspopup="dialog">Search <kbd>/</kbd></button>
+        <button class="control" type="button" data-theme-toggle>Night</button>
+        <button class="control control--fish" type="button" data-fish-toggle aria-pressed="true">Fish</button>
+      </div>
+    </div>
+    <div class="ticker" role="region" aria-label="Latest headlines">
+      <span class="ticker__label">Latest</span>
+      <div class="ticker__viewport">
+        <div class="ticker__track" data-wire></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="tank tank--left" aria-hidden="true"><canvas></canvas></div>
+  <div class="tank tank--right" aria-hidden="true"><canvas></canvas></div>
+
+  <main id="main" class="page page--story">
+    <article class="story">
+      <header class="story__head">
+        <p class="story__kicker">
+          <a href="articles.html?topic=Tech">Tech</a>
+          <span>Elon Musk</span>
+        </p>
+        <h1 class="story__title">Elon time: a decade of promises, and how late they ran</h1>
+        <p class="story__dek">[Dek: two sentences that give the argument away. Readers who stop here should still know the point.]</p>
+        <p class="story__byline">
+          <span class="story__author">By Nicholas Leopold</span>
+          <time datetime="2026-10-26">26 October 2026</time>
+          <span>[N] min read</span>
+        </p>
+      </header>
+
+      <div class="story__body">
+        <p>[Opening paragraph. Why keep a list, and what counts as a claim here.]</p>
+        <p>[Second paragraph. “Elon time” is the gap between the date Musk gives and the date it happens, when it happens at all.]</p>
+      </div>
+    </article>
+
+    <!-- The clock and the file both fill from data/elon-claims.json via assets/home/claims.js. -->
+    <section class="clock" aria-labelledby="clock-title" data-claims>
+      <header class="clock__head">
+        <h2 class="clock__title" id="clock-title">The clock</h2>
+        <p class="clock__sub">Each line is one promise with a date on it, from the day he said it. Claret is time past the deadline. Grey is time past the deadline for things that did arrive late. Drag the date line to see how things stood on any day.</p>
+      </header>
+      <p class="clock__tally" aria-live="polite" data-clock-tally>Loading the record…</p>
+      <div class="clock__controls">
+        <button class="filter" type="button" data-clock-replay>Replay</button>
+        <button class="filter" type="button" data-clock-today>Today</button>
+      </div>
+      <div class="clock__chart" data-clock></div>
+    </section>
+
+    <section class="file" aria-labelledby="file-title" data-file-section>
+      <header class="block__head">
+        <h2 id="file-title">The file</h2>
+        <span data-file-count></span>
+      </header>
+      <p class="file__note" data-file-note hidden>Sample entries. These were written from memory to fill the layout and will be replaced by the real list before this goes out.</p>
+      <div class="file__filters">
+        <div class="filters" role="group" aria-label="Filter by kind" data-file-kinds></div>
+        <div class="filters" role="group" aria-label="Filter by company" data-file-companies></div>
+      </div>
+      <ol class="file__list" data-file></ol>
+    </section>
+
+    <div class="story">
+      <div class="story__body">
+        <hr>
+        <p>[Closing paragraph.]</p>
+      </div>
+      <p class="story__also">Also: <a href="asts-update-oct-26.html">ASTS Update</a>, on Starlink’s politics.</p>
+    </div>
+
+    <section class="block" aria-labelledby="next-title" data-next-section hidden>
+      <header class="block__head">
+        <h2 id="next-title">Read next</h2>
+        <a href="articles.html">All articles →</a>
+      </header>
+      <ol class="articles" data-next></ol>
+    </section>
+  </main>
+
+
+  <footer class="foot">
+    <div class="foot__inner">
+      <span class="wordmark wordmark--small">Liberal Markets</span>
+      <p>Headlines from CNBC. Economic data from FRED. The aquarium is adapted from <a href="https://github.com/stackedlol/ascii-sharks">ascii-sharks</a> (MIT).</p>
+    </div>
+  </footer>
+
+  <div class="search" data-search hidden>
+    <div class="search__scrim" data-search-close></div>
+    <div class="search__panel" role="dialog" aria-modal="true" aria-label="Search Liberal Markets">
+      <label class="search__field">
+        <span class="visually-hidden">Search</span>
+        <input id="site-search" type="search" placeholder="Search stories, tools, games, indicators" autocomplete="off" spellcheck="false" aria-controls="search-results" data-search-input>
+        <kbd>esc</kbd>
+      </label>
+      <ul class="search__results" id="search-results" role="listbox" data-search-results></ul>
+    </div>
+  </div>
+</body>
+</html>

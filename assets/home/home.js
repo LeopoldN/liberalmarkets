@@ -97,4 +97,9 @@ const charts = trackerRoot
   : $("figure[data-chart]")
     ? import("./chart.js?v=20261025b").then((m) => m.mountAll()).then(() => [])
     : Promise.resolve([]);
-startSearch({ sources: [articles, posts, desk, wire, charts.catch(() => [])] });
+// Elon Time draws its clock and file from data/elon-claims.json.
+const claimsRoot = $("[data-claims]");
+const claims = claimsRoot
+  ? import("./claims.js?v=20261026a").then((m) => m.startClaims(claimsRoot))
+  : Promise.resolve([]);
+startSearch({ sources: [articles, posts, desk, wire, charts.catch(() => []), claims.catch(() => [])] });
