@@ -347,7 +347,7 @@ function buildClock(root, record, today) {
     hoverRow = null;
   }
 
-  return { draw, scrub, t0, t1, plot, list, strip, setTopic, showTip, hideTip, tip };
+  return { draw, tally, scrub, t0, t1, plot, list, strip, setTopic, showTip, hideTip, tip };
 }
 
 function startClock(section, record) {
@@ -410,6 +410,7 @@ function startClock(section, record) {
     b.addEventListener("click", () => {
       for (const o of topicsEl.children) o.setAttribute("aria-pressed", String(o === b));
       clock.setTopic(s.id);
+      reserve();
       show(current, true);
     });
     return b;
@@ -468,7 +469,28 @@ function startClock(section, record) {
   replay.addEventListener("click", sweep);
   toToday.addEventListener("click", () => { stop(); show(today, true); });
 
+  // Hold the sentence at its tallest wording for this topic and width, so the replay never moves the page.
+  function reserve() {
+    const probe = tallyEl.cloneNode(false);
+    probe.removeAttribute("data-clock-tally");
+    probe.style.cssText = `position:absolute;visibility:hidden;left:0;top:0;min-height:0;width:${tallyEl.clientWidth}px`;
+    tallyEl.parentNode.append(probe);
+    let tallest = 0;
+    for (let t = clock.t0; t < today + 30 * DAY; t += 30 * DAY) {
+      probe.innerHTML = clock.tally(Math.min(t, today)).html;
+      tallest = Math.max(tallest, probe.getBoundingClientRect().height);
+    }
+    probe.remove();
+    tallyEl.style.minHeight = `${Math.ceil(tallest)}px`;
+  }
+  let resizeTimer = 0;
+  addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(reserve, 150);
+  });
+
   show(today);
+  reserve();
   sweep();
 }
 

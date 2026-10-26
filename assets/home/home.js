@@ -100,6 +100,6 @@ const charts = trackerRoot
 // Elon Time draws its clock and file from data/elon-claims.json.
 const claimsRoot = $("[data-claims]");
 const claims = claimsRoot
-  ? import("./claims.js?v=20261026b").then((m) => m.startClaims(claimsRoot))
+  ? import("./claims.js?v=20261026c").then((m) => m.startClaims(claimsRoot))
   : Promise.resolve([]);
 startSearch({ sources: [articles, posts, desk, wire, charts.catch(() => []), claims.catch(() => [])] });

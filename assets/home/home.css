@@ -1267,7 +1267,7 @@ a.card__tile:hover, a.card__tile:focus-visible { transform: translateY(-3px); }
   color: var(--ink-2);
 }
 .clock__tally {
-  max-width: 25em;
+  max-width: 28em;
   min-height: 2.7em;
   margin: 6px 0 0;
   font: 400 26px/1.35 var(--display);
@@ -1607,7 +1607,7 @@ a.card__tile:hover, a.card__tile:focus-visible { transform: translateY(-3px); }
   .clock__chart { --row: 6px; }
   .clock__tick.is-off5 { display: none; }
   .clock__tick.is-odd:not(.is-off5) { display: block; }
-  .clock__tally { font-size: 21px; }
+  .clock__tally { min-height: 5.4em; font-size: 21px; }
   .clock__controls { display: grid; gap: 14px; }
   .clock__controls .filters {
     flex-wrap: nowrap;
