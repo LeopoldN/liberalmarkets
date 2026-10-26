@@ -1411,7 +1411,9 @@ a.card__tile:hover, a.card__tile:focus-visible { transform: translateY(-3px); }
   background: var(--ink);
   color: var(--paper);
 }
-.clock__tip[hidden] { display: none; }
+.clock__tip[hidden],
+.chapter[hidden],
+.claim[hidden] { display: none; }
 .clock__tip-when,
 .clock__tip-verdict,
 .clock__tip-link {
