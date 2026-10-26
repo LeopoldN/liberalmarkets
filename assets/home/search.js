@@ -4,6 +4,7 @@ const PAGES = [
   { type: "Section", title: "Trump Tracker", sub: "Economic indicators dashboard", href: "trumptracker.html", keywords: "inflation jobs unemployment growth housing rates deficit trade" },
   { type: "Section", title: "Markets", sub: "Prices, records and yearly returns", href: "markets.html", keywords: "stocks indexes yields bonds currencies commodities crypto prices returns" },
   { type: "Section", title: "Games", sub: "Daily trade puzzles", href: "games.html", keywords: "puzzles daily trade" },
+  { type: "Section", title: "Fish Bowl", sub: "The aquarium, full screen", href: "fishbowl.html", keywords: "aquarium fish sharks ascii" },
 ];
 
 function gamesFromPage() {

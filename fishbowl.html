@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Liberal Markets aquarium, full screen: ASCII sharks hunting schools of fish. Click the water to make a splash.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff1e5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+  <title>Fish Bowl · Liberal Markets</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..500&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+  <script>
+    // Apply the saved day or night choice before first paint so nothing flashes.
+    (function () {
+      var d = document.documentElement;
+      try {
+        var theme = localStorage.getItem("lm-theme");
+        if (theme === "light" || theme === "dark") d.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/home/home.css">
+  <script type="module" src="assets/home/home.js"></script>
+  <style>
+    /* Page only: the bar on top, then the water fills the rest of the screen. */
+    html, body { height: 100%; }
+    body { display: flex; flex-direction: column; overflow: hidden; }
+    .bowl { position: relative; flex: 1; min-height: 0; }
+    .bowl canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; font-family: var(--mono); }
+    .bowl__note {
+      position: absolute;
+      left: max(var(--gutter), env(safe-area-inset-left, 0px));
+      bottom: max(14px, env(safe-area-inset-bottom, 0px));
+      margin: 0;
+      font: 400 11px/1.4 var(--mono);
+      color: var(--ink-3);
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="bar__inner">
+      <a class="wordmark" href="index.html">Liberal Markets</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="articles.html">Articles</a>
+        <a href="trumptracker.html">Trump Tracker</a>
+        <a href="markets.html">Markets</a>
+        <a href="games.html">Games</a>
+        <a href="fishbowl.html" aria-current="page">Fish Bowl</a>
+      </nav>
+      <div class="controls">
+        <button class="control" type="button" data-search-open aria-haspopup="dialog">Search <kbd>/</kbd></button>
+        <button class="control" type="button" data-theme-toggle>Night</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="bowl">
+    <h1 class="visually-hidden">Fish Bowl</h1>
+    <canvas aria-label="ASCII sharks hunting schools of fish" role="img"></canvas>
+    <p class="bowl__note">Click the water to make a splash. Adapted from <a href="https://github.com/stackedlol/ascii-sharks">ascii-sharks</a> (MIT).</p>
+  </main>
+
+  <div class="search" data-search hidden>
+    <div class="search__scrim" data-search-close></div>
+    <div class="search__panel" role="dialog" aria-modal="true" aria-label="Search Liberal Markets">
+      <label class="search__field">
+        <span class="visually-hidden">Search</span>
+        <input id="site-search" type="search" placeholder="Search stories, tools, games, indicators" autocomplete="off" spellcheck="false" aria-controls="search-results" data-search-input>
+        <kbd>esc</kbd>
+      </label>
+      <ul class="search__results" id="search-results" role="listbox" data-search-results></ul>
+    </div>
+  </div>
+
+  <script type="module">
+    // One wide ascii-sharks world filling the screen; home.js handles the bar and tells us when the theme flips.
+    import { OceanEngine } from "./assets/aquarium/engine.js";
+    import { THEMES } from "./assets/aquarium/renderer.js";
+
+    const KINDS = ["classic", "hammerhead", "tiger", "mako", "thresher", "zebra", "greathammer", "nurse"];
+    const root = document.documentElement;
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+    const isDark = () => (root.dataset.theme ? root.dataset.theme === "dark" : systemDark.matches);
+
+    function paletteFor(dark) {
+      const paper = getComputedStyle(root).getPropertyValue("--paper").trim();
+      const base = dark ? THEMES.dark : THEMES.light;
+      return paper ? { ...base, bg: paper } : base;
+    }
+
+    // Three different sharks on a wide screen, two on a phone; the fish count follows the area.
+    const pool = KINDS.slice();
+    const count = window.innerWidth < 760 ? 2 : 3;
+    const sizes = [1, 0.8, 0.66];
+    const sharks = sizes.slice(0, count).map((size) => ({
+      kind: pool.splice(Math.floor(Math.random() * pool.length), 1)[0],
+      size,
+    }));
+
+    const canvas = document.querySelector(".bowl canvas");
+    if (window.ResizeObserver && window.IntersectionObserver) {
+      const engine = new OceanEngine(canvas, { sharks, theme: paletteFor(isDark()) });
+      document.addEventListener("lm:theme", (e) => engine.setTheme(paletteFor(e.detail.dark)));
+    }
+  </script>
+</body>
+</html>
