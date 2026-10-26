@@ -2142,17 +2142,17 @@ dialog::backdrop {
 }
 
 html[data-theme="dark"] {
-  --ink: #f2f2ef;
-  --muted: #aaa9a4;
-  --faint: #343434;
-  --faint-2: #242424;
-  --white: #151515;
+  --ink: #efe9e2;
+  --muted: #b3aba3;
+  --faint: #353331;
+  --faint-2: #252321;
+  --white: #121110;
   --accent: #70aeca;
   color-scheme: dark;
 }
 
 html[data-theme="dark"] body {
-  background: #151515;
+  background: #121110;
 }
 
 html[data-theme="dark"] .skip-link,
@@ -2160,31 +2160,31 @@ html[data-theme="dark"] .submit-guess,
 html[data-theme="dark"] .completed-card button,
 html[data-theme="dark"] .primary-dialog-button,
 html[data-theme="dark"] .toast {
-  color: #151515;
-  background: #f2f2ef;
+  color: #121110;
+  background: #efe9e2;
 }
 
 html[data-theme="dark"] .submit-guess,
 html[data-theme="dark"] .completed-card button {
-  border-color: #f2f2ef;
+  border-color: #efe9e2;
 }
 
 html[data-theme="dark"] .submit-guess:hover,
 html[data-theme="dark"] .primary-dialog-button:hover {
-  background: #d8d8d4;
+  background: #ddd5cd;
 }
 
 html[data-theme="dark"] .site-header,
 html[data-theme="dark"] .site-footer {
-  border-color: #393939;
+  border-color: #3a3836;
 }
 
 html[data-theme="dark"] .game-switcher {
-  border-color: #303030;
+  border-color: #312f2d;
 }
 
 html[data-theme="dark"] .game-switcher-item {
-  color: #aaa9a4;
+  color: #b3aba3;
 }
 
 html[data-theme="dark"] .game-switcher-item:hover,
@@ -2195,31 +2195,31 @@ html[data-theme="dark"] .game-switcher-item.is-active {
 
 html[data-theme="dark"] .theme-toggle,
 html[data-theme="dark"] .unit-toggle {
-  border-color: #656565;
+  border-color: #666462;
 }
 
 html[data-theme="dark"] .theme-toggle,
 html[data-theme="dark"] .unit-toggle button {
-  color: #aaa9a4;
-  background: #1b1b1b;
+  color: #b3aba3;
+  background: #1c1a18;
 }
 
 html[data-theme="dark"] .unit-toggle button + button {
-  border-color: #656565;
+  border-color: #666462;
 }
 
 html[data-theme="dark"] .theme-toggle[aria-pressed="true"],
 html[data-theme="dark"] .unit-toggle button[aria-pressed="true"] {
-  color: #151515;
-  background: #f2f2ef;
+  color: #121110;
+  background: #efe9e2;
 }
 
 html[data-theme="dark"] .game-intro > p {
-  color: #d0d0cc;
+  color: #d6cfc8;
 }
 
 html[data-theme="dark"] .attempt-track span {
-  background: #3a3a3a;
+  background: #3b3937;
 }
 
 html[data-theme="dark"] .attempt-track span.used {
@@ -2234,35 +2234,35 @@ html[data-theme="dark"] .productle-word-bank,
 html[data-theme="dark"] .productle-category-button,
 html[data-theme="dark"] .calls,
 html[data-theme="dark"] .completed-card {
-  border-color: #494949;
+  border-color: #4a4846;
 }
 
 html[data-theme="dark"] .chart-path span {
-  color: #c4c4c0;
+  color: #c9c1b9;
 }
 
 html[data-theme="dark"] .chart-back,
 html[data-theme="dark"] .productle-category-button,
 html[data-theme="dark"] .tradeoff-country-button,
 html[data-theme="dark"] .stats-game-tabs button {
-  background: #1b1b1b;
+  background: #1c1a18;
 }
 
 html[data-theme="dark"] .chart-back:hover,
 html[data-theme="dark"] .dialog-close:hover {
-  background: #292929;
+  background: #2a2826;
 }
 
 html[data-theme="dark"] .treemap-wrap {
-  background: #242424;
+  background: #252321;
 }
 
 html[data-theme="dark"] .chart-loading {
-  background: #1c1c1c;
+  background: #1d1b19;
 }
 
 html[data-theme="dark"] .chart-loading span {
-  border-color: #515151;
+  border-color: #52504e;
   border-top-color: var(--ink);
 }
 
@@ -2275,11 +2275,11 @@ html[data-theme="dark"] .category-tab.is-active {
 }
 
 html[data-theme="dark"] .category-tabs {
-  background: #202020;
+  background: #211f1d;
 }
 
 html[data-theme="dark"] .chart-instruction {
-  border-color: #3a3a3a;
+  border-color: #3b3937;
 }
 
 html[data-theme="dark"] .trade-profile,
@@ -2287,17 +2287,17 @@ html[data-theme="dark"] .period-comparison,
 html[data-theme="dark"] .productle-clue,
 html[data-theme="dark"] .tradeoff-clue,
 html[data-theme="dark"] .dialog-card {
-  background: #1b1b1b;
+  background: #1c1a18;
 }
 
 html[data-theme="dark"] .gdp-clue {
-  color: #f2f2ef;
-  background: #0c0c0c;
+  color: #efe9e2;
+  background: #0b0a09;
 }
 
 html[data-theme="dark"] .gdp-clue > span,
 html[data-theme="dark"] .gdp-clue small {
-  color: #aaa9a4;
+  color: #b3aba3;
 }
 
 html[data-theme="dark"] .partner-list,
@@ -2314,13 +2314,13 @@ html[data-theme="dark"] .stats-game-row,
 html[data-theme="dark"] .stats-game-row > *,
 html[data-theme="dark"] .stats-game-tabs,
 html[data-theme="dark"] .distribution-track {
-  border-color: #414141;
+  border-color: #42403e;
 }
 
 html[data-theme="dark"] .partner-rank,
 html[data-theme="dark"] .period-category-rank,
 html[data-theme="dark"] .productle-country-rank {
-  color: #92928e;
+  color: #9a928a;
 }
 
 html[data-theme="dark"] .period-panel.is-then {
@@ -2328,44 +2328,44 @@ html[data-theme="dark"] .period-panel.is-then {
 }
 
 html[data-theme="dark"] .period-panel.is-now {
-  border-color: #494949;
-  background: #1b1b1b;
+  border-color: #4a4846;
+  background: #1c1a18;
 }
 
 html[data-theme="dark"] .productle-category-button.is-used,
 html[data-theme="dark"] .tradeoff-country-button.is-wrong,
 html[data-theme="dark"] .country-suggestion:hover,
 html[data-theme="dark"] .country-suggestion.is-active {
-  color: #92928e;
-  background: #2b2b2b;
+  color: #9a928a;
+  background: #2c2a28;
 }
 
 html[data-theme="dark"] .productle-category-button.is-used .productle-category-swatch {
-  background: #686868;
+  background: #696765;
 }
 
 html[data-theme="dark"] .tradeoff-countries::after {
-  border-color: #656565;
-  background: #1b1b1b;
+  border-color: #666462;
+  background: #1c1a18;
 }
 
 html[data-theme="dark"] .tradeoff-country-button {
-  border-color: #5a5a5a;
+  border-color: #5b5957;
 }
 
 html[data-theme="dark"] .country-combobox input,
 html[data-theme="dark"] .country-suggestions {
-  border-color: #626262;
-  background: #1b1b1b;
+  border-color: #63615f;
+  background: #1c1a18;
 }
 
 html[data-theme="dark"] .country-combobox input:focus {
-  border-color: #f2f2ef;
-  box-shadow: 0 0 0 1px #f2f2ef;
+  border-color: #efe9e2;
+  box-shadow: 0 0 0 1px #efe9e2;
 }
 
 html[data-theme="dark"] .country-combobox input::placeholder {
-  color: #92928e;
+  color: #9a928a;
 }
 
 html[data-theme="dark"] .country-suggestions {
@@ -2377,7 +2377,7 @@ html[data-theme="dark"] .form-message {
 }
 
 html[data-theme="dark"] .completed-card {
-  background: #222;
+  background: #23211f;
 }
 
 html[data-theme="dark"] dialog::backdrop {
@@ -2386,15 +2386,15 @@ html[data-theme="dark"] dialog::backdrop {
 
 html[data-theme="dark"] .stats-game-row.is-heading,
 html[data-theme="dark"] .distribution-track {
-  background: #292929;
+  background: #2a2826;
 }
 
 html[data-theme="dark"] .stats-game-grid {
-  border-color: #555;
+  border-color: #565452;
 }
 
 html[data-theme="dark"] .stats-game-tabs {
-  border-color: #5a5a5a;
+  border-color: #5b5957;
 }
 
 @media (max-width: 900px) {

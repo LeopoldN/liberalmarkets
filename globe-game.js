@@ -309,18 +309,9 @@
       .hexPolygonAltitude(0.003)
       .labelColor(() => dark() ? '#a6e4bf' : '#175cd3');
   }
-  function syncTheme() {
-    $('theme-toggle').textContent = dark() ? 'Dark' : 'Light';
-    $('theme-toggle').setAttribute('aria-pressed', String(dark()));
-    document.querySelector('meta[name="theme-color"]').content = dark() ? '#151515' : '#ffffff';
-    recolor();
-  }
-  $('theme-toggle').onclick = () => {
-    document.documentElement.dataset.theme = dark() ? 'light' : 'dark';
-    try { localStorage.setItem('trade-games:theme', document.documentElement.dataset.theme); } catch {}
-    syncTheme();
-  };
-  syncTheme();
+  // The site's Night toggle sets data-theme (assets/games/games.js); the globe follows it.
+  document.addEventListener('lm:theme', recolor);
+  recolor();
   $('open-help').onclick = () => $('help-dialog').showModal();
   $('close-help').onclick = $('start-exploring').onclick = () => $('help-dialog').close();
   function rotate(value) {

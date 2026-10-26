@@ -1,144 +1,265 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-fish="off">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Study a country’s trade basket and identify the mystery economy in six guesses.">
-  <meta name="theme-color" content="#151515">
+  <meta name="description" content="Seven daily puzzles about world trade: name countries from their exports and imports, match trading partners, and find the goods that connect economies.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff1e5">
   <script>
-    const gameIds = new Set(["exportle", "importle", "truddies", "then-now", "productle", "tradeoffs"]);
-    const requestedGame = new URLSearchParams(window.location.search).get("game");
-    document.documentElement.dataset.page = gameIds.has(requestedGame) ? "game" : "hub";
-    try {
-      if (localStorage.getItem("trade-games:theme") === "light") {
-        document.documentElement.dataset.theme = "light";
-        document.querySelector('meta[name="theme-color"]').content = "#ffffff";
-      }
-    } catch {
-      // Dark mode remains the first-visit default when storage is unavailable.
-    }
+    // Which view this URL shows, and the saved day or night choice, before first paint.
+    (function () {
+      var d = document.documentElement;
+      var gameIds = ["exportle", "importle", "truddies", "then-now", "productle", "tradeoffs"];
+      d.dataset.page = gameIds.indexOf(new URLSearchParams(location.search).get("game")) > -1 ? "game" : "hub";
+      var theme = null;
+      try { theme = localStorage.getItem("lm-theme"); } catch (e) {}
+      d.dataset.theme = theme === "light" || theme === "dark" ? theme : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    })();
   </script>
-  <title>Games — Liberal Markets</title>
+  <title>Games · Liberal Markets</title>
   <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,600;6..72,700&amp;display=swap">
-  <link rel="stylesheet" href="trade-game.css?v=12">
-  <script src="trade-game.js?v=14" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..500&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="assets/home/home.css?v=20261026b">
+  <link rel="stylesheet" href="trade-game.css?v=13">
+  <link rel="stylesheet" href="assets/games/games.css?v=20261026b">
+  <script src="assets/games/games.js?v=20261026b" defer></script>
+  <script type="module" src="assets/home/home.js?v=20261026b"></script>
+  <script src="trade-game.js?v=15" defer></script>
 </head>
 
 <body>
-  <a class="skip-link" href="#game">Skip to game</a>
+  <a class="skip skip-link" href="#game">Skip to game</a>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Liberal Markets home">
-        <span>Liberal Markets</span>
-      </a>
-      <a class="header-game" href="games.html">Games</a>
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="true">Dark</button>
-        <div class="unit-toggle" role="group" aria-label="Distance unit" data-game-only>
-          <button type="button" data-distance-unit="km" aria-pressed="true">KM</button>
-          <button type="button" data-distance-unit="mi" aria-pressed="false">MI</button>
-        </div>
-        <button class="header-stats" id="open-stats" type="button">Stats</button>
-        <button class="header-help" id="open-help" type="button" data-game-only>How to play</button>
+  <header class="bar">
+    <div class="bar__inner">
+      <a class="wordmark" href="index.html">Liberal Markets</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="articles.html">Articles</a>
+        <a href="trumptracker.html">Trump Tracker</a>
+        <a href="markets.html">Markets</a>
+        <a href="games.html" aria-current="page">Games</a>
+      </nav>
+      <div class="controls">
+        <button class="control" type="button" data-search-open aria-haspopup="dialog">Search <kbd>/</kbd></button>
+        <button class="control" type="button" data-theme-toggle>Night</button>
+      </div>
+    </div>
+    <div class="ticker" role="region" aria-label="Latest headlines">
+      <span class="ticker__label">Latest</span>
+      <div class="ticker__viewport">
+        <div class="ticker__track" data-wire></div>
       </div>
     </div>
   </header>
 
-  <main class="games-hub" id="games-hub">
-    <header class="games-hub-intro">
-      <p class="eyebrow">Liberal Markets Games</p>
-      <h1>A world of trade. A little play.</h1>
-      <p>Seven daily puzzles and an open-sea adventure about the goods, places, and relationships that connect the world.</p>
-      <span id="hub-puzzle-number">Today’s puzzles</span>
+  <main class="arcade" id="games-hub">
+    <header class="arcade-head">
+      <div class="arcade-head__text">
+        <h1 class="arcade-head__title">Seven puzzles about who trades what, and with whom</h1>
+        <p class="arcade-head__dek">Name a country from the goods it ships, match it to its trading partners, or find the product five economies have in common. Every puzzle is built from the customs records of world goods trade, and a new set arrives each day at midnight UTC.</p>
+      </div>
+      <div class="arcade-day" aria-labelledby="arcade-day-label">
+        <p class="arcade-day__label" id="arcade-day-label">Puzzle</p>
+        <p class="arcade-day__number" id="hub-puzzle-number">68</p>
+        <p class="arcade-day__date"><time data-games-date>Today</time></p>
+        <p class="arcade-day__next" data-games-next>New puzzles at midnight UTC</p>
+        <div class="played" aria-live="polite">
+          <ol class="played__boxes" data-tally aria-hidden="true">
+            <li data-tally-for="exportle"></li><li data-tally-for="importle"></li><li data-tally-for="truddies"></li><li data-tally-for="then-now"></li><li data-tally-for="productle"></li><li data-tally-for="tradeoffs"></li><li data-tally-for="trade-pairs"></li>
+          </ol>
+          <p class="played__text" data-tally-text>None played yet today</p>
+        </div>
+        <button class="control arcade-day__stats" id="open-stats" type="button" data-open-stats>Your stats</button>
+      </div>
     </header>
 
-    <section class="games-catalog" aria-label="Choose a trade game">
-      <a class="game-library-card game-icon-truddies" href="practice-econ.html?v=exports-only-20260926">
-        <span class="game-library-art"><img src="assets/fontawesome/globe.svg" alt=""></span>
-        <span class="game-library-copy">
-          <strong>Practice Econ</strong>
-          <span>Two facts. One country. Guess economies on the world map, as often as you like.</span>
-          <small>Play unlimited <b aria-hidden="true">→</b></small>
+    <section class="shelf" aria-label="Today’s puzzles">
+      <a class="play play--wide" href="games.html?game=exportle" data-game="exportle">
+        <span class="play__head"><span class="play__name">Exportle</span><span class="play__count">6 guesses</span></span>
+        <span class="play__art" aria-hidden="true">
+          <svg viewBox="0 0 400 240" role="presentation">
+            <rect x="0" y="0" width="226" height="240" fill="#2f5e7a"/>
+            <rect x="230" y="0" width="170" height="134" fill="#3d786d"/>
+            <rect x="230" y="138" width="98" height="102" fill="#a34b40"/>
+            <rect x="332" y="138" width="68" height="58" fill="#967037"/>
+            <rect x="332" y="200" width="68" height="40" fill="#627849"/>
+            <text class="art-label" x="14" y="26">Mineral fuels</text>
+            <text class="art-share" x="14" y="222">38.4%</text>
+            <text class="art-label" x="244" y="26">Precious stones</text>
+            <text class="art-share art-share--sm" x="244" y="118">21.9%</text>
+            <text class="art-share art-share--sm" x="244" y="224">9.1%</text>
+          </svg>
         </span>
-      </a>
-      <a class="game-library-card game-icon-truddies" href="trade-pairs.html">
-        <span class="game-library-art"><img src="assets/fontawesome/plane.svg" alt=""></span>
-        <span class="game-library-copy">
-          <strong>Trade Pairs</strong>
-          <span>Match eight countries into four trading pairs on the globe.</span>
-          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
-        </span>
-      </a>
-      <a class="game-library-card game-icon-exportle" href="games.html?game=exportle">
-        <span class="game-library-art"><img src="assets/fontawesome/globe.svg" alt=""></span>
-        <span class="game-library-copy">
-          <strong>Exportle</strong>
-          <span>Identify a country from the goods it sends out into the world.</span>
-          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
-        </span>
+        <span class="play__rule">A country’s exports, drawn as a map of what it sells. Name the country. Each wrong guess tells you how far away the answer is and in which direction.</span>
+        <span class="play__foot"><span class="play__status" data-status="exportle">Not played</span><span class="play__go" data-go="exportle">Play</span></span>
       </a>
 
-      <a class="game-library-card game-icon-importle" href="games.html?game=importle">
-        <span class="game-library-art"><img src="assets/fontawesome/globe.svg" alt=""></span>
-        <span class="game-library-copy">
-          <strong>Importle</strong>
-          <span>Identify a country from the goods it brings home.</span>
-          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+      <a class="play" href="games.html?game=importle" data-game="importle">
+        <span class="play__head"><span class="play__name">Importle</span><span class="play__count">6 guesses</span></span>
+        <span class="play__art" aria-hidden="true">
+          <svg viewBox="0 0 400 240" role="presentation">
+            <rect x="0" y="0" width="400" height="118" fill="#45698a"/>
+            <rect x="0" y="122" width="182" height="118" fill="#9b5c35"/>
+            <rect x="186" y="122" width="118" height="118" fill="#6b5880"/>
+            <rect x="308" y="122" width="92" height="56" fill="#4f7a4f"/>
+            <rect x="308" y="182" width="92" height="58" fill="#7b4b3a"/>
+            <text class="art-label" x="14" y="26">Machinery</text>
+            <text class="art-share" x="14" y="102">31.2%</text>
+            <text class="art-label" x="14" y="148">Vehicles</text>
+            <text class="art-share art-share--sm" x="14" y="224">14.6%</text>
+          </svg>
         </span>
+        <span class="play__rule">The same puzzle turned around. Find the country from the goods it buys.</span>
+        <span class="play__foot"><span class="play__status" data-status="importle">Not played</span><span class="play__go" data-go="importle">Play</span></span>
       </a>
 
-      <a class="game-library-card game-icon-truddies" href="games.html?game=truddies">
-        <span class="game-library-art"><img src="assets/fontawesome/handshake.svg" alt=""></span>
-        <span class="game-library-copy">
-          <strong>Truddies</strong>
-          <span>Use GDP and five leading trade partners to find the country.</span>
-          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+      <a class="play" href="games.html?game=truddies" data-game="truddies">
+        <span class="play__head"><span class="play__name">Truddies</span><span class="play__count">6 guesses</span></span>
+        <span class="play__art" aria-hidden="true">
+          <svg viewBox="0 0 400 240" role="presentation">
+            <text class="art-figure" x="0" y="52">$1.9tn</text>
+            <text class="art-caption" x="2" y="78">Nominal GDP</text>
+            <g class="art-ranks">
+              <text x="2" y="114">1</text><text x="2" y="144">2</text><text x="2" y="174">3</text><text x="2" y="204">4</text><text x="2" y="234">5</text>
+            </g>
+            <rect class="art-bar art-bar--lead" x="28" y="100" width="352" height="18"/>
+            <rect class="art-bar" x="28" y="130" width="238" height="18"/>
+            <rect class="art-bar" x="28" y="160" width="164" height="18"/>
+            <rect class="art-bar" x="28" y="190" width="120" height="18"/>
+            <rect class="art-bar" x="28" y="220" width="86" height="18"/>
+          </svg>
         </span>
+        <span class="play__rule">One economy’s size and its five biggest trading partners. Who is it?</span>
+        <span class="play__foot"><span class="play__status" data-status="truddies">Not played</span><span class="play__go" data-go="truddies">Play</span></span>
       </a>
 
-      <a class="game-library-card game-icon-then-now" href="games.html?game=then-now">
-        <span class="game-library-art"><img src="assets/fontawesome/industry.svg" alt=""></span>
-        <span class="game-library-copy">
-          <strong>Then&amp;Now</strong>
-          <span>Follow how one country’s export economy changed since 1995.</span>
-          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+      <a class="play" href="games.html?game=then-now" data-game="then-now">
+        <span class="play__head"><span class="play__name">Then &amp; Now</span><span class="play__count">6 guesses</span></span>
+        <span class="play__art" aria-hidden="true">
+          <svg viewBox="0 0 400 240" role="presentation">
+            <text class="art-year" x="0" y="64">1995</text>
+            <rect x="72" y="36" width="130" height="40" fill="#7b4b3a"/>
+            <rect x="204" y="36" width="80" height="40" fill="#865944"/>
+            <rect x="286" y="36" width="48" height="40" fill="#a66d2f"/>
+            <rect x="336" y="36" width="38" height="40" fill="#4f7a4f"/>
+            <rect x="376" y="36" width="24" height="40" fill="#6c6853"/>
+            <path class="art-link" d="M137 84 L 160 156 M244 84 L 340 156 M310 84 L 236 156"/>
+            <text class="art-year" x="0" y="192">2024</text>
+            <rect x="72" y="164" width="120" height="40" fill="#45698a"/>
+            <rect x="194" y="164" width="72" height="40" fill="#2f5e7a"/>
+            <rect x="268" y="164" width="50" height="40" fill="#7b4b3a"/>
+            <rect x="320" y="164" width="44" height="40" fill="#865944"/>
+            <rect x="366" y="164" width="34" height="40" fill="#6c6853"/>
+          </svg>
         </span>
+        <span class="play__rule">What a country sold the world in 1995 next to what it sells now. Spot how it changed.</span>
+        <span class="play__foot"><span class="play__status" data-status="then-now">Not played</span><span class="play__go" data-go="then-now">Play</span></span>
       </a>
 
-      <a class="game-library-card game-icon-productle" href="games.html?game=productle">
-        <span class="game-library-art"><img src="assets/fontawesome/box-open.svg" alt=""></span>
-        <span class="game-library-copy">
-          <strong>Productle</strong>
-          <span>Find the export category connecting five different countries.</span>
-          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+      <a class="play" href="games.html?game=productle" data-game="productle">
+        <span class="play__head"><span class="play__name">Productle</span><span class="play__count">5 guesses</span></span>
+        <span class="play__art" aria-hidden="true">
+          <svg viewBox="0 0 400 240" role="presentation">
+            <g class="art-ranks">
+              <text x="0" y="30">A</text><text x="0" y="78">B</text><text x="0" y="126">C</text><text x="0" y="174">D</text><text x="0" y="222">E</text>
+            </g>
+            <rect class="art-track" x="26" y="14" width="314" height="22"/>
+            <rect class="art-track" x="26" y="62" width="314" height="22"/>
+            <rect class="art-track" x="26" y="110" width="314" height="22"/>
+            <rect class="art-track" x="26" y="158" width="314" height="22"/>
+            <rect class="art-track" x="26" y="206" width="314" height="22"/>
+            <rect x="26" y="14" width="196" height="22" fill="#a34b40"/>
+            <rect x="26" y="62" width="141" height="22" fill="#a34b40"/>
+            <rect x="26" y="110" width="110" height="22" fill="#a34b40"/>
+            <rect x="26" y="158" width="79" height="22" fill="#a34b40"/>
+            <rect x="26" y="206" width="57" height="22" fill="#a34b40"/>
+            <g class="art-pct">
+              <text x="400" y="30">62%</text><text x="400" y="78">45%</text><text x="400" y="126">35%</text><text x="400" y="174">25%</text><text x="400" y="222">18%</text>
+            </g>
+          </svg>
         </span>
+        <span class="play__rule">Five countries lean on one kind of export. Name the category they share.</span>
+        <span class="play__foot"><span class="play__status" data-status="productle">Not played</span><span class="play__go" data-go="productle">Play</span></span>
       </a>
 
-      <a class="game-library-card game-icon-tradeoffs" href="games.html?game=tradeoffs">
-        <span class="game-library-art"><img src="assets/fontawesome/scale-unbalanced.svg" alt=""></span>
-        <span class="game-library-copy">
-          <strong>Tradeoffs</strong>
-          <span>Choose which matched country exported more of one category.</span>
-          <small>Play today’s puzzle <b aria-hidden="true">→</b></small>
+      <a class="play" href="games.html?game=tradeoffs" data-game="tradeoffs">
+        <span class="play__head"><span class="play__name">Tradeoffs</span><span class="play__count">1 pick</span></span>
+        <span class="play__art" aria-hidden="true">
+          <svg viewBox="0 0 400 240" role="presentation">
+            <path class="art-beam" d="M40 132 L 360 92"/>
+            <path class="art-fulcrum" d="M200 112 L 168 196 L 232 196 Z"/>
+            <path class="art-ground" d="M110 206 H 290"/>
+            <rect x="52" y="54" width="88" height="76" fill="#3d786d" transform="rotate(-7.1 96 130)"/>
+            <rect x="268" y="40" width="72" height="54" fill="#a66d2f" transform="rotate(-7.1 304 94)"/>
+            <text class="art-share art-share--ink" x="72" y="44">?</text>
+            <text class="art-share art-share--ink" x="290" y="28">?</text>
+          </svg>
         </span>
+        <span class="play__rule">Two closely matched countries and one category of goods. Pick the bigger exporter.</span>
+        <span class="play__foot"><span class="play__status" data-status="tradeoffs">Not played</span><span class="play__go" data-go="tradeoffs">Play</span></span>
+      </a>
+
+      <a class="play play--wide" href="trade-pairs.html" data-game="trade-pairs">
+        <span class="play__head"><span class="play__name">Trade Pairs</span><span class="play__count">4 mistakes allowed</span></span>
+        <span class="play__art" aria-hidden="true">
+          <svg viewBox="0 0 400 240" role="presentation">
+            <circle class="art-globe" cx="200" cy="120" r="116"/>
+            <ellipse class="art-globe art-globe--line" cx="200" cy="120" rx="58" ry="116"/>
+            <path class="art-globe art-globe--line" d="M84 120 H 316 M100 62 H 300 M100 178 H 300"/>
+            <path class="art-arc" stroke="#70ae79" d="M128 92 Q 170 40 236 70"/>
+            <path class="art-arc" stroke="#d0aa43" d="M150 168 Q 200 120 266 150"/>
+            <path class="art-arc" stroke="#6da0d7" d="M262 98 Q 300 120 290 186"/>
+            <path class="art-arc" stroke="#a77dd0" d="M110 130 Q 128 190 186 206"/>
+            <g class="art-dots">
+              <circle cx="128" cy="92" r="6"/><circle cx="236" cy="70" r="6"/>
+              <circle cx="150" cy="168" r="6"/><circle cx="266" cy="150" r="6"/>
+              <circle cx="262" cy="98" r="6"/><circle cx="290" cy="186" r="6"/>
+              <circle cx="110" cy="130" r="6"/><circle cx="186" cy="206" r="6"/>
+            </g>
+          </svg>
+        </span>
+        <span class="play__rule">Eight countries on a globe make four pairs: a country and its first, second, third or fourth biggest trading partner. Match all four before your fourth mistake.</span>
+        <span class="play__foot"><span class="play__status" data-status="trade-pairs">Not played</span><span class="play__go" data-go="trade-pairs">Play</span></span>
+      </a>
+      <a class="play play--practice" href="practice-econ.html?v=exports-only-20260926">
+        <span class="play__head"><span class="play__name">Practice Econ</span><span class="play__count">Unlimited</span></span>
+        <span class="play__art" aria-hidden="true">
+          <svg viewBox="0 0 360 180" role="presentation">
+            <path class="art-graticule" d="M0 30 H360 M0 60 H360 M0 90 H360 M0 120 H360 M0 150 H360 M30 0 V180 M60 0 V180 M90 0 V180 M120 0 V180 M150 0 V180 M180 0 V180 M210 0 V180 M240 0 V180 M270 0 V180 M300 0 V180 M330 0 V180"/>
+            <path class="art-graticule art-graticule--equator" d="M0 90 H360"/>
+            <circle class="art-pin" cx="226" cy="64" r="7"/>
+            <path class="art-pin-line" d="M226 64 V 0 M226 64 H 360"/>
+          </svg>
+        </span>
+        <span class="play__rule">Two facts about a country, and the whole world map to find it on. No daily limit, so play as many rounds as you like.</span>
+        <span class="play__foot"><span class="play__status play__status--plain">Not a daily puzzle</span><span class="play__go">Play</span></span>
       </a>
     </section>
+
   </main>
 
   <main class="game-shell" id="game">
-    <a class="all-games-link" href="games.html">← All Games</a>
+    <div class="game-strip">
+      <a class="game-strip__back" href="games.html">All games</a>
+      <div class="game-strip__controls">
+        <div class="unit-toggle" role="group" aria-label="Distance unit">
+          <button class="control" type="button" data-distance-unit="km" aria-pressed="true">km</button>
+          <button class="control" type="button" data-distance-unit="mi" aria-pressed="false">mi</button>
+        </div>
+        <button class="control" id="open-stats-game" type="button" data-open-stats>Stats</button>
+        <button class="control" id="open-help" type="button">How to play</button>
+      </div>
+    </div>
     <section class="game-intro" aria-labelledby="page-title">
       <h1 id="page-title">Exportle</h1>
       <p id="game-description">Guess the country from the goods it exports.</p>
-      <div class="daily-meta">
-        <span id="today-label">—</span>
-        <span aria-hidden="true">·</span>
+      <p class="daily-meta">
         <span id="puzzle-number">Puzzle #—</span>
-      </div>
+        <span id="today-label">—</span>
+      </p>
     </section>
 
     <section class="game-board" aria-labelledby="puzzle-heading">
@@ -297,21 +418,28 @@
         <button type="button" id="view-result">View result</button>
       </section>
     </section>
-    <a class="all-games-link all-games-link-bottom" href="games.html">← All Games</a>
+    <a class="all-games-link" href="games.html">All games</a>
   </main>
 
-  <footer class="site-footer" id="game-footer">
-    <span id="data-year">BACI · —</span>
-    <span id="data-source-copy">
-      Data: <a href="https://oec.world/en/resources/datasets" target="_blank" rel="noreferrer">CEPII BACI via OEC</a>
-      · CC BY 4.0
-    </span>
+  <footer class="foot">
+    <div class="foot__inner">
+      <span class="wordmark wordmark--small">Liberal Markets</span>
+      <p class="foot__game" id="game-footer"><span id="data-year">BACI · —</span> · <span id="data-source-copy">Data: <a href="https://oec.world/en/resources/datasets" target="_blank" rel="noreferrer">CEPII BACI via OEC</a> · CC BY 4.0</span></p>
+      <p class="foot__hub" id="hub-footer">Trade data from <a href="https://oec.world/en/resources/datasets" target="_blank" rel="noreferrer">CEPII BACI via OEC</a> (CC BY 4.0) and the <a href="https://data.worldbank.org" target="_blank" rel="noreferrer">World Bank</a>. Progress is saved in this browser only.</p>
+    </div>
   </footer>
 
-  <footer class="site-footer hub-footer" id="hub-footer">
-    <span>Seven daily trade puzzles</span>
-    <span>Built with CEPII BACI and World Bank data</span>
-  </footer>
+  <div class="search" data-search hidden>
+    <div class="search__scrim" data-search-close></div>
+    <div class="search__panel" role="dialog" aria-modal="true" aria-label="Search Liberal Markets">
+      <label class="search__field">
+        <span class="visually-hidden">Search</span>
+        <input id="site-search" type="search" placeholder="Search stories, tools, games, indicators" autocomplete="off" spellcheck="false" aria-controls="search-results" data-search-input>
+        <kbd>esc</kbd>
+      </label>
+      <ul class="search__results" id="search-results" role="listbox" data-search-results></ul>
+    </div>
+  </div>
 
   <dialog class="result-dialog" id="result-dialog">
     <div class="dialog-card">

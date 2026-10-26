@@ -1,0 +1,531 @@
+/*
+ * Layout: the hub is a puzzle page. The day's number stands beside the headline, then a ruled shelf
+ * of games, each shown by a small drawing of how it plays. Game pages keep their boards and take the
+ * site's bar, type and paper.
+ *
+ * Loaded after home.css and trade-game.css. The first block maps the game's own tokens onto the site's.
+ */
+:root {
+  --column: 760px;
+  --ink: #1b1918;
+  --muted: #5c544e;
+  --faint: #e9d8c9;
+  --faint-2: #f8e9dc;
+  --white: #fffaf5;
+  --sans: "Geist", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --rule-heavy: #1b1918;
+  --status-won: #0b6e4f;
+  --status-lost: #b42318;
+  --status-open: #990f3d;
+  --card: #fffaf5;
+  --card-edge: #e3cdb9;
+  --board: #f6e3d1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #efe9e2;
+    --muted: #b3aba3;
+    --faint: #36322f;
+    --faint-2: #201e1c;
+    --white: #121110;
+    --rule-heavy: #efe9e2;
+    --status-won: #5fd3a5;
+    --status-lost: #ff8a7a;
+    --status-open: #f08aa8;
+    --card: #1e1c1a;
+    --card-edge: #3a3532;
+    --board: #121110;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ink: #efe9e2;
+  --muted: #b3aba3;
+  --faint: #36322f;
+  --faint-2: #201e1c;
+  --white: #121110;
+  --rule-heavy: #efe9e2;
+  --status-won: #5fd3a5;
+  --status-lost: #ff8a7a;
+  --status-open: #f08aa8;
+  --card: #1e1c1a;
+  --card-edge: #3a3532;
+  --board: #121110;
+}
+
+html[data-page="hub"] { --column: 1120px; }
+
+:root[data-theme] body,
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Which view the URL asked for. */
+html[data-page="hub"] .game-shell,
+html[data-page="hub"] .foot__game,
+html[data-page="game"] .arcade,
+html[data-page="game"] .foot__hub { display: none; }
+
+.skip.skip-link {
+  position: absolute;
+  top: -80px;
+  transform: none;
+  padding: 10px 14px;
+  font: 500 14px var(--sans);
+}
+.skip.skip-link:focus { top: 16px; }
+
+/* ── Hub ─────────────────────────────────────────────────────────────── */
+
+.arcade {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2 * var(--gutter), var(--column));
+  margin: 0 auto;
+  padding-block: 64px 96px;
+  display: grid;
+  gap: 64px;
+}
+
+.arcade-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 56px;
+  align-items: end;
+}
+
+.arcade-head__text { display: grid; gap: 24px; }
+
+.arcade-head__title {
+  margin: 0;
+  max-width: 16ch;
+  font: 600 clamp(40px, 5.6vw, 70px)/1.02 var(--display);
+  font-variation-settings: "opsz" 60;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+
+.arcade-head__dek {
+  margin: 0;
+  max-width: 58ch;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+/* The day: its puzzle number, date, countdown and how far you've got. */
+.arcade-day {
+  display: grid;
+  gap: 6px;
+  padding-left: 32px;
+  border-left: 1px solid var(--line);
+}
+.arcade-day p { margin: 0; }
+.arcade-day__label {
+  font: 500 11px/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--claret);
+}
+.arcade-day__number {
+  font: 500 128px/0.86 var(--display);
+  font-variation-settings: "opsz" 60;
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: -0.04em;
+  margin-block: 6px 10px !important;
+}
+.arcade-day__date { font-size: 16px; font-weight: 500; }
+.arcade-day__next {
+  font: 400 12px/1.4 var(--mono);
+  color: var(--ink-3);
+}
+
+.played { display: grid; gap: 8px; margin-top: 18px; }
+.played__boxes {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.played__boxes li {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--line);
+}
+.played__boxes [data-kind="open"] { border-color: var(--status-open); background: linear-gradient(to top, var(--status-open) 50%, transparent 50%); }
+.played__boxes [data-kind="won"] { border-color: var(--tile-good); background: var(--tile-good); }
+.played__boxes [data-kind="lost"] { border-color: var(--tile-bad); background: var(--tile-bad); }
+.played__text { font-size: 14px; color: var(--ink-2); }
+
+.arcade-day__stats { justify-self: start; margin-top: 4px; }
+.arcade-day__stats::after { content: "→"; }
+
+/* The shelf: every game is a card with its name, a board showing how it plays, and a Play button.
+   Nothing else on the page is boxed, so the cards read as the things to pick. */
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.play {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas: "head" "art" "rule" "foot";
+  gap: 16px;
+  padding: 20px 20px 18px;
+  border: 1px solid var(--card-edge);
+  background: var(--card);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color .15s, transform .15s;
+}
+.play:hover { border-color: var(--ink); transform: translateY(-2px); }
+.play:focus-visible { outline-offset: 3px; }
+
+.play--wide {
+  grid-column: span 2;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "art head" "art rule" "art foot";
+  column-gap: 28px;
+}
+.play--practice {
+  grid-column: 1 / -1;
+  grid-template-columns: 220px minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "art head foot" "art rule foot";
+  align-items: center;
+  column-gap: 28px;
+  row-gap: 6px;
+}
+
+.play__head {
+  grid-area: head;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+.play__name {
+  font: 600 28px/1.08 var(--display);
+  font-variation-settings: "opsz" 36;
+  letter-spacing: -0.012em;
+}
+.play--wide .play__name { font-size: 36px; font-variation-settings: "opsz" 48; }
+.play__count {
+  font: 400 12px/1.4 var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.play__art {
+  grid-area: art;
+  display: block;
+  padding: 16px;
+  background: var(--board);
+  max-width: 100%;
+}
+.play__art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  overflow: visible;
+}
+.play--practice .play__art svg { aspect-ratio: 2 / 1; }
+.play--wide .play__art { display: flex; align-items: center; }
+.play--wide .play__art svg { flex: 1; }
+
+.play__rule {
+  grid-area: rule;
+  max-width: 46ch;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.play__foot {
+  grid-area: foot;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.play--practice .play__foot { flex-direction: column; align-items: flex-end; padding-top: 0; border-top: 0; }
+
+.play__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 400 12px/1.4 var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.play__status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 1px solid currentColor;
+}
+.play__status--plain::before { display: none; }
+.play__status[data-kind="won"] { color: var(--status-won); }
+.play__status[data-kind="lost"] { color: var(--status-lost); }
+.play__status[data-kind="open"] { color: var(--status-open); }
+.play__status[data-kind="won"]::before,
+.play__status[data-kind="lost"]::before { background: currentColor; }
+.play__status[data-kind="open"]::before { background: linear-gradient(to top, currentColor 50%, transparent 50%); }
+
+.play__go {
+  padding: 9px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 500 12px/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.play__go::after { content: " →"; }
+.play:hover .play__go { background: var(--claret); }
+
+/* Drawings. Tile colours are the games' own category colours, so they hold in both themes. */
+.art-label {
+  font: 500 12px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  fill: rgba(255, 255, 255, 0.86);
+}
+.art-share {
+  font: 600 34px var(--display);
+  fill: #fff;
+}
+.art-share--sm { font-size: 22px; }
+.art-share--ink { fill: var(--ink-3); font-size: 28px; }
+.art-figure {
+  font: 600 54px var(--display);
+  letter-spacing: -0.02em;
+  fill: var(--ink);
+}
+.art-caption,
+.art-ranks text,
+.art-pct text {
+  font: 400 13px var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  fill: var(--ink-3);
+}
+.art-pct text { text-anchor: end; fill: var(--ink-2); }
+.art-bar { fill: var(--ink-3); }
+.art-bar--lead { fill: var(--claret); }
+.art-year {
+  font: 600 26px var(--display);
+  fill: var(--ink);
+}
+.art-link {
+  fill: none;
+  stroke: var(--ink-3);
+  stroke-width: 1.2;
+  stroke-dasharray: 3 4;
+}
+.art-track { fill: var(--line); }
+.art-beam { stroke: var(--ink); stroke-width: 5; stroke-linecap: round; }
+.art-fulcrum { fill: var(--ink); }
+.art-ground { stroke: var(--ink-3); stroke-width: 2; }
+.art-globe { fill: none; stroke: var(--ink-3); stroke-width: 1.5; }
+.art-globe--line { stroke: var(--line); stroke-width: 1.2; }
+.art-arc { fill: none; stroke-width: 4; stroke-linecap: round; }
+.art-dots circle { fill: var(--ink); }
+.art-graticule { fill: none; stroke: var(--ink-3); stroke-opacity: 0.4; stroke-width: 1; }
+.art-graticule--equator { stroke: var(--ink-3); stroke-dasharray: 2 4; }
+.art-pin { fill: var(--claret); }
+.art-pin-line { fill: none; stroke: var(--claret); stroke-width: 1; stroke-dasharray: 2 3; }
+
+/* ── Game pages ──────────────────────────────────────────────────────── */
+
+html[data-page="game"] body { font-size: 16px; line-height: normal; }
+html[data-page="game"] .bar { position: relative; }
+
+.game-shell {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2 * var(--gutter), var(--column));
+  margin: 0 auto;
+  padding: 20px 0 80px;
+}
+
+.game-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.game-strip__back,
+.game-shell > .all-games-link {
+  font: 400 12px/1 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.game-strip__back::before,
+.game-shell > .all-games-link::before { content: "← "; }
+.game-strip__back:hover,
+.game-shell > .all-games-link:hover { color: var(--ink); text-decoration: underline; }
+.game-shell > .all-games-link { display: inline-block; margin: 40px 0 0; font-weight: 400; }
+
+.game-strip__controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.game-strip .control { font-size: 12px; }
+
+:root .game-strip .unit-toggle {
+  gap: 2px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+}
+:root .game-strip .unit-toggle button,
+:root .game-strip .unit-toggle button + button {
+  min-width: 0;
+  height: auto;
+  padding: 6px 4px;
+  border: 0;
+  background: none;
+  color: var(--ink-3);
+  font: 400 12px/1 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+:root .game-strip .unit-toggle button[aria-pressed="true"] {
+  color: var(--ink);
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+}
+
+.game-intro {
+  display: grid;
+  gap: 10px;
+  padding: 32px 0 30px;
+  text-align: left;
+}
+.game-intro h1 {
+  font: 600 clamp(44px, 7vw, 64px)/1 var(--serif);
+  font-variation-settings: "opsz" 60;
+  letter-spacing: -0.022em;
+}
+:root .game-intro > p {
+  margin: 0;
+  max-width: 52ch;
+  color: var(--ink-2);
+  font-size: 19px;
+  line-height: 1.5;
+}
+:root .game-intro > .daily-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px 16px;
+  margin-top: 4px;
+  font: 400 12px/1.4 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.daily-meta #puzzle-number { color: var(--claret); }
+
+.foot__game a,
+.foot__hub a { color: inherit; }
+
+/* ── Narrow ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 1040px) {
+  .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .play--wide:nth-last-child(2) {
+    grid-column: auto;
+    grid-template-columns: none;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "head" "art" "rule" "foot";
+  }
+  .play--wide:nth-last-child(2) .play__name { font-size: 28px; }
+}
+
+@media (max-width: 760px) {
+  .arcade { padding-block: 32px 72px; gap: 36px; }
+  .arcade-head { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .arcade-head__text { gap: 14px; }
+  .arcade-head__title { font-size: 34px; line-height: 1.06; }
+  .arcade-head__dek { font-size: 16px; }
+  .arcade-day {
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 20px;
+    align-items: end;
+    padding: 18px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .arcade-day__label { grid-column: 1 / -1; }
+  .arcade-day__number { grid-row: 2 / span 2; font-size: 64px; margin: 2px 0 0 !important; }
+  .arcade-day__date,
+  .arcade-day__next { grid-column: 2; }
+  .played,
+  .arcade-day__stats { grid-column: 1 / -1; }
+  .played { grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: 12px; margin-top: 12px; }
+  .played__boxes li { width: 16px; height: 16px; }
+  .played__text { font-size: 13px; }
+
+  .shelf { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .play,
+  .play--wide,
+  .play--wide:nth-last-child(2),
+  .play--practice {
+    grid-column: auto;
+    grid-template-columns: 104px minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "art head" "art rule" "foot foot";
+    align-items: start;
+    column-gap: 14px;
+    row-gap: 6px;
+    padding: 14px;
+  }
+  .play:hover { transform: none; }
+  .play__art { padding: 8px; }
+  .play__art text { display: none; }
+  .play__name,
+  .play--wide .play__name,
+  .play--wide:nth-last-child(2) .play__name { font-size: 22px; }
+  .play__count { font-size: 11px; }
+  .play__rule { font-size: 14.5px; }
+  .play__foot,
+  .play--practice .play__foot {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .play__status { font-size: 11px; }
+
+  .game-intro { padding: 26px 0 24px; }
+  :root .game-intro > p { font-size: 17px; }
+  .game-strip__controls { gap: 14px; }
+}
+
+@media (max-width: 380px) {
+  .play, .play--wide, .play--wide:nth-last-child(2), .play--practice { grid-template-columns: 80px minmax(0, 1fr); }
+}

@@ -66,7 +66,6 @@
   const EPOCH_UTC = Date.UTC(2026, 7, 20);
   const GAME_VERSION = GAME ? `${GAME.id}-v1` : "games-hub-v1";
   const STATS_KEY = `${GAME_VERSION}:stats`;
-  const THEME_KEY = "trade-games:theme";
   const UNIT_KEY = "trade-games:distance-unit";
   const LEGACY_UNIT_KEY = "export-signal:distance-unit";
   const OVERVIEW_TARGET_COVERAGE = 0.95;
@@ -136,7 +135,6 @@
   let puzzleNumber = 0;
   let dataMeta = null;
   let selectedSectionId = null;
-  let colorTheme = document.documentElement.dataset.theme === "light" ? "light" : "dark";
   let distanceUnit = "km";
   let suggestionMatches = [];
   let activeSuggestion = -1;
@@ -212,8 +210,7 @@
       secondaryActions: $("secondary-actions"),
       calls: $("calls"),
       openHelp: $("open-help"),
-      openStats: $("open-stats"),
-      themeToggle: $("theme-toggle"),
+      openStats: document.querySelectorAll("[data-open-stats]"),
       unitButtons: document.querySelectorAll("[data-distance-unit]"),
       gameLinks: document.querySelectorAll("[data-game-link]"),
       upcomingGames: document.querySelectorAll("[data-upcoming-game]"),
@@ -251,20 +248,9 @@
   }
 
   function renderHub() {
-    const today = new Intl.DateTimeFormat(undefined, {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-      timeZone: "UTC"
-    }).format(new Date());
-    document.title = "Games — Liberal Markets";
-    document.querySelector('meta[name="description"]')?.setAttribute(
-      "content",
-      "Play six daily games about countries, products, and the relationships that shape world trade."
-    );
     el.skipLink.href = "#games-hub";
     el.skipLink.textContent = "Skip to games";
-    el.hubPuzzleNumber.textContent = `${today} · Puzzle #${currentPuzzleNumber()}`;
+    el.hubPuzzleNumber.textContent = String(currentPuzzleNumber());
   }
 
   function directionWord() {
@@ -282,7 +268,7 @@
     const isTradeoff = GAME.view === "tradeoff";
     const usesTreemap = GAME.view === "treemap";
     const tradeWord = directionWord();
-    document.title = `${GAME.name} — Liberal Markets Games`;
+    document.title = `${GAME.name} · Liberal Markets Games`;
     let metaDescription = `Study an ${GAME.direction} basket and identify the mystery economy in six guesses.`;
     if (isProfile) metaDescription = "Study a country’s GDP and leading trade relationships, then identify it in six guesses.";
     if (isComparison) metaDescription = "Compare a country’s 1995 and 2024 export structures, then identify it in six guesses.";
@@ -428,36 +414,6 @@
     } catch {
       return "km";
     }
-  }
-
-  function loadTheme() {
-    try {
-      return localStorage.getItem(THEME_KEY) === "light" ? "light" : "dark";
-    } catch {
-      return "dark";
-    }
-  }
-
-  function renderThemeControl() {
-    const isDark = colorTheme === "dark";
-    document.documentElement.dataset.theme = colorTheme;
-    el.themeToggle.setAttribute("aria-pressed", String(isDark));
-    el.themeToggle.title = isDark ? "Switch to light mode" : "Switch to dark mode";
-    document.querySelector('meta[name="theme-color"]')?.setAttribute(
-      "content",
-      isDark ? "#151515" : "#ffffff"
-    );
-  }
-
-  function setTheme(theme) {
-    if (!["dark", "light"].includes(theme)) return;
-    colorTheme = theme;
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch {
-      // The first-visit dark default is used when storage is unavailable.
-    }
-    renderThemeControl();
   }
 
   function renderDistanceUnitControl() {
@@ -1683,10 +1639,7 @@
   }
 
   function bindGlobalEvents() {
-    el.themeToggle.addEventListener("click", () => {
-      setTheme(colorTheme === "dark" ? "light" : "dark");
-    });
-    el.openStats.addEventListener("click", openStats);
+    el.openStats.forEach((button) => button.addEventListener("click", openStats));
     el.statsGameTabs.addEventListener("click", (event) => {
       const tab = event.target.closest("[data-stats-game]");
       if (!tab) return;
@@ -1813,8 +1766,6 @@
 
   async function init() {
     cacheElements();
-    colorTheme = loadTheme();
-    renderThemeControl();
     if (IS_HUB) {
       renderHub();
       bindGlobalEvents();
