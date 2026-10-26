@@ -1235,8 +1235,9 @@ a.card__tile:hover, a.card__tile:focus-visible { transform: translateY(-3px); }
 
 /* ── Elon Time (assets/home/claims.js) ───────────────────────────────── */
 
-/* The clock: one line per dated promise. A ring on the day he said it, a tick at the deadline,
-   then claret for every day past it. Promises that did arrive, late, settle to grey. */
+/* The clock: one thin line per dated promise, oldest at the top. A dot on the day he said it, a
+   tick at the deadline, then claret for every day past it. Promises that arrived late settle to
+   grey; the few that came true end in green. */
 .clock { display: grid; gap: 18px; min-width: 0; }
 .clock__head {
   display: grid;
@@ -1268,42 +1269,33 @@ a.card__tile:hover, a.card__tile:focus-visible { transform: translateY(-3px); }
   text-wrap: pretty;
 }
 .clock__tally strong { font-weight: 600; color: var(--claret); }
-.clock__controls { display: flex; gap: 20px; }
+.clock__controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 28px;
+}
+.clock__controls .filters { padding-top: 0; gap: 6px 16px; }
+.clock__actions { display: flex; gap: 20px; }
 
-.clock__chart {
-  --lw: 216px;
-  --gap: 24px;
-  position: relative;
-  min-width: 0;
-  margin-top: 4px;
-}
-.clock__axis,
-.clock__row {
-  display: grid;
-  grid-template-columns: var(--lw) minmax(0, 1fr);
-  column-gap: var(--gap);
-}
+.clock__chart { --row: 7px; position: relative; min-width: 0; margin-top: 4px; }
 .clock__axis {
   position: relative;
-  z-index: 2;
-  align-items: end;
-  height: 52px;
+  z-index: 3;
+  height: 46px;
   border-bottom: 1px solid var(--line);
 }
-.clock__axis-label,
-.clock__tick {
-  font: 400 11px/1 var(--mono);
-  letter-spacing: 0.04em;
-  color: var(--ink-3);
-}
-.clock__axis-label { padding-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em; }
-.clock__scale { position: relative; height: 100%; }
 .clock__tick {
   position: absolute;
-  bottom: 8px;
-  padding-left: 5px;
+  bottom: 7px;
+  padding-left: 4px;
+  font: 400 11px/1 var(--mono);
   font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
 }
+.clock__tick.is-odd { display: none; }
+.clock__tick.is-edge { padding: 0 4px 0 0; transform: translateX(-100%); }
 
 /* The date line's label doubles as its handle; the range input over the axis does the work. */
 .clock__tag {
@@ -1332,94 +1324,147 @@ a.card__tile:hover, a.card__tile:focus-visible { transform: translateY(-3px); }
   opacity: 0;
   cursor: ew-resize;
 }
-.clock__scale:has(.clock__scrub:focus-visible) .clock__tag { outline: 2px solid var(--claret); outline-offset: 2px; }
+.clock__axis:has(.clock__scrub:focus-visible) .clock__tag { outline: 2px solid var(--claret); outline-offset: 2px; }
 
-.clock__rows { margin: 0; padding: 8px 0 0; list-style: none; }
-.clock__row { align-items: center; padding-block: 5px; transition: opacity .35s ease; }
-.clock__row.is-future { opacity: 0.3; }
-.clock__label { display: grid; gap: 2px; min-width: 0; text-decoration: none; }
-.clock__name { font: 500 14px/1.3 var(--sans); color: var(--ink); }
-a.clock__label:hover .clock__name { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-.clock__meta {
-  font: 400 11px/1.35 var(--mono);
-  font-variant-numeric: tabular-nums;
-  color: var(--ink-3);
-}
-.clock__row.is-overdue .clock__meta { color: var(--claret); }
+.clock__plot { position: relative; touch-action: pan-y; cursor: crosshair; }
+.clock__rows { margin: 0; padding: 10px 0; list-style: none; }
+.clock__row { position: relative; height: var(--row); transition: opacity .3s ease; }
+.clock__row.is-future { opacity: 0; }
+.clock__row.is-dim { opacity: 0.12; }
+.clock__row.is-hover { background: color-mix(in srgb, var(--ink) 9%, transparent); }
 
-.clock__track { position: relative; height: 26px; cursor: ew-resize; touch-action: pan-y; }
-.clock__wait {
-  position: absolute;
-  top: 50%;
-  height: 0;
-  border-top: 1px dashed var(--ink-3);
-}
-.clock__late {
-  position: absolute;
-  top: calc(50% - 3px);
-  height: 6px;
-  background: var(--claret);
-}
-.clock__row.is-done .clock__late { background: var(--hist); }
+.clock__wait,
+.clock__late { position: absolute; top: 50%; }
+.clock__wait { height: 1px; margin-top: -0.5px; background: color-mix(in srgb, var(--ink-3) 55%, transparent); }
+.clock__late { height: 3px; margin-top: -1.5px; background: var(--claret); }
+.clock__row[data-state="late"] .clock__late { background: var(--hist); }
 .clock__said,
 .clock__done {
   position: absolute;
   top: 50%;
   z-index: 1;
-  width: 10px;
-  height: 10px;
-  margin: -5px 0 0 -5px;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
   border-radius: 50%;
 }
-.clock__said { border: 1.5px solid var(--ink-2); background: var(--paper); }
-.clock__done { background: var(--ink-2); box-shadow: 0 0 0 2px var(--paper); }
+.clock__said { background: var(--ink-3); }
+.clock__done { background: var(--hist); }
+.clock__row[data-state="kept"] .clock__done { width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; background: var(--up); }
 .clock__due {
   position: absolute;
-  top: calc(50% - 8px);
-  height: 16px;
-  margin-left: -1px;
-  border-left: 2px solid var(--ink);
+  top: 0;
+  height: 100%;
+  margin-left: -0.75px;
+  border-left: 1.5px solid var(--ink);
 }
 
-.clock__row--others { margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+/* Untrue statements and claims with no deadline: a strip of marks by the day he made them. */
+.clock__strip {
+  position: relative;
+  height: 30px;
+  border-top: 1px solid var(--line);
+}
 .clock__mark {
   position: absolute;
   top: 50%;
-  width: 10px;
-  height: 10px;
-  margin: -5px 0 0 -5px;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
   background: var(--claret);
   transform: rotate(45deg);
-  transition: opacity .35s ease;
+  transition: opacity .3s ease;
 }
-.clock__mark.is-figure { background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--claret); }
-.clock__mark::after { content: ""; position: absolute; inset: -7px; }
-.clock__mark.is-future { opacity: 0.15; }
+.clock__mark:not(.is-untrue) { background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--ink-2); }
+.clock__mark::after { content: ""; position: absolute; inset: -5px; }
+.clock__mark.is-future { opacity: 0; }
+.clock__mark.is-dim { opacity: 0.12; }
 .clock__mark:hover { background: var(--ink); }
 
-.clock__layer {
+.clock__layer { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.clock__future {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: calc(var(--lw) + var(--gap));
   right: 0;
-  z-index: 1;
-  pointer-events: none;
+  background: repeating-linear-gradient(135deg, transparent 0 5px, color-mix(in srgb, var(--ink) 6%, transparent) 5px 6px);
 }
 .clock__grid { position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--line); }
 .clock__cursor { position: absolute; top: 0; bottom: 0; margin-left: -0.5px; border-left: 1px solid var(--ink); }
 
-/* The file: every claim, what came of it, and the source. */
-.file { display: grid; min-width: 0; }
-.file__note {
-  margin: 14px 0 0;
-  font: 400 12px/1.5 var(--mono);
-  color: var(--claret);
+.clock__tip {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  gap: 4px;
+  width: max-content;
+  max-width: min(320px, 100%);
+  padding: 9px 11px 10px;
+  background: var(--ink);
+  color: var(--paper);
 }
-.file__filters { display: grid; }
-.file__filters .filters:empty { display: none; }
-.file__list { margin: 22px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.file__list.is-empty::after {
+.clock__tip[hidden] { display: none; }
+.clock__tip-when,
+.clock__tip-verdict,
+.clock__tip-link {
+  font: 400 11px/1.35 var(--mono);
+  letter-spacing: 0.04em;
+}
+.clock__tip-when { color: color-mix(in srgb, var(--paper) 70%, transparent); }
+.clock__tip-claim { font: 500 14px/1.35 var(--sans); }
+.clock__tip-verdict { text-transform: uppercase; color: color-mix(in srgb, var(--paper) 82%, transparent); }
+.clock__tip-link { margin-top: 2px; color: var(--paper); }
+
+.clock__key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.clock__key li { display: inline-flex; align-items: center; gap: 7px; }
+.key { display: inline-block; flex: none; }
+.key--said { width: 5px; height: 5px; border-radius: 50%; background: var(--ink-3); }
+.key--due { width: 0; height: 12px; border-left: 1.5px solid var(--ink); }
+.key--late { width: 22px; height: 3px; background: var(--claret); }
+.key--arrived { width: 22px; height: 3px; background: var(--hist); }
+.key--kept { width: 7px; height: 7px; border-radius: 50%; background: var(--up); }
+.key--untrue,
+.key--undated { width: 8px; height: 8px; background: var(--claret); transform: rotate(45deg); }
+.key--undated { background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--ink-2); }
+.key--future {
+  width: 22px;
+  height: 12px;
+  background: repeating-linear-gradient(135deg, transparent 0 5px, color-mix(in srgb, var(--ink) 18%, transparent) 5px 6px);
+}
+
+/* The file: every claim in its chapter, what came of it, and where he said it. */
+.file { display: grid; min-width: 0; }
+.file__nav {
+  columns: 2;
+  column-gap: 40px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.file__nav li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 6px;
+  border-bottom: 1px solid var(--line);
+  break-inside: avoid;
+}
+.file__nav a { text-decoration: none; }
+.file__nav a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+.file__nav span { font: 400 12px/1.6 var(--mono); color: var(--ink-3); }
+.file__filters { display: grid; margin-top: 14px; }
+.file.is-empty .file__chapters::after {
   content: "Nothing matches both filters.";
   display: block;
   padding-block: 28px;
@@ -1427,33 +1472,83 @@ a.clock__label:hover .clock__name { text-decoration: underline; text-decoration-
   color: var(--ink-3);
 }
 
+.chapter { display: grid; margin-top: 56px; scroll-margin-top: calc(var(--bar-h) + var(--ticker-h) + 24px); }
+.chapter__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 6px 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.chapter__company {
+  grid-column: 1 / -1;
+  font: 400 12px/1 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--claret);
+}
+.chapter__title {
+  margin: 0;
+  font: 600 24px/1.15 var(--display);
+  font-variation-settings: "opsz" 40;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+.chapter__meta {
+  font: 400 12px/1 var(--mono);
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.chapter__intro {
+  max-width: 34em;
+  margin: 16px 0 4px;
+  font: 400 19px/1.55 var(--display);
+  font-variation-settings: "opsz" 20;
+  text-wrap: pretty;
+}
+.chapter__note {
+  max-width: 40em;
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+.chapter__intro a,
+.chapter__note a,
+.claim__outcome a { text-decoration-color: var(--claret); }
+.chapter__intro a:hover,
+.chapter__note a:hover,
+.claim__outcome a:hover { color: var(--claret); }
+.chapter__list { margin: 0; padding: 0; list-style: none; }
+
 .claim {
   display: grid;
-  grid-template-columns: 128px minmax(0, 1fr);
-  gap: 8px 24px;
-  padding-block: 30px;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 6px 24px;
+  padding-block: 22px;
   border-bottom: 1px solid var(--line);
   scroll-margin-top: calc(var(--bar-h) + var(--ticker-h) + 24px);
 }
 .claim:target { animation: claim-found 2.4s ease-out; }
 @keyframes claim-found {
-  from { background: color-mix(in srgb, var(--claret) 9%, transparent); box-shadow: 0 0 0 14px color-mix(in srgb, var(--claret) 9%, transparent); }
-  to { background: transparent; box-shadow: 0 0 0 14px transparent; }
+  from { background: color-mix(in srgb, var(--claret) 9%, transparent); box-shadow: 0 0 0 12px color-mix(in srgb, var(--claret) 9%, transparent); }
+  to { background: transparent; box-shadow: 0 0 0 12px transparent; }
 }
 .claim__when {
   display: grid;
-  gap: 5px;
+  gap: 4px;
   align-content: start;
-  padding-top: 2px;
+  padding-top: 1px;
   font: 400 12px/1.3 var(--mono);
   font-variant-numeric: tabular-nums;
   color: var(--ink-3);
 }
 .claim__when time { color: var(--ink); }
-.claim__main { display: grid; gap: 10px; min-width: 0; max-width: 36em; }
+.claim__main { display: grid; gap: 8px; min-width: 0; max-width: 36em; }
 .claim__verdict {
   margin: 0;
-  font: 400 12px/1.35 var(--mono);
+  font: 400 11px/1.4 var(--mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-variant-numeric: tabular-nums;
@@ -1462,55 +1557,63 @@ a.clock__label:hover .clock__name { text-decoration: underline; text-decoration-
 .claim__verdict.is-bad { color: var(--claret); }
 .claim__verdict.is-late { color: var(--ink-2); }
 .claim__verdict.is-kept { color: var(--up); }
-.claim__quote {
+.claim__text {
   margin: 0;
-  font: 500 24px/1.32 var(--display);
-  font-variation-settings: "opsz" 36;
-  letter-spacing: -0.01em;
+  font: 500 21px/1.32 var(--display);
+  font-variation-settings: "opsz" 32;
+  letter-spacing: -0.008em;
   text-wrap: pretty;
 }
-.claim__quote p { margin: 0; text-indent: -0.42em; }
-.claim__where { margin: 0; font-size: 13px; color: var(--ink-3); }
-.claim__outcome { margin: 4px 0 0; font-size: 16px; line-height: 1.55; color: var(--ink-2); text-wrap: pretty; }
+.claim__outcome { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-2); text-wrap: pretty; }
 .claim__sources { margin: 0; font: 400 12px/1.5 var(--mono); color: var(--ink-3); }
 .claim__sources a { color: var(--ink-2); text-decoration-color: var(--line); }
 .claim__sources a:hover { color: var(--ink); text-decoration-color: currentColor; }
 
-/* Claimed against actual, to one scale: the claim is an outline, what happened is solid. */
-.compare { display: grid; gap: 8px; max-width: 32em; margin-top: 6px; }
+/* Promised against actual, to one scale per measure: the promise an outline, the result solid. */
+.compare { display: grid; gap: 14px; max-width: 30em; margin-top: 6px; }
+.compare__metric { display: grid; gap: 4px; }
+.compare__name { font-size: 13px; font-weight: 500; }
 .compare__row {
   display: grid;
-  grid-template-columns: 12em minmax(0, 1fr) auto;
+  grid-template-columns: 5.5em minmax(0, 1fr) 7.5em;
   align-items: center;
-  gap: 12px;
-  font-size: 13px;
+  gap: 10px;
+  font-size: 12px;
 }
-.compare__label { color: var(--ink-2); }
-.compare__track { height: 12px; }
-.compare__bar { display: block; height: 100%; }
+.compare__label { color: var(--ink-3); }
+.compare__track { height: 10px; }
+.compare__bar { display: block; height: 100%; min-width: 1px; }
 .is-claimed .compare__bar { box-shadow: inset 0 0 0 1.5px var(--ink-3); }
 .is-actual .compare__bar { background: var(--claret); }
 .compare__value {
-  min-width: 8ch;
-  font: 400 13px/1 var(--mono);
+  font: 400 12px/1 var(--mono);
   font-variant-numeric: tabular-nums;
   text-align: right;
   color: var(--ink);
 }
+.compare__note { font-size: 12px; line-height: 1.45; color: var(--ink-3); }
 
 @media (max-width: 760px) {
-  .clock__chart { --lw: 0px; --gap: 0px; }
-  .clock__axis,
-  .clock__row { grid-template-columns: minmax(0, 1fr); }
-  .clock__axis-label { display: none; }
-  .clock__tick.is-minor { display: none; }
-  .clock__row { padding-block: 8px 2px; }
+  .clock__chart { --row: 6px; }
+  .clock__tick.is-off5 { display: none; }
+  .clock__tick.is-odd:not(.is-off5) { display: block; }
   .clock__tally { font-size: 21px; }
-  .claim { grid-template-columns: minmax(0, 1fr); padding-block: 24px; }
+  .clock__controls { display: grid; gap: 14px; }
+  .clock__controls .filters {
+    flex-wrap: nowrap;
+    margin-inline: calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .clock__controls .filter { flex: none; }
+  .file__nav { columns: 1; }
+  .chapter { margin-top: 44px; }
+  .chapter__intro { font-size: 17px; }
+  .claim { grid-template-columns: minmax(0, 1fr); padding-block: 20px; }
   .claim__when { display: flex; gap: 12px; }
-  .claim__quote { font-size: 21px; }
-  .compare__row { grid-template-columns: minmax(0, 1fr) auto; row-gap: 4px; }
-  .compare__label { grid-column: 1 / -1; }
+  .claim__text { font-size: 19px; }
+  .compare__row { grid-template-columns: 4.8em minmax(0, 1fr) 6.5em; }
 }
 
 /* ── Narrow ──────────────────────────────────────────────────────────── */

@@ -1,15 +1,13 @@
 <!doctype html>
-<!-- Elon Time. Keep the robots noindex line until the sample entries in data/elon-claims.json are replaced. -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <meta name="description" content="Elon Musk’s deadlines, claims and numbers, set against what actually happened.">
+  <meta name="description" content="A dated catalog of public claims Elon Musk made about Tesla and SpaceX that turned out wrong, from 2011 to October 2026.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#fff1e5" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
-  <title>Elon Time · Liberal Markets</title>
+  <title>Elon Musk’s missed promises · Liberal Markets</title>
   <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,35 +60,58 @@
       <header class="story__head">
         <p class="story__kicker">
           <a href="articles.html?topic=Tech">Tech</a>
-          <span>Elon Musk</span>
+          <span>Tesla and SpaceX</span>
         </p>
-        <h1 class="story__title">Elon time: a decade of promises, and how late they ran</h1>
-        <p class="story__dek">[Dek: two sentences that give the argument away. Readers who stop here should still know the point.]</p>
+        <h1 class="story__title">Elon Musk’s missed promises at Tesla and SpaceX</h1>
+        <p class="story__dek">Fifteen years of public claims that turned out wrong, from full self-driving “next year” to people on Mars. Most are missed forecasts rather than proven lies. Where a court or regulator ruled, the entry says so.</p>
         <p class="story__byline">
           <span class="story__author">By Nicholas Leopold</span>
           <time datetime="2026-10-26">26 October 2026</time>
-          <span>[N] min read</span>
+          <span>15 min read</span>
         </p>
       </header>
 
       <div class="story__body">
-        <p>[Opening paragraph. Why keep a list, and what counts as a claim here.]</p>
-        <p>[Second paragraph. “Elon time” is the gap between the date Musk gives and the date it happens, when it happens at all.]</p>
+        <p>This is a dated catalog of public claims Elon Musk made about Tesla and SpaceX that turned out wrong, from 2011 to October 2026. Each entry gives when he said it, what he said (paraphrased unless quoted), the deadline he set, and what actually happened.</p>
+
+        <p>The entries fall into a few kinds, marked on each one:</p>
+
+        <ul>
+          <li><strong>Missed</strong>: a forecast or deadline that passed without the thing happening.</li>
+          <li><strong>Late</strong>: the thing eventually happened, but years after the date he gave, or in a much smaller form.</li>
+          <li><strong>False</strong>: a statement of fact that was untrue when made, or later found misleading by a court or regulator. Entries marked <strong>Misleading</strong> describe a presentation that left out a key fact, as reported by major outlets. Entries marked <strong>Reversed</strong> show a stated commitment later abandoned.</li>
+          <li><strong>Pending</strong>: claims still open as of the date above, such as Mars in 2029 or Optimus volume.</li>
+        </ul>
+
+        <p>Most entries are missed forecasts, not proven lies. A US court dismissed one investor suit over the self-driving claims as corporate puffery, while California’s DMV found Tesla’s Autopilot marketing misleading. Where a court or regulator ruled, the entry says so. Musk himself has called his timelines optimistic, and himself “the boy who cried FSD.”</p>
       </div>
     </article>
 
     <!-- The clock and the file both fill from data/elon-claims.json via assets/home/claims.js. -->
     <section class="clock" aria-labelledby="clock-title" data-claims>
       <header class="clock__head">
-        <h2 class="clock__title" id="clock-title">The clock</h2>
-        <p class="clock__sub">Each line is one promise with a date on it, from the day he said it. Claret is time past the deadline. Grey is time past the deadline for things that did arrive late. Drag the date line to see how things stood on any day.</p>
+        <h2 class="clock__title" id="clock-title">Every deadline on one clock</h2>
+        <p class="clock__sub">One line for each promise that came with a date, oldest at the top. A line starts on the day he said it and reaches its deadline at the tick. Claret is time past the deadline. Drag the date line, or pick a topic, to see how things stood.</p>
       </header>
-      <p class="clock__tally" aria-live="polite" data-clock-tally>Loading the record…</p>
+      <p class="clock__tally" data-clock-tally>Loading the record…</p>
       <div class="clock__controls">
-        <button class="filter" type="button" data-clock-replay>Replay</button>
-        <button class="filter" type="button" data-clock-today>Today</button>
+        <div class="filters" role="group" aria-label="Topic" data-clock-topics></div>
+        <div class="clock__actions">
+          <button class="filter" type="button" data-clock-replay>Replay</button>
+          <button class="filter" type="button" data-clock-today>Today</button>
+        </div>
       </div>
       <div class="clock__chart" data-clock></div>
+      <ul class="clock__key" aria-label="Key">
+        <li><i class="key key--said"></i>Said</li>
+        <li><i class="key key--due"></i>Deadline</li>
+        <li><i class="key key--late"></i>Past the deadline</li>
+        <li><i class="key key--arrived"></i>Arrived late</li>
+        <li><i class="key key--kept"></i>Came true</li>
+        <li><i class="key key--untrue"></i>Untrue statement</li>
+        <li><i class="key key--undated"></i>Other claim with no deadline</li>
+        <li><i class="key key--future"></i>After today</li>
+      </ul>
     </section>
 
     <section class="file" aria-labelledby="file-title" data-file-section>
@@ -98,18 +119,27 @@
         <h2 id="file-title">The file</h2>
         <span data-file-count></span>
       </header>
-      <p class="file__note" data-file-note hidden>Sample entries. These were written from memory to fill the layout and will be replaced by the real list before this goes out.</p>
+      <ol class="file__nav" aria-label="Chapters" data-file-nav></ol>
       <div class="file__filters">
-        <div class="filters" role="group" aria-label="Filter by kind" data-file-kinds></div>
+        <div class="filters" role="group" aria-label="Filter by outcome" data-file-groups></div>
         <div class="filters" role="group" aria-label="Filter by company" data-file-companies></div>
       </div>
-      <ol class="file__list" data-file></ol>
+      <div class="file__chapters" data-file></div>
     </section>
 
     <div class="story">
       <div class="story__body">
-        <hr>
-        <p>[Closing paragraph.]</p>
+        <h2>Sources</h2>
+        <p>Each entry links its own source. These compilations were the most useful starting points:</p>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/List_of_predictions_for_autonomous_Tesla_vehicles_by_Elon_Musk">Wikipedia: List of predictions for autonomous Tesla vehicles by Elon Musk</a>, every self-driving forecast since 2013, each linked to the original interview or call</li>
+          <li><a href="https://www.flyingpenguin.com/technopuff-of-promises-broken-an-elon-musk-timeline/">flyingpenguin: Technopuff of Broken Promises</a>, FSD claims paired with regulatory and court records</li>
+          <li><a href="https://www.aol.com/news/factbox-elon-musks-unfulfilled-tesla-204116016.html">Reuters factbox via AOL: Musk’s unfulfilled Tesla promises</a></li>
+          <li><a href="https://electrek.co/?p=449253">Electrek: Musk’s 2025 missed predictions</a></li>
+          <li><a href="https://scienceblog.com/t-spacex-mars-deadlines-2016-2018-2022-2026-2028/">ScienceBlog: SpaceX Mars deadlines 2016–2028</a> and <a href="https://mceglowski.substack.com/p/musk-on-mars">Maciej Cegłowski: Musk on Mars</a></li>
+          <li><a href="https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/">Motley Fool: Tesla Q3 2026 earnings call transcript</a>, the latest company guidance used for “what happened”</li>
+        </ul>
+        <p>Gaps worth knowing: no sourced Musk forecast of Chinese unit sales was found, so the China entries cover FSD approval only. A few older dates (Falcon Heavy 2013, Model X 2014) rest on secondary reporting rather than the original remarks. On the clock, a deadline given as a year counts from the end of that year.</p>
       </div>
       <p class="story__also">Also: <a href="asts-update-oct-26.html">ASTS Update</a>, on Starlink’s politics.</p>
     </div>

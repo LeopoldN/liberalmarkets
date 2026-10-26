@@ -2,6 +2,17 @@
   "_note": "Newest first. Entries marked placeholder repeat the ASTS Update to fill the layout; delete them as real posts arrive.",
   "articles": [
     {
+      "id": "elon-time",
+      "title": "Elon Musk’s missed promises at Tesla and SpaceX",
+      "dek": "Fifteen years of public claims that turned out wrong, from full self-driving “next year” to people on Mars. Most are missed forecasts rather than proven lies. Where a court or regulator ruled, the entry says so.",
+      "topic": "Tech",
+      "author": "Nicholas Leopold",
+      "dateISO": "2026-10-26",
+      "minutes": 15,
+      "href": "elon-time.html",
+      "keywords": "Elon Musk Tesla SpaceX promises predictions full self-driving FSD robotaxi Cybertruck Roadster Semi Optimus Mars Starship Starlink"
+    },
+    {
       "id": "asts-update-oct-26",
       "title": "ASTS Update: why the stock fell, and why Starlink’s politics are its opening",
       "dek": "No news, bad news and rising rates have dragged a pre-revenue stock down with its peers. Until revenue arrives in 2027, the price will trade on macro. The case for buying weekly stands.",

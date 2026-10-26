@@ -5,6 +5,8 @@
     {
       "id": "self-driving",
       "title": "Full Self-Driving and autonomy",
+      "short": "Self-driving",
+      "phrase": "on self-driving",
       "company": "Tesla",
       "intro": "Musk has predicted full autonomy within roughly a year in almost every year since 2014; as of October 2026, Tesla still sells FSD to owners only as a supervised (Level 2) system, and Tesla’s Q3 2026 call moved unsupervised use in owners’ cars to Q2 2027, inside Robotaxi zones only ([Electrek](https://electrek.co/2026/10/21/tesla-unsupervised-fsd-q2-2027-robotaxi-fleet/)).",
       "notes": [
@@ -14,6 +16,8 @@
     {
       "id": "robotaxi",
       "title": "Robotaxi and Cybercab",
+      "short": "Robotaxi",
+      "phrase": "on robotaxis",
       "company": "Tesla",
       "intro": "Musk promised over a million robotaxis by 2020; Tesla’s first paid rides came in June 2025 with a safety monitor aboard, and in October 2026 the service runs in about seven US metros, with only part of each fleet driverless and the Bay Area fully supervised ([Charge Port tracker](https://thechargeport.com/robotaxi-tracker)).",
       "notes": []
@@ -21,6 +25,8 @@
     {
       "id": "production",
       "title": "Production and delivery guidance",
+      "short": "Production",
+      "phrase": "on production",
       "company": "Tesla",
       "intro": "Tesla’s big volume targets have mostly slipped: the 20-million-a-year goal for 2030 was dropped from company reports in 2024, deliveries fell in both 2024 and 2025 after growth was promised, and on the Q3 2026 call Musk’s target became about 5 million a year by around 2030 ([Not a Tesla App](https://www.notateslaapp.com/news/4867/tesla-q3-2026-earnings-call-recap-everything-you-need-to-know)).",
       "notes": []
@@ -28,6 +34,8 @@
     {
       "id": "products",
       "title": "Product launch promises",
+      "short": "Products",
+      "phrase": "on product launches",
       "company": "Tesla",
       "intro": "Almost every new Tesla product shipped years after Musk’s date, often at a higher price or lower spec: the Semi (promised for 2019) reached high-volume production in Q3 2026, the Roadster (promised for 2020) is now targeted for 2028, and the $25,000 car became trimmed versions of the Model 3 and Y starting near $39,000.",
       "notes": []
@@ -35,6 +43,8 @@
     {
       "id": "money",
       "title": "Financial and earnings claims",
+      "short": "Money",
+      "phrase": "on money and earnings",
       "company": "Tesla",
       "intro": "The best-documented false financial statement is the 2018 “funding secured” tweet, which a federal judge ruled false and reckless; other misses are profit forecasts and the claim that Teslas would rise in value.",
       "notes": [
@@ -44,6 +54,8 @@
     {
       "id": "abroad",
       "title": "China and international claims",
+      "short": "China & Europe",
+      "phrase": "on China and Europe",
       "company": "Tesla",
       "intro": "Musk’s misses abroad center on FSD approval: he has given at least four dates for full approval in China since 2024, and as of October 2026 regulators have still not granted it, while Tesla’s sales fell in China and BYD overtook Tesla globally in 2025.",
       "notes": [
@@ -53,6 +65,8 @@
     {
       "id": "optimus",
       "title": "Optimus robot",
+      "short": "Optimus",
+      "phrase": "on Optimus",
       "company": "Tesla",
       "intro": "Musk promised thousands of useful Optimus robots in Tesla factories in 2025 and sales to other companies in 2026; Tesla paused production in mid-2025 after building far fewer, only began “early production” in Q3 2026, and now says outside customers come around the end of 2027 ([Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/tesla-tsla-said-q3-earnings-000413028.html)).",
       "notes": [
@@ -62,6 +76,8 @@
     {
       "id": "batteries",
       "title": "Batteries, Dojo and other technology",
+      "short": "Batteries & Dojo",
+      "phrase": "on batteries and Dojo",
       "company": "Tesla",
       "intro": "Tesla’s in-house technology bets also ran behind Musk’s dates: the 4680 cell missed its 2022 volume target by a wide margin, and the Dojo supercomputer, pitched since 2019 as key to self-driving, was shut down in August 2025 weeks after Musk projected its next version at scale in 2026.",
       "notes": []
@@ -69,6 +85,8 @@
     {
       "id": "mars",
       "title": "Mars timelines",
+      "short": "Mars",
+      "phrase": "on Mars",
       "company": "SpaceX",
       "intro": "Musk has set a Mars date for nearly every two-year launch window since 2016, and none has been met: no SpaceX vehicle has gone to Mars, and in February 2026 he shifted SpaceX’s priority to a Moon city, saying Mars city-building would start in about 5 to 7 years ([Fox 9](https://www.fox9.com/news/musk-says-spacex-shifting-focus-self-growing-city-moon-before-mars-push)).",
       "notes": [
@@ -78,6 +96,8 @@
     {
       "id": "starship",
       "title": "Starship, lunar tourism and reuse",
+      "short": "Starship",
+      "phrase": "on Starship and reuse",
       "company": "SpaceX",
       "intro": "SpaceX’s real achievements (booster landings, routine reuse, booster catches) came with dates that mostly slipped; the two announced private Moon flights never flew, and Starship reached orbit years after Musk’s 2022 target.",
       "notes": []
@@ -85,6 +105,8 @@
     {
       "id": "starlink",
       "title": "Starlink and the IPO",
+      "short": "Starlink & IPO",
+      "phrase": "on Starlink and the IPO",
       "company": "SpaceX",
       "intro": "Starlink became a large business but far smaller and later than SpaceX’s investor projections, and SpaceX went public in June 2026 despite Musk’s 2013 position that it would not list until its Mars ship was flying regularly.",
       "notes": [
@@ -94,6 +116,8 @@
     {
       "id": "came-true",
       "title": "Forecasts that came true",
+      "short": "Came true",
+      "phrase": "that came true",
       "company": "Tesla",
       "intro": "Four forecasts on [Wikipedia’s list](https://en.wikipedia.org/wiki/List_of_predictions_for_autonomous_Tesla_vehicles_by_Elon_Musk) came true. They are kept apart from the misses above.",
       "notes": []
@@ -1922,7 +1946,7 @@
     }
   ],
   "_fields": {
-    "sections": "Chapters of the file, in order: id, title, company, intro (one paragraph), notes (paragraphs shown after the entries). Text may use [label](url) links.",
+    "sections": "Chapters of the file, in order: id, title, short (topic button), phrase (finishes “Musk had set N deadlines …” when the topic is picked), company, intro (one paragraph), notes (paragraphs shown after the entries). Text may use [label](url) links.",
     "id": "Unique slug; also the link anchor, e.g. elon-time.html#robotaxi-2019.",
     "section": "The id of the chapter this entry sits in.",
     "company": "Tesla or SpaceX. Each distinct value becomes a filter.",
