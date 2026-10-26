@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A dated catalog of public claims Elon Musk made about Tesla and SpaceX that turned out wrong, from 2011 to October 2026.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff1e5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+  <title>Elon Musk’s missed promises · Liberal Markets</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..500&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+  <script>
+    // Apply saved preferences before first paint so nothing flashes.
+    (function () {
+      var d = document.documentElement;
+      try {
+        var theme = localStorage.getItem("lm-theme");
+        if (theme === "light" || theme === "dark") d.dataset.theme = theme;
+        if (localStorage.getItem("lm-fish") === "off") d.dataset.fish = "off";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/home/home.css?v=20261026e">
+  <script type="module" src="assets/home/home.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="bar__inner">
+      <a class="wordmark" href="index.html">Liberal Markets</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="articles.html" aria-current="page">Articles</a>
+        <a href="trumptracker.html">Trump Tracker</a>
+        <a href="markets.html">Markets</a>
+        <a href="games.html">Games</a>
+        <a href="fishbowl.html" aria-label="Fish Bowl"><span class="nav__full">Fish Bowl</span><span class="nav__fish" aria-hidden="true">&gt;&lt;&gt;</span></a>
+      </nav>
+      <div class="controls">
+        <button class="control" type="button" data-search-open aria-haspopup="dialog">Search <kbd>/</kbd></button>
+        <button class="control" type="button" data-theme-toggle>Night</button>
+        <button class="control control--fish" type="button" data-fish-toggle aria-pressed="true">Fish</button>
+      </div>
+    </div>
+    <div class="ticker" role="region" aria-label="Latest headlines">
+      <span class="ticker__label">Latest</span>
+      <div class="ticker__viewport">
+        <div class="ticker__track" data-wire></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="tank tank--left" aria-hidden="true"><canvas></canvas></div>
+  <div class="tank tank--right" aria-hidden="true"><canvas></canvas></div>
+
+  <main id="main" class="page page--story">
+    <article class="story">
+      <header class="story__head">
+        <p class="story__kicker">
+          <a href="articles.html?topic=Tech">Tech</a>
+          <span>Tesla and SpaceX</span>
+        </p>
+        <h1 class="story__title">Elon Musk’s missed promises at Tesla and SpaceX</h1>
+        <p class="story__dek">Fifteen years of public claims that turned out wrong, from full self-driving “next year” to people on Mars.</p>
+        <p class="story__byline">
+          <span class="story__author">By Nicholas Leopold</span>
+          <time datetime="2026-10-26">26 October 2026</time>
+          <span>15 min read</span>
+        </p>
+      </header>
+
+      <div class="story__body">
+        <p>This is a dated catalog of public claims Elon Musk made about Tesla and SpaceX that turned out wrong, from 2011 to October 2026. Each entry gives when he said it, what he said (paraphrased unless quoted), the deadline he set, and what actually happened.</p>
+
+        <p>The entries fall into a few kinds, marked on each one:</p>
+
+        <ul>
+          <li><strong>Missed</strong>: a forecast or deadline that passed without the thing happening.</li>
+          <li><strong>Late</strong>: the thing eventually happened, but years after the date he gave, or in a much smaller form.</li>
+          <li><strong>False</strong>: a statement of fact that was untrue when made, or later found misleading by a court or regulator. Entries marked <strong>Misleading</strong> describe a presentation that left out a key fact, as reported by major outlets. Entries marked <strong>Reversed</strong> show a stated commitment later abandoned.</li>
+          <li><strong>Pending</strong>: claims still open as of the date above, such as Mars in 2029 or Optimus volume.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- The clock and the file both fill from data/elon-claims.json via assets/home/claims.js. -->
+    <section class="clock" aria-labelledby="clock-title" data-claims>
+      <header class="clock__head">
+        <h2 class="clock__title" id="clock-title">Every deadline on one clock</h2>
+        <p class="clock__sub">Drag the date line, or pick a topic, to see how things stood.</p>
+      </header>
+      <p class="clock__tally" data-clock-tally>Loading the record…</p>
+      <div class="clock__controls">
+        <div class="filters" role="group" aria-label="Topic" data-clock-topics></div>
+        <div class="clock__actions">
+          <button class="filter" type="button" data-clock-replay>Replay</button>
+          <button class="filter" type="button" data-clock-today>Today</button>
+        </div>
+      </div>
+      <div class="clock__chart" data-clock></div>
+      <ul class="clock__key" aria-label="Key">
+        <li><i class="key key--said"></i>Said</li>
+        <li><i class="key key--due"></i>Deadline</li>
+        <li><i class="key key--late"></i>Past the deadline</li>
+        <li><i class="key key--arrived"></i>Arrived late</li>
+        <li><i class="key key--kept"></i>Came true</li>
+        <li><i class="key key--untrue"></i>Untrue statement</li>
+        <li><i class="key key--undated"></i>Other claim with no deadline</li>
+        <li><i class="key key--future"></i>After today</li>
+      </ul>
+    </section>
+
+    <section class="file" aria-labelledby="file-title" data-file-section>
+      <header class="block__head">
+        <h2 id="file-title">The file</h2>
+        <span data-file-count></span>
+      </header>
+      <ol class="file__nav" aria-label="Chapters" data-file-nav></ol>
+      <div class="file__filters">
+        <div class="filters" role="group" aria-label="Filter by outcome" data-file-groups></div>
+        <div class="filters" role="group" aria-label="Filter by company" data-file-companies></div>
+      </div>
+      <div class="file__chapters" data-file></div>
+    </section>
+
+    <div class="story">
+      <div class="story__body">
+        <h2>Sources</h2>
+        <p>Each entry links its own source. These compilations were the most useful starting points:</p>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/List_of_predictions_for_autonomous_Tesla_vehicles_by_Elon_Musk">Wikipedia: List of predictions for autonomous Tesla vehicles by Elon Musk</a>, every self-driving forecast since 2013, each linked to the original interview or call</li>
+          <li><a href="https://www.flyingpenguin.com/technopuff-of-promises-broken-an-elon-musk-timeline/">flyingpenguin: Technopuff of Broken Promises</a>, FSD claims paired with regulatory and court records</li>
+          <li><a href="https://www.aol.com/news/factbox-elon-musks-unfulfilled-tesla-204116016.html">Reuters factbox via AOL: Musk’s unfulfilled Tesla promises</a></li>
+          <li><a href="https://electrek.co/?p=449253">Electrek: Musk’s 2025 missed predictions</a></li>
+          <li><a href="https://scienceblog.com/t-spacex-mars-deadlines-2016-2018-2022-2026-2028/">ScienceBlog: SpaceX Mars deadlines 2016–2028</a> and <a href="https://mceglowski.substack.com/p/musk-on-mars">Maciej Cegłowski: Musk on Mars</a></li>
+          <li><a href="https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/">Motley Fool: Tesla Q3 2026 earnings call transcript</a>, the latest company guidance used for “what happened”</li>
+        </ul>
+        <p>Gaps worth knowing: no sourced Musk forecast of Chinese unit sales was found, so the China entries cover FSD approval only. A few older dates (Falcon Heavy 2013, Model X 2014) rest on secondary reporting rather than the original remarks. On the clock, a deadline given as a year counts from the end of that year.</p>
+      </div>
+      <p class="story__also">Also: <a href="asts-update-oct-26.html">ASTS Update</a>, on Starlink’s politics.</p>
+    </div>
+
+    <section class="block" aria-labelledby="next-title" data-next-section hidden>
+      <header class="block__head">
+        <h2 id="next-title">Read next</h2>
+        <a href="articles.html">All articles →</a>
+      </header>
+      <ol class="articles" data-next></ol>
+    </section>
+  </main>
+
+
+  <footer class="foot">
+    <div class="foot__inner">
+      <span class="wordmark wordmark--small">Liberal Markets</span>
+      <p>Headlines from CNBC. Economic data from FRED. The aquarium is adapted from <a href="https://github.com/stackedlol/ascii-sharks">ascii-sharks</a> (MIT).</p>
+    </div>
+  </footer>
+
+  <div class="search" data-search hidden>
+    <div class="search__scrim" data-search-close></div>
+    <div class="search__panel" role="dialog" aria-modal="true" aria-label="Search Liberal Markets">
+      <label class="search__field">
+        <span class="visually-hidden">Search</span>
+        <input id="site-search" type="search" placeholder="Search stories, tools, games, indicators" autocomplete="off" spellcheck="false" aria-controls="search-results" data-search-input>
+        <kbd>esc</kbd>
+      </label>
+      <ul class="search__results" id="search-results" role="listbox" data-search-results></ul>
+    </div>
+  </div>
+</body>
+</html>

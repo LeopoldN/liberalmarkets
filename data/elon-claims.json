@@ -1,0 +1,1962 @@
+{
+  "_note": "Claims for elon-time.html, drawn by assets/home/claims.js. Field guide at the bottom.",
+  "asOf": "2026-10-26",
+  "sections": [
+    {
+      "id": "self-driving",
+      "title": "Full Self-Driving and autonomy",
+      "short": "Self-driving",
+      "phrase": "on self-driving",
+      "company": "Tesla",
+      "intro": "Musk has predicted full autonomy within roughly a year in almost every year since 2014; as of October 2026, Tesla still sells FSD to owners only as a supervised (Level 2) system, and Tesla’s Q3 2026 call moved unsupervised use in owners’ cars to Q2 2027, inside Robotaxi zones only ([Electrek](https://electrek.co/2026/10/21/tesla-unsupervised-fsd-q2-2027-robotaxi-fleet/)).",
+      "notes": [
+        "Entries through January 2026 follow [Wikipedia’s list](https://en.wikipedia.org/wiki/List_of_predictions_for_autonomous_Tesla_vehicles_by_Elon_Musk), with Wikipedia’s own references as each entry’s source. Robotaxi entries from that list (Apr 2019, Apr 2020, Jan 2025, Jul 2025, Sep 2025, Jan 2026) are in the next section. Entries from November 2025 on, and outcomes after January 2026, are newer than Wikipedia’s list."
+      ]
+    },
+    {
+      "id": "robotaxi",
+      "title": "Robotaxi and Cybercab",
+      "short": "Robotaxi",
+      "phrase": "on robotaxis",
+      "company": "Tesla",
+      "intro": "Musk promised over a million robotaxis by 2020; Tesla’s first paid rides came in June 2025 with a safety monitor aboard, and in October 2026 the service runs in about seven US metros, with only part of each fleet driverless and the Bay Area fully supervised ([Charge Port tracker](https://thechargeport.com/robotaxi-tracker)).",
+      "notes": []
+    },
+    {
+      "id": "production",
+      "title": "Production and delivery guidance",
+      "short": "Production",
+      "phrase": "on production",
+      "company": "Tesla",
+      "intro": "Tesla’s big volume targets have mostly slipped: the 20-million-a-year goal for 2030 was dropped from company reports in 2024, deliveries fell in both 2024 and 2025 after growth was promised, and on the Q3 2026 call Musk’s target became about 5 million a year by around 2030 ([Not a Tesla App](https://www.notateslaapp.com/news/4867/tesla-q3-2026-earnings-call-recap-everything-you-need-to-know)).",
+      "notes": []
+    },
+    {
+      "id": "products",
+      "title": "Product launch promises",
+      "short": "Products",
+      "phrase": "on product launches",
+      "company": "Tesla",
+      "intro": "Almost every new Tesla product shipped years after Musk’s date, often at a higher price or lower spec: the Semi (promised for 2019) reached high-volume production in Q3 2026, the Roadster (promised for 2020) is now targeted for 2028, and the $25,000 car became trimmed versions of the Model 3 and Y starting near $39,000.",
+      "notes": []
+    },
+    {
+      "id": "money",
+      "title": "Financial and earnings claims",
+      "short": "Money",
+      "phrase": "on money and earnings",
+      "company": "Tesla",
+      "intro": "The best-documented false financial statement is the 2018 “funding secured” tweet, which a federal judge ruled false and reckless; other misses are profit forecasts and the claim that Teslas would rise in value.",
+      "notes": [
+        "Forecasts here count only where Musk or Tesla named a specific result and date; broad valuation claims (for example that Tesla will be worth more than the next several companies combined) are left out because they cannot yet be checked."
+      ]
+    },
+    {
+      "id": "abroad",
+      "title": "China and international claims",
+      "short": "China & Europe",
+      "phrase": "on China and Europe",
+      "company": "Tesla",
+      "intro": "Musk’s misses abroad center on FSD approval: he has given at least four dates for full approval in China since 2024, and as of October 2026 regulators have still not granted it, while Tesla’s sales fell in China and BYD overtook Tesla globally in 2025.",
+      "notes": [
+        "On sales: Tesla’s vehicle sales in China fell more than 16% year on year in Q1 2026 ([Automotive World](https://www.automotiveworld.com/?p=465578)), and BYD sold about 2.26 million EVs in 2025 against Tesla’s 1.64 million ([AFP via Prothom Alo](https://en.prothomalo.com/corporate/global/a0jkkus55a)). These are results rather than Musk statements; no sourced Musk forecast of Chinese unit sales was found to test against them."
+      ]
+    },
+    {
+      "id": "optimus",
+      "title": "Optimus robot",
+      "short": "Optimus",
+      "phrase": "on Optimus",
+      "company": "Tesla",
+      "intro": "Musk promised thousands of useful Optimus robots in Tesla factories in 2025 and sales to other companies in 2026; Tesla paused production in mid-2025 after building far fewer, only began “early production” in Q3 2026, and now says outside customers come around the end of 2027 ([Yahoo Finance](https://finance.yahoo.com/markets/stocks/articles/tesla-tsla-said-q3-earnings-000413028.html)).",
+      "notes": [
+        "Broad claims such as Optimus making up 80% of Tesla’s value, or lifting Tesla to a $25 trillion market cap, are left out as not yet testable."
+      ]
+    },
+    {
+      "id": "batteries",
+      "title": "Batteries, Dojo and other technology",
+      "short": "Batteries & Dojo",
+      "phrase": "on batteries and Dojo",
+      "company": "Tesla",
+      "intro": "Tesla’s in-house technology bets also ran behind Musk’s dates: the 4680 cell missed its 2022 volume target by a wide margin, and the Dojo supercomputer, pitched since 2019 as key to self-driving, was shut down in August 2025 weeks after Musk projected its next version at scale in 2026.",
+      "notes": []
+    },
+    {
+      "id": "mars",
+      "title": "Mars timelines",
+      "short": "Mars",
+      "phrase": "on Mars",
+      "company": "SpaceX",
+      "intro": "Musk has set a Mars date for nearly every two-year launch window since 2016, and none has been met: no SpaceX vehicle has gone to Mars, and in February 2026 he shifted SpaceX’s priority to a Moon city, saying Mars city-building would start in about 5 to 7 years ([Fox 9](https://www.fox9.com/news/musk-says-spacex-shifting-focus-self-growing-city-moon-before-mars-push)).",
+      "notes": [
+        "The 2026 Mars window runs roughly November to December 2026, so these entries are marked from SpaceX’s own February 2026 change of plan rather than the window’s close."
+      ]
+    },
+    {
+      "id": "starship",
+      "title": "Starship, lunar tourism and reuse",
+      "short": "Starship",
+      "phrase": "on Starship and reuse",
+      "company": "SpaceX",
+      "intro": "SpaceX’s real achievements (booster landings, routine reuse, booster catches) came with dates that mostly slipped; the two announced private Moon flights never flew, and Starship reached orbit years after Musk’s 2022 target.",
+      "notes": []
+    },
+    {
+      "id": "starlink",
+      "title": "Starlink and the IPO",
+      "short": "Starlink & IPO",
+      "phrase": "on Starlink and the IPO",
+      "company": "SpaceX",
+      "intro": "Starlink became a large business but far smaller and later than SpaceX’s investor projections, and SpaceX went public in June 2026 despite Musk’s 2013 position that it would not list until its Mars ship was flying regularly.",
+      "notes": [
+        "The 2015 and 2017 figures were company projections shown to investors and reported by the Wall Street Journal, not public statements by Musk; they are included because Reuters described them as targets set by Musk."
+      ]
+    },
+    {
+      "id": "came-true",
+      "title": "Forecasts that came true",
+      "short": "Came true",
+      "phrase": "that came true",
+      "company": "Tesla",
+      "intro": "Four forecasts on [Wikipedia’s list](https://en.wikipedia.org/wiki/List_of_predictions_for_autonomous_Tesla_vehicles_by_Elon_Musk) came true. They are kept apart from the misses above.",
+      "notes": []
+    }
+  ],
+  "claims": [
+    {
+      "id": "self-driving-2013",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2013-09",
+      "claim": "90% of miles driven autonomously within three years",
+      "due": "2016",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/tesla-working-towards-90-autonomous-car-within-three-years"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2014",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2014-06",
+      "claim": "On-ramp to off-ramp on highways without touching the controls in under a year",
+      "due": "2015",
+      "delivered": null,
+      "outcome": "Autopilot (Oct 2015) handled highways but still needed the driver ([Ars Technica](https://arstechnica.com/cars/2015/10/driving-or-kind-of-not-driving-a-tesla-model-s-with-autopilot/))",
+      "sources": [
+        {
+          "label": "Electrek",
+          "url": "https://electrek.co/2014/06/04/teslas-2014-shareholder-meeting-video/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2014-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "partly",
+      "said": "2014-10",
+      "claim": "Next year’s Tesla “90% capable of autopilot,” at least on highways",
+      "due": "2015",
+      "delivered": "2015-10",
+      "outcome": "Autopilot shipped Oct 2015 for highways, still supervised; Wikipedia counts it as partly met",
+      "sources": [
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/2014/10/2/6894875/elon-musk-says-next-years-tesla-cars-will-be-able-to-self-drive-90-percent-of-the-time"
+        },
+        {
+          "label": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/musk-promises-90-autopilot-for-teslas-in-2015-doesnt-say-how"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2014-3",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2014-10",
+      "claim": "Get in the car, go to sleep, wake at your destination, within about 10 years",
+      "due": "2023",
+      "dueLabel": "~2023",
+      "delivered": null,
+      "outcome": "Not available to owners in 2026",
+      "sources": [
+        {
+          "label": "HuffPost UK (archived)",
+          "url": "https://web.archive.org/web/20240615102623/https://www.huffingtonpost.co.uk/entry/tesla-driverless-cars_n_5990136"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2015",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2015-10",
+      "claim": "A car capable of full autonomy in about three years",
+      "due": "2018",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Green Car Reports",
+          "url": "https://www.greencarreports.com/news/1100482_tesla-autopilot-the-10-most-important-things-you-need-to-know"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2015-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2015-12",
+      "claim": "Complete autonomy in about two years",
+      "due": "2017",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2015/12/21/elon-musk-interview/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2016",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2016-01",
+      "claim": "Summon your car from across the country within two years, charging itself on the way",
+      "due": "2018",
+      "delivered": null,
+      "outcome": "Never offered",
+      "sources": [
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/2016/1/10/10746020/elon-musk-tesla-autonomous-driving-predictions-summon"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2016-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2016-06",
+      "claim": "Self-driving is “basically a solved problem”; complete autonomy less than two years away",
+      "due": "2018",
+      "delivered": null,
+      "outcome": "Tesla told the California DMV in 2020 that FSD would remain Level 2 ([flyingpenguin](https://www.flyingpenguin.com/technopuff-of-promises-broken-an-elon-musk-timeline/))",
+      "sources": [
+        {
+          "label": "Time",
+          "url": "https://time.com/4354864/elon-musk-mars-driverless-cars-apple-tesla-spacex/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2016-3",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "false",
+      "said": "2016-10",
+      "claim": "All new Teslas have the hardware for full self-driving",
+      "due": null,
+      "delivered": null,
+      "outcome": "Hardware 2 and 2.5 were swapped for Hardware 3; Musk said in Jan 2025 Hardware 3 cars need upgrading and in Apr 2026 that it cannot do unsupervised FSD (~4M cars) ([TechCrunch 2025](https://techcrunch.com/2025/01/30/elon-musk-reveals-elon-musk-was-wrong-about-full-self-driving), [TechCrunch 2026](https://techcrunch.com/2026/04/22/elon-musk-admits-millions-of-tesla-owners-need-upgrades-for-true-full-self-driving/))",
+      "sources": [
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/sections/thetwo-way/2016/10/20/498753508/tesla-has-begun-making-all-its-new-cars-self-driving"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2016-4",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2016-10",
+      "claim": "Fully autonomous LA-to-New York demo drive, no touches, by end of 2017",
+      "due": "2017-12",
+      "dueLabel": "Dec 2017",
+      "delivered": null,
+      "outcome": "Never done; Tesla’s Autopilot software director later testified the 2016 promo video was staged ([CNN](https://www.cnn.com/2023/01/17/tech/tesla-self-driving-video-staged/index.html))",
+      "sources": [
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/2016/10/19/13341100/tesla-self-driving-autonomous-road-trip-la-nyc"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2016/10/19/musk-targeting-coast-to-coast-test-drive-of-fully-self-driving-tesla-by-late-2017/"
+        },
+        {
+          "label": "NBC News",
+          "url": "https://www.nbcnews.com/business/autos/driverless-tesla-will-travel-l-nyc-2017-says-musk-n670206"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2017",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2017-04",
+      "claim": "Parking lot in California to parking lot in New York, no controls touched, by Nov or Dec 2017",
+      "due": "2017-12",
+      "dueLabel": "Dec 2017",
+      "delivered": null,
+      "outcome": "Never done",
+      "sources": [
+        {
+          "label": "TED Blog",
+          "url": "https://blog.ted.com/what-will-the-future-look-like-elon-musk-speaks-at-ted2017/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2017-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2017-05",
+      "claim": "Drivers able to sleep at the wheel in about two years",
+      "due": "2019",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Autoevolution",
+          "url": "https://www.autoevolution.com/news/you-ll-be-able-to-sleep-in-your-tesla-on-the-move-two-years-from-now-musk-says-117367.html"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2018",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2018-02",
+      "claim": "Coast-to-coast drive in three months, six at most",
+      "due": "2018-08",
+      "dueLabel": "Aug 2018",
+      "delivered": null,
+      "outcome": "Never done",
+      "sources": [
+        {
+          "label": "Seeking Alpha transcript",
+          "url": "https://seekingalpha.com/article/4144365-tesla-tsla-q4-2017-results-earnings-call-transcript"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2018-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2018-03",
+      "claim": "Self-driving will cover all modes of driving by end of 2019",
+      "due": "2019-12",
+      "dueLabel": "Dec 2019",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Electrek",
+          "url": "https://electrek.co/2018/03/11/tesla-ceo-elon-musk-self-driving-next-year/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2018-3",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2018-11",
+      "claim": "Full self-driving “next year” as a generalized solution",
+      "due": "2019",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Recode Decode transcript (Vox)",
+          "url": "https://www.vox.com/2018/11/2/18053428/recode-decode-full-podcast-transcript-elon-musk-tesla-spacex-boring-company-kara-swisher"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2019",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019-02",
+      "claim": "“Feature complete” FSD this year, pickup to destination with no intervention: “I am certain of that”",
+      "due": "2019-12",
+      "dueLabel": "Dec 2019",
+      "delivered": null,
+      "outcome": "Did not happen; a 2021 DMV memo records a Tesla engineer saying Musk’s claims did not match engineering reality ([The Register](https://www.theregister.com/2021/05/07/tesla_engineer_autopilot/))",
+      "sources": [
+        {
+          "label": "CNBC",
+          "url": "https://www.cnbc.com/2019/02/19/elon-musk-tesla-will-have-all-its-self-driving-car-features-by-the-end-of-the-year.html"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2019-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2019-04",
+      "claim": "Cars with no steering wheel or pedals within two years",
+      "due": "2021",
+      "delivered": "2026-04",
+      "outcome": "Cybercab began slow production Apr 2026 ([CNET](https://www.cnet.com/roadshow/news/tesla-cybercab-begins-production/))",
+      "sources": [
+        {
+          "label": "NBC News",
+          "url": "https://www.nbcnews.com/business/autos/musk-claims-tesla-will-have-1-million-robotaxis-roads-next-n997416"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2020",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2020-07",
+      "claim": "Basic Level 5 functionality complete this year",
+      "due": "2020-12",
+      "dueLabel": "Dec 2020",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/article/us-tesla-autonomous/tesla-very-close-to-level-5-autonomous-driving-technology-musk-says-idUSKBN24A0HE"
+        },
+        {
+          "label": "BBC",
+          "url": "https://www.bbc.com/news/technology-53349313"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2021",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2021-01",
+      "claim": "“Highly confident” the car will drive itself more reliably than a human this year",
+      "due": "2021-12",
+      "dueLabel": "Dec 2021",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Motley Fool transcript",
+          "url": "https://www.fool.com/earnings/call-transcripts/2021/01/27/tesla-tsla-q4-2020-earnings-call-transcript/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2022",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2022-04",
+      "claim": "Cameras and neural nets on par with or better than humans “this year”",
+      "due": "2022-12",
+      "dueLabel": "Dec 2022",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2022/04/20/elon-musk-mass-produce-robotaxi-by-2024/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2023",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2023-05",
+      "claim": "Full autonomy “does look like” it happens this year",
+      "due": "2023-12",
+      "dueLabel": "Dec 2023",
+      "delivered": null,
+      "outcome": "Did not happen; Dec 2023 recall covered ~2M cars over Autosteer ([flyingpenguin](https://www.flyingpenguin.com/technopuff-of-promises-broken-an-elon-musk-timeline/))",
+      "sources": [
+        {
+          "label": "CNBC transcript",
+          "url": "https://www.cnbc.com/2023/05/16/cnbc-exclusive-cnbc-transcript-elon-musk-sits-down-with-cnbcs-david-faber-live-on-cnbc-tonight-.html"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2023-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2023-07",
+      "claim": "Level 4 or 5 later this year; better than human by year-end",
+      "due": "2023-12",
+      "dueLabel": "Dec 2023",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Electrek",
+          "url": "https://electrek.co/2023/07/06/elon-musk-tesla-level-4-or-5-self-driving-this-year/"
+        },
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/business/autos-transportation/teslas-elon-musk-optimistic-progress-self-driving-robots-2023-07-20/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2024",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2024-01",
+      "claim": "Other carmakers licensing FSD will become obvious this year",
+      "due": "2024-12",
+      "dueLabel": "Dec 2024",
+      "delivered": null,
+      "outcome": "No carmaker licensed FSD; in Nov 2025 Musk acknowledged none wanted to ([Electrek](https://electrek.co/2025/12/04/elon-musk-tesla-fsd-drivers-can-now-text-drive/))",
+      "sources": [
+        {
+          "label": "Motley Fool transcript",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/01/24/tesla-tsla-q4-2023-earnings-call-transcript/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2024-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2024-10",
+      "claim": "Unsupervised FSD in Texas and California in 2025",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": null,
+      "outcome": "Not available to owners",
+      "sources": [
+        {
+          "label": "CNET",
+          "url": "https://www.cnet.com/roadshow/videos/everything-announced-at-teslas-we-robot-event/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2025",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-01",
+      "claim": "Unsupervised FSD to owners in California and other US regions in 2025",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": null,
+      "outcome": "Not available to owners",
+      "sources": [
+        {
+          "label": "Tesla webcast",
+          "url": "https://www.youtube.com/watch?v=Gub5qCTutZo&t=967s"
+        },
+        {
+          "label": "The Driven",
+          "url": "https://thedriven.io/2025/01/30/tesla-admits-fleet-will-need-upgrade-for-fsd-future-as-it-holds-out-promise-of-lower-cost-ev/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2025-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-04",
+      "claim": "Sleep in your car and wake at your destination in many US cities by end of 2025",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": null,
+      "outcome": "Not available",
+      "sources": [
+        {
+          "label": "The Guardian",
+          "url": "https://www.theguardian.com/technology/2025/apr/22/tesla-sales-musk-white-house-exit"
+        },
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/business/autos-transportation/tesla-doubles-down-robotaxi-timeline-investors-enthused-skeptical-2025-04-24/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2025-3",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "pending",
+      "said": "2025-04",
+      "claim": "Millions of Teslas operating fully autonomously in the second half of 2026",
+      "due": "2026-12",
+      "dueLabel": "Dec 2026",
+      "delivered": null,
+      "outcome": "Unsupervised driving only in Robotaxi fleets in about seven metros; owner use moved to Q2 2027 ([Electrek](https://electrek.co/2026/10/21/tesla-unsupervised-fsd-q2-2027-robotaxi-fleet/))",
+      "sources": [
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/business/autos-transportation/tesla-doubles-down-robotaxi-timeline-investors-enthused-skeptical-2025-04-24/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2025-4",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-04",
+      "claim": "Unsupervised FSD “probably everywhere” in North America in 2026; most countries by end of 2026",
+      "due": "2026-12",
+      "dueLabel": "Dec 2026",
+      "delivered": null,
+      "outcome": "Moved to Q2 2027, geofenced only",
+      "sources": [
+        {
+          "label": "Business Insider",
+          "url": "https://businessinsider.nl/elon-musk-says-a-paid-robotaxi-service-launches-in-june-and-tesla-will-dip-a-toe-in-the-water-before-expanding-it"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2025-5",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-07",
+      "claim": "Unsupervised FSD for personal use in certain areas by end of 2025",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": null,
+      "outcome": "Not available; now Q2 2027",
+      "sources": [
+        {
+          "label": "Motley Fool transcript",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/23/tesla-tsla-q2-2025-earnings-call-transcript/"
+        },
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/2025/07/23/nx-s1-5477374/tesla-earnings-july-2025-elon-musk"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2025-6",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-07",
+      "claim": "Owners can add or remove their car from the Tesla fleet “confidently next year”",
+      "due": "2026",
+      "delivered": null,
+      "outcome": "Moved to Q2 2027 on the Q3 2026 call ([Electrek](https://electrek.co/2026/10/21/tesla-unsupervised-fsd-q2-2027-robotaxi-fleet/))",
+      "sources": [
+        {
+          "label": "Fortune",
+          "url": "https://fortune.com/2025/07/23/elon-musk-tesla-q2-earnings-adding-private-customer-vehicles-robotaxi-network-next-year/"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2025-7",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-11",
+      "claim": "Unsupervised FSD “a few months away”; FSD v14.3 would let you “pretty much fall asleep” and wake at your destination",
+      "due": "2026-03",
+      "dueLabel": "early 2026",
+      "delivered": null,
+      "outcome": "Not available to owners in Oct 2026",
+      "sources": [
+        {
+          "label": "Electrek",
+          "url": "https://electrek.co/2025/11/06/elon-musk-tesla-fsd-allow-texting-and-driving-month-two/"
+        },
+        {
+          "label": "Not a Tesla App",
+          "url": "https://www.notateslaapp.com/news/3315/tesla-will-soon-allow-users-to-text-and-drive-with-fsd"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2026",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2026-04",
+      "claim": "Consumer unsupervised FSD possible as early as Q4 2026; unsupervised operations in 10+ states by year-end",
+      "due": "2026-12",
+      "dueLabel": "Dec 2026",
+      "delivered": null,
+      "outcome": "Q3 2026 call moved consumer use to Q2 2027",
+      "sources": [
+        {
+          "label": "Dolphin Research via Longport",
+          "url": "https://longportapp.cn/topics/42871071"
+        }
+      ]
+    },
+    {
+      "id": "self-driving-2026-2",
+      "section": "self-driving",
+      "company": "Tesla",
+      "status": "pending",
+      "said": "2026-07",
+      "claim": "Unsupervised FSD operating in “a dozen or so states” by end of 2026",
+      "due": "2026-12",
+      "dueLabel": "Dec 2026",
+      "delivered": null,
+      "outcome": "In Oct 2026, unsupervised rides only in Texas and Florida",
+      "sources": [
+        {
+          "label": "AFP via The Daily Star",
+          "url": "https://www.thedailystar.net/business/global-economy/news/tesla-reports-higher-profits-4159086"
+        }
+      ]
+    },
+    {
+      "id": "came-true-2022",
+      "section": "came-true",
+      "company": "Tesla",
+      "status": "kept",
+      "said": "2022-08",
+      "claim": "Self-driving in wide release in the US by end of 2022",
+      "delivered": "2022-11",
+      "outcome": "FSD Beta (supervised) opened to all North American buyers in Nov 2022 ([CleanTechnica](https://cleantechnica.com/2022/11/28/tesla-full-self-driving-beta-goes-out-for-wide-release-in-north-america/))",
+      "sources": [
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/business/energy/elon-musk-says-world-still-needs-oil-gas-2022-08-29/"
+        }
+      ],
+      "due": "2022"
+    },
+    {
+      "id": "came-true-2025",
+      "section": "came-true",
+      "company": "Tesla",
+      "status": "kept",
+      "said": "2025-06",
+      "claim": "Robotaxi launch tentatively Jun 22",
+      "delivered": "2025-06-22",
+      "outcome": "Launched Jun 22, with a safety monitor aboard ([Reuters](https://www.reuters.com/business/autos-transportation/teslas-robotaxi-peppered-with-driving-mistakes-texas-tests-2025-06-25/))",
+      "sources": [
+        {
+          "label": "CNET",
+          "url": "https://www.cnet.com/roadshow/news/elon-musk-says-teslas-robotaxi-service-will-tentatively-kick-off-june-22-in-austin/"
+        }
+      ],
+      "due": "2025-06-22"
+    },
+    {
+      "id": "came-true-2025-2",
+      "section": "came-true",
+      "company": "Tesla",
+      "status": "kept",
+      "said": "2025-06",
+      "claim": "First car to drive itself from factory to a customer’s home on Jun 28",
+      "delivered": "2025-06-28",
+      "outcome": "Done Jun 28, about 15 miles ([TechCrunch](https://techcrunch.com/2025/06/30/tesla-sends-driverless-model-y-from-factory-to-customer-to-promote-its-robotaxi-tech/))",
+      "sources": [
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/news/694801/tesla-autonomous-delivery-factory-customer-robotaxi"
+        }
+      ],
+      "due": "2025-06-28"
+    },
+    {
+      "id": "came-true-2026",
+      "section": "came-true",
+      "company": "Tesla",
+      "status": "kept",
+      "said": "2026-01",
+      "claim": "Cybercab production starts in April",
+      "delivered": "2026-04",
+      "outcome": "Began Apr 2026 at a rate Musk called “very slow” ([CNET](https://www.cnet.com/roadshow/news/tesla-cybercab-begins-production/))",
+      "sources": [
+        {
+          "label": "Motley Fool transcript",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript/"
+        }
+      ],
+      "due": "2026-04"
+    },
+    {
+      "id": "robotaxi-2019",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019-04",
+      "claim": "“Very confident” of robotaxis next year; over a million on the road",
+      "due": "2020",
+      "delivered": null,
+      "outcome": "Zero robotaxis in 2020 ([The Drive](https://www.thedrive.com/news/38129/elon-musk-promised-1-million-tesla-robotaxis-by-the-end-of-2020-where-are-they))",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2019/04/22/tesla-plans-to-launch-a-robotaxi-network-in-2020/"
+        },
+        {
+          "label": "NBC News",
+          "url": "https://www.nbcnews.com/business/autos/musk-claims-tesla-will-have-1-million-robotaxis-roads-next-n997416"
+        }
+      ],
+      "numbers": [
+        {
+          "metric": "Robotaxis on the road in 2020",
+          "claimed": 1000000,
+          "actual": 0
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2019-2",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019-04",
+      "claim": "Owners could earn up to about $30,000 a year renting their car as a robotaxi",
+      "due": "2020",
+      "delivered": null,
+      "outcome": "No owner has been able to add a car to the network as of Oct 2026",
+      "sources": [
+        {
+          "label": "Business Insider",
+          "url": "https://businessinsider.nl/elon-musk-says-a-paid-robotaxi-service-launches-in-june-and-tesla-will-dip-a-toe-in-the-water-before-expanding-it"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2020",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2020-04",
+      "claim": "Robotaxi functionality “still looking good for this year,” pending regulators",
+      "due": "2020-12",
+      "dueLabel": "Dec 2020",
+      "delivered": null,
+      "outcome": "Did not happen",
+      "sources": [
+        {
+          "label": "Car and Driver",
+          "url": "https://www.caranddriver.com/news/a32159871/tesla-robo-taxis-still-coming-2020/"
+        },
+        {
+          "label": "CNET",
+          "url": "https://www.cnet.com/roadshow/news/tesla-robotaxi-2020-elon-musk-model-3-camera/"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2022",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2022-04",
+      "claim": "Dedicated robotaxi with no wheel or pedals in volume production in 2024",
+      "due": "2024",
+      "delivered": "2026-04",
+      "outcome": "Cybercab shown Oct 2024; production started slowly Apr 2026",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2022/04/20/elon-musk-mass-produce-robotaxi-by-2024"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2022-2",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2022-04",
+      "claim": "Robotaxi rides will cost less than a subsidized bus ticket",
+      "due": null,
+      "delivered": null,
+      "outcome": "No evidence of bus-level fares",
+      "sources": [
+        {
+          "label": "Automotive Fleet",
+          "url": "https://www.automotive-fleet.com/10169134/tesla-plans-to-mass-produce-robotaxis-by-2024"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2024",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2024-10",
+      "claim": "Cybercab for under $30,000, in production in 2026, before 2027",
+      "due": "2026",
+      "delivered": null,
+      "outcome": "Production began Apr 2026 at a “very slow” rate ([CNET](https://www.cnet.com/roadshow/news/tesla-cybercab-begins-production/)); on the Q3 2026 call Musk said Cybercab will mainly be Tesla-owned, with no consumer sale date ([Motley Fool](https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/))",
+      "sources": [
+        {
+          "label": "CNET",
+          "url": "https://www.cnet.com/roadshow/videos/everything-announced-at-teslas-we-robot-event/"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2025",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-01",
+      "claim": "Unsupervised paid robotaxi service in Austin in June, “no one in the car”",
+      "due": "2025-06",
+      "dueLabel": "Jun 2025",
+      "delivered": null,
+      "outcome": "Launched Jun 22, 2025 with a safety monitor in every car, invited riders only, small geofence ([Reuters](https://www.reuters.com/business/autos-transportation/teslas-robotaxi-peppered-with-driving-mistakes-texas-tests-2025-06-25/))",
+      "sources": [
+        {
+          "label": "Tesla webcast",
+          "url": "https://www.youtube.com/watch?v=Gub5qCTutZo&t=967s"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2025-2",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-01",
+      "claim": "Unsupervised service in California and other US areas in 2025",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": null,
+      "outcome": "California still requires a safety driver in every car in Oct 2026 ([Charge Port](https://thechargeport.com/robotaxi-tracker))",
+      "sources": [
+        {
+          "label": "The Driven",
+          "url": "https://thedriven.io/2025/01/30/tesla-admits-fleet-will-need-upgrade-for-fsd-future-as-it-holds-out-promise-of-lower-cost-ev/"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2025-3",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-07",
+      "claim": "Autonomous ride-hailing for about half the US population by end of 2025",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": null,
+      "outcome": "Austin plus a supervised Bay Area service",
+      "sources": [
+        {
+          "label": "Motley Fool transcript",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/23/tesla-tsla-q2-2025-earnings-call-transcript/"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2025-4",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2025-09",
+      "claim": "No safety drivers by end of 2025",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": "2026-01-22",
+      "outcome": "First monitor-free public rides Jan 22, 2026, a small number of cars in Austin ([CNBC](https://www.cnbc.com/2026/01/22/musk-says-tesla-takes-safety-supervisors-out-of-some-austin-robotaxis.html))",
+      "sources": [
+        {
+          "label": "Teslarati",
+          "url": "https://www.teslarati.com/elon-musk-tesla-will-take-safety-drivers-out-robotaxi-heres-when/"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2025-5",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2025-12",
+      "claim": "Robotaxis with no one in them in about three weeks",
+      "due": "2026-01-01",
+      "dueLabel": "~Jan 2026",
+      "delivered": "2026-01-22",
+      "outcome": "About six weeks, in limited form",
+      "sources": [
+        {
+          "label": "flyingpenguin",
+          "url": "https://www.flyingpenguin.com/technopuff-of-promises-broken-an-elon-musk-timeline/"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2026",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2026-01",
+      "claim": "Seven new cities in H1 2026: Dallas, Houston, Phoenix, Miami, Orlando, Tampa, Las Vegas",
+      "due": "2026-06",
+      "dueLabel": "Jun 2026",
+      "delivered": null,
+      "outcome": "Dallas and Houston in April; Miami, Orlando and Tampa in July; Phoenix and Las Vegas still “coming soon” in Oct 2026 ([Tesla North](https://teslanorth.com/2026/10/21/tesla-robotaxi-safety-report-four-new-cities/))",
+      "sources": [
+        {
+          "label": "Motley Fool transcript",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript/"
+        },
+        {
+          "label": "Tesorb",
+          "url": "https://tesorb.com/tesla-robotaxi-2026-everything-we-know-so-far/"
+        }
+      ]
+    },
+    {
+      "id": "robotaxi-2026-2",
+      "section": "robotaxi",
+      "company": "Tesla",
+      "status": "pending",
+      "said": "2026-01",
+      "claim": "Fully autonomous vehicles across a quarter to half of the US and in dozens of major cities by end of 2026",
+      "due": "2026-12",
+      "dueLabel": "Dec 2026",
+      "delivered": null,
+      "outcome": "About seven metros in Oct 2026",
+      "sources": [
+        {
+          "label": "Motley Fool transcript",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript/"
+        }
+      ]
+    },
+    {
+      "id": "production-2016",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2016",
+      "claim": "500,000 cars produced in 2018 (pulled forward from 2020)",
+      "due": "2018",
+      "delivered": null,
+      "outcome": "About 245,000 delivered in 2018; the goal was “virtually impossible” by spring ([Jalopnik](https://jalopnik.com/tesla-making-2-000-model-3s-per-week-musk-says-unders-1824253566))",
+      "numbers": [
+        {
+          "metric": "Cars in 2018",
+          "claimed": 500000,
+          "actual": 245000,
+          "approx": true
+        }
+      ]
+    },
+    {
+      "id": "production-2016-2",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2016",
+      "claim": "100,000–200,000 Model 3s built in H2 2017; 1 million total Teslas a year by 2020 ([Asymco](https://asymco.com/category/automotive))",
+      "due": "2017",
+      "dueLabel": "2017 / 2020",
+      "delivered": null,
+      "outcome": "222 Model 3s delivered in Q3 2017 and about 1,550 in Q4; about 500,000 total deliveries in 2020",
+      "numbers": [
+        {
+          "metric": "Model 3s in the second half of 2017",
+          "claimed": 100000,
+          "actual": 1772,
+          "approx": true,
+          "note": "Low end of the 100,000–200,000 promised; actual is Q3 and Q4 deliveries added together"
+        }
+      ]
+    },
+    {
+      "id": "production-2017",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2017-07",
+      "claim": "Model 3: 1,500 built in September and 20,000 a month by December 2017",
+      "due": "2017-12",
+      "dueLabel": "Dec 2017",
+      "delivered": null,
+      "outcome": "260 built in all of Q3 2017 ([Fortune](https://fortune.com/2018/07/01/tesla-5000-model-3-week-deadline))"
+    },
+    {
+      "id": "production-2017-2",
+      "section": "production",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2017",
+      "claim": "5,000 Model 3s a week by end of 2017; 10,000 a week some time in 2018",
+      "due": "2017-12",
+      "dueLabel": "Dec 2017",
+      "delivered": "2018-06",
+      "outcome": "5,000 reached in the last week of June 2018, hours late, partly using a tent line; 10,000 a week never reached for Model 3 in 2018"
+    },
+    {
+      "id": "production-2018",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2018-01",
+      "claim": "2,500 Model 3s a week by end of Q1 2018",
+      "due": "2018-03",
+      "dueLabel": "Mar 2018",
+      "delivered": null,
+      "outcome": "About 2,000 a week ([Jalopnik](https://jalopnik.com/tesla-making-2-000-model-3s-per-week-musk-says-unders-1824253566))",
+      "numbers": [
+        {
+          "metric": "Model 3s a week at the end of Q1 2018",
+          "claimed": 2500,
+          "actual": 2000,
+          "approx": true
+        }
+      ]
+    },
+    {
+      "id": "production-2020",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2020",
+      "saidLabel": "2020–2022",
+      "claim": "About 50% average annual delivery growth for years; 20 million vehicles a year by 2030",
+      "due": "2030",
+      "delivered": null,
+      "outcome": "Dropped from Tesla’s impact report in May 2024 ([Reuters via Globe and Mail](https://theglobeandmail.com/world/video-tesla-drops-delivery-goal-of-20-million-vehicles)); now 5 million by ~2030"
+    },
+    {
+      "id": "production-2022",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2022-04",
+      "claim": "Tesla could build more than 1.5 million vehicles in 2022 ([Nasdaq/ETF Trends](https://www.nasdaq.com/articles/tesla-looks-to-make-robotaxis-at-scale))",
+      "due": "2022",
+      "delivered": null,
+      "outcome": "About 1.31 million delivered",
+      "numbers": [
+        {
+          "metric": "Vehicles in 2022",
+          "claimed": 1500000,
+          "actual": 1310000,
+          "approx": true
+        }
+      ]
+    },
+    {
+      "id": "production-2023",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2023-10",
+      "claim": "Cybertruck at roughly 250,000 a year some time in 2025 ([TechCrunch](https://techcrunch.com/2023/10/18/elon-musk-warns-cybertruck-wont-be-profitable-until-2025/))",
+      "due": "2025",
+      "delivered": null,
+      "outcome": "About 17,000 delivered in 2025, by CleanTechnica’s estimate ([CleanTechnica](https://cleantechnica.com/2026/01/02/elon-musks-dramatic-miss-on-2025-tesla-cybertruck-sales/))",
+      "numbers": [
+        {
+          "metric": "Cybertrucks in 2025",
+          "claimed": 250000,
+          "actual": 17000,
+          "approx": true,
+          "note": "Promised as a yearly rate; actual is CleanTechnica’s estimate of 2025 deliveries"
+        }
+      ]
+    },
+    {
+      "id": "production-2024",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2024-10",
+      "claim": "Vehicle volume growth of 20–30% in 2025 ([Electrek](https://electrek.co/?p=449253))",
+      "due": "2025",
+      "delivered": null,
+      "outcome": "Deliveries fell 8.5% to about 1.64 million, a second straight annual decline ([blue News](https://www.bluewin.ch/en/news/tesla-closes-a-year-with-a-decline-in-sales-for-the-first-time-musk-abandons-models-3071768.html))"
+    },
+    {
+      "id": "production-2025",
+      "section": "production",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-01",
+      "claim": "Vehicle business will “return to growth in 2025”",
+      "due": "2025",
+      "delivered": null,
+      "outcome": "Tesla dropped growth guidance in July 2025 ([Electrek](https://electrek.co/2025/07/23/tesla-tsla-admits-electric-car-sales-growth-gone-gives-up-guidance/))"
+    },
+    {
+      "id": "products-2012",
+      "section": "products",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2012",
+      "claim": "Model X deliveries in 2014",
+      "due": "2014",
+      "delivered": "2015-09",
+      "outcome": "First deliveries Sep 2015 ([The Drive](https://www.thedrive.com/news/38129/elon-musk-promised-1-million-tesla-robotaxis-by-the-end-of-2020-where-are-they))"
+    },
+    {
+      "id": "products-2016",
+      "section": "products",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2016-03",
+      "claim": "Model 3 starting at $35,000 before incentives",
+      "due": "2018",
+      "dueLabel": "2017–2018",
+      "delivered": "2019-02",
+      "outcome": "Offered Feb 2019; moved “off menu” within weeks ([Electrek](https://electrek.co/2019/04/24/tesla-promise-35k-model-3-claims-few-ordering/)); ended for good Nov 2020 ([Carscoops](https://www.carscoops.com/2020/11/tesla-kills-off-the-35000-model-3-once-again/))"
+    },
+    {
+      "id": "products-2017",
+      "section": "products",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2017",
+      "claim": "Base $35k Model 3 by early-to-mid 2018",
+      "due": "2018-06",
+      "dueLabel": "mid-2018",
+      "delivered": "2019-02",
+      "outcome": "Not before Feb 2019 ([CBC](https://amp.cbc.ca/news/business/tesla-halts-orders-for-cars-1.5038113))"
+    },
+    {
+      "id": "products-2017-2",
+      "section": "products",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2017-11",
+      "claim": "Semi: production 2019; $150,000 (300 mi) and $180,000 (500 mi)",
+      "due": "2019",
+      "delivered": "2022-12",
+      "outcome": "First trucks to PepsiCo Dec 2022; high-volume line started Q3 2026; production versions reported at ~$260,000–$300,000 ([Drive Tesla Canada](https://driveteslacanada.ca/semi/tesla-semi-high-volume-production/))",
+      "numbers": [
+        {
+          "metric": "Semi price, 300-mile version",
+          "prefix": "$",
+          "claimed": 150000,
+          "actual": 260000,
+          "approx": true,
+          "note": "Actual is the low end of reported production prices"
+        }
+      ]
+    },
+    {
+      "id": "products-2022",
+      "section": "products",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2022-10",
+      "claim": "Semi: 50,000 units in North America in 2024 ([FreightWaves](https://www.freightwaves.com/news/tesla-plans-to-build-50000-class-8-semi-trucks-in-nevada))",
+      "due": "2024",
+      "delivered": null,
+      "outcome": "Only small pilot numbers in 2024; a 50,000-a-year factory began output in 2026"
+    },
+    {
+      "id": "products-2017-3",
+      "section": "products",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2017-11",
+      "claim": "Roadster: production 2020, 0–60 mph in 1.9 s, ~620 mi range; $50,000–$250,000 deposits",
+      "due": "2020",
+      "delivered": null,
+      "outcome": "Moved to 2021, 2022, 2023, 2024, 2025, then 2027–28; finally shown Oct 15, 2026 with production targeted for 2028 ([Chasing Cars](https://www.chasingcars.com.au/news/future-cars/tesla-roadster-gen-2-rocket-boosted-electric-hypercar-delayed-by-two-weeks-now-six-years-late/), [Oneindia](https://www.oneindia.com/international/tesla-roadster-unveiled-in-2017-flying-stunt-in-2026-when-will-buyers-get-the-car-8236969.html))"
+    },
+    {
+      "id": "products-2025",
+      "section": "products",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2025",
+      "claim": "Roadster demo by end of 2025, then Apr 1, late April, August, Oct 1, 2026",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": "2026-10-15",
+      "outcome": "Held Oct 15, 2026 ([Electrek](https://electrek.co/?p=488076))"
+    },
+    {
+      "id": "products-2020",
+      "section": "products",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2020-09",
+      "claim": "$25,000 car “about three years from now” ([AOL/BI](https://www.aol.com/news/tesla-said-start-making-cheaper-112712428.html))",
+      "due": "2023",
+      "delivered": null,
+      "outcome": "Dropped; Model 3 Standard ($38,640) and Model Y Standard ($41,600) launched Oct 2025 ([Mezha](https://mezha.media/en/news/tesla-predstavila-dostupni-model-3-i-model-y-305406))",
+      "numbers": [
+        {
+          "metric": "Price of the cheapest new Tesla",
+          "prefix": "$",
+          "claimed": 25000,
+          "actual": 38640,
+          "note": "Actual is the Model 3 Standard, launched Oct 2025"
+        }
+      ]
+    },
+    {
+      "id": "products-2025-2",
+      "section": "products",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2025-01",
+      "claim": "Affordable models in production in H1 2025",
+      "due": "2025-06",
+      "dueLabel": "Jun 2025",
+      "delivered": "2025-10",
+      "outcome": "Pushed to late 2025 ([TechCrunch](https://techcrunch.com/2025/04/21/tesla-reportedly-delays-launch-of-new-low-cost-model-by-months/))"
+    },
+    {
+      "id": "products-2019",
+      "section": "products",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019-11",
+      "claim": "Cybertruck: from $39,900; 500+ mi range; 3,500 lb payload; 14,000 lb towing; production late 2021",
+      "due": "2021",
+      "delivered": null,
+      "outcome": "Deliveries Nov 2023 from $60,990–$99,990; 340 mi max; 2,500 lb payload; 11,000 lb towing ([The Drive](https://www.thedrive.com/news/the-promised-39000-tesla-cybertruck-actually-costs-60990))",
+      "numbers": [
+        {
+          "metric": "Starting price",
+          "prefix": "$",
+          "claimed": 39900,
+          "actual": 60990
+        },
+        {
+          "metric": "Range",
+          "suffix": " mi",
+          "claimed": 500,
+          "actual": 340
+        },
+        {
+          "metric": "Payload",
+          "suffix": " lb",
+          "claimed": 3500,
+          "actual": 2500
+        },
+        {
+          "metric": "Towing",
+          "suffix": " lb",
+          "claimed": 14000,
+          "actual": 11000
+        }
+      ]
+    },
+    {
+      "id": "products-2023",
+      "section": "products",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2023-11",
+      "claim": "$60,990 rear-drive Cybertruck in 2025",
+      "due": "2025",
+      "delivered": null,
+      "outcome": "Pre-orders for that version pulled in Aug 2024 ([Business Insider](https://businessinsider.nl/5-promises-elon-musk-made-about-the-cybertruck-that-never-happened/))"
+    },
+    {
+      "id": "products-2019-2",
+      "section": "products",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019-11",
+      "claim": "Full-size Cyberquad ATV alongside the Cybertruck; truck able to float briefly",
+      "due": null,
+      "delivered": null,
+      "outcome": "Only a children’s Cyberquad sold; no boat mode"
+    },
+    {
+      "id": "products-2019-3",
+      "section": "products",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2019-08",
+      "claim": "Solar Roof: about 1,000 roofs a week by end of 2019 ([Greentech Media](https://greentechmedia.com/amp/article/teslas-elon-musk-floats-solar-roof-production-goal-after-silence-on-solar-i))",
+      "due": "2019-12",
+      "dueLabel": "Dec 2019",
+      "delivered": "2020-03",
+      "outcome": "Tesla claimed tile output equal to 1,000 roofs in one week in Mar 2020, using a small 4 kW-per-roof assumption; installs were far lower ([Electrek](https://electrek.co/?p=126577))"
+    },
+    {
+      "id": "money-2012",
+      "section": "money",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2012",
+      "saidLabel": "2012–2019",
+      "claim": "Repeated pledges that Tesla would reach sustained profitability ([Reuters factbox via AOL](https://www.aol.com/news/factbox-elon-musks-unfulfilled-tesla-204116016.html))",
+      "due": null,
+      "delivered": null,
+      "outcome": "First full profitable year was 2020"
+    },
+    {
+      "id": "money-2018",
+      "section": "money",
+      "company": "Tesla",
+      "status": "false",
+      "said": "2018-08",
+      "claim": "Considering taking Tesla private at $420 a share; “funding secured”",
+      "due": null,
+      "delivered": null,
+      "outcome": "SEC fraud charge settled: $20M fines each for Musk and Tesla, Musk out as chair. Judge Chen ruled the tweets false and reckless; a 2023 jury still found Musk not liable for investor losses, upheld on appeal ([NBC News](https://www.nbcnews.com/business/business-news/elon-musk-funding-secured-trial-verdict-rcna68634), [Drive Tesla Canada](https://driveteslacanada.ca/?p=97237))"
+    },
+    {
+      "id": "money-2019",
+      "section": "money",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019-01",
+      "saidLabel": "Early 2019",
+      "claim": "Tesla would return to profit in Q2 2019 after a Q1 loss ([InsideEVs](https://insideevs.com/news/346413/tesla-q1-2019-earnings-financial/about:blank))",
+      "due": "2019-06",
+      "dueLabel": "Q2 2019",
+      "delivered": null,
+      "outcome": "Net loss of $702M in Q1 and a further loss in Q2; profit resumed Q3 2019"
+    },
+    {
+      "id": "money-2019-2",
+      "section": "money",
+      "company": "Tesla",
+      "status": "false",
+      "said": "2019-04",
+      "claim": "A Tesla bought today is an “appreciating asset” because of FSD ([Electrek](https://electrek.co/2019/04/12/tesla-vehicles-appreciating-assets-self-driving-elon-musk/))",
+      "due": null,
+      "delivered": null,
+      "outcome": "Used Teslas lost value faster than the market; FSD’s price was later cut ([CNN via KRDO](https://krdo.com/?p=1208971))"
+    },
+    {
+      "id": "money-2019-3",
+      "section": "money",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019-07",
+      "claim": "Teslas with FSD should be worth $100,000–$200,000 ([Electrek](https://electrek.co/2019/07/16/tesla-cars-worth-100k-200k-full-self-driving-package-elon-musk/))",
+      "due": null,
+      "delivered": null,
+      "outcome": "Average used Model 3 near $29,000 by 2023",
+      "numbers": [
+        {
+          "metric": "Value of a Tesla with FSD",
+          "prefix": "$",
+          "claimed": 100000,
+          "actual": 29000,
+          "approx": true,
+          "note": "Low end of the $100,000–$200,000 claimed; actual is the average used Model 3 in 2023"
+        }
+      ]
+    },
+    {
+      "id": "abroad-2024",
+      "section": "abroad",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2024",
+      "claim": "Tesla roadmap: FSD in China by Q1 2025, pending approval ([CarNewsChina](https://carnewschina.com/2026/01/23/musks-claims-about-tesla-fsd-approval-in-china-next-month-debunked-by-chinese-state-media/))",
+      "due": "2025-03",
+      "dueLabel": "Q1 2025",
+      "delivered": null,
+      "outcome": "A limited “assisted driving” package rolled out Feb 2025, then a free trial was suspended pending approval ([CnEVPost](https://cnevpost.com/2025/11/07/china-to-fully-approve-tesla-fsd-early-2026/))"
+    },
+    {
+      "id": "abroad-2025",
+      "section": "abroad",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025",
+      "claim": "Full China FSD approval by end of 2025",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": null,
+      "outcome": "Not granted"
+    },
+    {
+      "id": "abroad-2025-2",
+      "section": "abroad",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-11",
+      "claim": "Full China approval around Feb or March 2026, “that’s what they’ve told us” ([CnEVPost](https://cnevpost.com/2025/11/07/china-to-fully-approve-tesla-fsd-early-2026/))",
+      "due": "2026-03",
+      "dueLabel": "Mar 2026",
+      "delivered": null,
+      "outcome": "Not granted"
+    },
+    {
+      "id": "abroad-2026",
+      "section": "abroad",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2026-01",
+      "claim": "At Davos: FSD approval in Europe next month and “maybe a similar timing for China”",
+      "due": "2026-02",
+      "dueLabel": "Feb 2026",
+      "delivered": null,
+      "outcome": "A Chinese government source told China Daily this was “not true” ([CnEVPost](https://cnevpost.com/2026/01/23/china-not-about-to-approve-tesla-fsd-soon/)); Tesla moved its China target to Q3 2026 ([Sherwood](https://www.sherwood.news/tech/tesla-says-fsd-is-available-in-china-what-does-that-actually-mean/))"
+    },
+    {
+      "id": "abroad-2026-2",
+      "section": "abroad",
+      "company": "Tesla",
+      "status": "false",
+      "said": "2026-05",
+      "claim": "Tesla listed China among markets where FSD (Supervised) is “now available”",
+      "due": null,
+      "delivered": null,
+      "outcome": "Full approval for the latest FSD had not been granted; China owners get a more limited assisted-driving system ([Drive Tesla Canada](https://driveteslacanada.ca/news/tesla-fsd-china-not-fully-approved/))"
+    },
+    {
+      "id": "abroad-2026-3",
+      "section": "abroad",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2026-04",
+      "saidLabel": "Q2 2026",
+      "claim": "China approval by Q3 2026 (CFO Taneja)",
+      "due": "2026-09",
+      "dueLabel": "Sep 2026",
+      "delivered": null,
+      "outcome": "Still unconfirmed in Sep 2026 ([36Kr](https://eu.36kr.com/en/p/3968661304078848))"
+    },
+    {
+      "id": "abroad-2026-4",
+      "section": "abroad",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2026-01",
+      "claim": "Europe-wide FSD (Supervised) approval in February 2026",
+      "due": "2026-02",
+      "dueLabel": "Feb 2026",
+      "delivered": null,
+      "outcome": "The Netherlands approved it in Apr 2026, then Lithuania; on the Q3 2026 call Tesla hoped for EU-wide approval “within a few months or by Q1” ([Shacknews](https://www.shacknews.com/article/151101/tesla-tsla-q3-2026-earnings-call-transcript))"
+    },
+    {
+      "id": "abroad-2025-3",
+      "section": "abroad",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-04",
+      "claim": "Unsupervised FSD “maybe” allowed in Europe by May 2026 ([Business Insider](https://businessinsider.nl/elon-musk-says-a-paid-robotaxi-service-launches-in-june-and-tesla-will-dip-a-toe-in-the-water-before-expanding-it))",
+      "due": "2026-05",
+      "dueLabel": "May 2026",
+      "delivered": null,
+      "outcome": "Only supervised FSD, in two EU countries"
+    },
+    {
+      "id": "optimus-2024",
+      "section": "optimus",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2024-06",
+      "claim": "Over a thousand, maybe a few thousand Optimus robots working at Tesla in 2025 ([Digital Trends](https://tech.yahoo.com/computing/articles/elon-musk-says-thousands-humanoid-010516986.html))",
+      "due": "2025",
+      "delivered": null,
+      "outcome": "Robots mostly moved batteries, at under half human efficiency; production paused mid-2025 ([Mezha](https://mezha.ua/en/news/virobnictvo-robotiv-tesla-optimus-stalo-na-pauzu-303129/amp/))"
+    },
+    {
+      "id": "optimus-2024-2",
+      "section": "optimus",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2024-07",
+      "claim": "“Genuinely useful” robots in low production in 2025; high production for other companies in 2026 ([Digital Trends](https://www.digitaltrends.com/?p=3652284))",
+      "due": "2026",
+      "delivered": null,
+      "outcome": "No external sales in 2026; now expected end of 2027"
+    },
+    {
+      "id": "optimus-2024-3",
+      "section": "optimus",
+      "company": "Tesla",
+      "status": "misleading",
+      "said": "2024-10",
+      "claim": "At the We, Robot event, Musk presented Optimus robots serving drinks and chatting, saying they were not a canned video",
+      "due": null,
+      "delivered": null,
+      "outcome": "Bloomberg reported many interactions were remotely operated by staff; Musk did not say so on the webcast ([BNN Bloomberg](https://bnnbloomberg.ca/business/2024/10/14/teslas-optimus-robots-were-remotely-operated-at-cybercab-event))"
+    },
+    {
+      "id": "optimus-2025",
+      "section": "optimus",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-01",
+      "saidLabel": "Early 2025",
+      "claim": "About 5,000 Optimus built in 2025, later cut to 2,000",
+      "due": "2025-12",
+      "dueLabel": "Dec 2025",
+      "delivered": null,
+      "outcome": "Roughly 1,000 or fewer assembled before production and parts orders were halted for a redesign, largely over the hands ([TechSpot](https://www.techspot.com/news/109781-tesla-temporarily-halts-mass-production-optimus-robots-citing.html))",
+      "numbers": [
+        {
+          "metric": "Optimus robots built in 2025",
+          "claimed": 5000,
+          "actual": 1000,
+          "approx": true,
+          "note": "Target later cut to 2,000; actual is roughly 1,000 or fewer"
+        }
+      ]
+    },
+    {
+      "id": "optimus-2025-2",
+      "section": "optimus",
+      "company": "Tesla",
+      "status": "late",
+      "said": "2025-10",
+      "claim": "Optimus V3 unveiled “probably in February or March 2026” ([Mike Kalil](https://mikekalil.com/blog/tesla-optimus-gen-3-delayed-again/))",
+      "due": "2026-03",
+      "dueLabel": "Mar 2026",
+      "delivered": null,
+      "outcome": "Delayed Mar 31 for “finishing touches,” then tied to a mid-2026 production start ([Not a Tesla App](https://notateslaapp.com/news/3884/tesla-delays-optimus-gen-3-unveil-for-finishing-touches))"
+    },
+    {
+      "id": "optimus-2026",
+      "section": "optimus",
+      "company": "Tesla",
+      "status": "pending",
+      "said": "2026-03",
+      "claim": "50,000–100,000 Optimus in 2026; a 1-million-a-year rate at Fremont by late 2026 ([Basenor](https://www.basenor.com/blogs/news/tesla-optimus-v3-reveal-set-for-late-july-what-we-know))",
+      "due": "2026-12",
+      "dueLabel": "Dec 2026",
+      "delivered": null,
+      "outcome": "“Early production” began Q3 2026; Musk now says reaching 20,000 a week will take about a year ([Not a Tesla App](https://www.notateslaapp.com/news/4867/tesla-q3-2026-earnings-call-recap-everything-you-need-to-know))"
+    },
+    {
+      "id": "batteries-2019",
+      "section": "batteries",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019-04",
+      "claim": "A million-mile battery pack in production next year",
+      "due": "2020",
+      "delivered": null,
+      "outcome": "No million-mile battery was unveiled at the Sep 2020 Battery Day ([Livewire](https://livewiremarkets.com/wires/tesla-battery-day-5-key-takeaways), [futurezone](https://futurezone.at/amp/produkte/11-dinge-die-elon-musk-fuer-2020-versprochen-hat/401160252))"
+    },
+    {
+      "id": "batteries-2020",
+      "section": "batteries",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2020-09",
+      "claim": "100 GWh of in-house 4680 cell capacity by 2022; 3 TWh by 2030 ([Electrive](https://www.electrive.com/2020/09/23/tesla-battery-day-tabless-4680-cell-and-in-house-production))",
+      "due": "2022",
+      "delivered": null,
+      "outcome": "Dry-coating the cathode stalled the ramp; by 2023 output covered about 50,000 vehicles a year ([Jalopnik via Yahoo](https://autos.yahoo.com/tesla-everyone-scrambling-perfect-next-160000444.html))"
+    },
+    {
+      "id": "batteries-2020-2",
+      "section": "batteries",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2020-09",
+      "claim": "Battery advances would enable a $25,000 car within about three years",
+      "due": "2023",
+      "delivered": null,
+      "outcome": "See product launch promises: no $25,000 Tesla"
+    },
+    {
+      "id": "batteries-2019-2",
+      "section": "batteries",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2019",
+      "saidLabel": "2019–2024",
+      "claim": "Dojo would be the cornerstone of FSD training; Tesla would “double down” on it (Jul 2024)",
+      "due": null,
+      "delivered": null,
+      "outcome": "Team disbanded Aug 2025 ([TechCrunch](https://techcrunch.com/2025/09/02/tesla-dojo-the-rise-and-fall-of-elon-musks-ai-supercomputer/))"
+    },
+    {
+      "id": "batteries-2025",
+      "section": "batteries",
+      "company": "Tesla",
+      "status": "missed",
+      "said": "2025-07",
+      "claim": "Second Dojo cluster operating at scale in 2026",
+      "due": "2026",
+      "delivered": null,
+      "outcome": "Weeks later Musk called Dojo 2 “an evolutionary dead end” and shut it down ([TechCrunch](https://techcrunch.com/2025/08/11/elon-musk-confirms-shutdown-of-tesla-dojo-an-evolutionary-dead-end))"
+    },
+    {
+      "id": "mars-2011",
+      "section": "mars",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2011-04",
+      "claim": "People on Mars in about 10 years at best, 15–20 at worst ([Madhyamam](https://english.madhyamam.com/science/where-are-you-on-the-man-on-mars-mission-elon-musk-asked-1016585))",
+      "due": "2021",
+      "delivered": null,
+      "outcome": "No crewed Mars mission"
+    },
+    {
+      "id": "mars-2016",
+      "section": "mars",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2016-04",
+      "saidLabel": "Apr–Jun 2016",
+      "claim": "Red Dragon to land on Mars in 2018; a mission every window after that; crew launch 2024, arrival 2025 ([SpaceNews](https://spacenews.com/?p=60606))",
+      "due": "2018",
+      "dueLabel": "2018 / 2024",
+      "delivered": null,
+      "outcome": "Red Dragon slipped to 2020, then was dropped in Jul 2017 ([Maciej Cegłowski](https://mceglowski.substack.com/p/musk-on-mars))"
+    },
+    {
+      "id": "mars-2017",
+      "section": "mars",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2017-09",
+      "claim": "Two cargo ships to Mars in 2022, “not a typo”; first crew in 2024 ([CBC/Reuters](https://www.cbc.ca/amp/1.4312878), [ScienceBlog](https://scienceblog.com/t-spacex-mars-deadlines-2016-2018-2022-2026-2028/))",
+      "due": "2022",
+      "dueLabel": "2022 / 2024",
+      "delivered": null,
+      "outcome": "Starship’s first integrated test flight was Apr 2023"
+    },
+    {
+      "id": "mars-2020",
+      "section": "mars",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2020-12",
+      "claim": "“Highly confident” of humans to Mars in 2026, maybe 2024; uncrewed vehicle in 2022 ([Cegłowski](https://mceglowski.substack.com/p/musk-on-mars))",
+      "due": "2022",
+      "dueLabel": "2022 / 2026",
+      "delivered": null,
+      "outcome": "No uncrewed flight in 2022; no crewed flight planned for 2026"
+    },
+    {
+      "id": "mars-2021",
+      "section": "mars",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2021-12",
+      "claim": "Would be surprised if humans were not on Mars within five years ([Space Explored](https://spaceexplored.com/2022/03/16/elon-musk-says-humans-will-be-on-mars-in-2029/))",
+      "due": "2027",
+      "dueLabel": "~2026–27",
+      "delivered": null,
+      "outcome": "Three months later he said 2029"
+    },
+    {
+      "id": "mars-2022",
+      "section": "mars",
+      "company": "SpaceX",
+      "status": "pending",
+      "said": "2022-03",
+      "claim": "Humans on Mars in 2029 ([Futurism](https://futurism.com/the-byte/elon-musk-people-mars-landing-date))",
+      "due": "2029",
+      "delivered": null,
+      "outcome": "Mar 2025: 2029 possible, 2031 more likely ([Forbes Peru](https://forbes.pe/negocios/2025-03-16/musk-dice-que-quiere-enviar-un-cohete-a-marte-el-proximo-ano-y-con-misiones-humanas-a-partir-de-2029/))"
+    },
+    {
+      "id": "mars-2024",
+      "section": "mars",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2024-09",
+      "claim": "About five uncrewed Starships to Mars in the 2026 window; crew in 2028 if they land safely ([Reuters via TradingView](https://es.tradingview.com/news/reuters.com,2024:newsml_L1N3L406N:0-spacex-plans-to-send-five-uncrewed-starships-to-mars-in-two-years-musk-says))",
+      "due": "2026-12",
+      "dueLabel": "Nov–Dec 2026",
+      "delivered": null,
+      "outcome": "In Feb 2026 SpaceX moved its priority to the Moon; no Mars launch is planned for the 2026 window ([Space Odyssey Hub](https://spaceodysseyhub.com/articles/spacex-starship-2026-mission-timeline))"
+    },
+    {
+      "id": "mars-2025",
+      "section": "mars",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2025-05",
+      "claim": "50–50 chance of an uncrewed Starship, carrying Optimus, leaving for Mars by end of 2026 ([Al Jazeera](https://www.aljazeera.com/news/2025/5/30/musk-says-50-50-chance-of-sending-uncrewed-starship-to-mars-by-late-2026))",
+      "due": "2026-12",
+      "dueLabel": "Dec 2026",
+      "delivered": null,
+      "outcome": "Same as above"
+    },
+    {
+      "id": "starship-2011",
+      "section": "starship",
+      "company": "SpaceX",
+      "status": "late",
+      "said": "2011",
+      "claim": "Falcon Heavy debut within about two years",
+      "due": "2013",
+      "dueLabel": "~2013",
+      "delivered": "2018-02",
+      "outcome": "First flight Feb 2018 after long delays ([SpaceNews](https://spacenews.com/?p=60606))"
+    },
+    {
+      "id": "starship-2017",
+      "section": "starship",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2017-02",
+      "claim": "Two paying private citizens on a week-long flight around the Moon in late 2018, on Falcon Heavy and Dragon ([Space.com](https://www.space.com/40805-spacex-delays-tourist-trip-around-moon.html))",
+      "due": "2018-12",
+      "dueLabel": "Dec 2018",
+      "delivered": null,
+      "outcome": "Delayed in 2018, then replaced by a Starship plan; never flew"
+    },
+    {
+      "id": "starship-2018",
+      "section": "starship",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2018-09",
+      "claim": "dearMoon: Yusaku Maezawa and eight artists around the Moon on Starship in 2023",
+      "due": "2023",
+      "delivered": null,
+      "outcome": "Cancelled June 2024 because of Starship delays ([Wikipedia](https://en.wikipedia.org/wiki/DearMoon_project))"
+    },
+    {
+      "id": "starship-2018-2",
+      "section": "starship",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2018-05",
+      "claim": "Two orbital launches of the same Falcon 9 within 24 hours, “no later than next year” ([SpaceNews](https://spacenews.com/?p=77346))",
+      "due": "2019",
+      "delivered": null,
+      "outcome": "Never done; booster turnaround remains days, not hours"
+    },
+    {
+      "id": "starship-2022",
+      "section": "starship",
+      "company": "SpaceX",
+      "status": "late",
+      "said": "2022-08",
+      "claim": "Get Starship into orbit before the end of 2022 ([Reuters](https://www.reuters.com/business/energy/elon-musk-says-world-still-needs-oil-gas-2022-08-29/))",
+      "due": "2022-12",
+      "dueLabel": "Dec 2022",
+      "delivered": "2026",
+      "outcome": "First integrated flight Apr 2023 failed within minutes; Starship first reached orbit in 2026 ([Space.com](https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket))"
+    },
+    {
+      "id": "starship-2026",
+      "section": "starship",
+      "company": "SpaceX",
+      "status": "late",
+      "said": "2026-08",
+      "claim": "SpaceX would attempt to catch a returning Starship upper stage “this month” ([Nerra Network](https://buttondown.com/patricknovak1/archive/spacex-ep070-starship-still-lacks-an-orbital-refuelin/))",
+      "due": "2026-08",
+      "dueLabel": "Aug 2026",
+      "delivered": null,
+      "outcome": "Not attempted; now planned for Flight 15 in November ([Northeast Times/Ars Technica](https://northeasttimes.com/2026/10/21/spacex-plans-to-catch-both-starship-stages-on-its-next-flight/))"
+    },
+    {
+      "id": "starship-2026-2",
+      "section": "starship",
+      "company": "SpaceX",
+      "status": "pending",
+      "said": "2026-10",
+      "claim": "Weekly Starship launches in H1 2027, twice weekly in H2 2027; ship-to-ship propellant transfer early 2027",
+      "due": "2027",
+      "delivered": null,
+      "outcome": "Ship-to-ship transfer not yet demonstrated after 14 flights"
+    },
+    {
+      "id": "starlink-2015",
+      "section": "starlink",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2015",
+      "claim": "Investor deck: Starlink at 20 million subscribers, ~$12B revenue and ~$7B operating profit in 2022",
+      "due": "2022",
+      "delivered": null,
+      "outcome": "About 1.4 million subscribers and $1.4B revenue in 2022, per documents seen by the WSJ ([Reuters via Yahoo](https://sg.news.yahoo.com/spacexs-starlink-falls-short-growth-142430785.html))",
+      "numbers": [
+        {
+          "metric": "Starlink subscribers in 2022",
+          "suffix": "M",
+          "claimed": 20,
+          "actual": 1.4
+        },
+        {
+          "metric": "Starlink revenue in 2022",
+          "prefix": "$",
+          "suffix": "B",
+          "claimed": 12,
+          "actual": 1.4,
+          "approx": true
+        }
+      ]
+    },
+    {
+      "id": "starlink-2015-2",
+      "section": "starlink",
+      "company": "SpaceX",
+      "status": "missed",
+      "said": "2015",
+      "saidLabel": "2015–2017",
+      "claim": "Starlink at about 40 million subscribers and $30B revenue in 2025 ([Expansión](https://expansion.mx/tecnologia/2017/01/13/spacex-generara-75-mas-ingresos-que-tesla-para-2025))",
+      "due": "2025",
+      "delivered": null,
+      "outcome": "Bankers modeled total SpaceX revenue of about $15B for 2025 ([Yahoo Finance](https://finance.yahoo.com/news/spacex-preparing-record-ipo-1-204259115.html))",
+      "numbers": [
+        {
+          "metric": "Revenue in 2025",
+          "prefix": "$",
+          "suffix": "B",
+          "claimed": 30,
+          "actual": 15,
+          "approx": true,
+          "note": "Promised for Starlink alone; actual is bankers’ model for all of SpaceX"
+        }
+      ]
+    },
+    {
+      "id": "starlink-2013",
+      "section": "starlink",
+      "company": "SpaceX",
+      "status": "reversed",
+      "said": "2013",
+      "claim": "No SpaceX IPO until the Mars Colonial Transporter is “flying regularly”",
+      "due": null,
+      "delivered": null,
+      "outcome": "SpaceX listed on Jun 12, 2026, with no Mars flights ([Daily Ittefaq](https://en.ittefaq.com.bd/16930/spacex-set-for-wall-street-debut-in))"
+    }
+  ],
+  "_fields": {
+    "sections": "Chapters of the file, in order: id, title, short (topic button), phrase (finishes “Musk had set N deadlines …” when the topic is picked), company, intro (one paragraph), notes (paragraphs shown after the entries). Text may use [label](url) links.",
+    "id": "Unique slug; also the link anchor, e.g. elon-time.html#robotaxi-2019.",
+    "section": "The id of the chapter this entry sits in.",
+    "company": "Tesla or SpaceX. Each distinct value becomes a filter.",
+    "status": "missed, late, partly, false, misleading, reversed, pending or kept (came true).",
+    "said": "When he said it: YYYY, YYYY-MM or YYYY-MM-DD. saidLabel overrides the text shown (e.g. “2012–2019”).",
+    "claim": "What he said, paraphrased unless in quotation marks. May use [label](url) links.",
+    "due": "The deadline: YYYY means the end of that year, YYYY-MM the end of that month. null when there was none. dueLabel overrides the text shown (e.g. “~2023”).",
+    "delivered": "When it happened, if it did. Leave null otherwise.",
+    "outcome": "What happened. May use [label](url) links.",
+    "sources": "List of { label, url } for where he said it.",
+    "numbers": "Optional list of { metric, claimed, actual, prefix, suffix, approx, note }, drawn to scale as promised against actual."
+  }
+}
