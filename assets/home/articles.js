@@ -62,7 +62,7 @@ function empty(text) {
 }
 
 /** Homepage: the newest articles, filtered live by the section's own search box. */
-export function renderRecent({ list, input, more, status }, articles) {
+export function renderRecent({ list, input, more, status, lead }, articles) {
   if (!list) return;
   if (!articles) {
     list.replaceChildren(empty("Articles could not be loaded."));
@@ -71,8 +71,9 @@ export function renderRecent({ list, input, more, status }, articles) {
   const update = () => {
     const q = input?.value.trim() || "";
     const hits = articles.filter((a) => matches(a, q));
-    // The newest article already runs as the lead, so the unfiltered list starts after it.
-    const shown = q ? hits : hits.slice(1);
+    // The lead story already runs above, so the unfiltered list leaves it out.
+    const leadHref = lead?.getAttribute("href");
+    const shown = q ? hits : hits.filter((a) => a.href !== leadHref);
     list.replaceChildren(...(shown.length ? shown.slice(0, RECENT).map(row) : [empty(q ? `No articles match “${q}”.` : "More articles are on the way.")]));
     if (more) {
       more.href = q ? `articles.html?q=${encodeURIComponent(q)}` : "articles.html";

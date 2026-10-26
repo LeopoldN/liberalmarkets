@@ -85,7 +85,7 @@ const wire = renderWire($("[data-wire]"));
 const posts = renderPosts($("[data-posts]"));
 const desk = renderIndicators($("[data-indicators]"));
 const articles = loadArticles().then((list) => {
-  renderRecent({ list: $("[data-recent]"), input: $("[data-recent-search]"), more: $("[data-recent-more]"), status: $("[data-recent-status]") }, list);
+  renderRecent({ list: $("[data-recent]"), input: $("[data-recent-search]"), more: $("[data-recent-more]"), status: $("[data-recent-status]"), lead: $(".lead__title a") }, list);
   renderArchive({ list: $("[data-archive]"), input: $("[data-archive-search]"), topics: $("[data-archive-topics]"), count: $("[data-archive-count]") }, list);
   renderNext({ list: $("[data-next]"), section: $("[data-next-section]") }, list);
   return articleEntries(list);
