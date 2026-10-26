@@ -223,6 +223,14 @@ kbd {
 }
 .nav a:hover { color: var(--ink); text-decoration: underline; }
 .nav a[aria-current="page"] { color: var(--ink); }
+/* Fish Bowl shortens to a fish on phones so five links fit; the rest scroll rather than wrap. */
+.nav__fish { display: none; font-family: var(--mono); letter-spacing: -0.04em; }
+@media (max-width: 760px) {
+  .nav a { white-space: nowrap; }
+  .nav__full { display: none; }
+  .nav__fish { display: inline; }
+}
+@media (max-width: 380px) { .bar .nav { gap: 14px; } }
 
 .controls {
   display: flex;
