@@ -272,14 +272,16 @@ function buildClock(root, claims, today) {
     let second;
     if (!come.length) second = "None had come due.";
     else if (missed.length === come.length) {
-      const which = come.length === 1 ? "the one that had come due" : `all ${count(come.length)} that had come due`;
-      second = `He had missed ${which}`;
+      if (come.length === made.length) second = come.length === 1 ? "He had missed it" : `He had missed all ${count(come.length)}`;
+      else second = come.length === 1 ? "He had missed the one that had come due" : `He had missed all ${count(come.length)} that had come due`;
     } else second = `He had missed ${count(missed.length)} of the ${count(come.length)} that had come due`;
     if (come.length) {
       const sum = fmtGapLong(total);
+      const by = missed.length > 1 ? "by a combined" : "by";
+      if (!missed.length) return { html: `${first} He had kept every one that had come due.`, text: `${first} He had kept every one that had come due.` };
       return {
-        html: `${first} ${second}, by a combined <strong>${sum}</strong>.`,
-        text: `${first} ${second}, by a combined ${sum}.`,
+        html: `${first} ${second}, ${by} <strong>${sum}</strong>.`,
+        text: `${first} ${second}, ${by} ${sum}.`,
       };
     }
     return { html: `${first} ${second}`, text: `${first} ${second}` };
