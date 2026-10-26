@@ -1,79 +1,96 @@
 {
-  "generatedAt": "2026-06-01T19:54:20.040Z",
-  "source": "stooq",
+  "generatedAt": "2026-10-26T00:45:08Z",
+  "source": "data/markets",
   "items": [
     {
       "sym": "2yusy.b",
-      "name": "US 2Y Yield",
+      "name": "2-year Treasury yield",
       "group": null,
-      "ok": false,
-      "error": "No numeric close values in daily CSV"
+      "date": "2026-10-22",
+      "close": 4.65,
+      "prevClose": 4.81,
+      "deltaPct": -3.3264033264033155,
+      "ok": true
     },
     {
       "sym": "5yusy.b",
-      "name": "US 5Y Yield",
+      "name": "5-year Treasury yield",
       "group": null,
-      "ok": false,
-      "error": "No numeric close values in daily CSV"
+      "date": "2026-10-23",
+      "close": 4.805,
+      "prevClose": 4.78,
+      "deltaPct": 0.5230125523012497,
+      "ok": true
     },
     {
       "sym": "10yusy.b",
-      "name": "US 10Y Yield",
+      "name": "10-year Treasury yield",
       "group": null,
-      "ok": false,
-      "error": "No numeric close values in daily CSV"
+      "date": "2026-10-23",
+      "close": 4.988,
+      "prevClose": 4.96,
+      "deltaPct": 0.5645161290322775,
+      "ok": true
     },
     {
       "sym": "30yusy.b",
-      "name": "US 30Y Yield",
+      "name": "30-year Treasury yield",
       "group": null,
-      "ok": false,
-      "error": "No numeric close values in daily CSV"
+      "date": "2026-10-23",
+      "close": 5.315,
+      "prevClose": 5.29,
+      "deltaPct": 0.4725897920605071,
+      "ok": true
     },
     {
       "sym": "usdeur",
-      "name": "USD/EUR",
+      "name": "Euro in dollars",
       "group": null,
-      "ok": false,
-      "error": "No numeric close values in daily CSV"
+      "date": "2026-10-23",
+      "close": 1.12215,
+      "prevClose": 1.12347,
+      "deltaPct": -0.11749312398194878,
+      "ok": true
     },
     {
       "sym": "cb.f",
-      "name": "Brent Oil",
+      "name": "Brent crude",
       "group": null,
-      "date": "2026-06-01",
-      "close": 95.29,
-      "prevDate": "2026-04-23",
-      "prevClose": 106.48,
-      "deltaPct": -10.50901577761082,
-      "history": [
-        {
-          "date": "2026-06-01",
-          "close": 95.29
-        }
-      ],
+      "date": "2026-10-23",
+      "close": 116.72,
+      "prevClose": 113.17,
+      "deltaPct": 3.1368737297870375,
       "ok": true
     },
     {
       "sym": "^spx",
       "name": "S&P 500",
       "group": null,
-      "ok": false,
-      "error": "No numeric close values in daily CSV"
+      "date": "2026-10-23",
+      "close": 7623.68,
+      "prevClose": 7663.43,
+      "deltaPct": -0.5186972413136148,
+      "ok": true
     },
     {
       "sym": "xauusd",
       "name": "Gold",
       "group": null,
-      "ok": false,
-      "error": "No numeric close values in daily CSV"
+      "date": "2026-10-23",
+      "close": 4007.9,
+      "prevClose": 4060.4,
+      "deltaPct": -1.2929760614717734,
+      "ok": true
     },
     {
       "sym": "asts.us",
-      "name": "ASTS",
+      "name": "AST SpaceMobile",
       "group": null,
-      "ok": false,
-      "error": "No numeric close values in daily CSV"
+      "date": "2026-10-23",
+      "close": 39.79,
+      "prevClose": 38.77,
+      "deltaPct": 2.630900180551965,
+      "ok": true
     }
   ]
 }
