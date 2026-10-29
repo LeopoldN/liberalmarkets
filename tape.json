@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T01:07:03Z",
+  "generatedAt": "2026-10-29T20:03:44Z",
   "source": "data/markets",
   "items": [
     {
@@ -16,30 +16,30 @@
       "sym": "5yusy.b",
       "name": "5-year Treasury yield",
       "group": null,
-      "date": "2026-10-28",
-      "close": 4.871,
-      "prevClose": 4.82,
-      "deltaPct": 1.0580912863070502,
+      "date": "2026-10-29",
+      "close": 4.801,
+      "prevClose": 4.871,
+      "deltaPct": -1.437076575651819,
       "ok": true
     },
     {
       "sym": "10yusy.b",
       "name": "10-year Treasury yield",
       "group": null,
-      "date": "2026-10-28",
-      "close": 5.045,
-      "prevClose": 4.99,
-      "deltaPct": 1.1022044088176308,
+      "date": "2026-10-29",
+      "close": 4.989,
+      "prevClose": 5.045,
+      "deltaPct": -1.1100099108027783,
       "ok": true
     },
     {
       "sym": "30yusy.b",
       "name": "30-year Treasury yield",
       "group": null,
-      "date": "2026-10-28",
-      "close": 5.361,
-      "prevClose": 5.3,
-      "deltaPct": 1.1509433962264115,
+      "date": "2026-10-29",
+      "close": 5.329,
+      "prevClose": 5.361,
+      "deltaPct": -0.5969035627681363,
       "ok": true
     },
     {
@@ -56,40 +56,40 @@
       "sym": "cb.f",
       "name": "Brent crude",
       "group": null,
-      "date": "2026-10-27",
-      "close": 123.1,
-      "prevClose": 128.12,
-      "deltaPct": -3.9182016859194535,
+      "date": "2026-10-28",
+      "close": 115.32,
+      "prevClose": 123.1,
+      "deltaPct": -6.3200649878147885,
       "ok": true
     },
     {
       "sym": "^spx",
       "name": "S&P 500",
       "group": null,
-      "date": "2026-10-28",
-      "close": 7743.98,
-      "prevClose": 7722.6,
-      "deltaPct": 0.27684976562296626,
+      "date": "2026-10-29",
+      "close": 7720.24,
+      "prevClose": 7743.98,
+      "deltaPct": -0.30656070909274025,
       "ok": true
     },
     {
       "sym": "xauusd",
       "name": "Gold",
       "group": null,
-      "date": "2026-10-27",
-      "close": 4074.6,
-      "prevClose": 4038.4,
-      "deltaPct": 0.8963946117274135,
+      "date": "2026-10-28",
+      "close": 4051.6,
+      "prevClose": 4074.6,
+      "deltaPct": -0.5644725862661404,
       "ok": true
     },
     {
       "sym": "asts.us",
       "name": "AST SpaceMobile",
       "group": null,
-      "date": "2026-10-27",
-      "close": 41.96,
-      "prevClose": 39.45,
-      "deltaPct": 6.362484157160964,
+      "date": "2026-10-29",
+      "close": 43.07,
+      "prevClose": 42.3,
+      "deltaPct": 1.8203309692671477,
       "ok": true
     }
   ]
