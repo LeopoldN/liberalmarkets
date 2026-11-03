@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T02:59:28Z",
+  "generatedAt": "2026-11-03T20:46:24Z",
   "source": "data/markets",
   "items": [
     {
@@ -16,30 +16,30 @@
       "sym": "5yusy.b",
       "name": "5-year Treasury yield",
       "group": null,
-      "date": "2026-11-02",
-      "close": 4.693,
-      "prevClose": 4.71,
-      "deltaPct": -0.36093418259024457,
+      "date": "2026-11-03",
+      "close": 4.743,
+      "prevClose": 4.693,
+      "deltaPct": 1.0654165778819724,
       "ok": true
     },
     {
       "sym": "10yusy.b",
       "name": "10-year Treasury yield",
       "group": null,
-      "date": "2026-11-02",
-      "close": 4.894,
-      "prevClose": 4.94,
-      "deltaPct": -0.9311740890688314,
+      "date": "2026-11-03",
+      "close": 4.952,
+      "prevClose": 4.894,
+      "deltaPct": 1.1851246424192885,
       "ok": true
     },
     {
       "sym": "30yusy.b",
       "name": "30-year Treasury yield",
       "group": null,
-      "date": "2026-11-02",
-      "close": 5.269,
-      "prevClose": 5.31,
-      "deltaPct": -0.7721280602636438,
+      "date": "2026-11-03",
+      "close": 5.324,
+      "prevClose": 5.269,
+      "deltaPct": 1.0438413361169019,
       "ok": true
     },
     {
@@ -56,10 +56,10 @@
       "sym": "cb.f",
       "name": "Brent crude",
       "group": null,
-      "date": "2026-10-30",
-      "close": 117.64,
-      "prevClose": 114.88,
-      "deltaPct": 2.402506963788298,
+      "date": "2026-11-02",
+      "close": 104.77,
+      "prevClose": 117.64,
+      "deltaPct": -10.94015640938457,
       "ok": true
     },
     {
@@ -76,10 +76,10 @@
       "sym": "xauusd",
       "name": "Gold",
       "group": null,
-      "date": "2026-10-30",
-      "close": 3898.9,
-      "prevClose": 4031.4,
-      "deltaPct": -3.286699409634375,
+      "date": "2026-11-02",
+      "close": 3969.6,
+      "prevClose": 3898.9,
+      "deltaPct": 1.813331965426146,
       "ok": true
     },
     {
