@@ -416,7 +416,7 @@
     S.path = d3.geoPath(S.projection);
     // Drawing generator clipped just past the pan limits (see setupZoom) so off-screen
     // coastlines never reach the DOM. S.path stays unclipped for centroids/bounds.
-    S.draw = d3.geoPath(S.projection.copy().clipExtent([[-W * 0.7, -H * 0.7], [W * 1.7, H * 1.7]]));
+    S.draw = d3.geoPath(makeProjection().clipExtent([[-W * 0.7, -H * 0.7], [W * 1.7, H * 1.7]]));
     renderGeo();
     buildGraticuleSamples();
     setupZoom();
@@ -492,7 +492,7 @@
     onLand.append("g").attr("clip-path", `url(#${clipId})`).append("path").attr("class", "nat-inner").attr("d", path(outline));
     onLand.append("path").attr("class", "nat-border").attr("d", path(outline));
     const [[ux0, uy0], [ux1, uy1]] = S.path.bounds(S.ukr.outline);
-    const coastPath = d3.geoPath(S.projection.copy().clipExtent([[ux0 - 4, uy0 - 4], [ux1 + 4, uy1 + 4]]));
+    const coastPath = d3.geoPath(makeProjection().clipExtent([[ux0 - 4, uy0 - 4], [ux1 + 4, uy1 + 4]]));
     br.append("path").attr("class", "nat-coast").attr("clip-path", `url(#${clipId})`).attr("d", coastPath(S.data.land));
 
     S.ukrBaseW = (() => { const b = S.path.bounds(S.ukr.outline); return b[1][0] - b[0][0]; })();
