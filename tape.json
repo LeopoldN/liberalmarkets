@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T22:59:36Z",
+  "generatedAt": "2026-11-03T02:59:28Z",
   "source": "data/markets",
   "items": [
     {
@@ -46,10 +46,10 @@
       "sym": "usdeur",
       "name": "Euro in dollars",
       "group": null,
-      "date": "2026-10-30",
-      "close": 1.1163,
-      "prevClose": 1.1165,
-      "deltaPct": -0.01791312136139034,
+      "date": "2026-11-02",
+      "close": 1.11569,
+      "prevClose": 1.1163,
+      "deltaPct": -0.05464480874316502,
       "ok": true
     },
     {
