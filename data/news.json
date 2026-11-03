@@ -1,17 +1,22 @@
 {
-  "generatedAt": "2026-11-02T21:39:10.644Z",
+  "generatedAt": "2026-11-03T19:24:25.999Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Blackstone president calls for more equity to fund AI buildout as debt risks mount",
+      "link": "https://www.cnbc.com/2026/11/03/equity-ai-debt-blackstone-pimco-financing.html",
+      "pubDate": "Tue, 03 Nov 2026 06:46:36 GMT"
+    },
+    {
       "title": "Texas governor race tightens in prediction markets, but Abbott remains favored",
       "link": "https://www.cnbc.com/2026/11/02/texas-governor-prediction-markets-abbott-hinojosa.html",
-      "pubDate": "Mon, 02 Nov 2026 21:13:43 GMT"
+      "pubDate": "Tue, 03 Nov 2026 13:33:11 GMT"
     },
     {
       "title": "Stock market after midterm elections: What S&P 500 history shows",
       "link": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
-      "pubDate": "Mon, 02 Nov 2026 17:57:35 GMT"
+      "pubDate": "Tue, 03 Nov 2026 18:21:05 GMT"
     },
     {
       "title": "Binance’s $6.3 billion hack raises questions about crypto wallet safety",
@@ -87,11 +92,6 @@
       "title": "Prediction market traders say an Anthropic IPO is near-certain this year after company filed with SEC",
       "link": "https://www.cnbc.com/2026/10/26/prediction-markets-think-anthropic-ipo-near-certain-in-2026.html",
       "pubDate": "Mon, 26 Oct 2026 20:08:57 GMT"
-    },
-    {
-      "title": "NBA enters prediction markets with Kalshi, Polymarket partnerships",
-      "link": "https://www.cnbc.com/2026/10/26/nba-kalshi-polymarket-prediction-markets.html",
-      "pubDate": "Mon, 26 Oct 2026 16:00:59 GMT"
     }
   ]
 }
