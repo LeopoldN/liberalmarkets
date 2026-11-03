@@ -521,17 +521,71 @@
     if (!S.zoom) {
       S.zoom = d3.zoom()
         .scaleExtent([0.5, 18])
+        // wheel/trackpad zoom is handled by smoothWheel below; drag + touch stay with d3
+        .filter((ev) => ev.type !== "wheel" && !ev.ctrlKey && !ev.button)
         .on("start", (ev) => {
+          if (wheelStepping) return;
+          stopWheel();
           if (ev.sourceEvent && ev.sourceEvent.type === "mousedown") svg.classed("dragging", true);
           S.obstacles = measureObstacles(); // cards don't move mid-gesture: measure once, not every frame
         })
         .on("zoom", (ev) => onZoom(ev.transform))
-        .on("end", () => { svg.classed("dragging", false); S.obstacles = null; });
+        .on("end", () => { if (wheelStepping) return; svg.classed("dragging", false); S.obstacles = null; });
       svg.call(S.zoom).on("dblclick.zoom", null);
+      svg.node().addEventListener("wheel", smoothWheel, { passive: false });
       svg.on("pointermove.coords", onPointerMove).on("pointerleave.coords", () => { $("ro-ll").textContent = "—"; });
       svg.on("click.reset", () => selectRegion(null));
     }
     S.zoom.translateExtent([[-W * 0.6, -H * 0.6], [W * 1.6, H * 1.6]]).extent([[0, 0], [W, H]]);
+  }
+
+  /* Smooth wheel zoom. d3 applies each mouse-wheel notch as an instant ~15% jump, which
+     reads as jitter on desktop; instead accumulate a target transform and ease towards
+     it, keeping the world point under the cursor pinned. */
+  let wheelTarget = null, wheelAnchor = null, wheelRaf = 0, wheelLast = 0, wheelStepping = false;
+  function smoothWheel(ev) {
+    ev.preventDefault();
+    const d = -ev.deltaY * (ev.deltaMode === 1 ? 0.05 : ev.deltaMode ? 1 : 0.002) * (ev.ctrlKey ? 10 : 1);
+    const [lo, hi] = S.zoom.scaleExtent();
+    const from = wheelTarget || S.t;
+    const k = Math.max(lo, Math.min(hi, from.k * Math.pow(2, d)));
+    const p = d3.pointer(ev, svg.node());
+    const w = from.invert(p);
+    wheelTarget = S.zoom.constrain()(d3.zoomIdentity.translate(p[0] - w[0] * k, p[1] - w[1] * k).scale(k),
+      [[0, 0], [S.W, S.H]], S.zoom.translateExtent());
+    wheelAnchor = p;
+    if (!wheelRaf) {
+      if (!S.obstacles) S.obstacles = measureObstacles();
+      wheelLast = performance.now();
+      wheelRaf = requestAnimationFrame(wheelStep);
+    }
+  }
+  function wheelStep(now) {
+    wheelRaf = 0;
+    if (!wheelTarget) return;
+    const cur = S.t, tgt = wheelTarget;
+    // frame-rate independent easing: ~30% of the remaining distance per 60 Hz frame
+    const a = 1 - Math.pow(0.7, Math.min(4, (now - wheelLast) / 16.7));
+    wheelLast = now;
+    let next;
+    if (Math.abs(Math.log(tgt.k / cur.k)) < 0.002 && Math.abs(tgt.x - cur.x) < 0.5 && Math.abs(tgt.y - cur.y) < 0.5) {
+      next = tgt;
+    } else {
+      const k = cur.k * Math.pow(tgt.k / cur.k, a);
+      // world point under the anchor in the target view stays under the anchor
+      const w = tgt.invert(wheelAnchor), c = cur.invert(wheelAnchor);
+      const wx = c[0] + (w[0] - c[0]) * a, wy = c[1] + (w[1] - c[1]) * a;
+      next = d3.zoomIdentity.translate(wheelAnchor[0] - wx * k, wheelAnchor[1] - wy * k).scale(k);
+    }
+    wheelStepping = true;
+    svg.call(S.zoom.transform, next);
+    wheelStepping = false;
+    if (next === tgt) { wheelTarget = null; S.obstacles = null; return; }
+    wheelRaf = requestAnimationFrame(wheelStep);
+  }
+  function stopWheel() {
+    if (wheelRaf) cancelAnimationFrame(wheelRaf);
+    wheelRaf = 0; wheelTarget = null;
   }
 
   let zoomRaf = 0;
