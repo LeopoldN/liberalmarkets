@@ -526,10 +526,13 @@
         .on("start", (ev) => {
           if (wheelStepping) return;
           stopWheel();
-          if (ev.sourceEvent && ev.sourceEvent.type === "mousedown") svg.classed("dragging", true);
           S.obstacles = measureObstacles(); // cards don't move mid-gesture: measure once, not every frame
         })
-        .on("zoom", (ev) => onZoom(ev.transform))
+        .on("zoom", (ev) => {
+          // only once the pointer actually moves: setting this on mousedown would swallow oblast clicks
+          if (ev.sourceEvent && ev.sourceEvent.type === "mousemove") svg.classed("dragging", true);
+          onZoom(ev.transform);
+        })
         .on("end", () => { if (wheelStepping) return; svg.classed("dragging", false); S.obstacles = null; });
       svg.call(S.zoom).on("dblclick.zoom", null);
       svg.node().addEventListener("wheel", smoothWheel, { passive: false });

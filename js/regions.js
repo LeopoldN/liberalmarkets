@@ -117,8 +117,13 @@
     const fmt = (v) => (share ? `${+v.toFixed(1)}%` : `${v}`);
     const bar = sorted.map((s) => `<span style="flex:${val(s)} 0 0;background:${partyColor(s.party)}" title="${esc((R.parties[s.party] || {}).name || keyName(s.party))}: ${fmt(val(s))}"></span>`).join("")
       + (other > 0.05 ? `<span class="other" style="flex:${other} 0 0" title="Other: ${fmt(other)}"></span>` : "");
+    // "Body (note)": the trailing parenthetical becomes a subtitle, minus the unit already shown
+    const m = /^(.*?)\s*\(([^()]*)\)\s*$/.exec(e.body || "");
+    const title = m ? m[1] : e.body || "Election";
+    const note = m ? m[2].replace(/^(vote share,?\s*%?|seats)\s*[;,]?\s*/i, "") : "";
     return `<div class="el">
-      <div class="el-h"><span class="el-b">${esc(e.body || "Election")}</span><span class="el-y">${esc(e.year || "")}${share ? " · vote share" : total ? ` · ${total} seats` : ""}</span></div>
+      <div class="el-h"><span class="el-yr">${esc(e.year || "")}</span><span class="el-b">${esc(title)}</span></div>
+      <div class="el-meta">${share ? "Vote share" : total ? `${total} seats` : ""}${note ? ` · ${esc(note)}` : ""}</div>
       <div class="el-bar" role="img" aria-label="Seat distribution">${bar}</div>
       <div class="pp-list">${sorted.map((s) => partyRow(s.party, fmt(val(s)))).join("")}${other > 0.05 ? `<div class="pp-other">Other${share ? "" : " / vacant"} <span>${fmt(other)}</span></div>` : ""}</div>
       ${e.source && safeUrl(e.source.url) ? `<a class="el-src" href="${esc(e.source.url)}" target="_blank" rel="noopener">Source: ${esc(e.source.title || "link")}</a>` : ""}
@@ -131,7 +136,7 @@
     const els = (pol.elections || []).map(electionBlock).filter(Boolean);
     const html = (pol.note ? `<p class="rg-text">${esc(pol.note)}</p>` : "")
       + (gov.length ? `<div class="pp-k">Governing</div><div class="pp-list">${gov.map((k) => partyRow(k)).join("")}</div>` : "")
-      + (els.length ? `<div class="pp-k">Elections</div>${els.join("")}` : "");
+      + (els.length ? `<div class="pp-k">Elections</div><div class="el-list">${els.join("")}</div>` : "");
     return html;
   }
 
@@ -165,6 +170,7 @@
     const pol = era && R.politics[iso] ? R.politics[iso][era.id] : null;
     const eras = (window.UkraineTimeline && window.UkraineTimeline.eras) || [];
     const kind = p.kind ? p.kind.charAt(0) + p.kind.slice(1).toLowerCase() : "Oblast";
+    const polHtml = politicsBlock(pol && pol.politics);
     const regions = d && d.historicalRegions && d.historicalRegions.length ? d.historicalRegions.join(", ") : "";
 
     let eraBlock;
@@ -201,9 +207,13 @@
         <div class="er-head"><span class="er-years">${era ? esc(U.fmtRange(era.startYear, era.endYear)) : ""}</span></div>
         <div class="rg-era-name">${era ? esc(era.name) : "No era selected"}</div>
       </div>
-      ${eraBlock}
-      ${section("Politics", politicsBlock(pol && pol.politics))}
-      ${section("Armed groups & militias", groupsBlock(pol && pol.armedGroups))}
+      <div class="rg-cols${polHtml ? " split" : ""}">
+        <div class="rg-col">
+          ${eraBlock}
+          ${section("Armed groups & militias", groupsBlock(pol && pol.armedGroups))}
+        </div>
+        ${polHtml ? `<div class="rg-col rg-pol">${section("Politics & elections", polHtml)}</div>` : ""}
+      </div>
 
       ${section("About the region", `<div class="rg-wiki" id="rg-wiki"><div class="rg-wiki-loading">Loading Wikipedia summary…</div></div>`)}
       ${section("Overall history", d && d.overview ? `<p class="rg-text">${esc(d.overview)}</p>` : "")}
@@ -229,8 +239,11 @@
       const thumb = w.thumbnail && safeUrl(w.thumbnail.source);
       box.innerHTML = `
         ${thumb ? `<img class="rg-wiki-img" src="${esc(thumb)}" alt="" loading="lazy">` : ""}
-        <p class="rg-text">${esc(w.extract)}</p>
-        <a class="rg-wiki-more" href="${esc(url)}" target="_blank" rel="noopener">Read more on Wikipedia</a>`;
+        <div class="rg-wiki-body">
+          <p class="rg-text">${esc(w.extract)}</p>
+          <a class="rg-wiki-more" href="${esc(url)}" target="_blank" rel="noopener">Read more on Wikipedia</a>
+        </div>`;
+      box.classList.toggle("has-img", !!thumb);
     });
   }
 

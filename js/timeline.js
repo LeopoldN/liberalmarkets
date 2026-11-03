@@ -283,7 +283,14 @@
       });
       $("er-ovs").innerHTML = ovs.join("");
       const ev = (e.keyEvents || []).slice().sort((a, b) => (a.year || 0) - (b.year || 0));
-      $("er-events").innerHTML = ev.map((k) => `<li><span class="y">${esc(U.fmtYear(k.year))}</span><span class="t">${esc(k.text || "")}</span></li>`).join("");
+      // group same-year events under one year marker on the rail
+      const byYear = [];
+      ev.forEach((k) => {
+        const last = byYear[byYear.length - 1];
+        if (last && last.year === k.year) last.items.push(k.text || "");
+        else byYear.push({ year: k.year, items: [k.text || ""] });
+      });
+      $("er-events").innerHTML = byYear.map((g) => `<li><span class="y">${esc(U.fmtYear(g.year))}</span><ul class="t">${g.items.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></li>`).join("");
       const notes = T.data && T.data.meta && T.data.meta.notes;
       $("er-note").textContent = T.isPlaceholder ? "Sample data shown until the history dataset loads." : (notes || "");
       $("tl-readout").scrollTop = 0;
