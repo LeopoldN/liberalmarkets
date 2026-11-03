@@ -1,0 +1,383 @@
+{
+ "_note": "Hand-picked Wikimedia Commons photographs for the History tab postcards. Chosen individually: no war damage, maps or charts.",
+ "oblasts": {
+  "UA-05": [
+   {
+    "file": "Pałac_Grocholskich,_Woronowica_P1520434.jpg",
+    "caption": "Grocholski Palace, Voronovytsia"
+   },
+   {
+    "file": "Тульчин._Старий_палац_(Потоцьких).jpg",
+    "caption": "Potocki Palace, Tulchyn"
+   },
+   {
+    "file": "St_Nicholas_church_Vin_2010_G1.jpg",
+    "caption": "St Nicholas Church, Vinnytsia"
+   }
+  ],
+  "UA-07": [
+   {
+    "file": "Olyka_castle_1.jpg",
+    "caption": "Olyka Castle"
+   },
+   {
+    "file": "Lutsk_castle_tower.jpg",
+    "caption": "Lubart's Castle, Lutsk"
+   },
+   {
+    "file": "Човен_та_Світязь.jpg",
+    "caption": "Lake Svitiaz"
+   }
+  ],
+  "UA-09": [
+   {
+    "file": "Vladimir_Dal's_house_in_Luhansk.jpg",
+    "caption": "Volodymyr Dal's house, Luhansk"
+   },
+   {
+    "file": "Donec_near_shepilovo.JPG",
+    "caption": "The Siverskyi Donets river"
+   },
+   {
+    "file": "Mist_over_a_river_in_Luhansk.jpg",
+    "caption": "Morning mist on the river"
+   }
+  ],
+  "UA-12": [
+   {
+    "file": "Dnipropetrovsk_-_Aug_2013_-_005.jpg",
+    "caption": "The Dnipro at Dnipro"
+   },
+   {
+    "file": "Екатеринослав._Екатерининский_проспект._Почтовая_открытка.jpg",
+    "caption": "Yekaterinoslav on a 1910 postcard"
+   },
+   {
+    "file": "Orthodox_Church_of_Saint_Nicholas_Kamianske_2.jpg",
+    "caption": "St Nicholas Church, Kamianske"
+   }
+  ],
+  "UA-14": [
+   {
+    "file": "Sviatohirsk_Lavra_-_05.jpg",
+    "caption": "Sviatohirsk Lavra"
+   },
+   {
+    "file": "Ніжний_ранковий_світло.jpg",
+    "caption": "Holy Mountains National Nature Park"
+   },
+   {
+    "file": "Mariupol_2007_(26).jpg",
+    "caption": "Mariupol in 2007"
+   }
+  ],
+  "UA-18": [
+   {
+    "file": "Кам'яне_Село.jpg",
+    "caption": "Kamiane Selo, the Stone Village"
+   },
+   {
+    "file": "Carmelite_Monastery_in_Berdychiv_1.jpg",
+    "caption": "Carmelite Monastery, Berdychiv"
+   },
+   {
+    "file": "Centre_of_Zhytomyr_at_night.jpg",
+    "caption": "Zhytomyr at night"
+   }
+  ],
+  "UA-21": [
+   {
+    "file": "Червоні_карпатські_гори.jpg",
+    "caption": "Carpathian Biosphere Reserve"
+   },
+   {
+    "file": "Мала_Гора_поблизу_Берегова_-_виноградний_рай.jpg",
+    "caption": "Vineyards near Berehove"
+   },
+   {
+    "file": "Kolodne_Church.jpg",
+    "caption": "Wooden church, Kolodne"
+   }
+  ],
+  "UA-23": [
+   {
+    "file": "Запорожье,_2021_год,_32.jpg",
+    "caption": "Zaporizhzhia in 2021"
+   },
+   {
+    "file": "Будинок_чоловічої_класичної_гімназії_Бердянськ_5.jpg",
+    "caption": "Old gymnasium, Berdiansk"
+   },
+   {
+    "file": "Tokmak_Tserkva_Sergiya_Radonez'kogo_05_(Balanovka)_(YDS_8437).JPG",
+    "caption": "Church in Tokmak"
+   }
+  ],
+  "UA-26": [
+   {
+    "file": "Hutsul_-_Ivano-Frankivsk_region.jpg",
+    "caption": "A Hutsul playing the trembita"
+   },
+   {
+    "file": "Hutsuls_-_wedding.jpg",
+    "caption": "Hutsul wedding, Vorokhta"
+   },
+   {
+    "file": "Манявський_водоспад_після_дощу.jpg",
+    "caption": "Maniava waterfall"
+   }
+  ],
+  "UA-30": [
+   {
+    "file": "Blue_hour_on_Sofia_Square_Kiev_Ukraine.jpg",
+    "caption": "Sofia Square at blue hour"
+   },
+   {
+    "file": "Panoramic_view_to_the_Podil_district_in_Kyiv.jpg",
+    "caption": "The Podil district"
+   },
+   {
+    "file": "Будинок_з_химерами,_серпень_2019.jpg",
+    "caption": "House with Chimaeras"
+   }
+  ],
+  "UA-32": [
+   {
+    "file": "Oleksandriia_Park_in_Bila_Tserkva.jpg",
+    "caption": "Oleksandriia Park, Bila Tserkva"
+   },
+   {
+    "file": "Церква_Різдва_Богородиці_(дер.),_село_Тулинці_2.jpg",
+    "caption": "Wooden church, Tulyntsi"
+   },
+   {
+    "file": "Площа_Богдана_Хмельницького_Пер-Хм.jpg",
+    "caption": "Khmelnytsky Square, Pereiaslav"
+   }
+  ],
+  "UA-35": [
+   {
+    "file": "Вечірні_тихі_витоки_Інгула.jpg",
+    "caption": "Headwaters of the Inhul"
+   },
+   {
+    "file": "Розумівка_церква_2017_4.jpg",
+    "caption": "Church at Rozumivka"
+   },
+   {
+    "file": "Верстовий_стовп_з_Мошориного.jpg",
+    "caption": "Cossack granite milestone, Moshoryne"
+   }
+  ],
+  "UA-40": [
+   {
+    "file": "St_Vladimir_Chersonesos_2012_G8.jpg",
+    "caption": "St Vladimir's Cathedral, Chersonesus"
+   },
+   {
+    "file": "Balaklava,_Sevastopol.jpg",
+    "caption": "Balaklava Bay"
+   },
+   {
+    "file": "1356_Памятник_затопленным_кораблям.jpg",
+    "caption": "Monument to the Sunken Ships"
+   }
+  ],
+  "UA-43": [
+   {
+    "file": "Sudak,_Crimea,_The_Genoese_Fortress.jpg",
+    "caption": "Genoese fortress, Sudak"
+   },
+   {
+    "file": "Mountains_by_the_sea,_Горы_на_побережье,_море,_Судак,_Крым,_Crimea.jpg",
+    "caption": "The coast near Novyi Svit"
+   },
+   {
+    "file": "Ялта_Южный_берег_ДДима.jpg",
+    "caption": "Yalta and the Crimean Mountains"
+   }
+  ],
+  "UA-46": [
+   {
+    "file": "Вариант_Тустани.jpg",
+    "caption": "Carpathian ridges near Tustan"
+   },
+   {
+    "file": "Вид_з_гори_Парашка.jpg",
+    "caption": "View from Mount Parashka"
+   },
+   {
+    "file": "Сколівські_Бескиди._Вид_на_Тухольку..JPG",
+    "caption": "The Skole Beskids"
+   }
+  ],
+  "UA-48": [
+   {
+    "file": "НІАЗ_Ольвія_09.jpg",
+    "caption": "Ruins of ancient Olbia"
+   },
+   {
+    "file": "Кінбурнська_коса_восени.jpg",
+    "caption": "Kinburn Spit in autumn"
+   },
+   {
+    "file": "Будинок_штабу_флоту_1796_року_4.jpg",
+    "caption": "Fleet headquarters of 1796, Mykolaiv"
+   }
+  ],
+  "UA-51": [
+   {
+    "file": "Potěmkinovy_schody.jpg",
+    "caption": "The Potemkin Stairs, Odesa"
+   },
+   {
+    "file": "Operniy-5.jpg",
+    "caption": "Odesa Opera House"
+   },
+   {
+    "file": "Bilhorod_Dnistrovskyi.jpg",
+    "caption": "Akkerman Fortress"
+   }
+  ],
+  "UA-53": [
+   {
+    "file": "Myrgorod-resort_entrance.JPG",
+    "caption": "The resort at Myrhorod"
+   },
+   {
+    "file": "Украина,_Полтава_-_Корпусный_сад_02.jpg",
+    "caption": "Korpusnyi Garden, Poltava"
+   },
+   {
+    "file": "Троїцька_церква._Котельва.JPG",
+    "caption": "Trinity Church, Kotelva"
+   }
+  ],
+  "UA-56": [
+   {
+    "file": "Дубенський_замок,_вигляд_з_боку_р.Іква.jpg",
+    "caption": "Dubno Castle from the Ikva"
+   },
+   {
+    "file": "Ostroh_Academy.jpg",
+    "caption": "Ostroh Academy"
+   },
+   {
+    "file": "Базальтове.jpg",
+    "caption": "Basalt pillars at Bazaltove"
+   }
+  ],
+  "UA-59": [
+   {
+    "file": "Skyline_of_Sumy_(cropped).jpg",
+    "caption": "Sumy"
+   },
+   {
+    "file": "Георгіївська_церква_(мур.),_Охтирка_P1490651.jpg",
+    "caption": "St George's Church, Okhtyrka"
+   },
+   {
+    "file": "Сумська_Альтанка_зима_ніч.jpg",
+    "caption": "The Altanka, Sumy, on a winter night"
+   }
+  ],
+  "UA-61": [
+   {
+    "file": "1._Почаївська_лавра.JPG",
+    "caption": "Pochaiv Lavra"
+   },
+   {
+    "file": "61-224-0001_Zbarazh_Castle_RB_18.jpg",
+    "caption": "Zbarazh Castle"
+   },
+   {
+    "file": "Dzhuryn_-_Waterfall_Chervonohorod.jpg",
+    "caption": "Dzhuryn Waterfall"
+   }
+  ],
+  "UA-63": [
+   {
+    "file": "Успенський_собор_взимку,_аерофото.jpg",
+    "caption": "Dormition Cathedral in winter"
+   },
+   {
+    "file": "Будинок_держпромисловості,_Харків_DJI_0068.jpg",
+    "caption": "Derzhprom, Kharkiv"
+   },
+   {
+    "file": "Blagoveschensky_Cathedral_-_01.jpg",
+    "caption": "Annunciation Cathedral"
+   }
+  ],
+  "UA-65": [
+   {
+    "file": "Beach_in_Shchaslyvtseve.jpg",
+    "caption": "The beach at Shchaslyvtseve"
+   },
+   {
+    "file": "Typical_agricultural_landscape_of_Kherson_Oblast.jpg",
+    "caption": "The farmland of the Kherson steppe"
+   },
+   {
+    "file": "Будинок_колишньої_Херсонської_міської_думи_(мур.)_2.jpg",
+    "caption": "Former City Duma, Kherson"
+   }
+  ],
+  "UA-68": [
+   {
+    "file": "Kamieniec_Podolski_widok_01.jpg",
+    "caption": "Kamianets-Podilskyi Castle"
+   },
+   {
+    "file": "Стара_фортеця.jpg",
+    "caption": "The Old Fortress"
+   },
+   {
+    "file": "Starokostyantyniv_veja_1.jpg",
+    "caption": "Tower at Starokostiantyniv"
+   }
+  ],
+  "UA-71": [
+   {
+    "file": "Ros'_River_in_Korsun-Shevchenkivskyi.jpg",
+    "caption": "The Ros at Korsun-Shevchenkivskyi"
+   },
+   {
+    "file": "Sofievka16.JPG",
+    "caption": "Sofiyivka Park, Uman"
+   },
+   {
+    "file": "Zolotonosha_Church.jpg",
+    "caption": "Church in Zolotonosha"
+   }
+  ],
+  "UA-74": [
+   {
+    "file": "8116_Чернигов._Вид_на_Борисоглебскую_церковь_и_Спасопреображенский_собор.jpg",
+    "caption": "Transfiguration Cathedral, Chernihiv"
+   },
+   {
+    "file": "Kachanivka_panorama.jpg",
+    "caption": "Kachanivka Palace"
+   },
+   {
+    "file": "Р._Десна_Новгород-Сіверський.jpg",
+    "caption": "The Desna at Novhorod-Siverskyi"
+   }
+  ],
+  "UA-77": [
+   {
+    "file": "Xotin1.JPG",
+    "caption": "Khotyn Fortress"
+   },
+   {
+    "file": "Universitat_Czernowitz.jpg",
+    "caption": "Chernivtsi University"
+   },
+   {
+    "file": "Chernivtsi_Teatr_DSC_0903_73-101-0016.JPG",
+    "caption": "Chernivtsi Theatre"
+   }
+  ]
+ }
+}

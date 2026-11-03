@@ -104,6 +104,7 @@
 
   function renderSource() {
     const el = $("tl-src");
+    if (!el) return;
     const n = T.eras.length;
     if (T.isPlaceholder) {
       el.innerHTML = `<span class="warn">Sample data</span> · history dataset not loaded yet`;
@@ -115,71 +116,98 @@
     }
   }
 
-  /* ---------------- track rendering ---------------- */
+  /* ---------------- track rendering ----------------
+     A namysto, the Ukrainian necklace: one bead per era, sized by its length, strung in a swag
+     per age. The selected era wears the dukach, the gold coin pendant. */
+  const AGES = [
+    { id: "roots", label: "Ancient roots", from: -Infinity },
+    { id: "rus", label: "Kyivan Rus'", from: 882 },
+    { id: "pl", label: "Lithuania & Poland", from: 1349 },
+    { id: "cossack", label: "Cossack Hetmanate", from: 1648 },
+    { id: "empires", label: "Empires", from: 1775 },
+    { id: "soviet", label: "Revolution & Soviet rule", from: 1917 },
+    { id: "ind", label: "Independence", from: 1991 },
+  ];
+  const STONES = { roots: "#c98a2e", rus: "#8e2233", pl: "#1f8f8a", cossack: "#c8321f", empires: "#2a4f9c", soviet: "#2b2626", ind: "#e0ae22" };
+  const ageIndex = (e) => { let a = 0; AGES.forEach((g, i) => { if (e.startYear >= g.from) a = i; }); return a; };
 
-  let geom = null; // { x0, x1, segW, y }
+  let geom = null; // { x0, x1, segW, ys, w, h }
 
   function renderTrack() {
-    const w = trackEl.clientWidth || 600, h = trackEl.clientHeight || 60;
+    const w = trackEl.clientWidth || 600, h = trackEl.clientHeight || 96;
     const n = T.eras.length;
-    const pad = 8;
+    const pad = 12;
     const x0 = pad, x1 = w - pad;
-    const gap = n > 40 ? 1 : 3;
     const segW = (x1 - x0) / n;
-    const y = Math.round(h * 0.5);
-    geom = { x0, x1, segW, y, gap, w, h };
+    const top = 30, sag = Math.min(12, h * 0.12);
+
+    // the swags: one per age, between its first and last bead
+    const spans = [];
+    T.eras.forEach((e, i) => {
+      const a = ageIndex(e), last = spans[spans.length - 1];
+      if (last && last.a === a) last.to = i; else spans.push({ a, from: i, to: i });
+    });
+    const xAt = (i) => x0 + (i + 0.5) * segW;
+    const ys = T.eras.map((e, i) => {
+      const sp = spans.find((q) => i >= q.from && i <= q.to);
+      const a = sp.from - 0.5, b = sp.to + 0.5, t = ((i - a) / (b - a)) * 2 - 1;
+      return top + sag * (1 - t * t);
+    });
+    geom = { x0, x1, segW, ys, w, h };
 
     const svg = d3.select(trackEl).selectAll("svg").data([0]).join("svg");
-    svg.attr("viewBox", `0 0 ${w} ${h}`).attr("preserveAspectRatio", "none");
+    svg.attr("viewBox", `0 0 ${w} ${h}`).attr("preserveAspectRatio", "xMidYMin meet");
     svg.selectAll("*").remove();
 
-    const segs = svg.append("g");
-    T.eras.forEach((e, i) => {
-      const sx = x0 + i * segW;
-      const g = segs.append("g").attr("class", "tl-g").attr("data-i", i);
-      g.append("rect").attr("class", "tl-seg tl-seg-hit").attr("x", sx).attr("y", 0).attr("width", segW).attr("height", h);
-      g.append("rect").attr("class", "tl-seg-bar" + (e.confidence === "low" ? " conf-low" : ""))
-        .attr("x", sx + gap / 2).attr("y", y - 2).attr("width", Math.max(1, segW - gap)).attr("height", 4).attr("rx", 2);
+    const defs = svg.append("defs");
+    Object.entries(STONES).forEach(([id, c]) => {
+      const g = defs.append("radialGradient").attr("id", `nk-${id}`).attr("cx", "36%").attr("cy", "30%").attr("r", "75%");
+      g.append("stop").attr("offset", "0").attr("stop-color", d3.color(c).brighter(1.4));
+      g.append("stop").attr("offset", ".5").attr("stop-color", c);
+      g.append("stop").attr("offset", "1").attr("stop-color", d3.color(c).darker(1.1));
     });
+    const coin = defs.append("radialGradient").attr("id", "nk-coin").attr("cx", "38%").attr("cy", "32%").attr("r", "80%");
+    coin.append("stop").attr("offset", "0").attr("stop-color", "#fff2b8");
+    coin.append("stop").attr("offset", ".55").attr("stop-color", "#e0ae22");
+    coin.append("stop").attr("offset", "1").attr("stop-color", "#94690c");
 
-    // century (CE) and millennium markers, interpolated inside each era segment
-    const marks = svg.append("g").attr("class", "tl-marks");
-    T.eras.forEach((e, i) => {
-      const a = e.startYear, b = isFinite(e.endYear) ? e.endYear : a;
-      if (b <= a) return;
-      const sx = x0 + i * segW;
-      const step = a >= 0 && segW / ((b - a) / 100) >= 3 ? 100 : 1000;
-      for (let yv = Math.ceil(a / step) * step; yv < b; yv += step) {
-        if (yv === a) continue;
-        const mx = sx + segW * (yv - a) / (b - a);
-        const mil = yv % 1000 === 0;
-        marks.append("line").attr("class", "tl-mtick" + (mil ? " mil" : "")).attr("x1", mx).attr("x2", mx).attr("y1", y - 4).attr("y2", y - (mil ? 9 : 7))
-          .append("title").text(U.fmtYear(yv));
-      }
-    });
+    // the cord
+    const pts = T.eras.map((e, i) => [xAt(i), ys[i]]);
+    svg.append("path").attr("class", "nk-cord").attr("d", d3.line().curve(d3.curveCatmullRom)([[x0 - 8, top], ...pts, [x1 + 8, top]]));
 
-    // year labels at era starts, below the rail; skip ones that would collide
-    const years = svg.append("g").attr("class", "tl-years");
+    // each age's name and first year, above its swag, where it fits
     let lastRight = -1e9;
-    const minGap = 52;
-    let lastX = -1e9;
-    T.eras.forEach((e, i) => {
-      const sx = x0 + i * segW;
-      const lw = shortYear(e.startYear).length * 6.2;
-      const left = i === 0 ? sx : sx - lw / 2;
-      if (left < lastRight + 10) return;
-      lastRight = left + lw; lastX = sx;
-      years.append("line").attr("class", "tl-tick").attr("x1", sx).attr("x2", sx).attr("y1", y + 6).attr("y2", y + 10);
-      years.append("text").attr("class", "tl-year").attr("data-i", i).attr("x", sx).attr("y", y + 21).attr("text-anchor", i === 0 ? "start" : "middle").text(shortYear(e.startYear));
+    spans.forEach((sp) => {
+      const x = x0 + sp.from * segW, room = (sp.to - sp.from + 1) * segW - 6;
+      const year = shortYear(T.eras[sp.from].startYear);
+      const full = `${year} · ${AGES[sp.a].label}`;
+      const label = full.length * 5.6 < room ? full : year.length * 5.6 < room ? year : "";
+      if (!label || x < lastRight) return;
+      lastRight = x + label.length * 5.6;
+      svg.append("line").attr("class", "nk-mark").attr("x1", x).attr("x2", x).attr("y1", 6).attr("y2", top - 2);
+      svg.append("text").attr("class", "nk-age").attr("x", x + 4).attr("y", 13).text(label);
     });
-    const last = T.eras[n - 1];
-    if (last && isFinite(last.endYear) && x1 - lastX > minGap * 0.8) {
-      years.append("line").attr("class", "tl-tick").attr("x1", x1).attr("x2", x1).attr("y1", y + 6).attr("y2", y + 10);
-      years.append("text").attr("class", "tl-year").attr("x", x1).attr("y", y + 21).attr("text-anchor", "end").text(shortYear(last.endYear));
-    }
 
-    svg.append("text").attr("class", "tl-segname active").attr("id", "tl-active-name").attr("y", y - 11);
-    svg.append("circle").attr("class", "tl-handle").attr("id", "tl-handle").attr("r", 7).attr("cy", y);
+    // beads, with a full-height hit area each
+    const beads = svg.append("g");
+    const maxR = Math.min(segW * 0.47, 12);
+    T.eras.forEach((e, i) => {
+      const yrs = Math.max(1, (isFinite(e.endYear) ? e.endYear : e.startYear) - e.startYear);
+      const r = Math.max(Math.min(3.4, maxR), Math.min(maxR, 3.6 + 2.3 * Math.log10(yrs)));
+      const g = beads.append("g").attr("class", "tl-g").attr("data-i", i);
+      g.append("rect").attr("class", "tl-seg").attr("x", x0 + i * segW).attr("y", 0).attr("width", segW).attr("height", h);
+      g.append("circle").attr("class", "nk-b").attr("cx", xAt(i)).attr("cy", ys[i]).attr("r", r).style("fill", `url(#nk-${AGES[ageIndex(e)].id})`);
+    });
+
+    // the dukach: ribbon, bow and gold coin
+    const tryzub = (document.querySelector(".tb-try path") || { getAttribute: () => "" }).getAttribute("d");
+    const pend = svg.append("g").attr("id", "nk-pendant").attr("class", "nk-pendant");
+    pend.append("path").attr("class", "nk-rib-b").attr("d", "M0 7L-4 20L0 18Z");
+    pend.append("path").attr("class", "nk-rib-g").attr("d", "M0 7L4 20L0 18Z");
+    pend.append("circle").attr("class", "nk-coin").attr("cy", 32).attr("r", 15);
+    pend.append("circle").attr("class", "nk-coin-r").attr("cy", 32).attr("r", 12.5);
+    pend.append("path").attr("class", "nk-try").attr("d", tryzub).attr("transform", "translate(-6.05 22) scale(.05)");
+    svg.append("text").attr("class", "nk-name").attr("id", "tl-active-name");
 
     trackEl.setAttribute("aria-valuemax", String(n - 1));
     updateTrack();
@@ -192,23 +220,37 @@
 
   function updateTrack() {
     if (!geom) return;
-    const { x0, segW, w } = geom;
+    const { x0, segW, w, ys } = geom;
     const i = T.idx;
-    d3.select(trackEl).selectAll(".tl-seg-bar").classed("active", function () { return +this.parentNode.getAttribute("data-i") === i; })
-      .classed("hover", function () { return +this.parentNode.getAttribute("data-i") === T.hover && T.hover !== i; });
-    d3.select(trackEl).selectAll(".tl-year").classed("active", function () { return +this.getAttribute("data-i") === i; });
+    d3.select(trackEl).selectAll(".tl-g").classed("active", function () { return +this.getAttribute("data-i") === i; })
+      .classed("hover", function () { return +this.getAttribute("data-i") === T.hover && T.hover !== i; });
     trackEl.classList.toggle("present", T.present);
     readoutEl.classList.toggle("present", T.present);
     const e = T.eras[i];
     if (!e) return;
-    const cx = x0 + (i + 0.5) * segW;
-    d3.select("#tl-handle").attr("cx", cx);
+    const cx = x0 + (i + 0.5) * segW, cy = ys[i];
+    d3.select("#nk-pendant").attr("transform", `translate(${cx.toFixed(1)} ${cy.toFixed(1)})`);
+    // beside the coin, on whichever side has room; long names wrap onto two lines
     const nameEl = d3.select("#tl-active-name");
-    nameEl.text(e.name || "");
-    // keep the name inside the track
-    const est = (e.name || "").length * 6.4;
-    const anchor = cx - est / 2 < 2 ? "start" : cx + est / 2 > w - 2 ? "end" : "middle";
-    nameEl.attr("x", anchor === "start" ? Math.max(2, cx - 8) : anchor === "end" ? Math.min(w - 2, cx + 8) : cx).attr("text-anchor", anchor);
+    const name = e.name || "", charW = 7.2;
+    const roomR = w - cx - 24, roomL = cx - 24;
+    const right = name.length * charW <= roomR || roomR >= roomL;
+    const room = right ? roomR : roomL;
+    const nameX = right ? cx + 22 : cx - 22;
+    let lines = [name];
+    if (name.length * charW > room) {
+      const words = name.split(" "), first = [];
+      while (words.length > 1 && (first.join(" ").length + words[0].length + 1) * charW <= room) first.push(words.shift());
+      lines = first.length ? [first.join(" "), words.join(" ")] : [name];
+    }
+    nameEl.attr("y", cy + (lines.length > 1 ? 30 : 37)).attr("text-anchor", right ? "start" : "end");
+    nameEl.selectAll("tspan").remove();
+    nameEl.text(null);
+    lines.forEach((t, n) => nameEl.append("tspan").attr("x", nameX).attr("dy", n ? 16 : 0).text(t));
+    // an estimate placed it; the real width decides whether it must shrink to stay on screen
+    nameEl.style("font-size", null);
+    const actual = nameEl.node().getBBox().width;
+    if (actual > room) nameEl.style("font-size", `${Math.max(9, Math.floor(14 * (room / actual) * 10) / 10)}px`);
     trackEl.setAttribute("aria-valuenow", String(i));
     trackEl.setAttribute("aria-valuetext", `${e.name}, ${U.fmtRange(e.startYear, e.endYear)}`);
   }
@@ -260,12 +302,7 @@
   function renderReadout(e, animate) {
     const apply = () => {
       $("er-years").textContent = U.fmtRange(e.startYear, e.endYear);
-      const conf = $("er-conf");
-      conf.className = "er-conf" + (e.confidence ? " " + e.confidence : "");
-      conf.textContent = e.confidence ? `${e.confidence[0].toUpperCase()}${e.confidence.slice(1)} confidence` : "";
-      conf.title = e.confidence === "low" ? "Boundaries for this era are rough approximations" : e.confidence === "medium" ? "Boundaries are approximate" : "";
       $("er-name").textContent = e.name || "Untitled era";
-      $("er-polity").textContent = e.polity && e.polity !== e.name ? e.polity : "";
       $("er-summary").textContent = e.summary || "";
       const ovs = [];
       // list what the map actually drew (it may suppress the territory, and it assigns each

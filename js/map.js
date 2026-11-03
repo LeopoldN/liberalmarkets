@@ -46,87 +46,9 @@
   };
 
   /** Extra Ukrainian cities (not oblast centres). tier 2 = major, 3 = minor. */
-  const UA_CITIES = [
-    { name: "Kryvyi Rih",  ll: [33.392, 47.910], tier: 2 },
-    { name: "Mariupol",    ll: [37.550, 47.097], tier: 2 },
-    { name: "Kramatorsk",  ll: [37.556, 48.739], tier: 3 },
-    { name: "Melitopol",   ll: [35.365, 46.849], tier: 3 },
-    { name: "Kerch",       ll: [36.471, 45.356], tier: 3 },
-    { name: "Izmail",      ll: [28.837, 45.352], tier: 3 },
-    { name: "Bila Tserkva",ll: [30.112, 49.799], tier: 3 },
-    { name: "Kremenchuk",  ll: [33.416, 49.066], tier: 3 },
-    { name: "Bakhmut",     ll: [38.000, 48.595], tier: 3 },
-    { name: "Berdiansk",   ll: [36.784, 46.756], tier: 3 },
-    { name: "Yalta",       ll: [34.166, 44.495], tier: 3 },
-    { name: "Uman",        ll: [30.221, 48.749], tier: 3 },
-    { name: "Chornobyl",   ll: [30.219, 51.276], tier: 3 },
-  ];
 
   /** Peripheral cities. cap = national capital. */
-  const EXT_CITIES = [
-    { name: "Moscow",     ll: [37.617, 55.756], cap: true },
-    { name: "Minsk",      ll: [27.562, 53.905], cap: true },
-    { name: "Warsaw",     ll: [21.012, 52.230], cap: true },
-    { name: "Chișinău",   ll: [28.864, 47.011], cap: true },
-    { name: "Bucharest",  ll: [26.103, 44.427], cap: true },
-    { name: "Budapest",   ll: [19.040, 47.498], cap: true },
-    { name: "Bratislava", ll: [17.108, 48.149], cap: true },
-    { name: "Vilnius",    ll: [25.280, 54.687], cap: true },
-    { name: "Riga",       ll: [24.105, 56.950], cap: true },
-    { name: "Sofia",      ll: [23.322, 42.698], cap: true },
-    { name: "Belgrade",   ll: [20.457, 44.787], cap: true },
-    { name: "Tbilisi",    ll: [44.793, 41.715], cap: true },
-    { name: "Ankara",     ll: [32.860, 39.933], cap: true },
-    { name: "Istanbul",   ll: [28.978, 41.008] },
-    { name: "Rostov-on-Don", ll: [39.702, 47.236] },
-    { name: "Voronezh",   ll: [39.200, 51.672] },
-    { name: "Belgorod",   ll: [36.598, 50.600] },
-    { name: "Kursk",      ll: [36.187, 51.730] },
-    { name: "Bryansk",    ll: [34.365, 53.243] },
-    { name: "Smolensk",   ll: [32.040, 54.783] },
-    { name: "Krasnodar",  ll: [38.976, 45.035] },
-    { name: "Novorossiysk", ll: [37.768, 44.724] },
-    { name: "Volgograd",  ll: [44.513, 48.708] },
-    { name: "Tiraspol",   ll: [29.643, 46.840] },
-    { name: "Gomel",      ll: [30.975, 52.441] },
-    { name: "Brest",      ll: [23.685, 52.098] },
-    { name: "Kraków",     ll: [19.945, 50.065] },
-    { name: "Lublin",     ll: [22.568, 51.247] },
-    { name: "Rzeszów",    ll: [22.004, 50.041] },
-    { name: "Košice",     ll: [21.261, 48.716] },
-    { name: "Debrecen",   ll: [21.627, 47.532] },
-    { name: "Iași",       ll: [27.601, 47.159] },
-    { name: "Suceava",    ll: [26.256, 47.651] },
-    { name: "Constanța",  ll: [28.635, 44.160] },
-    { name: "Galați",     ll: [28.050, 45.435] },
-    { name: "Samsun",     ll: [36.330, 41.287] },
-    { name: "Batumi",     ll: [41.636, 41.642] },
-    { name: "Sukhumi",    ll: [41.020, 43.003] },
-  ];
 
-  const COUNTRY_LABELS = [
-    { text: "RUSSIA",     ll: [40.6, 53.6], size: 17 },
-    { text: "RUSSIA",     ll: [42.4, 46.4], size: 14 },
-    { text: "BELARUS",    ll: [27.9, 53.35], size: 15 },
-    { text: "POLAND",     ll: [19.6, 51.6], size: 15 },
-    { text: "SLOVAKIA",   ll: [19.4, 48.75], size: 12 },
-    { text: "HUNGARY",    ll: [20.0, 46.9], size: 13 },
-    { text: "ROMANIA",    ll: [24.9, 46.0], size: 15 },
-    { text: "MOLDOVA",    ll: [28.35, 47.75], size: 10.5 },
-    { text: "LITHUANIA",  ll: [23.9, 55.35], size: 12 },
-    { text: "LATVIA",     ll: [25.9, 56.75], size: 12 },
-    { text: "ESTONIA",    ll: [26.0, 58.6], size: 12 },
-    { text: "BULGARIA",   ll: [25.2, 42.75], size: 13 },
-    { text: "SERBIA",     ll: [20.9, 43.9], size: 12 },
-    { text: "TURKEY",     ll: [35.0, 40.6], size: 15 },
-    { text: "GEORGIA",    ll: [43.7, 42.15], size: 12 },
-    { text: "CZECHIA",    ll: [15.6, 49.8], size: 12 },
-    { text: "AUSTRIA",    ll: [14.6, 47.6], size: 12 },
-    { text: "KAZAKHSTAN", ll: [52.5, 49.0], size: 13 },
-    { text: "RUSSIA (KALININGRAD)", ll: [21.3, 54.75], size: 9.5, small: true },
-    { text: "TRANSNISTRIA", ll: [29.5, 47.42], size: 9, small: true, minK: 1.6 },
-    { text: "ABKHAZIA",   ll: [41.25, 43.25], size: 9, small: true, minK: 1.4 },
-  ];
 
   const SEA_LABELS = [
     { text: "Black Sea",     ll: [33.6, 43.35], size: 17 },
@@ -157,7 +79,6 @@
   const OV_KINDS = ["rival", "occupied", "contested", "related"];
   const OV_KIND_NAME = { rival: "Neighbouring power", related: "Related polity", occupied: "Occupied", contested: "Contested" };
   const POLITY_HUES = 6; // --pol-1 … --pol-6 in map.css
-  const MAJOR = new Set(["Kyiv", "Kharkiv", "Odesa", "Dnipro", "Lviv", "Zaporizhzhia", "Donetsk", "Simferopol", "Sevastopol", "Mykolaiv"]);
 
   /* ------------------------------------------------------------------
      State
@@ -177,7 +98,7 @@
     eraSeq: 0,
     historicalLands: null,
     presentDay: false,
-    visible: { oblastLabels: true, cities: true, rivers: true, graticule: true, grayZone: true, overlays: true, hul: false },
+    visible: { oblastLabels: true, rivers: false, graticule: true, grayZone: true, overlays: true, hul: false },
     ready: false,
     listeners: {},
   };
@@ -201,11 +122,11 @@
     try {
       status.textContent = "Loading map data";
       const [world, adm1, rivers, lakes, breakaway] = await Promise.all([
-        d3.json("data/geo/countries-50m.json"),
-        d3.json("data/geo/ukr-adm1.geojson"),
-        d3.json("data/geo/rivers.geojson").catch(() => null),
-        d3.json("data/geo/lakes.geojson").catch(() => null),
-        d3.json("data/geo/breakaway.geojson").catch(() => null),
+        d3.json(`data/geo/countries-50m.json?v=${window.ASSET_V}`),
+        d3.json(`data/geo/ukr-adm1.geojson?v=${window.ASSET_V}`),
+        d3.json(`data/geo/rivers.geojson?v=${window.ASSET_V}`).catch(() => null),
+        d3.json(`data/geo/lakes.geojson?v=${window.ASSET_V}`).catch(() => null),
+        d3.json(`data/geo/breakaway.geojson?v=${window.ASSET_V}`).catch(() => null),
       ]);
       status.textContent = "Preparing boundaries";
       prepareData(world, adm1, rivers, lakes, breakaway);
@@ -213,7 +134,7 @@
       resize(true);
       buildLegend();
       buildLayerToggles();
-      renderIntelDefault();
+      applyVisibility();
       startClock();
       bindUi();
       S.ready = true;
@@ -381,8 +302,7 @@
     const { W, H, B } = S;
     // Frame Ukraine (with a margin of its neighbours) in the space left free by the floating cards.
     const wide = W >= 1000;
-    const padL = wide ? 300 : W >= 700 ? 40 : 8;
-    const padR = wide ? 310 : W >= 700 ? 40 : 8;
+    const padL = W >= 700 ? 40 : 8, padR = padL;
     const padT = wide ? 18 : 40, padB = wide ? 18 : 40;
     const pts = [];
     for (let x = FOCUS_BBOX.w; x <= FOCUS_BBOX.e; x += 0.5) { pts.push([x, FOCUS_BBOX.s], [x, FOCUS_BBOX.n]); }
@@ -401,12 +321,6 @@
     const W = Math.max(320, Math.round(r.width)), H = Math.max(240, Math.round(r.height));
     if (!initial && W === S.W && H === S.H) return;
 
-    // keep the geographic centre + zoom factor across resizes
-    let keep = null;
-    if (!initial && S.projection) {
-      const c = S.projection.invert(S.t.invert([S.W / 2, S.H / 2]));
-      keep = { c, k: S.t.k };
-    }
     S.W = W; S.H = H; S.B = W < 560 ? 18 : 22;
     svg.attr("viewBox", `0 0 ${W} ${H}`);
     d3.select("#sea-bg").attr("x", 0).attr("y", 0).attr("width", W).attr("height", H);
@@ -414,20 +328,17 @@
 
     S.projection = makeProjection();
     S.path = d3.geoPath(S.projection);
-    // Drawing generator clipped just past the pan limits (see setupZoom) so off-screen
-    // coastlines never reach the DOM. S.path stays unclipped for centroids/bounds.
-    S.draw = d3.geoPath(makeProjection().clipExtent([[-W * 0.7, -H * 0.7], [W * 1.7, H * 1.7]]));
+    // The view is fixed, so anything past the frame never needs drawing. S.path stays
+    // unclipped for centroids and bounds.
+    S.draw = d3.geoPath(makeProjection().clipExtent([[-8, -8], [W + 8, H + 8]]));
     renderGeo();
     buildGraticuleSamples();
-    setupZoom();
-
-    if (keep && keep.c) {
-      const p = S.projection(keep.c);
-      const t = d3.zoomIdentity.translate(W / 2 - p[0] * keep.k, H / 2 - p[1] * keep.k).scale(keep.k);
-      svg.call(S.zoom.transform, t);
-    } else {
+    bindMapOnce();
+    if (S.zoom) {
+      S.zoom.extent([[0, 0], [W, H]]).translateExtent([[0, 0], [W, H]]);
       svg.call(S.zoom.transform, d3.zoomIdentity);
     }
+    afterZoom();
   }
 
   function renderGeo() {
@@ -514,88 +425,22 @@
   }
 
   /* ------------------------------------------------------------------
-     Zoom & pan
+     The view is fixed with a mouse; touch screens can pinch and pan
      ------------------------------------------------------------------ */
-  function setupZoom() {
-    const { W, H } = S;
-    if (!S.zoom) {
-      S.zoom = d3.zoom()
-        .scaleExtent([0.5, 18])
-        // wheel/trackpad zoom is handled by smoothWheel below; drag + touch stay with d3
-        .filter((ev) => ev.type !== "wheel" && !ev.ctrlKey && !ev.button)
-        .on("start", (ev) => {
-          if (wheelStepping) return;
-          stopWheel();
-          S.obstacles = measureObstacles(); // cards don't move mid-gesture: measure once, not every frame
-        })
-        .on("zoom", (ev) => {
-          // only once the pointer actually moves: setting this on mousedown would swallow oblast clicks
-          if (ev.sourceEvent && ev.sourceEvent.type === "mousemove") svg.classed("dragging", true);
-          onZoom(ev.transform);
-        })
-        .on("end", () => { if (wheelStepping) return; svg.classed("dragging", false); S.obstacles = null; });
-      svg.call(S.zoom).on("dblclick.zoom", null);
-      svg.node().addEventListener("wheel", smoothWheel, { passive: false });
-      svg.on("pointermove.coords", onPointerMove).on("pointerleave.coords", () => { $("ro-ll").textContent = "—"; });
-      svg.on("click.reset", () => selectRegion(null));
-    }
-    S.zoom.translateExtent([[-W * 0.6, -H * 0.6], [W * 1.6, H * 1.6]]).extent([[0, 0], [W, H]]);
-  }
-
-  /* Smooth wheel zoom. d3 applies each mouse-wheel notch as an instant ~15% jump, which
-     reads as jitter on desktop; instead accumulate a target transform and ease towards
-     it, keeping the world point under the cursor pinned. */
-  let wheelTarget = null, wheelAnchor = null, wheelRaf = 0, wheelLast = 0, wheelStepping = false;
-  function smoothWheel(ev) {
-    ev.preventDefault();
-    const d = -ev.deltaY * (ev.deltaMode === 1 ? 0.05 : ev.deltaMode ? 1 : 0.002) * (ev.ctrlKey ? 10 : 1);
-    const [lo, hi] = S.zoom.scaleExtent();
-    const from = wheelTarget || S.t;
-    const k = Math.max(lo, Math.min(hi, from.k * Math.pow(2, d)));
-    const p = d3.pointer(ev, svg.node());
-    const w = from.invert(p);
-    wheelTarget = S.zoom.constrain()(d3.zoomIdentity.translate(p[0] - w[0] * k, p[1] - w[1] * k).scale(k),
-      [[0, 0], [S.W, S.H]], S.zoom.translateExtent());
-    wheelAnchor = p;
-    if (!wheelRaf) {
-      if (!S.obstacles) S.obstacles = measureObstacles();
-      wheelLast = performance.now();
-      wheelRaf = requestAnimationFrame(wheelStep);
-    }
-  }
-  function wheelStep(now) {
-    wheelRaf = 0;
-    if (!wheelTarget) return;
-    const cur = S.t, tgt = wheelTarget;
-    // frame-rate independent easing: ~30% of the remaining distance per 60 Hz frame
-    const a = 1 - Math.pow(0.7, Math.min(4, (now - wheelLast) / 16.7));
-    wheelLast = now;
-    let next;
-    if (Math.abs(Math.log(tgt.k / cur.k)) < 0.002 && Math.abs(tgt.x - cur.x) < 0.5 && Math.abs(tgt.y - cur.y) < 0.5) {
-      next = tgt;
-    } else {
-      const k = cur.k * Math.pow(tgt.k / cur.k, a);
-      // world point under the anchor in the target view stays under the anchor
-      const w = tgt.invert(wheelAnchor), c = cur.invert(wheelAnchor);
-      const wx = c[0] + (w[0] - c[0]) * a, wy = c[1] + (w[1] - c[1]) * a;
-      next = d3.zoomIdentity.translate(wheelAnchor[0] - wx * k, wheelAnchor[1] - wy * k).scale(k);
-    }
-    wheelStepping = true;
-    svg.call(S.zoom.transform, next);
-    wheelStepping = false;
-    if (next === tgt) { wheelTarget = null; S.obstacles = null; return; }
-    wheelRaf = requestAnimationFrame(wheelStep);
-  }
-  function stopWheel() {
-    if (wheelRaf) cancelAnimationFrame(wheelRaf);
-    wheelRaf = 0; wheelTarget = null;
-  }
-
-  let zoomRaf = 0;
-  function onZoom(t) {
-    S.t = t;
-    S.layers.zoom.attr("transform", t);
-    if (!zoomRaf) zoomRaf = requestAnimationFrame(() => { zoomRaf = 0; afterZoom(); });
+  function bindMapOnce() {
+    if (S.mapBound) return;
+    S.mapBound = true;
+    svg.on("click.reset", () => selectRegion(null));
+    if (!matchMedia("(pointer: coarse)").matches) return;
+    svg.classed("touch-zoom", true);
+    let raf = 0;
+    S.zoom = d3.zoom().scaleExtent([1, 8]).filter((ev) => ev.type.startsWith("touch"))
+      .on("zoom", (ev) => {
+        S.t = ev.transform;
+        S.layers.zoom.attr("transform", ev.transform);
+        if (!raf) raf = requestAnimationFrame(() => { raf = 0; afterZoom(); });
+      });
+    svg.call(S.zoom).on("dblclick.zoom", null);
   }
 
   let patternK = NaN;
@@ -610,51 +455,9 @@
       });
     }
     d3.select("#grat-fine").style("display", k >= 2.5 && S.visible.graticule ? null : "none");
-    $("ro-zoom").textContent = (k < 10 ? k.toFixed(1) : Math.round(k)) + "×";
     updateLabels();
     drawFrame();
-    drawCompass();
     drawScaleBar();
-  }
-
-  /** Zoom so the selected era's territory (and overlays) fill the free map area. */
-  function fitEra() {
-    const e = S.era;
-    if (!e || S.presentDay || !e.territory) { resetView(); return; }
-    const geoms = [e.territory].concat((e.overlays || []).map((o) => o.territory));
-    zoomToFeature({ type: "GeometryCollection", geometries: geoms }, 0.08);
-  }
-
-  function zoomBy(f) { svg.transition().duration(350).call(S.zoom.scaleBy, f, [S.W / 2, S.H / 2]); }
-  function resetView() { svg.transition().duration(650).call(S.zoom.transform, d3.zoomIdentity); }
-
-  /** Screen rectangle not covered by expanded cards. */
-  function freeRect() {
-    const { W, H, B } = S;
-    const sr = stageEl.getBoundingClientRect();
-    let x0 = B + 8, x1 = W - B - 8;
-    if (W >= 860) {
-      ["panel-legend", "panel-intel"].forEach((id) => {
-        const el = $(id);
-        if (!el || el.classList.contains("collapsed")) return;
-        const r = el.getBoundingClientRect();
-        if (r.left - sr.left < W / 2) x0 = Math.max(x0, r.right - sr.left + 12);
-        else x1 = Math.min(x1, r.left - sr.left - 12);
-      });
-    }
-    if (x1 - x0 < W * 0.35) { x0 = B + 8; x1 = W - B - 8; }
-    return { x0, x1, y0: B + 8, y1: H - B - 8 };
-  }
-
-  function zoomToFeature(f, padFrac) {
-    const [[bx0, by0], [bx1, by1]] = S.path.bounds(f);
-    const r = freeRect();
-    const fw = r.x1 - r.x0, fh = r.y1 - r.y0;
-    const pad = padFrac || 0.18;
-    const k = Math.max(0.5, Math.min(14, (1 - pad * 2) / Math.max((bx1 - bx0) / fw, (by1 - by0) / fh)));
-    const cx = (bx0 + bx1) / 2, cy = (by0 + by1) / 2;
-    const t = d3.zoomIdentity.translate((r.x0 + r.x1) / 2 - cx * k, (r.y0 + r.y1) / 2 - cy * k).scale(k);
-    svg.transition().duration(800).ease(d3.easeCubicInOut).call(S.zoom.transform, t);
   }
 
   /* ------------------------------------------------------------------
@@ -680,7 +483,6 @@
     const P = S.projection;
 
     SEA_LABELS.forEach((s, i) => items.push({ id: "sea" + i, kind: "sea", text: s.text, xy: P(s.ll), pri: 40, base: s.size * 0.85, grow: 0.8, max: s.size + 3, ls: s.ls }));
-    COUNTRY_LABELS.forEach((c, i) => items.push({ id: "ctry" + i, kind: c.small ? "country-sm" : "country", text: c.text, xy: P(c.ll), pri: c.small ? 46 : 42, base: c.size * 0.78, grow: 1.1, max: c.size + 2, minK: c.minK || 0 }));
 
     RIVER_LABELS.forEach((r) => {
       const a = riverAnchor(r.ne, r.at);
@@ -688,27 +490,25 @@
       const pa = P(a.a), pb = P(a.b);
       let ang = Math.atan2(pb[1] - pa[1], pb[0] - pa[0]) * 180 / Math.PI;
       if (ang > 90) ang -= 180; if (ang < -90) ang += 180;
-      items.push({ id: "riv-" + r.ne, kind: "river", text: r.text, xy: P(a.ll), pri: 70, base: 9.5, grow: 1, max: 13, rot: ang, minK: 1.15, layer: "rivers" });
+      items.push({ id: "riv-" + r.ne, kind: "river", text: r.text, xy: P(a.ll), pri: 70, base: 9.5, grow: 1, max: 13, rot: ang, layer: "rivers" });
     });
 
     // oblast labels
     S.ukr.features.forEach((f) => {
       const m = f.properties;
       const xy = m.lab ? P(m.lab) : S.path.centroid(f);
-      items.push({ id: "ob-" + f.id, kind: "oblast", oid: f.id, text: m.short, sub: null, pre: m.sub || null, xy, pri: 10, base: 9.5, grow: 1.5, max: 14, minK: m.minK || 0, layer: "oblastLabels" });
+      items.push({ id: "ob-" + f.id, kind: "oblast", oid: f.id, text: m.short, sub: null, pre: m.sub || null, xy, pri: 10, base: 11, grow: 1.5, max: 15.5, minK: m.minK || 0, layer: "oblastLabels" });
     });
 
-    // cities: oblast centres (unique), extras, periphery
+    // Kyiv always; other oblast centres only while their oblast is selected
     const seen = new Set();
     S.ukr.features.forEach((f) => {
       const m = f.properties;
       if (!m.ll || seen.has(m.center)) return;
       seen.add(m.center);
       const isCap = m.center === "Kyiv";
-      items.push({ id: "c-" + m.center, ll: m.ll, major: MAJOR.has(m.center), kind: isCap ? "capital" : "city", text: m.center, xy: P(m.ll), pri: isCap ? 1 : 20, base: isCap ? 13 : 11.5, grow: 0.8, max: isCap ? 15 : 13.5, dot: isCap ? "cap" : "center", layer: isCap ? null : "cities" });
+      items.push({ id: "c-" + m.center, ll: m.ll, kind: isCap ? "capital" : "city", text: m.center, xy: P(m.ll), pri: 1, base: isCap ? 13 : 11.5, grow: 0.8, max: isCap ? 15 : 13.5, dot: isCap ? "cap" : "center", onlySel: isCap ? null : f.id });
     });
-    UA_CITIES.forEach((c) => items.push({ id: "c-" + c.name, ll: c.ll, kind: "city", text: c.name, xy: P(c.ll), pri: c.tier === 2 ? 30 : 60, base: 10.5, grow: 1, max: 13, dot: "town", minK: c.tier === 2 ? 1.3 : 2.4, layer: "cities" }));
-    EXT_CITIES.forEach((c) => items.push({ id: "x-" + c.name, ll: c.ll, kind: "ext", text: c.name, xy: P(c.ll), pri: c.cap ? 44 : 65, base: c.cap ? 10.5 : 10, grow: 1, max: 13, dot: c.cap ? "extcap" : "ext", minK: c.cap ? 0 : 1.6, layer: "cities" }));
 
     // era-specific (territory label, capital, overlays)
     const eraItems = eraLabelItems();
@@ -731,12 +531,12 @@
     if (era.territory && S.visible.grayZone) {
       const xy = labelAnchor(era.territory, era.labelPoint);
       const lbl = mapLabel(era.territoryLabel || era.polity || era.name || "");
-      if (xy && lbl && lbl.length <= 40) out.push({ id: tag + "terr", kind: "territory", text: lbl.toUpperCase(), xy, pri: 2, base: 11.5, grow: 1.4, max: 17, era: true });
+      if (xy && lbl && lbl.length <= 40) out.push({ id: tag + "terr", kind: "territory", text: lbl.toUpperCase(), xy, pri: 2, base: 14, grow: 1.4, max: 20, era: true });
     }
     if (S.visible.overlays) (era.overlays || []).forEach((ov, i) => {
       if (!ov.name) return;
       const xy = labelAnchor(ov.territory, ov.labelPoint);
-      if (xy) out.push({ id: tag + ov._key, kind: "overlay", ok: ov.kind, cvar: ov._color, text: mapLabel(ov.name), xy, pri: Math.min(3 + i, 6), base: 10, grow: 1.1, max: 13.5, era: true });
+      if (xy) out.push({ id: tag + ov._key, kind: "overlay", ok: ov.kind, cvar: ov._color, text: mapLabel(ov.name), xy, pri: Math.min(3 + i, 6), base: 13, grow: 1.1, max: 16.5, era: true });
     });
     if (era.capital && isFinite(era.capital.lon) && isFinite(era.capital.lat)) {
       out.push({ id: tag + "cap", kind: "eracap", text: String(era.capital.name || "Capital"), xy: P([era.capital.lon, era.capital.lat]), pri: 0, base: 12, grow: 0.8, max: 14, dot: "eracap", era: true, ll: [era.capital.lon, era.capital.lat] });
@@ -821,7 +621,6 @@
       case "oblast": return "lbl-oblast";
       case "capital": return "lbl-capital";
       case "city": return "lbl-city";
-      case "ext": return "lbl-city ext";
       case "territory": return "lbl-territory";
       case "overlay": return "lbl-ov k-" + d.ok;
       case "eracap": return "lbl-era-cap";
@@ -846,12 +645,6 @@
         n.append("circle").attr("class", "cap-mark").attr("r", 3.2);
       } else if (d.dot === "center") {
         n.append("rect").attr("class", "city-dot center").attr("x", -3).attr("y", -3).attr("width", 6).attr("height", 6);
-      } else if (d.dot === "town") {
-        n.append("circle").attr("class", "city-dot").attr("r", 2.4);
-      } else if (d.dot === "extcap") {
-        n.append("rect").attr("class", "city-dot ext").attr("x", -2.8).attr("y", -2.8).attr("width", 5.6).attr("height", 5.6).attr("transform", "rotate(45)");
-      } else if (d.dot === "ext") {
-        n.append("circle").attr("class", "city-dot ext").attr("r", 2);
       } else if (d.dot === "eracap") {
         n.append("circle").attr("class", "era-cap-ring").attr("r", 7.5);
         n.append("path").attr("class", "era-cap-mark").attr("d", d3.symbol(d3.symbolStar, 70)());
@@ -879,7 +672,7 @@
 
   function measureObstacles() {
     const sr = stageEl.getBoundingClientRect(), out = [];
-    document.querySelectorAll(".card, .instruments > *, .zoomctl").forEach((el) => {
+    document.querySelectorAll(".card, .instruments > *").forEach((el) => {
       const r = el.getBoundingClientRect();
       if (r.width && r.height) out.push({ x0: r.left - sr.left - 4, x1: r.right - sr.left + 4, y0: r.top - sr.top - 4, y1: r.bottom - sr.top + 4 });
     });
@@ -904,6 +697,7 @@
       const [x, y] = t.apply(d.xy);
       let show = isFinite(x) && x > B - 40 && x < W - B + 40 && y > B - 40 && y < H - B + 40 && k >= (d.minK || 0);
       if (d.layer && !S.visible[d.layer]) show = false;
+      if (d.onlySel && d.onlySel !== S.selectedId) show = false;
       if (d.kind === "oblast" && oblLabelsHidden) show = false;
       if (d.kind === "oblast" && S.ukrBaseW * k < 380) show = false;
       if (!show) { node.style.display = "none"; continue; }
@@ -933,8 +727,7 @@
         if (d.kind === "eracap") cands.forEach((c) => { c.ty += 4; c.b.y1 += 10; });
         const dotBox = { x0: x - 4, x1: x + 4, y0: y - 4, y1: y + 4 };
         let chosen = null;
-        const sparse = d.dot === "center" && !d.major && S.ukrBaseW * k < 640;
-        if (!sparse) for (const c of cands) { if (!hits(c.b) && inFrame(c.b)) { chosen = c; break; } }
+        for (const c of cands) { if (!hits(c.b) && inFrame(c.b)) { chosen = c; break; } }
         if (!chosen && d.pri <= 1) chosen = cands[0]; // capital always labelled
         placed.push(dotBox);
         if (!chosen) { txt.style.display = "none"; if (key) key.style.display = "none"; node.setAttribute("transform", `translate(${x.toFixed(1)},${y.toFixed(1)})`); continue; }
@@ -1040,6 +833,7 @@
     F.append("path").attr("class", "frame-band").attr("fill-rule", "evenodd")
       .attr("d", `M0,0H${W}V${H}H0Z M${B},${B}V${H - B}H${W - B}V${B}Z`);
     F.append("rect").attr("class", "frame-line").attr("x", 0.5).attr("y", 0.5).attr("width", W - 1).attr("height", H - 1);
+    F.append("rect").attr("class", "frame-ladder").attr("x", B - 3).attr("y", B - 3).attr("width", W - 2 * B + 6).attr("height", H - 2 * B + 6);
     F.append("rect").attr("class", "frame-line").attr("x", B + 0.5).attr("y", B + 0.5).attr("width", W - 2 * B - 1).attr("height", H - 2 * B - 1);
 
     // choose label step from current on-screen spacing of 1° meridians at mid-height
@@ -1093,29 +887,6 @@
   /* ------------------------------------------------------------------
      North arrow & scale bar
      ------------------------------------------------------------------ */
-  function drawCompass() {
-    const el = $("compass");
-    if (!el.firstChild) {
-      const s = d3.select(el).append("svg").attr("viewBox", "-17 -30 34 52");
-      const g = s.append("g").attr("class", "rose");
-      // simple split north arrow
-      g.append("path").attr("d", "M0,-14 L6,8 L0,4 Z").style("fill", "var(--text-2)");
-      g.append("path").attr("d", "M0,-14 L-6,8 L0,4 Z").attr("fill", "none").style("stroke", "var(--text-2)").attr("stroke-width", 1).attr("stroke-linejoin", "round");
-      g.append("text").attr("x", 0).attr("y", -18).attr("text-anchor", "middle")
-        .style("font-family", "var(--sans)").attr("font-weight", 600).attr("font-size", 11).style("fill", "var(--text)").text("N");
-      s.append("text").attr("class", "conv").attr("x", 0).attr("y", 20).attr("text-anchor", "middle")
-        .style("font-family", "var(--mono)").attr("font-size", 7).style("fill", "var(--text-3)");
-    }
-    // rotate so N follows the local meridian at map centre (conic convergence)
-    const { W, H } = S;
-    const c = S.projection.invert(S.t.invert([W / 2, H / 2]));
-    if (!c) return;
-    const a = S.projection([c[0], c[1] - 0.25]), b = S.projection([c[0], c[1] + 0.25]);
-    const ang = Math.atan2(b[0] - a[0], -(b[1] - a[1])) * 180 / Math.PI;
-    d3.select(el).select("g.rose").attr("transform", `rotate(${ang.toFixed(2)})`);
-    d3.select(el).select("text.conv").text(`${ang >= 0 ? "+" : "−"}${Math.abs(ang).toFixed(1)}°`);
-    el.title = `Grid convergence at map centre: ${ang.toFixed(1)}°`;
-  }
 
   function niceDist(maxKm) {
     const nice = [1, 2, 5, 10, 20, 25, 50, 100, 150, 200, 250, 300, 500, 750, 1000];
@@ -1173,11 +944,10 @@
     S.layers.oblasts.selectAll("path.oblast").classed("hl", (d) => f && d.id === f.id);
     S.layers.labels.selectAll("g.lbl").select("text.lbl-oblast").classed("hl", (d) => f && d.oid === f.id);
     const hp = S.layers.hover.select("path.oblast-hover");
-    if (!f) { hp.style("display", "none"); hideTooltip(); renderIntelDefault(); return; }
+    if (!f) { hp.style("display", "none"); hideTooltip(); return; }
     hp.style("display", null).attr("d", S.path(f));
     const m = f.properties;
     showTooltip(`<b>${escapeHtml(m.name)}</b>Admin. centre ${escapeHtml(m.center)}${eraTipHtml(ev)}`, ev);
-    renderIntelOblast(f);
   }
 
   /** Select a present-day region (ISO id) for the history sidebar; null clears. */
@@ -1186,6 +956,7 @@
     if (id === S.selectedId) return;
     S.selectedId = id;
     renderSelection();
+    updateLabels(); // the selected oblast's centre appears only while selected
     emit("select", id ? S.ukr.byId.get(id) : null);
   }
 
@@ -1199,62 +970,16 @@
 
   function hoverCountry(f, ev) {
     S.layers.periphery.selectAll("path.country").classed("hl", (d) => f && d === f);
-    if (!f) { hideTooltip(); if (!S.hoverId) renderIntelDefault(); return; }
+    if (!f) { hideTooltip(); return; }
     const nm = (f.properties && f.properties.name) || "—";
     showTooltip(`<b>${escapeHtml(nm)}</b>Neighbouring state today${eraTipHtml(ev)}`, ev);
-    $("intel").innerHTML = `
-      <div class="in-kind">Neighbouring state</div>
-      <div class="in-name">${escapeHtml(nm)}</div>
-      <div class="in-native">Outside the area of responsibility</div>
-      <dl class="in-grid">
-        <dt>Area</dt><dd>≈ ${fmtKm2(d3.geoArea(f) * R_EARTH * R_EARTH)}</dd>
-        <dt>ISO 3166</dt><dd>${escapeHtml(f.id)}</dd>
-      </dl>`;
   }
 
-  function fmtKm2(v) { return d3.format(",.0f")(v) + " km²"; }
   function escapeHtml(s) { return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
 
-  function renderIntelDefault() {
-    const n = S.ukr.features.length;
-    $("intel").innerHTML = `
-      <div class="in-kind">Area of responsibility</div>
-      <div class="in-name">Ukraine</div>
-      <div class="in-native">Україна</div>
-      <dl class="in-grid">
-        <dt>Capital</dt><dd>Kyiv</dd>
-        <dt>Regions</dt><dd>${n || 27}: 24 oblasts, Crimea, 2 cities</dd>
-        <dt>Area</dt><dd>603,628 km²</dd>
-        <dt>Borders</dt><dd>Internationally recognized</dd>
-      </dl>
-      <div class="in-hint">Hover a region for details. Click it to read its history.</div>`;
-  }
 
-  function renderIntelOblast(f) {
-    const m = f.properties;
-    const c = d3.geoCentroid(f);
-    const kind = m.kind ? m.kind.charAt(0) + m.kind.slice(1).toLowerCase() : "Oblast";
-    $("intel").innerHTML = `
-      <div class="in-kind">${escapeHtml(kind)} · ${m.iso}</div>
-      <div class="in-name">${escapeHtml(m.name)}</div>
-      <div class="in-native">${escapeHtml(m.native || "")}</div>
-      <dl class="in-grid">
-        <dt>Admin. centre</dt><dd>${escapeHtml(m.center)}</dd>
-        <dt>Centroid</dt><dd class="mono">${fmtLL(c)}</dd>
-      </dl>
-      <div class="in-hint">Click to read this region's history.</div>`;
-  }
 
-  function fmtLL(ll) {
-    return `${Math.abs(ll[1]).toFixed(2)}°${ll[1] >= 0 ? "N" : "S"} ${Math.abs(ll[0]).toFixed(2)}°${ll[0] >= 0 ? "E" : "W"}`;
-  }
 
-  function onPointerMove(ev) {
-    const [mx, my] = d3.pointer(ev, svg.node());
-    const ll = S.projection.invert(S.t.invert([mx, my]));
-    if (!ll || !isFinite(ll[0])) return;
-    $("ro-ll").textContent = `${U.dms(ll[1], true)}  ${U.dms(ll[0], false)}`;
-  }
 
   function startClock() {
     const el = $("ro-date");
@@ -1271,13 +996,8 @@
     const pat = (id, body, rot) => `<defs><pattern id="${id}" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(${rot || 45})">${body}</pattern></defs>`;
     const rows = [
       ["sec", "Present day"],
-      [sw(`<rect x="1" y="1.5" width="24" height="9" rx="1" style="fill:var(--ukr-fill)"/><path d="M1,1.5H25" style="stroke:var(--accent);stroke-width:1.6"/>`), "Ukraine, international border"],
-      [line("stroke:var(--oblast-edge);stroke-width:1"), "Oblast boundary"],
-      [box("fill:var(--land);stroke:var(--land-edge)"), "Neighbouring state"],
+      [sw(`<rect x="1" y="1.5" width="24" height="9" rx="1" style="fill:var(--ukr-fill)"/><path d="M1,1.5H25" style="stroke:var(--map-gold);stroke-width:1.6"/>`), "Ukraine, international border"],
       [box("fill:url(#lg-tnr);stroke:var(--breakaway);stroke-dasharray:2 2", pat("lg-tnr", `<line x1="0" y1="0" x2="0" y2="4" style="stroke:var(--breakaway);stroke-width:1"/>`)), "Breakaway region"],
-      [sw(`<circle cx="13" cy="6" r="4.5" style="fill:none;stroke:var(--accent);stroke-opacity:.5"/><circle cx="13" cy="6" r="2.4" style="fill:var(--accent)"/>`), "National capital"],
-      [sw(`<rect x="10.5" y="3.5" width="5" height="5" style="fill:var(--text-2)"/>`), "Oblast centre · city"],
-      [line("stroke:var(--water);stroke-width:1.4"), "River, reservoir"],
       ["sec", "Historical"],
       [box("fill:url(#lg-gz);stroke:var(--hist-strong);stroke-width:1.6", pat("lg-gz", `<rect width="4" height="4" style="fill:var(--hist-fill)"/><line x1="0" y1="0" x2="0" y2="4" style="stroke:var(--hist);stroke-opacity:.5"/>`)), "Ukrainian polity of the era"],
       [sw(`<rect x="1" y="1.5" width="7" height="9" rx="1" style="fill:var(--pol-1);fill-opacity:.28;stroke:var(--pol-1)"/><rect x="9.5" y="1.5" width="7" height="9" rx="1" style="fill:var(--pol-2);fill-opacity:.28;stroke:var(--pol-2)"/><rect x="18" y="1.5" width="7" height="9" rx="1" style="fill:var(--pol-3);fill-opacity:.28;stroke:var(--pol-3)"/>`), "Neighbouring powers (one colour each)"],
@@ -1285,7 +1005,7 @@
       [box("fill:url(#lg-occ);stroke:var(--occupied)", pat("lg-occ", `<line x1="0" y1="0" x2="0" y2="4" style="stroke:var(--occupied);stroke-opacity:.8"/>`, -45)), "Occupied"],
       [box("fill:url(#lg-con);stroke:var(--contested);stroke-dasharray:3 2", pat("lg-con", `<line x1="0" y1="0" x2="0" y2="4" style="stroke:var(--contested);stroke-opacity:.7"/><line x1="0" y1="2" x2="4" y2="2" style="stroke:var(--contested);stroke-opacity:.7"/>`)), "Contested"],
       [sw(`<circle cx="13" cy="6" r="5" style="fill:none;stroke:var(--hist);stroke-opacity:.6"/><path d="M13,2.6l1,2.2 2.4.3-1.8,1.6.5,2.4L13,7.9l-2.1,1.2.5-2.4-1.8-1.6 2.4-.3z" style="fill:var(--surface);stroke:var(--hist);stroke-width:.9"/>`), "Historical capital"],
-      [line("stroke:var(--accent);stroke-opacity:.6;stroke-width:1.2;stroke-dasharray:4 3"), "Today's border (reference)"],
+      [line("stroke:var(--map-gold);stroke-opacity:.6;stroke-width:1.2;stroke-dasharray:4 3"), "Today's border (reference)"],
       [box("fill:url(#lg-st);stroke:var(--hist);stroke-opacity:.6;stroke-dasharray:1 2", `<defs><pattern id="lg-st" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" style="fill:var(--hist)"/><circle cx="3" cy="3" r=".7" style="fill:var(--hist)"/></pattern></defs>`), "Historical Ukrainian lands", "lg-hul"],
     ];
     $("legend-body").innerHTML = rows.map(([a, b, id]) => a === "sec"
@@ -1300,7 +1020,6 @@
 
   const TOGGLES = [
     ["oblastLabels", "Oblast labels"],
-    ["cities", "Cities"],
     ["rivers", "Hydrography"],
     ["graticule", "Graticule"],
     ["grayZone", "Era territory"],
@@ -1452,10 +1171,6 @@
      UI bindings
      ------------------------------------------------------------------ */
   function bindUi() {
-    $("zoom-in").addEventListener("click", () => zoomBy(1.6));
-    $("zoom-out").addEventListener("click", () => zoomBy(1 / 1.6));
-    $("zoom-reset").addEventListener("click", resetView);
-    $("zoom-era").addEventListener("click", fitEra);
     document.querySelectorAll("[data-collapse]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const p = $(btn.dataset.collapse);
@@ -1467,7 +1182,7 @@
     // cards start collapsed so the era's polities stay visible; the sidebar lists what each
     // colour means and the hover tooltip covers region details
     const collapse = (id) => { $(id).classList.add("collapsed"); $(id).querySelector(".card-hd").setAttribute("aria-expanded", "false"); };
-    collapse("panel-legend"); collapse("panel-intel");
+    collapse("panel-legend");
     let rT = 0;
     window.addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => resize(false), 120); });
     if (window.ResizeObserver) new ResizeObserver(() => { clearTimeout(rT); rT = setTimeout(() => resize(false), 120); }).observe(stageEl);
@@ -1487,7 +1202,6 @@
     /** Select the era containing a given year (BCE negative). */
     setYear: (y) => window.UkraineTimeline ? window.UkraineTimeline.setYear(y) : false,
     /** Zoom to the current era territory + overlays. */
-    fitEra,
     /** Load a full UKRAINE_HISTORY-shaped dataset into the timeline. */
     loadHistory: (data) => window.UkraineTimeline ? window.UkraineTimeline.load(data) : false,
     /** Draw arbitrary GeoJSON (lon/lat) as the gray zone. */
@@ -1502,13 +1216,10 @@
     getPresentDayGeometry: () => S.ukr.outline,
     getOblasts: () => ({ type: "FeatureCollection", features: S.ukr.features }),
     getOblastGeometry: (iso) => (S.ukr.byId.get(iso) || {}).geometry || null,
-    zoomTo: (geojson) => { const g = U.asDrawable(geojson); if (g) zoomToFeature(g, 0.12); },
     selectRegion,
     get selectedRegion() { return S.selectedId || null; },
     /** Emphasise one shape of the current era ("terr" or an overlay's _key); null clears. */
     focusShape,
-    zoomToRegion: (iso) => { const f = S.ukr.byId.get(iso); if (f) zoomToFeature(f); },
-    resetView,
     project: (lonlat) => S.projection && S.t.apply(S.projection(lonlat)),
     invert: (xy) => S.projection && S.projection.invert(S.t.invert(xy)),
     get currentEra() { return S.era; },
