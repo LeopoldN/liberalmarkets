@@ -122,6 +122,8 @@ button { font: inherit; color: inherit; }
 .stage { position: relative; overflow: hidden; background: var(--sea); min-height: 0; }
 #map { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: default; touch-action: none; }
 #map.dragging { cursor: grabbing; }
+/* no hover hit-testing against detailed oblast/country paths mid-drag */
+#map.dragging .zoom-layer { pointer-events: none; }
 
 .loading {
   position: absolute; inset: 0; z-index: 20; display: flex; align-items: center; justify-content: center; gap: 10px;

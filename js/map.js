@@ -231,9 +231,37 @@
   /* ------------------------------------------------------------------
      Data preparation
      ------------------------------------------------------------------ */
+
+  /** Geometry level of detail, picked once from the device's screen size:
+   *  high = full source detail (large screens), medium = tablets / small laptops,
+   *  low = phones. Override with ?lod=high|medium|low. Values are the minimum
+   *  Visvalingam triangle area (deg²) a vertex needs to survive simplification. */
+  const LOD_WEIGHT = { high: 0, medium: 3e-5, low: 2e-4 };
+  function pickLod() {
+    const q = new URLSearchParams(location.search).get("lod");
+    if (q in LOD_WEIGHT) return q;
+    const long = Math.max(screen.width, screen.height), short = Math.min(screen.width, screen.height);
+    if (short < 600) return "low";
+    if (long < 1600) return "medium";
+    return "high";
+  }
+  S.lod = pickLod();
+
+  /** Simplify a topology at the current LOD. Shared arcs simplify once, so neighbouring
+   *  shapes keep identical borders (no slivers). No-op at high LOD or without the library. */
+  function simplifyTopo(topo) {
+    const w = LOD_WEIGHT[S.lod];
+    if (!w || typeof topojson.presimplify !== "function") return topo;
+    const t = topojson.simplify(topojson.presimplify(topo), w);
+    // drop islands/lakes too small to keep their shape at this LOD
+    return topojson.filter(t, topojson.filterWeight(t, w));
+  }
+
   function prepareData(world, adm1, rivers, lakes, breakaway) {
+    world = simplifyTopo(world);
     // --- periphery countries (exclude Ukraine 804 — it is drawn from ADM1 data)
     const countries = topojson.feature(world, world.objects.countries).features
+      .map((f) => (LOD_WEIGHT[S.lod] ? U.rewind(f) : f)) // simplification can flip tiny rings
       .filter((f) => f.id !== "804" && f.geometry)
       .filter((f) => {
         const [[x0, y0], [x1, y1]] = d3.geoBounds(f);
@@ -261,8 +289,12 @@
 
     // --- topology for dissolved national outline + internal boundaries
     try {
-      const topo = topojson.topology({ ob: { type: "FeatureCollection", features: feats } }, 2e5);
+      const topo = simplifyTopo(topojson.topology({ ob: { type: "FeatureCollection", features: feats } }, 2e5));
       const geoms = topo.objects.ob.geometries;
+      if (LOD_WEIGHT[S.lod]) {
+        const simple = U.rewind(topojson.feature(topo, topo.objects.ob)).features;
+        feats.forEach((f, i) => { if (simple[i].geometry) f.geometry = simple[i].geometry; });
+      }
       S.ukr.outline = U.rewind(topojson.merge(topo, geoms));
       // 1944–54 Ukrainian SSR: today's border without Crimea (UA-43) and Sevastopol (UA-40)
       S.ukr.withoutCrimea = U.rewind(topojson.merge(topo, geoms.filter((g) => g.id !== "UA-43" && g.id !== "UA-40")));
@@ -275,8 +307,13 @@
     }
 
     // --- hydrography
-    S.data.rivers = rivers ? U.rewind(rivers).features : [];
-    S.data.lakes = lakes ? U.rewind(lakes).features : [];
+    const simpleFc = (fc) => {
+      if (!LOD_WEIGHT[S.lod]) return fc;
+      const t = simplifyTopo(topojson.topology({ fc }));
+      return topojson.feature(t, t.objects.fc);
+    };
+    S.data.rivers = rivers ? U.rewind(simpleFc(rivers)).features : [];
+    S.data.lakes = lakes ? U.rewind(simpleFc(lakes)).features : [];
     S.data.breakaway = breakaway ? U.rewind(breakaway).features : [];
   }
 
@@ -377,6 +414,9 @@
 
     S.projection = makeProjection();
     S.path = d3.geoPath(S.projection);
+    // Drawing generator clipped just past the pan limits (see setupZoom) so off-screen
+    // coastlines never reach the DOM. S.path stays unclipped for centroids/bounds.
+    S.draw = d3.geoPath(S.projection.copy().clipExtent([[-W * 0.7, -H * 0.7], [W * 1.7, H * 1.7]]));
     renderGeo();
     buildGraticuleSamples();
     setupZoom();
@@ -391,7 +431,7 @@
   }
 
   function renderGeo() {
-    const path = S.path;
+    const path = S.draw;
 
     // land clip shared by all Ukraine + history layers
     d3.select("#clip-land").remove();
@@ -451,9 +491,11 @@
     if (S.ukr.mesh) onLand.append("path").attr("class", "oblast-mesh").attr("d", path(S.ukr.mesh));
     onLand.append("g").attr("clip-path", `url(#${clipId})`).append("path").attr("class", "nat-inner").attr("d", path(outline));
     onLand.append("path").attr("class", "nat-border").attr("d", path(outline));
-    br.append("path").attr("class", "nat-coast").attr("clip-path", `url(#${clipId})`).attr("d", path(S.data.land));
+    const [[ux0, uy0], [ux1, uy1]] = S.path.bounds(S.ukr.outline);
+    const coastPath = d3.geoPath(S.projection.copy().clipExtent([[ux0 - 4, uy0 - 4], [ux1 + 4, uy1 + 4]]));
+    br.append("path").attr("class", "nat-coast").attr("clip-path", `url(#${clipId})`).attr("d", coastPath(S.data.land));
 
-    S.ukrBaseW = (() => { const b = path.bounds(S.ukr.outline); return b[1][0] - b[0][0]; })();
+    S.ukrBaseW = (() => { const b = S.path.bounds(S.ukr.outline); return b[1][0] - b[0][0]; })();
 
     // hover outline holder
     S.layers.hover.selectAll("*").remove();
@@ -479,9 +521,12 @@
     if (!S.zoom) {
       S.zoom = d3.zoom()
         .scaleExtent([0.5, 18])
-        .on("start", (ev) => { if (ev.sourceEvent && ev.sourceEvent.type === "mousedown") svg.classed("dragging", true); })
+        .on("start", (ev) => {
+          if (ev.sourceEvent && ev.sourceEvent.type === "mousedown") svg.classed("dragging", true);
+          S.obstacles = measureObstacles(); // cards don't move mid-gesture: measure once, not every frame
+        })
         .on("zoom", (ev) => onZoom(ev.transform))
-        .on("end", () => svg.classed("dragging", false));
+        .on("end", () => { svg.classed("dragging", false); S.obstacles = null; });
       svg.call(S.zoom).on("dblclick.zoom", null);
       svg.on("pointermove.coords", onPointerMove).on("pointerleave.coords", () => { $("ro-ll").textContent = "—"; });
       svg.on("click.reset", () => selectRegion(null));
@@ -496,13 +541,17 @@
     if (!zoomRaf) zoomRaf = requestAnimationFrame(() => { zoomRaf = 0; afterZoom(); });
   }
 
+  let patternK = NaN;
   function afterZoom() {
     const k = S.t.k;
-    // constant-density hatching
-    d3.selectAll("pattern.zpat").attr("patternTransform", function () {
-      const a = +this.getAttribute("data-angle") || 0;
-      return `scale(${1 / k}) rotate(${a})`;
-    });
+    // constant-density hatching (rewriting patternTransform re-rasterises every hatched fill, so only on scale change)
+    if (k !== patternK) {
+      patternK = k;
+      d3.selectAll("pattern.zpat").attr("patternTransform", function () {
+        const a = +this.getAttribute("data-angle") || 0;
+        return `scale(${1 / k}) rotate(${a})`;
+      });
+    }
     d3.select("#grat-fine").style("display", k >= 2.5 && S.visible.graticule ? null : "none");
     $("ro-zoom").textContent = (k < 10 ? k.toFixed(1) : Math.round(k)) + "×";
     updateLabels();
@@ -771,17 +820,22 @@
     return Math.max(d.base * 0.85, Math.min(d.max, s));
   }
 
+  function measureObstacles() {
+    const sr = stageEl.getBoundingClientRect(), out = [];
+    document.querySelectorAll(".card, .instruments > *, .zoomctl").forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.width && r.height) out.push({ x0: r.left - sr.left - 4, x1: r.right - sr.left + 4, y0: r.top - sr.top - 4, y1: r.bottom - sr.top + 4 });
+    });
+    return out;
+  }
+
   function updateLabels() {
     if (!S.labelItems.length) return;
     const t = S.t, k = t.k, { W, H, B } = S;
     const placed = [];
     const hits = (b) => placed.some((p) => b.x0 < p.x1 && b.x1 > p.x0 && b.y0 < p.y1 && b.y1 > p.y0);
     // floating cards and instruments act as obstacles so labels never hide underneath them
-    const sr = stageEl.getBoundingClientRect();
-    document.querySelectorAll(".card, .instruments > *, .zoomctl").forEach((el) => {
-      const r = el.getBoundingClientRect();
-      if (r.width && r.height) placed.push({ x0: r.left - sr.left - 4, x1: r.right - sr.left + 4, y0: r.top - sr.top - 4, y1: r.bottom - sr.top + 4 });
-    });
+    placed.push(...(S.obstacles || measureObstacles()));
     const inFrame = (b) => b.x0 >= B + 2 && b.x1 <= W - B - 2 && b.y0 >= B + 2 && b.y1 <= H - B - 2;
     const items = S.labelItems.slice().sort((a, b) => a.pri - b.pri);
     const oblLabelsHidden = !S.visible.oblastLabels;
@@ -942,8 +996,9 @@
     const minor = major >= 5 ? 1 : major >= 1 ? major / 2 : major === 0.5 ? 1 / 6 : 1 / 6;
     const isOn = (v, s) => Math.abs(v / s - Math.round(v / s)) < 1e-6;
 
-    const ticks = F.append("g");
-    const lbls = F.append("g");
+    // built as markup in one pass: hundreds of d3 appends per zoom frame were a hot spot
+    let ticks = "", lbls = "";
+    const tick = (cls, x1, x2, y1, y2) => { ticks += `<line class="${cls}" x1="${x1}" x2="${x2}" y1="${y1}" y2="${y2}"></line>`; };
 
     // meridians → top & bottom
     for (const m of S.gratLines.mer) {
@@ -953,10 +1008,8 @@
         const xs = crossings(m, "y", Y, B, W - B);
         for (const x of xs) {
           const len = isMaj ? 7 : 4;
-          ticks.append("line").attr("class", isMaj ? "frame-tick" : "frame-tick-minor")
-            .attr("x1", x).attr("x2", x).attr("y1", Y).attr("y2", Y + dir * len);
-          if (isMaj) lbls.append("text").attr("class", "frame-lbl").attr("text-anchor", "middle")
-            .attr("x", x).attr("y", dir < 0 ? B - 9 : H - B + 15).text(fmtDeg(m.v, false));
+          tick(isMaj ? "frame-tick" : "frame-tick-minor", x, x, Y, Y + dir * len);
+          if (isMaj) lbls += `<text class="frame-lbl" text-anchor="middle" x="${x}" y="${dir < 0 ? B - 9 : H - B + 15}">${fmtDeg(m.v, false)}</text>`;
         }
       }
     }
@@ -968,16 +1021,16 @@
         const ys = crossings(p, "x", X, B, H - B);
         for (const y of ys) {
           const len = isMaj ? 7 : 4;
-          ticks.append("line").attr("class", isMaj ? "frame-tick" : "frame-tick-minor")
-            .attr("x1", X).attr("x2", X + dir * len).attr("y1", y).attr("y2", y);
+          tick(isMaj ? "frame-tick" : "frame-tick-minor", X, X + dir * len, y, y);
           if (isMaj) {
             const tx = dir < 0 ? B - 8 : W - B + 8;
-            lbls.append("text").attr("class", "frame-lbl").attr("text-anchor", "middle")
-              .attr("transform", `translate(${tx},${y}) rotate(${dir < 0 ? -90 : 90})`).attr("dy", 3.5).text(fmtDeg(p.v, true));
+            lbls += `<text class="frame-lbl" text-anchor="middle" transform="translate(${tx},${y}) rotate(${dir < 0 ? -90 : 90})" dy="3.5">${fmtDeg(p.v, true)}</text>`;
           }
         }
       }
     }
+    F.append("g").html(ticks);
+    F.append("g").html(lbls);
   }
 
   /* ------------------------------------------------------------------
@@ -1025,6 +1078,9 @@
     const km = niceDist(kmPerPx * maxPx), kmPx = km / kmPerPx;
     const nm = niceDist(kmPerPx * maxPx / 1.852), nmPx = nm * 1.852 / kmPerPx;
     const w = Math.max(kmPx, nmPx) + 44;
+    const key = `${W}|${km}|${nm}|${kmPx.toFixed(1)}|${nmPx.toFixed(1)}`;
+    if (key === S.scaleKey) return;
+    S.scaleKey = key;
     const s = d3.select(el).selectAll("svg").data([0]).join("svg").attr("width", w).attr("height", 40);
     s.selectAll("*").remove();
     const x0 = 1;
@@ -1277,7 +1333,7 @@
     if (!era || S.presentDay) return;
 
     const g = H.append("g").attr("class", "era").attr("data-era", era.id || "");
-    const path = S.path;
+    const path = S.draw;
     const ovs = g.append("g").attr("class", "ovs");
     (era.overlays || []).forEach((o) => {
       ovs.append("path").attr("class", `ov ov-${o.kind}`).attr("data-key", o._key)
@@ -1299,7 +1355,7 @@
     const g = S.layers.hul; if (!g) return;
     g.selectAll("*").remove();
     if (!S.historicalLands) return;
-    g.append("path").attr("class", "hul-fill").attr("d", S.path(S.historicalLands)).attr("vector-effect", "non-scaling-stroke");
+    g.append("path").attr("class", "hul-fill").attr("d", S.draw(S.historicalLands)).attr("vector-effect", "non-scaling-stroke");
     applyVisibility();
   }
 
