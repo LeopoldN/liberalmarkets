@@ -1,0 +1,3343 @@
+{
+  "group": "south",
+  "generated": "2026-11-03",
+  "oblasts": {
+    "UA-51": {
+  "name": "Odesa Oblast",
+  "wikipedia": "Odesa_Oblast",
+  "historicalRegions": [
+    "Budjak (southern Bessarabia)",
+    "Yedisan",
+    "Podolia (northern districts)",
+    "Novorossiya"
+  ],
+  "overview": "The area of today's Odesa Oblast stretches along the Black Sea coast from the Danube delta to the Tylihul estuary, including the Budjak steppe of southern Bessarabia. Copper Age farmers and Bronze Age herders were followed by Greek colonies such as Tyras and Nikonion on the Dniester estuary, Roman garrisons, and successive steppe peoples. In the Middle Ages the Genoese, Moldavians, Lithuanians, Ottomans and Nogai Tatars contested its fortresses at Bilhorod (Akkerman), Kiliia, Izmail and Khadzhibei. Russia conquered the region in 1789-1812 and founded Odesa in 1794, which grew into the empire's leading grain port and a multiethnic metropolis; southern Bessarabia passed between Russia, Moldavia and Romania until 1940. Since 2022 the oblast has been the hub of Ukraine's Black Sea exports and a constant target of Russian missile and drone strikes.",
+  "eras": {
+    "trypillia": {
+      "control": "Cucuteni-Trypillia and Usatove farming cultures",
+      "summary": "Trypillia farming villages reached the northern forest-steppe districts around Balta and Kodyma. In the late phase the Usatove culture, named after a village near Odesa, flourished on the Dniester and Khadzhibei estuaries, mixing Trypillian pottery with steppe-style burial mounds; the Maiaky settlement on the lower Dniester was one of its centres.",
+      "military": "Usatove sites such as Maiaky were enclosed by ditches and stone walls, and graves held copper daggers, suggesting a warrior elite.",
+      "places": [
+        "Usatove",
+        "Maiaky settlement",
+        "Balta district"
+      ],
+      "links": [
+        {
+          "title": "Usatove culture",
+          "url": "https://en.wikipedia.org/wiki/Usatove_culture"
+        },
+        {
+          "title": "Cucuteni–Trypillia culture",
+          "url": "https://en.wikipedia.org/wiki/Cucuteni%E2%80%93Trypillia_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Yamnaya, Catacomb and Sabatynivka herders",
+      "summary": "The Budjak and coastal steppe were covered with kurgans of Yamnaya and later Catacomb-culture pastoralists. In the Late Bronze Age the Sabatynivka and then Belozerka cultures built settlements along the estuaries, combining herding with farming and bronze working.",
+      "military": "Burials included stone battle-axes and bronze weapons; there were no major fortified sites.",
+      "places": [
+        "Budjak kurgans",
+        "Dniester estuary"
+      ],
+      "links": [
+        {
+          "title": "Yamnaya culture",
+          "url": "https://en.wikipedia.org/wiki/Yamnaya_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Cimmerian-era Belozerka and Thraco-Cimmerian groups",
+      "summary": "The steppe between the Danube and the Southern Bug was home to late Belozerka communities and horse-riding groups that Greek writers later called Cimmerians. Hallstatt-related Thracian cultures from the Carpatho-Danubian area also reached the lower Dniester.",
+      "military": "Mounted warriors with bronze and early iron bridle gear and weapons appear in burials of this period.",
+      "places": [
+        "Lower Dniester"
+      ],
+      "links": [
+        {
+          "title": "Cimmerians",
+          "url": "https://en.wikipedia.org/wiki/Cimmerians"
+        },
+        {
+          "title": "Bilozerka culture",
+          "url": "https://en.wikipedia.org/wiki/Bilozerka_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Scythian nomads; Greek colonies on the coast; Getae near the Danube",
+      "summary": "Greeks from Miletus founded Tyras on the Dniester estuary (today's Bilhorod-Dnistrovskyi) and Nikonion opposite it in the 6th century BC; a Greek settlement also stood on the bay of later Odesa. Zmiinyi (Snake) Island, ancient Leuke, held a famous sanctuary of Achilles. Inland the steppe was grazed by Scythian nomads, while Thracian Getae lived near the Danube.",
+      "military": "Greek towns had stone walls; Scythian kurgan burials held weapons and horse gear.",
+      "places": [
+        "Tyras",
+        "Nikonion",
+        "Zmiinyi Island (Leuke)"
+      ],
+      "links": [
+        {
+          "title": "Tyras",
+          "url": "https://en.wikipedia.org/wiki/Tyras"
+        },
+        {
+          "title": "Nikōnion",
+          "url": "https://en.wikipedia.org/wiki/Nik%C5%8Dnion"
+        },
+        {
+          "title": "Snake Island (Ukraine)",
+          "url": "https://en.wikipedia.org/wiki/Snake_Island_(Ukraine)"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Sarmatians and Bastarnae; Tyras under Roman protection",
+      "summary": "Sarmatian tribes replaced the Scythians on the steppe, and the Germanic-Celtic Bastarnae and Dacians lived near the Danube. Tyras was sacked by the Getae around the 1st century BC, revived and from AD 56 was attached to the Roman province of Moesia Inferior, minting coins under Roman emperors.",
+      "military": "A Roman garrison, including detachments of legions I Italica and V Macedonica, was stationed at Tyras.",
+      "places": [
+        "Tyras"
+      ],
+      "links": [
+        {
+          "title": "Sarmatians",
+          "url": "https://en.wikipedia.org/wiki/Sarmatians"
+        },
+        {
+          "title": "Moesia",
+          "url": "https://en.wikipedia.org/wiki/Moesia"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Gothic-led Chernyakhov culture",
+      "summary": "Chernyakhov villages of Goths, Sarmatians and local peoples spread across the Budjak and the lands between the Dniester and the Bug. Gothic raids on the Roman Empire set out along this coast, and Tyras declined after attacks in the mid-3rd century.",
+      "military": "Gothic seaborne and overland raids into the Roman Balkans passed through the Dniester-Danube region in the 250s-270s.",
+      "places": [
+        "Tyras",
+        "Budjak"
+      ],
+      "links": [
+        {
+          "title": "Chernyakhov culture",
+          "url": "https://en.wikipedia.org/wiki/Chernyakhov_culture"
+        },
+        {
+          "title": "Gothic War (248–253)",
+          "url": "https://en.wikipedia.org/wiki/Gothic_War_(248%E2%80%93253)"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Huns",
+      "summary": "The Hunnic advance around 375 shattered the Gothic Greuthungi and Tervingi; the Tervingi under Athanaric tried to hold a line on the Dniester before fleeing across the Danube. The Budjak became a corridor for Hunnic and allied nomads moving towards Pannonia.",
+      "military": "Athanaric's defensive line on the Dniester was outflanked by the Huns around 376.",
+      "places": [
+        "Dniester"
+      ],
+      "links": [
+        {
+          "title": "Huns",
+          "url": "https://en.wikipedia.org/wiki/Huns"
+        },
+        {
+          "title": "Athanaric",
+          "url": "https://en.wikipedia.org/wiki/Athanaric"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Antes and Sclaveni; Kutrigur and Avar nomads",
+      "summary": "Early Slavs, the Antes between the Dniester and Dnieper and the Sclaveni near the Danube, settled the northern districts and pushed towards the Danube, which Byzantine writers such as Jordanes and Procopius described as the frontier. Bulgar and Avar nomads crossed the steppe.",
+      "military": "Slavic raiders crossed the lower Danube into the Byzantine Balkans throughout the 6th century.",
+      "places": [
+        "Lower Danube"
+      ],
+      "links": [
+        {
+          "title": "Antes people",
+          "url": "https://en.wikipedia.org/wiki/Antes_people"
+        },
+        {
+          "title": "Sclaveni",
+          "url": "https://en.wikipedia.org/wiki/Sclaveni"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Tivertsi and Ulichians; Bulgar khanate near the Danube",
+      "summary": "The Primary Chronicle placed the Tivertsi on the Dniester down to the sea and the Ulichians between the Dniester and the Bug. Around 680 Asparukh's Bulgars settled the Onglos area in the Danube delta before founding the First Bulgarian Empire, which held the Danube-Dniester steppe for some time.",
+      "military": "Asparukh's Bulgars defeated a Byzantine army near the Onglos in 680.",
+      "places": [
+        "Onglos (Danube delta)"
+      ],
+      "links": [
+        {
+          "title": "Tivertsi",
+          "url": "https://en.wikipedia.org/wiki/Tivertsi"
+        },
+        {
+          "title": "Ulichs",
+          "url": "https://en.wikipedia.org/wiki/Ulichs"
+        },
+        {
+          "title": "Ongal",
+          "url": "https://en.wikipedia.org/wiki/Ongal"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Tivertsi under Kyivan tribute; Pechenegs on the steppe",
+      "summary": "Kyiv's princes Oleh and Ihor took Tivertsi warriors on campaigns against Constantinople, and the Rus' sea route to Byzantium ran along this coast, stopping at the Dniester mouth and Danube delta. From the 890s the Pechenegs dominated the steppe.",
+      "military": "Sviatoslav's Danube campaigns of 968-971 passed through the area to Pereyaslavets on the lower Danube.",
+      "places": [
+        "Dniester mouth",
+        "Danube delta"
+      ],
+      "links": [
+        {
+          "title": "Sviatoslav's invasion of Bulgaria",
+          "url": "https://en.wikipedia.org/wiki/Sviatoslav%27s_invasion_of_Bulgaria"
+        },
+        {
+          "title": "Pechenegs",
+          "url": "https://en.wikipedia.org/wiki/Pechenegs"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Pecheneg steppe; Tivertsi remnants",
+      "summary": "Under Volodymyr the coastal steppe stayed in Pecheneg hands, while Slavic Tivertsi were pressed north towards the forest-steppe. Rus' merchants still sailed along the shore to Byzantium.",
+      "military": "Pecheneg raids forced Kyiv to build defensive lines far to the north; the coast lay outside Rus' control.",
+      "places": [],
+      "links": [
+        {
+          "title": "Pechenegs",
+          "url": "https://en.wikipedia.org/wiki/Pechenegs"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Pechenegs, then Oghuz (Torks)",
+      "summary": "After Yaroslav the Wise defeated the Pechenegs at Kyiv in 1036, many moved towards the Danube, where they pressed on Byzantium; Oghuz Torks followed them across the Budjak.",
+      "military": "Pecheneg hordes crossed the lower Danube into Byzantine territory in the 1040s.",
+      "places": [],
+      "links": [
+        {
+          "title": "Tork people",
+          "url": "https://en.wikipedia.org/wiki/Tork_people"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Cumans (Polovtsians); Galician influence on the lower Dniester",
+      "summary": "The Cumans controlled the steppe from the mid-11th century. Galician princes extended influence down the Dniester, and the Berladnyky, free communities of Rus' exiles, operated between the Dniester and the Danube.",
+      "military": "Ivan Berladnyk led Berladnyky bands on the lower Danube in the 1150s.",
+      "places": [],
+      "links": [
+        {
+          "title": "Cumans",
+          "url": "https://en.wikipedia.org/wiki/Cumans"
+        },
+        {
+          "title": "Ivan Rostyslavych Berladnik",
+          "url": "https://en.wikipedia.org/wiki/Ivan_Rostyslavych_Berladnik"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Cumans; Galician claims along the Dniester",
+      "summary": "Roman Mstyslavych and Danylo of Galicia claimed lands down the Dniester, while the steppe remained Cuman. In the 1220s Hungary sought influence over the Cumans in the Danube area.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Cumania",
+          "url": "https://en.wikipedia.org/wiki/Cumania"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Golden Horde; Genoese trading posts",
+      "summary": "The Golden Horde ruled the steppe, and the Genoese set up trading posts at Moncastro (Bilhorod) and Licostomo near Kiliia in the Danube delta. These towns exported grain, fish and slaves to the Mediterranean.",
+      "military": "Moncastro was fortified; the Horde's Nogai beylik controlled the lower Danube in the late 13th century.",
+      "places": [
+        "Moncastro (Bilhorod)",
+        "Kiliia"
+      ],
+      "links": [
+        {
+          "title": "Golden Horde",
+          "url": "https://en.wikipedia.org/wiki/Golden_Horde"
+        },
+        {
+          "title": "Bilhorod-Dnistrovskyi",
+          "url": "https://en.wikipedia.org/wiki/Bilhorod-Dnistrovskyi"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Moldavia in the Budjak; Lithuania between Dniester and Bug; Ottoman conquest from 1484",
+      "summary": "The Principality of Moldavia held Cetatea Albă (Bilhorod) and Chilia (Kiliia), while Vytautas of Lithuania extended his grand duchy to the sea, where the port of Kachibei (later Khadzhibei, today's Odesa) shipped grain in 1415. In 1484 Sultan Bayezid II took Kiliia and Akkerman, and the Budjak became Ottoman land settled by Nogai Tatars.",
+      "military": "The fortress of Akkerman was rebuilt in stone in the 15th century; its fall in 1484 ended Moldavia's access to the sea.",
+      "places": [
+        "Akkerman fortress",
+        "Kiliia",
+        "Khadzhibei"
+      ],
+      "links": [
+        {
+          "title": "Bilhorod-Dnistrovskyi fortress",
+          "url": "https://en.wikipedia.org/wiki/Bilhorod-Dnistrovskyi_fortress"
+        },
+        {
+          "title": "Moldavia",
+          "url": "https://en.wikipedia.org/wiki/Moldavia"
+        },
+        {
+          "title": "Vytautas the Great",
+          "url": "https://en.wikipedia.org/wiki/Vytautas_the_Great"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Ottoman Empire and Budjak Horde; Polish Podolia in the north",
+      "summary": "Akkerman, Kiliia, Izmail and Bender anchored Ottoman rule, while the Budjak Horde of Nogais grazed the steppe and raided Poland-Lithuania for slaves. The northern districts around Balta belonged to the Polish Bracław Voivodeship.",
+      "military": "Zaporozhian Cossacks raided Akkerman and Kiliia by sea and land, e.g. in the early 17th century.",
+      "places": [
+        "Akkerman",
+        "Izmail",
+        "Kiliia"
+      ],
+      "links": [
+        {
+          "title": "Budjak Horde",
+          "url": "https://en.wikipedia.org/wiki/Budjak_Horde"
+        },
+        {
+          "title": "Budjak",
+          "url": "https://en.wikipedia.org/wiki/Budjak"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Ottoman Empire and Nogais; Cossack-Polish borderland in the north",
+      "summary": "The coastal steppe remained Ottoman and Nogai. Bohdan Khmelnytsky allied with the Crimean and Budjak Tatars against Poland and pursued a dynastic alliance with Moldavia through his son Tymish.",
+      "military": "Cossack armies crossed the area on campaigns into Moldavia in 1650-1653.",
+      "places": [],
+      "links": [
+        {
+          "title": "Tymofiy Khmelnytsky",
+          "url": "https://en.wikipedia.org/wiki/Tymofiy_Khmelnytsky"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Ottoman Empire; Yedisan Nogais; Ottoman Podolia in the north (1672-1699)",
+      "summary": "During the Ruin the Ottomans backed Petro Doroshenko and annexed Podolia in 1672, including the northern districts. Nogai hordes of Yedisan and Budjak raided the depopulated Right Bank.",
+      "military": "Ottoman armies marched north through the area towards Kamianets and Chyhyryn in the 1670s.",
+      "places": [],
+      "links": [
+        {
+          "title": "Podolia Eyalet",
+          "url": "https://en.wikipedia.org/wiki/Podolia_Eyalet"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Ottoman Empire and Crimean Khanate; Polish Podolia",
+      "summary": "After Poltava, Ivan Mazepa and Charles XII fled through the area to Ottoman Bender, where Pylyp Orlyk wrote his constitution in 1710. The Ottomans built the fortress of Yeni Dünya at Khadzhibei in 1764. In 1768 haidamaks attacked the border town of Balta during the Koliivshchyna, giving the Ottomans a pretext for war with Russia.",
+      "military": "The Balta incident (1768) triggered the Russo-Turkish War of 1768-1774, during which Russian armies took Akkerman, Kiliia and Izmail before returning them.",
+      "places": [
+        "Balta",
+        "Khadzhibei",
+        "Izmail"
+      ],
+      "links": [
+        {
+          "title": "Koliivshchyna",
+          "url": "https://en.wikipedia.org/wiki/Koliivshchyna"
+        },
+        {
+          "title": "Russo-Turkish War (1768–1774)",
+          "url": "https://en.wikipedia.org/wiki/Russo-Turkish_War_(1768%E2%80%931774)"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Ottoman Empire, then Russian Empire east of the Dniester (1792)",
+      "summary": "In 1789 José de Ribas captured Khadzhibei, and the Treaty of Jassy (1792) gave Russia the land between the Bug and the Dniester. On the site of Khadzhibei Catherine II ordered a port founded in 1794 and named Odessa; Tiraspol and Ovidiopol were founded as fortresses. The northern districts passed to Russia with the Second Partition of Poland in 1793.",
+      "military": "Suvorov's storming of Izmail in December 1790 was one of the bloodiest assaults of the age, though the fortress was returned to the Ottomans.",
+      "places": [
+        "Odesa",
+        "Izmail fortress",
+        "Ovidiopol"
+      ],
+      "links": [
+        {
+          "title": "Siege of Izmail",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Izmail"
+        },
+        {
+          "title": "José de Ribas",
+          "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_de_Ribas"
+        },
+        {
+          "title": "Treaty of Jassy",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_Jassy"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Russian Empire (Kherson Governorate; Bessarabia Oblast from 1812)",
+      "summary": "Under governors the Duc de Richelieu and Mikhail Vorontsov, Odesa became a free port (1819-1859) and the main grain exporter of the empire, with Greek, Italian, Jewish and Ukrainian communities. Russia annexed Bessarabia in 1812, and Bulgarian, Gagauz and German colonists settled the Budjak around Bolhrad and Tarutyne. The Greek revolutionary society Filiki Eteria was founded in Odesa in 1814, and Pushkin lived there in 1823-1824.",
+      "military": "During the Crimean War an Anglo-French squadron bombarded Odesa in April 1854; the 1856 Treaty of Paris returned southern Bessarabia, including Izmail and Bolhrad, to Moldavia.",
+      "places": [
+        "Odesa",
+        "Bolhrad",
+        "Izmail"
+      ],
+      "links": [
+        {
+          "title": "Armand Emmanuel de Vignerot du Plessis, 5th Duke of Richelieu",
+          "url": "https://en.wikipedia.org/wiki/Armand_Emmanuel_de_Vignerot_du_Plessis,_5th_Duke_of_Richelieu"
+        },
+        {
+          "title": "Filiki Eteria",
+          "url": "https://en.wikipedia.org/wiki/Filiki_Eteria"
+        },
+        {
+          "title": "1854 bombardment of Odessa",
+          "url": "https://en.wikipedia.org/wiki/1854_bombardment_of_Odessa"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Russian Empire; southern Bessarabia Romanian until 1878",
+      "summary": "Odesa grew into the fourth-largest city of the empire, with Novorossiya University (1865), a large Jewish community and a lively Ukrainian Hromada. Russia regained southern Bessarabia in 1878. The 1905 revolution brought the Potemkin mutiny in the port and a deadly pogrom.",
+      "military": "The mutinous battleship Potemkin arrived in Odesa in June 1905; troops fired on crowds near the harbour steps.",
+      "places": [
+        "Odesa",
+        "Potemkin Stairs"
+      ],
+      "links": [
+        {
+          "title": "Russian battleship Potemkin",
+          "url": "https://en.wikipedia.org/wiki/Russian_battleship_Potemkin"
+        },
+        {
+          "title": "Odesa National University",
+          "url": "https://en.wikipedia.org/wiki/Odesa_National_University"
+        },
+        {
+          "title": "Odessa pogroms",
+          "url": "https://en.wikipedia.org/wiki/Odessa_pogroms"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "UNR, Bolsheviks, Central Powers, French intervention; Budjak to Romania",
+      "summary": "Odesa changed hands repeatedly: the Bolshevik Odessa Soviet Republic (January-March 1918), Austro-Hungarian occupation under the UNR and the Hetmanate, and a French-led Allied intervention from December 1918. Romania took Bessarabia in 1918, separating the Budjak until 1940.",
+      "military": "Fighting in January 1918 pitted UNR haidamaks against Red Guards in Odesa; Austro-Hungarian troops entered in March 1918.",
+      "places": [
+        "Odesa"
+      ],
+      "links": [
+        {
+          "title": "Odessa Soviet Republic",
+          "url": "https://en.wikipedia.org/wiki/Odessa_Soviet_Republic"
+        },
+        {
+          "title": "Southern Russia intervention",
+          "url": "https://en.wikipedia.org/wiki/Southern_Russia_intervention"
+        },
+        {
+          "title": "Union of Bessarabia with Romania",
+          "url": "https://en.wikipedia.org/wiki/Union_of_Bessarabia_with_Romania"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Bolsheviks, Hryhoriiv, Whites, then Soviet rule (1920); Budjak Romanian",
+      "summary": "The French evacuated Odesa in April 1919 as Otaman Hryhoriiv's forces approached; Denikin's Whites held the city from August 1919 until the Red Army took it in February 1920, prompting a mass emigration by sea.",
+      "military": "The Volunteer Army's evacuation of Odesa in February 1920 was chaotic; anti-Soviet peasant insurgents remained active in the countryside.",
+      "places": [
+        "Odesa"
+      ],
+      "links": [
+        {
+          "title": "Nykyfor Hryhoriv",
+          "url": "https://en.wikipedia.org/wiki/Nykyfor_Hryhoriv"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Ukrainian SSR (incl. Moldavian ASSR); Romania in the Budjak",
+      "summary": "The Moldavian ASSR, created within Soviet Ukraine in 1924, had its first capital at Balta. Odesa recovered as a port and became a film centre (Odesa Film Studio) and the home of writers like Isaac Babel. Collectivization from 1929 devastated German and Ukrainian villages.",
+      "military": "In the Romanian-ruled Budjak a pro-Soviet uprising at Tatarbunary in September 1924 was crushed by the Romanian army.",
+      "places": [
+        "Balta",
+        "Tatarbunary",
+        "Odesa"
+      ],
+      "links": [
+        {
+          "title": "Moldavian Autonomous Soviet Socialist Republic",
+          "url": "https://en.wikipedia.org/wiki/Moldavian_Autonomous_Soviet_Socialist_Republic"
+        },
+        {
+          "title": "Tatarbunary Uprising",
+          "url": "https://en.wikipedia.org/wiki/Tatarbunary_Uprising"
+        },
+        {
+          "title": "Odesa Film Studio",
+          "url": "https://en.wikipedia.org/wiki/Odesa_Film_Studio"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Ukrainian SSR (Odesa Oblast from 1932); Romania in the Budjak",
+      "summary": "Odesa Oblast was formed in 1932 and suffered severely in the Holodomor, with many villages blacklisted. The Great Terror struck the city's intelligentsia and the large German and Bulgarian minorities in 'national operations'.",
+      "military": null,
+      "places": [
+        "Odesa"
+      ],
+      "links": [
+        {
+          "title": "Holodomor",
+          "url": "https://en.wikipedia.org/wiki/Holodomor"
+        },
+        {
+          "title": "NKVD Order No. 00439",
+          "url": "https://en.wikipedia.org/wiki/NKVD_Order_No._00439"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Ukrainian SSR; Budjak annexed in 1940 as Izmail (Akkerman) Oblast",
+      "summary": "In June 1940 the USSR seized Bessarabia from Romania; its southern part was attached to the Ukrainian SSR as Akkerman Oblast, soon renamed Izmail Oblast. Bessarabian Germans were resettled to German-held Poland, and deportations followed.",
+      "military": "The Red Army occupied the Budjak in late June 1940; the Danube Military Flotilla was based at Izmail.",
+      "places": [
+        "Izmail",
+        "Bilhorod-Dnistrovskyi"
+      ],
+      "links": [
+        {
+          "title": "Soviet occupation of Bessarabia and Northern Bukovina",
+          "url": "https://en.wikipedia.org/wiki/Soviet_occupation_of_Bessarabia_and_Northern_Bukovina"
+        },
+        {
+          "title": "Izmail Oblast",
+          "url": "https://en.wikipedia.org/wiki/Izmail_Oblast"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Romanian-administered Transnistria Governorate; Bessarabia annexed by Romania",
+      "summary": "Odesa withstood a 73-day siege until 16 October 1941, then became the capital of Romanian-run Transnistria. In the Odesa massacre of October 1941 tens of thousands of Jews were murdered, and many more died in camps such as Bogdanovka and Domanivka (now Mykolaiv Oblast). Partisans hid in the Odesa catacombs; the city was liberated on 10 April 1944.",
+      "military": "The Separate Coastal Army defended Odesa in August-October 1941 before being evacuated to Sevastopol; the Odesa Offensive of the 3rd Ukrainian Front retook the area in spring 1944.",
+      "places": [
+        "Odesa",
+        "Odesa catacombs"
+      ],
+      "links": [
+        {
+          "title": "Siege of Odessa",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Odessa"
+        },
+        {
+          "title": "1941 Odessa massacre",
+          "url": "https://en.wikipedia.org/wiki/1941_Odessa_massacre"
+        },
+        {
+          "title": "Transnistria Governorate",
+          "url": "https://en.wikipedia.org/wiki/Transnistria_Governorate"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR (Odesa and Izmail oblasts)",
+      "summary": "The region suffered the famine of 1946-1947. Marshal Georgy Zhukov was sent to command the Odesa Military District in 1946-1948, where he also cracked down on organized crime. Izmail Oblast was merged into Odesa Oblast in 1954.",
+      "military": "The Odesa Military District was one of the main Soviet commands in the south.",
+      "places": [
+        "Odesa",
+        "Izmail"
+      ],
+      "links": [
+        {
+          "title": "Odessa Military District",
+          "url": "https://en.wikipedia.org/wiki/Odessa_Military_District"
+        },
+        {
+          "title": "Soviet famine of 1946–1947",
+          "url": "https://en.wikipedia.org/wiki/Soviet_famine_of_1946%E2%80%931947"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "Odesa was named a Hero City in 1965 and expanded with the new ports of Illichivsk (today Chornomorsk) and Yuzhne. The Black Sea Shipping Company was one of the world's largest merchant fleets, and Izmail was the base of the Soviet Danube Shipping Company.",
+      "military": "The Odesa Military District and naval facilities made the region a key Soviet southern garrison.",
+      "places": [
+        "Chornomorsk",
+        "Pivdennyi (Yuzhne) port",
+        "Izmail"
+      ],
+      "links": [
+        {
+          "title": "Hero City",
+          "url": "https://en.wikipedia.org/wiki/Hero_City"
+        },
+        {
+          "title": "Black Sea Shipping Company",
+          "url": "https://en.wikipedia.org/wiki/Black_Sea_Shipping_Company"
+        },
+        {
+          "title": "Chornomorsk",
+          "url": "https://en.wikipedia.org/wiki/Chornomorsk"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "Odesa Oblast voted for independence in 1991 and its ports became the country's main gateway for grain and oil. The Budjak's Bulgarian and Gagauz minorities and the border with Moldova's breakaway Transnistria shaped local politics, and smuggling through the Transnistrian border was a recurrent problem.",
+      "military": "The Odesa Military District became Ukraine's Southern Operational Command.",
+      "places": [
+        "Odesa",
+        "Bolhrad"
+      ],
+      "links": [
+        {
+          "title": "Port of Odesa",
+          "url": "https://en.wikipedia.org/wiki/Port_of_Odesa"
+        },
+        {
+          "title": "Transnistria",
+          "url": "https://en.wikipedia.org/wiki/Transnistria"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "In 2009 the International Court of Justice settled the Ukrainian-Romanian maritime boundary around Zmiinyi Island, largely in Romania's favour. The oblast leaned towards the Party of Regions, but a sizeable Euromaidan movement formed in Odesa in 2013-2014.",
+      "military": null,
+      "places": [
+        "Zmiinyi Island"
+      ],
+      "links": [
+        {
+          "title": "Snake Island (Ukraine)",
+          "url": "https://en.wikipedia.org/wiki/Snake_Island_(Ukraine)"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "On 2 May 2014 street clashes between pro-Ukrainian and pro-Russian groups in Odesa ended in a fire at the Trade Unions House that killed 42 people there (48 deaths overall), which defeated separatist mobilization in the city. After Russia's occupation of Crimea, the headquarters of the Ukrainian Navy moved to Odesa. Mikheil Saakashvili served as governor in 2015-2016.",
+      "military": "The Ukrainian Navy was rebuilt from Odesa after losing most ships in Crimea; local volunteer and territorial defence units formed.",
+      "places": [
+        "Odesa Trade Unions House"
+      ],
+      "links": [
+        {
+          "title": "2014 Odesa clashes",
+          "url": "https://en.wikipedia.org/wiki/2014_Odesa_clashes"
+        },
+        {
+          "title": "Ukrainian Navy",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Navy"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (Zmiinyi Island briefly occupied)",
+      "summary": "Russia seized Zmiinyi Island on 24 February 2022, where the garrison's defiant radio reply became a symbol of resistance, but abandoned it on 30 June after Ukrainian strikes. A threatened amphibious landing near Odesa never took place, though missiles struck the city and the Serhiivka resort (1 July, 21 killed). From July 2022 the Black Sea Grain Initiative shipped grain from Odesa, Chornomorsk and Pivdennyi.",
+      "military": "Ukrainian Neptune missiles fired from the Odesa coast sank the cruiser Moskva on 14 April 2022; Danube ports at Izmail and Reni became a backup export route.",
+      "places": [
+        "Zmiinyi Island",
+        "Serhiivka",
+        "Port of Pivdennyi"
+      ],
+      "links": [
+        {
+          "title": "Snake Island campaign",
+          "url": "https://en.wikipedia.org/wiki/Snake_Island_campaign"
+        },
+        {
+          "title": "Black Sea Grain Initiative",
+          "url": "https://en.wikipedia.org/wiki/Black_Sea_Grain_Initiative"
+        },
+        {
+          "title": "Sinking of the Moskva",
+          "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Moskva"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine",
+      "summary": "After Russia quit the grain deal in July 2023 it struck Odesa's ports and historic centre, damaging the Transfiguration Cathedral (23 July 2023), and hit the Danube ports of Izmail and Reni. Ukraine opened its own shipping corridor along the coast in August 2023, and exports recovered to near pre-war levels in 2024 as naval drones pushed the Russian fleet east.",
+      "military": "Odesa was one of the most frequently attacked cities; a March 2024 missile strike killed over 20 people, and port and residential strikes continued.",
+      "places": [
+        "Transfiguration Cathedral, Odesa",
+        "Izmail",
+        "Reni"
+      ],
+      "links": [
+        {
+          "title": "Naval warfare in the Russo-Ukrainian war (2022–present)",
+          "url": "https://en.wikipedia.org/wiki/Naval_warfare_in_the_Russo-Ukrainian_war_(2022%E2%80%93present)"
+        },
+        {
+          "title": "Transfiguration Cathedral, Odesa",
+          "url": "https://en.wikipedia.org/wiki/Transfiguration_Cathedral,_Odesa"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine",
+      "summary": "Odesa Oblast stayed under Ukrainian control but faced repeated drone and missile attacks on ports, bridges and the power grid; strikes on three energy facilities on 22 December 2025 left more than 120,000 people without power. In March 2026 drones hit port and energy sites in Izmail and grain-laden merchant ships at Odesa-region berths. Despite this the ports kept handling most of Ukraine's seaborne exports.",
+      "military": "The oblast remained a rear base for Ukraine's naval drone and air-defence operations; reports of later 2026 attacks were incomplete at the time of writing.",
+      "places": [
+        "Odesa",
+        "Izmail",
+        "Chornomorsk"
+      ],
+      "links": [
+        {
+          "title": "Odesa",
+          "url": "https://en.wikipedia.org/wiki/Odesa"
+        },
+        {
+          "title": "Kyiv Independent: Russia strikes 3 energy facilities in Odesa Oblast",
+          "url": "https://kyivindependent.com/over-120-000-people-left-without-power-as-russia-strikes-3-energy-facilities-in-odesa-oblast/"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Odesa Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Odesa_Oblast"
+    },
+    {
+      "title": "History of Odesa (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Odesa#History"
+    },
+    {
+      "title": "Encyclopedia of Ukraine: Odesa oblast",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CO%5CD%5COdesaoblast.htm"
+    },
+    {
+      "title": "Ukrainska Pravda: Russia attacks Izmail port (March 2026)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/03/26/8027223"
+    }
+  ]
+},
+    "UA-48": {
+  "name": "Mykolaiv Oblast",
+  "wikipedia": "Mykolaiv_Oblast",
+  "historicalRegions": [
+    "Yedisan",
+    "Zaporozhian lands (Buh Gard palanka)",
+    "Novorossiya"
+  ],
+  "overview": "Mykolaiv Oblast lies along the lower Southern Bug and Inhul rivers and the Dnieper-Bug estuary. Its coast held the earliest Greek colonies in the northern Black Sea, Berezan and Olbia, which traded with Scythian and Sarmatian nomads for a thousand years. Later a steppe frontier of Pechenegs, Cumans and the Golden Horde, it passed to Lithuania, then to the Ottomans and Crimean Tatars, whose fortress of Ochakiv guarded the estuary until Russia stormed it in 1788. Founded in 1789, Mykolaiv became the shipbuilding centre of the Russian and Soviet navies, building aircraft carriers into the 1990s. In 2022 Russian forces were halted on the city's outskirts; the oblast was liberated by November 2022 except for the occupied Kinburn spit.",
+  "eras": {
+    "trypillia": {
+      "control": "Trypillia farmers in the north; steppe hunter-herders in the south",
+      "summary": "Trypillia culture settlements reached the northern districts along the Southern Bug near today's Pervomaisk, while the coastal steppe was used by early pastoral groups of the Sredny Stog and later Usatove traditions.",
+      "military": null,
+      "places": [
+        "Southern Bug valley"
+      ],
+      "links": [
+        {
+          "title": "Cucuteni–Trypillia culture",
+          "url": "https://en.wikipedia.org/wiki/Cucuteni%E2%80%93Trypillia_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Yamnaya, Catacomb (Inhul) and Sabatynivka cultures",
+      "summary": "Kurgans of Yamnaya herders, and later of the Inhul variant of the Catacomb culture named after the Inhul river, dotted the steppe. In the Late Bronze Age the Sabatynivka culture built settlements along the Bug and Inhul.",
+      "military": "Bronze weapons and battle-axes appear in burials; no notable fortified sites are known.",
+      "places": [
+        "Inhul river"
+      ],
+      "links": [
+        {
+          "title": "Catacomb culture",
+          "url": "https://en.wikipedia.org/wiki/Catacomb_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Belozerka culture; Cimmerian-era horsemen",
+      "summary": "Late Belozerka communities lived along the estuaries of the Bug and Dnieper, and early mounted nomads associated with the Cimmerians crossed the steppe.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Cimmerians",
+          "url": "https://en.wikipedia.org/wiki/Cimmerians"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Greek colonies of Berezan and Olbia; Scythian nomads",
+      "summary": "Greeks from Miletus settled Berezan island around 647 BC, the oldest Greek colony on the northern Black Sea, and soon founded Olbia on the Bug estuary near today's Parutyne. Olbia became the main market of the Scythians; Herodotus visited it and told of the Scythian king Scyles, who adopted Greek ways there.",
+      "military": "Olbia was walled and resisted a siege by Alexander the Great's general Zopyrion in 331 BC.",
+      "places": [
+        "Olbia",
+        "Berezan Island"
+      ],
+      "links": [
+        {
+          "title": "Pontic Olbia",
+          "url": "https://en.wikipedia.org/wiki/Pontic_Olbia"
+        },
+        {
+          "title": "Berezan Island",
+          "url": "https://en.wikipedia.org/wiki/Berezan_Island"
+        },
+        {
+          "title": "Scyles",
+          "url": "https://en.wikipedia.org/wiki/Scyles"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Sarmatians; Olbia under Scythian, then Roman protection",
+      "summary": "Olbia was sacked by the Getae of Burebista around 55 BC and rebuilt on a smaller scale. In the 2nd century AD it came under Roman protection, and Sarmatian tribes dominated the surrounding steppe.",
+      "military": "A Roman garrison was stationed in Olbia's citadel in the 2nd-3rd centuries AD.",
+      "places": [
+        "Olbia"
+      ],
+      "links": [
+        {
+          "title": "Burebista",
+          "url": "https://en.wikipedia.org/wiki/Burebista"
+        },
+        {
+          "title": "Sarmatians",
+          "url": "https://en.wikipedia.org/wiki/Sarmatians"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Gothic-led Chernyakhov culture",
+      "summary": "Olbia was devastated in the Gothic raids of the mid-3rd century and declined into a small settlement. Chernyakhov-culture villages spread along the Bug and Inhul.",
+      "military": "Gothic fleets assembled on the north Black Sea coast for raids on Roman Asia Minor in the 250s-260s.",
+      "places": [
+        "Olbia"
+      ],
+      "links": [
+        {
+          "title": "Chernyakhov culture",
+          "url": "https://en.wikipedia.org/wiki/Chernyakhov_culture"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Huns",
+      "summary": "The Hunnic invasion around 375 ended the Chernyakhov villages of the lower Bug, and Olbia was abandoned. The steppe served as pasture for Hunnic and allied nomads.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Huns",
+          "url": "https://en.wikipedia.org/wiki/Huns"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Antes in the north; Bulgar and Avar nomads",
+      "summary": "Antes Slavs occupied the forest-steppe of the upper districts, while Kutrigur Bulgars and then Avars controlled the coastal steppe.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Antes people",
+          "url": "https://en.wikipedia.org/wiki/Antes_people"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Ulichians; Khazar and Magyar influence on the steppe",
+      "summary": "The Primary Chronicle placed the Ulichians on the lower Dnieper and Bug, and Magyar tribes passed through the steppe (Etelköz) in the 9th century on their way to the Carpathian Basin.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Ulichs",
+          "url": "https://en.wikipedia.org/wiki/Ulichs"
+        },
+        {
+          "title": "Hungarian prehistory",
+          "url": "https://en.wikipedia.org/wiki/Hungarian_prehistory"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Pechenegs; Rus' trade route",
+      "summary": "Ulichians were forced north by Kyivan pressure and Pecheneg raids. Berezan island at the mouth of the Dnieper-Bug estuary served as a stop where Rus' boats refitted before sailing to Constantinople, as described by Constantine Porphyrogenitus.",
+      "military": null,
+      "places": [
+        "Berezan Island"
+      ],
+      "links": [
+        {
+          "title": "Route from the Varangians to the Greeks",
+          "url": "https://en.wikipedia.org/wiki/Route_from_the_Varangians_to_the_Greeks"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Pechenegs",
+      "summary": "The steppe was Pecheneg territory, while Rus' merchants and warriors continued to use Berezan as a waypoint on the sea route.",
+      "military": null,
+      "places": [
+        "Berezan Island"
+      ],
+      "links": [
+        {
+          "title": "Pechenegs",
+          "url": "https://en.wikipedia.org/wiki/Pechenegs"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Pechenegs and Torks; Rus' waypoint on Berezan",
+      "summary": "A Varangian runestone found on Berezan, the only one known from the Black Sea region, commemorates a man named Karl raised by his comrade Grani, evidence of Scandinavians on the route in the 11th century.",
+      "military": null,
+      "places": [
+        "Berezan Island"
+      ],
+      "links": [
+        {
+          "title": "Berezan' Runestone",
+          "url": "https://en.wikipedia.org/wiki/Berezan%27_Runestone"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Cumans",
+      "summary": "The Cumans controlled the steppe of the lower Bug and Inhul, and the sea route of the Rus' became increasingly dangerous. Rus' princes campaigned against the Cumans in the steppe in 1103 and 1111.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Cumans",
+          "url": "https://en.wikipedia.org/wiki/Cumans"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Cumans",
+      "summary": "The Cuman hordes remained the masters of the region until the Mongol invasion of 1223-1241.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Cumania",
+          "url": "https://en.wikipedia.org/wiki/Cumania"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Golden Horde",
+      "summary": "The lower Bug steppe belonged to the Golden Horde's western uluses. Around 1362-1363 Lithuanian Grand Duke Algirdas defeated three Tatar beys at the Battle of Blue Waters, on a tributary of the Southern Bug, opening the steppe to Lithuania.",
+      "military": "The Battle of Blue Waters (c. 1362) was fought on the Syniukha river near the oblast's northern edge; its exact site is debated.",
+      "places": [],
+      "links": [
+        {
+          "title": "Battle of Blue Waters",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Blue_Waters"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Grand Duchy of Lithuania, then Crimean Khanate and Ottomans (from 1492)",
+      "summary": "Vytautas extended Lithuania to the Black Sea and built a castle at the Dnieper-Bug estuary around 1415 (Dashiv). The Crimean khan Mengli I Giray captured and rebuilt it in 1492 as Özi (Ochakiv), which passed to the Ottomans and guarded the river mouths.",
+      "military": "Ochakiv became a major Ottoman-Tatar fortress; Cossacks led by Ostafii Dashkevych attacked it in the 1520s.",
+      "places": [
+        "Ochakiv fortress"
+      ],
+      "links": [
+        {
+          "title": "Ochakiv",
+          "url": "https://en.wikipedia.org/wiki/Ochakiv"
+        },
+        {
+          "title": "Meñli I Giray",
+          "url": "https://en.wikipedia.org/wiki/Me%C3%B1li_I_Giray"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Ottoman Ochakiv; Nogai steppe (Yedisan); Wild Fields",
+      "summary": "The area was part of the Wild Fields, nominally Ottoman and Crimean and grazed by Nogai Tatars. Zaporozhian Cossacks used the Dnieper-Bug estuary to sail past Ochakiv on raids into the Black Sea.",
+      "military": "Cossack fleets of chaika boats raided Ochakiv and slipped past its guns, e.g. under Petro Sahaidachny in the 1610s.",
+      "places": [
+        "Ochakiv"
+      ],
+      "links": [
+        {
+          "title": "Wild Fields",
+          "url": "https://en.wikipedia.org/wiki/Wild_Fields"
+        },
+        {
+          "title": "Petro Konashevych-Sahaidachny",
+          "url": "https://en.wikipedia.org/wiki/Petro_Konashevych-Sahaidachny"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Ottoman Empire and Crimean Khanate; Zaporozhian hunting grounds",
+      "summary": "The Bug and Inhul valleys were used by Zaporozhian Cossacks for fishing and hunting, while Ochakiv and the steppe remained under Ottoman and Tatar control.",
+      "military": null,
+      "places": [
+        "Ochakiv"
+      ],
+      "links": [
+        {
+          "title": "Zaporozhian Sich",
+          "url": "https://en.wikipedia.org/wiki/Zaporozhian_Sich"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Ottoman Empire and Crimean Khanate",
+      "summary": "Ottoman armies marching north during the Ruin passed through the Bug valley; the Yedisan Nogai horde settled the steppe between the Bug and Dniester.",
+      "military": "Ochakiv served as a supply base for Ottoman campaigns against Chyhyryn in 1677-1678.",
+      "places": [
+        "Ochakiv"
+      ],
+      "links": [
+        {
+          "title": "Russo-Turkish War (1672–1681)",
+          "url": "https://en.wikipedia.org/wiki/Russo-Turkish_War_(1672%E2%80%931681)"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Ottoman Ochakiv; Zaporozhian Buh Gard palanka (from 1734)",
+      "summary": "The New Sich organized the land east of the Bug as the Buh Gard palanka, with Cossack winter farmsteads (zymivnyky). In 1737 Field Marshal Münnich captured Ochakiv, but Russia gave it back in 1739.",
+      "military": "The Siege of Ochakov (1737) cost the Russian army heavy losses; Kinburn was also attacked in 1736.",
+      "places": [
+        "Buh Gard",
+        "Ochakiv"
+      ],
+      "links": [
+        {
+          "title": "Siege of Ochakov (1737)",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Ochakov_(1737)"
+        },
+        {
+          "title": "Burkhard Christoph von Münnich",
+          "url": "https://en.wikipedia.org/wiki/Burkhard_Christoph_von_M%C3%BCnnich"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Russian Empire (from 1774 east of the Bug; Ochakiv from 1788)",
+      "summary": "After the Sich was destroyed in 1775 the land joined New Russia. Suvorov repulsed an Ottoman landing at Kinburn in 1787, and Potemkin stormed Ochakiv in December 1788. Mykolaiv was founded in 1789 as a shipyard, and the Treaty of Jassy (1792) confirmed Russian rule; the Bug Cossack Host guarded the river.",
+      "military": "The Battle of Kinburn (1787) and the Siege of Ochakov (1788) were key battles of the Russo-Turkish War of 1787-1792.",
+      "places": [
+        "Mykolaiv",
+        "Ochakiv",
+        "Kinburn"
+      ],
+      "links": [
+        {
+          "title": "Battle of Kinburn (1787)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Kinburn_(1787)"
+        },
+        {
+          "title": "Siege of Ochakov (1788)",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Ochakov_(1788)"
+        },
+        {
+          "title": "Mykolaiv",
+          "url": "https://en.wikipedia.org/wiki/Mykolaiv"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Russian Empire (Kherson Governorate)",
+      "summary": "Mykolaiv was the headquarters of the Black Sea Fleet's Admiralty and its main shipyard; Admiral Samuel Greig founded its naval observatory in 1821. Bug Cossacks were turned into military settlers, and German and Jewish agricultural colonies were set up on the steppe.",
+      "military": "In October 1855 Anglo-French ironclad floating batteries forced the surrender of Kinburn fortress, an early triumph of armoured warships.",
+      "places": [
+        "Mykolaiv",
+        "Kinburn"
+      ],
+      "links": [
+        {
+          "title": "Battle of Kinburn (1855)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Kinburn_(1855)"
+        },
+        {
+          "title": "Mykolaiv Observatory",
+          "url": "https://en.wikipedia.org/wiki/Mykolaiv_Observatory"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Russian Empire",
+      "summary": "Mykolaiv became a commercial grain port and, from the 1890s, a centre of private and naval shipbuilding with the Naval and Russud yards that built dreadnoughts. Its workforce was active in the 1905 revolution.",
+      "military": "Mykolaiv yards built Black Sea dreadnoughts such as Imperatritsa Mariya (launched 1913).",
+      "places": [
+        "Mykolaiv shipyards"
+      ],
+      "links": [
+        {
+          "title": "Black Sea Shipyard",
+          "url": "https://en.wikipedia.org/wiki/Black_Sea_Shipyard"
+        },
+        {
+          "title": "Russian battleship Imperatritsa Mariya",
+          "url": "https://en.wikipedia.org/wiki/Russian_battleship_Imperatritsa_Mariya"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "UNR, Bolsheviks, Central Powers, Allied intervention",
+      "summary": "Mykolaiv saw a Bolshevik takeover in early 1918 before German troops occupied it in March 1918 under the UNR and the Hetmanate. After the German withdrawal Allied warships and Greek troops briefly held the port.",
+      "military": "German forces stationed in Mykolaiv in 1918 faced worker uprisings.",
+      "places": [
+        "Mykolaiv"
+      ],
+      "links": [
+        {
+          "title": "Southern Russia intervention",
+          "url": "https://en.wikipedia.org/wiki/Southern_Russia_intervention"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Hryhoriiv, Whites, then Soviet rule",
+      "summary": "Otaman Hryhoriiv's forces took Mykolaiv in March 1919, the Whites held it from August 1919, and the Red Army took control in early 1920.",
+      "military": "Peasant insurgents and Makhnovists operated in the northern districts.",
+      "places": [
+        "Mykolaiv"
+      ],
+      "links": [
+        {
+          "title": "Nykyfor Hryhoriv",
+          "url": "https://en.wikipedia.org/wiki/Nykyfor_Hryhoriv"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Ukrainian SSR",
+      "summary": "The shipyards were restored, the Naval yard being renamed after André Marty, and Mykolaiv was the centre of an okruha. Voznesensk and Pervomaisk (created in 1920 by merging Olviopol, Bohopil and Holta) grew as district towns.",
+      "military": null,
+      "places": [
+        "Mykolaiv",
+        "Pervomaisk"
+      ],
+      "links": [
+        {
+          "title": "Pervomaisk, Mykolaiv Oblast",
+          "url": "https://en.wikipedia.org/wiki/Pervomaisk,_Mykolaiv_Oblast"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Ukrainian SSR (Mykolaiv Oblast from 1937)",
+      "summary": "The Holodomor hit the grain villages of the region hard. Mykolaiv Oblast was created in 1937, and the shipyards expanded to build cruisers and submarines for the Soviet navy amid purges of engineers.",
+      "military": "The Marty and 61 Communards yards built warships for the Soviet Black Sea Fleet.",
+      "places": [
+        "Mykolaiv"
+      ],
+      "links": [
+        {
+          "title": "Holodomor",
+          "url": "https://en.wikipedia.org/wiki/Holodomor"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Ukrainian SSR",
+      "summary": "Shipbuilding accelerated in Mykolaiv, which built battleships of the Sovetsky Soyuz class on its slipways from 1938-1939.",
+      "military": "The unfinished battleship Sovetskaya Ukraina was on the slipway when war began.",
+      "places": [
+        "Mykolaiv"
+      ],
+      "links": [
+        {
+          "title": "Sovetsky Soyuz-class battleship",
+          "url": "https://en.wikipedia.org/wiki/Sovetsky_Soyuz-class_battleship"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "German Reichskommissariat Ukraine east of the Bug; Romanian Transnistria to the west",
+      "summary": "German forces took Mykolaiv in August 1941; it became the seat of Generalbezirk Nikolajew. West of the Bug, in Romanian-run Transnistria, tens of thousands of Jews were murdered at Bohdanivka and Domanivka in 1941-1942. Mykolaiv was liberated on 28 March 1944.",
+      "military": "Konstantin Olshansky's 68-man naval landing party held Mykolaiv's port for two days in March 1944 against German counterattacks.",
+      "places": [
+        "Bohdanivka",
+        "Domanivka",
+        "Mykolaiv port"
+      ],
+      "links": [
+        {
+          "title": "Bogdanovka concentration camp",
+          "url": "https://en.wikipedia.org/wiki/Bogdanovka_concentration_camp"
+        },
+        {
+          "title": "Domanovka concentration camp",
+          "url": "https://en.wikipedia.org/wiki/Domanovka_concentration_camp"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR",
+      "summary": "Mykolaiv's yards were rebuilt and resumed building cruisers and large merchant ships, while the oblast suffered the famine of 1946-1947.",
+      "military": "The shipyards became a pillar of Soviet naval construction.",
+      "places": [
+        "Mykolaiv"
+      ],
+      "links": [
+        {
+          "title": "Soviet famine of 1946–1947",
+          "url": "https://en.wikipedia.org/wiki/Soviet_famine_of_1946%E2%80%931947"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "The Black Sea Shipyard built all Soviet aircraft-carrying cruisers, including Admiral Kuznetsov and Varyag. The South Ukraine Nuclear Power Plant opened at Yuzhnoukrainsk in 1982.",
+      "military": "Mykolaiv was a closed city due to its military shipbuilding; a naval base operated at Ochakiv.",
+      "places": [
+        "Black Sea Shipyard",
+        "South Ukraine Nuclear Power Plant"
+      ],
+      "links": [
+        {
+          "title": "Soviet aircraft carrier Admiral Kuznetsov",
+          "url": "https://en.wikipedia.org/wiki/Russian_aircraft_carrier_Admiral_Kuznetsov"
+        },
+        {
+          "title": "South Ukraine Nuclear Power Plant",
+          "url": "https://en.wikipedia.org/wiki/South_Ukraine_Nuclear_Power_Plant"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "Shipbuilding collapsed after 1991; the unfinished carrier Varyag was sold in 1998 and later completed in China as the Liaoning. Mykolaiv's grain ports grew in importance.",
+      "military": "The Mykolaiv-based 79th Airmobile Brigade became one of Ukraine's leading units.",
+      "places": [
+        "Mykolaiv"
+      ],
+      "links": [
+        {
+          "title": "Chinese aircraft carrier Liaoning",
+          "url": "https://en.wikipedia.org/wiki/Chinese_aircraft_carrier_Liaoning"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "Mykolaiv's ports and grain terminals expanded with private investment, while the historic shipyards largely idled. The oblast voted mostly for the Party of Regions.",
+      "military": null,
+      "places": [
+        "Mykolaiv"
+      ],
+      "links": [
+        {
+          "title": "Mykolaiv Oblast",
+          "url": "https://en.wikipedia.org/wiki/Mykolaiv_Oblast"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "After Russia occupied Crimea, Ochakiv became a key base for the rebuilt Ukrainian Navy, with Western-supported facilities. Pro-Russian protests in Mykolaiv in spring 2014 faded.",
+      "military": "The Mykolaiv-based 79th Air Assault Brigade fought at Donetsk Airport and along the Russian border in 2014.",
+      "places": [
+        "Ochakiv"
+      ],
+      "links": [
+        {
+          "title": "79th Air Assault Brigade",
+          "url": "https://en.wikipedia.org/wiki/79th_Air_Assault_Brigade"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine; southeastern districts and Kinburn spit occupied",
+      "summary": "Russian troops advancing from Kherson reached Mykolaiv's outskirts in late February-March 2022 but were repelled; a missile strike on the regional administration on 29 March killed 37 people. Snihurivka and southeastern villages were occupied until November 2022, and the city lost its Dnipro water supply. The Kinburn spit remained occupied.",
+      "military": "The Battle of Mykolaiv stopped the Russian drive towards Odesa; the city was shelled almost daily until Russia's withdrawal from the right bank in November 2022.",
+      "places": [
+        "Mykolaiv",
+        "Snihurivka",
+        "Kinburn spit"
+      ],
+      "links": [
+        {
+          "title": "Battle of Mykolaiv",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Mykolaiv"
+        },
+        {
+          "title": "Kinburn Peninsula",
+          "url": "https://en.wikipedia.org/wiki/Kinburn_Peninsula"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine; Kinburn spit occupied",
+      "summary": "With the front moved to the Dnipro, Mykolaiv faced periodic missile and drone strikes, while Ochakiv and coastal villages were shelled from the Kinburn spit. The Kakhovka dam destruction in June 2023 affected the Bug estuary's water and fisheries.",
+      "military": "Ukrainian forces conducted raids around the Kinburn spit; the occupied spit was used to shell Ochakiv.",
+      "places": [
+        "Ochakiv",
+        "Kinburn spit"
+      ],
+      "links": [
+        {
+          "title": "Destruction of the Kakhovka Dam",
+          "url": "https://en.wikipedia.org/wiki/Destruction_of_the_Kakhovka_Dam"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine; Kinburn spit occupied",
+      "summary": "The oblast remained under Ukrainian control except for the Kinburn spit. Mykolaiv and Ochakiv continued to be hit by drones and missiles, though less intensively than Kherson or Odesa.",
+      "military": "Ochakiv remained a frontline coastal town facing the occupied Kinburn spit; details of 2026 strikes are incomplete.",
+      "places": [
+        "Mykolaiv",
+        "Ochakiv"
+      ],
+      "links": [
+        {
+          "title": "Mykolaiv",
+          "url": "https://en.wikipedia.org/wiki/Mykolaiv"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Mykolaiv Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mykolaiv_Oblast"
+    },
+    {
+      "title": "Encyclopedia of Ukraine: Mykolaiv oblast",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CM%5CY%5CMykolaivoblast.htm"
+    },
+    {
+      "title": "Pontic Olbia (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Pontic_Olbia"
+    }
+  ]
+},
+    "UA-65": {
+  "name": "Kherson Oblast",
+  "wikipedia": "Kherson_Oblast",
+  "historicalRegions": [
+    "Northern Tavria",
+    "Zaporozhian lands",
+    "Novorossiya"
+  ],
+  "overview": "Kherson Oblast spans both banks of the lower Dnieper, from the river's mouth to the isthmus of Crimea and the Sea of Azov. Its steppe was home to Bronze Age herders, Scythian royal nomads and the late Scythian hillforts of the lower Dnieper, then to Pechenegs, Cumans and the Golden Horde, with the Rus' port of Oleshia at the river mouth. Lithuanian and Tatar-Ottoman fortresses, and two Zaporozhian Sich sites at Kamianka and Oleshky, followed before Russia founded Kherson as a shipyard in 1778. The Soviet era brought the Kakhovka dam and the North Crimean Canal. Russia occupied most of the oblast in 2022; Ukraine liberated Kherson city and the right bank in November 2022, while the left bank remains occupied.",
+  "eras": {
+    "trypillia": {
+      "control": "Sredny Stog and early steppe herders",
+      "summary": "The lower Dnieper steppe lay south of the Trypillia farming zone and was home to Eneolithic herders of the Sredny Stog and Kvitiana traditions, who left early burial mounds. The multi-layer Mykhailivka settlement near Nova Kakhovka was first occupied at the end of this period.",
+      "military": null,
+      "places": [
+        "Mykhailivka settlement"
+      ],
+      "links": [
+        {
+          "title": "Sredny Stog culture",
+          "url": "https://en.wikipedia.org/wiki/Sredny_Stog_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Yamnaya, Catacomb and Belozerka cultures",
+      "summary": "Mykhailivka on the Dnieper was a key fortified Yamnaya-era settlement. Thousands of kurgans of Yamnaya and Catacomb pastoralists covered the steppe, and the Late Bronze Age Belozerka culture is named after the Bilozerka lake near Kherson.",
+      "military": "Mykhailivka had stone defensive walls, among the earliest fortifications in the Pontic steppe.",
+      "places": [
+        "Mykhailivka",
+        "Bilozerka"
+      ],
+      "links": [
+        {
+          "title": "Yamnaya culture",
+          "url": "https://en.wikipedia.org/wiki/Yamnaya_culture"
+        },
+        {
+          "title": "Bilozerka culture",
+          "url": "https://en.wikipedia.org/wiki/Bilozerka_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Cimmerian-era nomads",
+      "summary": "Mounted nomads associated with the Cimmerians, buried with horse gear in kurgans of the Chornohorivka and Novocherkassk types, roamed the lower Dnieper steppe.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Cimmerians",
+          "url": "https://en.wikipedia.org/wiki/Cimmerians"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Royal Scythians; Hylaea forest on the left bank",
+      "summary": "The steppe of today's oblast was the heartland of the Royal Scythians, and Herodotus described the wooded Hylaea at the Dnieper mouth near today's Oleshky. Greek traders from Olbia reached the area, and Scythian kurgans held rich goldwork.",
+      "military": "Scythian warrior graves with weapons and horse burials are common on both banks.",
+      "places": [
+        "Hylaea",
+        "Oleshky Sands"
+      ],
+      "links": [
+        {
+          "title": "Scythians",
+          "url": "https://en.wikipedia.org/wiki/Scythians"
+        },
+        {
+          "title": "Hylaea",
+          "url": "https://en.wikipedia.org/wiki/Hylaea"
+        },
+        {
+          "title": "Oleshky Sands",
+          "url": "https://en.wikipedia.org/wiki/Oleshky_Sands"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Late Scythians on the lower Dnieper; Sarmatians on the steppe",
+      "summary": "Late Scythian farming communities built hillforts along the right bank of the lower Dnieper, such as Zolota Balka, trading with Olbia, while Sarmatians held the open steppe.",
+      "military": "A chain of fortified late Scythian settlements guarded the lower Dnieper; some were destroyed by Sarmatian attacks.",
+      "places": [
+        "Zolota Balka hillfort"
+      ],
+      "links": [
+        {
+          "title": "Sarmatians",
+          "url": "https://en.wikipedia.org/wiki/Sarmatians"
+        },
+        {
+          "title": "Scythian Neapolis",
+          "url": "https://en.wikipedia.org/wiki/Scythian_Neapolis"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Gothic-led Chernyakhov culture",
+      "summary": "Chernyakhov-culture villages spread along the lower Dnieper, which lay within the realm attributed to the Gothic king Ermanaric.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Chernyakhov culture",
+          "url": "https://en.wikipedia.org/wiki/Chernyakhov_culture"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Huns",
+      "summary": "The Huns crossed the lower Dnieper around 375 and the area became Hunnic pasture, ending the Chernyakhov settlements.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Huns",
+          "url": "https://en.wikipedia.org/wiki/Huns"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Kutrigur and Utigur Bulgars; Avars",
+      "summary": "Bulgar tribes and then the Avars controlled the steppe of the lower Dnieper, with Antes Slavs to the north.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kutrigurs",
+          "url": "https://en.wikipedia.org/wiki/Kutrigurs"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Khazar Khaganate; Ulichians on the lower Dnieper",
+      "summary": "The Primary Chronicle placed the Ulichians on the lower Dnieper before they moved west; the steppe lay within the Khazar sphere. A rich 7th-century nomad burial at Pereshchepina (Poltava Oblast) and finds at Voznesenka attest Bulgar-Khazar elites in the region.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Khazars",
+          "url": "https://en.wikipedia.org/wiki/Khazars"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Pechenegs; Rus' waypoints at the Dnieper mouth",
+      "summary": "Rus' convoys to Constantinople passed down the lower Dnieper through Pecheneg territory. Sviatoslav wintered at Bilobereshshia near the Dnieper mouth in 971-972 before being killed by Pechenegs at the rapids upstream.",
+      "military": "Pechenegs ambushed Rus' boats at fords such as the Krariy crossing.",
+      "places": [
+        "Bilobereshshia"
+      ],
+      "links": [
+        {
+          "title": "Sviatoslav I",
+          "url": "https://en.wikipedia.org/wiki/Sviatoslav_I"
+        },
+        {
+          "title": "Pechenegs",
+          "url": "https://en.wikipedia.org/wiki/Pechenegs"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Pechenegs",
+      "summary": "The lower Dnieper steppe remained Pecheneg land; the Rus' river route to the sea continued to pass through it.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Route from the Varangians to the Greeks",
+          "url": "https://en.wikipedia.org/wiki/Route_from_the_Varangians_to_the_Greeks"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Pechenegs and Torks",
+      "summary": "After the Pechenegs were defeated at Kyiv in 1036, the Oghuz Torks briefly took over the lower Dnieper steppe before the arrival of the Cumans.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Tork people",
+          "url": "https://en.wikipedia.org/wiki/Tork_people"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Cumans; Rus' port of Oleshia",
+      "summary": "Oleshia, near today's Oleshky, was Kyiv's trading outpost at the Dnieper mouth, linked to the Byzantine Black Sea trade, while the surrounding steppe belonged to the Cumans.",
+      "military": "Cumans repeatedly seized Oleshia, and Kyivan princes sent forces to retake it, e.g. in 1084 and 1190.",
+      "places": [
+        "Oleshia (Oleshky)"
+      ],
+      "links": [
+        {
+          "title": "Oleshky",
+          "url": "https://en.wikipedia.org/wiki/Oleshky"
+        },
+        {
+          "title": "Cumans",
+          "url": "https://en.wikipedia.org/wiki/Cumans"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Cumans",
+      "summary": "In 1223 the Rus' princes and Cuman allies gathered at Oleshia and Khortytsia before marching east to their defeat by the Mongols on the Kalka.",
+      "military": "The allied Rus'-Cuman army assembled near the Dnieper mouth and rapids in 1223.",
+      "places": [
+        "Oleshia"
+      ],
+      "links": [
+        {
+          "title": "Battle of the Kalka River",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_the_Kalka_River"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Golden Horde",
+      "summary": "The lower Dnieper was a crossing point of the Golden Horde; Tatar herders and Genoese and Venetian traders used the river mouth.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Golden Horde",
+          "url": "https://en.wikipedia.org/wiki/Golden_Horde"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Grand Duchy of Lithuania, then Crimean Khanate",
+      "summary": "Vytautas pushed Lithuania's frontier to the lower Dnieper and the Tavan crossing, with a customs post at Tiahyn. After 1475 the Crimean Khanate, an Ottoman vassal, took over and built fortresses such as Islam-Kermen and Kazy-Kermen near today's Beryslav to guard the Dnieper crossings.",
+      "military": "Lithuanian and Cossack forces attacked the Tatar crossings; the Tiahyn fortress was disputed through the 15th-16th centuries.",
+      "places": [
+        "Tiahyn fortress",
+        "Kazy-Kermen (Beryslav)"
+      ],
+      "links": [
+        {
+          "title": "Tiahynka",
+          "url": "https://en.wikipedia.org/wiki/Tiahynka"
+        },
+        {
+          "title": "Beryslav",
+          "url": "https://en.wikipedia.org/wiki/Beryslav"
+        },
+        {
+          "title": "Crimean Khanate",
+          "url": "https://en.wikipedia.org/wiki/Crimean_Khanate"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Crimean Khanate; Nogai hordes",
+      "summary": "The left-bank steppe was grazed by Nogai Tatars subject to the khan, and slave-raiding parties used the Dnieper crossings. The Zaporozhian Cossacks fished and hunted in the river's floodplain (the Velykyi Luh).",
+      "military": "Cossack fleets descended the Dnieper past the Tatar fortresses on raids into the Black Sea.",
+      "places": [
+        "Kazy-Kermen",
+        "Velykyi Luh"
+      ],
+      "links": [
+        {
+          "title": "Wild Fields",
+          "url": "https://en.wikipedia.org/wiki/Wild_Fields"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Crimean Khanate; Zaporozhian frontier",
+      "summary": "The area lay between the Zaporozhian Host upstream and the Crimean Khanate; Khmelnytsky's alliance with Khan Islam III Giray made the Dnieper crossings a route for Tatar armies joining the Cossacks.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "İslâm III Giray",
+          "url": "https://en.wikipedia.org/wiki/%C4%B0sl%C3%A2m_III_Giray"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Crimean Khanate and Ottoman Empire",
+      "summary": "In 1695, during Peter I's Azov campaigns, Russian troops under Boris Sheremetev and Cossacks of Hetman Ivan Mazepa captured and razed Kazy-Kermen and the fortresses of the Tavan crossing.",
+      "military": "The 1695 lower Dnieper campaign destroyed the Tatar fortresses near Beryslav.",
+      "places": [
+        "Kazy-Kermen",
+        "Tavan"
+      ],
+      "links": [
+        {
+          "title": "Azov campaigns (1695–1696)",
+          "url": "https://en.wikipedia.org/wiki/Azov_campaigns_(1695%E2%80%931696)"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Zaporozhian Sich under Crimean protection, then Russia",
+      "summary": "After Peter I destroyed the Chortomlyk Sich in 1709, the Zaporozhians moved to Kamianka (1709-1711) and then to Oleshky (1711-1728) under the Crimean khan's protection. Kost Hordiienko, the Sich leader allied with Mazepa, was buried at Kamianka in 1733.",
+      "military": "The Kamianka and Oleshky Sich fortresses were the Zaporozhian Host's bases in exile.",
+      "places": [
+        "Kamianka Sich",
+        "Oleshky Sich"
+      ],
+      "links": [
+        {
+          "title": "Kamianka Sich",
+          "url": "https://en.wikipedia.org/wiki/Kamianka_Sich"
+        },
+        {
+          "title": "Oleshky Sich",
+          "url": "https://en.wikipedia.org/wiki/Oleshky_Sich"
+        },
+        {
+          "title": "Kost Hordiienko",
+          "url": "https://en.wikipedia.org/wiki/Kost_Hordiienko"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Russian Empire",
+      "summary": "Potemkin founded Kherson in 1778 as a fortress and shipyard, which launched the first ship of the Black Sea Fleet in 1783. Potemkin died in 1791 and was buried in Kherson's St Catherine's Cathedral. The left bank was annexed with the Crimean Khanate in 1783.",
+      "military": "Kherson's Admiralty built the first Black Sea Fleet warships; Suvorov commanded troops there in 1787.",
+      "places": [
+        "Kherson",
+        "St Catherine's Cathedral"
+      ],
+      "links": [
+        {
+          "title": "Kherson",
+          "url": "https://en.wikipedia.org/wiki/Kherson"
+        },
+        {
+          "title": "Grigory Potemkin",
+          "url": "https://en.wikipedia.org/wiki/Grigory_Potemkin"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Russian Empire (Kherson and Taurida governorates)",
+      "summary": "Kherson was the seat of a governorate, though its shipyard moved to Mykolaiv; the left bank belonged to Taurida Governorate and was settled by Ukrainian peasants, Germans, Mennonites and Jewish farming colonies.",
+      "military": "In 1855 Allied ships raided Henichesk and the Arabat Spit during the Sea of Azov campaign of the Crimean War.",
+      "places": [
+        "Kherson",
+        "Henichesk"
+      ],
+      "links": [
+        {
+          "title": "Kherson Governorate",
+          "url": "https://en.wikipedia.org/wiki/Kherson_Governorate"
+        },
+        {
+          "title": "Crimean War",
+          "url": "https://en.wikipedia.org/wiki/Crimean_War"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Russian Empire",
+      "summary": "Friedrich Falz-Fein founded the Askania-Nova reserve in the steppe in 1898. Kherson grew as a grain and timber port with a large Jewish population, and steppe estates produced wheat and wool for export.",
+      "military": null,
+      "places": [
+        "Askania-Nova"
+      ],
+      "links": [
+        {
+          "title": "Askania-Nova",
+          "url": "https://en.wikipedia.org/wiki/Askania-Nova"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "UNR, Bolsheviks, Central Powers, Allied intervention",
+      "summary": "Kherson changed hands between the UNR, Bolsheviks and Austro-German forces in 1918; Allied troops, including Greeks, held it in early 1919.",
+      "military": "Hryhoriiv's insurgents drove the Allied garrison out of Kherson in March 1919, after which reprisals took place.",
+      "places": [
+        "Kherson"
+      ],
+      "links": [
+        {
+          "title": "Southern Russia intervention",
+          "url": "https://en.wikipedia.org/wiki/Southern_Russia_intervention"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Whites, Red Army; Wrangel in Northern Tavria (1920)",
+      "summary": "Wrangel's White army broke out of Crimea in June 1920 into Northern Tavria, the left bank of today's oblast. The Red Army's Kakhovka bridgehead on the left bank resisted repeated White assaults and launched the offensive that drove Wrangel back into Crimea in November 1920.",
+      "military": "The Kakhovka bridgehead (August-October 1920) saw some of the first tank battles in the region and decided the war in the south.",
+      "places": [
+        "Kakhovka"
+      ],
+      "links": [
+        {
+          "title": "Pyotr Wrangel",
+          "url": "https://en.wikipedia.org/wiki/Pyotr_Wrangel"
+        },
+        {
+          "title": "Siege of Perekop (1920)",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Perekop_(1920)"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Ukrainian SSR",
+      "summary": "The 1921-1923 famine struck the south severely. In the 1920s Jewish agricultural settlement was encouraged, and the Kalinindorf Jewish national district was created in 1927. Collectivization began in 1929.",
+      "military": null,
+      "places": [
+        "Kalinindorf (Kalynivske)"
+      ],
+      "links": [
+        {
+          "title": "Russian famine of 1921–1922",
+          "url": "https://en.wikipedia.org/wiki/Russian_famine_of_1921%E2%80%931922"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Ukrainian SSR (Odesa, then Mykolaiv oblasts)",
+      "summary": "The Holodomor ravaged the steppe villages; German and Mennonite colonists were also persecuted, and many were executed in the Great Terror. The area belonged to Odesa Oblast from 1932 and Mykolaiv Oblast from 1937.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Holodomor",
+          "url": "https://en.wikipedia.org/wiki/Holodomor"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Ukrainian SSR",
+      "summary": "Kherson's port and canning and shipbuilding industries expanded; the area was far from the new western borders.",
+      "military": null,
+      "places": [
+        "Kherson"
+      ],
+      "links": [
+        {
+          "title": "Kherson Shipyard",
+          "url": "https://en.wikipedia.org/wiki/Kherson_Shipyard"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "German occupation (Reichskommissariat Ukraine)",
+      "summary": "German troops took Kherson in August 1941, and in September 1941 the city's Jews were shot by Einsatzgruppe D. Ethnic Germans of the left bank were deported east by the Soviets before the occupation. Kherson was liberated on 13 March 1944.",
+      "military": "The Nikopol bridgehead on the left bank was fought over in late 1943-early 1944.",
+      "places": [
+        "Kherson"
+      ],
+      "links": [
+        {
+          "title": "Einsatzgruppen",
+          "url": "https://en.wikipedia.org/wiki/Einsatzgruppen"
+        },
+        {
+          "title": "Nikopol–Krivoi Rog offensive",
+          "url": "https://en.wikipedia.org/wiki/Nikopol%E2%80%93Krivoi_Rog_offensive"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR (Kherson Oblast from 1944)",
+      "summary": "Kherson Oblast was created on 30 March 1944. Construction of the Kakhovka hydroelectric dam began in 1950, and the new town of Nova Kakhovka was founded for its builders.",
+      "military": null,
+      "places": [
+        "Nova Kakhovka",
+        "Kakhovka Dam"
+      ],
+      "links": [
+        {
+          "title": "Kakhovka Dam",
+          "url": "https://en.wikipedia.org/wiki/Kakhovka_Dam"
+        },
+        {
+          "title": "Nova Kakhovka",
+          "url": "https://en.wikipedia.org/wiki/Nova_Kakhovka"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "The Kakhovka Reservoir was filled in 1956, and the North Crimean Canal (built 1961-1975) carried Dnieper water through the oblast to Crimea, enabling large-scale irrigation of rice, vegetables and melons. Kherson built ships and textiles.",
+      "military": "Chornobaivka airfield and the Chaplynka area hosted Soviet military units.",
+      "places": [
+        "North Crimean Canal",
+        "Kakhovka Reservoir"
+      ],
+      "links": [
+        {
+          "title": "North Crimean Canal",
+          "url": "https://en.wikipedia.org/wiki/North_Crimean_Canal"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "The oblast's irrigation agriculture and industry declined in the 1990s. Askania-Nova became a biosphere reserve, and the oblast stayed a largely rural region bordering Crimea.",
+      "military": null,
+      "places": [
+        "Askania-Nova"
+      ],
+      "links": [
+        {
+          "title": "Askania-Nova",
+          "url": "https://en.wikipedia.org/wiki/Askania-Nova"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "Kherson Oblast voted mainly for the Party of Regions but saw Euromaidan protests in 2013-2014; Henichesk and the Arabat Spit remained popular resort areas.",
+      "military": null,
+      "places": [
+        "Arabat Spit"
+      ],
+      "links": [
+        {
+          "title": "Arabat Spit",
+          "url": "https://en.wikipedia.org/wiki/Arabat_Spit"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine (Russian troops briefly on the Arabat Spit in 2014)",
+      "summary": "After Russia's occupation and annexation of Crimea in 2014, which is not internationally recognized, the oblast became the administrative border with the peninsula; Russian troops briefly seized a gas facility near Strilkove on the Arabat Spit. Ukraine stopped supplying water through the North Crimean Canal, and in 2015 Crimean Tatar activists blockaded the crossings and power lines to Crimea were cut.",
+      "military": "Ukrainian forces fortified the Chonhar and Kalanchak crossings opposite Russian positions.",
+      "places": [
+        "Chonhar",
+        "Strilkove",
+        "Kalanchak"
+      ],
+      "links": [
+        {
+          "title": "North Crimean Canal",
+          "url": "https://en.wikipedia.org/wiki/North_Crimean_Canal"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Russian occupation (March-November 2022); right bank liberated 11 November 2022",
+      "summary": "Russian forces attacked from Crimea on 24 February 2022, seized the Kakhovka dam and Antonivka Bridge and captured Kherson on 2 March, the only regional capital taken in 2022. Residents protested, and occupiers carried out detentions and torture. Russia staged a sham referendum and claimed annexation in September, but Ukraine's counteroffensive forced a withdrawal from the right bank, and Kherson was liberated on 11 November 2022.",
+      "military": "Repeated Ukrainian strikes hit Chornobaivka airfield; the 2022 Kherson counteroffensive cut Russian supply across the Dnieper bridges.",
+      "places": [
+        "Kherson",
+        "Antonivka Bridge",
+        "Chornobaivka"
+      ],
+      "links": [
+        {
+          "title": "Battle of Kherson",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Kherson"
+        },
+        {
+          "title": "2022 Kherson counteroffensive",
+          "url": "https://en.wikipedia.org/wiki/2022_Kherson_counteroffensive"
+        },
+        {
+          "title": "Russian occupation of Kherson Oblast",
+          "url": "https://en.wikipedia.org/wiki/Russian_occupation_of_Kherson_Oblast"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Divided along the Dnieper: right bank Ukrainian, left bank Russian-occupied",
+      "summary": "The Kakhovka dam was destroyed on 6 June 2023 while under Russian control, flooding Kherson, Oleshky and other towns and draining the reservoir. Kherson and the right bank were shelled daily from across the river, and from 2024 Russian drones hunted civilians in what residents called a 'human safari'.",
+      "military": "Ukrainian marines held a bridgehead at Krynky on the left bank from October 2023 to mid-2024 at heavy cost; fighting also continued on the Dnieper islands.",
+      "places": [
+        "Krynky",
+        "Oleshky",
+        "Nova Kakhovka"
+      ],
+      "links": [
+        {
+          "title": "Destruction of the Kakhovka Dam",
+          "url": "https://en.wikipedia.org/wiki/Destruction_of_the_Kakhovka_Dam"
+        },
+        {
+          "title": "Battle of Krynky",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Krynky"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Divided along the Dnieper: right bank Ukrainian, left bank Russian-occupied",
+      "summary": "The front stayed on the Dnieper. Drone and artillery attacks on Kherson and riverside towns such as Beryslav continued, including on evacuation vehicles (e.g. February 2026), and a UN commission of inquiry in 2025 described the drone attacks on civilians as crimes against humanity. The occupied left bank, run from Henichesk, was militarized and cut off from the right bank.",
+      "military": "Small-scale fighting continued on the Dnieper islands and with drones across the river; Ukrainian strikes targeted Russian logistics on the left bank and the Chonhar crossings.",
+      "places": [
+        "Kherson",
+        "Beryslav",
+        "Henichesk"
+      ],
+      "links": [
+        {
+          "title": "Kherson",
+          "url": "https://en.wikipedia.org/wiki/Kherson"
+        },
+        {
+          "title": "Euromaidan Press: drones strike evacuation vehicle in Kherson Oblast (Feb 2026)",
+          "url": "https://euromaidanpress.com/2026/02/06/russian-drones-strike-evacuation-vehicle-in-kherson-oblast/"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Kherson Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Kherson_Oblast"
+    },
+    {
+      "title": "Encyclopedia of Ukraine: Kherson oblast",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CH%5CKhersonoblast.htm"
+    },
+    {
+      "title": "Russian occupation of Kherson Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Russian_occupation_of_Kherson_Oblast"
+    }
+  ]
+},
+    "UA-43": {
+  "name": "Autonomous Republic of Crimea",
+  "wikipedia": "Autonomous_Republic_of_Crimea",
+  "historicalRegions": [
+    "Taurica",
+    "Bosporan Kingdom",
+    "Gothia",
+    "Crimean Khanate",
+    "Taurida"
+  ],
+  "overview": "The Crimean peninsula (apart from Sevastopol) combines a northern steppe, the Crimean Mountains and a subtropical southern coast. The mountain Tauri and steppe Cimmerians and Scythians were joined by Greek colonies such as Panticapaeum (Kerch) and Theodosia, which formed the Bosporan Kingdom, while a late Scythian state ruled from Neapolis near Simferopol. Goths, Byzantines, Khazars, Rus' Tmutarakan, Cumans, the Genoese of Kaffa and the Principality of Theodoro followed, until the Crimean Khanate, an Ottoman vassal from 1475, made Bakhchisarai its capital. Russia annexed Crimea in 1783; Stalin deported the Crimean Tatars in 1944, and the peninsula was transferred to the Ukrainian SSR in 1954. Russia occupied and annexed it in 2014, an annexation not internationally recognized, and has used it as a base for the war since 2022.",
+  "eras": {
+    "trypillia": {
+      "control": "Eneolithic hunter-herders; Kemi Oba culture",
+      "summary": "Crimea lay outside the Trypillia farming world. Its caves had a long earlier record, including Neanderthal remains at Kiik-Koba; in the Eneolithic, steppe herders and then the Kemi Oba culture, known for stone stelae and stone-lined kurgans, settled the peninsula.",
+      "military": null,
+      "places": [
+        "Kiik-Koba cave",
+        "Kemi Oba kurgan"
+      ],
+      "links": [
+        {
+          "title": "Kemi Oba culture",
+          "url": "https://en.wikipedia.org/wiki/Kemi_Oba_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Kemi Oba, Catacomb and later Bronze Age cultures",
+      "summary": "The Kemi Oba culture of the steppe and foothills was followed by Catacomb-culture herders and, in the Late Bronze Age, by communities related to the Sabatynivka and Belozerka cultures of the mainland.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Catacomb culture",
+          "url": "https://en.wikipedia.org/wiki/Catacomb_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Cimmerians in the steppe; Kizil-Koba culture (Tauri) in the mountains",
+      "summary": "The Kizil-Koba culture of the foothills is usually linked with the Tauri, who gave Taurica its name, while Greek tradition placed Cimmerians on the steppe and at the strait later called the Cimmerian Bosporus (Kerch Strait).",
+      "military": "Tauri settlements used natural mountain refuges; dolmen-like stone cist graves mark their territory.",
+      "places": [
+        "Kerch Strait"
+      ],
+      "links": [
+        {
+          "title": "Tauri",
+          "url": "https://en.wikipedia.org/wiki/Tauri"
+        },
+        {
+          "title": "Kizil-Koba culture",
+          "url": "https://en.wikipedia.org/wiki/Kizil-Koba_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Scythians in the steppe; Tauri in the mountains; Greek colonies and the Bosporan Kingdom",
+      "summary": "Milesian Greeks founded Panticapaeum (Kerch), Theodosia, Nymphaeum and Kerkinitis (Yevpatoria) in the 6th century BC. Around 480 BC the cities on the Kerch Strait united into the Bosporan Kingdom, ruled from 438 BC by the Spartocid dynasty, which grew rich exporting grain to Athens. Scythian elites were buried in mounds such as Kul-Oba near Kerch.",
+      "military": "The Bosporan cities were walled, and an earthen rampart protected the Kerch peninsula from nomad attack.",
+      "places": [
+        "Panticapaeum",
+        "Theodosia",
+        "Nymphaeum",
+        "Kul-Oba"
+      ],
+      "links": [
+        {
+          "title": "Bosporan Kingdom",
+          "url": "https://en.wikipedia.org/wiki/Bosporan_Kingdom"
+        },
+        {
+          "title": "Pantikapaion",
+          "url": "https://en.wikipedia.org/wiki/Pantikapaion"
+        },
+        {
+          "title": "Kul-Oba",
+          "url": "https://en.wikipedia.org/wiki/Kul-Oba"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Late Scythian kingdom; Bosporan Kingdom under Pontus, then Rome; Sarmatians and Alans",
+      "summary": "Pushed south by the Sarmatians, the Scythians formed a late kingdom under Skilurus with its capital at Scythian Neapolis near Simferopol. Mithridates VI of Pontus took over the Bosporus and died at Panticapaeum in 63 BC; afterwards the kingdom was a Roman client state, and Sarmatians and Alans settled in the steppe and foothills.",
+      "military": "Roman troops garrisoned the Charax fort on Cape Ai-Todor near Yalta in the 1st-3rd centuries AD.",
+      "places": [
+        "Scythian Neapolis",
+        "Charax",
+        "Panticapaeum"
+      ],
+      "links": [
+        {
+          "title": "Scythian Neapolis",
+          "url": "https://en.wikipedia.org/wiki/Scythian_Neapolis"
+        },
+        {
+          "title": "Mithridates VI Eupator",
+          "url": "https://en.wikipedia.org/wiki/Mithridates_VI_Eupator"
+        },
+        {
+          "title": "Charax, Crimea",
+          "url": "https://en.wikipedia.org/wiki/Charax,_Crimea"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Bosporan Kingdom; Goths and Alans",
+      "summary": "Goths and Heruli used Bosporan ships for seaborne raids on Roman Asia Minor in the 250s-260s, and Gothic groups settled in the Crimean foothills, the origin of the Crimean Goths. Late Scythian Neapolis was destroyed in the 3rd century.",
+      "military": "Gothic fleets raided Pityus and Trebizond with Bosporan help.",
+      "places": [
+        "Scythian Neapolis"
+      ],
+      "links": [
+        {
+          "title": "Crimean Goths",
+          "url": "https://en.wikipedia.org/wiki/Crimean_Goths"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Huns in the steppe and at the Bosporus; Crimean Goths in the mountains",
+      "summary": "The Huns crossed the Kerch Strait around 370 and devastated the Bosporan cities. The Crimean Goths and Alans held out in the mountains, which later became known as Gothia.",
+      "military": null,
+      "places": [
+        "Panticapaeum"
+      ],
+      "links": [
+        {
+          "title": "Huns",
+          "url": "https://en.wikipedia.org/wiki/Huns"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Byzantine Empire (Bosporus, Gothia); Turkic and Avar nomads",
+      "summary": "Justinian I brought Bosporus under direct Byzantine rule and fortified Gothia in the mountains around the stronghold of Dory, probably Mangup. In 576 the Western Turks captured Bosporus, and Kutrigur and Utigur Bulgars roamed the steppe.",
+      "military": "Procopius describes 'long walls' built to protect the Gothic lands of Dory.",
+      "places": [
+        "Dory (Mangup)",
+        "Bosporus (Kerch)"
+      ],
+      "links": [
+        {
+          "title": "Mangup",
+          "url": "https://en.wikipedia.org/wiki/Mangup"
+        },
+        {
+          "title": "Justinian I",
+          "url": "https://en.wikipedia.org/wiki/Justinian_I"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Khazar Khaganate; Byzantine Gothia",
+      "summary": "The Khazars controlled most of Crimea from the late 7th century, with a tudun (governor) at Bosporus. In 787 Bishop John of Gothia led a revolt against them at Doros. Sugdaia (Sudak) grew as a trading port, and Byzantine churches spread in the mountains.",
+      "military": "The Gothic revolt of 787 briefly expelled the Khazar garrison from Doros.",
+      "places": [
+        "Sudak (Sugdaia)",
+        "Doros"
+      ],
+      "links": [
+        {
+          "title": "Khazars",
+          "url": "https://en.wikipedia.org/wiki/Khazars"
+        },
+        {
+          "title": "John of Gothia",
+          "url": "https://en.wikipedia.org/wiki/John_of_Gothia"
+        },
+        {
+          "title": "Sudak",
+          "url": "https://en.wikipedia.org/wiki/Sudak"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Khazars, then Pechenegs; Byzantine Gothia; Rus' at Kerch",
+      "summary": "Rus' raiders attacked Sugdaia and the coast in the 9th-10th centuries. Pechenegs took over the Crimean steppe, and after Sviatoslav's defeat of Khazaria (965) Kerch, called Korchev, fell into the orbit of the Rus' principality of Tmutarakan.",
+      "military": "Byzantine-Rus' treaties of 944 forbade Rus' attacks on the Cherson region.",
+      "places": [
+        "Kerch (Korchev)"
+      ],
+      "links": [
+        {
+          "title": "Tmutarakan",
+          "url": "https://en.wikipedia.org/wiki/Tmutarakan"
+        },
+        {
+          "title": "Kerch",
+          "url": "https://en.wikipedia.org/wiki/Kerch"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Byzantium in Gothia; Rus' Tmutarakan at Kerch; Pechenegs",
+      "summary": "Volodymyr's capture of Chersonesus (988, today in Sevastopol) brought Byzantine Christianity to Rus'; Kerch remained linked to Tmutarakan, where Volodymyr placed his son Mstyslav.",
+      "military": null,
+      "places": [
+        "Kerch"
+      ],
+      "links": [
+        {
+          "title": "Mstislav of Chernigov",
+          "url": "https://en.wikipedia.org/wiki/Mstislav_of_Chernigov"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Rus' Tmutarakan; Byzantine Gothia; Pechenegs, then Cumans",
+      "summary": "Kerch belonged to Tmutarakan; a stone inscription of 1068 records Prince Hlib measuring the frozen strait from Tmutarakan to Korchev. The Byzantines and Rus' jointly suppressed the Khazar remnant in Crimea in 1016.",
+      "military": "A Byzantine-Rus' expedition in 1016 defeated the Khazar ruler Georgius Tzul in Crimea.",
+      "places": [
+        "Kerch Strait"
+      ],
+      "links": [
+        {
+          "title": "Georgius Tzul",
+          "url": "https://en.wikipedia.org/wiki/Georgius_Tzul"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Cumans in the steppe; Byzantine coast and Gothia",
+      "summary": "The Cumans took over the steppe and traded through Sudak, which Rus' sources called Surozh and which became the region's main port. The southern coast and Gothia stayed under Byzantium, later the Empire of Trebizond.",
+      "military": null,
+      "places": [
+        "Sudak (Surozh)"
+      ],
+      "links": [
+        {
+          "title": "Cumans",
+          "url": "https://en.wikipedia.org/wiki/Cumans"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Cumans; Empire of Trebizond on the coast; Seljuk raid",
+      "summary": "The Seljuk Sultanate of Rum seized Sudak in the 1220s, and the Mongols first raided the town in 1223. The southern coast (Perateia) was a dependency of the Empire of Trebizond.",
+      "military": "Seljuk troops landed at Sudak around 1222-1225 and briefly held it.",
+      "places": [
+        "Sudak"
+      ],
+      "links": [
+        {
+          "title": "Empire of Trebizond",
+          "url": "https://en.wikipedia.org/wiki/Empire_of_Trebizond"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Golden Horde; Genoese Gazaria; Principality of Theodoro",
+      "summary": "The Horde's Crimean ulus was governed from Solkhat (Staryi Krym). The Genoese founded Kaffa (Feodosia) around 1266 and later took Sudak (1365), creating the colony of Gazaria, a hub of the Black Sea slave and grain trade. In the mountains the Orthodox Principality of Theodoro arose around Mangup.",
+      "military": "Jani Beg's siege of Kaffa in 1346 is traditionally linked to the spread of the Black Death to Europe; the Genoese built the fortress of Sudak.",
+      "places": [
+        "Kaffa (Feodosia)",
+        "Solkhat (Staryi Krym)",
+        "Genoese fortress of Sudak",
+        "Mangup"
+      ],
+      "links": [
+        {
+          "title": "Genoese colonies in Crimea",
+          "url": "https://en.wikipedia.org/wiki/Gazaria"
+        },
+        {
+          "title": "Siege of Caffa",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Caffa"
+        },
+        {
+          "title": "Principality of Theodoro",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Theodoro"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Crimean Khanate (Ottoman vassal from 1475); Ottoman Kaffa",
+      "summary": "Hacı I Giray founded the Crimean Khanate around 1441 with Lithuanian support. In 1475 the Ottomans took Kaffa and Mangup, ending Genoese and Theodorite rule, and the khans became Ottoman vassals ruling from Bakhchisarai, where the Khan's Palace was built from 1532. Tatar raids sent captives from Ukraine to the slave market of Kaffa.",
+      "military": "The Or Qapı fortress at Perekop guarded the isthmus; Khan Devlet I Giray burned Moscow in 1571.",
+      "places": [
+        "Bakhchisarai",
+        "Khan's Palace",
+        "Kaffa",
+        "Perekop"
+      ],
+      "links": [
+        {
+          "title": "Crimean Khanate",
+          "url": "https://en.wikipedia.org/wiki/Crimean_Khanate"
+        },
+        {
+          "title": "Haji I Giray",
+          "url": "https://en.wikipedia.org/wiki/Haji_I_Giray"
+        },
+        {
+          "title": "Bakhchysarai Palace",
+          "url": "https://en.wikipedia.org/wiki/Bakhchysarai_Palace"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Crimean Khanate; Ottoman Kefe Eyalet on the coast",
+      "summary": "The khanate's raids into Poland-Lithuania and Muscovy fed the slave trade. In 1616 Zaporozhian Cossacks under Petro Sahaidachny stormed Kaffa and freed thousands of captives.",
+      "military": "Cossack sea raids struck Kaffa, Kezlev (Yevpatoria) and the coast in the 1610s-1620s.",
+      "places": [
+        "Kaffa",
+        "Kezlev (Yevpatoria)"
+      ],
+      "links": [
+        {
+          "title": "Crimean–Nogai slave raids in Eastern Europe",
+          "url": "https://en.wikipedia.org/wiki/Crimean%E2%80%93Nogai_slave_raids_in_Eastern_Europe"
+        },
+        {
+          "title": "Kefe Eyalet",
+          "url": "https://en.wikipedia.org/wiki/Kefe_Eyalet"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Crimean Khanate",
+      "summary": "Khan Islam III Giray allied with Bohdan Khmelnytsky in 1648, and Tugay Bey of Perekop fought alongside the Cossacks at Zhovti Vody and Korsun. The alliance was unreliable: the khan left the field at Berestechko (1651) and at Zhvanets (1653).",
+      "military": "Crimean Tatar cavalry was a decisive part of Cossack victories in 1648-1649.",
+      "places": [
+        "Perekop",
+        "Bakhchisarai"
+      ],
+      "links": [
+        {
+          "title": "Tugay Bey",
+          "url": "https://en.wikipedia.org/wiki/Tugay_Bey"
+        },
+        {
+          "title": "Battle of Berestechko",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Berestechko"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Crimean Khanate",
+      "summary": "The khans intervened on all sides of the Ruin. Ivan Sirko led a Cossack raid deep into Crimea in 1675, and the Muscovite Crimean campaigns of Vasily Golitsyn in 1687 and 1689 failed at Perekop.",
+      "military": "Golitsyn's armies of over 100,000 turned back at the Perekop isthmus in 1689.",
+      "places": [
+        "Perekop"
+      ],
+      "links": [
+        {
+          "title": "Russo-Turkish War (1686–1700)",
+          "url": "https://en.wikipedia.org/wiki/Russo-Turkish_War_(1686%E2%80%931700)"
+        },
+        {
+          "title": "Ivan Sirko",
+          "url": "https://en.wikipedia.org/wiki/Ivan_Sirko"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Crimean Khanate; independent under Russian influence after 1774",
+      "summary": "Münnich's army stormed Perekop in 1736 and burned Bakhchisarai. In 1771 Russia occupied Crimea, and the Treaty of Küçük Kaynarca (1774) made the khanate independent of the Ottomans while giving Russia Kerch and Yenikale.",
+      "military": "Dolgorukov's 1771 campaign took Perekop, Kaffa and Kerch.",
+      "places": [
+        "Perekop",
+        "Kerch",
+        "Yenikale"
+      ],
+      "links": [
+        {
+          "title": "Treaty of Küçük Kaynarca",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_K%C3%BC%C3%A7%C3%BCk_Kaynarca"
+        },
+        {
+          "title": "Yeni-Kale",
+          "url": "https://en.wikipedia.org/wiki/Yeni-Kale"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Russian puppet khanate, then Russian Empire (annexed 1783)",
+      "summary": "Under Russian pressure Khan Şahin Giray's rule collapsed; in 1778 Crimean Christians, mostly Greeks and Armenians, were resettled to the mainland (founding Mariupol). Catherine II annexed Crimea on 8 April 1783, created Taurida Oblast with its capital at the new town of Simferopol (1784), and toured the peninsula in 1787. Many Crimean Tatars emigrated to the Ottoman Empire.",
+      "military": "Russian garrisons occupied the peninsula; Tatar resistance was suppressed.",
+      "places": [
+        "Simferopol",
+        "Bakhchisarai"
+      ],
+      "links": [
+        {
+          "title": "1783 Russian annexation of Crimea",
+          "url": "https://en.wikipedia.org/wiki/1783_Russian_annexation_of_Crimea"
+        },
+        {
+          "title": "Şahin Giray",
+          "url": "https://en.wikipedia.org/wiki/%C5%9Eahin_Giray"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Russian Empire (Taurida Governorate)",
+      "summary": "Russian, Ukrainian, German and Bulgarian settlers arrived as Tatar emigration continued; Count Vorontsov built his palace at Alupka. In the Crimean War the Allies landed near Yevpatoria in September 1854 and defeated the Russians at the Alma before besieging Sevastopol. After the war tens of thousands of Crimean Tatars left for the Ottoman Empire.",
+      "military": "Battles of the Alma (1854) and Eupatoria (1855) and the 1855 Allied expedition to Kerch were fought here.",
+      "places": [
+        "Yevpatoria",
+        "Alma River",
+        "Vorontsov Palace"
+      ],
+      "links": [
+        {
+          "title": "Battle of the Alma",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_the_Alma"
+        },
+        {
+          "title": "Battle of Eupatoria",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Eupatoria"
+        },
+        {
+          "title": "Vorontsov Palace (Alupka)",
+          "url": "https://en.wikipedia.org/wiki/Vorontsov_Palace_(Alupka)"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Russian Empire (Taurida Governorate)",
+      "summary": "The southern coast became an imperial resort, with the tsars' Livadia Palace near Yalta; Chekhov lived in Yalta and Aivazovsky in Feodosia. Ismail Gasprinski's newspaper Terciman, published in Bakhchisarai from 1883, made Crimea a centre of Turkic modernist reform.",
+      "military": null,
+      "places": [
+        "Livadia Palace",
+        "Yalta",
+        "Feodosia"
+      ],
+      "links": [
+        {
+          "title": "Ismail Gasprinsky",
+          "url": "https://en.wikipedia.org/wiki/Ismail_Gasprinsky"
+        },
+        {
+          "title": "Livadia Palace",
+          "url": "https://en.wikipedia.org/wiki/Livadia_Palace"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "Crimean People's Republic, Taurida Soviet Republic, German occupation, Crimean Regional Government",
+      "summary": "A Crimean Tatar Kurultai proclaimed the Crimean People's Republic in December 1917, led by Noman Çelebicihan, but Bolsheviks crushed it in January 1918 and set up the Taurida Soviet Republic. In April 1918 the UNR's Crimea Group under Petro Bolbochan advanced into the peninsula, but German troops occupied it and blocked Ukrainian control; Sulkiewicz's Crimean Regional Government followed.",
+      "military": "Bolbochan's Zaporozhian corps took Simferopol and Bakhchisarai in April 1918 before withdrawing under German pressure.",
+      "places": [
+        "Simferopol",
+        "Bakhchisarai"
+      ],
+      "links": [
+        {
+          "title": "Crimean People's Republic",
+          "url": "https://en.wikipedia.org/wiki/Crimean_People%27s_Republic"
+        },
+        {
+          "title": "Crimea Operation (1918)",
+          "url": "https://en.wikipedia.org/wiki/Crimea_Operation_(1918)"
+        },
+        {
+          "title": "Noman Chelebidjikhan",
+          "url": "https://en.wikipedia.org/wiki/Noman_Chelebidjikhan"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Crimean SSR (1919), then White forces, then Soviet rule (November 1920)",
+      "summary": "A short-lived Crimean Soviet Socialist Republic existed in spring 1919 before Denikin's Whites retook the peninsula, which became Wrangel's last stronghold. After the Red Army broke through at Perekop and Chonhar in November 1920, about 150,000 people were evacuated by sea, and the Red Terror under Béla Kun and Rozalia Zemliachka killed tens of thousands.",
+      "military": "The Perekop-Chongar operation (7-17 November 1920) ended the Civil War in the south.",
+      "places": [
+        "Perekop",
+        "Chonhar"
+      ],
+      "links": [
+        {
+          "title": "Siege of Perekop (1920)",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Perekop_(1920)"
+        },
+        {
+          "title": "Evacuation of the Crimea",
+          "url": "https://en.wikipedia.org/wiki/Evacuation_of_the_Crimea"
+        },
+        {
+          "title": "Red Terror",
+          "url": "https://en.wikipedia.org/wiki/Red_Terror"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Crimean ASSR within the Russian SFSR",
+      "summary": "The Crimean ASSR was created in October 1921 within Soviet Russia, not Ukraine. The famine of 1921-1923 killed perhaps 100,000 people. Under Veli Ibraimov Crimean Tatar culture was promoted, but he was executed in 1928, and collectivization and deportations of 'kulaks' followed.",
+      "military": null,
+      "places": [
+        "Simferopol"
+      ],
+      "links": [
+        {
+          "title": "Crimea in the Soviet Union",
+          "url": "https://en.wikipedia.org/wiki/Crimea_in_the_Soviet_Union"
+        },
+        {
+          "title": "Veli İbraimov",
+          "url": "https://en.wikipedia.org/wiki/Veli_%C4%B0braimov"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Crimean ASSR (Russian SFSR)",
+      "summary": "Crimea suffered from the 1932-1933 famine, though less severely than Ukraine. The Great Terror decimated the Crimean Tatar intelligentsia and Soviet leadership of the republic, while Yalta and Artek developed as Soviet resorts.",
+      "military": null,
+      "places": [
+        "Artek",
+        "Yalta"
+      ],
+      "links": [
+        {
+          "title": "Soviet famine of 1930–1933",
+          "url": "https://en.wikipedia.org/wiki/Soviet_famine_of_1930%E2%80%931933"
+        },
+        {
+          "title": "Artek",
+          "url": "https://en.wikipedia.org/wiki/Artek"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Crimean ASSR (Russian SFSR)",
+      "summary": "Crimea remained a Soviet resort and military region far from the 1939-1940 annexations; airfields and coastal defences were expanded.",
+      "military": "The 51st Army was formed in Crimea in August 1941 to defend the peninsula.",
+      "places": [],
+      "links": [
+        {
+          "title": "51st Army (Russia)",
+          "url": "https://en.wikipedia.org/wiki/51st_Army_(Russia)"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "German occupation (military administration)",
+      "summary": "Manstein's 11th Army broke through at Perekop in autumn 1941. The Germans murdered Crimea's Jews and Krymchaks, notably near Simferopol in December 1941, and Roma. Partisans operated in the mountains; the Red Army liberated Crimea in April-May 1944.",
+      "military": "The Soviet Kerch-Feodosia landing (December 1941) was destroyed in May 1942, after which defenders held out in the Adzhimushkai quarries; the Crimean Offensive retook the peninsula in 1944.",
+      "places": [
+        "Perekop",
+        "Kerch",
+        "Adzhimushkai quarry"
+      ],
+      "links": [
+        {
+          "title": "Crimean campaign",
+          "url": "https://en.wikipedia.org/wiki/Crimean_campaign"
+        },
+        {
+          "title": "Battle of the Kerch Peninsula",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_the_Kerch_Peninsula"
+        },
+        {
+          "title": "Einsatzgruppen",
+          "url": "https://en.wikipedia.org/wiki/Einsatzgruppen"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Crimean Oblast (Russian SFSR), transferred to the Ukrainian SSR in 1954",
+      "summary": "On 18 May 1944 Stalin deported the entire Crimean Tatar people to Central Asia, with heavy loss of life (the Sürgün); Greeks, Bulgarians and Armenians followed. The autonomy was abolished in 1945 and Tatar place names were replaced. The Yalta Conference met at Livadia in February 1945, and on 19 February 1954 Crimea was transferred to the Ukrainian SSR.",
+      "military": "NKVD troops carried out the deportation in a few days.",
+      "places": [
+        "Livadia Palace",
+        "Yalta"
+      ],
+      "links": [
+        {
+          "title": "Deportation of the Crimean Tatars",
+          "url": "https://en.wikipedia.org/wiki/Deportation_of_the_Crimean_Tatars"
+        },
+        {
+          "title": "Yalta Conference",
+          "url": "https://en.wikipedia.org/wiki/Yalta_Conference"
+        },
+        {
+          "title": "Transfer of Crimea to Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Transfer_of_Crimea_to_Ukraine"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Crimean Oblast of the Ukrainian SSR; Crimean ASSR restored in 1991",
+      "summary": "Dnieper water via the North Crimean Canal transformed agriculture, and the coast became the USSR's leading resort. The Crimean Tatar national movement, led by Mustafa Dzhemilev, campaigned for return, and mass return began in 1989. In a January 1991 referendum Crimea's autonomy was restored within the Ukrainian SSR.",
+      "military": "Crimea was heavily militarized; an unfinished nuclear power plant stood at Shcholkine.",
+      "places": [
+        "Shcholkine",
+        "North Crimean Canal"
+      ],
+      "links": [
+        {
+          "title": "Mustafa Dzhemilev",
+          "url": "https://en.wikipedia.org/wiki/Mustafa_Dzhemilev"
+        },
+        {
+          "title": "1991 Crimean autonomy referendum",
+          "url": "https://en.wikipedia.org/wiki/1991_Crimean_autonomy_referendum"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine (Autonomous Republic of Crimea)",
+      "summary": "In 1991 a majority in Crimea (54%) voted for Ukrainian independence. Pro-Russian separatism peaked under Yuri Meshkov in 1994-1995 before Kyiv abolished his presidency; the 1998 constitution set the Autonomous Republic's status. Returning Crimean Tatars founded the Kurultai and the Mejlis (1991). In 2003 Russia's dam-building towards Tuzla Island caused a border crisis in the Kerch Strait.",
+      "military": "Russia's Black Sea Fleet kept facilities beyond Sevastopol, including at Feodosia and Hvardiiske.",
+      "places": [
+        "Simferopol",
+        "Tuzla Island"
+      ],
+      "links": [
+        {
+          "title": "Yuriy Meshkov",
+          "url": "https://en.wikipedia.org/wiki/Yuriy_Meshkov"
+        },
+        {
+          "title": "Mejlis of the Crimean Tatar People",
+          "url": "https://en.wikipedia.org/wiki/Mejlis_of_the_Crimean_Tatar_People"
+        },
+        {
+          "title": "Tuzla Island",
+          "url": "https://en.wikipedia.org/wiki/Tuzla_Island"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine (Autonomous Republic of Crimea)",
+      "summary": "Crimean politics were dominated by the Party of Regions and pro-Russian groups, with Crimean Tatars backing pro-Western parties. The 2010 Kharkiv Pact extended the Russian fleet's lease, and in early 2014 Crimean officials opposed the Euromaidan.",
+      "military": null,
+      "places": [
+        "Simferopol"
+      ],
+      "links": [
+        {
+          "title": "Kharkiv Pact",
+          "url": "https://en.wikipedia.org/wiki/Kharkiv_Pact"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Russian occupation (from February 2014); annexation not internationally recognized",
+      "summary": "On 27 February 2014 Russian special forces seized the Crimean parliament in Simferopol; after a referendum held under occupation on 16 March, Russia annexed the peninsula on 18 March, which the UN General Assembly declared invalid. The Mejlis was banned in 2016, and many Crimean Tatars and Ukrainians were persecuted or fled. Russia opened the Crimean Bridge in 2018, and in November 2018 seized three Ukrainian vessels in the Kerch Strait.",
+      "military": "Ukrainian units in Crimea were blockaded and most bases were surrendered without fighting by March 2014; Russia built up a large military presence.",
+      "places": [
+        "Supreme Council building, Simferopol",
+        "Crimean Bridge",
+        "Kerch Strait"
+      ],
+      "links": [
+        {
+          "title": "2014 Russian annexation of Crimea",
+          "url": "https://en.wikipedia.org/wiki/2014_Russian_annexation_of_Crimea"
+        },
+        {
+          "title": "Crimean Bridge",
+          "url": "https://en.wikipedia.org/wiki/Crimean_Bridge"
+        },
+        {
+          "title": "Kerch Strait incident",
+          "url": "https://en.wikipedia.org/wiki/Kerch_Strait_incident"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Russian occupation",
+      "summary": "Russian forces invaded southern Ukraine from Crimea on 24 February 2022 and restored the canal water supply by seizing the Kherson region. Explosions at Saky airbase in August 2022 and a truck-bomb blast on the Crimean Bridge on 8 October 2022 showed the peninsula's vulnerability.",
+      "military": "Crimea was the main staging area for the southern offensive; airfields at Saky and Dzhankoi were struck.",
+      "places": [
+        "Saky airbase",
+        "Dzhankoi",
+        "Crimean Bridge"
+      ],
+      "links": [
+        {
+          "title": "2022 Crimean Bridge explosion",
+          "url": "https://en.wikipedia.org/wiki/2022_Crimean_Bridge_explosion"
+        },
+        {
+          "title": "2022 Saky air base attack",
+          "url": "https://en.wikipedia.org/wiki/2022_Saky_air_base_attack"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Russian occupation",
+      "summary": "Ukraine struck the Crimean Bridge again in July 2023 and repeatedly hit air-defence radars, airfields and ships across the peninsula. Ukrainian special forces raided the Tarkhankut peninsula and offshore gas platforms. The Kakhovka dam's destruction cut off the North Crimean Canal again, and partisan groups such as Atesh operated in the peninsula.",
+      "military": "Strikes destroyed S-400 and S-300 air-defence systems at Yevpatoria and Olenivka; ships were hit at Feodosia and Kerch.",
+      "places": [
+        "Crimean Bridge",
+        "Tarkhankut",
+        "Feodosia"
+      ],
+      "links": [
+        {
+          "title": "2023 Crimean Bridge explosion",
+          "url": "https://en.wikipedia.org/wiki/2023_Crimean_Bridge_explosion"
+        },
+        {
+          "title": "Atesh",
+          "url": "https://en.wikipedia.org/wiki/Atesh"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Russian occupation",
+      "summary": "On 3 June 2025 the SBU attacked the Crimean Bridge's underwater supports with explosives. Ukrainian drone and missile strikes on fuel depots, power facilities and logistics caused fuel shortages and blackouts, and on 26 June 2026 the Russian-installed authorities declared a state of emergency across Crimea and Sevastopol, halting public fuel sales and suspending tourism; Kerch crossing closures added to the crisis.",
+      "military": "Crimea remained a Russian rear base under sustained Ukrainian long-range strike pressure; the extent and duration of the 2026 emergency was still unclear at the time of writing.",
+      "places": [
+        "Crimean Bridge",
+        "Kerch",
+        "Simferopol"
+      ],
+      "links": [
+        {
+          "title": "2025 Crimean Bridge explosion",
+          "url": "https://en.wikipedia.org/wiki/2025_Crimean_Bridge_explosion"
+        },
+        {
+          "title": "Kyiv Post: Crimea declares emergency amid fuel and logistics crisis",
+          "url": "https://www.kyivpost.com/post/79058"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "History of Crimea (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/History_of_Crimea"
+    },
+    {
+      "title": "Encyclopedia of Ukraine: Crimea",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CC%5CR%5CCrimea.htm"
+    },
+    {
+      "title": "Britannica: Crimea",
+      "url": "https://www.britannica.com/place/Crimea"
+    },
+    {
+      "title": "The Moscow Times: Crimea grapples with fuel shortages and blackouts (2026)",
+      "url": "https://www.themoscowtimes.com/2026/08/05/i-dont-know-when-this-will-end-as-ukraine-steps-up-strikes-crimea-grapples-with-fuel-shortages-and-blackouts"
+    }
+  ]
+},
+    "UA-40": {
+  "name": "Sevastopol",
+  "wikipedia": "Sevastopol",
+  "historicalRegions": [
+    "Taurica",
+    "Chersonesus",
+    "Gothia",
+    "Taurida"
+  ],
+  "overview": "The city of Sevastopol occupies the Heraclean peninsula at Crimea's southwestern tip, with Balaklava, Inkerman and the Baidar valley. It grew from the Greek city-state of Chersonesus, founded in the 5th century BC, which as Byzantine Cherson was where Volodymyr the Great took baptism in 988. After the Genoese at Balaklava and the Ottomans, Russia founded Sevastopol in 1783 as the base of its Black Sea Fleet, and the city's two great sieges, in 1854-1855 and 1941-1942, made it a military symbol. Under independent Ukraine it hosted both Ukrainian and leased Russian fleets until Russia occupied and annexed it in 2014, an annexation not internationally recognized. Since 2022 Ukrainian strikes have forced much of the Russian fleet to leave its base.",
+  "eras": {
+    "trypillia": {
+      "control": "Mesolithic-Neolithic hunters and early herders",
+      "summary": "Far from the Trypillia farming zone, the area's rock shelters in the Baidar and Chorna river valleys had been used by Mesolithic and Neolithic hunter-gatherers, and early herders began to use the uplands.",
+      "military": null,
+      "places": [
+        "Baidar Valley"
+      ],
+      "links": [
+        {
+          "title": "Baydar Valley",
+          "url": "https://en.wikipedia.org/wiki/Baydar_Valley"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Kemi Oba and later Bronze Age communities",
+      "summary": "Kemi Oba-culture people left anthropomorphic stone stelae in the region, and Bronze Age herders grazed the Heraclean peninsula and the valleys around Inkerman.",
+      "military": null,
+      "places": [
+        "Heraclean Peninsula"
+      ],
+      "links": [
+        {
+          "title": "Kemi Oba culture",
+          "url": "https://en.wikipedia.org/wiki/Kemi_Oba_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Tauri (Kizil-Koba culture)",
+      "summary": "The Tauri lived in the mountains and coast around Balaklava and the Baidar valley. Greek legend placed their sanctuary of the Maiden, where Iphigenia served as priestess, on this coast, and Balaklava Bay is sometimes identified with the harbour of the Laestrygonians in the Odyssey.",
+      "military": "The Tauri were known to the Greeks as pirates who sacrificed shipwrecked strangers.",
+      "places": [
+        "Balaklava Bay",
+        "Cape Fiolent"
+      ],
+      "links": [
+        {
+          "title": "Tauri",
+          "url": "https://en.wikipedia.org/wiki/Tauri"
+        },
+        {
+          "title": "Iphigenia in Tauris",
+          "url": "https://en.wikipedia.org/wiki/Iphigenia_in_Tauris"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Greek city-state of Chersonesus; Tauri inland",
+      "summary": "Greeks from Heraclea Pontica founded Chersonesus Taurica around 422-421 BC, possibly on an earlier Ionian settlement. The city divided the Heraclean peninsula into hundreds of regular farm plots for vines and grain, an ancient landscape now on the UNESCO World Heritage List.",
+      "military": "Chersonesus was enclosed by stone walls and towers, and fortified farmsteads dotted its chora.",
+      "places": [
+        "Chersonesus",
+        "Heraclean Peninsula"
+      ],
+      "links": [
+        {
+          "title": "Chersonesus",
+          "url": "https://en.wikipedia.org/wiki/Chersonesus"
+        },
+        {
+          "title": "Ancient City of Tauric Chersonese and its Chora",
+          "url": "https://whc.unesco.org/en/list/1411/"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Chersonesus under Pontic, then Roman protection",
+      "summary": "Threatened by the late Scythians, Chersonesus called on Mithridates VI, whose general Diophantus defeated them around 110 BC. The city later came under Roman protection, and an inscription of its citizens' oath survives.",
+      "military": "A Roman garrison and naval squadron were based at Chersonesus, and a Roman military camp stood at Balaklava in the 2nd-3rd centuries AD.",
+      "places": [
+        "Chersonesus",
+        "Balaklava Roman camp"
+      ],
+      "links": [
+        {
+          "title": "Diophantus (general)",
+          "url": "https://en.wikipedia.org/wiki/Diophantus_(general)"
+        },
+        {
+          "title": "Balaklava",
+          "url": "https://en.wikipedia.org/wiki/Balaklava"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Roman Chersonesus; Goths and Alans inland",
+      "summary": "Chersonesus remained a Roman outpost as Goths and Alans settled the nearby foothills. Christian tradition held that Pope Clement I had been exiled to the Inkerman quarries and martyred there, and Christianity took root in the city in the 4th century.",
+      "military": "The Roman garrison held Chersonesus while Gothic raiders passed along the coast.",
+      "places": [
+        "Chersonesus",
+        "Inkerman"
+      ],
+      "links": [
+        {
+          "title": "Clement of Rome",
+          "url": "https://en.wikipedia.org/wiki/Clement_of_Rome"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Eastern Roman Chersonesus",
+      "summary": "Chersonesus survived the Hunnic invasions as an Eastern Roman city, trading with the nomads and serving as Constantinople's foothold in Crimea.",
+      "military": null,
+      "places": [
+        "Chersonesus"
+      ],
+      "links": [
+        {
+          "title": "Chersonesus",
+          "url": "https://en.wikipedia.org/wiki/Chersonesus"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Byzantine Empire (Cherson)",
+      "summary": "Under Zeno and Justinian I the walls of Cherson were rebuilt, and the city became the base for Byzantine control of Gothia in the mountains behind it. Churches and basilicas were built across the city.",
+      "military": "Byzantine troops at Cherson supported the allied Crimean Goths against nomads.",
+      "places": [
+        "Cherson"
+      ],
+      "links": [
+        {
+          "title": "Justinian I",
+          "url": "https://en.wikipedia.org/wiki/Justinian_I"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Byzantine Cherson (theme from c. 833)",
+      "summary": "Cherson was a place of exile: Pope Martin I died there in 655, and the deposed Emperor Justinian II escaped from it in the 700s and later took revenge on the city. In 861 Saints Cyril and Methodius stayed in Cherson and found what they believed were Saint Clement's relics. Around 833 it became the centre of a Byzantine theme.",
+      "military": "Justinian II sent a punitive fleet against Cherson in 710-711, which provoked a revolt that toppled him.",
+      "places": [
+        "Cherson"
+      ],
+      "links": [
+        {
+          "title": "Pope Martin I",
+          "url": "https://en.wikipedia.org/wiki/Pope_Martin_I"
+        },
+        {
+          "title": "Justinian II",
+          "url": "https://en.wikipedia.org/wiki/Justinian_II"
+        },
+        {
+          "title": "Cyril and Methodius",
+          "url": "https://en.wikipedia.org/wiki/Cyril_and_Methodius"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Byzantine theme of Cherson",
+      "summary": "Cherson was Byzantium's listening post on the steppe, managing relations with the Pechenegs and the Rus'. The Rus'-Byzantine treaty of 944 forbade Rus' princes from attacking the 'Korsun land'.",
+      "military": null,
+      "places": [
+        "Cherson (Korsun)"
+      ],
+      "links": [
+        {
+          "title": "Rus'–Byzantine Treaty (945)",
+          "url": "https://en.wikipedia.org/wiki/Rus%27%E2%80%93Byzantine_Treaty_(945)"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Byzantine Cherson (briefly taken by Volodymyr in 988-989)",
+      "summary": "Volodymyr the Great besieged and captured Cherson (Korsun) around 988-989 to press Emperor Basil II for the hand of Anna Porphyrogenita. According to the Primary Chronicle he was baptized there before returning the city to Byzantium and bringing priests and relics to Kyiv.",
+      "military": "Volodymyr's siege of Korsun reportedly succeeded after his troops cut the city's water supply.",
+      "places": [
+        "Chersonesus",
+        "St Vladimir's Cathedral, Chersonesus"
+      ],
+      "links": [
+        {
+          "title": "Christianization of Kievan Rus'",
+          "url": "https://en.wikipedia.org/wiki/Christianization_of_Kievan_Rus%27"
+        },
+        {
+          "title": "Anna Porphyrogenita",
+          "url": "https://en.wikipedia.org/wiki/Anna_Porphyrogenita"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Byzantine Cherson",
+      "summary": "Cherson flourished as a trading city linking Byzantium with Rus', the steppe and Tmutarakan, exporting salt, fish and wine; Rus' clergy and merchants visited regularly.",
+      "military": null,
+      "places": [
+        "Cherson"
+      ],
+      "links": [
+        {
+          "title": "Chersonesus",
+          "url": "https://en.wikipedia.org/wiki/Chersonesus"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Byzantine Cherson; Cumans in the steppe",
+      "summary": "In 1067 the Byzantine governor of Cherson poisoned Prince Rostislav of Tmutarakan, who was threatening the city. After 1204 Cherson fell under the Empire of Trebizond.",
+      "military": null,
+      "places": [
+        "Cherson"
+      ],
+      "links": [
+        {
+          "title": "Rostislav of Tmutarakan",
+          "url": "https://en.wikipedia.org/wiki/Rostislav_of_Tmutarakan"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Empire of Trebizond's Perateia",
+      "summary": "Cherson paid tribute to the Empire of Trebizond and then to the Mongols after their raids of the 1220s-1240s, slowly declining as Genoese ports rose.",
+      "military": null,
+      "places": [
+        "Cherson"
+      ],
+      "links": [
+        {
+          "title": "Perateia",
+          "url": "https://en.wikipedia.org/wiki/Perateia"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Golden Horde suzerainty; Genoese Cembalo; Theodoro",
+      "summary": "Cherson was sacked several times in the late 13th and 14th centuries and was largely abandoned. The Genoese took Balaklava in 1357 and built the fortress of Cembalo, while the Principality of Theodoro held Inkerman, where its fortress of Kalamita guarded its port.",
+      "military": "Cembalo's fortress walls and towers above Balaklava Bay date from this period.",
+      "places": [
+        "Cembalo fortress (Balaklava)",
+        "Kalamita fortress (Inkerman)"
+      ],
+      "links": [
+        {
+          "title": "Cembalo",
+          "url": "https://en.wikipedia.org/wiki/Cembalo"
+        },
+        {
+          "title": "Principality of Theodoro",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Theodoro"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Theodoro and Genoese, then Ottoman Empire (1475)",
+      "summary": "In 1475 the Ottomans conquered Cembalo, which they called Balıklava, and Kalamita, renamed Inkerman. The ruins of Chersonesus were abandoned, and a small Tatar village called Aqyar stood by the great bay.",
+      "military": "Ottoman garrisons held Balaklava and Inkerman.",
+      "places": [
+        "Balaklava",
+        "Inkerman",
+        "Aqyar"
+      ],
+      "links": [
+        {
+          "title": "Siege of Caffa (1475)",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Caffa_(1475)"
+        },
+        {
+          "title": "Inkerman",
+          "url": "https://en.wikipedia.org/wiki/Inkerman"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Ottoman Empire (Kefe Eyalet); Crimean Khanate",
+      "summary": "Balaklava was a minor Ottoman port, and the bay of Aqyar was used occasionally by Ottoman ships. Inkerman's cave monastery and the old Christian population of the area persisted under Ottoman and Tatar rule.",
+      "military": null,
+      "places": [
+        "Balaklava",
+        "Inkerman Cave Monastery"
+      ],
+      "links": [
+        {
+          "title": "Inkerman Cave Monastery",
+          "url": "https://en.wikipedia.org/wiki/Inkerman_Cave_Monastery"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Ottoman Empire; Crimean Khanate",
+      "summary": "The southwestern tip of Crimea stayed a quiet Ottoman-Tatar backwater during the Khmelnytsky Uprising; Balaklava served as a small fishing and trading port.",
+      "military": null,
+      "places": [
+        "Balaklava"
+      ],
+      "links": [
+        {
+          "title": "Balaklava",
+          "url": "https://en.wikipedia.org/wiki/Balaklava"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Ottoman Empire; Crimean Khanate",
+      "summary": "The area remained under Ottoman rule; Zaporozhian sea raids reached the Crimean coast, but the main targets were Kaffa and Kezlev further east.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kefe Eyalet",
+          "url": "https://en.wikipedia.org/wiki/Kefe_Eyalet"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Ottoman Empire and Crimean Khanate; Russian occupation from 1771",
+      "summary": "Russian troops occupied Crimea in 1771, and Russian ships began to use the deep bay of Aqyar. In 1778 Suvorov fortified the bay's shores, forcing an Ottoman squadron to leave.",
+      "military": "Suvorov's batteries at Aqyar Bay (1778) foreshadowed the Russian naval base.",
+      "places": [
+        "Sevastopol Bay"
+      ],
+      "links": [
+        {
+          "title": "Alexander Suvorov",
+          "url": "https://en.wikipedia.org/wiki/Alexander_Suvorov"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Russian Empire",
+      "summary": "After the 1783 annexation, Rear Admiral Thomas Mackenzie began building a port at Aqyar, named Sevastopol in 1784, as the main base of the Black Sea Fleet. Catherine II visited in 1787, and a battalion of Greek settlers was based at Balaklava.",
+      "military": "Ships from Sevastopol under Fyodor Ushakov fought the Ottomans at Fidonisi (1788) and Kaliakra (1791).",
+      "places": [
+        "Sevastopol",
+        "Balaklava"
+      ],
+      "links": [
+        {
+          "title": "Black Sea Fleet",
+          "url": "https://en.wikipedia.org/wiki/Black_Sea_Fleet"
+        },
+        {
+          "title": "Fyodor Ushakov",
+          "url": "https://en.wikipedia.org/wiki/Fyodor_Ushakov"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Russian Empire (Taurida Governorate)",
+      "summary": "Admiral Mikhail Lazarev built docks and the admiralty, and excavations at Chersonesus began in 1827. In the Crimean War the Allies besieged Sevastopol from October 1854 to September 1855; the city fell after the French stormed the Malakhov Kurgan. Leo Tolstoy served in the siege and wrote his Sevastopol Sketches.",
+      "military": "The Battles of Balaclava (including the Charge of the Light Brigade) and Inkerman were fought here in 1854; Admirals Kornilov and Nakhimov were killed defending the city.",
+      "places": [
+        "Malakhov Kurgan",
+        "Balaklava",
+        "Inkerman"
+      ],
+      "links": [
+        {
+          "title": "Siege of Sevastopol (1854–1855)",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Sevastopol_(1854%E2%80%931855)"
+        },
+        {
+          "title": "Battle of Balaclava",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Balaclava"
+        },
+        {
+          "title": "Battle of Inkerman",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Inkerman"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Russian Empire",
+      "summary": "Sevastopol was rebuilt after Russia regained the right to a Black Sea fleet in 1871; the railway arrived in 1875, and St Vladimir's Cathedral was built at Chersonesus. In November 1905 sailors led by Lieutenant Pyotr Schmidt mutinied on the cruiser Ochakov. The Franz Roubaud siege panorama opened in 1905.",
+      "military": "The Ottoman-flagged Goeben shelled Sevastopol on 29 October 1914; the dreadnought Imperatritsa Mariya blew up in the harbour in 1916.",
+      "places": [
+        "Sevastopol Panorama",
+        "St Vladimir's Cathedral, Chersonesus"
+      ],
+      "links": [
+        {
+          "title": "Pyotr Schmidt",
+          "url": "https://en.wikipedia.org/wiki/Pyotr_Schmidt"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "Black Sea Fleet soviets; German occupation (May-November 1918); Allied intervention",
+      "summary": "Revolutionary sailors lynched officers in December 1917 and February 1918. On 29 April 1918 most of the fleet in Sevastopol raised the Ukrainian flag in support of the UNR, the origin of today's Ukrainian Navy Day, but German troops took the city on 1 May and part of the fleet fled to Novorossiysk. Allied warships arrived after the German withdrawal.",
+      "military": "The Black Sea Fleet split between Ukrainian, Bolshevik and German control in 1918.",
+      "places": [
+        "Sevastopol Bay"
+      ],
+      "links": [
+        {
+          "title": "Day of the Navy of Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Navy_Day_(Ukraine)"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "White forces, then Soviet rule (November 1920)",
+      "summary": "Sevastopol was Wrangel's headquarters and the main port for the White evacuation in November 1920, when the remaining fleet sailed to Bizerte. The Red Army entered on 15 November, and mass executions of officers and civilians followed.",
+      "military": "Wrangel's Russian Squadron left Sevastopol for internment at Bizerte, Tunisia.",
+      "places": [
+        "Sevastopol"
+      ],
+      "links": [
+        {
+          "title": "Evacuation of the Crimea",
+          "url": "https://en.wikipedia.org/wiki/Evacuation_of_the_Crimea"
+        },
+        {
+          "title": "Wrangel's fleet",
+          "url": "https://en.wikipedia.org/wiki/Wrangel%27s_fleet"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Crimean ASSR (Russian SFSR)",
+      "summary": "Sevastopol became the base of the rebuilt Soviet Black Sea Fleet (the Naval Forces of the Black Sea). The Chersonesus ruins were turned into a state museum.",
+      "military": "Recommissioned old warships and new submarines formed the core of the Soviet fleet.",
+      "places": [
+        "Chersonesus museum"
+      ],
+      "links": [
+        {
+          "title": "Black Sea Fleet",
+          "url": "https://en.wikipedia.org/wiki/Black_Sea_Fleet"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Crimean ASSR (Russian SFSR)",
+      "summary": "The Great Terror purged much of the Black Sea Fleet's command in 1937-1938. The city's naval works and coastal batteries were expanded.",
+      "military": "Heavy coastal batteries such as the 30th and 35th were built to defend the base.",
+      "places": [
+        "30th Coastal Battery"
+      ],
+      "links": [
+        {
+          "title": "Great Purge",
+          "url": "https://en.wikipedia.org/wiki/Great_Purge"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Crimean ASSR (Russian SFSR)",
+      "summary": "Sevastopol was the Soviet Union's main southern naval base; on the night of 22 June 1941 it was one of the first Soviet cities bombed by the Luftwaffe.",
+      "military": "The Black Sea Fleet repelled the first German air raid on 22 June 1941.",
+      "places": [
+        "Sevastopol"
+      ],
+      "links": [
+        {
+          "title": "Sevastopol",
+          "url": "https://en.wikipedia.org/wiki/Sevastopol"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Siege (1941-1942), then German occupation until May 1944",
+      "summary": "Sevastopol held out for 250 days from October 1941 against Manstein's 11th Army, which used the giant railway gun Schwerer Gustav; the city fell in July 1942 and was largely destroyed. The Red Army retook it on 9 May 1944 after storming Sapun Mountain.",
+      "military": "The defence by the Separate Coastal Army and Black Sea Fleet, and the 1944 assault on Sapun Mountain, were among the key battles in Crimea.",
+      "places": [
+        "Sapun Mountain",
+        "35th Coastal Battery"
+      ],
+      "links": [
+        {
+          "title": "Siege of Sevastopol (1941–1942)",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Sevastopol_(1941%E2%80%931942)"
+        },
+        {
+          "title": "Schwerer Gustav",
+          "url": "https://en.wikipedia.org/wiki/Schwerer_Gustav"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Soviet Union (closed naval city; transferred with Crimea to the Ukrainian SSR in 1954)",
+      "summary": "Sevastopol was named a Hero City in 1945 and rebuilt in a neoclassical style. A 1948 decree gave it city status of 'republican subordination' within the RSFSR, later cited by Russia in disputes; with the 1954 transfer it became part of the Ukrainian SSR.",
+      "military": "The rebuilt Black Sea Fleet made Sevastopol a closed city.",
+      "places": [
+        "Sevastopol"
+      ],
+      "links": [
+        {
+          "title": "Hero City",
+          "url": "https://en.wikipedia.org/wiki/Hero_City"
+        },
+        {
+          "title": "Transfer of Crimea to Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Transfer_of_Crimea_to_Ukraine"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR (closed city)",
+      "summary": "The battleship Novorossiysk exploded and sank in the harbour in 1955, killing over 600 men. A secret nuclear-proof submarine base was dug into the rock at Balaklava. During the August 1991 coup Gorbachev was held at his state dacha at Foros, within Sevastopol's territory.",
+      "military": "Sevastopol was the headquarters of the Soviet Black Sea Fleet, with the Belbek airbase nearby.",
+      "places": [
+        "Balaklava submarine base",
+        "Foros",
+        "Belbek"
+      ],
+      "links": [
+        {
+          "title": "Soviet battleship Novorossiysk",
+          "url": "https://en.wikipedia.org/wiki/Italian_battleship_Giulio_Cesare"
+        },
+        {
+          "title": "Naval museum complex Balaklava",
+          "url": "https://en.wikipedia.org/wiki/Naval_museum_complex_Balaklava"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine (city of special status); Russian Black Sea Fleet leased base",
+      "summary": "Sevastopol voted 57% for Ukrainian independence in 1991, but the fate of the Black Sea Fleet caused years of tension; in 1993 the Russian parliament claimed the city, which the UN Security Council rejected. The 1997 agreements divided the fleet and leased Sevastopol's bases to Russia until 2017, while Ukraine's navy was also headquartered there.",
+      "military": "Both the Ukrainian Navy and the Russian Black Sea Fleet were based in the city.",
+      "places": [
+        "Sevastopol Bay"
+      ],
+      "links": [
+        {
+          "title": "Partition Treaty on the Status and Conditions of the Black Sea Fleet",
+          "url": "https://en.wikipedia.org/wiki/Partition_Treaty_on_the_Status_and_Conditions_of_the_Black_Sea_Fleet"
+        },
+        {
+          "title": "Ukrainian Navy",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Navy"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine; Russian fleet base",
+      "summary": "Ships of the Russian fleet sailed from Sevastopol to fight in the 2008 war against Georgia, prompting Ukrainian protests. The 2010 Kharkiv Pact extended the Russian lease to 2042 in exchange for cheaper gas. The city remained strongly pro-Russian.",
+      "military": "Russian Black Sea Fleet ships took part in the 2008 Russo-Georgian War.",
+      "places": [
+        "Sevastopol"
+      ],
+      "links": [
+        {
+          "title": "Kharkiv Pact",
+          "url": "https://en.wikipedia.org/wiki/Kharkiv_Pact"
+        },
+        {
+          "title": "Russo-Georgian War",
+          "url": "https://en.wikipedia.org/wiki/Russo-Georgian_War"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Russian occupation (from February 2014); annexation not internationally recognized",
+      "summary": "A rally on 23 February 2014 installed Aleksei Chaly as a pro-Russian 'people's mayor', and Russian forces took over the city. Russia annexed it in March 2014 as a 'federal city', which Ukraine and most states reject. Ukrainian naval headquarters and ships were seized, and Ukraine moved its navy to Odesa.",
+      "military": "Russian forces blockaded and captured Ukrainian bases, including the navy headquarters (19 March 2014) and Belbek airbase.",
+      "places": [
+        "Ukrainian Navy headquarters",
+        "Belbek airbase"
+      ],
+      "links": [
+        {
+          "title": "2014 Russian annexation of Crimea",
+          "url": "https://en.wikipedia.org/wiki/2014_Russian_annexation_of_Crimea"
+        },
+        {
+          "title": "Sevastopol International Airport",
+          "url": "https://en.wikipedia.org/wiki/Sevastopol_International_Airport"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Russian occupation",
+      "summary": "Sevastopol was the base from which the Black Sea Fleet blockaded Ukraine's ports and launched Kalibr missiles. Its flagship, the cruiser Moskva, was sunk in April 2022, and on 29 October 2022 Ukrainian aerial and naval drones attacked ships in Sevastopol Bay.",
+      "military": "Ukraine began striking the fleet in its home port with naval drones in 2022.",
+      "places": [
+        "Sevastopol Bay"
+      ],
+      "links": [
+        {
+          "title": "Sinking of the Moskva",
+          "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Moskva"
+        },
+        {
+          "title": "2022 drone attack on the Sevastopol Naval Base",
+          "url": "https://en.wikipedia.org/wiki/2022_drone_attack_on_the_Sevastopol_Naval_Base"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Russian occupation",
+      "summary": "Ukrainian missiles struck the Sevmorzavod shipyard on 13 September 2023, damaging a landing ship and a submarine, and hit the Black Sea Fleet headquarters on 22 September 2023. Most of the fleet then moved to Novorossiysk. A Ukrainian ATACMS strike on 23 June 2024 killed civilians on a beach near the city, according to Russian authorities.",
+      "military": "Naval drones and missiles sank or damaged numerous ships based at Sevastopol, ending its role as the fleet's safe main base.",
+      "places": [
+        "Sevmorzavod shipyard",
+        "Black Sea Fleet headquarters"
+      ],
+      "links": [
+        {
+          "title": "Missile strike on the Black Sea Fleet headquarters",
+          "url": "https://en.wikipedia.org/wiki/Missile_strike_on_the_Black_Sea_Fleet_headquarters"
+        },
+        {
+          "title": "Naval warfare in the Russo-Ukrainian war (2022–present)",
+          "url": "https://en.wikipedia.org/wiki/Naval_warfare_in_the_Russo-Ukrainian_war_(2022%E2%80%93present)"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Russian occupation",
+      "summary": "Ukrainian drone and missile strikes on the city's military, air-defence and fuel infrastructure continued. Sevastopol was included in the regional state of emergency declared on 26 June 2026 over fuel shortages and blackouts caused by the strikes.",
+      "military": "The Russian fleet kept only a reduced presence in Sevastopol; the full effect of the 2026 strikes was not yet clear at the time of writing.",
+      "places": [
+        "Sevastopol"
+      ],
+      "links": [
+        {
+          "title": "Sevastopol",
+          "url": "https://en.wikipedia.org/wiki/Sevastopol"
+        },
+        {
+          "title": "Newsweek: Crimea state of emergency after Ukraine strikes",
+          "url": "https://www.newsweek.com/crimea-state-of-emergency-ukraine-strikes-12126180"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Sevastopol (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Sevastopol"
+    },
+    {
+      "title": "History of Sevastopol (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Sevastopol#History"
+    },
+    {
+      "title": "UNESCO: Ancient City of Tauric Chersonese and its Chora",
+      "url": "https://whc.unesco.org/en/list/1411/"
+    },
+    {
+      "title": "Encyclopedia of Ukraine: Sevastopol",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CE%5CSevastopol.htm"
+    }
+  ]
+}
+  }
+}

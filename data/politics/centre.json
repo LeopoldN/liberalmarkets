@@ -1,0 +1,4137 @@
+{
+  "group": "centre",
+  "generated": "2026-11-03",
+  "parties": {
+    "Agrarian_Party_of_Ukraine": {
+      "name": "Agrarian Party of Ukraine",
+      "abbr": "APU",
+      "leaning": "Centre-right, agrarianism",
+      "summary": "Farmers' party, refounded in 2006, that entered several central and northern oblast councils in 2015.",
+      "founded": 2006,
+      "color": "#228b22",
+      "wikipedia": "https://en.wikipedia.org/wiki/Agrarian_Party_of_Ukraine"
+    },
+    "All-Ukrainian_Union_\"Cherkashchany\"": {
+      "name": "All-Ukrainian Union \"Cherkashchany\"",
+      "abbr": null,
+      "leaning": "Regionalism",
+      "summary": "Regional party of Cherkasy Oblast, associated with the businessman and MP Volodymyr Zubyk; second in the oblast council in 2015 and first in 2020.",
+      "wikipedia": "https://en.wikipedia.org/wiki/All-Ukrainian_Union_%22Cherkashchany%22"
+    },
+    "Batkivshchyna": {
+      "name": "Batkivshchyna (Fatherland)",
+      "abbr": "VO Batkivshchyna",
+      "leaning": "Centre to centre-right, populism, pro-European",
+      "summary": "Yulia Tymoshenko's party, founded in 1999; consistently among the larger factions in central Ukraine's councils from 2006 to 2020.",
+      "founded": 1999,
+      "color": "#e4003a",
+      "wikipedia": "https://en.wikipedia.org/wiki/Batkivshchyna"
+    },
+    "Bolsheviks": {
+      "name": "Bolsheviks",
+      "abbr": "RSDLP(b)",
+      "leaning": "Far-left, Marxism-Leninism",
+      "summary": "Lenin's faction of the Russian Social Democratic Labour Party, which seized power in Petrograd in November 1917 and fought the Ukrainian People's Republic for control of Ukraine.",
+      "founded": 1903,
+      "color": "#b30000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bolsheviks"
+    },
+    "Borotbists": {
+      "name": "Borotbists",
+      "abbr": "UPSR(b)",
+      "leaning": "Far-left, national communism",
+      "summary": "Left wing of the Ukrainian SRs that allied with the Bolsheviks in 1919 and merged into the Communist Party (Bolsheviks) of Ukraine in 1920, many members later leading Ukrainization.",
+      "founded": 1918,
+      "dissolved": 1920,
+      "color": "#a93226",
+      "wikipedia": "https://en.wikipedia.org/wiki/Borotbists"
+    },
+    "Communist_Party_of_Ukraine": {
+      "name": "Communist Party of Ukraine",
+      "abbr": "KPU",
+      "leaning": "Far-left, Marxism-Leninism, Russophilia",
+      "summary": "Successor party refounded in 1993 that was the largest party in the Verkhovna Rada in the 1990s and strong in rural central and eastern Ukraine; banned by court order in 2015 under decommunization laws.",
+      "founded": 1993,
+      "dissolved": 2015,
+      "color": "#e30613",
+      "wikipedia": "https://en.wikipedia.org/wiki/Communist_Party_of_Ukraine"
+    },
+    "Communist_Party_of_Ukraine_(Soviet_Union)": {
+      "name": "Communist Party of Ukraine (Soviet Union)",
+      "abbr": "KP(b)U / CPU",
+      "leaning": "Far-left, Marxism-Leninism",
+      "summary": "The Ukrainian branch of the Soviet Communist Party and the sole ruling party of the Ukrainian SSR from 1919-1920 until it was banned in August 1991.",
+      "founded": 1918,
+      "dissolved": 1991,
+      "color": "#cc0000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Communist_Party_of_Ukraine_(Soviet_Union)"
+    },
+    "Constitutional_Democratic_Party": {
+      "name": "Constitutional Democratic Party",
+      "abbr": "Kadets",
+      "leaning": "Centre to centre-right, liberalism, constitutional monarchism",
+      "summary": "Russian liberal party of the professional middle classes; in Ukraine it drew support mainly in towns and opposed Ukrainian territorial autonomy.",
+      "founded": 1905,
+      "color": "#2e86c1",
+      "wikipedia": "https://en.wikipedia.org/wiki/Constitutional_Democratic_Party"
+    },
+    "European_Solidarity": {
+      "name": "European Solidarity (Petro Poroshenko Bloc 'Solidarity')",
+      "abbr": "YeS / BPP",
+      "leaning": "Centre-right, liberal conservatism, pro-European",
+      "summary": "Petro Poroshenko's party, which as 'Solidarity' won the most seats in almost every central oblast council in 2015 and was renamed European Solidarity in 2019.",
+      "founded": 2000,
+      "color": "#8b1e3f",
+      "wikipedia": "https://en.wikipedia.org/wiki/European_Solidarity"
+    },
+    "For_the_Future_(political_party)": {
+      "name": "For the Future (Za maibutnie)",
+      "abbr": "ZM",
+      "leaning": "Centre, populism",
+      "summary": "Party built around MP Ihor Palytsia and linked to Ihor Kolomoyskyi, which won seats in every central oblast council in 2020.",
+      "founded": 2008,
+      "color": "#6a1b9a",
+      "wikipedia": "https://en.wikipedia.org/wiki/For_the_Future_(political_party)"
+    },
+    "Holos_(Ukraine)": {
+      "name": "Holos (Voice)",
+      "abbr": "Holos",
+      "leaning": "Centre-right, liberalism, pro-European",
+      "summary": "Liberal party founded by the rock singer Sviatoslav Vakarchuk in 2019, with its strongest local result in Kyiv in 2020.",
+      "founded": 2019,
+      "color": "#f7941d",
+      "wikipedia": "https://en.wikipedia.org/wiki/Holos_(Ukraine)"
+    },
+    "Leonid_Chernovetskyi_Bloc": {
+      "name": "Leonid Chernovetskyi Bloc",
+      "abbr": "BLCh",
+      "leaning": "Populism",
+      "summary": "Electoral bloc of the banker Leonid Chernovetskyi, who won the Kyiv mayoralty in 2006 and 2008; his bloc led the Kyiv City Council until the 2014 elections.",
+      "founded": 2006,
+      "wikipedia": "https://en.wikipedia.org/wiki/Leonid_Chernovetskyi_Bloc"
+    },
+    "Mensheviks": {
+      "name": "Mensheviks",
+      "abbr": "RSDLP(m)",
+      "leaning": "Left-wing, social democracy",
+      "summary": "The moderate faction of Russian social democracy, influential in urban soviets in 1917 but marginal in the Constituent Assembly vote in Ukraine.",
+      "founded": 1903,
+      "color": "#d35400",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mensheviks"
+    },
+    "Native_Home": {
+      "name": "Native Home (Ridnyi dim)",
+      "abbr": null,
+      "leaning": "Regionalism",
+      "summary": "Party associated with Chernihiv mayor Vladyslav Atroshenko, which came first in the Chernihiv Oblast Council election in 2020.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Native_Home"
+    },
+    "Nazi_Party": {
+      "name": "Nazi Party",
+      "abbr": "NSDAP",
+      "leaning": "Far-right, Nazism",
+      "summary": "Germany's ruling party, whose officials ran the civil administration of the Reichskommissariat Ukraine in 1941-1944 under Erich Koch, with mass murder of Jews and forced labour deportations.",
+      "founded": 1920,
+      "dissolved": 1945,
+      "color": "#654321",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nazi_Party"
+    },
+    "Opposition_Bloc": {
+      "name": "Opposition Bloc",
+      "abbr": "OB",
+      "leaning": "Centre-left, Russophile, regionalism",
+      "summary": "Successor alliance to the Party of Regions formed in 2014, with a presence in some central oblast councils in 2015.",
+      "founded": 2014,
+      "color": "#3b5998",
+      "wikipedia": "https://en.wikipedia.org/wiki/Opposition_Bloc"
+    },
+    "Opposition_Platform_–_For_Life": {
+      "name": "Opposition Platform — For Life",
+      "abbr": "OPZZh",
+      "leaning": "Big tent, Russophile",
+      "summary": "Main pro-Russian opposition party after 2018, led by Yuriy Boyko and Viktor Medvedchuk; suspended in March 2022 and banned by court in June 2022.",
+      "founded": 2018,
+      "dissolved": 2022,
+      "color": "#1e4f9c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Opposition_Platform_%E2%80%93_For_Life"
+    },
+    "Our_Land_(Ukraine)": {
+      "name": "Our Land (Nash Krai)",
+      "abbr": "Nash Krai",
+      "leaning": "Centre, regionalism",
+      "summary": "Party founded in 2011 that drew many former Party of Regions local officials and did well in local elections in 2015 and 2020.",
+      "founded": 2011,
+      "color": "#3cb371",
+      "wikipedia": "https://en.wikipedia.org/wiki/Our_Land_(Ukraine)"
+    },
+    "Our_Ukraine_(political_party)": {
+      "name": "Our Ukraine",
+      "abbr": "NU",
+      "leaning": "Centre-right, national democracy, pro-European",
+      "summary": "Party and electoral bloc of Viktor Yushchenko; its governors ran the oblasts after the 2004 Orange Revolution, but its support collapsed by 2010.",
+      "founded": 2005,
+      "color": "#ff8c00",
+      "wikipedia": "https://en.wikipedia.org/wiki/Our_Ukraine_(political_party)"
+    },
+    "Party_of_Regions": {
+      "name": "Party of Regions",
+      "abbr": "PoR",
+      "leaning": "Big tent, Russophile, regionalist",
+      "summary": "Party of Viktor Yanukovych based in the Donbas; after his 2010 election its appointees governed every oblast until the 2014 Revolution of Dignity, after which it collapsed.",
+      "founded": 1997,
+      "dissolved": 2014,
+      "color": "#1f5fbf",
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Regions"
+    },
+    "Party_of_Veterans_of_Afghanistan": {
+      "name": "Party of Veterans of Afghanistan",
+      "abbr": null,
+      "leaning": "Veterans' interests",
+      "summary": "Small party representing veterans of the Soviet-Afghan War, which won seats in the Cherkasy Oblast Council in 2015.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Veterans_of_Afghanistan"
+    },
+    "People's_Democratic_Party_(Ukraine)": {
+      "name": "People's Democratic Party",
+      "abbr": "NDP",
+      "leaning": "Centre, liberal conservatism",
+      "summary": "Pro-presidential 'party of power' of the late 1990s, associated with Prime Minister Valeriy Pustovoitenko and with many regional officials appointed under President Kuchma.",
+      "founded": 1996,
+      "wikipedia": "https://en.wikipedia.org/wiki/People%27s_Democratic_Party_(Ukraine)"
+    },
+    "People's_Party_(Ukraine)": {
+      "name": "People's Party",
+      "abbr": "NP",
+      "leaning": "Centre, agrarianism",
+      "summary": "Party of former Verkhovna Rada chairman Volodymyr Lytvyn, with a regional base in Zhytomyr Oblast, where Lytvyn comes from.",
+      "founded": 1996,
+      "color": "#3a7d44",
+      "wikipedia": "https://en.wikipedia.org/wiki/People%27s_Party_(Ukraine)"
+    },
+    "Proposition_(political_party)": {
+      "name": "Proposition",
+      "abbr": null,
+      "leaning": "Centre, regionalism",
+      "summary": "'Party of Mayors' founded in 2020 by six city mayors, including those of Zhytomyr and Kropyvnytskyi.",
+      "founded": 2020,
+      "color": "#00a3e0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Proposition_(political_party)"
+    },
+    "Radical_Party_of_Oleh_Liashko": {
+      "name": "Radical Party of Oleh Liashko",
+      "abbr": "RPL",
+      "leaning": "Left-wing populism, Ukrainian nationalism",
+      "summary": "Populist party of Oleh Liashko with a rural base, notably strong in Chernihiv Oblast, Liashko's home region.",
+      "founded": 2010,
+      "color": "#1c4d1c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Radical_Party_of_Oleh_Liashko"
+    },
+    "Revival_(Ukraine)": {
+      "name": "Revival (Vidrodzhennia)",
+      "abbr": "Vidrodzhennia",
+      "leaning": "Centre, regionalism",
+      "summary": "Party formed largely by former Party of Regions politicians, linked to the oligarch Ihor Kolomoyskyi, which entered several councils in 2015.",
+      "founded": 2004,
+      "color": "#4b0082",
+      "wikipedia": "https://en.wikipedia.org/wiki/Revival_(Ukraine)"
+    },
+    "Self_Reliance_(political_party)": {
+      "name": "Self Reliance (Samopomich)",
+      "abbr": "Samopomich",
+      "leaning": "Centre-right, Christian democracy",
+      "summary": "Party of Lviv mayor Andriy Sadovyi that did well in 2014-2015, including second place in Kyiv in 2015, but fell out of most councils in 2020.",
+      "founded": 2012,
+      "color": "#2a9df4",
+      "wikipedia": "https://en.wikipedia.org/wiki/Self_Reliance_(political_party)"
+    },
+    "Servant_of_the_People": {
+      "name": "Servant of the People",
+      "abbr": "SN",
+      "leaning": "Centre, populism, pro-European",
+      "summary": "President Volodymyr Zelensky's party, which won a parliamentary majority in 2019; in the 2020 local elections it often came first or second but rarely won outright.",
+      "founded": 2017,
+      "color": "#00a650",
+      "wikipedia": "https://en.wikipedia.org/wiki/Servant_of_the_People"
+    },
+    "Socialist_Party_of_Ukraine": {
+      "name": "Socialist Party of Ukraine",
+      "abbr": "SPU",
+      "leaning": "Centre-left to left-wing, democratic socialism",
+      "summary": "Party of Oleksandr Moroz founded in 1991, with its strongest base in rural central Ukraine (Poltava, Vinnytsia, Kirovohrad, Cherkasy); it backed the Orange Revolution but declined after 2006. Banned in 2022.",
+      "founded": 1991,
+      "dissolved": 2022,
+      "color": "#f39c12",
+      "wikipedia": "https://en.wikipedia.org/wiki/Socialist_Party_of_Ukraine"
+    },
+    "Socialist_Revolutionary_Party": {
+      "name": "Socialist Revolutionary Party",
+      "abbr": "SR",
+      "leaning": "Left-wing, agrarian socialism",
+      "summary": "The main all-Russian peasant socialist party, which won the 1917 Constituent Assembly election nationwide; in Ukraine it often ran joint lists with the Ukrainian SRs.",
+      "founded": 1902,
+      "color": "#8b4513",
+      "wikipedia": "https://en.wikipedia.org/wiki/Socialist_Revolutionary_Party"
+    },
+    "Strength_and_Honor": {
+      "name": "Strength and Honor",
+      "abbr": "SiCh",
+      "leaning": "Centre-right",
+      "summary": "Party led by former security service chief Ihor Smeshko, which won council seats in Zhytomyr Oblast in 2020.",
+      "founded": 2009,
+      "wikipedia": "https://en.wikipedia.org/wiki/Strength_and_Honor"
+    },
+    "Svoboda_(Ukraine)": {
+      "name": "Svoboda (All-Ukrainian Union 'Freedom')",
+      "abbr": "Svoboda",
+      "leaning": "Far-right, Ukrainian ultranationalism",
+      "summary": "Nationalist party led by Oleh Tiahnybok, strongest in Galicia but represented in Kyiv and several central councils in 2014-2015.",
+      "founded": 1991,
+      "color": "#1c3f94",
+      "wikipedia": "https://en.wikipedia.org/wiki/Svoboda_(Ukraine)"
+    },
+    "Ukrainian_Democratic_Alliance_for_Reform": {
+      "name": "UDAR (Ukrainian Democratic Alliance for Reform)",
+      "abbr": "UDAR",
+      "leaning": "Centre-right, liberal conservatism, pro-European",
+      "summary": "Vitali Klitschko's party, founded in 2010; it won the Kyiv City Council in 2014, merged into the Petro Poroshenko Bloc in 2015 and ran separately again in 2020, keeping Klitschko as mayor.",
+      "founded": 2010,
+      "color": "#d40000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Democratic_Alliance_for_Reform"
+    },
+    "Ukrainian_Social_Democratic_Labour_Party": {
+      "name": "Ukrainian Social Democratic Labour Party",
+      "abbr": "USDRP",
+      "leaning": "Left-wing, social democracy, Ukrainian nationalism",
+      "summary": "Marxist Ukrainian party of Volodymyr Vynnychenko and Symon Petliura that led the General Secretariat of the Central Rada and later the Directorate.",
+      "founded": 1905,
+      "color": "#e67e22",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Social_Democratic_Labour_Party"
+    },
+    "Ukrainian_Socialist-Revolutionary_Party": {
+      "name": "Ukrainian Socialist-Revolutionary Party",
+      "abbr": "UPSR",
+      "leaning": "Left-wing, agrarian socialism, Ukrainian autonomism",
+      "summary": "Peasant-based socialist party formed in 1917 that was the largest faction in the Central Rada and won the 1917 Constituent Assembly vote across most Ukrainian governorates; it split in 1918, its left wing becoming the Borotbists.",
+      "founded": 1917,
+      "color": "#c0392b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Socialist-Revolutionary_Party"
+    },
+    "Ukrainian_Strategy_of_Groysman": {
+      "name": "Ukrainian Strategy of Groysman",
+      "abbr": null,
+      "leaning": "Centre, pro-European",
+      "summary": "Party of former Prime Minister and Vinnytsia mayor Volodymyr Groysman, dominant in Vinnytsia Oblast and city since 2020.",
+      "founded": 2019,
+      "color": "#0057b8",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Strategy_of_Groysman"
+    },
+    "UKROP": {
+      "name": "UKROP (Ukrainian Association of Patriots)",
+      "abbr": "UKROP",
+      "leaning": "Right-wing, Ukrainian nationalism",
+      "summary": "Nationalist party linked to Ihor Kolomoyskyi and veterans of the Donbas war, which entered many oblast councils in 2015 and later merged into For the Future.",
+      "founded": 2015,
+      "color": "#4a6b2a",
+      "wikipedia": "https://en.wikipedia.org/wiki/UKROP"
+    },
+    "Unity_of_Oleksandr_Omelchenko": {
+      "name": "Unity of Oleksandr Omelchenko",
+      "abbr": "Yednist",
+      "leaning": "Centre, regionalism",
+      "summary": "Kyiv-based party of Oleksandr Omelchenko, mayor of Kyiv from 1996 to 2006, which remained a mid-sized faction on the city council.",
+      "founded": 2000,
+      "color": "#2471a3",
+      "wikipedia": "https://en.wikipedia.org/wiki/Unity_of_Oleksandr_Omelchenko"
+    },
+    "x:Native_City_(Ridne_Misto)": {
+      "name": "Native City (Ridne Misto)",
+      "abbr": null,
+      "leaning": "Regionalism",
+      "summary": "Poltava-based local party, represented in the Poltava Oblast Council in 2015 and 2020. No English Wikipedia article; source: Poltava Oblast Council article, en.wikipedia.org/wiki/Poltava_Oblast_Council.",
+      "wikipedia": null
+    },
+    "x:People's_Will_(Sumy)": {
+      "name": "People's Will",
+      "abbr": null,
+      "leaning": "Unclear",
+      "summary": "Party listed with six seats in the Sumy Oblast Council after the 2015 election; its exact identity is not described on English Wikipedia. Source: en.wikipedia.org/wiki/Sumy_Oblast_Council.",
+      "wikipedia": null
+    },
+    "x:Trust_(Doviria)": {
+      "name": "Trust (Doviria)",
+      "abbr": null,
+      "leaning": "Regionalism",
+      "summary": "Regional party that came first in the Poltava Oblast Council in 2020. No English Wikipedia article; source: Poltava Oblast Council article, en.wikipedia.org/wiki/Poltava_Oblast_Council.",
+      "wikipedia": null
+    },
+    "Yulia_Tymoshenko_Bloc": {
+      "name": "Yulia Tymoshenko Bloc",
+      "abbr": "BYuT",
+      "leaning": "Centre to centre-left, populism, pro-European",
+      "summary": "Electoral alliance led by Batkivshchyna that came first in most central Ukrainian oblast councils in the 2006 local elections.",
+      "founded": 2001,
+      "dissolved": 2012,
+      "color": "#c0003c",
+      "wikipedia": "https://en.wikipedia.org/wiki/Yulia_Tymoshenko_Bloc"
+    }
+  },
+  "armedGroups": {
+    "1st_Heavy_Mechanized_Brigade": {
+      "name": "1st Tank Brigade (1st Heavy Mechanized Brigade)",
+      "type": "Army armoured brigade",
+      "side": "Ukraine",
+      "summary": "Armoured brigade based at Honcharivske, Chernihiv Oblast, which fought in the Donbas from 2014 and defended Chernihiv during the 2022 siege.",
+      "wikipedia": "https://en.wikipedia.org/wiki/1st_Heavy_Mechanized_Brigade"
+    },
+    "27th_Artillery_Brigade_(Ukraine)": {
+      "name": "27th Artillery Brigade",
+      "type": "Rocket artillery brigade",
+      "side": "Ukraine",
+      "summary": "Rocket artillery brigade based in Sumy, which took part in the defence of Sumy in 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/27th_Artillery_Brigade_(Ukraine)"
+    },
+    "30th_Mechanized_Brigade_(Ukraine)": {
+      "name": "30th Mechanized Brigade",
+      "type": "Army mechanized brigade",
+      "side": "Ukraine",
+      "summary": "Brigade based in Zviahel (Novohrad-Volynskyi), Zhytomyr Oblast, which fought at Debaltseve in 2015 and in the Donbas after 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/30th_Mechanized_Brigade_(Ukraine)"
+    },
+    "43rd_Rocket_Army": {
+      "name": "43rd Rocket Army",
+      "type": "Strategic Rocket Forces army",
+      "side": "Soviet Union, then Ukraine",
+      "summary": "Soviet ICBM army headquartered in Vinnytsia, whose missiles in Ukraine were dismantled after the 1994 Budapest Memorandum.",
+      "wikipedia": "https://en.wikipedia.org/wiki/43rd_Rocket_Army"
+    },
+    "58th_Motorized_Brigade": {
+      "name": "58th Motorized Brigade",
+      "type": "Army motorized brigade",
+      "side": "Ukraine",
+      "summary": "Brigade formed in 2015 and based in Konotop, Sumy Oblast, which helped defend Sumy Oblast in 2022 and later fought in the Donbas.",
+      "wikipedia": "https://en.wikipedia.org/wiki/58th_Motorized_Brigade"
+    },
+    "59th_Assault_Brigade": {
+      "name": "59th Brigade",
+      "type": "Army brigade (motorized, later assault)",
+      "side": "Ukraine",
+      "summary": "Brigade formed in 2015 and based at Haisyn, Vinnytsia Oblast, which has fought in the south and in the Donbas.",
+      "wikipedia": "https://en.wikipedia.org/wiki/59th_Assault_Brigade"
+    },
+    "72nd_Mechanized_Brigade": {
+      "name": "72nd Mechanized Brigade 'Black Zaporozhians'",
+      "type": "Army mechanized brigade",
+      "side": "Ukraine",
+      "summary": "Brigade based in Bila Tserkva (Kyiv Oblast) that fought in the Donbas from 2014, defended the western approaches to Kyiv in 2022 and later fought at Vuhledar.",
+      "wikipedia": "https://en.wikipedia.org/wiki/72nd_Mechanized_Brigade"
+    },
+    "831st_Tactical_Aviation_Brigade": {
+      "name": "831st Tactical Aviation Brigade",
+      "type": "Air Force fighter brigade",
+      "side": "Ukraine",
+      "summary": "Su-27 fighter brigade based at Myrhorod, Poltava Oblast.",
+      "wikipedia": "https://en.wikipedia.org/wiki/831st_Tactical_Aviation_Brigade"
+    },
+    "95th_Air_Assault_Brigade": {
+      "name": "95th Air Assault Brigade",
+      "type": "Air assault brigade",
+      "side": "Ukraine",
+      "summary": "Elite brigade based in Zhytomyr, known for its 2014 raid through the Donbas and for fighting in Kharkiv, Donbas and Kursk operations after 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/95th_Air_Assault_Brigade"
+    },
+    "Aidar_Battalion": {
+      "name": "Aidar Battalion",
+      "type": "Volunteer territorial defence battalion, later army assault battalion",
+      "side": "Ukraine",
+      "summary": "Volunteer battalion formed in May 2014 largely from Euromaidan self-defence members recruited in Kyiv, which fought in Luhansk Oblast.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Aidar_Battalion"
+    },
+    "Aleksey_Fyodorov": {
+      "name": "Fyodorov's Chernihiv partisan formation",
+      "type": "Partisan formation",
+      "side": "Soviet Union",
+      "summary": "Partisan force led by Chernihiv underground party secretary Oleksii Fedorov, one of the largest in Ukraine, operating in Chernihiv and later Volhynia.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Aleksey_Fyodorov"
+    },
+    "Armed_Forces_of_South_Russia": {
+      "name": "Armed Forces of South Russia",
+      "type": "White army group",
+      "side": "White movement",
+      "summary": "Denikin's combined White command in 1919-1920, which held left-bank and central Ukraine in autumn 1919.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Armed_Forces_of_South_Russia"
+    },
+    "Armed_Forces_of_Ukraine": {
+      "name": "Armed Forces of Ukraine",
+      "type": "National armed forces",
+      "side": "Ukraine",
+      "summary": "Formed in 1991-1992 largely from Soviet units in Ukraine, including the Kiev Military District.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Armed_Forces_of_Ukraine"
+    },
+    "Austro-Hungarian_Army": {
+      "name": "Austro-Hungarian Army",
+      "type": "Regular army (occupation force)",
+      "side": "Austria-Hungary",
+      "summary": "Occupied the south-western Ukrainian governorates, including Podolia and parts of Kherson, in 1918.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Austro-Hungarian_Army"
+    },
+    "Azov_Brigade": {
+      "name": "Azov Brigade",
+      "type": "Volunteer battalion, later a National Guard brigade",
+      "side": "Ukraine",
+      "summary": "Formed in May 2014 by nationalist volunteers, many recruited in Kyiv, as a volunteer battalion; integrated into the National Guard and known for the defence of Mariupol in 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Azov_Brigade"
+    },
+    "Cheka": {
+      "name": "Cheka",
+      "type": "Political police",
+      "side": "Soviet Russia / Soviet Ukraine",
+      "summary": "Soviet secret police (in Ukraine the VUChK) responsible for the Red Terror, hostage-taking and executions in 1918-1922.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cheka"
+    },
+    "Danylo_Terpylo": {
+      "name": "Otaman Zelenyi's insurgents",
+      "type": "Peasant insurgent force",
+      "side": "Changing (Ukrainian insurgents)",
+      "summary": "Peasant army of Danylo Terpylo ('Otaman Zelenyi') from Trypillia, which fought the Hetman, the Bolsheviks and the Whites in the Kyiv region in 1918-1919.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Danylo_Terpylo"
+    },
+    "Einsatzkommando": {
+      "name": "Einsatzgruppen / Einsatzkommandos",
+      "type": "SS mobile killing units",
+      "side": "Nazi Germany",
+      "summary": "SS and police units that murdered Jews, Roma and others behind the front; Sonderkommando 4a of Einsatzgruppe C carried out the Babi Yar massacre in Kyiv.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Einsatzkommando"
+    },
+    "Free_Cossacks": {
+      "name": "Free Cossacks",
+      "type": "Volunteer territorial militia",
+      "side": "Ukrainian People's Republic",
+      "summary": "Peasant self-defence militia that began in Zvenyhorodka county (today Cherkasy Oblast) in spring 1917; its October 1917 congress in Chyhyryn elected Pavlo Skoropadsky as otaman, and it fought for the Central Rada in 1917-1918.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Free_Cossacks"
+    },
+    "Freedom_of_Russia_Legion": {
+      "name": "Freedom of Russia Legion",
+      "type": "Russian volunteer unit",
+      "side": "Ukraine",
+      "summary": "Unit of Russian citizens fighting for Ukraine, which joined cross-border raids into Russia, including into Kursk and Belgorod oblasts in 2024.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Freedom_of_Russia_Legion"
+    },
+    "Georgian_Legion": {
+      "name": "Georgian Legion",
+      "type": "Foreign volunteer unit",
+      "side": "Ukraine",
+      "summary": "Unit of mostly Georgian volunteers formed in 2014, which fought in the Donbas and in the defence of Kyiv Oblast in 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Georgian_Legion"
+    },
+    "Imperial_German_Army": {
+      "name": "Imperial German Army",
+      "type": "Regular army (occupation force)",
+      "side": "German Empire",
+      "summary": "Occupied Ukraine from March to December 1918 under the Brest-Litovsk treaty, first supporting the Central Rada and then installing the Hetmanate of Pavlo Skoropadsky.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Imperial_German_Army"
+    },
+    "International_Legion_(Ukraine)": {
+      "name": "International Legion",
+      "type": "Foreign volunteer formation",
+      "side": "Ukraine",
+      "summary": "Unit of foreign volunteers created in late February 2022 after an appeal by President Zelensky; its first members fought in Kyiv Oblast.",
+      "wikipedia": "https://en.wikipedia.org/wiki/International_Legion_(Ukraine)"
+    },
+    "Kholodny_Yar_Republic": {
+      "name": "Kholodny Yar Republic",
+      "type": "Peasant insurgent self-government",
+      "side": "Ukrainian independence insurgents",
+      "summary": "Insurgent territory in the Kholodnyi Yar forest near Chyhyryn that resisted Soviet rule from 1919 until 1922.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Kholodny_Yar_Republic"
+    },
+    "Kiev_Military_District": {
+      "name": "Kiev Military District",
+      "type": "Military district command",
+      "side": "Soviet Union",
+      "summary": "Soviet military district headquartered in Kyiv that covered central and northern Ukraine; its forces passed to Ukraine in 1991-1992.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Kiev_Military_District"
+    },
+    "Kyiv_Regiment_(Ukraine)": {
+      "name": "Kyiv Regiment",
+      "type": "Special-purpose police regiment",
+      "side": "Ukraine",
+      "summary": "Police special-purpose unit based in Kyiv, which grew out of the 2014 Kyiv police volunteer battalions and fought in Kyiv Oblast and the Donbas after 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Kyiv_Regiment_(Ukraine)"
+    },
+    "Kyiv-1_Police_Battalion": {
+      "name": "Kyiv-1 Battalion",
+      "type": "Special-purpose police battalion",
+      "side": "Ukraine",
+      "summary": "Volunteer special police battalion formed in Kyiv in 2014 that served in the Donbas war.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Kyiv-1_Police_Battalion"
+    },
+    "Kyiv-2_Company_(Ukraine)": {
+      "name": "Kyiv-2",
+      "type": "Special-purpose police unit",
+      "side": "Ukraine",
+      "summary": "Volunteer special police unit raised in Kyiv in 2014 for service in the Donbas.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Kyiv-2_Company_(Ukraine)"
+    },
+    "Ministry_of_Internal_Affairs_(Soviet_Union)": {
+      "name": "MVD",
+      "type": "Interior ministry troops",
+      "side": "Soviet Union",
+      "summary": "Soviet interior ministry, successor to the NKVD from 1946, whose troops fought the last UPA groups in the late 1940s and early 1950s.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ministry_of_Internal_Affairs_(Soviet_Union)"
+    },
+    "Mykola_Shchors": {
+      "name": "Shchors's Red units (Bohunskyi Regiment, 1st Ukrainian Soviet Division)",
+      "type": "Red Army formation",
+      "side": "Bolsheviks",
+      "summary": "Units raised and commanded by Mykola Shchors from 1918, which fought the UNR in northern and Right-bank Ukraine in 1919 until Shchors was killed that August.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Shchors"
+    },
+    "NKVD": {
+      "name": "NKVD",
+      "type": "Interior ministry and political police",
+      "side": "Soviet Union",
+      "summary": "Soviet security ministry that carried out the Great Terror of 1937-1938, deportations and, after the war, counter-insurgency against the UPA.",
+      "wikipedia": "https://en.wikipedia.org/wiki/NKVD"
+    },
+    "Nykyfor_Hryhoriv": {
+      "name": "Hryhoriv's insurgent army",
+      "type": "Peasant insurgent army",
+      "side": "Changing (UNR, then Red Army, then independent)",
+      "summary": "Forces of otaman Nykyfor Hryhoriv, based around Oleksandriia and Yelisavetgrad, which switched from the Directorate to the Bolsheviks and then rose against them in May 1919, with mass anti-Jewish pogroms.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nykyfor_Hryhoriv"
+    },
+    "Organisation_of_Ukrainian_Nationalists": {
+      "name": "Organisation of Ukrainian Nationalists",
+      "type": "Nationalist underground organisation",
+      "side": "Ukrainian nationalists",
+      "summary": "Founded in 1929; in 1941 its Melnyk (OUN-M) and Bandera (OUN-B) wings sent 'expeditionary groups' into central Ukraine, where many members were arrested and shot by the Germans in 1942.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Organisation_of_Ukrainian_Nationalists"
+    },
+    "Polish_Land_Forces": {
+      "name": "Polish Army",
+      "type": "Regular army",
+      "side": "Poland",
+      "summary": "In alliance with the UNR, the Polish army advanced through Right-bank Ukraine and took Kyiv in May 1920 before being pushed back by the Red Army.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Polish_Land_Forces"
+    },
+    "Poltava_Rifle_Battalion_(Ukraine)": {
+      "name": "Poltava Battalion",
+      "type": "Special-purpose police battalion",
+      "side": "Ukraine",
+      "summary": "Police special-purpose battalion formed in Poltava Oblast in 2014 that served in the Donbas.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Poltava_Rifle_Battalion_(Ukraine)"
+    },
+    "Red_Army": {
+      "name": "Red Army",
+      "type": "Regular army",
+      "side": "Soviet Russia / Soviet Union",
+      "summary": "The armed forces of Soviet Russia and later the USSR, which conquered Ukraine in 1919-1920 and fought Germany in 1941-1945.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Red_Army"
+    },
+    "Red_Guards_(Russia)": {
+      "name": "Red Guards",
+      "type": "Paramilitary workers' militia",
+      "side": "Bolsheviks",
+      "summary": "Armed Bolshevik workers' detachments of 1917-1918; in Ukraine they took part in the Kyiv Arsenal uprising and in Muravyov's capture of Kyiv in February 1918.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Red_Guards_(Russia)"
+    },
+    "Revolutionary_Insurgent_Army_of_Ukraine": {
+      "name": "Revolutionary Insurgent Army of Ukraine (Makhnovshchina)",
+      "type": "Anarchist insurgent army",
+      "side": "Makhnovists",
+      "summary": "Nestor Makhno's anarchist peasant army based in Huliaipole, which fought Whites, nationalists and Bolsheviks in 1918-1921 and defeated Denikin's forces at Peregonovka near Uman in September 1919.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Revolutionary_Insurgent_Army_of_Ukraine"
+    },
+    "Russian_Airborne_Forces": {
+      "name": "Russian Airborne Forces (VDV)",
+      "type": "Airborne troops",
+      "side": "Russia",
+      "summary": "Russian airborne branch whose units landed at Hostomel and occupied Bucha, Irpin and Borodianka in February-March 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Airborne_Forces"
+    },
+    "Russian_Armed_Forces": {
+      "name": "Russian Armed Forces",
+      "type": "Regular armed forces",
+      "side": "Russia",
+      "summary": "Russia's military, which launched the full-scale invasion of Ukraine on 24 February 2022, including the northern offensive on Kyiv, Chernihiv and Sumy, and has since conducted missile and drone strikes across Ukraine.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Armed_Forces"
+    },
+    "Russian_Ground_Forces": {
+      "name": "Russian Ground Forces",
+      "type": "Regular army",
+      "side": "Russia",
+      "summary": "Russian land army, whose combined-arms and tank armies advanced on Kyiv, Chernihiv and Sumy in 2022 and launched cross-border offensives into Sumy Oblast from 2024-2025.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Ground_Forces"
+    },
+    "Russian_Volunteer_Corps": {
+      "name": "Russian Volunteer Corps",
+      "type": "Russian émigré volunteer unit",
+      "side": "Ukraine",
+      "summary": "Unit of Russian nationalist volunteers fighting for Ukraine, known for cross-border raids from northern Ukraine into Russia's Bryansk, Belgorod and Kursk regions.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Volunteer_Corps"
+    },
+    "Sich_Battalion": {
+      "name": "Sich Battalion",
+      "type": "Special-purpose police battalion",
+      "side": "Ukraine",
+      "summary": "Kyiv-based police battalion formed in 2014 from Svoboda-affiliated volunteers, which served in the Donbas war.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sich_Battalion"
+    },
+    "Sich_Riflemen": {
+      "name": "Sich Riflemen",
+      "type": "Regular infantry formation",
+      "side": "Ukrainian People's Republic",
+      "summary": "Unit formed in Kyiv in late 1917 from Galician and Bukovinian former Austro-Hungarian prisoners of war under Yevhen Konovalets; it defended the Central Rada and spearheaded the Directorate's 1918 uprising against the Hetman.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sich_Riflemen"
+    },
+    "Soviet_Army": {
+      "name": "Soviet Army",
+      "type": "Regular army",
+      "side": "Soviet Union",
+      "summary": "Name of the Soviet ground forces from 1946 to 1991; central Ukraine hosted many of its units under the Kiev Military District.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Soviet_Army"
+    },
+    "Soviet_partisans": {
+      "name": "Soviet partisans",
+      "type": "Partisan movement",
+      "side": "Soviet Union",
+      "summary": "Red Army-directed guerrillas behind German lines; the largest Ukrainian formations were based in the northern forests of Sumy, Chernihiv and Zhytomyr oblasts.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Soviet_partisans"
+    },
+    "Special_Operations_Center_\"East\"_(Ukraine)": {
+      "name": "3rd Special Purpose Regiment (Special Operations Center 'East')",
+      "type": "Special operations unit",
+      "side": "Ukraine",
+      "summary": "Special forces unit based in Kropyvnytskyi, which fought at Donetsk airport in 2014-2015 and in many operations since 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Special_Operations_Center_%22East%22_(Ukraine)"
+    },
+    "State_Political_Directorate": {
+      "name": "GPU / OGPU",
+      "type": "Political police",
+      "side": "Soviet Union",
+      "summary": "Successor of the Cheka from 1922, which suppressed peasant resistance and enforced collectivization and the grain requisitions behind the Holodomor.",
+      "wikipedia": "https://en.wikipedia.org/wiki/State_Political_Directorate"
+    },
+    "Sydir_Kovpak": {
+      "name": "Kovpak's Putyvl partisan unit",
+      "type": "Partisan formation",
+      "side": "Soviet Union",
+      "summary": "Partisan formation of Sydir Kovpak, founded in the Spadshchansky forest near Putyvl (Sumy Oblast) in 1941, which raided across Ukraine as far as the Carpathians in 1943.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sydir_Kovpak"
+    },
+    "Territorial_Defence_Forces_(Ukraine)": {
+      "name": "Territorial Defence Forces",
+      "type": "Reserve component of the armed forces",
+      "side": "Ukraine",
+      "summary": "Separate branch created in January 2022 with a brigade in every oblast and in Kyiv city; many volunteers joined at the start of the full-scale invasion.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Territorial_Defence_Forces_(Ukraine)"
+    },
+    "Transnistria_Governorate": {
+      "name": "Romanian occupation forces (Transnistria Governorate)",
+      "type": "Occupation administration and gendarmerie",
+      "side": "Kingdom of Romania",
+      "summary": "Romanian-administered zone between the Dniester and Southern Buh in 1941-1944, which included southern Vinnytsia Oblast and saw the deportation and death of large numbers of Jews.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Transnistria_Governorate"
+    },
+    "Ukrainian_Auxiliary_Police": {
+      "name": "Ukrainian Auxiliary Police",
+      "type": "Collaborationist police",
+      "side": "Nazi Germany",
+      "summary": "Local police set up by the German authorities in 1941, used for guard duty and in many places for roundups and killings of Jews.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Auxiliary_Police"
+    },
+    "Ukrainian_Galician_Army": {
+      "name": "Ukrainian Galician Army",
+      "type": "Regular army",
+      "side": "West Ukrainian People's Republic / UNR",
+      "summary": "Army of the West Ukrainian People's Republic which crossed into Podolia in July 1919 and joined the UNR in the advance on Kyiv.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Galician_Army"
+    },
+    "Ukrainian_Insurgent_Army": {
+      "name": "Ukrainian Insurgent Army",
+      "type": "Nationalist insurgent army",
+      "side": "OUN-B",
+      "summary": "Nationalist guerrilla army formed in Volhynia in 1942-1943 that fought German, Soviet and Polish forces and carried out massacres of Poles; Soviet forces suppressed it by the early 1950s.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Insurgent_Army"
+    },
+    "Ukrainian_People's_Army": {
+      "name": "Army of the Ukrainian People's Republic",
+      "type": "National army",
+      "side": "Ukrainian People's Republic",
+      "summary": "Regular army of the UNR and the Directorate, which fought the Bolsheviks, the Whites and others in 1917-1921 under Symon Petliura.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_People%27s_Army"
+    },
+    "Ukrainian_People's_Revolutionary_Army": {
+      "name": "Ukrainian People's Revolutionary Army (Polissian Sich)",
+      "type": "Nationalist insurgent force",
+      "side": "Ukrainian nationalists (UNR exile tradition)",
+      "summary": "Force of Taras Bulba-Borovets formed in 1941 around Olevsk in Polesia, which fought Soviet remnants and later the Germans before being absorbed or destroyed by the OUN-B's UPA in 1943.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_People%27s_Revolutionary_Army"
+    },
+    "Ukrainian_territorial_defence_battalions": {
+      "name": "Territorial defence battalions (2014)",
+      "type": "Oblast-raised defence battalions",
+      "side": "Ukraine",
+      "summary": "Battalions raised by each oblast's military commissariat in 2014, such as 'Chernihiv', 'Sumy', 'Kirovohrad' and 'Zhytomyr', later converted into motorized infantry battalions of the army.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_territorial_defence_battalions"
+    },
+    "Volunteer_Army": {
+      "name": "Volunteer Army",
+      "type": "White army",
+      "side": "White movement",
+      "summary": "Main White force of General Denikin, which took Kharkiv, Poltava, Kyiv and much of Ukraine in summer 1919 before being driven out by the Red Army that winter.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Volunteer_Army"
+    },
+    "Wehrmacht": {
+      "name": "Wehrmacht",
+      "type": "Regular armed forces",
+      "side": "Nazi Germany",
+      "summary": "German armed forces that conquered Ukraine in 1941 and were driven out by the Red Army in 1943-1944.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Wehrmacht"
+    }
+  },
+  "oblasts": {
+    "UA-30": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Kyiv was the seat of the Central Rada (from March 1917), the Ukrainian People's Republic, the German-backed Hetmanate of Pavlo Skoropadsky (April-December 1918) and the Directorate (December 1918-February 1919). The Rada's governments were led by the Ukrainian Social Democrats and Ukrainian SRs; in the November 1917 Constituent Assembly vote, Ukrainian parties won only about 26% in the largely Russian- and Jewish-speaking city, against 77% in the surrounding Kiev Governorate.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Ukrainian_Social_Democratic_Labour_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Sich_Riflemen",
+              "role": "Formed in Kyiv in November 1917 and helped crush the Bolshevik Arsenal uprising in January 1918."
+            },
+            {
+              "group": "Red_Guards_(Russia)",
+              "role": "Bolshevik workers' units led the January 1918 Arsenal uprising, and Muravyov's Red Guards took Kyiv in February 1918 with mass shootings."
+            },
+            {
+              "group": "Imperial_German_Army",
+              "role": "Entered Kyiv in March 1918, restored the Rada and in April backed the coup that installed the Hetmanate."
+            },
+            {
+              "group": "Ukrainian_People's_Army",
+              "role": "Directorate forces took Kyiv from the Hetman in December 1918 and lost it to the Red Army in February 1919."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "Control of Kyiv changed hands repeatedly: Soviet rule from February 1919, the UNR and Galician army and Denikin's Whites at the end of August 1919, Soviet rule again from December 1919, the Polish-UNR occupation in May-June 1920, and finally Soviet rule, with Kharkiv as the Soviet Ukrainian capital.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Held Kyiv in 1919 and took it back for good in June 1920."
+            },
+            {
+              "group": "Armed_Forces_of_South_Russia",
+              "role": "Denikin's Whites took Kyiv on 31 August 1919, a day after the UNR and Galician armies entered, and held it until December."
+            },
+            {
+              "group": "Ukrainian_Galician_Army",
+              "role": "Entered Kyiv with UNR troops on 30 August 1919 but withdrew on meeting Denikin's forces."
+            },
+            {
+              "group": "Polish_Land_Forces",
+              "role": "Occupied Kyiv with UNR allies from 7 May to June 1920 during the Kiev offensive."
+            },
+            {
+              "group": "Cheka",
+              "role": "The Kyiv Cheka carried out mass executions during the Red Terror of 1919."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule under the Communist Party (Bolsheviks) of Ukraine; Kyiv was a provincial city (the capital was Kharkiv) but a centre of Ukrainization, the Ukrainian Academy of Sciences and the Ukrainian Autocephalous Orthodox Church.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "The GPU suppressed the remaining insurgents and, in 1929-1930, staged the show trial of the 'Union for the Liberation of Ukraine' in Kharkiv against Kyiv intellectuals."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; the capital of the Ukrainian SSR returned to Kyiv in 1934. The Great Terror of 1937-1938 hit the city's party, cultural and military elites hard.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Shot thousands of people during the Great Terror and buried them in the Bykivnia forest outside Kyiv."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule from Kyiv as capital of the Ukrainian SSR, which absorbed eastern Poland in 1939 and northern Bukovina and southern Bessarabia in 1940.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Kiev_Military_District",
+              "role": "Kyiv-headquartered command that led the Soviet invasion of eastern Poland in September 1939 from Ukraine."
+            }
+          ]
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "German forces took Kyiv on 19 September 1941; it was the seat of Generalbezirk Kiew in the Reichskommissariat Ukraine. An OUN-M-dominated Ukrainian National Council and city administration were tolerated briefly and then crushed in early 1942. The Red Army retook the city on 6 November 1943.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Wehrmacht",
+              "role": "Captured Kyiv in September 1941 after the encirclement battle east of the city."
+            },
+            {
+              "group": "Einsatzkommando",
+              "role": "Sonderkommando 4a, with German police battalions, murdered 33,771 Jews at Babi Yar on 29-30 September 1941."
+            },
+            {
+              "group": "Ukrainian_Auxiliary_Police",
+              "role": "Local auxiliary police assisted the German authorities, including in rounding up Jews for Babi Yar."
+            },
+            {
+              "group": "Organisation_of_Ukrainian_Nationalists",
+              "role": "OUN-M activists ran the city administration in late 1941 until the Gestapo arrested and shot many of them at Babi Yar in 1942."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Liberated Kyiv on 6 November 1943 after crossing the Dnieper."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule; Kyiv was rebuilt as the republican capital, with the new Khreshchatyk.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Kiev_Military_District",
+              "role": "Kyiv was the headquarters of the district, one of the largest Soviet military commands."
+            }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule; Kyiv was the centre of the 1960s dissident movement and the Ukrainian Helsinki Group (1976). In 1989-1991 Rukh organised mass rallies, the 1990 Revolution on Granite took place on the main square, and the Verkhovna Rada declared independence in Kyiv on 24 August 1991. The 1990 city council, elected in the first semi-free elections, had a strong democratic opposition (seat figures not sourced).",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Kiev_Military_District",
+              "role": "Headquartered in Kyiv until its forces passed to Ukraine's new army in 1991-1992."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Kyiv's administration was headed by presidentially appointed heads of the city state administration; Oleksandr Omelchenko held the post from 1996 and won the first direct mayoral elections in 1999 and 2002. Council seat compositions for 1994-2002 could not be sourced.",
+            "governing": [
+              "Unity_of_Oleksandr_Omelchenko"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "The Ministry of Defence and General Staff of the new Ukrainian army were established in Kyiv."
+            }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "Kyiv was the stage of the 2004 Orange Revolution and the 2013-2014 Euromaidan. Leonid Chernovetskyi won the mayoralty in 2006 and 2008 with his own bloc; after he left in 2012, Oleksandr Popov of the Party of Regions headed the city administration until January 2014. Detailed council results for 2006 and 2008 could not be sourced.",
+            "governing": [
+              "Leonid_Chernovetskyi_Bloc",
+              "Party_of_Regions"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Vitali Klitschko (UDAR) was elected mayor in May 2014 and re-elected in 2015 and 2020 (with just over 50% in the first round). UDAR merged into the Petro Poroshenko Bloc in 2015, whose 'Solidarity' list led the council; in 2020 European Solidarity and UDAR ran separately and came first and second. The 2014 results table on Wikipedia does not add up exactly; only parties listed there are shown.",
+            "governing": [
+              "Ukrainian_Democratic_Alliance_for_Reform",
+              "European_Solidarity"
+            ],
+            "elections": [
+              {
+                "body": "Kyiv City Council",
+                "year": 2014,
+                "total": 120,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Democratic_Alliance_for_Reform",
+                    "seats": 77
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Self_Reliance_(political_party)",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 3
+                  },
+                  {
+                    "party": "Unity_of_Oleksandr_Omelchenko",
+                    "seats": 2
+                  }
+                ],
+                "source": {
+                  "title": "2014 Kyiv local election",
+                  "url": "https://en.wikipedia.org/wiki/2014_Kyiv_local_election"
+                }
+              },
+              {
+                "body": "Kyiv City Council",
+                "year": 2015,
+                "total": 120,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 52
+                  },
+                  {
+                    "party": "Self_Reliance_(political_party)",
+                    "seats": 22
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 17
+                  },
+                  {
+                    "party": "Unity_of_Oleksandr_Omelchenko",
+                    "seats": 15
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 14
+                  }
+                ],
+                "source": {
+                  "title": "Місцеві вибори в Києві 2015 (Ukrainian Wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/%D0%9C%D1%96%D1%81%D1%86%D0%B5%D0%B2%D1%96_%D0%B2%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B2_%D0%9A%D0%B8%D1%94%D0%B2%D1%96_2015"
+                }
+              },
+              {
+                "body": "Kyiv City Council",
+                "year": 2020,
+                "total": 120,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 31
+                  },
+                  {
+                    "party": "Ukrainian_Democratic_Alliance_for_Reform",
+                    "seats": 30
+                  },
+                  {
+                    "party": "Unity_of_Oleksandr_Omelchenko",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Holos_(Ukraine)",
+                    "seats": 9
+                  }
+                ],
+                "source": {
+                  "title": "Kyiv City Council",
+                  "url": "https://en.wikipedia.org/wiki/Kyiv_City_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Azov_Brigade",
+              "role": "Recruited many of its first volunteers in Kyiv in spring 2014."
+            },
+            {
+              "group": "Aidar_Battalion",
+              "role": "Formed in May 2014 largely from Kyiv Euromaidan self-defence volunteers."
+            },
+            {
+              "group": "Kyiv-1_Police_Battalion",
+              "role": "Kyiv police volunteer battalion sent to the Donbas in 2014."
+            },
+            {
+              "group": "Kyiv-2_Company_(Ukraine)",
+              "role": "Second Kyiv police volunteer unit raised in 2014."
+            },
+            {
+              "group": "Sich_Battalion",
+              "role": "Kyiv police battalion of nationalist volunteers formed in 2014."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "Under martial law since 24 February 2022, no elections were held. Mayor Klitschko and the council elected in 2020 stayed in office, alongside a presidentially appointed Kyiv City Military Administration. The OPZZh faction lost its party after the 2022 ban, and some of its members formed the Platform for Life and Peace group.",
+            "governing": [
+              "Ukrainian_Democratic_Alliance_for_Reform",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Territorial_Defence_Forces_(Ukraine)",
+              "role": "Kyiv's territorial defence brigade expanded with thousands of volunteers in February 2022 and manned the city's checkpoints and defences."
+            },
+            {
+              "group": "Kyiv_Regiment_(Ukraine)",
+              "role": "Police special-purpose unit that took part in the defence of the capital region."
+            },
+            {
+              "group": "International_Legion_(Ukraine)",
+              "role": "Created in Kyiv in February 2022 for foreign volunteers."
+            },
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Tried to encircle Kyiv in February-March 2022, withdrew at the end of March, and then struck the city repeatedly with missiles and drones."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Martial law continued; the 2020 council and Mayor Klitschko stayed in office, with public conflicts between the mayor and the presidential office over air-raid shelters and the city administration.",
+            "governing": [
+              "Ukrainian_Democratic_Alliance_for_Reform",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Carried out large missile and drone attacks on Kyiv, including the July 2024 strike on the Okhmatdyt children's hospital."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "No elections under martial law; the 2020 council, Mayor Klitschko and the city military administration continued to share authority. Developments after mid-2025 are not verified in detail here.",
+            "governing": [
+              "Ukrainian_Democratic_Alliance_for_Reform",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued mass drone and missile strikes on Kyiv, among the heaviest of the war."
+            }
+          ]
+        }
+      }
+    },
+    "UA-32": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Kiev Governorate was the heartland of the Central Rada; its peasant congresses backed the Ukrainian SRs and the Selianska Spilka. The Ukrainian Socialist Bloc won 77% here in the 1917 Constituent Assembly vote, one of the highest Ukrainian results anywhere. In 1918 German troops and Hetmanate officials restored landlord estates, which set off widespread peasant uprisings.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Ukrainian_Social_Democratic_Labour_Party"
+            ],
+            "elections": [
+              {
+                "body": "All-Russian Constituent Assembly, Kiev electoral district (vote share %; Ukrainian list = 'Ukrainian Socialist Bloc')",
+                "year": 1917,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Socialist-Revolutionary_Party",
+                    "share": 77.26
+                  },
+                  {
+                    "party": "Bolsheviks",
+                    "share": 4.04
+                  },
+                  {
+                    "party": "Constitutional_Democratic_Party",
+                    "share": 1.44
+                  },
+                  {
+                    "party": "Socialist_Revolutionary_Party",
+                    "share": 1.28
+                  },
+                  {
+                    "party": "Mensheviks",
+                    "share": 0.77
+                  }
+                ],
+                "source": {
+                  "title": "Results of the 1917 Russian Constituent Assembly election",
+                  "url": "https://en.wikipedia.org/wiki/Results_of_the_1917_Russian_Constituent_Assembly_election"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Free_Cossacks",
+              "role": "Free Cossack units from the Kyiv countryside defended the Central Rada against the Bolsheviks in 1917-1918."
+            },
+            {
+              "group": "Imperial_German_Army",
+              "role": "Occupied the governorate in 1918, requisitioning grain and backing the Hetmanate against peasant rebels."
+            },
+            {
+              "group": "Danylo_Terpylo",
+              "role": "Otaman Zelenyi's peasant army from Trypillia rose against the Hetman in late 1918."
+            },
+            {
+              "group": "Red_Guards_(Russia)",
+              "role": "Advanced through the governorate on Kyiv in January-February 1918."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "The Kyiv countryside was a centre of peasant insurgency against Bolshevik grain requisitioning in 1919-1921, while control passed between Reds, the UNR, Whites and, in 1920, the Polish army before Soviet rule was secured.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Danylo_Terpylo",
+              "role": "Zelenyi's insurgents rose against the Bolsheviks in spring 1919 and destroyed a Red detachment at Trypillia (the 'Trypillia incident')."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Fought insurgents and the UNR across the governorate and secured it by mid-1920."
+            },
+            {
+              "group": "Armed_Forces_of_South_Russia",
+              "role": "Held the governorate's northern and eastern parts in autumn 1919."
+            },
+            {
+              "group": "Polish_Land_Forces",
+              "role": "Advanced through the area with the UNR in spring 1920 and fought the Red Army west and south of Kyiv."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule; the region was divided into okruhas under the Kyiv authorities. Residual armed peasant resistance was suppressed by about 1923, and collectivization began in 1929-1930.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "Liquidated the last insurgent bands and led the 'dekulakization' deportations from 1930."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; Kyiv Oblast (created in 1932) was among the worst-hit regions in the Holodomor of 1932-1933, followed by the Great Terror of 1937-1938.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Carried out arrests and executions during the Great Terror; many victims were buried at Bykivnia."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule; the Kiev Fortified Region on the Irpin line was strengthened as part of the Stalin Line.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Kiev_Military_District",
+              "role": "Garrisoned the oblast and the Kiev Fortified Region."
+            }
+          ]
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Occupied from summer-September 1941 to late 1943 as part of Generalbezirk Kiew of the Reichskommissariat Ukraine, with mass shootings of Jews and deportation of forced labourers to Germany.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Wehrmacht",
+              "role": "Fought the Kiev Fortified Region and encircled Soviet armies east of the Dnieper in September 1941."
+            },
+            {
+              "group": "Soviet_partisans",
+              "role": "Operated in the northern forests of the oblast and helped the Red Army's Dnieper crossings in 1943."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Crossed the Dnieper at the Bukrin and Liutizh bridgeheads in autumn 1943 and liberated the oblast."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule; the oblast recovered from wartime destruction and the 1946-1947 famine.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Kept large garrisons and airfields in the oblast, including at Bila Tserkva and Vasylkiv."
+            }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule; the 1986 Chernobyl disaster in the north of the oblast forced the evacuation of Pripyat and the exclusion zone, and its handling fuelled the late-1980s opposition movement.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Kiev_Military_District",
+              "role": "Its troops took part in the Chernobyl clean-up and the oblast's garrisons passed to Ukraine in 1991."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were appointed by the president; the oblast council of the 1990s was dominated by former Soviet officials, many without party labels. Council seat compositions for 1990-2002 could not be sourced.",
+            "governing": [
+              "People's_Democratic_Party_(Ukraine)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "72nd_Mechanized_Brigade",
+              "role": "Its predecessor division at Bila Tserkva was taken over by Ukraine's new army in 1992."
+            }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "Kyiv Oblast voted heavily for Viktor Yushchenko in 2004 and for the Yulia Tymoshenko Bloc in 2006-2007. Governors came from Our Ukraine and BYuT in 2005-2010 and from the Party of Regions in 2010-2014. Exact oblast council seat figures for 2006 and 2010 could not be sourced.",
+            "governing": [
+              "Yulia_Tymoshenko_Bloc",
+              "Our_Ukraine_(political_party)",
+              "Party_of_Regions"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "After 2014 governors were appointed by President Poroshenko and, from 2019, by President Zelensky. Solidarity led the 2015 council and European Solidarity the 2020 council, ahead of Servant of the People.",
+            "governing": [
+              "European_Solidarity",
+              "Batkivshchyna",
+              "Servant_of_the_People"
+            ],
+            "elections": [
+              {
+                "body": "Kyiv Oblast Council",
+                "year": 2015,
+                "total": 84,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 22
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Self_Reliance_(political_party)",
+                    "seats": 10
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 9
+                  },
+                  {
+                    "party": "UKROP",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Our_Land_(Ukraine)",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Opposition_Bloc",
+                    "seats": 6
+                  }
+                ],
+                "source": {
+                  "title": "Kyiv Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Kyiv_Oblast_Council"
+                }
+              },
+              {
+                "body": "Kyiv Oblast Council",
+                "year": 2020,
+                "total": 84,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 25
+                  },
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 22
+                  },
+                  {
+                    "party": "For_the_Future_(political_party)",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 9
+                  }
+                ],
+                "source": {
+                  "title": "Kyiv Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Kyiv_Oblast_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "72nd_Mechanized_Brigade",
+              "role": "Bila Tserkva-based brigade that fought in the Donbas from 2014, including on the Russian border and at Avdiivka."
+            },
+            {
+              "group": "Georgian_Legion",
+              "role": "Volunteer unit later based in Kyiv Oblast."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "Russian troops occupied the north and west of the oblast (Hostomel, Bucha, Irpin, Borodianka, Ivankiv) from late February to early April 2022 without setting up a lasting administration; mass killings of civilians, notably the Bucha massacre, were found after their withdrawal. The 2020 council stayed in office under martial law, while a regional military administration ran the oblast.",
+            "governing": [
+              "Servant_of_the_People",
+              "European_Solidarity"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Airborne_Forces",
+              "role": "Landed at Hostomel airport on 24 February 2022 and occupied Bucha, Irpin and Borodianka."
+            },
+            {
+              "group": "Russian_Ground_Forces",
+              "role": "Advanced from Belarus through the Chernobyl zone toward Kyiv and withdrew at the end of March 2022."
+            },
+            {
+              "group": "72nd_Mechanized_Brigade",
+              "role": "Defended the western and northern approaches to Kyiv, including at Moshchun."
+            },
+            {
+              "group": "Territorial_Defence_Forces_(Ukraine)",
+              "role": "Kyiv Oblast territorial defence units fought in Irpin, Bucha and Makariv."
+            },
+            {
+              "group": "Georgian_Legion",
+              "role": "Fought in the battles for Irpin and Bucha."
+            },
+            {
+              "group": "International_Legion_(Ukraine)",
+              "role": "Its first volunteers were deployed around Irpin in March 2022."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Under martial law the oblast was run by the 2020 council and an appointed military administration, with reconstruction of the towns damaged in 2022.",
+            "governing": [
+              "Servant_of_the_People",
+              "European_Solidarity"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Struck energy and military targets in the oblast with missiles and drones."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "No elections under martial law; the 2020 council and the regional military administration continued. Later 2025-2026 changes are not verified here.",
+            "governing": [
+              "Servant_of_the_People",
+              "European_Solidarity"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued drone and missile strikes on the oblast, often aimed at the Kyiv region's power infrastructure."
+            }
+          ]
+        }
+      }
+    },
+    "UA-18": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "The area belonged to Volhynia Governorate, where the Ukrainian SRs and peasant councils won over 70% in the 1917 Constituent Assembly vote. In February 1918 the Central Rada fled the Bolshevik capture of Kyiv to Zhytomyr and Sarny, and here it relied on the German advance under the Brest-Litovsk treaty.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Ukrainian_Social_Democratic_Labour_Party"
+            ],
+            "elections": [
+              {
+                "body": "All-Russian Constituent Assembly, Volhynia electoral district (vote share %; Ukrainian list = 'Ukrainian SRs and Council of Village Deputies')",
+                "year": 1917,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Socialist-Revolutionary_Party",
+                    "share": 70.76
+                  },
+                  {
+                    "party": "Bolsheviks",
+                    "share": 4.43
+                  },
+                  {
+                    "party": "Socialist_Revolutionary_Party",
+                    "share": 3.43
+                  },
+                  {
+                    "party": "Constitutional_Democratic_Party",
+                    "share": 2.78
+                  },
+                  {
+                    "party": "Mensheviks",
+                    "share": 2.11
+                  }
+                ],
+                "source": {
+                  "title": "Results of the 1917 Russian Constituent Assembly election",
+                  "url": "https://en.wikipedia.org/wiki/Results_of_the_1917_Russian_Constituent_Assembly_election"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Ukrainian_People's_Army",
+              "role": "UNR troops fell back on Zhytomyr in February 1918 and re-took Kyiv alongside the Germans."
+            },
+            {
+              "group": "Imperial_German_Army",
+              "role": "Advanced through Zhytomyr toward Kyiv in late February 1918 and occupied the region until December."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "Zhytomyr changed hands repeatedly between the UNR, the Red Army and Polish forces; it was a temporary base of the Directorate in 1919 and was taken by the Polish army in April 1920 before Soviet rule was restored that summer.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Ukrainian_People's_Army",
+              "role": "Fought for Zhytomyr in 1919-1920, and in November 1921 Tiutiunnyk's Second Winter Campaign ended in defeat near Bazar, where captured soldiers were shot."
+            },
+            {
+              "group": "Polish_Land_Forces",
+              "role": "Took Zhytomyr in April 1920 during the Kiev offensive; Budyonny's cavalry broke through here in June 1920."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Secured the region in 1920 and destroyed the 1921 UNR raid."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule; the Polish autonomous district of Marchlewszczyzna (1925-1935) and a German national district were created in the region as part of Soviet nationality policy.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "Suppressed armed resistance near the Polish border and enforced collectivization."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; the Polish district was abolished in 1935, and ethnic Poles and Germans were deported to Kazakhstan in 1935-1936 and targeted in the NKVD's 'Polish Operation' of 1937-1938.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Carried out the deportations of border Poles and Germans and the executions of the Great Terror."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule; after the 1939 annexation of eastern Poland the oblast was no longer on the border, and the Korosten and Novohrad-Volynskyi fortified regions of the Stalin Line were stripped.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Units from the oblast took part in the September 1939 invasion of eastern Poland."
+            }
+          ]
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Occupied from July 1941 to late 1943-early 1944 as Generalbezirk Shitomir in the Reichskommissariat Ukraine; Himmler's field headquarters 'Hegewald' was near Zhytomyr, and the Jewish population was almost entirely murdered.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Wehrmacht",
+              "role": "Took Zhytomyr in July 1941; the city was fought over again in the Zhitomir-Berdichev offensive of December 1943-January 1944."
+            },
+            {
+              "group": "Einsatzkommando",
+              "role": "Murdered the Jews of Zhytomyr, Berdychiv and other towns in mass shootings in 1941-1942."
+            },
+            {
+              "group": "Ukrainian_People's_Revolutionary_Army",
+              "role": "Taras Bulba-Borovets's Polissian Sich was formed around Olevsk in northern Zhytomyr region in 1941."
+            },
+            {
+              "group": "Ukrainian_Insurgent_Army",
+              "role": "UPA units operated in the northern and western forests of the oblast from 1943."
+            },
+            {
+              "group": "Soviet_partisans",
+              "role": "Large partisan formations held parts of the Polesian north, and Kovpak's units crossed the oblast in their raids."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule; the remaining UPA groups in the northern forests were defeated by about 1950.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Ministry_of_Internal_Affairs_(Soviet_Union)",
+              "role": "Interior troops hunted the last UPA groups in the Polesian north."
+            },
+            {
+              "group": "Ukrainian_Insurgent_Army",
+              "role": "Small UPA groups remained active in the north of the oblast in the late 1940s."
+            }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule; northern districts such as Narodychi were heavily contaminated by the 1986 Chernobyl disaster.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Zhytomyr hosted airborne and other units of the Kiev Military District."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were appointed by the president; the region was a base of Volodymyr Lytvyn, Verkhovna Rada chairman from 2002, and his agrarian-centrist People's Party. Council seat compositions for 1990-2002 could not be sourced.",
+            "governing": [
+              "People's_Party_(Ukraine)",
+              "People's_Democratic_Party_(Ukraine)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "95th_Air_Assault_Brigade",
+              "role": "Formed in Zhytomyr from the Soviet airborne units based there."
+            }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The oblast voted for Yushchenko in 2004 and for BYuT in 2006-2007; governors were from the Orange camp in 2005-2010 and the Party of Regions in 2010-2014. Lytvyn's People's Party kept local support. Exact council seat figures for 2006 and 2010 could not be sourced.",
+            "governing": [
+              "Yulia_Tymoshenko_Bloc",
+              "Party_of_Regions",
+              "People's_Party_(Ukraine)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Solidarity led the fragmented 2015 council; in 2020 Servant of the People came first but with only 11 of 64 seats in a nine-party council. Zhytomyr mayor Serhii Sukhomlyn co-founded the Proposition party.",
+            "governing": [
+              "European_Solidarity",
+              "Servant_of_the_People"
+            ],
+            "elections": [
+              {
+                "body": "Zhytomyr Oblast Council",
+                "year": 2015,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 17
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 13
+                  },
+                  {
+                    "party": "Opposition_Bloc",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Self_Reliance_(political_party)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 5
+                  },
+                  {
+                    "party": "UKROP",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 5
+                  }
+                ],
+                "source": {
+                  "title": "Zhytomyr Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Zhytomyr_Oblast_Council"
+                }
+              },
+              {
+                "body": "Zhytomyr Oblast Council",
+                "year": 2020,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 11
+                  },
+                  {
+                    "party": "Our_Land_(Ukraine)",
+                    "seats": 9
+                  },
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 7
+                  },
+                  {
+                    "party": "For_the_Future_(political_party)",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Proposition_(political_party)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Strength_and_Honor",
+                    "seats": 4
+                  }
+                ],
+                "source": {
+                  "title": "Zhytomyr Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Zhytomyr_Oblast_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "95th_Air_Assault_Brigade",
+              "role": "Zhytomyr-based brigade that made a long raid behind separatist lines in the Donbas in August 2014."
+            },
+            {
+              "group": "30th_Mechanized_Brigade_(Ukraine)",
+              "role": "Brigade from Novohrad-Volynskyi that fought at Debaltseve in 2015."
+            },
+            {
+              "group": "Ukrainian_territorial_defence_battalions",
+              "role": "The oblast raised the 'Zhytomyr' territorial defence battalion in 2014."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "The oblast was not occupied but was hit by missile and air strikes from Belarus in 2022, including on Zhytomyr, Korosten and Ovruch. The 2020 council remained under martial law, alongside a regional military administration.",
+            "governing": [
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Struck Zhytomyr's airfield, military bases and residential areas from February 2022."
+            },
+            {
+              "group": "95th_Air_Assault_Brigade",
+              "role": "Zhytomyr's brigade fought around Kharkiv, Izium and in the Donbas."
+            },
+            {
+              "group": "Territorial_Defence_Forces_(Ukraine)",
+              "role": "The oblast's territorial defence guarded the Belarusian border in the Polesian north."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Martial law continued, with the 2020 council and an appointed military administration.",
+            "governing": [
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "95th_Air_Assault_Brigade",
+              "role": "Took part in the Kursk incursion into Russia from August 2024."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "No elections under martial law; the 2020 council and the military administration continued. Later 2025-2026 changes are not verified here.",
+            "governing": [
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued drone and missile strikes on the oblast."
+            }
+          ]
+        }
+      }
+    },
+    "UA-05": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "The area was the eastern half of Podolia Governorate, where the joint list of Ukrainian SRs, Selianska Spilka and the Ukrainian Social Democrats won 78.6% in the 1917 Constituent Assembly vote. Austro-Hungarian troops occupied Podolia in 1918. After losing Kyiv in February 1919, the Directorate moved to Vinnytsia, which was for a time its main seat.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Ukrainian_Social_Democratic_Labour_Party"
+            ],
+            "elections": [
+              {
+                "body": "All-Russian Constituent Assembly, Podolia electoral district (vote share %; Ukrainian list = 'Ukrainian SRs, Selianska Spilka and USDLP')",
+                "year": 1917,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Socialist-Revolutionary_Party",
+                    "share": 78.57
+                  },
+                  {
+                    "party": "Bolsheviks",
+                    "share": 3.32
+                  },
+                  {
+                    "party": "Socialist_Revolutionary_Party",
+                    "share": 1.22
+                  },
+                  {
+                    "party": "Constitutional_Democratic_Party",
+                    "share": 0.96
+                  },
+                  {
+                    "party": "Mensheviks",
+                    "share": 0.49
+                  }
+                ],
+                "source": {
+                  "title": "Results of the 1917 Russian Constituent Assembly election",
+                  "url": "https://en.wikipedia.org/wiki/Results_of_the_1917_Russian_Constituent_Assembly_election"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Austro-Hungarian_Army",
+              "role": "Occupied Podolia from March to late 1918."
+            },
+            {
+              "group": "Ukrainian_People's_Army",
+              "role": "The Directorate's army was based on Vinnytsia and Podolia after February 1919."
+            },
+            {
+              "group": "Free_Cossacks",
+              "role": "Free Cossack units were formed in Podolian villages in 1917."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "In summer-autumn 1919 Podolia was the last base of the UNR and the Galician army; the region changed hands among the UNR, Reds, Whites and Poles until Soviet control was secured in late 1920.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Ukrainian_Galician_Army",
+              "role": "Crossed the Zbruch in July 1919 and joined the UNR on the Vinnytsia front before the joint advance on Kyiv."
+            },
+            {
+              "group": "Ukrainian_People's_Army",
+              "role": "Held Vinnytsia at times in 1919-1920 and returned with the Polish offensive in spring 1920."
+            },
+            {
+              "group": "Polish_Land_Forces",
+              "role": "Advanced through Vinnytsia with UNR allies in April 1920."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Took the region in 1919 and finally in late 1920."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule; Podolia saw continued peasant insurgency into the early 1920s, and collectivization from 1929 provoked revolts in 1930.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "Suppressed the 1930 peasant revolts against collectivization in the border districts."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; Vinnytsia Oblast was created in 1932, was hit hard by the Holodomor, and then by the Great Terror.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Shot about 9,000-11,000 people in Vinnytsia in 1937-1938; the mass graves were exhumed during the German occupation in 1943 (the Vinnytsia massacre)."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule; the annexation of Bessarabia in 1940 moved the border with Romania away from the oblast.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Fortified regions of the Stalin Line ran along the oblast's western edge."
+            }
+          ]
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "The north and centre (with Vinnytsia city) belonged to Generalbezirk Shitomir of the Reichskommissariat Ukraine, while the south beyond the Southern Buh was part of the Romanian-ruled Transnistria Governorate. Hitler's 'Werwolf' field headquarters stood near Vinnytsia in 1942-1943.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Wehrmacht",
+              "role": "Occupied the oblast in July 1941 and guarded the Werwolf headquarters."
+            },
+            {
+              "group": "Einsatzkommando",
+              "role": "Murdered the Jews of Vinnytsia and other towns in mass shootings in 1941-1942."
+            },
+            {
+              "group": "Transnistria_Governorate",
+              "role": "Romanian forces ran the southern districts, where many Jews were held in ghettos and camps."
+            },
+            {
+              "group": "Soviet_partisans",
+              "role": "Operated in the forests of the oblast from 1942-1943."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Liberated the oblast in the spring 1944 offensives."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule; the region recovered from wartime destruction and the 1946-1947 famine.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Kept garrisons and airfields in the oblast."
+            }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "43rd_Rocket_Army",
+              "role": "Soviet ICBM army headquartered in Vinnytsia from 1960."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were appointed by the president; the rural left (Socialists and Communists) was strong in the oblast in the 1990s. Council seat compositions for 1990-2002 could not be sourced.",
+            "governing": [
+              "Socialist_Party_of_Ukraine",
+              "Communist_Party_of_Ukraine"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "43rd_Rocket_Army",
+              "role": "Passed under Ukrainian control; its nuclear missiles were removed and silos destroyed after the 1994 Budapest Memorandum."
+            }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The oblast voted for Yushchenko in 2004 and for BYuT in 2006-2007; Volodymyr Groysman became mayor of Vinnytsia in 2006. Governors were from the Orange camp in 2005-2010 and the Party of Regions in 2010-2014. Exact council seat figures for 2006 and 2010 could not be sourced.",
+            "governing": [
+              "Yulia_Tymoshenko_Bloc",
+              "Our_Ukraine_(political_party)",
+              "Party_of_Regions"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Vinnytsia was the home base of President Poroshenko and of Prime Minister Groysman (2016-2019); Solidarity led the 2015 council, and in 2020 Groysman's Ukrainian Strategy won 40 of 84 seats.",
+            "governing": [
+              "European_Solidarity",
+              "Ukrainian_Strategy_of_Groysman"
+            ],
+            "elections": [
+              {
+                "body": "Vinnytsia Oblast Council",
+                "year": 2015,
+                "total": 84,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 27
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 17
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Self_Reliance_(political_party)",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Agrarian_Party_of_Ukraine",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Opposition_Bloc",
+                    "seats": 6
+                  },
+                  {
+                    "party": "UKROP",
+                    "seats": 6
+                  }
+                ],
+                "source": {
+                  "title": "Vinnytsia Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Vinnytsia_Oblast_Council"
+                }
+              },
+              {
+                "body": "Vinnytsia Oblast Council",
+                "year": 2020,
+                "total": 84,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Strategy_of_Groysman",
+                    "seats": 40
+                  },
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 11
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 11
+                  },
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 8
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 7
+                  },
+                  {
+                    "party": "For_the_Future_(political_party)",
+                    "seats": 7
+                  }
+                ],
+                "source": {
+                  "title": "Vinnytsia Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Vinnytsia_Oblast_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "59th_Assault_Brigade",
+              "role": "Formed in 2015 and based at Haisyn in the oblast."
+            },
+            {
+              "group": "Ukrainian_territorial_defence_battalions",
+              "role": "The oblast raised the 'Vinnytsia' territorial defence battalion in 2014."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "The oblast was not occupied; under martial law the 2020 council, dominated by Ukrainian Strategy, stayed in office alongside a regional military administration.",
+            "governing": [
+              "Ukrainian_Strategy_of_Groysman"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Struck Vinnytsia's airport in March 2022 and the city centre with cruise missiles on 14 July 2022, killing over 20 people."
+            },
+            {
+              "group": "59th_Assault_Brigade",
+              "role": "The Haisyn-based brigade fought in the south, including Kherson Oblast."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Martial law continued, with the 2020 council and an appointed military administration.",
+            "governing": [
+              "Ukrainian_Strategy_of_Groysman"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Hit military, airfield and energy targets in the oblast with missiles and drones."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "No elections under martial law; the 2020 council and the military administration continued. Later 2025-2026 changes are not verified here.",
+            "governing": [
+              "Ukrainian_Strategy_of_Groysman"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued drone and missile strikes on the oblast."
+            }
+          ]
+        }
+      }
+    },
+    "UA-71": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Most of today's oblast (Cherkasy, Chyhyryn, Zvenyhorodka and Uman counties) lay in Kiev Governorate, where the Ukrainian Socialist Bloc won 77% in the 1917 Constituent Assembly vote; the Zolotonosha area belonged to Poltava Governorate. The Free Cossack movement began here, and in June 1918 the Zvenyhorodka-Tarashcha peasant uprising broke out against the Germans and the Hetmanate.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Ukrainian_Social_Democratic_Labour_Party"
+            ],
+            "elections": [
+              {
+                "body": "All-Russian Constituent Assembly, Kiev electoral district (vote share %; covers most of the oblast; Ukrainian list = 'Ukrainian Socialist Bloc')",
+                "year": 1917,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Socialist-Revolutionary_Party",
+                    "share": 77.26
+                  },
+                  {
+                    "party": "Bolsheviks",
+                    "share": 4.04
+                  },
+                  {
+                    "party": "Constitutional_Democratic_Party",
+                    "share": 1.44
+                  },
+                  {
+                    "party": "Socialist_Revolutionary_Party",
+                    "share": 1.28
+                  },
+                  {
+                    "party": "Mensheviks",
+                    "share": 0.77
+                  }
+                ],
+                "source": {
+                  "title": "Results of the 1917 Russian Constituent Assembly election",
+                  "url": "https://en.wikipedia.org/wiki/Results_of_the_1917_Russian_Constituent_Assembly_election"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Free_Cossacks",
+              "role": "Founded in Zvenyhorodka county in spring 1917; the All-Ukrainian Free Cossack congress met in Chyhyryn in October 1917."
+            },
+            {
+              "group": "Imperial_German_Army",
+              "role": "Occupied the area in 1918 and fought the Zvenyhorodka peasant uprising that summer."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "Insurgent otamans held much of the countryside against all outside powers; Soviet rule was only secured in 1921-1922, after the Kholodnyi Yar insurgents were suppressed.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Kholodny_Yar_Republic",
+              "role": "Insurgents based in the Kholodnyi Yar forest near Chyhyryn fought Whites and Reds from 1919 to 1922."
+            },
+            {
+              "group": "Nykyfor_Hryhoriv",
+              "role": "Hryhoriv's rebel army operated in the Cherkasy-Uman area during its anti-Bolshevik uprising of May 1919."
+            },
+            {
+              "group": "Revolutionary_Insurgent_Army_of_Ukraine",
+              "role": "Makhno's army broke out of the White encirclement near Uman in September 1919."
+            },
+            {
+              "group": "Armed_Forces_of_South_Russia",
+              "role": "Held Cherkasy and the Dnieper towns in autumn 1919."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Established Soviet control and fought the Kholodnyi Yar insurgents into 1922."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule; the area was divided among Cherkasy, Uman and other okruhas until oblasts were created.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "Lured the Kholodnyi Yar otamans into a trap in 1922 and later enforced collectivization."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; the area was then part of Kyiv and Vinnytsia oblasts and was badly hit by the Holodomor and the Great Terror.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Carried out arrests and executions in the Great Terror."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule; the area was part of Kyiv Oblast.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Occupied from summer 1941 to early 1944, within Generalbezirk Kiew of the Reichskommissariat Ukraine.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Wehrmacht",
+              "role": "Encircled and destroyed two Soviet armies in the Uman pocket in August 1941."
+            },
+            {
+              "group": "Einsatzkommando",
+              "role": "Murdered the Jews of Uman, Cherkasy and other towns in 1941-1942."
+            },
+            {
+              "group": "Soviet_partisans",
+              "role": "Operated in the forests of the Dnieper right bank, including Kholodnyi Yar."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Destroyed the German Korsun-Cherkassy pocket in January-February 1944."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule; Cherkasy Oblast was created in 1954 from parts of Kyiv, Vinnytsia, Kirovohrad and Poltava oblasts.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule; the Kremenchuk Reservoir flooded large areas of the oblast in the 1950s-1960s.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Maintained garrisons in the oblast under the Kiev Military District."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were appointed by the president; the Socialists and Communists were strong in the rural oblast in the 1990s. Council seat compositions for 1990-2002 could not be sourced.",
+            "governing": [
+              "Socialist_Party_of_Ukraine",
+              "Communist_Party_of_Ukraine"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The oblast voted for Yushchenko in 2004 and for BYuT in 2006-2007; governors were from the Orange camp in 2005-2010 and the Party of Regions in 2010-2014. In January 2014 Euromaidan protesters stormed the Cherkasy regional administration. Exact council seat figures for 2006 and 2010 could not be sourced.",
+            "governing": [
+              "Yulia_Tymoshenko_Bloc",
+              "Our_Ukraine_(political_party)",
+              "Party_of_Regions"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Solidarity narrowly led the 2015 council ahead of the regional party Cherkashchany, which came first in 2020. The 2015 total is taken as the sum of listed seats (84).",
+            "governing": [
+              "European_Solidarity",
+              "All-Ukrainian_Union_\"Cherkashchany\"",
+              "Servant_of_the_People"
+            ],
+            "elections": [
+              {
+                "body": "Cherkasy Oblast Council",
+                "year": 2015,
+                "total": 84,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 18
+                  },
+                  {
+                    "party": "All-Ukrainian_Union_\"Cherkashchany\"",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 13
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 10
+                  },
+                  {
+                    "party": "Revival_(Ukraine)",
+                    "seats": 8
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 7
+                  },
+                  {
+                    "party": "UKROP",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Party_of_Veterans_of_Afghanistan",
+                    "seats": 5
+                  }
+                ],
+                "source": {
+                  "title": "Cherkasy Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Cherkasy_Oblast_Council"
+                }
+              },
+              {
+                "body": "Cherkasy Oblast Council",
+                "year": 2020,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "All-Ukrainian_Union_\"Cherkashchany\"",
+                    "seats": 18
+                  },
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 12
+                  },
+                  {
+                    "party": "For_the_Future_(political_party)",
+                    "seats": 12
+                  },
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 6
+                  }
+                ],
+                "source": {
+                  "title": "Cherkasy Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Cherkasy_Oblast_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Ukrainian_territorial_defence_battalions",
+              "role": "The oblast raised the 'Cherkasy' territorial defence battalion in 2014 for service in the Donbas."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "The oblast was not occupied; the 2020 council stayed in office under martial law, alongside a regional military administration.",
+            "governing": [
+              "All-Ukrainian_Union_\"Cherkashchany\"",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Territorial_Defence_Forces_(Ukraine)",
+              "role": "The oblast's territorial defence brigade was mobilised in 2022 and later sent to the front."
+            },
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Struck infrastructure in Cherkasy, Uman and Smila with missiles and drones."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Martial law continued, with the 2020 council and an appointed military administration.",
+            "governing": [
+              "All-Ukrainian_Union_\"Cherkashchany\"",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "A cruise missile hit a residential building in Uman on 28 April 2023, killing 23 people."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "No elections under martial law; the 2020 council and the military administration continued. Later 2025-2026 changes are not verified here.",
+            "governing": [
+              "All-Ukrainian_Union_\"Cherkashchany\"",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued drone and missile strikes on the oblast."
+            }
+          ]
+        }
+      }
+    },
+    "UA-74": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Chernigov Governorate gave the Ukrainian SRs about half the vote in the 1917 Constituent Assembly election, but the Bolsheviks won nearly 28%, one of their best results in Ukraine. The Bolshevik advance on Kyiv came through the governorate and was briefly held at Kruty in January 1918. The governorate then came under German occupation and the Hetmanate.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Ukrainian_Social_Democratic_Labour_Party"
+            ],
+            "elections": [
+              {
+                "body": "All-Russian Constituent Assembly, Chernigov electoral district (vote share %)",
+                "year": 1917,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Socialist-Revolutionary_Party",
+                    "share": 49.73
+                  },
+                  {
+                    "party": "Bolsheviks",
+                    "share": 27.85
+                  },
+                  {
+                    "party": "Socialist_Revolutionary_Party",
+                    "share": 10.84
+                  },
+                  {
+                    "party": "Constitutional_Democratic_Party",
+                    "share": 2.96
+                  },
+                  {
+                    "party": "Mensheviks",
+                    "share": 1.11
+                  }
+                ],
+                "source": {
+                  "title": "Results of the 1917 Russian Constituent Assembly election",
+                  "url": "https://en.wikipedia.org/wiki/Results_of_the_1917_Russian_Constituent_Assembly_election"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Red_Guards_(Russia)",
+              "role": "Muravyov's Red Guards advanced through the governorate and defeated a small UNR force at Kruty on 29-30 January 1918."
+            },
+            {
+              "group": "Ukrainian_People's_Army",
+              "role": "UNR units, including student volunteers, fought the delaying action at Kruty station."
+            },
+            {
+              "group": "Imperial_German_Army",
+              "role": "Occupied the governorate from spring to December 1918."
+            },
+            {
+              "group": "Mykola_Shchors",
+              "role": "Shchors, from Snovsk, formed Red partisan units on the neutral zone with Soviet Russia in 1918."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "The region fell to the Red Army in early 1919, was taken by Denikin's Whites in autumn 1919, and was retaken by the Reds in late 1919.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Mykola_Shchors",
+              "role": "Shchors's Bohunskyi Regiment and division took Chernihiv and pushed the UNR westward in early 1919."
+            },
+            {
+              "group": "Armed_Forces_of_South_Russia",
+              "role": "Held Chernihiv and the south of the governorate in autumn 1919."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Secured the region by the end of 1919."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "Enforced grain requisitions and collectivization."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; Chernihiv Oblast was created in 1932 and suffered the Holodomor, though somewhat less than the steppe and forest-steppe south, and then the Great Terror.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Carried out arrests and executions in the Great Terror."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Occupied from August-September 1941 to September 1943 and kept under German military administration, not civil Reichskommissariat rule. In March 1943 German and Hungarian forces destroyed Koriukivka and killed about 6,700 inhabitants in reprisal for partisan activity.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Wehrmacht",
+              "role": "Took Chernihiv in September 1941 and carried out the anti-partisan operation that destroyed Koriukivka in 1943."
+            },
+            {
+              "group": "Aleksey_Fyodorov",
+              "role": "Fedorov's Chernihiv partisan formation, one of the largest in Ukraine, operated in the oblast's northern forests."
+            },
+            {
+              "group": "Soviet_partisans",
+              "role": "Controlled 'partisan zones' in the Polesian north of the oblast by 1942-1943."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Liberated the oblast in September 1943 on the way to the Dnieper."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Based armoured units and airfields in the oblast, including at Honcharivske."
+            }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule; the town of Slavutych was built in the oblast in 1986-1988 for Chernobyl plant workers.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Kiev_Military_District",
+              "role": "Its armoured division at Honcharivske passed to Ukraine in 1992."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were appointed by the president; the Communists were strong in the 1990s in this mostly rural oblast. Council seat compositions for 1990-2002 could not be sourced.",
+            "governing": [
+              "Communist_Party_of_Ukraine",
+              "Socialist_Party_of_Ukraine"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "1st_Heavy_Mechanized_Brigade",
+              "role": "The tank formation at Honcharivske became part of Ukraine's army."
+            }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The oblast was the home region of President Yushchenko and voted Orange in 2004 and for BYuT in 2006-2007; governors were from the Orange camp in 2005-2010 and the Party of Regions in 2010-2014. Exact council seat figures for 2006 and 2010 could not be sourced.",
+            "governing": [
+              "Yulia_Tymoshenko_Bloc",
+              "Our_Ukraine_(political_party)",
+              "Party_of_Regions"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Solidarity and Oleh Liashko's Radical Party, whose leader is from the oblast, tied for first in 2015. In 2020 Native Home, associated with Chernihiv mayor Vladyslav Atroshenko, won 19 of 64 seats.",
+            "governing": [
+              "European_Solidarity",
+              "Radical_Party_of_Oleh_Liashko",
+              "Native_Home"
+            ],
+            "elections": [
+              {
+                "body": "Chernihiv Oblast Council",
+                "year": 2015,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 11
+                  },
+                  {
+                    "party": "Our_Land_(Ukraine)",
+                    "seats": 11
+                  },
+                  {
+                    "party": "Agrarian_Party_of_Ukraine",
+                    "seats": 9
+                  },
+                  {
+                    "party": "UKROP",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Opposition_Bloc",
+                    "seats": 4
+                  }
+                ],
+                "source": {
+                  "title": "Chernihiv Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Chernihiv_Oblast_Council"
+                }
+              },
+              {
+                "body": "Chernihiv Oblast Council",
+                "year": 2020,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "Native_Home",
+                    "seats": 19
+                  },
+                  {
+                    "party": "Our_Land_(Ukraine)",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 8
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 5
+                  },
+                  {
+                    "party": "For_the_Future_(political_party)",
+                    "seats": 5
+                  },
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 5
+                  }
+                ],
+                "source": {
+                  "title": "Chernihiv Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Chernihiv_Oblast_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "1st_Heavy_Mechanized_Brigade",
+              "role": "The Honcharivske tank brigade fought in the Donbas from 2014, including at Luhansk airport."
+            },
+            {
+              "group": "Ukrainian_territorial_defence_battalions",
+              "role": "The oblast raised the 'Chernihiv' territorial defence battalion in 2014."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "Russian forces occupied much of the oblast from 24 February 2022 and besieged Chernihiv until they withdrew in early April 2022; in Yahidne villagers were held for weeks in a school basement. They set up no lasting administration. The 2020 council stayed in office under martial law, alongside a regional military administration.",
+            "governing": [
+              "Native_Home",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Ground_Forces",
+              "role": "Besieged Chernihiv and occupied the area between the Belarusian and Russian borders from late February to early April 2022."
+            },
+            {
+              "group": "1st_Heavy_Mechanized_Brigade",
+              "role": "Defended Chernihiv throughout the siege."
+            },
+            {
+              "group": "Territorial_Defence_Forces_(Ukraine)",
+              "role": "Local territorial defence units fought in Chernihiv and its surroundings."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Martial law continued, with the 2020 council and an appointed military administration; border communities faced regular Russian shelling.",
+            "governing": [
+              "Native_Home",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Hit central Chernihiv with a missile in August 2023 and in April 2024, and shelled the border districts."
+            },
+            {
+              "group": "Russian_Volunteer_Corps",
+              "role": "Claimed raids across the border into Russia's Bryansk Oblast in 2023."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "No elections under martial law; the 2020 council and the military administration continued. Later 2025-2026 changes are not verified here.",
+            "governing": [
+              "Native_Home",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued drone, missile and artillery strikes on Chernihiv and the border districts."
+            }
+          ]
+        }
+      }
+    },
+    "UA-59": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "The area was split among Kharkov (Sumy, Lebedyn, Okhtyrka), Chernigov (Konotop, Hlukhiv) and Kursk (Putyvl) governorates. In Kharkov Governorate, the joint list of the all-Russian and Ukrainian SRs won 72.8% in the 1917 Constituent Assembly vote. Like the rest of Sloboda Ukraine, the area passed between the UNR, the Bolsheviks and the German-backed Hetmanate in 1917-1918.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Socialist_Revolutionary_Party"
+            ],
+            "elections": [
+              {
+                "body": "All-Russian Constituent Assembly, Kharkov electoral district (vote share %; covers the southern part of the oblast; the SR figure is a joint 'SRs and Ukrainian SRs' list)",
+                "year": 1917,
+                "seats": [
+                  {
+                    "party": "Socialist_Revolutionary_Party",
+                    "share": 72.82
+                  },
+                  {
+                    "party": "Bolsheviks",
+                    "share": 10.5
+                  },
+                  {
+                    "party": "Constitutional_Democratic_Party",
+                    "share": 5.34
+                  }
+                ],
+                "source": {
+                  "title": "Results of the 1917 Russian Constituent Assembly election",
+                  "url": "https://en.wikipedia.org/wiki/Results_of_the_1917_Russian_Constituent_Assembly_election"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Red_Guards_(Russia)",
+              "role": "Soviet troops entered the area from Russia in January 1918."
+            },
+            {
+              "group": "Imperial_German_Army",
+              "role": "Occupied the area in spring 1918, setting the demarcation line with Soviet Russia just to the north."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "The Red Army took the area in early 1919; the Whites held it in summer-autumn 1919, and the Reds retook it in late 1919.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Volunteer_Army",
+              "role": "Denikin's forces advanced through Sumy toward Kursk and Oryol in 1919."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Drove the Whites south through the area in late 1919."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule; the area was divided among Sumy, Konotop and other okruhas.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "Enforced grain requisitions and collectivization."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; the area, then in Kharkiv and Chernihiv oblasts, was struck by the Holodomor; Sumy Oblast was created in 1939.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Carried out arrests and executions in the Great Terror."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule; Sumy Oblast was formed in January 1939, taking Putyvl and other districts from Kharkiv and Chernihiv oblasts.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Occupied from autumn 1941 to September 1943 under German military administration in the front-line rear area.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Sydir_Kovpak",
+              "role": "Kovpak's partisan unit was formed near Putyvl in 1941 and from 1942 led raids from the Sumy and Bryansk forests."
+            },
+            {
+              "group": "Soviet_partisans",
+              "role": "Large partisan formations, including Saburov's, were based in the forests of northern Sumy Oblast."
+            },
+            {
+              "group": "Wehrmacht",
+              "role": "Occupied the oblast and fought anti-partisan operations in its northern forests."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Liberated the oblast in August-September 1943 after the Battle of Kursk."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule; the oblast grew as an industrial centre (Sumy machine-building, Shostka film and chemicals).",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Maintained artillery and other garrisons in Sumy and Konotop."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were appointed by the president; the Communists were strong in the oblast in the 1990s. Council seat compositions for 1990-2002 could not be sourced.",
+            "governing": [
+              "Communist_Party_of_Ukraine",
+              "People's_Democratic_Party_(Ukraine)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The oblast, home region of Viktor Yushchenko (born in Khoruzhivka), voted Orange in 2004 and for BYuT in 2006-2007; governors were from the Orange camp in 2005-2010 and the Party of Regions in 2010-2014. Exact council seat figures for 2006 and 2010 could not be sourced.",
+            "governing": [
+              "Our_Ukraine_(political_party)",
+              "Yulia_Tymoshenko_Bloc",
+              "Party_of_Regions"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Solidarity and Batkivshchyna tied for first in 2015. In 2020 Servant of the People came first, with Opposition Platform — For Life a close second.",
+            "governing": [
+              "European_Solidarity",
+              "Batkivshchyna",
+              "Servant_of_the_People"
+            ],
+            "elections": [
+              {
+                "body": "Sumy Oblast Council",
+                "year": 2015,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Revival_(Ukraine)",
+                    "seats": 8
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 7
+                  },
+                  {
+                    "party": "x:People's_Will_(Sumy)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "UKROP",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Opposition_Bloc",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 5
+                  }
+                ],
+                "source": {
+                  "title": "Sumy Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Sumy_Oblast_Council"
+                }
+              },
+              {
+                "body": "Sumy Oblast Council",
+                "year": 2020,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 10
+                  },
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Our_Land_(Ukraine)",
+                    "seats": 8
+                  },
+                  {
+                    "party": "For_the_Future_(political_party)",
+                    "seats": 7
+                  }
+                ],
+                "source": {
+                  "title": "Sumy Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Sumy_Oblast_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "27th_Artillery_Brigade_(Ukraine)",
+              "role": "Sumy-based rocket artillery brigade that served in the Donbas."
+            },
+            {
+              "group": "58th_Motorized_Brigade",
+              "role": "Formed in 2015 at Konotop."
+            },
+            {
+              "group": "Ukrainian_territorial_defence_battalions",
+              "role": "The oblast raised the 'Sumy' territorial defence battalion in 2014."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "Russian forces crossed the border on 24 February 2022, surrounded Sumy and Konotop and occupied towns such as Trostianets until they withdrew in early April 2022. The 2020 council stayed in office under martial law, with a regional military administration; OPZZh, the council's second-largest faction, was banned in 2022.",
+            "governing": [
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Ground_Forces",
+              "role": "Bypassed and blockaded Sumy and Konotop and occupied Trostianets in February-March 2022."
+            },
+            {
+              "group": "27th_Artillery_Brigade_(Ukraine)",
+              "role": "Took part in the defence of Sumy city."
+            },
+            {
+              "group": "Territorial_Defence_Forces_(Ukraine)",
+              "role": "Local territorial defence and volunteers fought in Sumy, Okhtyrka and Trostianets."
+            },
+            {
+              "group": "58th_Motorized_Brigade",
+              "role": "Defended the Konotop area and the approaches to Sumy."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Martial law continued; border communities were partly evacuated because of constant shelling. In August 2024 Ukrainian forces launched the Kursk incursion into Russia from the oblast.",
+            "governing": [
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "Launched the August 2024 Kursk incursion from the Sumy border area."
+            },
+            {
+              "group": "95th_Air_Assault_Brigade",
+              "role": "One of the brigades that crossed from Sumy Oblast into Kursk Oblast in 2024."
+            },
+            {
+              "group": "Freedom_of_Russia_Legion",
+              "role": "Russian volunteers fighting for Ukraine that announced cross-border actions into Kursk Oblast in 2024."
+            },
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Shelled the border districts daily and struck Sumy city with missiles and glide bombs."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "After pushing Ukrainian forces out of Kursk Oblast, Russia launched a cross-border offensive into northern Sumy Oblast in spring 2025 and occupied several border villages; a Russian ballistic missile strike on central Sumy on 13 April 2025 killed over 30 civilians. The 2020 council and the military administration continued under martial law; the front situation after mid-2025 is not verified here.",
+            "governing": [
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Ground_Forces",
+              "role": "Advanced into the Yunakivka and Khotin border area north of Sumy in 2025."
+            },
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Carried out the April 2025 missile strike on central Sumy and constant strikes on the oblast."
+            },
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "Held the line north of Sumy against the 2025 offensive."
+            }
+          ]
+        }
+      }
+    },
+    "UA-53": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Poltava Governorate was a stronghold of the Ukrainian movement. In the 1917 Constituent Assembly vote, the Ukrainian SR-Selianska Spilka list won 63.3% and a joint all-Russian/Ukrainian SR list another 17.3%. The governorate was occupied by German troops in 1918, and its landowner circles supported the Hetmanate of Pavlo Skoropadsky, himself a Poltava landowner.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Ukrainian_Social_Democratic_Labour_Party"
+            ],
+            "elections": [
+              {
+                "body": "All-Russian Constituent Assembly, Poltava electoral district (vote share %; Ukrainian list = 'Ukrainian SRs and Selianska Spilka'; SR figure = joint 'SRs and Ukrainian SRs' list; Menshevik figure = joint Mensheviks-Bund-Polish list)",
+                "year": 1917,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Socialist-Revolutionary_Party",
+                    "share": 63.28
+                  },
+                  {
+                    "party": "Socialist_Revolutionary_Party",
+                    "share": 17.27
+                  },
+                  {
+                    "party": "Bolsheviks",
+                    "share": 5.61
+                  },
+                  {
+                    "party": "Constitutional_Democratic_Party",
+                    "share": 1.58
+                  },
+                  {
+                    "party": "Mensheviks",
+                    "share": 0.52
+                  }
+                ],
+                "source": {
+                  "title": "Results of the 1917 Russian Constituent Assembly election",
+                  "url": "https://en.wikipedia.org/wiki/Results_of_the_1917_Russian_Constituent_Assembly_election"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Red_Guards_(Russia)",
+              "role": "Bolshevik forces took Poltava in January 1918 on their advance from Kharkiv toward Kyiv."
+            },
+            {
+              "group": "Imperial_German_Army",
+              "role": "Occupied the governorate from spring to December 1918."
+            },
+            {
+              "group": "Ukrainian_People's_Army",
+              "role": "UNR units returned with the Germans in March 1918 and again under the Directorate in late 1918."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "The Red Army took Poltava in early 1919 and the Whites held it from summer 1919; Soviet rule returned in December 1919. The Ukrainian left SRs, the Borotbists, had a strong following in the governorate before merging with the Communists in 1920.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)",
+              "Borotbists"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Volunteer_Army",
+              "role": "Held Poltava from July to December 1919."
+            },
+            {
+              "group": "Revolutionary_Insurgent_Army_of_Ukraine",
+              "role": "Makhnovist detachments raided through the governorate in 1920-1921."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Retook the governorate in December 1919 and fought peasant insurgents into 1921."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule; the region was a centre of Ukrainization in the 1920s.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "Suppressed peasant resistance to collectivization from 1929."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; the Poltava region, then part of Kharkiv Oblast until Poltava Oblast was formed in 1937, was among the worst-hit areas of the Holodomor. The Great Terror followed in 1937-1938.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Carried out arrests and executions in the Great Terror."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Occupied from September 1941 to September 1943; the western part belonged to the Reichskommissariat Ukraine, while the east stayed under German military administration. After liberation, Poltava and Myrhorod airfields hosted US bombers in Operation Frantic in 1944.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Wehrmacht",
+              "role": "Took Poltava in September 1941 during the Kiev encirclement."
+            },
+            {
+              "group": "Einsatzkommando",
+              "role": "Murdered the Jews of Poltava, Kremenchuk and Lubny in 1941-1942."
+            },
+            {
+              "group": "Soviet_partisans",
+              "role": "Small partisan groups operated in the oblast's few forests."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Liberated Poltava on 23 September 1943 on its advance to the Dnieper."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Kept long-range aviation at Poltava and fighter bases in the oblast."
+            }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule; Kremenchuk and Komsomolsk (Horishni Plavni) grew around the oil refinery, the KrAZ truck plant and iron-ore mining.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "The Poltava strategic bomber base belonged to Soviet long-range aviation."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were appointed by the president; the Socialist Party of Oleksandr Moroz and the Communists were strong in the 1990s. Council seat compositions for 1990-2002 could not be sourced.",
+            "governing": [
+              "Socialist_Party_of_Ukraine",
+              "Communist_Party_of_Ukraine"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "831st_Tactical_Aviation_Brigade",
+              "role": "The Myrhorod fighter base passed to the Ukrainian Air Force."
+            }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The oblast voted for Yushchenko in 2004 and for BYuT in 2006-2007; governors were from the Orange camp in 2005-2010 and the Party of Regions in 2010-2014. Exact council seat figures for 2006 and 2010 could not be sourced.",
+            "governing": [
+              "Yulia_Tymoshenko_Bloc",
+              "Our_Ukraine_(political_party)",
+              "Party_of_Regions"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Solidarity led a ten-party council in 2015; in 2020 the regional party Trust came first in a seven-party council.",
+            "governing": [
+              "European_Solidarity",
+              "Batkivshchyna",
+              "x:Trust_(Doviria)"
+            ],
+            "elections": [
+              {
+                "body": "Poltava Oblast Council",
+                "year": 2015,
+                "total": 84,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 15
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 13
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 8
+                  },
+                  {
+                    "party": "UKROP",
+                    "seats": 8
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Agrarian_Party_of_Ukraine",
+                    "seats": 7
+                  },
+                  {
+                    "party": "x:Native_City_(Ridne_Misto)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Opposition_Bloc",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Revival_(Ukraine)",
+                    "seats": 6
+                  }
+                ],
+                "source": {
+                  "title": "Poltava Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Poltava_Oblast_Council"
+                }
+              },
+              {
+                "body": "Poltava Oblast Council",
+                "year": 2020,
+                "total": 84,
+                "seats": [
+                  {
+                    "party": "x:Trust_(Doviria)",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 14
+                  },
+                  {
+                    "party": "For_the_Future_(political_party)",
+                    "seats": 13
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 11
+                  },
+                  {
+                    "party": "x:Native_City_(Ridne_Misto)",
+                    "seats": 9
+                  },
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 9
+                  }
+                ],
+                "source": {
+                  "title": "Poltava Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Poltava_Oblast_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Poltava_Rifle_Battalion_(Ukraine)",
+              "role": "Police volunteer battalion raised in the oblast in 2014 for the Donbas."
+            },
+            {
+              "group": "Ukrainian_territorial_defence_battalions",
+              "role": "The oblast raised the 'Poltava' territorial defence battalion in 2014."
+            },
+            {
+              "group": "831st_Tactical_Aviation_Brigade",
+              "role": "Myrhorod-based fighter brigade that flew missions over the Donbas in 2014."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "The oblast was not occupied; the 2020 council stayed in office under martial law, alongside a regional military administration.",
+            "governing": [
+              "x:Trust_(Doviria)",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Destroyed the Kremenchuk shopping mall with a missile on 27 June 2022, killing over 20 people, and repeatedly hit the Kremenchuk refinery."
+            },
+            {
+              "group": "831st_Tactical_Aviation_Brigade",
+              "role": "Its Su-27s flew air-defence missions from the first days of the invasion."
+            },
+            {
+              "group": "Territorial_Defence_Forces_(Ukraine)",
+              "role": "The oblast's territorial defence brigade was mobilised and deployed in 2022."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Martial law continued, with the 2020 council and an appointed military administration.",
+            "governing": [
+              "x:Trust_(Doviria)",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "A ballistic missile strike on a military institute in Poltava on 3 September 2024 killed over 50 people."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "No elections under martial law; the 2020 council and the military administration continued. Later 2025-2026 changes are not verified here.",
+            "governing": [
+              "x:Trust_(Doviria)",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued strikes on the oblast's energy, gas and refinery infrastructure."
+            }
+          ]
+        }
+      }
+    },
+    "UA-35": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Most of the oblast (Yelisavetgrad and Oleksandriia counties) belonged to Kherson Governorate, where a combined list of Ukrainian SRs, all-Russian SRs and Jewish socialists won 43% in the 1917 Constituent Assembly vote and the Bolsheviks 13%. The region came under the Central Rada, then Austro-German occupation and the Hetmanate in 1918.",
+            "governing": [
+              "Ukrainian_Socialist-Revolutionary_Party",
+              "Ukrainian_Social_Democratic_Labour_Party"
+            ],
+            "elections": [
+              {
+                "body": "All-Russian Constituent Assembly, Kherson electoral district (vote share %; Ukrainian figure = joint list of Ukrainian SRs, SRs and the United Jewish Socialist Labour Party)",
+                "year": 1917,
+                "seats": [
+                  {
+                    "party": "Ukrainian_Socialist-Revolutionary_Party",
+                    "share": 42.98
+                  },
+                  {
+                    "party": "Bolsheviks",
+                    "share": 13.18
+                  },
+                  {
+                    "party": "Constitutional_Democratic_Party",
+                    "share": 8.66
+                  },
+                  {
+                    "party": "Mensheviks",
+                    "share": 2.31
+                  }
+                ],
+                "source": {
+                  "title": "Results of the 1917 Russian Constituent Assembly election",
+                  "url": "https://en.wikipedia.org/wiki/Results_of_the_1917_Russian_Constituent_Assembly_election"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Austro-Hungarian_Army",
+              "role": "Austro-Hungarian and German troops occupied the Yelisavetgrad area in 1918."
+            },
+            {
+              "group": "Nykyfor_Hryhoriv",
+              "role": "Hryhoriv, a former tsarist officer from the Oleksandriia area, raised peasant troops against the Hetman in late 1918."
+            },
+            {
+              "group": "Free_Cossacks",
+              "role": "Free Cossack units were formed in the villages of the region in 1917-1918."
+            }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "The region was the centre of the Hryhoriv Uprising of May 1919, which began with a massacre of Jews in Yelisavetgrad. Whites held it in late 1919, and Soviet control was secured in 1920, although insurgent bands persisted into 1921-1922.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Nykyfor_Hryhoriv",
+              "role": "Rose against the Bolsheviks in May 1919 from Yelisavetgrad and Oleksandriia and was killed by Makhno's men at Sentovo in July 1919."
+            },
+            {
+              "group": "Revolutionary_Insurgent_Army_of_Ukraine",
+              "role": "Makhno's army defeated Denikin's forces at Peregonovka, in today's Holovanivsk district, in September 1919."
+            },
+            {
+              "group": "Armed_Forces_of_South_Russia",
+              "role": "Held Yelisavetgrad in the second half of 1919."
+            },
+            {
+              "group": "Kholodny_Yar_Republic",
+              "role": "Insurgents of the Kholodnyi Yar movement were active in the northern districts of the region."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Took Yelisavetgrad in early 1920 and fought insurgents into 1921."
+            }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule; Yelisavetgrad was renamed Zinovievsk in 1924.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "State_Political_Directorate",
+              "role": "Suppressed the last insurgent bands and resistance to collectivization."
+            }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; the area, then mostly in Odesa and Mykolaiv oblasts, was struck by the Holodomor. The city was renamed Kirovo in 1934 and Kirovohrad in 1939.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Carried out arrests and executions in the Great Terror."
+            }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "One-party Soviet rule; Kirovohrad Oblast was created in January 1939.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Occupied from August 1941 to early 1944; most of the oblast belonged to Generalbezirk Nikolajew of the Reichskommissariat Ukraine.",
+            "governing": [
+              "Nazi_Party"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Wehrmacht",
+              "role": "Took Kirovohrad in August 1941 and lost it in the Kirovograd offensive of January 1944."
+            },
+            {
+              "group": "Einsatzkommando",
+              "role": "Murdered the Jews of Kirovohrad and the region's towns in 1941-1942."
+            },
+            {
+              "group": "Red_Army",
+              "role": "Liberated Kirovohrad on 8 January 1944."
+            }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule; the Kremenchuk Reservoir dam and the town of Svitlovodsk were built in the 1950s.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule; the oblast's economy rested on agriculture, farm machinery and uranium and brown-coal mining around Oleksandriia.",
+            "governing": [
+              "Communist_Party_of_Ukraine_(Soviet_Union)"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Maintained garrisons and a flight school in Kirovohrad."
+            }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were appointed by the president; the Communists and Socialists did well here in the 1990s. Council seat compositions for 1990-2002 could not be sourced.",
+            "governing": [
+              "Communist_Party_of_Ukraine",
+              "Socialist_Party_of_Ukraine"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Special_Operations_Center_\"East\"_(Ukraine)",
+              "role": "Ukraine's 3rd Special Purpose Regiment was established in Kirovohrad in the 1990s."
+            }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The oblast backed Yushchenko in 2004 and BYuT in 2006-2007; governors were from the Orange camp in 2005-2010 and the Party of Regions in 2010-2014. Exact council seat figures for 2006 and 2010 could not be sourced.",
+            "governing": [
+              "Yulia_Tymoshenko_Bloc",
+              "Party_of_Regions"
+            ],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Kirovohrad city was renamed Kropyvnytskyi in 2016 under decommunization. Solidarity and Batkivshchyna tied for first in 2015, with the Opposition Bloc close behind; in 2020 Batkivshchyna narrowly led Servant of the People.",
+            "governing": [
+              "European_Solidarity",
+              "Batkivshchyna",
+              "Servant_of_the_People"
+            ],
+            "elections": [
+              {
+                "body": "Kirovohrad Oblast Council",
+                "year": 2015,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Opposition_Bloc",
+                    "seats": 13
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 6
+                  },
+                  {
+                    "party": "UKROP",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Self_Reliance_(political_party)",
+                    "seats": 4
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 4
+                  },
+                  {
+                    "party": "Our_Land_(Ukraine)",
+                    "seats": 4
+                  }
+                ],
+                "source": {
+                  "title": "Kirovohrad Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Kirovohrad_Oblast_Council"
+                }
+              },
+              {
+                "body": "Kirovohrad Oblast Council",
+                "year": 2020,
+                "total": 64,
+                "seats": [
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 15
+                  },
+                  {
+                    "party": "Servant_of_the_People",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Opposition_Platform_–_For_Life",
+                    "seats": 11
+                  },
+                  {
+                    "party": "European_Solidarity",
+                    "seats": 9
+                  },
+                  {
+                    "party": "For_the_Future_(political_party)",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Proposition_(political_party)",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Radical_Party_of_Oleh_Liashko",
+                    "seats": 5
+                  }
+                ],
+                "source": {
+                  "title": "Kirovohrad Oblast Council",
+                  "url": "https://en.wikipedia.org/wiki/Kirovohrad_Oblast_Council"
+                }
+              }
+            ]
+          },
+          "armedGroups": [
+            {
+              "group": "Special_Operations_Center_\"East\"_(Ukraine)",
+              "role": "The Kropyvnytskyi-based 3rd Special Purpose Regiment fought at Donetsk airport in 2014-2015."
+            },
+            {
+              "group": "Ukrainian_territorial_defence_battalions",
+              "role": "The oblast raised the 'Kirovohrad' territorial defence battalion in 2014."
+            }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "The oblast was not occupied; the 2020 council stayed in office under martial law, alongside a regional military administration. OPZZh, the third-largest faction, was banned in 2022.",
+            "governing": [
+              "Batkivshchyna",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Struck Kropyvnytskyi's airfield and infrastructure in the oblast with missiles and drones."
+            },
+            {
+              "group": "Special_Operations_Center_\"East\"_(Ukraine)",
+              "role": "Its operators fought in the Kyiv, Kharkiv and Donbas campaigns."
+            }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Martial law continued, with the 2020 council and an appointed military administration.",
+            "governing": [
+              "Batkivshchyna",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued missile and drone strikes on the oblast."
+            }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "No elections under martial law; the 2020 council and the military administration continued. Later 2025-2026 changes are not verified here.",
+            "governing": [
+              "Batkivshchyna",
+              "Servant_of_the_People"
+            ],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Russian_Armed_Forces",
+              "role": "Continued drone and missile strikes on the oblast."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

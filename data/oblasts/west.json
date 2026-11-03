@@ -1,0 +1,4669 @@
+{
+"group": "west",
+"generated": "2026-11-03",
+"oblasts": {
+"UA-46": {
+  "name": "Lviv Oblast",
+  "wikipedia": "Lviv_Oblast",
+  "historicalRegions": [
+    "Galicia",
+    "Red Ruthenia",
+    "Eastern Galicia"
+  ],
+  "overview": "The land of today's Lviv Oblast lies on the upper Dniester, Western Bug and San watersheds at the edge of the Carpathians and was settled by Neolithic farmers, Bronze Age cultures and, from the 6th-7th centuries, Slavic tribes such as the White Croats and Dulebes. It became part of Kyivan Rus' and then the core of the Principality of Galicia and the Kingdom of Galicia-Volhynia, whose ruler Daniel founded Lviv in the mid-13th century. After 1349 it was ruled by Poland for over four centuries, by Austria as the Kingdom of Galicia and Lodomeria from 1772, by interwar Poland after the failed West Ukrainian People's Republic, and by the USSR from 1939/1944. Lviv was a leading center of the Ukrainian national movement and of anti-Soviet resistance, and since 2022 it has been a rear hub for refugees, diplomacy and Western aid, repeatedly hit by Russian missile and drone strikes.",
+  "eras": {
+    "trypillia": {
+      "control": "Neolithic farmers (Linear Pottery, Malice and Funnelbeaker cultures)",
+      "summary": "The area lay just west of the main Cucuteni-Trypillia range. Early farmers of the Linear Pottery culture and later the Malice and Funnelbeaker cultures settled the fertile loess uplands of the upper Bug and Dniester, while Trypillian influence reached the eastern Podillia edge.",
+      "military": null,
+      "places": [
+        "Upper Western Bug valley",
+        "Upper Dniester valley"
+      ],
+      "links": [
+        {
+          "title": "Linear Pottery culture",
+          "url": "https://en.wikipedia.org/wiki/Linear_Pottery_culture"
+        },
+        {
+          "title": "Funnelbeaker culture",
+          "url": "https://en.wikipedia.org/wiki/Funnelbeaker_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Corded Ware and Komarów (Trzciniec circle) cultures",
+      "summary": "Rather than steppe herders, the area was home to Corded Ware groups and then the Komarów culture of the Trzciniec circle, whose barrows on the Dniester and Bug uplands contain bronze and amber goods traded along Central European routes.",
+      "military": "Barrow burials with battle-axes reflect a warrior elite; no fortified centers are well known.",
+      "places": [
+        "Komarów-type barrows on the upper Dniester"
+      ],
+      "links": [
+        {
+          "title": "Corded Ware culture",
+          "url": "https://en.wikipedia.org/wiki/Corded_Ware_culture"
+        },
+        {
+          "title": "Trzciniec culture",
+          "url": "https://en.wikipedia.org/wiki/Trzciniec_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Vysotske culture farmers; Lusatian and Thraco-Hallstatt contacts",
+      "summary": "Far from the Cimmerian steppe, the area belonged to the Vysotske culture, named after a village near Brody, a sedentary farming people related to the forest-steppe cultures, with Lusatian influences from the west and Thracian Hallstatt groups to the south.",
+      "military": null,
+      "places": [
+        "Vysotske (Brody area)"
+      ],
+      "links": [
+        {
+          "title": "Lusatian culture",
+          "url": "https://en.wikipedia.org/wiki/Lusatian_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Vysotske and late Lusatian farming groups on the margins of Scythian influence",
+      "summary": "The Vysotske culture persisted into the 6th century BCE, receiving Scythian-type weapons and horse gear by trade. Scythian raids and influence reached the Podillia uplands, but the area stayed outside the Scythian heartland.",
+      "military": "Scythian-type arrowheads and akinakes swords found in the region point to contacts or raids.",
+      "places": [],
+      "links": [
+        {
+          "title": "Scythians",
+          "url": "https://en.wikipedia.org/wiki/Scythians"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Lipița (Dacian) and Przeworsk culture peoples; Celtic contacts",
+      "summary": "The upper Dniester was settled by the Dacian-related Lipița culture and the Germanic-Slavic Przeworsk culture; Celtic finds and Roman coins attest to trade. The Sarmatians stayed further east on the steppe.",
+      "military": null,
+      "places": [
+        "Upper Dniester valley"
+      ],
+      "links": [
+        {
+          "title": "Lipitsa culture",
+          "url": "https://en.wikipedia.org/wiki/Lipitsa_culture"
+        },
+        {
+          "title": "Przeworsk culture",
+          "url": "https://en.wikipedia.org/wiki/Przeworsk_culture"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Chernyakhov and Przeworsk culture communities; Carpi",
+      "summary": "The western edge of the multi-ethnic Chernyakhov culture reached the upper Dniester, mixing with Przeworsk groups and the Carpi. Villages traded grain and used Roman coins and glass.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Chernyakhov culture",
+          "url": "https://en.wikipedia.org/wiki/Chernyakhov_culture"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Remnant Chernyakhov population under loose Hunnic hegemony",
+      "summary": "The Hunnic arrival broke up the Chernyakhov culture; the area's population thinned and early Slavic groups began to emerge in the forest belt to the north and west.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Huns",
+          "url": "https://en.wikipedia.org/wiki/Huns"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Sclaveni (Prague-Korchak culture) Slavs",
+      "summary": "Rather than the Antes of the Dnieper, the area was settled by Sclaveni of the Prague-Korchak culture, living in small villages of sunken huts with handmade pottery. Avar raids from the Danube plain affected the region.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Prague-Korchak culture",
+          "url": "https://en.wikipedia.org/wiki/Prague-Korchak_culture"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "White Croats and Dulebes (Buzhans)",
+      "summary": "The White Croats held the Carpathian foothills and upper Dniester, the Dulebes and Buzhans the Bug basin. The large hillfort of Plisnesk near Pidhirtsi was one of the tribal centers, and Great Moravian influence may have reached the area.",
+      "military": "Plisnesk, with its multiple ramparts, was among the largest fortified tribal centers of the eastern Slavs.",
+      "places": [
+        "Plisnesk hillfort"
+      ],
+      "links": [
+        {
+          "title": "White Croats",
+          "url": "https://en.wikipedia.org/wiki/White_Croats"
+        },
+        {
+          "title": "Plisnesk archaeological complex",
+          "url": "https://en.wikipedia.org/wiki/Plisnesk_archaeological_complex"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "White Croats and Dulebes, contested between Rus', Great Moravia and Poland",
+      "summary": "The frontier tribes stayed largely independent of Kyiv while the Cherven towns on the Bug lay between the rising Rus' and Polish states. Croats appear in the Primary Chronicle among Oleh's allies in his 907 campaign on Constantinople.",
+      "military": "Croat contingents reportedly joined Oleh's 907 campaign against Byzantium.",
+      "places": [
+        "Plisnesk"
+      ],
+      "links": [
+        {
+          "title": "Cherven Cities",
+          "url": "https://en.wikipedia.org/wiki/Cherven_Cities"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Kyivan Rus'",
+      "summary": "Volodymyr the Great took the Cherven Cities from Poland in 981 and campaigned against the Croats in 992, bringing the area firmly into Rus'. Christianization began after 988.",
+      "military": "Volodymyr's campaigns of 981 and 992 subdued the region.",
+      "places": [
+        "Cherven Cities"
+      ],
+      "links": [
+        {
+          "title": "Vladimir the Great",
+          "url": "https://en.wikipedia.org/wiki/Vladimir_the_Great"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Kyivan Rus' (briefly Poland, 1018-1031)",
+      "summary": "Bolesław I of Poland seized the Cherven Cities in 1018 during the Kyivan succession war; Yaroslav the Wise and Mstislav recovered them in 1030-1031. Towns such as Zvenyhorod and Peremyshl grew on the western trade route.",
+      "military": "Yaroslav's 1030-1031 campaigns reconquered the borderland from Poland.",
+      "places": [
+        "Zvenyhorod",
+        "Peremyshl"
+      ],
+      "links": [
+        {
+          "title": "Yaroslav the Wise",
+          "url": "https://en.wikipedia.org/wiki/Yaroslav_the_Wise"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Rostislavich princes; Principality of Galicia from 1141",
+      "summary": "The Rostislavich dynasty held Peremyshl, Zvenyhorod and Terebovlia; in 1141 Volodymyrko united them into the Principality of Galicia with its capital at Halych. Salt from Drohobych and Stara Sil was a key source of wealth.",
+      "military": "Zvenyhorod withstood a siege by Vsevolod II of Kyiv in 1146; princes fought Hungarian and Polish incursions.",
+      "places": [
+        "Zvenyhorod",
+        "Drohobych salt works"
+      ],
+      "links": [
+        {
+          "title": "Principality of Galicia",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Galicia"
+        },
+        {
+          "title": "Volodymyrko Volodarovych",
+          "url": "https://en.wikipedia.org/wiki/Volodymyrko_Volodarovych"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Galicia-Volhynia under Roman Mstyslavych and Daniel; Hungarian interventions",
+      "summary": "Roman Mstyslavych united Galicia and Volhynia in 1199; after his death in 1205 the area was fought over by boyars, Hungarians and Poles until Daniel of Galicia regained control in the 1230s.",
+      "military": "Hungarian armies repeatedly occupied Galician towns between 1205 and 1230s.",
+      "places": [
+        "Zvenyhorod",
+        "Peremyshl"
+      ],
+      "links": [
+        {
+          "title": "Kingdom of Galicia-Volhynia",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia%E2%80%93Volhynia"
+        },
+        {
+          "title": "Daniel of Galicia",
+          "url": "https://en.wikipedia.org/wiki/Daniel_of_Galicia"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Kingdom of Ruthenia (Galicia-Volhynia), tributary to the Golden Horde",
+      "summary": "Daniel founded Lviv around 1256, naming it for his son Lev, who made it his capital in 1272. The city attracted Armenians, Germans and Jews. After the death of Yuri II Bolesław in 1340, Casimir III of Poland began seizing the land.",
+      "military": "Lviv's first castle stood on Castle Hill; Mongol commanders ordered Galician fortifications dismantled in 1259-1260.",
+      "places": [
+        "Lviv",
+        "Castle Hill (Lviv)"
+      ],
+      "links": [
+        {
+          "title": "Lviv",
+          "url": "https://en.wikipedia.org/wiki/Lviv"
+        },
+        {
+          "title": "Leo I of Galicia",
+          "url": "https://en.wikipedia.org/wiki/Leo_I_of_Galicia"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Kingdom of Poland (Ruthenian Voivodeship from 1434)",
+      "summary": "Casimir III annexed the area by 1349 and gave Lviv Magdeburg rights in 1356; Catholic, Armenian and Orthodox sees made Lviv a multi-confessional city. In 1434 the land became the Ruthenian Voivodeship with Lviv as its seat.",
+      "military": "Lviv was walled and guarded against Tatar raids; Polish and Lithuanian forces fought over Galicia until the 1380s.",
+      "places": [
+        "Lviv",
+        "Zhydachiv",
+        "Sambir"
+      ],
+      "links": [
+        {
+          "title": "Ruthenian Voivodeship",
+          "url": "https://en.wikipedia.org/wiki/Ruthenian_Voivodeship"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Polish-Lithuanian Commonwealth (Ruthenian Voivodeship)",
+      "summary": "Lviv was a major trade city; its Orthodox Dormition Brotherhood ran a school and press, and Ivan Fedorov printed the first book on Ukrainian lands there in 1574. Magnates built residences such as Zhovkva and Olesko, and the Union of Brest (1596) split the local church.",
+      "military": "Magnate castles at Olesko, Zhovkva and Pidhirtsi guarded against Tatar raids.",
+      "places": [
+        "Lviv",
+        "Zhovkva",
+        "Olesko Castle"
+      ],
+      "links": [
+        {
+          "title": "Ivan Fedorov (printer)",
+          "url": "https://en.wikipedia.org/wiki/Ivan_Fyodorov_(printer)"
+        },
+        {
+          "title": "Union of Brest",
+          "url": "https://en.wikipedia.org/wiki/Union_of_Brest"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Polish-Lithuanian Commonwealth (besieged by Cossack forces)",
+      "summary": "Khmelnytsky's Cossacks and their Tatar allies besieged Lviv in 1648 and lifted the siege for a large ransom; a second siege followed in 1655 with Muscovite troops. The area stayed in Polish hands.",
+      "military": "Sieges of Lviv in 1648 and 1655; the High Castle fell to the Cossacks in 1648.",
+      "places": [
+        "Lviv",
+        "High Castle"
+      ],
+      "links": [
+        {
+          "title": "History of Lviv",
+          "url": "https://en.wikipedia.org/wiki/History_of_Lviv"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "The area was a frontline against Ottoman expansion after 1672. Jan III Sobieski, whose family seat was Zhovkva, defeated a Turkish-Tatar army near Lviv in 1675.",
+      "military": "Battle of Lwów (1675) against Ottoman-Tatar forces.",
+      "places": [
+        "Zhovkva",
+        "Lviv"
+      ],
+      "links": [
+        {
+          "title": "Battle of Lwów (1675)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Lw%C3%B3w_(1675)"
+        },
+        {
+          "title": "John III Sobieski",
+          "url": "https://en.wikipedia.org/wiki/John_III_Sobieski"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "Charles XII of Sweden stormed Lviv in 1704 during the Great Northern War. The Lviv Orthodox eparchy joined the Greek Catholic church in 1700, and the baroque St. George's Cathedral was built in the mid-18th century.",
+      "military": "Swedish capture of Lviv in 1704; opryshky outlaws operated in the Carpathian foothills.",
+      "places": [
+        "St. George's Cathedral, Lviv"
+      ],
+      "links": [
+        {
+          "title": "St. George's Cathedral, Lviv",
+          "url": "https://en.wikipedia.org/wiki/St._George%27s_Cathedral,_Lviv"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Habsburg Monarchy (Kingdom of Galicia and Lodomeria)",
+      "summary": "In the First Partition of Poland (1772) the area passed to Austria, and Lviv (Lemberg) became the capital of the new Kingdom of Galicia and Lodomeria. Joseph II's reforms dissolved many monasteries and founded Lviv University in 1784.",
+      "military": "Austrian garrisons were stationed in Lemberg.",
+      "places": [
+        "Lemberg (Lviv)"
+      ],
+      "links": [
+        {
+          "title": "Kingdom of Galicia and Lodomeria",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia_and_Lodomeria"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Austrian Empire (Galicia)",
+      "summary": "Lviv seminarians of the Ruthenian Triad led by Markiian Shashkevych launched a vernacular literary revival with Rusalka Dnistrovaia (1837). In the 1848 revolution the Supreme Ruthenian Council met in Lviv and serfdom was abolished.",
+      "military": "Austrian troops bombarded Lviv in November 1848 to suppress the revolution.",
+      "places": [
+        "Lviv",
+        "Pidlyssia"
+      ],
+      "links": [
+        {
+          "title": "Supreme Ruthenian Council",
+          "url": "https://en.wikipedia.org/wiki/Supreme_Ruthenian_Council"
+        },
+        {
+          "title": "Markiian Shashkevych",
+          "url": "https://en.wikipedia.org/wiki/Markiian_Shashkevych"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Austria-Hungary (Polish-run autonomous Galicia); Russian occupation 1914-1915",
+      "summary": "Lviv became the 'Piedmont' of the Ukrainian movement: the Prosvita society (1868), the Shevchenko Scientific Society, and Mykhailo Hrushevsky's chair at Lviv University. The Boryslav oil basin boomed, and Russian troops occupied Lviv in 1914-1915.",
+      "military": "The Ukrainian Sich Riflemen were formed in Lviv in 1914; the Battle of Galicia was fought around the city.",
+      "places": [
+        "Lviv",
+        "Boryslav oil fields",
+        "Drohobych"
+      ],
+      "links": [
+        {
+          "title": "Shevchenko Scientific Society",
+          "url": "https://en.wikipedia.org/wiki/Shevchenko_Scientific_Society"
+        },
+        {
+          "title": "Ukrainian Sich Riflemen",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Sich_Riflemen"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "West Ukrainian People's Republic vs. Poland",
+      "summary": "On 1 November 1918 Ukrainian troops took Lviv and proclaimed the West Ukrainian People's Republic, but Polish defenders retook the city within three weeks. The surrounding countryside stayed under the ZUNR during the Polish-Ukrainian War.",
+      "military": "The Ukrainian Galician Army besieged Polish-held Lviv through spring 1919.",
+      "places": [
+        "Lviv"
+      ],
+      "links": [
+        {
+          "title": "West Ukrainian People's Republic",
+          "url": "https://en.wikipedia.org/wiki/West_Ukrainian_People%27s_Republic"
+        },
+        {
+          "title": "Battle of Lemberg (1918)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Lemberg_(1918)"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Poland (Polish-Soviet War)",
+      "summary": "Polish forces drove the Ukrainian Galician Army beyond the Zbruch by July 1919. Lviv was defended against Budyonny's Red cavalry in August 1920, and the Treaty of Riga (1921) left the area in Poland.",
+      "military": "Battle of Lwów (1920) halted Budyonny's First Cavalry Army.",
+      "places": [
+        "Lviv",
+        "Zadwórze"
+      ],
+      "links": [
+        {
+          "title": "Battle of Lwów (1920)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Lw%C3%B3w_(1920)"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Second Polish Republic (Lwów and Stanisławów voivodeships)",
+      "summary": "The area formed the Lwów Voivodeship of Poland. Ukrainians built a dense network of cooperatives, schools and parties (UNDO), ran a secret Ukrainian university in Lviv, and the underground UVO turned to sabotage; the OUN was founded in 1929.",
+      "military": "The Ukrainian Military Organization carried out attacks on Polish officials and property.",
+      "places": [
+        "Lviv"
+      ],
+      "links": [
+        {
+          "title": "Lwów Voivodeship",
+          "url": "https://en.wikipedia.org/wiki/Lw%C3%B3w_Voivodeship"
+        },
+        {
+          "title": "Ukrainian Military Organization",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Military_Organization"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Second Polish Republic",
+      "summary": "Unlike Soviet Ukraine, the area escaped the Holodomor, and Lviv institutions publicized the famine abroad. Polish-Ukrainian tension grew after the 1930 'pacification'; OUN militants including Stepan Bandera were tried in Warsaw and Lviv in 1935-1936.",
+      "military": "OUN carried out assassinations, including that of Interior Minister Bronisław Pieracki in 1934.",
+      "places": [
+        "Lviv"
+      ],
+      "links": [
+        {
+          "title": "Organisation of Ukrainian Nationalists",
+          "url": "https://en.wikipedia.org/wiki/Organisation_of_Ukrainian_Nationalists"
+        },
+        {
+          "title": "Stepan Bandera",
+          "url": "https://en.wikipedia.org/wiki/Stepan_Bandera"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Soviet Union (Lviv and Drohobych oblasts of the Ukrainian SSR)",
+      "summary": "The Red Army took Lviv in September 1939 and the USSR annexed the area, forming Lviv and Drohobych oblasts. Deportations, nationalization and arrests followed, and the NKVD massacred thousands of prisoners in Lviv's prisons in June 1941.",
+      "military": "Polish forces surrendered Lviv to the Red Army on 22 September 1939 after a German-Soviet siege.",
+      "places": [
+        "Lviv",
+        "Brygidki prison"
+      ],
+      "links": [
+        {
+          "title": "Battle of Lwów (1939)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Lw%C3%B3w_(1939)"
+        },
+        {
+          "title": "NKVD prisoner massacres",
+          "url": "https://en.wikipedia.org/wiki/NKVD_prisoner_massacres"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Nazi Germany (District of Galicia of the General Government)",
+      "summary": "The OUN-B proclaimed Ukrainian statehood in Lviv on 30 June 1941 but was suppressed. The Germans murdered most of the region's Jews in the Lviv Ghetto, Janowska camp and Bełżec deportations; the Red Army retook Lviv in July 1944.",
+      "military": "The SS Division Galizien was recruited here in 1943 and destroyed at Brody in 1944; the UPA formed in the forests; Lviv-Sandomierz Offensive in July 1944.",
+      "places": [
+        "Janowska camp",
+        "Lviv Ghetto",
+        "Brody"
+      ],
+      "links": [
+        {
+          "title": "Janowska concentration camp",
+          "url": "https://en.wikipedia.org/wiki/Janowska_concentration_camp"
+        },
+        {
+          "title": "Lviv-Sandomierz offensive",
+          "url": "https://en.wikipedia.org/wiki/Lvov-Sandomierz_Offensive"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR (Lviv and Drohobych oblasts)",
+      "summary": "The Polish population was moved west and the Greek Catholic Church was forcibly merged into the Russian Orthodox Church at the 1946 Lviv Sobor. Collectivization and mass deportations accompanied the crushing of the nationalist underground.",
+      "military": "UPA commander Roman Shukhevych was killed in Bilohorshcha near Lviv in 1950; the UPA insurgency faded by the early 1950s.",
+      "places": [
+        "Bilohorshcha",
+        "Lviv"
+      ],
+      "links": [
+        {
+          "title": "Roman Shukhevych",
+          "url": "https://en.wikipedia.org/wiki/Roman_Shukhevych"
+        },
+        {
+          "title": "Ukrainian Insurgent Army",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Insurgent_Army"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "Drohobych Oblast was merged into Lviv Oblast in 1959. Lviv became a center of dissent (Viacheslav Chornovil, 1965 and 1972 arrests) and in 1989-1990 of mass rallies, the legal return of the Greek Catholic Church and a democratic oblast council.",
+      "military": "Lviv hosted the headquarters of the Soviet Carpathian Military District.",
+      "places": [
+        "Lviv",
+        "Novoyavorivsk"
+      ],
+      "links": [
+        {
+          "title": "Viacheslav Chornovil",
+          "url": "https://en.wikipedia.org/wiki/Viacheslav_Chornovil"
+        },
+        {
+          "title": "Carpathian Military District",
+          "url": "https://en.wikipedia.org/wiki/Carpathian_Military_District"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "The oblast was a stronghold of national-democratic parties. Pope John Paul II visited Lviv in 2001, and the 2002 Sknyliv air show crash killed 77 spectators.",
+      "military": "The Yavoriv training area became Ukraine's main international training ground.",
+      "places": [
+        "Sknyliv",
+        "Yavoriv training ground"
+      ],
+      "links": [
+        {
+          "title": "Sknyliv air show disaster",
+          "url": "https://en.wikipedia.org/wiki/Sknyliv_air_show_disaster"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "Lviv voted heavily for Yushchenko in 2004 and hosted Euro 2012 matches at the new Arena Lviv. In February 2014 protesters seized the regional administration during Euromaidan.",
+      "military": "The International Peacekeeping and Security Centre at Yavoriv hosted NATO exercises.",
+      "places": [
+        "Arena Lviv",
+        "Yavoriv"
+      ],
+      "links": [
+        {
+          "title": "Orange Revolution",
+          "url": "https://en.wikipedia.org/wiki/Orange_Revolution"
+        },
+        {
+          "title": "Arena Lviv",
+          "url": "https://en.wikipedia.org/wiki/Arena_Lviv"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "The oblast sent volunteers and units to the Donbas and received displaced people. Yavoriv hosted the Joint Multinational Training Group-Ukraine from 2015.",
+      "military": "The Lviv-based 80th Air Assault Brigade fought at Luhansk airport, and the Yavoriv-based 24th Mechanized Brigade served in Donbas.",
+      "places": [
+        "Yavoriv",
+        "Lviv"
+      ],
+      "links": [
+        {
+          "title": "80th Air Assault Brigade",
+          "url": "https://en.wikipedia.org/wiki/80th_Air_Assault_Brigade"
+        },
+        {
+          "title": "24th Mechanized Brigade (Ukraine)",
+          "url": "https://en.wikipedia.org/wiki/24th_Mechanized_Brigade_(Ukraine)"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (rear area)",
+      "summary": "Lviv became the main transit point for millions of refugees, foreign embassies relocated there, and Western aid flowed through the Polish border crossings. Russian missiles struck fuel depots, rail infrastructure and an aircraft repair plant.",
+      "military": "A missile strike on the Yavoriv training base on 13 March 2022 killed dozens.",
+      "places": [
+        "Yavoriv",
+        "Lviv railway station",
+        "Krakovets border crossing"
+      ],
+      "links": [
+        {
+          "title": "Yavoriv military base attack",
+          "url": "https://en.wikipedia.org/wiki/Yavoriv_military_base_attack"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine (rear area)",
+      "summary": "Lviv suffered some of its deadliest strikes: a missile hit an apartment block on 6 July 2023, killing 10, and a strike on 4 September 2024 killed 7 people including children. Power plants and gas infrastructure were repeatedly targeted.",
+      "military": "Air defenses and rehabilitation centers such as Unbroken in Lviv supported the war effort.",
+      "places": [
+        "Lviv",
+        "Stryi"
+      ],
+      "links": [
+        {
+          "title": "Lviv strikes (2022–present)",
+          "url": "https://en.wikipedia.org/wiki/Lviv_strikes_(2022%E2%80%93present)"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine (rear area)",
+      "summary": "Massed drone and missile raids continued to hit energy and gas facilities in the oblast. Former parliament speaker Andriy Parubiy was shot dead in Lviv on 30 August 2025. Details of 2026 strikes are less well documented in available sources.",
+      "military": "The oblast remained a training, logistics and rehabilitation hub far from the front line.",
+      "places": [
+        "Lviv"
+      ],
+      "links": [
+        {
+          "title": "Assassination of Andriy Parubiy",
+          "url": "https://en.wikipedia.org/wiki/Assassination_of_Andriy_Parubiy"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Lviv Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Lviv_Oblast"
+    },
+    {
+      "title": "History of Lviv (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/History_of_Lviv"
+    },
+    {
+      "title": "Galicia (Encyclopedia of Ukraine)",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CG%5CA%5CGalicia.htm"
+    }
+  ]
+},
+"UA-07": {
+  "name": "Volyn Oblast",
+  "wikipedia": "Volyn_Oblast",
+  "historicalRegions": [
+    "Volhynia",
+    "Polesia"
+  ],
+  "overview": "Volyn Oblast covers the western part of historical Volhynia, from the forests and lakes of Polesia in the north to the fertile Volhynian upland in the south, along the Western Bug border with Poland and Belarus. Settled by Neolithic farmers and later by the Slavic Dulebes and Volhynians, it became a principality of Kyivan Rus' centered on Volodymyr, the base from which Roman Mstyslavych founded the Galician-Volhynian state. From the 1340s it was ruled by Lithuania, from 1569 by the Polish Crown, from 1795 by the Russian Empire and in 1921-1939 by Poland as the Wołyń Voivodeship. World War II brought the Holocaust, the birth of the UPA and the 1943 massacres of Poles; since 2022 the oblast has been a fortified rear area on the Belarusian border.",
+  "eras": {
+    "trypillia": {
+      "control": "Neolithic farmers (Linear Pottery, Lublin-Volhynia and Funnelbeaker cultures)",
+      "summary": "The area lay northwest of the Trypillian world. Farmers of the Lublin-Volhynia culture and the Funnelbeaker culture tilled the Volhynian loess upland, while hunter-fishers lived in the Polesian marshes.",
+      "military": null,
+      "places": [
+        "Volhynian upland"
+      ],
+      "links": [
+        {
+          "title": "Linear Pottery culture",
+          "url": "https://en.wikipedia.org/wiki/Linear_Pottery_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Globular Amphora, Corded Ware and Trzciniec-circle cultures",
+      "summary": "Globular Amphora people built stone-lined tombs and flint mines operated on the Volhynian upland; they were followed by Corded Ware and the Strzyżów and Trzciniec cultures with barrow burials.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Globular Amphora culture",
+          "url": "https://en.wikipedia.org/wiki/Globular_Amphora_culture"
+        },
+        {
+          "title": "Corded Ware culture",
+          "url": "https://en.wikipedia.org/wiki/Corded_Ware_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Lusatian-related and Vysotske farming groups",
+      "summary": "The area was inhabited by forest-zone farmers related to the Lusatian culture, far from the Cimmerian steppe; bronze working and fortified villages spread.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Lusatian culture",
+          "url": "https://en.wikipedia.org/wiki/Lusatian_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Milograd and Pomeranian-related forest peoples",
+      "summary": "The Polesian north belonged to the Milograd culture, sometimes linked with Herodotus' Neuri, while western influences came from the Pomeranian culture. Scythian goods reached the area only by trade.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Milograd culture",
+          "url": "https://en.wikipedia.org/wiki/Milograd_culture"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Zarubintsy and Przeworsk cultures; arriving Wielbark (Goths)",
+      "summary": "Early Slavic-linked Zarubintsy groups lived in Polesia and Przeworsk people in the west; in the late 2nd century the Wielbark culture associated with the Goths moved into Volhynia on its way southeast.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Wielbark culture",
+          "url": "https://en.wikipedia.org/wiki/Wielbark_culture"
+        },
+        {
+          "title": "Zarubintsy culture",
+          "url": "https://en.wikipedia.org/wiki/Zarubintsy_culture"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Wielbark and Chernyakhov culture peoples (Goths and others)",
+      "summary": "Volhynia was a corridor and settlement zone of the Wielbark culture, which merged into the Chernyakhov culture further south; Polesia stayed with the Kiev culture of early Slavs.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Chernyakhov culture",
+          "url": "https://en.wikipedia.org/wiki/Chernyakhov_culture"
+        },
+        {
+          "title": "Kiev culture",
+          "url": "https://en.wikipedia.org/wiki/Kiev_culture"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Early Slavic and remnant Germanic groups beyond direct Hunnic rule",
+      "summary": "Germanic groups left or were absorbed as the Huns advanced; the forested area offered refuge, and early Slavic communities expanded.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Early Slavs",
+          "url": "https://en.wikipedia.org/wiki/Early_Slavs"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Sclaveni (Prague-Korchak culture); Dulebes",
+      "summary": "Prague-Korchak Slavs settled the area densely. The Dulebes, whom the Primary Chronicle says were oppressed by the Avars, formed a large tribal union centered in Volhynia.",
+      "military": "Avar raids and domination are recorded in the chronicle tradition.",
+      "places": [],
+      "links": [
+        {
+          "title": "Dulebes",
+          "url": "https://en.wikipedia.org/wiki/Dulebes"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Volhynians and Buzhans (successors of the Dulebes)",
+      "summary": "The Dulebe union gave way to the Volhynians and Buzhans, with hillfort towns along the Bug and Luha rivers; the tribe's center may have been Volyn on the Bug.",
+      "military": "Tribal hillforts protected settlements on river crossings.",
+      "places": [
+        "Volyn hillfort"
+      ],
+      "links": [
+        {
+          "title": "Volhynians",
+          "url": "https://en.wikipedia.org/wiki/Volhynians"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Volhynian tribes, gradually tributary to Kyiv",
+      "summary": "The Volhynians were drawn into the orbit of Kyiv in the 10th century and are mentioned among the tribes of Rus'; the borderland toward Poland remained contested.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kievan Rus'",
+          "url": "https://en.wikipedia.org/wiki/Kievan_Rus%27"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Kyivan Rus'",
+      "summary": "Volodymyr the Great took the Cherven towns in 981 and, by tradition, founded the town of Volodymyr (Volodymyr-Volynskyi) and its bishopric around 988-992, placing one of his sons there.",
+      "military": "The 981 campaign against Poland secured the Bug frontier.",
+      "places": [
+        "Volodymyr"
+      ],
+      "links": [
+        {
+          "title": "Volodymyr, Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Volodymyr,_Ukraine"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Kyivan Rus' (Principality of Volodymyr)",
+      "summary": "Volodymyr was the seat of a Rus' prince and a key stop on the route to Kraków. Bolesław I passed through during his 1018 intervention, and Yaroslav the Wise restored Kyivan control by 1031.",
+      "military": "The Bug frontier was fortified after the 1030-1031 campaigns.",
+      "places": [
+        "Volodymyr"
+      ],
+      "links": [
+        {
+          "title": "Yaroslav the Wise",
+          "url": "https://en.wikipedia.org/wiki/Yaroslav_the_Wise"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Principality of Volhynia (Iziaslavich-Mstyslavych princes)",
+      "summary": "Volhynia became a hereditary principality; Lutsk is first mentioned in 1085, and Mstyslav Iziaslavych built the Assumption Cathedral in Volodymyr around 1160. The Lyubech congress of 1097 and the blinding of Vasylko were tied to struggles over the area.",
+      "military": "Princes fought from Volodymyr and Lutsk in the wars over the Kyivan throne.",
+      "places": [
+        "Volodymyr",
+        "Lutsk",
+        "Assumption Cathedral, Volodymyr"
+      ],
+      "links": [
+        {
+          "title": "Principality of Volhynia",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Volhynia"
+        },
+        {
+          "title": "Lutsk",
+          "url": "https://en.wikipedia.org/wiki/Lutsk"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Galicia-Volhynia (Roman Mstyslavych, then Daniel and Vasylko)",
+      "summary": "Roman Mstyslavych of Volodymyr united Volhynia and Galicia in 1199. After his death Volhynia became the secure base from which Daniel and his brother Vasylko rebuilt their power.",
+      "military": "Volodymyr and Lutsk were strongholds in the wars against Polish, Hungarian and boyar rivals.",
+      "places": [
+        "Volodymyr",
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Roman the Great",
+          "url": "https://en.wikipedia.org/wiki/Roman_the_Great"
+        },
+        {
+          "title": "Kingdom of Galicia-Volhynia",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia%E2%80%93Volhynia"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Galicia-Volhynia under Golden Horde suzerainty; Lithuania from c. 1340",
+      "summary": "Batu's armies sacked Volodymyr in 1240; in 1259 Burundai forced Vasylko to raze the town walls. Volodymyr Vasylkovych ruled Volhynia until 1288, and after 1340 the Lithuanian prince Liubartas (Liubart) took Lutsk and Volodymyr.",
+      "military": "Liubart began the brick castle in Lutsk; Poland and Lithuania fought over Volhynia from 1340.",
+      "places": [
+        "Lubart's Castle",
+        "Volodymyr"
+      ],
+      "links": [
+        {
+          "title": "Liubartas",
+          "url": "https://en.wikipedia.org/wiki/Liubartas"
+        },
+        {
+          "title": "Lubart's Castle",
+          "url": "https://en.wikipedia.org/wiki/Lubart%27s_Castle"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Grand Duchy of Lithuania",
+      "summary": "Volhynia remained Lithuanian, with a Ruthenian nobility and Orthodox culture. Lutsk hosted the 1429 Congress of Lutsk of European monarchs, and in 1566 the Volhynian Voivodeship was formed.",
+      "military": "Švitrigaila made Lutsk his base in the Lithuanian civil war of the 1430s.",
+      "places": [
+        "Lutsk",
+        "Volodymyr"
+      ],
+      "links": [
+        {
+          "title": "Congress of Lutsk",
+          "url": "https://en.wikipedia.org/wiki/Congress_of_Lutsk"
+        },
+        {
+          "title": "Švitrigaila",
+          "url": "https://en.wikipedia.org/wiki/%C5%A0vitrigaila"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Polish-Lithuanian Commonwealth (Crown of Poland, Volhynian Voivodeship)",
+      "summary": "The Union of Lublin moved Volhynia to the Polish Crown in 1569. Lutsk was a seat of Catholic and Orthodox bishops, and its Orthodox Brotherhood (1617) ran a school; magnates such as the Ostrozhsky and Sanguszko families dominated.",
+      "military": "Castles at Lutsk and Olyka guarded against Tatar raids.",
+      "places": [
+        "Lutsk",
+        "Olyka Castle"
+      ],
+      "links": [
+        {
+          "title": "Volhynian Voivodeship (1569–1795)",
+          "url": "https://en.wikipedia.org/wiki/Volhynian_Voivodeship_(1569%E2%80%931795)"
+        },
+        {
+          "title": "Union of Lublin",
+          "url": "https://en.wikipedia.org/wiki/Union_of_Lublin"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Polish-Lithuanian Commonwealth, contested by Cossack and peasant rebels",
+      "summary": "In 1648 peasant and Cossack rebels rose across Volhynia, killing nobles and Jews; Lutsk was taken. The decisive Battle of Berestechko (1651) was fought on the Styr near Berestechko, ending in a Polish victory.",
+      "military": "Battle of Berestechko, 1651, one of the largest battles of 17th-century Europe.",
+      "places": [
+        "Berestechko",
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Battle of Berestechko",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Berestechko"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "Volhynia stayed Polish under the Andrusovo settlement, slowly recovering population while Greek Catholicism advanced among the Orthodox.",
+      "military": null,
+      "places": [
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Truce of Andrusovo",
+          "url": "https://en.wikipedia.org/wiki/Truce_of_Andrusovo"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "Swedish, Saxon and Russian armies crossed Volhynia during the Great Northern War. The Lutsk eparchy became Greek Catholic in 1702 and Catholic orders built baroque monasteries.",
+      "military": "Foreign armies were quartered in the area in 1704-1709.",
+      "places": [
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Great Northern War",
+          "url": "https://en.wikipedia.org/wiki/Great_Northern_War"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Polish-Lithuanian Commonwealth, then Russian Empire (1795)",
+      "summary": "Eastern Volhynia passed to Russia in 1793; the western part including Lutsk and Volodymyr followed in the Third Partition of 1795 and joined the Volhynian Governorate.",
+      "military": "Russian troops occupied the area during the 1794 Kościuszko Uprising.",
+      "places": [
+        "Lutsk",
+        "Volodymyr"
+      ],
+      "links": [
+        {
+          "title": "Volhynia Governorate",
+          "url": "https://en.wikipedia.org/wiki/Volhynia_Governorate"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Russian Empire (Volhynian Governorate)",
+      "summary": "The area remained dominated by Polish landowners and a Ukrainian Orthodox peasantry, with Jewish shtetls in the towns. After the 1830-1831 Polish uprising Russia closed Polish schools and converted Greek Catholics to Orthodoxy in 1839.",
+      "military": "Polish insurgents fought Russian troops in Volhynia in 1831.",
+      "places": [
+        "Lutsk",
+        "Kovel"
+      ],
+      "links": [
+        {
+          "title": "November Uprising",
+          "url": "https://en.wikipedia.org/wiki/November_Uprising"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Russian Empire; Austro-German occupation of the west from 1915",
+      "summary": "The poet Lesya Ukrainka grew up in Kolodiazhne near Kovel, which became a rail junction. In World War I the front ran through the oblast; the Russian Brusilov Offensive broke through at Lutsk in June 1916.",
+      "military": "The Lutsk breakthrough of the Brusilov Offensive and the 1916 Battle of Kovel.",
+      "places": [
+        "Kolodiazhne",
+        "Kovel",
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Lesya Ukrainka",
+          "url": "https://en.wikipedia.org/wiki/Lesya_Ukrainka"
+        },
+        {
+          "title": "Brusilov offensive",
+          "url": "https://en.wikipedia.org/wiki/Brusilov_offensive"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "Ukrainian People's Republic and Hetmanate under German protection",
+      "summary": "The area was claimed by the UNR and garrisoned by German and Austrian troops in 1918. After their withdrawal Polish forces advanced into Volhynia in 1919.",
+      "military": "UNR and Polish forces clashed in western Volhynia in early 1919.",
+      "places": [
+        "Lutsk",
+        "Kovel"
+      ],
+      "links": [
+        {
+          "title": "Ukrainian People's Republic",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_People%27s_Republic"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Poland (Polish-Soviet War)",
+      "summary": "Poland occupied the area in 1919; the Red Army briefly advanced through it in summer 1920. The Treaty of Riga (1921) assigned western Volhynia to Poland.",
+      "military": "Red Army offensives crossed the area in July 1920.",
+      "places": [
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Polish-Soviet War",
+          "url": "https://en.wikipedia.org/wiki/Polish%E2%80%93Soviet_War"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Second Polish Republic (Wołyń Voivodeship, capital Łuck)",
+      "summary": "Lutsk became the capital of the Wołyń Voivodeship. Polish military settlers received land, Ukrainian peasants remained the majority, and the Communist Party of Western Ukraine had a following.",
+      "military": null,
+      "places": [
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Wołyń Voivodeship (1921-1939)",
+          "url": "https://en.wikipedia.org/wiki/Wo%C5%82y%C5%84_Voivodeship_(1921%E2%80%931939)"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Second Polish Republic",
+      "summary": "Governor Henryk Józewski's 'Volhynian experiment' sought loyal Ukrainian cooperation until 1938, when a harsher Polonization policy took over. The area was spared the Holodomor across the border.",
+      "military": "Polish border and police units patrolled against the OUN and communist underground.",
+      "places": [
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Henryk Józewski",
+          "url": "https://en.wikipedia.org/wiki/Henryk_J%C3%B3zewski"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Soviet Union (Volyn Oblast, Ukrainian SSR)",
+      "summary": "The Red Army arrived in September 1939 and Volyn Oblast was created in December 1939 with its seat in Lutsk. Polish officials, settlers and others were deported, and the NKVD shot prisoners in Lutsk prison in June 1941.",
+      "military": "The Soviet border with German-occupied Poland ran along the Bug.",
+      "places": [
+        "Lutsk prison"
+      ],
+      "links": [
+        {
+          "title": "Soviet invasion of Poland",
+          "url": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Poland"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Nazi Germany (Reichskommissariat Ukraine)",
+      "summary": "Almost all of the area's Jews were murdered in 1942, including in the Kovel and Lutsk ghettos. In 1943 the UPA, formed in the Volhynian forests, carried out mass killings of Polish civilians, and Polish self-defense and Soviet partisans fought back.",
+      "military": "UPA bases in the forests; the Polish Home Army's 27th Volhynian Division; Soviet recapture of Kovel in 1944.",
+      "places": [
+        "Kovel",
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Massacres of Poles in Volhynia and Eastern Galicia",
+          "url": "https://en.wikipedia.org/wiki/Massacres_of_Poles_in_Volhynia_and_Eastern_Galicia"
+        },
+        {
+          "title": "Ukrainian Insurgent Army",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Insurgent_Army"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR",
+      "summary": "Remaining Poles were transferred west and Soviet rule was reimposed through collectivization and mass deportations of families suspected of aiding the insurgents.",
+      "military": "NKVD-MGB troops fought the UPA in the forests into the early 1950s.",
+      "places": [
+        "Lutsk",
+        "Kovel"
+      ],
+      "links": [
+        {
+          "title": "Anti-Soviet resistance by the Ukrainian Insurgent Army",
+          "url": "https://en.wikipedia.org/wiki/Anti-Soviet_resistance_by_the_Ukrainian_Insurgent_Army"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "Lutsk grew into an industrial city with an automobile plant, and Shatsk National Nature Park was created in 1983. The national movement revived in 1988-1991.",
+      "military": "Soviet garrisons were stationed at Volodymyr-Volynskyi and Lutsk.",
+      "places": [
+        "Lutsk",
+        "Shatsk lakes"
+      ],
+      "links": [
+        {
+          "title": "Shatsk National Natural Park",
+          "url": "https://en.wikipedia.org/wiki/Shatsk_National_Natural_Park"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "The oblast became a border region with Poland and Belarus, with cross-border trade at Yahodyn and support for national-democratic parties.",
+      "military": "The 51st Mechanized Brigade was based in Volodymyr-Volynskyi.",
+      "places": [
+        "Yahodyn border crossing"
+      ],
+      "links": [
+        {
+          "title": "Volyn Oblast",
+          "url": "https://en.wikipedia.org/wiki/Volyn_Oblast"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "Volyn voted strongly for Yushchenko in 2004. During Euromaidan the regional governor was humiliated by protesters in Lutsk in January 2014.",
+      "military": null,
+      "places": [
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Euromaidan",
+          "url": "https://en.wikipedia.org/wiki/Euromaidan"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "Volyn mobilized soldiers and volunteers for the Donbas war, and the Volodymyr-based brigade lost heavily in 2014.",
+      "military": "The 51st Mechanized Brigade suffered losses near Volnovakha and Ilovaisk and was reformed as the 14th Mechanized Brigade.",
+      "places": [
+        "Volodymyr"
+      ],
+      "links": [
+        {
+          "title": "14th Mechanized Brigade",
+          "url": "https://en.wikipedia.org/wiki/14th_Mechanized_Brigade"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (rear area on the Belarusian border)",
+      "summary": "Lutsk airfield was struck on 24 February and 11 March 2022, and defenses were built along the Belarusian border in case of an attack from the north. Refugees and aid came through the Polish crossings.",
+      "military": "Border fortifications and territorial defense units deployed facing Belarus.",
+      "places": [
+        "Lutsk airfield"
+      ],
+      "links": [
+        {
+          "title": "Belarus in the Russian invasion of Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Belarusian_involvement_in_the_Russo-Ukrainian_war_(2022%E2%80%93present)"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine (rear area)",
+      "summary": "Missile strikes hit industrial sites in Lutsk, including an August 2023 attack that killed three people. In July 2023 Polish and Ukrainian leaders commemorated the 80th anniversary of the Volhynia massacres in Lutsk.",
+      "military": "The oblast's units served on the eastern front; the northern border remained guarded.",
+      "places": [
+        "Lutsk"
+      ],
+      "links": [
+        {
+          "title": "Lutsk",
+          "url": "https://en.wikipedia.org/wiki/Lutsk"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine (rear area)",
+      "summary": "Lutsk and Kovel were repeatedly targeted in massed drone and missile raids on western Ukraine, including heavy attacks in June 2025. Exhumations of Polish victims of the 1943 massacres began in 2025 as part of Polish-Ukrainian reconciliation. 2026 details are thin in available sources.",
+      "military": "The oblast remained a rear and border-defense area.",
+      "places": [
+        "Lutsk",
+        "Kovel"
+      ],
+      "links": [
+        {
+          "title": "Volhynia",
+          "url": "https://en.wikipedia.org/wiki/Volhynia"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Volyn Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Volyn_Oblast"
+    },
+    {
+      "title": "Volhynia (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Volhynia"
+    },
+    {
+      "title": "Volhynia (Encyclopedia of Ukraine)",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CV%5CO%5CVolhynia.htm"
+    }
+  ]
+},
+"UA-56": {
+  "name": "Rivne Oblast",
+  "wikipedia": "Rivne_Oblast",
+  "historicalRegions": [
+    "Volhynia",
+    "Polesia"
+  ],
+  "overview": "Rivne Oblast spans eastern Volhynia, from the marshy forests of Polesia in the north to the Volhynian upland around Rivne, Dubno and Ostroh in the south. The Slavic Dulebes and Volhynians lived here before it became part of Kyivan Rus' and Galicia-Volhynia, with old towns such as Dubno, Ostroh, Peresopnytsia and Dorohobuzh. Under Lithuania and Poland the Ostrozky princes made Ostroh a center of Orthodox learning, and the Battle of Berestechko (1651) was fought on its western edge. The area passed to Russia in 1793, to Poland in 1921 and to the USSR in 1939; under Nazi rule Rivne was the capital of the Reichskommissariat Ukraine and the Polesian forests were a cradle of the UPA. Today it hosts the Rivne Nuclear Power Plant and borders Belarus.",
+  "eras": {
+    "trypillia": {
+      "control": "Neolithic farmers (Lublin-Volhynia, Funnelbeaker) and Polesian hunter-fishers",
+      "summary": "The southern upland around today's Rivne and Ostroh was farmed by Lublin-Volhynia and Funnelbeaker communities on the northwestern fringe of the Trypillian world, while Neolithic hunter-fishers lived in the Polesian marshes.",
+      "military": null,
+      "places": [
+        "Volhynian upland",
+        "Polesia"
+      ],
+      "links": [
+        {
+          "title": "Funnelbeaker culture",
+          "url": "https://en.wikipedia.org/wiki/Funnelbeaker_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Globular Amphora, Corded Ware and Trzciniec-circle cultures",
+      "summary": "Volhynian flint was mined and traded widely, and Globular Amphora and Corded Ware groups left barrow and stone-cist burials; later the Trzciniec circle dominated.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Globular Amphora culture",
+          "url": "https://en.wikipedia.org/wiki/Globular_Amphora_culture"
+        },
+        {
+          "title": "Trzciniec culture",
+          "url": "https://en.wikipedia.org/wiki/Trzciniec_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Forest-zone farmers (Lusatian-related groups)",
+      "summary": "The area lay far north of the Cimmerian steppe and was home to forest farmers related to Central European Urnfield-Lusatian cultures.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Lusatian culture",
+          "url": "https://en.wikipedia.org/wiki/Lusatian_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Milograd culture (possibly Herodotus' Neuri)",
+      "summary": "Northern Rivne Oblast belonged to the Milograd culture, whose people are often linked with the Neuri described by Herodotus; Scythian goods arrived only by trade.",
+      "military": "Small hillforts protected Milograd settlements.",
+      "places": [],
+      "links": [
+        {
+          "title": "Milograd culture",
+          "url": "https://en.wikipedia.org/wiki/Milograd_culture"
+        },
+        {
+          "title": "Neuri",
+          "url": "https://en.wikipedia.org/wiki/Neuri"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Zarubintsy culture; later Wielbark (Gothic) migrants",
+      "summary": "Zarubintsy communities lived along the Horyn and Sluch, and in the 2nd-3rd centuries Wielbark people associated with the Goths moved through Volhynia toward the Black Sea.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Zarubintsy culture",
+          "url": "https://en.wikipedia.org/wiki/Zarubintsy_culture"
+        },
+        {
+          "title": "Wielbark culture",
+          "url": "https://en.wikipedia.org/wiki/Wielbark_culture"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Wielbark/Chernyakhov peoples in the south; Kiev culture in Polesia",
+      "summary": "Southern Rivne Oblast lay on the northern edge of the Chernyakhov culture, while the Kiev culture, often seen as ancestral to the early Slavs, occupied Polesia.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kiev culture",
+          "url": "https://en.wikipedia.org/wiki/Kiev_culture"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Early Slavic forest communities beyond direct Hunnic rule",
+      "summary": "The Chernyakhov population dispersed, and the forested Horyn and Sluch valleys became a core area for early Slavic settlement.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Early Slavs",
+          "url": "https://en.wikipedia.org/wiki/Early_Slavs"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Sclaveni (Prague-Korchak culture); Dulebes",
+      "summary": "Prague-Korchak villages were dense in the area; the Korchak type-site lies just to the east. The Dulebe tribal union, later recalled as oppressed by the Avars, was centered in Volhynia.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Dulebes",
+          "url": "https://en.wikipedia.org/wiki/Dulebes"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Volhynians and Drevlians",
+      "summary": "Volhynians held the upland and Drevlians reached the eastern forests. Hillforts on the Horyn, such as at Ostroh and Dorohobuzh, preceded the later Rus' towns.",
+      "military": "Tribal hillforts guarded river crossings.",
+      "places": [
+        "Ostroh",
+        "Dorohobuzh"
+      ],
+      "links": [
+        {
+          "title": "Volhynians",
+          "url": "https://en.wikipedia.org/wiki/Volhynians"
+        },
+        {
+          "title": "Drevlians",
+          "url": "https://en.wikipedia.org/wiki/Drevlians"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Volhynians and Drevlians, made tributary to Kyiv",
+      "summary": "The Drevlians were forced to pay tribute to Kyiv and crushed by Olga after Igor's death in 945; Volhynian lands were also gradually brought under Kyivan rule.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Olga of Kiev",
+          "url": "https://en.wikipedia.org/wiki/Olga_of_Kiev"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Kyivan Rus' (Volodymyr principality)",
+      "summary": "The area became part of the Volhynian appanage centered on Volodymyr, created by Volodymyr the Great; Christianization reached the Horyn towns.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Vladimir the Great",
+          "url": "https://en.wikipedia.org/wiki/Vladimir_the_Great"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Kyivan Rus'",
+      "summary": "Towns on the Horyn and Ikva developed as stations on the road from Kyiv to Volodymyr and Kraków.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kievan Rus'",
+          "url": "https://en.wikipedia.org/wiki/Kievan_Rus%27"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Volhynian appanages (Dorohobuzh, Peresopnytsia, Pohoryna)",
+      "summary": "Dorohobuzh (1084), Dubno and Ostroh (1100) and Peresopnytsia (1149) appear in the chronicles as seats of minor princes; the Peresopnytsia monastery was founded in this period.",
+      "military": "Princes of Dorohobuzh and Peresopnytsia took part in the wars for Kyiv.",
+      "places": [
+        "Dubno",
+        "Ostroh",
+        "Peresopnytsia",
+        "Dorohobuzh"
+      ],
+      "links": [
+        {
+          "title": "Dubno",
+          "url": "https://en.wikipedia.org/wiki/Dubno"
+        },
+        {
+          "title": "Ostroh",
+          "url": "https://en.wikipedia.org/wiki/Ostroh"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Galicia-Volhynia",
+      "summary": "The area was part of the Volhynian core of Roman Mstyslavych and later Daniel of Galicia, who rewarded loyal boyars with towns on the Horyn.",
+      "military": null,
+      "places": [
+        "Peresopnytsia"
+      ],
+      "links": [
+        {
+          "title": "Kingdom of Galicia-Volhynia",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia%E2%80%93Volhynia"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Galicia-Volhynia under Golden Horde suzerainty; Lithuania from 1340",
+      "summary": "Mongol armies crossed the area in 1240-1241 and their overlordship continued under the Romanovich kings. After 1340 the Lithuanian prince Liubart controlled Volhynia, and the Ostrozky princely line emerged at Ostroh.",
+      "military": "Ostroh castle was built up from the 14th century.",
+      "places": [
+        "Ostroh Castle"
+      ],
+      "links": [
+        {
+          "title": "Ostrogski family",
+          "url": "https://en.wikipedia.org/wiki/Ostrogski_family"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Grand Duchy of Lithuania (Ostrozky princes)",
+      "summary": "The Orthodox Ostrozky princes became the mightiest magnates of the Grand Duchy; Kostiantyn Ostrozky won the Battle of Orsha in 1514. The Peresopnytsia Gospel, an early Ruthenian-vernacular translation, was produced here in 1556-1561.",
+      "military": "Kostiantyn Ostrozky, Grand Hetman of Lithuania, led armies against Muscovy and the Tatars.",
+      "places": [
+        "Ostroh",
+        "Dubno Castle",
+        "Peresopnytsia"
+      ],
+      "links": [
+        {
+          "title": "Peresopnytsia Gospel",
+          "url": "https://en.wikipedia.org/wiki/Peresopnytsia_Gospel"
+        },
+        {
+          "title": "Konstanty Ostrogski",
+          "url": "https://en.wikipedia.org/wiki/Konstanty_Ostrogski"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Polish-Lithuanian Commonwealth (Crown, Volhynian Voivodeship)",
+      "summary": "Prince Kostiantyn Vasyl Ostrozky founded the Ostroh Academy (c. 1576), where Ivan Fedorov printed the Ostroh Bible in 1581, the first complete Church Slavonic Bible. Dubno castle was rebuilt as a fortress.",
+      "military": "Dubno and Ostroh castles were among the strongest in Volhynia.",
+      "places": [
+        "Ostroh Academy",
+        "Dubno Castle"
+      ],
+      "links": [
+        {
+          "title": "Ostroh Academy",
+          "url": "https://en.wikipedia.org/wiki/Ostroh_Academy"
+        },
+        {
+          "title": "Ostrog Bible",
+          "url": "https://en.wikipedia.org/wiki/Ostrog_Bible"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Polish-Lithuanian Commonwealth, contested by Cossack and peasant rebels",
+      "summary": "Rebels took Ostroh in 1648 and attacked nobles and Jews. In 1651 the Cossack-Tatar army was defeated at Berestechko; the battlefield near Pliasheva is now the Kozatski Mohyly memorial.",
+      "military": "Battle of Berestechko, June-July 1651.",
+      "places": [
+        "Kozatski Mohyly (Plyasheva)",
+        "Ostroh"
+      ],
+      "links": [
+        {
+          "title": "Battle of Berestechko",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Berestechko"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "The area stayed Polish; after the Ostrozky line ended, its vast estates passed to Zasławski and Lubomirski magnates, who developed Rivne and Dubno.",
+      "military": null,
+      "places": [
+        "Rivne",
+        "Dubno"
+      ],
+      "links": [
+        {
+          "title": "Rivne",
+          "url": "https://en.wikipedia.org/wiki/Rivne"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "The Lubomirski family built a palace in Rivne, and Dubno flourished as a trading town; Greek Catholicism spread among the Orthodox.",
+      "military": "Armies crossed the area in the Great Northern War and the 1768 Bar Confederation.",
+      "places": [
+        "Lubomirski Palace, Rivne"
+      ],
+      "links": [
+        {
+          "title": "Lubomirski",
+          "url": "https://en.wikipedia.org/wiki/Lubomirski"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Polish-Lithuanian Commonwealth, then Russian Empire (1793)",
+      "summary": "Dubno hosted the 'Contract' fairs of Polish nobility from 1774. In the Second Partition of 1793 the area went to Russia and joined the Volhynian Governorate.",
+      "military": null,
+      "places": [
+        "Dubno"
+      ],
+      "links": [
+        {
+          "title": "Second Partition of Poland",
+          "url": "https://en.wikipedia.org/wiki/Second_Partition_of_Poland"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Russian Empire (Volhynian Governorate)",
+      "summary": "Rivne and Dubno were county towns with large Jewish populations under Polish landlords. The 1830-1831 Polish uprising led to confiscations and the closure of Polish institutions.",
+      "military": "Russian troops suppressed Polish insurgents in Volhynia in 1831.",
+      "places": [
+        "Rivne",
+        "Dubno"
+      ],
+      "links": [
+        {
+          "title": "Volhynia Governorate",
+          "url": "https://en.wikipedia.org/wiki/Volhynia_Governorate"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Russian Empire",
+      "summary": "The railway reached Rivne in 1873, turning it into a junction town. In World War I the front lay on the oblast's western edge, and Dubno was fought over during the 1916 Brusilov Offensive.",
+      "military": "Dubno fortress and the Brusilov Offensive of 1916.",
+      "places": [
+        "Rivne",
+        "Dubno"
+      ],
+      "links": [
+        {
+          "title": "Brusilov offensive",
+          "url": "https://en.wikipedia.org/wiki/Brusilov_offensive"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "Ukrainian People's Republic",
+      "summary": "Under German protection in 1918 the area was part of the UNR and Hetmanate. In spring 1919 Rivne briefly served as the seat of the UNR Directorate after the loss of Kyiv.",
+      "military": "UNR troops fought both Bolsheviks and Polish forces around Rivne in 1919.",
+      "places": [
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Directorate of Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Directorate_of_Ukraine"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Poland (Polish-Soviet War)",
+      "summary": "Polish forces took Rivne in 1919; in summer 1920 Budyonny's cavalry fought Polish troops around Dubno and Rivne. The Treaty of Riga (1921) assigned the area to Poland.",
+      "military": "Battle of Dubno and fighting near Rivne in June-July 1920.",
+      "places": [
+        "Dubno",
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Treaty of Riga",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_Riga"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Second Polish Republic (Wołyń Voivodeship)",
+      "summary": "Rivne (Równe) and Ostroh became border towns on the Polish-Soviet frontier. Polish settlers received land, and Ukrainian cooperatives and Prosvita societies grew.",
+      "military": "The Polish Border Protection Corps guarded the Soviet frontier east of Ostroh.",
+      "places": [
+        "Ostroh",
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Border Protection Corps",
+          "url": "https://en.wikipedia.org/wiki/Border_Protection_Corps"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Second Polish Republic",
+      "summary": "Across the border in Soviet Ukraine the Holodomor raged, while the area under Poland was spared. Józewski's policies alternated with Polonization; the writer Ulas Samchuk, from Derman, published here.",
+      "military": null,
+      "places": [
+        "Derman"
+      ],
+      "links": [
+        {
+          "title": "Ulas Samchuk",
+          "url": "https://en.wikipedia.org/wiki/Ulas_Samchuk"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Soviet Union (Rivne Oblast, Ukrainian SSR)",
+      "summary": "Rivne Oblast was created in December 1939 after the Soviet invasion of Poland. Deportations targeted Polish settlers and officials, and the NKVD killed prisoners in Dubno in June 1941.",
+      "military": "In June 1941 the Battle of Brody-Dubno, one of the largest tank battles of the war, was fought here.",
+      "places": [
+        "Dubno",
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Battle of Brody (1941)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Brody_(1941)"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Nazi Germany (Rivne was capital of the Reichskommissariat Ukraine)",
+      "summary": "Erich Koch ruled the Reichskommissariat Ukraine from Rivne; about 17,500 Jews of Rivne were shot at Sosenki in November 1941. Taras Bulba-Borovets' Polissian Sich and then the UPA operated in the forests, and Polish villages were destroyed in the 1943 massacres.",
+      "military": "General Vatutin was mortally wounded by UPA fighters near Mylyatyn in 1944, and the NKVD-UPA Battle of Hurby was fought in April 1944.",
+      "places": [
+        "Sosenki",
+        "Hurby",
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Reichskommissariat Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Reichskommissariat_Ukraine"
+        },
+        {
+          "title": "Rovno Ghetto",
+          "url": "https://en.wikipedia.org/wiki/Rovno_Ghetto"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR",
+      "summary": "Collectivization and deportations were imposed amid a long insurgency; remaining Poles were transferred west and Czech Volhynians repatriated to Czechoslovakia in 1947.",
+      "military": "MGB troops fought the UPA in the Polesian forests into the early 1950s.",
+      "places": [
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Battle of Gurby",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Gurby"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "Rivne grew as an industrial center with the Azot chemical plant. The Rivne Nuclear Power Plant opened at Kuznetsovsk (now Varash) in 1980, and northern districts received Chernobyl fallout in 1986.",
+      "military": null,
+      "places": [
+        "Rivne Nuclear Power Plant",
+        "Varash"
+      ],
+      "links": [
+        {
+          "title": "Rivne Nuclear Power Plant",
+          "url": "https://en.wikipedia.org/wiki/Rivne_Nuclear_Power_Plant"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "The oblast voted for national-democratic parties; illegal amber mining spread in the northern Polesian forests, and the Ostroh Academy was revived as a university in 1994.",
+      "military": null,
+      "places": [
+        "Ostroh Academy",
+        "Klesiv"
+      ],
+      "links": [
+        {
+          "title": "Ostroh Academy",
+          "url": "https://en.wikipedia.org/wiki/Ostroh_Academy"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "Rivne strongly backed the Orange Revolution in 2004 and the Euromaidan in 2013-2014, when protesters occupied the regional administration.",
+      "military": null,
+      "places": [
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Orange Revolution",
+          "url": "https://en.wikipedia.org/wiki/Orange_Revolution"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "The oblast sent units and volunteers to the Donbas. Kuznetsovsk was renamed Varash in 2016 under decommunization, and conflicts over illegal amber mining continued.",
+      "military": "Local territorial defense battalions served in the ATO zone.",
+      "places": [
+        "Varash"
+      ],
+      "links": [
+        {
+          "title": "Varash",
+          "url": "https://en.wikipedia.org/wiki/Varash"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (rear area on the Belarusian border)",
+      "summary": "On 14 March 2022 a Russian missile strike on the TV tower at Antopil near Rivne killed about 20 people. Defensive lines were built along the Belarusian border, and Rivne received many displaced people.",
+      "military": "Border defenses and territorial defense units faced Belarus.",
+      "places": [
+        "Antopil",
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Rivne TV Tower",
+          "url": "https://en.wikipedia.org/wiki/Rivne_TV_Tower"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine (rear area)",
+      "summary": "Strikes on energy infrastructure hit Rivne and Dubno; the IAEA warned that attacks on substations threatened the Rivne nuclear plant's external power.",
+      "military": "Air defense protected the nuclear plant and energy grid.",
+      "places": [
+        "Rivne Nuclear Power Plant",
+        "Dubno"
+      ],
+      "links": [
+        {
+          "title": "Rivne Nuclear Power Plant",
+          "url": "https://en.wikipedia.org/wiki/Rivne_Nuclear_Power_Plant"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine (rear area)",
+      "summary": "The oblast's power grid and gas infrastructure were repeatedly struck in Russia's winter campaigns against energy. Detailed 2026 information is limited in available sources.",
+      "military": "The oblast remained a rear area guarding the Belarusian border.",
+      "places": [
+        "Rivne"
+      ],
+      "links": [
+        {
+          "title": "Attacks on Ukrainian energy infrastructure",
+          "url": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Rivne Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Rivne_Oblast"
+    },
+    {
+      "title": "Volhynia (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Volhynia"
+    },
+    {
+      "title": "Volhynia (Encyclopedia of Ukraine)",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CV%5CO%5CVolhynia.htm"
+    }
+  ]
+},
+"UA-61": {
+  "name": "Ternopil Oblast",
+  "wikipedia": "Ternopil_Oblast",
+  "historicalRegions": [
+    "Eastern Galicia",
+    "Podolia",
+    "Volhynia"
+  ],
+  "overview": "Ternopil Oblast lies on the western Podolian upland between the Zbruch, Seret and Strypa rivers, with the Kremenets hills and Pochaiv in the northern Volhynian corner. It contains rich Trypillian sites and the Zbruch Idol of the pagan Slavs, and in Rus' times included Terebovlia and Kremenets, which held out against Batu Khan. Most of the area was Polish from the 14th century and saw the Cossack battles of Zbarazh and Zboriv and a period of Ottoman rule after 1672; from 1772 the Galician part was Austrian while the Kremenets-Pochaiv area went to Russia in 1795. Ternopil briefly hosted the West Ukrainian People's Republic in 1918-1919, was Polish between the wars and Soviet from 1939, and was a center of the nationalist underground. In November 2025 it suffered one of the deadliest Russian strikes on western Ukraine.",
+  "eras": {
+    "trypillia": {
+      "control": "Cucuteni-Trypillia farmers",
+      "summary": "The Dniester and Zbruch valleys were part of the western Trypillian zone, with villages of painted pottery and ritual deposits; the Verteba Cave at Bilche-Zolote yielded a rich Trypillian assemblage and human remains.",
+      "military": null,
+      "places": [
+        "Verteba Cave (Bilche-Zolote)"
+      ],
+      "links": [
+        {
+          "title": "Verteba Cave",
+          "url": "https://en.wikipedia.org/wiki/Verteba_Cave"
+        },
+        {
+          "title": "Cucuteni-Trypillia culture",
+          "url": "https://en.wikipedia.org/wiki/Cucuteni%E2%80%93Trypillia_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Corded Ware and Komarów (Trzciniec circle) cultures",
+      "summary": "After the Trypillian decline the uplands were settled by Corded Ware and later Komarów groups, whose barrows line the Dniester and Seret valleys.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Trzciniec culture",
+          "url": "https://en.wikipedia.org/wiki/Trzciniec_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Thraco-Hallstatt (Holihrady) and Vysotske cultures",
+      "summary": "The southern Dniester valley belonged to the Thracian-related Holihrady group of the Hallstatt circle, while the north had Vysotske farmers; the Cimmerian steppe lay far to the southeast.",
+      "military": "Fortified settlements appeared on promontories above the Dniester.",
+      "places": [
+        "Dniester canyon"
+      ],
+      "links": [
+        {
+          "title": "Hallstatt culture",
+          "url": "https://en.wikipedia.org/wiki/Hallstatt_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Western Podolian forest-steppe groups under Scythian influence",
+      "summary": "The western Podolian group of the Scythian-era forest-steppe culture built hillforts and adopted Scythian weapons and art, while trading with Thracian and Greek neighbors to the south.",
+      "military": "Scythian-period hillforts guarded the Zbruch and Seret valleys.",
+      "places": [],
+      "links": [
+        {
+          "title": "Scythians",
+          "url": "https://en.wikipedia.org/wiki/Scythians"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Lipița (Dacian) and Przeworsk cultures",
+      "summary": "Dacian-related Lipița and Germanic-Slavic Przeworsk peoples farmed the area, which lay north of Roman Dacia and traded with the Empire.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Lipitsa culture",
+          "url": "https://en.wikipedia.org/wiki/Lipitsa_culture"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Chernyakhov culture (Goths, Carpi, Sarmatians and Slavs)",
+      "summary": "The area was densely settled by the Chernyakhov culture, with large villages, kilns and Roman coin hoards; the Carpi and Goths lived side by side.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Chernyakhov culture",
+          "url": "https://en.wikipedia.org/wiki/Chernyakhov_culture"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Remnant Chernyakhov population under Hunnic hegemony",
+      "summary": "The Chernyakhov villages declined after the Hunnic invasion, and early Slavic groups began to settle the Podolian upland.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Huns",
+          "url": "https://en.wikipedia.org/wiki/Huns"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Sclaveni (Prague-Korchak culture)",
+      "summary": "Early Slavic villages of the Prague-Korchak type spread across the area; Avar raids from Pannonia reached the Dniester.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Prague-Korchak culture",
+          "url": "https://en.wikipedia.org/wiki/Prague-Korchak_culture"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "White Croats and Dulebes (Buzhans)",
+      "summary": "Slavic tribes held the area, and a pagan sanctuary complex stood on the Zbruch near Husiatyn. The four-faced Zbruch Idol, found in 1848, is the best-known monument of Slavic paganism.",
+      "military": "Hillforts such as those on Bohit hill combined defense and cult functions.",
+      "places": [
+        "Bohit hill",
+        "Zbruch Idol site"
+      ],
+      "links": [
+        {
+          "title": "Zbruch Idol",
+          "url": "https://en.wikipedia.org/wiki/Zbruch_Idol"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "White Croats and Dulebe tribes on the edge of Rus'",
+      "summary": "The area's tribes stayed largely outside direct Kyivan control, though Croats are listed among Oleh's allies in 907.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "White Croats",
+          "url": "https://en.wikipedia.org/wiki/White_Croats"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Kyivan Rus'",
+      "summary": "Volodymyr the Great's 992 campaign against the Croats brought the Podolian upland into Rus'.",
+      "military": "Volodymyr's 992 campaign against the Croats.",
+      "places": [],
+      "links": [
+        {
+          "title": "Vladimir the Great",
+          "url": "https://en.wikipedia.org/wiki/Vladimir_the_Great"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Kyivan Rus'",
+      "summary": "Fortified Rus' towns such as Terebovlia developed on trade routes to the Dniester and Danube.",
+      "military": null,
+      "places": [
+        "Terebovlia"
+      ],
+      "links": [
+        {
+          "title": "Terebovlia",
+          "url": "https://en.wikipedia.org/wiki/Terebovlia"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Principality of Terebovlia (Rostislavich line), then Principality of Galicia",
+      "summary": "Vasylko Rostyslavych ruled from Terebovlia, first mentioned in 1097, when he was blinded after the Lyubech congress. The area became part of the Principality of Galicia in 1141.",
+      "military": "Terebovlia castle was a key Galician stronghold on the eastern frontier.",
+      "places": [
+        "Terebovlia"
+      ],
+      "links": [
+        {
+          "title": "Vasilko Rostislavich",
+          "url": "https://en.wikipedia.org/wiki/Vasilko_Rostislavich"
+        },
+        {
+          "title": "Principality of Galicia",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Galicia"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Galicia-Volhynia",
+      "summary": "The area was split between Galician lands around Terebovlia and the Volhynian fortress of Kremenets, both under Roman Mstyslavych and later Daniel.",
+      "military": "Kremenets was one of the strongest fortresses of Volhynia.",
+      "places": [
+        "Kremenets",
+        "Terebovlia"
+      ],
+      "links": [
+        {
+          "title": "Kremenets",
+          "url": "https://en.wikipedia.org/wiki/Kremenets"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Galicia-Volhynia under Golden Horde suzerainty; Polish and Lithuanian rule from 1340s",
+      "summary": "Kremenets famously withstood Batu's army in 1240-1241 and the attacks of Kuremsa in the 1250s. After 1340 the Galician part fell to Poland and Kremenets to Lithuania.",
+      "military": "The successful defense of Kremenets castle against the Mongols.",
+      "places": [
+        "Kremenets Castle"
+      ],
+      "links": [
+        {
+          "title": "Kremenets Castle",
+          "url": "https://en.wikipedia.org/wiki/Kremenets_Castle"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Poland (Ruthenian and Podolian voivodeships) and Lithuania (Kremenets)",
+      "summary": "Hetman Jan Tarnowski founded Ternopil as a fortress in 1540. Kremenets was held by Lithuania and given to Queen Bona Sforza in 1536, who expanded its castle.",
+      "military": "Castles at Ternopil, Zbarazh and Terebovlia defended against Tatar raids.",
+      "places": [
+        "Ternopil",
+        "Kremenets",
+        "Zbarazh"
+      ],
+      "links": [
+        {
+          "title": "Ternopil",
+          "url": "https://en.wikipedia.org/wiki/Ternopil"
+        },
+        {
+          "title": "Jan Tarnowski",
+          "url": "https://en.wikipedia.org/wiki/Jan_Tarnowski"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "Magnates built fortified residences at Zbarazh, Berezhany and Vyshnivets, and the Pochaiv Monastery grew into a major Orthodox pilgrimage center. Tatar raids remained frequent.",
+      "military": "Zbarazh Castle was rebuilt as a bastioned fortress around 1626-1631.",
+      "places": [
+        "Pochaiv Lavra",
+        "Zbarazh Castle",
+        "Berezhany Castle"
+      ],
+      "links": [
+        {
+          "title": "Pochaiv Lavra",
+          "url": "https://en.wikipedia.org/wiki/Pochaiv_Lavra"
+        },
+        {
+          "title": "Zbarazh Castle",
+          "url": "https://en.wikipedia.org/wiki/Zbarazh_Castle"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Polish-Lithuanian Commonwealth, contested by the Cossack Hetmanate",
+      "summary": "Khmelnytsky's army besieged Polish forces in Zbarazh in 1649 and fought the king at Zboriv, ending in the Treaty of Zboriv. Maksym Kryvonis took Kremenets castle in 1648.",
+      "military": "Siege of Zbarazh and Battle of Zboriv, 1649.",
+      "places": [
+        "Zbarazh",
+        "Zboriv",
+        "Kremenets"
+      ],
+      "links": [
+        {
+          "title": "Siege of Zbarazh",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Zbarazh"
+        },
+        {
+          "title": "Battle of Zboriv (1649)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Zboriv_(1649)"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Ottoman Empire (Podolia Eyalet) in the south; Poland in the north",
+      "summary": "The 1672 Treaty of Buczacz, signed in Buchach, ceded Podolia to the Ottomans, who held the southern part of the area until 1699. Ottoman forces besieged Terebovlia in 1675.",
+      "military": "The 1675 defense of Terebovlia castle against the Ottomans and the fall of Zbarazh.",
+      "places": [
+        "Buchach",
+        "Terebovlia"
+      ],
+      "links": [
+        {
+          "title": "Treaty of Buchach",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_Buchach"
+        },
+        {
+          "title": "Podolia Eyalet",
+          "url": "https://en.wikipedia.org/wiki/Podolia_Eyalet"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "The Potocki family rebuilt Buchach, where Johann Georg Pinsel and Bernard Meretyn created rococo masterpieces such as the town hall. Pochaiv passed to the Greek Catholic Basilians in 1712.",
+      "military": null,
+      "places": [
+        "Buchach Town Hall",
+        "Pochaiv"
+      ],
+      "links": [
+        {
+          "title": "Johann Georg Pinsel",
+          "url": "https://en.wikipedia.org/wiki/Johann_Georg_Pinsel"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Habsburg Monarchy (Galicia); Kremenets area to Russia in 1795",
+      "summary": "In 1772 the Galician part with Ternopil, Berezhany and Chortkiv passed to Austria, while the Kremenets-Pochaiv area remained Polish until the Third Partition of 1795 gave it to Russia.",
+      "military": null,
+      "places": [
+        "Ternopil",
+        "Kremenets"
+      ],
+      "links": [
+        {
+          "title": "Kingdom of Galicia and Lodomeria",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia_and_Lodomeria"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Austria (Galicia; Russian-held Tarnopol Krai 1809-1815) and Russia (Kremenets)",
+      "summary": "After the Treaty of Schönbrunn Russia held the Tarnopol region from 1809 to 1815 before returning it to Austria. On the Russian side, the Kremenets Lyceum (1805) was a center of Polish learning until closed after 1831, and Pochaiv was given to the Orthodox church.",
+      "military": null,
+      "places": [
+        "Kremenets Lyceum",
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "Treaty of Schönbrunn",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_Sch%C3%B6nbrunn"
+        },
+        {
+          "title": "Krzemieniec Lyceum",
+          "url": "https://en.wikipedia.org/wiki/Krzemieniec_Lyceum"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Austria-Hungary (Galicia) and Russian Empire (Kremenets)",
+      "summary": "The Zbruch formed the Austrian-Russian border. Prosvita reading rooms and cooperatives spread in Galician villages, and the opera singer Solomiya Krushelnytska grew up near Ternopil. Russian troops occupied much of the area in 1914-1917.",
+      "military": "The Ukrainian Sich Riflemen fought at Lysonia near Berezhany in 1916, and the Czechoslovak Legion fought at Zboriv in 1917.",
+      "places": [
+        "Lysonia",
+        "Zboriv",
+        "Zbruch border"
+      ],
+      "links": [
+        {
+          "title": "Battle of Zborov (1917)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Zborov_(1917)"
+        },
+        {
+          "title": "Solomiya Krushelnytska",
+          "url": "https://en.wikipedia.org/wiki/Solomiya_Krushelnytska"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "West Ukrainian People's Republic; UNR in the Kremenets area",
+      "summary": "After the loss of Lviv the ZUNR government moved to Ternopil in November 1918 before relocating to Stanislaviv. The Kremenets area belonged to the UNR.",
+      "military": "The Ukrainian Galician Army held the region against Polish forces.",
+      "places": [
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "West Ukrainian People's Republic",
+          "url": "https://en.wikipedia.org/wiki/West_Ukrainian_People%27s_Republic"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Poland; briefly the Galician Soviet Socialist Republic (1920)",
+      "summary": "The Ukrainian Galician Army's Chortkiv Offensive of June 1919 briefly drove the Poles back before the army retreated across the Zbruch. In July-September 1920 the Bolsheviks set up the short-lived Galician SSR in Ternopil.",
+      "military": "Chortkiv Offensive, June 1919.",
+      "places": [
+        "Chortkiv",
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "Chortkiv offensive",
+          "url": "https://en.wikipedia.org/wiki/Chortkiv_offensive"
+        },
+        {
+          "title": "Galician Soviet Socialist Republic",
+          "url": "https://en.wikipedia.org/wiki/Galician_Soviet_Socialist_Republic"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Second Polish Republic (Tarnopol Voivodeship; Kremenets in Wołyń Voivodeship)",
+      "summary": "The area formed the Tarnopol Voivodeship, with a Ukrainian rural majority and Polish and Jewish towns; the Kremenets Lyceum reopened in 1920.",
+      "military": null,
+      "places": [
+        "Ternopil",
+        "Kremenets"
+      ],
+      "links": [
+        {
+          "title": "Tarnopol Voivodeship",
+          "url": "https://en.wikipedia.org/wiki/Tarnopol_Voivodeship"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Second Polish Republic",
+      "summary": "Villages in the area were hit hard by the 1930 'pacification' after OUN sabotage. The Zbruch border separated it from the Holodomor in Soviet Ukraine.",
+      "military": "Polish police and cavalry carried out the pacification raids; OUN cells were active.",
+      "places": [],
+      "links": [
+        {
+          "title": "Pacification of Ukrainians in Eastern Galicia",
+          "url": "https://en.wikipedia.org/wiki/Pacification_of_Ukrainians_in_Eastern_Galicia"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Soviet Union (Ternopil Oblast, Ukrainian SSR)",
+      "summary": "The Soviets created Ternopil Oblast in December 1939. Deportations, the January 1940 Chortkiv uprising by Polish youth, and NKVD prison killings in June 1941 marked Soviet rule.",
+      "military": "The Red Army crossed the Zbruch on 17 September 1939.",
+      "places": [
+        "Chortkiv"
+      ],
+      "links": [
+        {
+          "title": "Chortkiv uprising",
+          "url": "https://en.wikipedia.org/wiki/Czortk%C3%B3w_uprising"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Nazi Germany (District of Galicia; Kremenets in Reichskommissariat Ukraine)",
+      "summary": "The Germans murdered the large Jewish communities of Ternopil, Buchach and other towns. In March-April 1944 the Red Army besieged the German 'fortress' of Ternopil, leaving the city largely destroyed.",
+      "military": "Battle of Ternopil (1944) during the Proskurov-Chernovtsy Offensive; UPA units in the Kremenets forests.",
+      "places": [
+        "Ternopil",
+        "Buchach"
+      ],
+      "links": [
+        {
+          "title": "Dnieper–Carpathian offensive",
+          "url": "https://en.wikipedia.org/wiki/Dnieper%E2%80%93Carpathian_offensive"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR",
+      "summary": "Ternopil was rebuilt as a Soviet city, Poles were transferred west, and the Greek Catholic Church was suppressed. Deportations and collectivization accompanied the struggle with the underground.",
+      "military": "The UPA and OUN underground fought Soviet security forces into the 1950s.",
+      "places": [
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "Ukrainian Insurgent Army",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Insurgent_Army"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "Ternopil grew with a combine-harvester plant and medical institute. The underground Greek Catholic church survived, and in 1989-1990 the oblast elected a democratic council.",
+      "military": null,
+      "places": [
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "Ukrainian Greek Catholic Church",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Greek_Catholic_Church"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "The oblast was a stronghold of national-democratic politics; many residents sought work abroad as local industry declined.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Ternopil Oblast",
+          "url": "https://en.wikipedia.org/wiki/Ternopil_Oblast"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "Ternopil gave Yushchenko over 90 percent in 2004. In 2009 the nationalist Svoboda party won the oblast council election, and protesters took the regional administration during Euromaidan.",
+      "military": null,
+      "places": [
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "Svoboda (Ukraine)",
+          "url": "https://en.wikipedia.org/wiki/Svoboda_(Ukraine)"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "Volunteers and mobilized soldiers from the oblast served in the Donbas, and Ternopil hosted displaced families.",
+      "military": "The Ternopil-based 44th Artillery Brigade fought in the Donbas.",
+      "places": [
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "44th Artillery Brigade (Ukraine)",
+          "url": "https://en.wikipedia.org/wiki/44th_Artillery_Brigade_(Ukraine)"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (rear area)",
+      "summary": "The oblast received displaced people and was hit by occasional missile strikes, such as the June 2022 attack on Chortkiv that injured over 20 people.",
+      "military": "Territorial defense and mobilized units were sent to the front.",
+      "places": [
+        "Chortkiv"
+      ],
+      "links": [
+        {
+          "title": "Chortkiv",
+          "url": "https://en.wikipedia.org/wiki/Chortkiv"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine (rear area)",
+      "summary": "Strikes targeted energy and industrial infrastructure in Ternopil and its surroundings during Russia's long-range campaign.",
+      "military": null,
+      "places": [
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "Ternopil",
+          "url": "https://en.wikipedia.org/wiki/Ternopil"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine (rear area)",
+      "summary": "On 19 November 2025 Kh-101 cruise missiles hit residential apartment blocks in Ternopil, killing more than two dozen people including children, in one of the deadliest strikes on western Ukraine; reported tolls rose over the following days. Information on 2026 events is limited.",
+      "military": "The strike was part of a combined attack of hundreds of drones and dozens of missiles on western Ukraine.",
+      "places": [
+        "Ternopil"
+      ],
+      "links": [
+        {
+          "title": "November 2025 Ternopil strike",
+          "url": "https://en.wikipedia.org/wiki/2025_Ternopil_strike"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Ternopil Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Ternopil_Oblast"
+    },
+    {
+      "title": "Galicia (Encyclopedia of Ukraine)",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CG%5CA%5CGalicia.htm"
+    },
+    {
+      "title": "Kyiv Post: 26 killed in Ternopil missile strike",
+      "url": "https://www.kyivpost.com/amp/post/64508"
+    }
+  ]
+},
+"UA-26": {
+  "name": "Ivano-Frankivsk Oblast",
+  "wikipedia": "Ivano-Frankivsk_Oblast",
+  "historicalRegions": [
+    "Eastern Galicia",
+    "Pokuttia",
+    "Hutsulshchyna"
+  ],
+  "overview": "Ivano-Frankivsk Oblast stretches from the upper Dniester across the Carpathian foothills to the Hutsul highlands of the Chornohora range. It includes Halych, the capital of the medieval Principality of Galicia, which gave the whole region its name, and the borderland of Pokuttia once disputed with Moldavia. After the Mongol destruction of Halych the area was Polish from 1349, Austrian from 1772 and part of interwar Poland, apart from a brief period in 1919 when Stanislaviv (today's Ivano-Frankivsk) was the capital of the West Ukrainian People's Republic. Soviet rule from 1939/1944 met strong UPA resistance in the Carpathians. Since 2022 its airfield, power plant at Burshtyn and other infrastructure have been frequent targets of Russian strikes.",
+  "eras": {
+    "trypillia": {
+      "control": "Cucuteni-Trypillia farmers",
+      "summary": "The Dniester valley and Pokuttia lay within the western Cucuteni-Trypillia zone; Horodnytsia on the Dniester gave its name to a late Trypillian local group.",
+      "military": null,
+      "places": [
+        "Horodnytsia"
+      ],
+      "links": [
+        {
+          "title": "Cucuteni-Trypillia culture",
+          "url": "https://en.wikipedia.org/wiki/Cucuteni%E2%80%93Trypillia_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Komarów culture (Trzciniec circle); Noua culture in the south",
+      "summary": "The Komarów culture is named after Komariv near Halych, where rich barrow burials with bronze and gold ornaments were excavated. Noua culture herders lived in the southern foothills.",
+      "military": null,
+      "places": [
+        "Komariv barrows"
+      ],
+      "links": [
+        {
+          "title": "Trzciniec culture",
+          "url": "https://en.wikipedia.org/wiki/Trzciniec_culture"
+        },
+        {
+          "title": "Noua-Sabatinovka-Coslogeni complex",
+          "url": "https://en.wikipedia.org/wiki/Noua-Sabatinovka-Coslogeni_complex"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Thraco-Hallstatt groups (Holihrady culture)",
+      "summary": "Thracian-related early Iron Age farmers of the Hallstatt circle settled the Dniester and Prut valleys, well west of the Cimmerian steppe.",
+      "military": "Hillforts appeared on Dniester promontories.",
+      "places": [],
+      "links": [
+        {
+          "title": "Hallstatt culture",
+          "url": "https://en.wikipedia.org/wiki/Hallstatt_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Thracian-related groups on the edge of Scythian influence",
+      "summary": "The area's Thracian-related population traded with the Scythian forest-steppe to the east and adopted some Scythian weaponry and art.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Thracians",
+          "url": "https://en.wikipedia.org/wiki/Thracians"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Lipița culture (Dacian-related Costoboci and Carpi); Przeworsk groups",
+      "summary": "The Dacian-related Lipița culture, named after Lypytsia near Rohatyn, flourished here; its people are often identified with the Costoboci and Carpi who raided the Roman Balkans in the 170s.",
+      "military": "The Costoboci invaded Roman Moesia and Greece around 170 CE.",
+      "places": [
+        "Lypytsia"
+      ],
+      "links": [
+        {
+          "title": "Lipitsa culture",
+          "url": "https://en.wikipedia.org/wiki/Lipitsa_culture"
+        },
+        {
+          "title": "Costoboci",
+          "url": "https://en.wikipedia.org/wiki/Costoboci"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Carpathian Barrows culture (Carpi) and Chernyakhov culture",
+      "summary": "The Carpathian Barrows culture of the foothills, linked with the Carpi, coexisted with Chernyakhov villages on the Dniester.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Carpi (people)",
+          "url": "https://en.wikipedia.org/wiki/Carpi_(people)"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Remnant local populations under Hunnic sway",
+      "summary": "The Carpathian and Chernyakhov cultures ended in the Hunnic period, and settlement in the foothills thinned.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Huns",
+          "url": "https://en.wikipedia.org/wiki/Huns"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Sclaveni (Prague-Korchak culture)",
+      "summary": "Early Slavs settled the river valleys, while the Avars dominated the plains beyond the Carpathians.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Sclaveni",
+          "url": "https://en.wikipedia.org/wiki/Sclaveni"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "White Croats",
+      "summary": "The White Croats lived along the Carpathian foothills; salt springs near Kolomyia and Dolyna were exploited, and hillforts preceded the town of Halych.",
+      "military": "Tribal hillforts on the Dniester and Lukva.",
+      "places": [
+        "Halych",
+        "Kolomyia salt springs"
+      ],
+      "links": [
+        {
+          "title": "White Croats",
+          "url": "https://en.wikipedia.org/wiki/White_Croats"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "White Croats, largely independent of Kyiv",
+      "summary": "The Croats remained outside firm Kyivan rule, between Rus', Great Moravia's successors and the Hungarians who had settled the Pannonian plain.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kievan Rus'",
+          "url": "https://en.wikipedia.org/wiki/Kievan_Rus%27"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Kyivan Rus'",
+      "summary": "Volodymyr the Great's campaign against the Croats in 992 incorporated the upper Dniester into Rus'.",
+      "military": "Campaign of 992 against the Croats.",
+      "places": [],
+      "links": [
+        {
+          "title": "Vladimir the Great",
+          "url": "https://en.wikipedia.org/wiki/Vladimir_the_Great"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Kyivan Rus'",
+      "summary": "Halych grew on the Dniester as a salt and river-trade town in the western borderland of Rus'.",
+      "military": null,
+      "places": [
+        "Halych"
+      ],
+      "links": [
+        {
+          "title": "Halych",
+          "url": "https://en.wikipedia.org/wiki/Halych"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Principality of Galicia (capital Halych)",
+      "summary": "Volodymyrko made Halych the capital of the united principality in 1141, and Yaroslav Osmomysl (1153-1187) made it one of the strongest Rus' states; the Dormition Cathedral was built at Krylos.",
+      "military": "Halych's fortified hill at Krylos was the princely citadel.",
+      "places": [
+        "Krylos",
+        "Halych"
+      ],
+      "links": [
+        {
+          "title": "Yaroslav Osmomysl",
+          "url": "https://en.wikipedia.org/wiki/Yaroslav_Osmomysl"
+        },
+        {
+          "title": "Principality of Galicia",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Galicia"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Galicia-Volhynia, intermittently Hungarian",
+      "summary": "Roman Mstyslavych ruled from Halych from 1199. After 1205 boyar factions, Hungarians and Poles fought for the city; Coloman of Hungary was crowned King of Galicia there around 1215, and Daniel finally regained Halych in 1238.",
+      "military": "Repeated sieges of Halych by Hungarian, Polish and Rus' armies.",
+      "places": [
+        "Halych"
+      ],
+      "links": [
+        {
+          "title": "Kingdom of Galicia-Volhynia",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia%E2%80%93Volhynia"
+        },
+        {
+          "title": "Coloman of Galicia",
+          "url": "https://en.wikipedia.org/wiki/Coloman_of_Galicia"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Kingdom of Ruthenia under Golden Horde suzerainty; Poland from 1349",
+      "summary": "Batu's army sacked Halych in 1241 and the royal capital moved north to Kholm and Lviv. A Metropolis of Halych was created in 1303, and Casimir III took the area in the 1340s.",
+      "military": null,
+      "places": [
+        "Halych",
+        "Kolomyia"
+      ],
+      "links": [
+        {
+          "title": "Mongol invasion of Kievan Rus'",
+          "url": "https://en.wikipedia.org/wiki/Mongol_invasion_of_Kievan_Rus%27"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Kingdom of Poland (Ruthenian Voivodeship); Pokuttia disputed with Moldavia",
+      "summary": "Pokuttia was pledged to and claimed by Moldavia, and the Mukha rebellion of 1490-1492 swept it. Roksolana, wife of Sultan Suleiman, was born in Rohatyn around 1505.",
+      "military": "Grand Crown Hetman Jan Tarnowski defeated Petru Rareș of Moldavia at Obertyn in 1531.",
+      "places": [
+        "Obertyn",
+        "Rohatyn",
+        "Kolomyia"
+      ],
+      "links": [
+        {
+          "title": "Battle of Obertyn",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Obertyn"
+        },
+        {
+          "title": "Hürrem Sultan",
+          "url": "https://en.wikipedia.org/wiki/H%C3%BCrrem_Sultan"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "Orthodox monks founded the Manyava Skete in the Carpathian forests in 1611, and Rohatyn and Halych had Orthodox brotherhoods. Tatar raids devastated Pokuttia.",
+      "military": "Halych castle and town fortifications guarded against Tatar and Moldavian incursions.",
+      "places": [
+        "Manyava Skete",
+        "Halych Castle"
+      ],
+      "links": [
+        {
+          "title": "Manyava Skete",
+          "url": "https://en.wikipedia.org/wiki/Manyava_Skete"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Polish-Lithuanian Commonwealth (with peasant risings)",
+      "summary": "In 1648 a peasant uprising led by Semen Vysochan spread through Pokuttia in support of Khmelnytsky, but was suppressed by Polish forces.",
+      "military": "Vysochan's rebels seized several towns before their defeat in 1648-1649.",
+      "places": [
+        "Pokuttia"
+      ],
+      "links": [
+        {
+          "title": "Khmelnytsky Uprising",
+          "url": "https://en.wikipedia.org/wiki/Khmelnytsky_Uprising"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "Andrzej Potocki founded Stanisławów (today's Ivano-Frankivsk) as a fortress town in 1662. The area faced Ottoman and Tatar invasions after the Ottomans took neighboring Podolia in 1672.",
+      "military": "Stanisławów fortress resisted Ottoman-Tatar attacks in the 1670s.",
+      "places": [
+        "Stanisławów fortress"
+      ],
+      "links": [
+        {
+          "title": "Ivano-Frankivsk",
+          "url": "https://en.wikipedia.org/wiki/Ivano-Frankivsk"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "The outlaw Oleksa Dovbush led opryshky bands in the Carpathians in 1738-1745, becoming a folk hero of the Hutsuls. The Potockis rebuilt Stanisławów with a palace and collegiate church.",
+      "military": "Polish punitive detachments hunted the opryshky in the mountains.",
+      "places": [
+        "Chornohora",
+        "Stanisławów"
+      ],
+      "links": [
+        {
+          "title": "Oleksa Dovbush",
+          "url": "https://en.wikipedia.org/wiki/Oleksa_Dovbush"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Habsburg Monarchy (Kingdom of Galicia and Lodomeria)",
+      "summary": "The First Partition of 1772 gave the area to Austria; Stanislau became a district capital and lost its fortress status in 1801.",
+      "military": null,
+      "places": [
+        "Stanislau"
+      ],
+      "links": [
+        {
+          "title": "Kingdom of Galicia and Lodomeria",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia_and_Lodomeria"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Austrian Empire (Galicia)",
+      "summary": "Peasants of the Hutsul highlands and Pokuttia lived under Polish landlords until serfdom was abolished in 1848; Lukian Kobylytsia's peasant movement spread across the Hutsul and Bukovinian borderlands.",
+      "military": null,
+      "places": [
+        "Kolomyia",
+        "Kosiv"
+      ],
+      "links": [
+        {
+          "title": "Hutsuls",
+          "url": "https://en.wikipedia.org/wiki/Hutsuls"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Austria-Hungary (Galicia); Russian occupation 1914-1917",
+      "summary": "The railway reached Stanislau and Kolomyia, oil was drilled at Bytkiv, and the writers Vasyl Stefanyk and Marko Cheremshyna portrayed Pokuttian village life. Russian troops occupied the area in 1914-1915 and again in 1916-1917.",
+      "military": "The Brusilov Offensive of 1916 captured Stanislau and Kolomyia.",
+      "places": [
+        "Rusiv",
+        "Stanislau",
+        "Kolomyia"
+      ],
+      "links": [
+        {
+          "title": "Vasyl Stefanyk",
+          "url": "https://en.wikipedia.org/wiki/Vasyl_Stefanyk"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "West Ukrainian People's Republic",
+      "summary": "The area came under the ZUNR from November 1918, and in early January 1919 Stanislaviv became the republic's capital after the loss of Lviv; the Ukrainian National Rada voted there to unite with the UNR.",
+      "military": "The Ukrainian Galician Army was organized and supplied from Stanislaviv.",
+      "places": [
+        "Stanislaviv"
+      ],
+      "links": [
+        {
+          "title": "West Ukrainian People's Republic",
+          "url": "https://en.wikipedia.org/wiki/West_Ukrainian_People%27s_Republic"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "ZUNR until May 1919; Romanian occupation of Pokuttia; then Poland",
+      "summary": "Stanislaviv remained the ZUNR capital until Polish forces took it in May 1919, while Romanian troops occupied Pokuttia until August. The area then came under Polish rule, confirmed internationally in 1923.",
+      "military": "The Ukrainian Galician Army retreated across the Zbruch in July 1919.",
+      "places": [
+        "Stanislaviv",
+        "Kolomyia",
+        "Sniatyn"
+      ],
+      "links": [
+        {
+          "title": "Polish-Ukrainian War",
+          "url": "https://en.wikipedia.org/wiki/Polish%E2%80%93Ukrainian_War"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Second Polish Republic (Stanisławów Voivodeship)",
+      "summary": "The area formed the Stanisławów Voivodeship, with Ukrainian village cooperatives, Polish administration and large Jewish urban communities; the Hutsul highlands became a tourist destination.",
+      "military": null,
+      "places": [
+        "Stanisławów",
+        "Yaremche"
+      ],
+      "links": [
+        {
+          "title": "Stanisławów Voivodeship",
+          "url": "https://en.wikipedia.org/wiki/Stanis%C5%82aw%C3%B3w_Voivodeship"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Second Polish Republic",
+      "summary": "The area escaped the Soviet famine; OUN networks grew among youth, and the 1930 pacification struck local villages.",
+      "military": "OUN underground cells and Polish police operations.",
+      "places": [],
+      "links": [
+        {
+          "title": "Organisation of Ukrainian Nationalists",
+          "url": "https://en.wikipedia.org/wiki/Organisation_of_Ukrainian_Nationalists"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Soviet Union (Stanislav Oblast, Ukrainian SSR)",
+      "summary": "The Soviets created Stanislav Oblast in December 1939; deportations targeted Poles and Ukrainian activists, and prisoners were shot in Stanislav in June 1941.",
+      "military": null,
+      "places": [
+        "Stanislav"
+      ],
+      "links": [
+        {
+          "title": "NKVD prisoner massacres",
+          "url": "https://en.wikipedia.org/wiki/NKVD_prisoner_massacres"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Hungary (July-September 1941), then Nazi Germany (District of Galicia)",
+      "summary": "Hungarian troops occupied the area in summer 1941 before handing it to German administration. On 12 October 1941 ('Bloody Sunday') about 10,000 Jews were shot in Stanislau, and the ghetto was later liquidated.",
+      "military": "UPA groups were based in the Carpathian forests; the Red Army took the area in 1944.",
+      "places": [
+        "Stanislau ghetto"
+      ],
+      "links": [
+        {
+          "title": "Stanisławów Ghetto",
+          "url": "https://en.wikipedia.org/wiki/Stanis%C5%82aw%C3%B3w_Ghetto"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR",
+      "summary": "Collectivization, deportations and the suppression of the Greek Catholic Church accompanied a prolonged struggle with the nationalist underground in the Carpathians.",
+      "military": "UPA units in the Carpathians fought Soviet forces into the early 1950s.",
+      "places": [
+        "Carpathians"
+      ],
+      "links": [
+        {
+          "title": "Ukrainian Insurgent Army",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Insurgent_Army"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "Stanislav was renamed Ivano-Frankivsk in 1962 after the writer Ivan Franko. The Burshtyn thermal power plant and Kalush chemical works were built, and the city joined the national revival of 1989-1990.",
+      "military": "A Soviet air base operated at Ivano-Frankivsk.",
+      "places": [
+        "Burshtyn TPP",
+        "Kalush"
+      ],
+      "links": [
+        {
+          "title": "Burshtyn TPP",
+          "url": "https://en.wikipedia.org/wiki/Burshtyn_TPP"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "The oblast supported national-democratic parties; Bukovel became Ukraine's largest ski resort in the 2000s, and the Carpathian National Nature Park protected the highlands.",
+      "military": null,
+      "places": [
+        "Bukovel"
+      ],
+      "links": [
+        {
+          "title": "Bukovel",
+          "url": "https://en.wikipedia.org/wiki/Bukovel"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "The oblast voted overwhelmingly for Yushchenko in 2004, and protesters seized the regional administration during Euromaidan in January 2014.",
+      "military": null,
+      "places": [
+        "Ivano-Frankivsk"
+      ],
+      "links": [
+        {
+          "title": "Euromaidan",
+          "url": "https://en.wikipedia.org/wiki/Euromaidan"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "Residents volunteered and were mobilized for the Donbas war, and the 10th Mountain Assault Brigade was formed in Kolomyia in 2015.",
+      "military": "The 10th Mountain Assault Brigade 'Edelweiss' fought in Donbas.",
+      "places": [
+        "Kolomyia"
+      ],
+      "links": [
+        {
+          "title": "10th Mountain Assault Brigade",
+          "url": "https://en.wikipedia.org/wiki/10th_Mountain_Assault_Brigade"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (rear area)",
+      "summary": "Ivano-Frankivsk airfield was struck on 24 February 2022 and repeatedly afterwards. Russia claimed its first combat use of the Kinzhal hypersonic missile against an ammunition depot at Deliatyn on 18 March 2022.",
+      "military": "Strikes on Ivano-Frankivsk military airfield and Deliatyn depot.",
+      "places": [
+        "Ivano-Frankivsk airfield",
+        "Deliatyn"
+      ],
+      "links": [
+        {
+          "title": "Kh-47M2 Kinzhal",
+          "url": "https://en.wikipedia.org/wiki/Kh-47M2_Kinzhal"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine (rear area)",
+      "summary": "The Burshtyn thermal power plant was heavily damaged in 2024 strikes on Ukraine's energy system, and the airfield remained a frequent target.",
+      "military": "Air defenses defended the airbase and power plant.",
+      "places": [
+        "Burshtyn TPP"
+      ],
+      "links": [
+        {
+          "title": "Burshtyn TPP",
+          "url": "https://en.wikipedia.org/wiki/Burshtyn_TPP"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine (rear area)",
+      "summary": "Massed raids on western Ukraine continued to hit energy and gas infrastructure, and the 19 November 2025 attack wounded civilians in Ivano-Frankivsk. Details for 2026 are limited in available sources.",
+      "military": "The oblast remained a rear area hosting training and air-defense units.",
+      "places": [
+        "Ivano-Frankivsk"
+      ],
+      "links": [
+        {
+          "title": "Russian strikes against Ukrainian infrastructure",
+          "url": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Ivano-Frankivsk Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Ivano-Frankivsk_Oblast"
+    },
+    {
+      "title": "Galicia (Encyclopedia of Ukraine)",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CG%5CA%5CGalicia.htm"
+    },
+    {
+      "title": "Pokuttia (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Pokuttia"
+    }
+  ]
+},
+"UA-21": {
+  "name": "Zakarpattia Oblast",
+  "wikipedia": "Zakarpattia_Oblast",
+  "historicalRegions": [
+    "Carpathian Ruthenia",
+    "Subcarpathian Ruthenia",
+    "Upper Tisza"
+  ],
+  "overview": "Zakarpattia Oblast lies southwest of the Carpathian crest, on the upper Tisza where Ukraine meets Poland, Slovakia, Hungary and Romania, and its history followed the Danube basin rather than the Dnieper. Prehistoric cultures of the Carpathian Basin, Celts, Dacians, Vandals, Huns, Gepids and Avars succeeded each other before the Hungarians crossed the Verecke Pass around 895; the land then belonged to the Kingdom of Hungary for about a thousand years, partly under the Principality of Transylvania in the 16th-17th centuries. Its East Slavic Rusyn population accepted the Union of Uzhhorod in 1646. After 1919 it formed Subcarpathian Ruthenia in Czechoslovakia, briefly declared independence as Carpatho-Ukraine in March 1939, was reannexed by Hungary, and passed to Soviet Ukraine in 1944-1946. Today it is a multiethnic border region with a large Hungarian minority, far from the front but struck in 2025.",
+  "eras": {
+    "trypillia": {
+      "control": "Neolithic and Copper Age cultures of the Carpathian Basin (Körös, Alföld Linear Pottery, Bükk, Tisza)",
+      "summary": "Unlike most of Ukraine, the upper Tisza belonged to the Carpathian Basin world: early Körös farmers, then the Alföld Linear Pottery and Bükk cultures, and later the Tisza and Tiszapolgár cultures. Local obsidian was traded widely.",
+      "military": null,
+      "places": [
+        "Upper Tisza valley"
+      ],
+      "links": [
+        {
+          "title": "Bükk culture",
+          "url": "https://en.wikipedia.org/wiki/B%C3%BCkk_culture"
+        },
+        {
+          "title": "Tisza culture",
+          "url": "https://en.wikipedia.org/wiki/Tisza_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Otomani-Füzesabony and Stanove (Suciu de Sus) cultures",
+      "summary": "Bronze Age communities of the Otomani and Stanove cultures lived in tell settlements and fortified sites; the area is rich in bronze hoards, and gold and salt from the Carpathians were traded.",
+      "military": "Fortified Otomani settlements and weapon hoards attest to an armed elite.",
+      "places": [],
+      "links": [
+        {
+          "title": "Ottomány culture",
+          "url": "https://en.wikipedia.org/wiki/Ottom%C3%A1ny_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Gáva culture (Thraco-Hallstatt)",
+      "summary": "The early Iron Age Gáva culture of the Hallstatt circle, linked with proto-Thracians, dominated the upper Tisza; steppe 'Thraco-Cimmerian' horse gear also appears in local hoards.",
+      "military": "Large hillforts were built in the Tisza basin.",
+      "places": [],
+      "links": [
+        {
+          "title": "Gáva-Holigrady culture",
+          "url": "https://en.wikipedia.org/wiki/G%C3%A1va-Holigrady_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Kushtanovytsia culture (Scythian-influenced Thracians); Celts from the 4th century BCE",
+      "summary": "The Kushtanovytsia culture of barrow burials combined local Thracian traditions with Scythian influences; from the late 4th century BCE Celts began settling the Tisza plain.",
+      "military": null,
+      "places": [
+        "Kushtanovytsia"
+      ],
+      "links": [
+        {
+          "title": "Scythians",
+          "url": "https://en.wikipedia.org/wiki/Scythians"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Celts and Dacians; Iazyges Sarmatians on the Hungarian plain",
+      "summary": "Celts operated an iron-working oppidum and mint at Galish-Lovachka near Mukachevo; by the 1st century BCE the Dacians under Burebista dominated, while Roman Dacia lay just to the southeast after 106 CE.",
+      "military": "The fortified Celtic hill settlement near Mukachevo produced iron weapons.",
+      "places": [
+        "Galish-Lovachka oppidum (Mukachevo)"
+      ],
+      "links": [
+        {
+          "title": "Celts",
+          "url": "https://en.wikipedia.org/wiki/Celts"
+        },
+        {
+          "title": "Dacia",
+          "url": "https://en.wikipedia.org/wiki/Dacia"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Vandals (Hasdingi), Dacian groups and Gepids",
+      "summary": "The Hasding Vandals settled the upper Tisza region from the late 2nd century; princely burials and Roman imports at sites like Ostrovany nearby attest to their elite.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Hasdingi",
+          "url": "https://en.wikipedia.org/wiki/Hasdingi"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Hunnic Empire (centered on the Tisza plain); Gepids",
+      "summary": "The area lay close to the Hunnic power center on the Great Hungarian Plain; after Attila's death the Gepids took over the upper Tisza.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Gepids",
+          "url": "https://en.wikipedia.org/wiki/Gepids"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Gepids, then the Avar Khaganate (from 568); arriving Slavs",
+      "summary": "The Avars destroyed the Gepid kingdom in 567 and ruled the Carpathian Basin; Slavic groups settled the Carpathian valleys under Avar overlordship.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Pannonian Avars",
+          "url": "https://en.wikipedia.org/wiki/Pannonian_Avars"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Avar Khaganate, then First Bulgarian Empire (9th century); Slavic tribes",
+      "summary": "After the Frankish destruction of the Avars around 800, the Bulgarian Khanate extended its rule to the upper Tisza; Slavs, often identified with White Croats, built hillforts around Uzhhorod and Mukachevo.",
+      "military": "Slavic hillforts at Uzhhorod and elsewhere.",
+      "places": [
+        "Uzhhorod hillfort"
+      ],
+      "links": [
+        {
+          "title": "First Bulgarian Empire",
+          "url": "https://en.wikipedia.org/wiki/First_Bulgarian_Empire"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Hungarian tribes (Principality of Hungary)",
+      "summary": "Around 895 the Hungarians under Árpád crossed the Carpathians through the Verecke Pass into the Tisza basin, beginning a thousand years of Hungarian rule; Hungarian tradition places the capture of a Slavic fort at Ung (Uzhhorod) in this conquest.",
+      "military": "The Hungarian conquest of the Carpathian Basin passed through the Verecke Pass.",
+      "places": [
+        "Verecke Pass",
+        "Uzhhorod"
+      ],
+      "links": [
+        {
+          "title": "Hungarian conquest of the Carpathian Basin",
+          "url": "https://en.wikipedia.org/wiki/Hungarian_conquest_of_the_Carpathian_Basin"
+        },
+        {
+          "title": "Veretskyi Pass",
+          "url": "https://en.wikipedia.org/wiki/Veretskyi_Pass"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Kingdom of Hungary (from 1000)",
+      "summary": "Stephen I founded the Christian Kingdom of Hungary in 1000. The upper Tisza formed a thinly settled frontier zone (gyepű) toward Rus', with Slavic communities in the valleys.",
+      "military": "Border guard zones protected the Carpathian passes.",
+      "places": [],
+      "links": [
+        {
+          "title": "Kingdom of Hungary",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Hungary"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Kingdom of Hungary",
+      "summary": "The county system was extended toward the Carpathians, with Ung county around Uzhhorod; contacts with neighboring Rus' included dynastic marriages between the Árpáds and Yaroslav's family.",
+      "military": null,
+      "places": [
+        "Uzhhorod"
+      ],
+      "links": [
+        {
+          "title": "Ung County",
+          "url": "https://en.wikipedia.org/wiki/Ung_County"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Kingdom of Hungary (Ung, Bereg, Ugocsa and Máramaros counties)",
+      "summary": "Hungarian kings organized Bereg, Ugocsa and Máramaros counties and invited German and Hungarian settlers; Hungarian armies crossed the passes in their interventions in Galicia.",
+      "military": "Hungarian campaigns into Galicia in the 1180s-1190s passed through the area.",
+      "places": [
+        "Mukachevo",
+        "Berehove"
+      ],
+      "links": [
+        {
+          "title": "Bereg County",
+          "url": "https://en.wikipedia.org/wiki/Bereg_County"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Kingdom of Hungary",
+      "summary": "The area was a Hungarian staging ground for Andrew II's repeated wars to install his sons in Halych. Royal estates and castles developed at Uzhhorod and Mukachevo.",
+      "military": "Hungarian armies marched from here into Galicia between 1205 and 1230s.",
+      "places": [
+        "Uzhhorod",
+        "Mukachevo"
+      ],
+      "links": [
+        {
+          "title": "Andrew II of Hungary",
+          "url": "https://en.wikipedia.org/wiki/Andrew_II_of_Hungary"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Kingdom of Hungary (Galician rule over the Mukachevo area c. 1280s-1320s is debated)",
+      "summary": "In 1241 Batu's main army broke through the Verecke Pass and crushed the Hungarians at Mohi; afterwards kings built stone castles. Some historians argue that Lev I of Galicia held the Mukachevo area for a time, but this is uncertain.",
+      "military": "The Mongol breakthrough at the Verecke Pass in March 1241; stone castles at Uzhhorod, Mukachevo (Palanok) and Nevytske followed.",
+      "places": [
+        "Verecke Pass",
+        "Palanok Castle",
+        "Nevytske Castle"
+      ],
+      "links": [
+        {
+          "title": "Battle of Mohi",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Mohi"
+        },
+        {
+          "title": "Palanok Castle",
+          "url": "https://en.wikipedia.org/wiki/Palanok_Castle"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Kingdom of Hungary; after 1526 split between Habsburg Royal Hungary and Transylvania",
+      "summary": "The Lithuanian prince Fedir Koriatovych received Mukachevo from King Sigismund around 1396 and patronized the Orthodox monastery on Chernecha Hora. After the Battle of Mohács (1526) the area was contested between the Habsburgs and the Eastern Hungarian Kingdom based in Transylvania.",
+      "military": "Mukachevo and Uzhhorod castles changed hands in Habsburg-Transylvanian wars.",
+      "places": [
+        "Chernecha Hora monastery",
+        "Mukachevo"
+      ],
+      "links": [
+        {
+          "title": "Theodor, Prince of Podolia",
+          "url": "https://en.wikipedia.org/wiki/Theodor,_Prince_of_Podolia"
+        },
+        {
+          "title": "Battle of Mohács",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Moh%C3%A1cs"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Principality of Transylvania (Mukachevo) and Habsburg Royal Hungary (Uzhhorod)",
+      "summary": "Mukachevo belonged to the Transylvanian princes, notably the Rákóczi family, while Uzhhorod was held by the Drugeth family loyal to the Habsburgs. In 1646 the Union of Uzhhorod brought the local Ruthenian Orthodox clergy into union with Rome.",
+      "military": "Transylvanian and Habsburg forces fought in the area during the Thirty Years' War.",
+      "places": [
+        "Uzhhorod Castle",
+        "Palanok Castle"
+      ],
+      "links": [
+        {
+          "title": "Union of Uzhhorod",
+          "url": "https://en.wikipedia.org/wiki/Union_of_Uzhhorod"
+        },
+        {
+          "title": "Principality of Transylvania (1570-1711)",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Transylvania_(1570%E2%80%931711)"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Principality of Transylvania (Rákóczi) and Habsburg Royal Hungary",
+      "summary": "George II Rákóczi of Transylvania allied with Khmelnytsky and Sweden and invaded Poland in 1657 through the Carpathians; the failure of the campaign weakened Transylvania.",
+      "military": "Rákóczi's army crossed the passes in 1657; Polish forces raided back into the area.",
+      "places": [
+        "Mukachevo"
+      ],
+      "links": [
+        {
+          "title": "George II Rákóczi",
+          "url": "https://en.wikipedia.org/wiki/George_II_R%C3%A1k%C3%B3czi"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Transylvanian-Rákóczi lands; Habsburg control after 1688",
+      "summary": "Ilona Zrínyi defended Palanok Castle in Mukachevo against the Habsburgs in 1685-1688. In 1703 Francis II Rákóczi began his anti-Habsburg war of independence in Bereg county.",
+      "military": "Siege of Palanok Castle (1685-1688); Rákóczi's Kuruc uprising from 1703.",
+      "places": [
+        "Palanok Castle"
+      ],
+      "links": [
+        {
+          "title": "Ilona Zrínyi",
+          "url": "https://en.wikipedia.org/wiki/Ilona_Zr%C3%ADnyi"
+        },
+        {
+          "title": "Rákóczi's War of Independence",
+          "url": "https://en.wikipedia.org/wiki/R%C3%A1k%C3%B3czi%27s_War_of_Independence"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Habsburg Monarchy (Kingdom of Hungary)",
+      "summary": "After Rákóczi's defeat in 1711 the Mukachevo-Chynadiievo estate was granted to the Schönborn family, who brought German colonists. The Greek Catholic Eparchy of Mukachevo was canonically established in 1771.",
+      "military": null,
+      "places": [
+        "Chynadiievo",
+        "Mukachevo"
+      ],
+      "links": [
+        {
+          "title": "Greek Catholic Eparchy of Mukachevo",
+          "url": "https://en.wikipedia.org/wiki/Greek_Catholic_Eparchy_of_Mukachevo"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Habsburg Monarchy (Kingdom of Hungary)",
+      "summary": "Bishop Andrii Bachynskyi moved the eparchy's seat to Uzhhorod in 1780, where Maria Theresa had granted the former Jesuit college and church; a seminary developed there. The area was unaffected by the partitions of Poland except for new Galician neighbors.",
+      "military": null,
+      "places": [
+        "Uzhhorod Greek Catholic Cathedral"
+      ],
+      "links": [
+        {
+          "title": "Uzhhorod",
+          "url": "https://en.wikipedia.org/wiki/Uzhhorod"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Austrian Empire (Kingdom of Hungary)",
+      "summary": "The priest-writer Oleksandr Dukhnovych led a Rusyn cultural awakening. In 1848-1849 Rusyn leaders under Adolf Dobriansky sided with the Habsburgs against the Hungarian revolution.",
+      "military": "Russian troops intervening against the Hungarian revolution operated near the region in 1849.",
+      "places": [
+        "Uzhhorod"
+      ],
+      "links": [
+        {
+          "title": "Alexander Dukhnovych",
+          "url": "https://en.wikipedia.org/wiki/Alexander_Dukhnovych"
+        },
+        {
+          "title": "Hungarian Revolution of 1848",
+          "url": "https://en.wikipedia.org/wiki/Hungarian_Revolution_of_1848"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Austria-Hungary (Kingdom of Hungary)",
+      "summary": "Magyarization intensified after 1867 and poverty drove mass emigration of Rusyns to the United States. A conversion movement to Orthodoxy led to the Máramarossziget trials of 1913-1914.",
+      "military": "Russian armies broke through the Uzhok and Verecke passes in 1914-1915 before being driven back.",
+      "places": [
+        "Uzhok Pass",
+        "Khust"
+      ],
+      "links": [
+        {
+          "title": "Rusyns",
+          "url": "https://en.wikipedia.org/wiki/Rusyns"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "Hungary (Ruska Kraina autonomy); local Hutsul Republic; Czechoslovak and Romanian advances",
+      "summary": "Hungary granted the autonomous 'Ruska Kraina' in December 1918, while the Khust congress of January 1919 voted for union with Ukraine and a short-lived Hutsul Republic formed at Yasinia. Rusyn émigrés in the US backed joining Czechoslovakia, which Uzhhorod's Central Rusyn National Council endorsed in May 1919.",
+      "military": "Czechoslovak and Romanian troops fought the Hungarian Soviet Republic in the area in 1919.",
+      "places": [
+        "Khust",
+        "Yasinia"
+      ],
+      "links": [
+        {
+          "title": "Hutsul Republic",
+          "url": "https://en.wikipedia.org/wiki/Hutsul_Republic"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Czechoslovakia (Subcarpathian Ruthenia); Romanian troops in the east until 1920",
+      "summary": "The Treaty of Saint-Germain (1919) and Trianon (1920) assigned the area to Czechoslovakia as Subcarpathian Ruthenia; Romanian troops held Mukachevo and the east until 1920.",
+      "military": "Romanian forces occupied the eastern districts in 1919-1920.",
+      "places": [
+        "Uzhhorod",
+        "Mukachevo"
+      ],
+      "links": [
+        {
+          "title": "Transcarpathia",
+          "url": "https://en.wikipedia.org/wiki/Transcarpathia"
+        },
+        {
+          "title": "Treaty of Trianon",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_Trianon"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Czechoslovakia (Subcarpathian Ruthenia)",
+      "summary": "Under Czechoslovakia the region gained schools, roads and a new administrative quarter in Uzhhorod, though promised autonomy was delayed. Ukrainophile, Russophile and Rusynophile currents competed.",
+      "military": null,
+      "places": [
+        "Uzhhorod"
+      ],
+      "links": [
+        {
+          "title": "Transcarpathia",
+          "url": "https://en.wikipedia.org/wiki/Transcarpathia"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Czechoslovakia; Hungary took Uzhhorod, Mukachevo and Berehove in November 1938",
+      "summary": "In October 1938 the region became autonomous, with Avgustyn Voloshyn as prime minister. The First Vienna Award (November 1938) gave Uzhhorod, Mukachevo and Berehove to Hungary, and the autonomous government moved to Khust.",
+      "military": "The Carpathian Sich militia was formed in Khust in late 1938.",
+      "places": [
+        "Khust",
+        "Uzhhorod"
+      ],
+      "links": [
+        {
+          "title": "First Vienna Award",
+          "url": "https://en.wikipedia.org/wiki/First_Vienna_Award"
+        },
+        {
+          "title": "Avgustyn Voloshyn",
+          "url": "https://en.wikipedia.org/wiki/Avgustyn_Voloshyn"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Carpatho-Ukraine (15-16 March 1939), then Kingdom of Hungary",
+      "summary": "On 15 March 1939 the Diet in Khust proclaimed the independent Carpatho-Ukraine, which was overrun by Hungary within days. In August 1941 Hungary deported thousands of Jews from the region to Kamianets-Podilskyi, where they were murdered.",
+      "military": "The Carpathian Sich fought the Hungarian army, notably at Krasne Pole near Khust.",
+      "places": [
+        "Khust",
+        "Krasne Pole"
+      ],
+      "links": [
+        {
+          "title": "Carpatho-Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Carpatho-Ukraine"
+        },
+        {
+          "title": "Hungarian invasion of Carpatho-Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Hungarian_invasion_of_Carpatho-Ukraine"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Kingdom of Hungary (German-occupied from March 1944); Red Army from October 1944",
+      "summary": "After Germany occupied Hungary in March 1944, nearly all of the region's roughly 100,000 Jews were ghettoized and deported to Auschwitz in May-June 1944. The Red Army entered in October 1944, taking Uzhhorod on 27 October.",
+      "military": "The Hungarian 'Árpád Line' in the Carpathians was breached in the East Carpathian offensive of autumn 1944.",
+      "places": [
+        "Mukachevo ghetto",
+        "Uzhhorod"
+      ],
+      "links": [
+        {
+          "title": "Battle of the Dukla Pass",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_the_Dukla_Pass"
+        },
+        {
+          "title": "Árpád Line",
+          "url": "https://en.wikipedia.org/wiki/%C3%81rp%C3%A1d_Line"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Transcarpathian Ukraine (1944-1945), then Zakarpattia Oblast of the Ukrainian SSR",
+      "summary": "A congress in Mukachevo in November 1944 demanded union with Soviet Ukraine; Czechoslovakia ceded the region in June 1945 and Zakarpattia Oblast was created in January 1946. Hungarian and German men were sent to labor camps, and the Greek Catholic Church was banned after Bishop Theodore Romzha was killed in 1947.",
+      "military": "A Soviet collection camp for deported men operated at Svaliava.",
+      "places": [
+        "Mukachevo",
+        "Svaliava"
+      ],
+      "links": [
+        {
+          "title": "Theodore Romzha",
+          "url": "https://en.wikipedia.org/wiki/Theodore_Romzha"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "The region was collectivized and industrialized on a modest scale; Uzhhorod University (1945) and the Druzhba oil pipeline crossing to Central Europe made it a Soviet gateway to the west.",
+      "military": "Mukachevo hosted a Soviet air base and units of the Carpathian Military District; troops passed through toward Czechoslovakia in 1968.",
+      "places": [
+        "Uzhhorod",
+        "Chop"
+      ],
+      "links": [
+        {
+          "title": "Druzhba pipeline",
+          "url": "https://en.wikipedia.org/wiki/Druzhba_pipeline"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "In the December 1991 referendum about 78 percent of voters supported self-governing status for the region, which was never implemented. The Greek Catholic Church was restored, and smuggling and migration to the EU shaped the economy.",
+      "military": "The 128th Mechanized (later Mountain Assault) Brigade was based in Mukachevo.",
+      "places": [
+        "Berehove",
+        "Uzhhorod"
+      ],
+      "links": [
+        {
+          "title": "Zakarpattia Oblast",
+          "url": "https://en.wikipedia.org/wiki/Zakarpattia_Oblast"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "Politics were dominated by local clans; Hungary's 2010 citizenship law drew many ethnic Hungarians to take Hungarian passports. The region saw smaller Euromaidan protests than elsewhere in the west.",
+      "military": null,
+      "places": [
+        "Berehove"
+      ],
+      "links": [
+        {
+          "title": "Hungarians in Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Hungarians_in_Ukraine"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "In July 2015 a gunfight between Right Sector fighters and police in Mukachevo caused a national scandal. Ukraine's 2017 education law strained relations with Hungary.",
+      "military": "The Mukachevo-based 128th Brigade fought at Debaltseve in 2015.",
+      "places": [
+        "Mukachevo"
+      ],
+      "links": [
+        {
+          "title": "Right Sector",
+          "url": "https://en.wikipedia.org/wiki/Right_Sector"
+        },
+        {
+          "title": "128th Mountain Assault Brigade",
+          "url": "https://en.wikipedia.org/wiki/128th_Mountain_Assault_Brigade"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (rear area)",
+      "summary": "Zakarpattia received several hundred thousand internally displaced people and relocated businesses, and became a crossing point to Hungary, Slovakia and Romania. It was rarely struck; the first missile attack, on 3 May 2022, targeted railway power infrastructure near the Volovets pass.",
+      "military": "The 128th Brigade fought in the south, including the Kherson counteroffensive.",
+      "places": [
+        "Uzhhorod",
+        "Chop"
+      ],
+      "links": [
+        {
+          "title": "128th Mountain Assault Brigade",
+          "url": "https://en.wikipedia.org/wiki/128th_Mountain_Assault_Brigade"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine (rear area)",
+      "summary": "The region remained largely spared from strikes and hosted relocated industry; illegal crossings of men across the Tisza to avoid mobilization drew attention, as did tensions with Hungary's government.",
+      "military": "Border guards patrolled the Tisza against illegal crossings.",
+      "places": [
+        "Tisza River"
+      ],
+      "links": [
+        {
+          "title": "Hungary-Ukraine relations",
+          "url": "https://en.wikipedia.org/wiki/Hungary%E2%80%93Ukraine_relations"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine (rear area)",
+      "summary": "On 21 August 2025 Russian missiles struck the US-owned Flex electronics plant in Mukachevo, injuring more than a dozen workers, one of the few attacks on the region. Hungarian-Ukrainian tensions continued. Information on 2026 is limited.",
+      "military": null,
+      "places": [
+        "Mukachevo"
+      ],
+      "links": [
+        {
+          "title": "Mukachevo",
+          "url": "https://en.wikipedia.org/wiki/Mukachevo"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Zakarpattia Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Zakarpattia_Oblast"
+    },
+    {
+      "title": "Carpathian Ruthenia (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Transcarpathia"
+    },
+    {
+      "title": "Transcarpathia (Encyclopedia of Ukraine)",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CT%5CR%5CTranscarpathia.htm"
+    }
+  ]
+},
+"UA-77": {
+  "name": "Chernivtsi Oblast",
+  "wikipedia": "Chernivtsi_Oblast",
+  "historicalRegions": [
+    "Bukovina",
+    "Bessarabia (Khotyn region)",
+    "Hertsa region"
+  ],
+  "overview": "Chernivtsi Oblast, Ukraine's smallest, combines northern Bukovina between the Carpathians and the Prut, the Khotyn area of northern Bessarabia on the Dniester, and the small Hertsa region. Home to rich Cucuteni-Trypillia sites and later to the Tivertsi and White Croats, it belonged to Kyivan Rus' and Galicia before becoming part of the Principality of Moldavia in the 14th century; Khotyn fortress saw major Polish-Ottoman battles in 1621 and 1673. Austria annexed Bukovina in 1775 and made Czernowitz a multiethnic German-speaking university city, while Khotyn passed to Russia in 1812. Romania ruled the whole area from 1918 to 1940 and again in 1941-1944, between two Soviet annexations, and it has been part of Ukraine since 1991, with a significant Romanian minority.",
+  "eras": {
+    "trypillia": {
+      "control": "Cucuteni-Trypillia farmers",
+      "summary": "The Prut-Dniester interfluve was a core area of the Cucuteni-Trypillia culture. Excavations at Shypyntsi (Schipenitz) near Chernivtsi in the 1890s-1930s uncovered rich painted pottery that made the site a reference point for the culture.",
+      "military": null,
+      "places": [
+        "Shypyntsi"
+      ],
+      "links": [
+        {
+          "title": "Cucuteni-Trypillia culture",
+          "url": "https://en.wikipedia.org/wiki/Cucuteni%E2%80%93Trypillia_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Noua and Komarów cultures; Yamnaya barrows on the Dniester",
+      "summary": "Steppe Yamnaya barrows reached the Dniester, followed by Komarów groups in the north and the Noua culture of herders and farmers in the Prut basin.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Noua-Sabatinovka-Coslogeni complex",
+          "url": "https://en.wikipedia.org/wiki/Noua-Sabatinovka-Coslogeni_complex"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Thraco-Hallstatt groups (Holihrady culture)",
+      "summary": "Early Iron Age Thracian-related communities of the Holihrady group built fortified settlements along the Dniester and Prut, on the western edge of the Cimmerian world.",
+      "military": "Promontory hillforts on the Dniester bluffs.",
+      "places": [],
+      "links": [
+        {
+          "title": "Hallstatt culture",
+          "url": "https://en.wikipedia.org/wiki/Hallstatt_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Getae and other Thracian groups, under Scythian influence",
+      "summary": "Thracian Getae inhabited the Prut-Dniester area, trading with Scythians to the east and with Greek colonies such as Tyras on the lower Dniester.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Getae",
+          "url": "https://en.wikipedia.org/wiki/Getae"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Bastarnae, Dacian-related Lipița and Costoboci peoples; Sarmatian incursions",
+      "summary": "The Bastarnae (Poienești-Lukashevka culture) and later the Lipița culture of Dacian-related peoples settled the area, while Sarmatian nomads penetrated the Prut and Dniester valleys.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Bastarnae",
+          "url": "https://en.wikipedia.org/wiki/Bastarnae"
+        },
+        {
+          "title": "Lipitsa culture",
+          "url": "https://en.wikipedia.org/wiki/Lipitsa_culture"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Chernyakhov (Sântana de Mureș) culture: Goths, Carpi and others",
+      "summary": "The area was densely settled by the Chernyakhov-Sântana de Mureș culture, with Gothic, Carpi and Sarmatian elements and close trade with Roman Moesia across the Danube.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Chernyakhov culture",
+          "url": "https://en.wikipedia.org/wiki/Chernyakhov_culture"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Hunnic dominion",
+      "summary": "The Huns' crossing of the Dniester in 376 drove the Thervingi Goths toward the Danube; the area's Chernyakhov villages declined.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Thervingi",
+          "url": "https://en.wikipedia.org/wiki/Thervingi"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Sclaveni and Antes Slavs",
+      "summary": "Early Slavs settled the Prut and Dniester valleys, on the border between the Sclaveni and Antes described by Byzantine writers, and raided across the Danube.",
+      "military": "Slavic raids on Byzantium were launched from the Prut-Danube area.",
+      "places": [],
+      "links": [
+        {
+          "title": "Antes people",
+          "url": "https://en.wikipedia.org/wiki/Antes_people"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Tivertsi and White Croats",
+      "summary": "The Tivertsi lived along the Dniester and Prut and the White Croats in the Carpathian foothills; the large hillfort at Lenkivtsi in today's Chernivtsi was a regional center.",
+      "military": "Fortified centers such as Lenkivtsi.",
+      "places": [
+        "Lenkivtsi hillfort"
+      ],
+      "links": [
+        {
+          "title": "Tivertsi",
+          "url": "https://en.wikipedia.org/wiki/Tivertsi"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "Tivertsi, loosely allied to Kyiv; Pecheneg pressure",
+      "summary": "The Primary Chronicle lists the Tivertsi among Oleh's allies against Byzantium in 907, while Pecheneg nomads moved into the lands to the south.",
+      "military": "Tivertsian warriors joined Oleh's 907 campaign.",
+      "places": [],
+      "links": [
+        {
+          "title": "Pechenegs",
+          "url": "https://en.wikipedia.org/wiki/Pechenegs"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Kyivan Rus' (borderland)",
+      "summary": "The upper Prut and Dniester lands were brought under Kyivan rule as a frontier toward the Pecheneg steppe and Byzantine Danube.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kievan Rus'",
+          "url": "https://en.wikipedia.org/wiki/Kievan_Rus%27"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Kyivan Rus'",
+      "summary": "Rus' settlements and hillforts such as Vasyliv on the Dniester lay along the trade route to the Danube.",
+      "military": null,
+      "places": [
+        "Vasyliv"
+      ],
+      "links": [
+        {
+          "title": "Kievan Rus'",
+          "url": "https://en.wikipedia.org/wiki/Kievan_Rus%27"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Principality of Galicia; Cuman steppe to the south",
+      "summary": "The area formed the southeastern edge of the Principality of Galicia, whose Danube-trade interests reached toward the lower Dniester; Cumans roamed the plains to the south.",
+      "military": null,
+      "places": [
+        "Vasyliv",
+        "Lenkivtsi"
+      ],
+      "links": [
+        {
+          "title": "Principality of Galicia",
+          "url": "https://en.wikipedia.org/wiki/Principality_of_Galicia"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Galicia-Volhynia (frontier); Cumans",
+      "summary": "The Prut-Dniester lands belonged to the Galician frontier under Roman Mstyslavych and Daniel, used as a route for campaigns against the Cumans.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kingdom of Galicia-Volhynia",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia%E2%80%93Volhynia"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Golden Horde sway; Galician frontier (the 'Shypyntsi land')",
+      "summary": "Mongol armies destroyed settlements such as Lenkivtsi in 1241. The area, later called the Shypyntsi land, lay under Golden Horde influence, with Galician and Hungarian claims, until the rise of Moldavia.",
+      "military": null,
+      "places": [
+        "Lenkivtsi"
+      ],
+      "links": [
+        {
+          "title": "Golden Horde",
+          "url": "https://en.wikipedia.org/wiki/Golden_Horde"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Principality of Moldavia (Ottoman vassal from 1538)",
+      "summary": "The area became part of the Principality of Moldavia, founded around 1359; Chernivtsi is first mentioned in a 1408 charter of Alexander the Good. Stephen the Great rebuilt Khotyn fortress and defeated the Polish king John I Albert in the Cosmin Forest near Chernivtsi in 1497.",
+      "military": "Battle of the Cosmin Forest, 1497; Khotyn Fortress on the Dniester.",
+      "places": [
+        "Khotyn Fortress",
+        "Cosmin Forest",
+        "Chernivtsi"
+      ],
+      "links": [
+        {
+          "title": "Moldavia",
+          "url": "https://en.wikipedia.org/wiki/Moldavia"
+        },
+        {
+          "title": "Battle of the Cosmin Forest",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_the_Cosmin_Forest"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Principality of Moldavia (Ottoman vassal)",
+      "summary": "Polish magnates and Ottomans contested Moldavia. In 1621 the Polish-Lithuanian army and some 40,000 Zaporozhian Cossacks under Petro Konashevych-Sahaidachny held off Sultan Osman II at Khotyn.",
+      "military": "Battle of Khotyn (1621).",
+      "places": [
+        "Khotyn Fortress"
+      ],
+      "links": [
+        {
+          "title": "Battle of Khotyn (1621)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Khotyn_(1621)"
+        },
+        {
+          "title": "Petro Konashevych-Sahaidachny",
+          "url": "https://en.wikipedia.org/wiki/Petro_Konashevych-Sahaidachny"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Principality of Moldavia (Ottoman vassal)",
+      "summary": "Khmelnytsky sought a Moldavian alliance; his son Tymish married Ruxandra, daughter of Prince Vasile Lupu, in 1652 after Cossack campaigns into Moldavia.",
+      "military": "Cossack armies marched through the area in 1650-1653.",
+      "places": [],
+      "links": [
+        {
+          "title": "Tymofiy Khmelnytsky",
+          "url": "https://en.wikipedia.org/wiki/Tymofiy_Khmelnytsky"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Principality of Moldavia under Ottoman control; Polish incursions",
+      "summary": "Ottoman forces used Khotyn as a base for the 1672 conquest of Podolia. In 1673 Jan Sobieski destroyed an Ottoman army at Khotyn, and Polish garrisons held parts of the area in the following years.",
+      "military": "Battle of Khotyn (1673).",
+      "places": [
+        "Khotyn Fortress"
+      ],
+      "links": [
+        {
+          "title": "Battle of Khotyn (1673)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Khotyn_(1673)"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Moldavia (Bukovina) and Ottoman Empire (Khotyn raya from 1713)",
+      "summary": "The Ottomans placed Khotyn under direct rule as a raya in 1713 and modernized the fortress. Russian armies won at Stavuchany in 1739 and took Khotyn, but returned it under the Treaty of Belgrade.",
+      "military": "Battle of Stavuchany (1739); Russian capture of Khotyn in 1739 and 1769.",
+      "places": [
+        "Stavchany",
+        "Khotyn"
+      ],
+      "links": [
+        {
+          "title": "Battle of Stavuchany",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Stavuchany"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Habsburg Monarchy (Bukovina from 1775); Ottoman Empire (Khotyn)",
+      "summary": "In 1775 Austria annexed the northwestern corner of Moldavia as Bukovina, with Czernowitz as its center. Khotyn remained Ottoman and was besieged by Austrian and Russian forces in 1788.",
+      "military": "Siege of Khotyn (1788) during the Austro-Russian-Turkish war.",
+      "places": [
+        "Czernowitz",
+        "Khotyn"
+      ],
+      "links": [
+        {
+          "title": "Bukovina",
+          "url": "https://en.wikipedia.org/wiki/Bukovina"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Austrian Empire (Bukovina) and Russian Empire (Khotyn, from 1812)",
+      "summary": "Bukovina was attached to Galicia in 1786 and became a separate crown land, the Duchy of Bukovina, in 1849; German, Jewish, Romanian, Ukrainian and Polish communities shaped Czernowitz. The Treaty of Bucharest (1812) gave Khotyn to Russia within Bessarabia.",
+      "military": "Lukian Kobylytsia led a Hutsul peasant revolt in 1843-1848.",
+      "places": [
+        "Czernowitz",
+        "Khotyn"
+      ],
+      "links": [
+        {
+          "title": "Duchy of Bukovina",
+          "url": "https://en.wikipedia.org/wiki/Duchy_of_Bukovina"
+        },
+        {
+          "title": "Bessarabia Governorate",
+          "url": "https://en.wikipedia.org/wiki/Bessarabia_Governorate"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Austria-Hungary (Bukovina) and Russian Empire (Khotyn)",
+      "summary": "Czernowitz University opened in 1875, and Ukrainian writers Yurii Fedkovych and Olha Kobylianska worked there; the city hosted the 1908 Yiddish language conference. The Residence of Bukovinian Metropolitans was completed in 1882.",
+      "military": "Russian troops occupied Czernowitz several times in 1914-1917; the Brusilov Offensive took it in June 1916.",
+      "places": [
+        "Residence of Bukovinian and Dalmatian Metropolitans",
+        "Czernowitz"
+      ],
+      "links": [
+        {
+          "title": "Olha Kobylianska",
+          "url": "https://en.wikipedia.org/wiki/Olha_Kobylianska"
+        },
+        {
+          "title": "Yiddishist movement",
+          "url": "https://en.wikipedia.org/wiki/Yiddishist_movement"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "Briefly Ukrainian (ZUNR), then Kingdom of Romania (from November 1918)",
+      "summary": "A Ukrainian assembly in Chernivtsi on 3 November 1918 claimed northern Bukovina for the West Ukrainian state, but Romanian troops occupied the city on 11 November and a General Congress voted for union with Romania on 28 November. Bessarabia, including Khotyn, joined Romania in 1918.",
+      "military": "Romanian army occupation of Bukovina in November 1918.",
+      "places": [
+        "Chernivtsi"
+      ],
+      "links": [
+        {
+          "title": "Union of Bukovina with Romania",
+          "url": "https://en.wikipedia.org/wiki/Union_of_Bukovina_with_Romania"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "Kingdom of Romania",
+      "summary": "Peasants in the Khotyn area rose against Romanian rule in January 1919 and were bloodily suppressed. The Treaty of Saint-Germain (1919) confirmed Bukovina for Romania, and the 1920 Treaty of Paris recognized its Bessarabian rule.",
+      "military": "Khotyn Uprising, January 1919.",
+      "places": [
+        "Khotyn"
+      ],
+      "links": [
+        {
+          "title": "Khotyn Uprising",
+          "url": "https://en.wikipedia.org/wiki/Khotyn_Uprising"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Kingdom of Romania",
+      "summary": "Romanian authorities closed Ukrainian schools, Romanianized Chernivtsi University and administration, and imposed a state of siege in Bessarabian districts.",
+      "military": null,
+      "places": [
+        "Chernivtsi University"
+      ],
+      "links": [
+        {
+          "title": "Greater Romania",
+          "url": "https://en.wikipedia.org/wiki/Greater_Romania"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Kingdom of Romania",
+      "summary": "The Dniester border separated the area from the Holodomor in the Soviet Moldavian ASSR and Ukraine. Romanian royal dictatorship from 1938 further restricted minorities; Ukrainian nationalist youth groups operated underground.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kingdom of Romania",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Romania"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Soviet Union (Chernivtsi Oblast, from June-August 1940)",
+      "summary": "After a Soviet ultimatum, the Red Army occupied northern Bukovina, the Hertsa region and Khotyn in June 1940, and Chernivtsi Oblast was formed. Deportations followed, and in April 1941 Soviet border guards shot Romanian villagers trying to cross to Romania at Fântâna Albă.",
+      "military": "Red Army occupation, 28 June 1940.",
+      "places": [
+        "Chernivtsi",
+        "Fântâna Albă (Bila Krynytsia)",
+        "Hertsa"
+      ],
+      "links": [
+        {
+          "title": "Soviet occupation of Bessarabia and Northern Bukovina",
+          "url": "https://en.wikipedia.org/wiki/Soviet_occupation_of_Bessarabia_and_Northern_Bukovina"
+        },
+        {
+          "title": "Fântâna Albă massacre",
+          "url": "https://en.wikipedia.org/wiki/F%C3%A2nt%C3%A2na_Alb%C4%83_massacre"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Kingdom of Romania (Axis ally) until spring 1944; then USSR",
+      "summary": "Romanian and German troops retook the area in July 1941; Jews were murdered or confined in the Czernowitz ghetto and deported to Transnistria, though mayor Traian Popovici saved about 20,000. The Red Army returned in March-April 1944.",
+      "military": "The Proskurov-Chernovtsy Offensive retook the region in spring 1944.",
+      "places": [
+        "Czernowitz ghetto"
+      ],
+      "links": [
+        {
+          "title": "Traian Popovici",
+          "url": "https://en.wikipedia.org/wiki/Traian_Popovici"
+        },
+        {
+          "title": "Kamenets–Podolsky pocket",
+          "url": "https://en.wikipedia.org/wiki/Kamenets%E2%80%93Podolsky_pocket"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR",
+      "summary": "The 1947 Paris Peace Treaty confirmed the Soviet border. Many Romanians, Germans and Jews left or were deported, and collectivization and repression targeted both Romanian and Ukrainian villages.",
+      "military": "OUN-UPA groups operated in the Bukovinian Carpathians until the early 1950s.",
+      "places": [
+        "Chernivtsi"
+      ],
+      "links": [
+        {
+          "title": "Paris Peace Treaties, 1947",
+          "url": "https://en.wikipedia.org/wiki/Paris_Peace_Treaties,_1947"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "Chernivtsi University occupied the former Metropolitans' Residence, and the city produced pop stars Sofia Rotaru and Volodymyr Ivasiuk, whose mysterious death in 1979 sparked protests. A 1988 outbreak of child hair loss blamed on chemical pollution caused alarm.",
+      "military": null,
+      "places": [
+        "Chernivtsi University"
+      ],
+      "links": [
+        {
+          "title": "Volodymyr Ivasiuk",
+          "url": "https://en.wikipedia.org/wiki/Volodymyr_Ivasiuk"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "The 1997 Ukrainian-Romanian treaty settled the border; the oblast's Romanian minority, concentrated around Hertsa and Hlyboka, gained cultural rights, and cross-border trade grew.",
+      "military": null,
+      "places": [
+        "Hertsa",
+        "Hlyboka"
+      ],
+      "links": [
+        {
+          "title": "Romanians in Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Romanians_in_Ukraine"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "The Residence of Bukovinian and Dalmatian Metropolitans was inscribed on the UNESCO World Heritage List in 2011. The oblast supported the Orange Revolution and Euromaidan.",
+      "military": null,
+      "places": [
+        "Residence of Bukovinian and Dalmatian Metropolitans"
+      ],
+      "links": [
+        {
+          "title": "Residence of Bukovinian and Dalmatian Metropolitans",
+          "url": "https://en.wikipedia.org/wiki/Residence_of_Bukovinian_and_Dalmatian_Metropolitans"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "Men from the oblast were mobilized and volunteered for the Donbas war, while Chernivtsi hosted displaced families.",
+      "military": null,
+      "places": [
+        "Chernivtsi"
+      ],
+      "links": [
+        {
+          "title": "War in Donbas",
+          "url": "https://en.wikipedia.org/wiki/War_in_Donbas"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (rear area)",
+      "summary": "Chernivtsi received large numbers of displaced people, and crossings to Romania at Porubne and Moldova at Mamalyha became major refugee routes. The oblast was rarely struck in 2022.",
+      "military": null,
+      "places": [
+        "Porubne border crossing"
+      ],
+      "links": [
+        {
+          "title": "Chernivtsi",
+          "url": "https://en.wikipedia.org/wiki/Chernivtsi"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine (rear area)",
+      "summary": "The oblast remained one of the safest in Ukraine, though occasional drones and missiles reached it during attacks on western Ukraine; Russian drones repeatedly strayed into neighboring Romanian and Moldovan airspace.",
+      "military": null,
+      "places": [
+        "Chernivtsi"
+      ],
+      "links": [
+        {
+          "title": "Chernivtsi Oblast",
+          "url": "https://en.wikipedia.org/wiki/Chernivtsi_Oblast"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine (rear area)",
+      "summary": "Massed raids on western Ukraine hit Chernivtsi more often in 2025, including a June 2025 attack that reportedly killed at least two people in the city. Information on 2026 is limited.",
+      "military": null,
+      "places": [
+        "Chernivtsi"
+      ],
+      "links": [
+        {
+          "title": "Chernivtsi",
+          "url": "https://en.wikipedia.org/wiki/Chernivtsi"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Chernivtsi Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chernivtsi_Oblast"
+    },
+    {
+      "title": "Bukovina (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Bukovina"
+    },
+    {
+      "title": "Bukovyna (Encyclopedia of Ukraine)",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CB%5CU%5CBukovyna.htm"
+    }
+  ]
+},
+"UA-68": {
+  "name": "Khmelnytskyi Oblast",
+  "wikipedia": "Khmelnytskyi_Oblast",
+  "historicalRegions": [
+    "Podolia",
+    "Volhynia"
+  ],
+  "overview": "Khmelnytskyi Oblast joins western Podolia, with the Dniester canyon and the fortress city of Kamianets-Podilskyi, to southern Volhynia around Iziaslav, Polonne and Starokostiantyniv. Trypillian and Scythian-era farmers were followed by Slavic tribes and, in Rus' times, by the Bolokhovian land and Bakota, the Mongol-era center of Podolia. From the 1360s the Lithuanian Koriatovych princes and then Poland ruled Podolia from Kamianets, which the Ottomans held as a provincial capital in 1672-1699; Khmelnytsky's Cossacks fought major battles here at Pyliavtsi and Zhvanets. Russian from 1793, the area was briefly the last stronghold of the Ukrainian People's Republic in 1919, then a Soviet border region on the Zbruch, scene of the 1941 Kamianets-Podilskyi massacre. Today it hosts the Khmelnytskyi Nuclear Power Plant and the Starokostiantyniv air base, a frequent Russian target.",
+  "eras": {
+    "trypillia": {
+      "control": "Cucuteni-Trypillia farmers",
+      "summary": "Trypillian villages lined the Dniester terraces and the upper Southern Bug; sites in the Kamianets area belong to the western Trypillian groups with richly painted pottery.",
+      "military": null,
+      "places": [
+        "Dniester terraces near Kamianets-Podilskyi"
+      ],
+      "links": [
+        {
+          "title": "Cucuteni-Trypillia culture",
+          "url": "https://en.wikipedia.org/wiki/Cucuteni%E2%80%93Trypillia_culture"
+        }
+      ]
+    },
+    "bronze-age-steppe": {
+      "control": "Corded Ware, Komarów and Bilohrudivka cultures",
+      "summary": "After the Trypillian decline Corded Ware herders and later Komarów (Trzciniec circle) communities spread over the Podolian upland, with steppe Yamnaya barrows reaching the southeast.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Trzciniec culture",
+          "url": "https://en.wikipedia.org/wiki/Trzciniec_culture"
+        }
+      ]
+    },
+    "cimmerians": {
+      "control": "Thraco-Hallstatt (Holihrady) and Chornolis-related forest-steppe groups",
+      "summary": "The Dniester valley belonged to Thracian Hallstatt groups, while eastern districts lay near the Chornolis culture of the forest-steppe, which built hillforts against Cimmerian raids.",
+      "military": "Early hillforts were raised against steppe raiders.",
+      "places": [],
+      "links": [
+        {
+          "title": "Chernoles culture",
+          "url": "https://en.wikipedia.org/wiki/Chernoles_culture"
+        }
+      ]
+    },
+    "scythians": {
+      "control": "Podolian forest-steppe farmers under Scythian cultural influence",
+      "summary": "The Podolian group of the Scythian-era forest-steppe culture, possibly the 'agricultural Scythians' or Alazones of Herodotus, built hillforts and barrows and traded with Greek Tyras and Olbia.",
+      "military": "Scythian-period hillforts protected settlements on the Southern Bug and Dniester tributaries.",
+      "places": [],
+      "links": [
+        {
+          "title": "Scythians",
+          "url": "https://en.wikipedia.org/wiki/Scythians"
+        }
+      ]
+    },
+    "sarmatians": {
+      "control": "Lipița, Przeworsk and Zarubintsy-related groups; Sarmatians to the southeast",
+      "summary": "Dacian-related Lipița groups lived on the Dniester and Przeworsk and Zarubintsy-related communities further north, while Sarmatians held the steppe.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Przeworsk culture",
+          "url": "https://en.wikipedia.org/wiki/Przeworsk_culture"
+        }
+      ]
+    },
+    "goths-chernyakhov": {
+      "control": "Chernyakhov culture (Goths, Sarmatians, Slavs and others)",
+      "summary": "The area was densely settled by the Chernyakhov culture, with villages, pottery workshops and Roman coin hoards on the Dniester and Southern Bug.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Chernyakhov culture",
+          "url": "https://en.wikipedia.org/wiki/Chernyakhov_culture"
+        }
+      ]
+    },
+    "huns": {
+      "control": "Hunnic dominion",
+      "summary": "The Chernyakhov villages collapsed after the Hunnic invasion of 375, and population declined.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Huns",
+          "url": "https://en.wikipedia.org/wiki/Huns"
+        }
+      ]
+    },
+    "antes": {
+      "control": "Sclaveni (Prague-Korchak) in the north; Antes (Penkovka) in the south",
+      "summary": "The area lay at the junction of the Prague-Korchak culture of the Sclaveni and the Penkovka culture associated with the Antes.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Penkovka culture",
+          "url": "https://en.wikipedia.org/wiki/Penkovka_culture"
+        }
+      ]
+    },
+    "east-slavic-tribes": {
+      "control": "Dulebes/Buzhans, Tivertsi and Ulichs",
+      "summary": "The Volhynian north was held by the Dulebe-Buzhan tribes, and the Dniester south by the Tivertsi; hillfort settlements stood on the Smotrych and Sluch.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Tivertsi",
+          "url": "https://en.wikipedia.org/wiki/Tivertsi"
+        }
+      ]
+    },
+    "kyivan-rus-formation": {
+      "control": "East Slavic tribes, made tributary to Kyiv",
+      "summary": "The Tivertsi and their neighbors were drawn into the Kyivan sphere, taking part in campaigns against Byzantium, while Pechenegs threatened from the south.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Kievan Rus'",
+          "url": "https://en.wikipedia.org/wiki/Kievan_Rus%27"
+        }
+      ]
+    },
+    "kyivan-rus-volodymyr": {
+      "control": "Kyivan Rus'",
+      "summary": "Volodymyr's rule extended over the area, linking it to Volhynia in the north and the Dniester trade route in the south.",
+      "military": null,
+      "places": [],
+      "links": [
+        {
+          "title": "Vladimir the Great",
+          "url": "https://en.wikipedia.org/wiki/Vladimir_the_Great"
+        }
+      ]
+    },
+    "kyivan-rus-peak": {
+      "control": "Kyivan Rus'",
+      "summary": "The area lay between Volhynia and the Dniester frontier; settlements grew along the Horyn and Sluch in the north.",
+      "military": null,
+      "places": [
+        "Iziaslav"
+      ],
+      "links": [
+        {
+          "title": "Iziaslav",
+          "url": "https://en.wikipedia.org/wiki/Iziaslav"
+        }
+      ]
+    },
+    "rus-fragmentation": {
+      "control": "Principalities of Galicia and Volhynia; the semi-independent Bolokhovian land",
+      "summary": "The Dniester south belonged to Galicia, with the rock-cut Bakota monastery above the river, and the north to Volhynia. Between them lay the Bolokhovian land, whose towns kept a degree of autonomy.",
+      "military": null,
+      "places": [
+        "Bakota"
+      ],
+      "links": [
+        {
+          "title": "Bakota",
+          "url": "https://en.wikipedia.org/wiki/Bakota"
+        },
+        {
+          "title": "Bolokhovians",
+          "url": "https://en.wikipedia.org/wiki/Bolokhovians"
+        }
+      ]
+    },
+    "galicia-volhynia": {
+      "control": "Galicia-Volhynia; Bolokhovian towns",
+      "summary": "Roman Mstyslavych and Daniel ruled the area, but the Bolokhovian princes allied with Daniel's rivals and later with the Mongols.",
+      "military": "Daniel fought the Bolokhovian princes in the 1230s.",
+      "places": [
+        "Bakota"
+      ],
+      "links": [
+        {
+          "title": "Kingdom of Galicia-Volhynia",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Galicia%E2%80%93Volhynia"
+        }
+      ]
+    },
+    "mongol-period": {
+      "control": "Golden Horde (Podolia under Tatar baskaks); Galicia-Volhynia in the north",
+      "summary": "Podolia passed under direct Mongol overlordship; Bakota was the seat of a Tatar baskak in the 1250s. Daniel destroyed the Bolokhovian towns for collaborating with the Horde.",
+      "military": "Daniel's 1255 campaign against the Bolokhovian and Tatar-allied towns.",
+      "places": [
+        "Bakota"
+      ],
+      "links": [
+        {
+          "title": "Golden Horde",
+          "url": "https://en.wikipedia.org/wiki/Golden_Horde"
+        }
+      ]
+    },
+    "lithuania-poland": {
+      "control": "Lithuanian Koriatovych princes, then Poland (Podolian Voivodeship); Lithuanian Volhynia in the north",
+      "summary": "After Algirdas's victory at Blue Waters (1362) the Koriatovych princes made Kamianets the capital of Podolia, granting it Magdeburg rights in 1374. Western Podolia passed to Poland in 1430s as the Podolian Voivodeship, and Kostiantyn Ostrozky founded Starokostiantyniv in 1561.",
+      "military": "Kamianets-Podilskyi Castle and Medzhybizh Castle defended against Tatar raids.",
+      "places": [
+        "Kamianets-Podilskyi Castle",
+        "Medzhybizh Castle",
+        "Starokostiantyniv"
+      ],
+      "links": [
+        {
+          "title": "Battle of Blue Waters",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Blue_Waters"
+        },
+        {
+          "title": "Kamianets-Podilskyi Castle",
+          "url": "https://en.wikipedia.org/wiki/Kamianets-Podilskyi_Castle"
+        }
+      ]
+    },
+    "commonwealth": {
+      "control": "Polish-Lithuanian Commonwealth (Podolian and Volhynian voivodeships)",
+      "summary": "Kamianets-Podilskyi was the Commonwealth's main bulwark against the Ottomans, a city of Polish, Ruthenian and Armenian quarters. Magnates fortified Medzhybizh, Starokostiantyniv and Polonne.",
+      "military": "Kamianets was considered an impregnable fortress; Tatar raids were frequent.",
+      "places": [
+        "Kamianets-Podilskyi",
+        "Polonne"
+      ],
+      "links": [
+        {
+          "title": "Kamianets-Podilskyi",
+          "url": "https://en.wikipedia.org/wiki/Kamianets-Podilskyi"
+        },
+        {
+          "title": "Podolian Voivodeship",
+          "url": "https://en.wikipedia.org/wiki/Podolian_Voivodeship"
+        }
+      ]
+    },
+    "cossack-hetmanate": {
+      "control": "Contested between the Commonwealth and the Cossack Hetmanate (Podilia regiment)",
+      "summary": "Khmelnytsky routed the Polish army at Pyliavtsi in September 1648, and Maksym Kryvonis stormed Polonne. The area changed hands repeatedly, and the 1653 siege of Zhvanets ended in a truce.",
+      "military": "Battle of Pyliavtsi (1648), Siege of Polonne (1648), Siege of Zhvanets (1653).",
+      "places": [
+        "Pyliava",
+        "Polonne",
+        "Zhvanets"
+      ],
+      "links": [
+        {
+          "title": "Battle of Pyliavtsi",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Pyliavtsi"
+        },
+        {
+          "title": "Siege of Zhvanets",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Zhvanets"
+        }
+      ]
+    },
+    "the-ruin": {
+      "control": "Ottoman Empire (Podolia Eyalet, capital Kamianets) 1672-1699; Poland in the north",
+      "summary": "Sultan Mehmed IV took Kamianets in 1672 and made it the capital of the Ottoman province of Podolia; the cathedral was turned into a mosque with a minaret that still stands. Hetman Petro Doroshenko allied with the Ottomans.",
+      "military": "Siege of Kamianets (1672).",
+      "places": [
+        "Kamianets-Podilskyi Cathedral minaret"
+      ],
+      "links": [
+        {
+          "title": "Siege of Kamenets (1672)",
+          "url": "https://en.wikipedia.org/wiki/Siege_of_Kamenets"
+        },
+        {
+          "title": "Podolia Eyalet",
+          "url": "https://en.wikipedia.org/wiki/Podolia_Eyalet"
+        }
+      ]
+    },
+    "hetmanate-decline": {
+      "control": "Polish-Lithuanian Commonwealth",
+      "summary": "Poland regained Podolia in 1699. The Baal Shem Tov, founder of Hasidism, lived and taught in Medzhybizh from about 1740, and a disputation with the Frankists took place in Kamianets in 1757.",
+      "military": "Haidamak bands raided Polish estates.",
+      "places": [
+        "Medzhybizh"
+      ],
+      "links": [
+        {
+          "title": "Baal Shem Tov",
+          "url": "https://en.wikipedia.org/wiki/Baal_Shem_Tov"
+        }
+      ]
+    },
+    "partitions-crimea": {
+      "control": "Russian Empire (from 1793)",
+      "summary": "The Second Partition (1793) gave the area to Russia; Kamianets-Podilskyi became the seat of the Podolia Governorate, while the Volhynian north joined the Volhynian Governorate.",
+      "military": null,
+      "places": [
+        "Kamianets-Podilskyi"
+      ],
+      "links": [
+        {
+          "title": "Podolia Governorate",
+          "url": "https://en.wikipedia.org/wiki/Podolia_Governorate"
+        }
+      ]
+    },
+    "two-empires": {
+      "control": "Russian Empire (Podolia and Volhynian governorates)",
+      "summary": "Ustym Karmaliuk led a long peasant rebellion against landlords across Podolia from 1813 until his death in 1835. Polish nobles kept the estates, and Jewish shtetls such as Medzhybizh flourished.",
+      "military": "Polish insurgents fought in Podolia in 1831; Kamianets fortress lost its military role.",
+      "places": [
+        "Letychiv",
+        "Medzhybizh"
+      ],
+      "links": [
+        {
+          "title": "Ustym Karmaliuk",
+          "url": "https://en.wikipedia.org/wiki/Ustym_Karmaliuk"
+        }
+      ]
+    },
+    "national-revival": {
+      "control": "Russian Empire",
+      "summary": "Railways bypassed Kamianets but made Proskuriv (today's Khmelnytskyi) a growing junction town. Ukrainian cultural societies formed under tsarist restrictions, and in World War I the area was a staging ground for the Southwestern Front.",
+      "military": "Austro-Hungarian troops briefly entered the Zbruch borderland in 1914.",
+      "places": [
+        "Proskuriv"
+      ],
+      "links": [
+        {
+          "title": "Khmelnytskyi",
+          "url": "https://en.wikipedia.org/wiki/Khmelnytskyi"
+        }
+      ]
+    },
+    "ukrainian-revolution": {
+      "control": "Ukrainian People's Republic and Hetmanate",
+      "summary": "The area belonged to the UNR and Skoropadsky's Hetmanate; the Kamianets-Podilskyi Ukrainian State University opened in October 1918 under Ivan Ohienko.",
+      "military": null,
+      "places": [
+        "Kamianets-Podilskyi University"
+      ],
+      "links": [
+        {
+          "title": "Kamianets-Podilskyi Ivan Ohiienko National University",
+          "url": "https://en.wikipedia.org/wiki/Kamianets-Podilskyi_Ivan_Ohiienko_National_University"
+        }
+      ]
+    },
+    "soviet-takeover": {
+      "control": "UNR (temporary capital Kamianets-Podilskyi, 1919), Polish occupation, then Soviet Ukraine",
+      "summary": "In February 1919 UNR troops carried out the Proskurov pogrom, killing over 1,000 Jews. From June to November 1919 Kamianets-Podilskyi was the UNR's temporary capital, then came under Polish control; the Bolsheviks took the area in November 1920.",
+      "military": "The UNR army made its last stand here before crossing the Zbruch into Polish internment in November 1920.",
+      "places": [
+        "Kamianets-Podilskyi",
+        "Proskuriv"
+      ],
+      "links": [
+        {
+          "title": "Proskurov pogrom",
+          "url": "https://en.wikipedia.org/wiki/Proskurov_pogrom"
+        }
+      ]
+    },
+    "soviet-ukraine-1920s": {
+      "control": "Ukrainian SSR",
+      "summary": "The Zbruch became the Soviet-Polish border, and the area was a militarized frontier zone. Collectivization from 1929 provoked peasant revolts in Podolian villages in 1930.",
+      "military": "Soviet border troops guarded the Zbruch frontier.",
+      "places": [
+        "Zbruch River"
+      ],
+      "links": [
+        {
+          "title": "Ukrainian Soviet Socialist Republic",
+          "url": "https://en.wikipedia.org/wiki/Ukrainian_Soviet_Socialist_Republic"
+        }
+      ]
+    },
+    "holodomor-terror": {
+      "control": "Ukrainian SSR (Kamianets-Podilskyi Oblast from 1937)",
+      "summary": "The Holodomor killed many villagers in Podolia. In 1935-1936 thousands of Poles and Germans were deported from the border zone to Kazakhstan, and Kamianets-Podilskyi Oblast was created in 1937.",
+      "military": "Fortified regions of the Stalin Line were built near Letychiv and Kamianets-Podilskyi.",
+      "places": [
+        "Letychiv",
+        "Kamianets-Podilskyi"
+      ],
+      "links": [
+        {
+          "title": "Holodomor",
+          "url": "https://en.wikipedia.org/wiki/Holodomor"
+        },
+        {
+          "title": "Stalin Line",
+          "url": "https://en.wikipedia.org/wiki/Stalin_Line"
+        }
+      ]
+    },
+    "soviet-annexations": {
+      "control": "Ukrainian SSR",
+      "summary": "The oblast served as a staging area for the Soviet invasion of Poland in September 1939, after which it was no longer a border region; the oblast seat moved to Proskuriv in 1941.",
+      "military": "Soviet armies crossed the Zbruch from here on 17 September 1939.",
+      "places": [
+        "Proskuriv"
+      ],
+      "links": [
+        {
+          "title": "Soviet invasion of Poland",
+          "url": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Poland"
+        }
+      ]
+    },
+    "nazi-occupation": {
+      "control": "Nazi Germany (Reichskommissariat Ukraine; briefly Hungarian military administration)",
+      "summary": "In late August 1941 German units murdered about 23,600 Jews at Kamianets-Podilskyi, including thousands deported from Hungary. The Red Army retook the area in March-April 1944, when German forces were encircled in the Kamianets-Podilskyi pocket.",
+      "military": "Kamenets-Podolsky pocket (Hube's Pocket) during the Proskurov-Chernovtsy offensive.",
+      "places": [
+        "Kamianets-Podilskyi"
+      ],
+      "links": [
+        {
+          "title": "Kamianets-Podilskyi massacre",
+          "url": "https://en.wikipedia.org/wiki/Kamianets-Podilskyi_massacre"
+        },
+        {
+          "title": "Kamenets–Podolsky pocket",
+          "url": "https://en.wikipedia.org/wiki/Kamenets%E2%80%93Podolsky_pocket"
+        }
+      ]
+    },
+    "postwar-ussr": {
+      "control": "Ukrainian SSR",
+      "summary": "The area suffered in the 1946-1947 famine. In 1954, for the 300th anniversary of the Pereiaslav agreement, Proskuriv was renamed Khmelnytskyi and the oblast took the same name.",
+      "military": "UPA groups were active in the oblast's Volhynian north until about 1950.",
+      "places": [
+        "Khmelnytskyi"
+      ],
+      "links": [
+        {
+          "title": "Soviet famine of 1946-1947",
+          "url": "https://en.wikipedia.org/wiki/Soviet_famine_of_1946%E2%80%931947"
+        }
+      ]
+    },
+    "soviet-ukraine-late": {
+      "control": "Ukrainian SSR",
+      "summary": "Khmelnytskyi became an industrial city, Kamianets-Podilskyi a historical reserve, and the Khmelnytskyi Nuclear Power Plant at Netishyn began operating in 1987.",
+      "military": "Starokostiantyniv hosted a major Soviet air base.",
+      "places": [
+        "Khmelnytskyi Nuclear Power Plant",
+        "Starokostiantyniv"
+      ],
+      "links": [
+        {
+          "title": "Khmelnytskyi Nuclear Power Plant",
+          "url": "https://en.wikipedia.org/wiki/Khmelnytskyi_Nuclear_Power_Plant"
+        }
+      ]
+    },
+    "independence": {
+      "control": "Ukraine",
+      "summary": "Khmelnytskyi's huge wholesale market became one of the largest in Eastern Europe, while Kamianets-Podilskyi developed tourism around its castle.",
+      "military": "The 7th Tactical Aviation Brigade with Su-24 bombers was based at Starokostiantyniv.",
+      "places": [
+        "Khmelnytskyi",
+        "Starokostiantyniv"
+      ],
+      "links": [
+        {
+          "title": "Starokostiantyniv Air Base",
+          "url": "https://en.wikipedia.org/wiki/Starokostiantyniv_Air_Base"
+        }
+      ]
+    },
+    "orange-to-euromaidan": {
+      "control": "Ukraine",
+      "summary": "The oblast backed Yushchenko in 2004; on 19 February 2014 a shooting at the SBU building in Khmelnytskyi killed a protester during Euromaidan.",
+      "military": null,
+      "places": [
+        "Khmelnytskyi"
+      ],
+      "links": [
+        {
+          "title": "Euromaidan",
+          "url": "https://en.wikipedia.org/wiki/Euromaidan"
+        }
+      ]
+    },
+    "crimea-donbas-war": {
+      "control": "Ukraine",
+      "summary": "Units and volunteers from the oblast served in the Donbas, and the Khmelnytskyi-based 8th Special Purpose Regiment fought there.",
+      "military": "The 8th Special Purpose Regiment took part in the battles of 2014-2015.",
+      "places": [
+        "Khmelnytskyi"
+      ],
+      "links": [
+        {
+          "title": "Special forces of Ukraine",
+          "url": "https://en.wikipedia.org/wiki/Special_forces_of_Ukraine"
+        }
+      ]
+    },
+    "full-scale-invasion": {
+      "control": "Ukraine (rear area)",
+      "summary": "Starokostiantyniv air base was hit on the first day of the invasion and repeatedly thereafter; the oblast received many displaced people.",
+      "military": "Su-24 bombers from Starokostiantyniv later launched Storm Shadow cruise missiles.",
+      "places": [
+        "Starokostiantyniv Air Base"
+      ],
+      "links": [
+        {
+          "title": "Starokostiantyniv Air Base",
+          "url": "https://en.wikipedia.org/wiki/Starokostiantyniv_Air_Base"
+        }
+      ]
+    },
+    "war-of-attrition": {
+      "control": "Ukraine (rear area)",
+      "summary": "Missile and drone attacks targeted Starokostiantyniv and Khmelnytskyi; a November 2023 drone strike in nearby Slavuta damaged buildings and cut power lines at the Khmelnytskyi NPP, according to the IAEA.",
+      "military": "Starokostiantyniv air base remained one of Russia's most frequently attacked targets.",
+      "places": [
+        "Slavuta",
+        "Khmelnytskyi Nuclear Power Plant"
+      ],
+      "links": [
+        {
+          "title": "Khmelnytskyi Nuclear Power Plant",
+          "url": "https://en.wikipedia.org/wiki/Khmelnytskyi_Nuclear_Power_Plant"
+        }
+      ]
+    },
+    "war-2025-2026": {
+      "control": "Ukraine (rear area)",
+      "summary": "Strikes on the Starokostiantyniv air base and on energy infrastructure continued, and explosions were reported in Khmelnytskyi during the November 2025 attack on western Ukraine. Information on 2026 is limited.",
+      "military": "Starokostiantyniv remained a key Ukrainian air base and target.",
+      "places": [
+        "Starokostiantyniv"
+      ],
+      "links": [
+        {
+          "title": "Khmelnytskyi Oblast",
+          "url": "https://en.wikipedia.org/wiki/Khmelnytskyi_Oblast"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "title": "Khmelnytskyi Oblast (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Khmelnytskyi_Oblast"
+    },
+    {
+      "title": "Podolia (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Podolia"
+    },
+    {
+      "title": "Podilia (Encyclopedia of Ukraine)",
+      "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CP%5CO%5CPodilia.htm"
+    }
+  ]
+}
+}
+}

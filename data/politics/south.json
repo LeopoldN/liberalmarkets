@@ -1,0 +1,1724 @@
+{
+  "group": "south",
+  "generated": "2026-11-03",
+  "parties": {
+    "Ukrainian_Socialist-Revolutionary_Party": {
+      "name": "Ukrainian Socialist-Revolutionary Party",
+      "abbr": "UPSR",
+      "leaning": "Left-wing, agrarian socialism, Ukrainian autonomism",
+      "summary": "The largest party of the Central Rada, a peasant-based socialist party that sought land reform and Ukrainian autonomy, later independence. In the Kherson district of the 1917 Constituent Assembly election it ran on a joint list with the Russian SRs and Jewish socialists.",
+      "founded": 1917, "dissolved": 1950,
+      "color": "#c8102e",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Socialist-Revolutionary_Party"
+    },
+    "Socialist_Revolutionary_Party": {
+      "name": "Socialist Revolutionary Party",
+      "abbr": "SR",
+      "leaning": "Left-wing, agrarian socialism, populism",
+      "summary": "The main Russian peasant socialist party, which won the most votes in the 1917 Constituent Assembly election, including in Taurida and Bessarabia. It was suppressed by the Bolsheviks after 1918.",
+      "founded": 1902, "dissolved": 1940,
+      "color": "#d9534f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Socialist_Revolutionary_Party"
+    },
+    "Bolsheviks": {
+      "name": "Bolsheviks (RSDLP(b), later Russian Communist Party)",
+      "abbr": "RSDLP(b)",
+      "leaning": "Far-left, Marxism-Leninism",
+      "summary": "Lenin's faction of the Russian Social Democratic Labour Party, which seized power in October 1917 and set up Soviet republics in Odesa, Taurida and elsewhere in 1918.",
+      "founded": 1903, "dissolved": 1918,
+      "color": "#cc0000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bolsheviks"
+    },
+    "Ukrainian_Social_Democratic_Labour_Party": {
+      "name": "Ukrainian Social Democratic Labour Party",
+      "abbr": "USDLP",
+      "leaning": "Centre-left to left-wing, social democracy",
+      "summary": "A Marxist Ukrainian party led by Volodymyr Vynnychenko and Symon Petliura that dominated the General Secretariat of the Central Rada and the Directorate.",
+      "founded": 1905, "dissolved": 1950,
+      "color": "#e2725b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Social_Democratic_Labour_Party"
+    },
+    "Constitutional_Democratic_Party": {
+      "name": "Constitutional Democratic Party (Kadets)",
+      "abbr": "Kadets",
+      "leaning": "Centre to centre-right, liberalism, constitutional monarchism",
+      "summary": "Russia's main liberal party, strong among urban professionals. Kadets led the Crimean Regional Government of Solomon Krym in 1918-1919 and backed the White movement.",
+      "founded": 1905, "dissolved": 1917,
+      "color": "#3a75c4",
+      "wikipedia": "https://en.wikipedia.org/wiki/Constitutional_Democratic_Party"
+    },
+    "Milliy_Firqa": {
+      "name": "Milliy Firqa (National Party)",
+      "abbr": "MF",
+      "leaning": "Crimean Tatar nationalism, democratic socialism",
+      "summary": "Crimean Tatar national party founded in 1917 that dominated the Kurultai and the Crimean People's Republic; its leaders Noman Çelebicihan and Cafer Seydahmet headed the 1917 Muslim list in Taurida. It was suppressed by the Soviets in the 1920s.",
+      "founded": 1917, "dissolved": 1928,
+      "color": "#009fe3",
+      "wikipedia": "https://en.wikipedia.org/wiki/Milliy_Firqa"
+    },
+    "Borotbists": {
+      "name": "Borotbists (Ukrainian Communist Party (Borotbists))",
+      "abbr": "UKP(b)",
+      "leaning": "Far-left, national communism",
+      "summary": "The left wing of the Ukrainian SRs, which allied with the Bolsheviks in 1919 and merged into the Communist Party (Bolsheviks) of Ukraine in 1920.",
+      "founded": 1918, "dissolved": 1920,
+      "wikipedia": "https://en.wikipedia.org/wiki/Borotbists"
+    },
+    "Communist_Party_of_Ukraine_(Soviet_Union)": {
+      "name": "Communist Party (Bolsheviks) of Ukraine / Communist Party of Ukraine",
+      "abbr": "KP(b)U / CPU",
+      "leaning": "Far-left, Marxism-Leninism",
+      "summary": "The ruling and only legal party of the Ukrainian SSR, a branch of the Soviet Communist Party; it was banned after the August 1991 coup attempt.",
+      "founded": 1918, "dissolved": 1991,
+      "color": "#cc0000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Communist_Party_of_Ukraine_(Soviet_Union)"
+    },
+    "Communist_Party_of_the_Soviet_Union": {
+      "name": "Communist Party of the Soviet Union (RCP(b), VKP(b))",
+      "abbr": "CPSU",
+      "leaning": "Far-left, Marxism-Leninism",
+      "summary": "The ruling party of the USSR. Crimea belonged to the Russian SFSR until 1954, so its party organisation reported directly to the Russian/All-Union party rather than to the Ukrainian branch.",
+      "founded": 1912, "dissolved": 1991,
+      "color": "#cc0000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Communist_Party_of_the_Soviet_Union"
+    },
+    "Nazi_Party": {
+      "name": "National Socialist German Workers' Party",
+      "abbr": "NSDAP",
+      "leaning": "Far-right, Nazism",
+      "summary": "The ruling party of Nazi Germany, whose civil administration (Reichskommissariat Ukraine, Generalbezirk Nikolajew) and military government ran occupied southern Ukraine and Crimea in 1941-1944.",
+      "founded": 1920, "dissolved": 1945,
+      "color": "#7a4a2a",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nazi_Party"
+    },
+    "Communist_Party_of_Ukraine": {
+      "name": "Communist Party of Ukraine",
+      "abbr": "KPU",
+      "leaning": "Far-left, Marxism-Leninism, Russophile",
+      "summary": "Successor party refounded in 1993, strong in Crimea and the south in the 1990s; it won 38 of 100 seats in the 1998 Crimean parliament. A Ukrainian court banned it in 2022.",
+      "founded": 1993, "dissolved": 2022,
+      "color": "#cc0000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Communist_Party_of_Ukraine"
+    },
+    "Party_of_Regions": {
+      "name": "Party of Regions",
+      "abbr": "PoR",
+      "leaning": "Big tent, Russophile, regionalist",
+      "summary": "Viktor Yanukovych's party, based in the east and south, which dominated the councils of Crimea, Sevastopol, Odesa, Mykolaiv and Kherson from 2006 until 2014 and collapsed after the Euromaidan.",
+      "founded": 1997, "dissolved": 2014,
+      "color": "#1f5fbf",
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Regions"
+    },
+    "x:Russia_Bloc": {
+      "name": "Russia Bloc (Blok Rossiya)",
+      "abbr": "Russia",
+      "leaning": "Russian nationalism, Crimean separatism",
+      "summary": "Electoral alliance led by the Republican Movement of Crimea that won the 1994 Crimean presidential election for Yuriy Meshkov and 57 of 100 seats in the Supreme Council; it split within a year. Source: Wikipedia, 1994 Crimean parliamentary election.",
+      "founded": 1994, "dissolved": 1995,
+      "wikipedia": null
+    },
+    "Russian_Bloc": {
+      "name": "Russian Bloc",
+      "abbr": "RB",
+      "leaning": "Russian nationalism, pro-Russian",
+      "summary": "Pro-Russian alliance and later party based in Crimea and Sevastopol, which won 3 seats in the 2002 Crimean parliament; it later joined the Party of Regions' orbit.",
+      "founded": 2001, "dissolved": 2014,
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Bloc"
+    },
+    "People's_Democratic_Party_(Ukraine)": {
+      "name": "People's Democratic Party",
+      "abbr": "NDP",
+      "leaning": "Centre, pro-presidential",
+      "summary": "The 'party of power' that backed President Leonid Kuchma in the late 1990s; it won 4 seats in Crimea in 1998 and 8 in 2002.",
+      "founded": 1996, "dissolved": 2012,
+      "wikipedia": "https://en.wikipedia.org/wiki/People%27s_Democratic_Party_(Ukraine)"
+    },
+    "People's_Party_(Ukraine)": {
+      "name": "Agrarian Party of Ukraine (later People's Party)",
+      "abbr": "APU",
+      "leaning": "Centre, agrarianism",
+      "summary": "Agrarian party of collective-farm managers allied with the Kuchma administration, renamed the People's Party under Volodymyr Lytvyn in 2005; it won 5 Crimean seats in 1998 and 11 in 2002.",
+      "founded": 1996,
+      "wikipedia": "https://en.wikipedia.org/wiki/People%27s_Party_(Ukraine)"
+    },
+    "Social_Democratic_Party_of_Ukraine_(united)": {
+      "name": "Social Democratic Party of Ukraine (united)",
+      "abbr": "SDPU(o)",
+      "leaning": "Centre, oligarchic, pro-Kuchma",
+      "summary": "Party linked to Viktor Medvedchuk and the Kyiv business clan, which won 3 seats in the 2002 Crimean parliament.",
+      "founded": 1990,
+      "wikipedia": "https://en.wikipedia.org/wiki/Social_Democratic_Party_of_Ukraine_(united)"
+    },
+    "Party_of_Economic_Revival": {
+      "name": "Party of Economic Revival of Crimea",
+      "abbr": "PERC",
+      "leaning": "Centre, business-oriented regionalism",
+      "summary": "Crimean regional party of local business interests, which won 3 seats in 1994 and 1 in 1998.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Economic_Revival"
+    },
+    "Republican_Party_of_Crimea": {
+      "name": "Republican Party of Crimea",
+      "abbr": "RPK",
+      "leaning": "Russian nationalism, Crimean separatism",
+      "summary": "Successor of Yuriy Meshkov's Republican Movement of Crimea, the core of the Russia Bloc, campaigning for Crimea's union with Russia in the early 1990s.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Republican_Party_of_Crimea"
+    },
+    "Soyuz_(political_party)": {
+      "name": "Soyuz (Union)",
+      "abbr": "Soyuz",
+      "leaning": "Pro-Russian, Russophile",
+      "summary": "Crimean pro-Russian party that won seats in the Crimean parliament in 1998, 2006 and 2010, generally allied with the Party of Regions.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Soyuz_(political_party)"
+    },
+    "Qurultai-Rukh": {
+      "name": "Qurultai-Rukh",
+      "abbr": "QR",
+      "leaning": "Crimean Tatar interests, pro-Ukrainian",
+      "summary": "Electoral list representing the Mejlis of the Crimean Tatar People together with the People's Movement of Ukraine (Rukh); it won 8 seats in 2006 and 5 in 2010.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Qurultai-Rukh"
+    },
+    "Russian_Unity": {
+      "name": "Russian Unity",
+      "abbr": "RE",
+      "leaning": "Russian nationalism, pro-Russian",
+      "summary": "Party of Sergey Aksyonov, who used it as a base to become Russian-installed head of Crimea in February 2014; it won 3 seats in 2010 and merged into United Russia in 2014.",
+      "founded": 2008, "dissolved": 2014,
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Unity"
+    },
+    "Strong_Ukraine": {
+      "name": "Strong Ukraine",
+      "abbr": "SU",
+      "leaning": "Centre",
+      "summary": "Serhiy Tihipko's party, which won 2 seats in the 2010 Crimean parliament before merging into the Party of Regions in 2012.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Strong_Ukraine"
+    },
+    "For_Yanukovych!": {
+      "name": "For Yanukovych! bloc",
+      "abbr": "ZaYa",
+      "leaning": "Pro-Russian, Russophile",
+      "summary": "Party of Regions-led alliance with the Russian Bloc that won the 2006 Crimean parliamentary election with 44 of 100 seats.",
+      "founded": 2006, "dissolved": 2010,
+      "color": "#1f5fbf",
+      "wikipedia": "https://en.wikipedia.org/wiki/For_Yanukovych!"
+    },
+    "Electoral_Bloc_of_Kunitsyn": {
+      "name": "Electoral Bloc of Kunitsyn",
+      "abbr": "Kunitsyn",
+      "leaning": "Centre, Crimean regionalism",
+      "summary": "Alliance around former Crimean prime minister Serhiy Kunitsyn that won 10 seats in 2006.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Electoral_Bloc_of_Kunitsyn"
+    },
+    "Yulia_Tymoshenko_Bloc": {
+      "name": "Yulia Tymoshenko Bloc",
+      "abbr": "BYuT",
+      "leaning": "Centre-right, populism, pro-European",
+      "summary": "Yulia Tymoshenko's alliance, the main Orange camp force in the 2000s, which won 8 seats in the 2006 Crimean parliament.",
+      "founded": 2001, "dissolved": 2012,
+      "color": "#ef3e33",
+      "wikipedia": "https://en.wikipedia.org/wiki/Yulia_Tymoshenko_Bloc"
+    },
+    "People's_Opposition_Bloc_of_Natalia_Vitrenko": {
+      "name": "People's Opposition Bloc of Natalia Vitrenko",
+      "abbr": "Vitrenko",
+      "leaning": "Far-left, pro-Russian",
+      "summary": "Natalia Vitrenko's Progressive Socialist-led alliance, which won 7 seats in the 2006 Crimean parliament.",
+      "wikipedia": "https://en.wikipedia.org/wiki/People%27s_Opposition_Bloc_of_Natalia_Vitrenko"
+    },
+    "Ne_Tak": {
+      "name": "Ne Tak! (Not So!)",
+      "abbr": "Ne Tak",
+      "leaning": "Centre, pro-Russian",
+      "summary": "Alliance led by the Social Democratic Party of Ukraine (united) that won 4 seats in the 2006 Crimean parliament.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ne_Tak"
+    },
+    "Qurultay_of_the_Crimean_Tatar_People": {
+      "name": "Qurultay (Kurultai) of the Crimean Tatar People",
+      "abbr": "Qurultay",
+      "leaning": "Crimean Tatar national representation",
+      "summary": "The national assembly of the Crimean Tatars, first convened in December 1917, when it proclaimed the Crimean People's Republic, and revived in 1991. In 1994 the Qurultay ran its own list and won the 14 reserved Crimean Tatar seats plus others (16 in all).",
+      "founded": 1917,
+      "wikipedia": "https://en.wikipedia.org/wiki/Qurultay_of_the_Crimean_Tatar_People"
+    },
+    "Mejlis_of_the_Crimean_Tatar_People": {
+      "name": "Mejlis of the Crimean Tatar People",
+      "abbr": "Mejlis",
+      "leaning": "Crimean Tatar self-government, pro-Ukrainian",
+      "summary": "The executive body elected by the Qurultay since 1991, led by Mustafa Dzhemilev and then Refat Chubarov. Russian occupation authorities banned it as 'extremist' in 2016; Ukraine recognises it as the representative body of the Crimean Tatars.",
+      "founded": 1991,
+      "color": "#00a3e0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mejlis_of_the_Crimean_Tatar_People"
+    },
+    "Opposition_Bloc": {
+      "name": "Opposition Bloc",
+      "abbr": "OB",
+      "leaning": "Big tent, Russophile, regionalist",
+      "summary": "Successor alliance of the Party of Regions formed in 2014, the largest faction in the Odesa and Mykolaiv oblast councils after 2015.",
+      "founded": 2014,
+      "color": "#3a5fcd",
+      "wikipedia": "https://en.wikipedia.org/wiki/Opposition_Bloc"
+    },
+    "European_Solidarity": {
+      "name": "European Solidarity (formerly Petro Poroshenko Bloc 'Solidarity')",
+      "abbr": "YeS / BPP",
+      "leaning": "Centre-right, liberal conservatism, pro-European",
+      "summary": "Petro Poroshenko's party, which ran as 'Solidarity' in the 2015 local elections and as European Solidarity from 2019.",
+      "founded": 2000,
+      "color": "#8a1e5f",
+      "wikipedia": "https://en.wikipedia.org/wiki/European_Solidarity"
+    },
+    "Batkivshchyna": {
+      "name": "Batkivshchyna (All-Ukrainian Union 'Fatherland')",
+      "abbr": "Batkivshchyna",
+      "leaning": "Centre-right, populism, pro-European",
+      "summary": "Yulia Tymoshenko's party, represented in all southern oblast councils after 2015.",
+      "founded": 1999,
+      "color": "#d1121a",
+      "wikipedia": "https://en.wikipedia.org/wiki/Batkivshchyna"
+    },
+    "x:Trust_the_Deeds": {
+      "name": "Trust the Deeds (Doviriai dilam)",
+      "abbr": "TtD",
+      "leaning": "Regionalist, centrist",
+      "summary": "Odesa-based party associated with city mayor Hennadiy Trukhanov, which won 12 seats on the Odesa Oblast Council in 2015 and 11 in 2020. Source: Wikipedia, Odesa Oblast Council.",
+      "founded": 2015,
+      "wikipedia": null
+    },
+    "Revival_(Ukraine)": {
+      "name": "Revival (Vidrodzhennia)",
+      "abbr": "Revival",
+      "leaning": "Centre, regionalist",
+      "summary": "Party formed largely by ex-Party of Regions politicians, which won seats on the Odesa and Mykolaiv oblast councils in 2015.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Revival_(Ukraine)"
+    },
+    "Our_Land_(Ukraine)": {
+      "name": "Our Land (Nash Krai)",
+      "abbr": "Nash Krai",
+      "leaning": "Centre, regionalism",
+      "summary": "Party of local officials founded in 2011, strong in Mykolaiv and Kherson oblasts in 2015 and 2020.",
+      "founded": 2011,
+      "wikipedia": "https://en.wikipedia.org/wiki/Our_Land_(Ukraine)"
+    },
+    "Servant_of_the_People": {
+      "name": "Servant of the People",
+      "abbr": "SN",
+      "leaning": "Centre, big tent, pro-European",
+      "summary": "President Volodymyr Zelenskyy's party, the ruling national party since 2019; it took part in governing coalitions in the Mykolaiv and Kherson oblast councils after 2020.",
+      "founded": 2017,
+      "color": "#2bad4a",
+      "wikipedia": "https://en.wikipedia.org/wiki/Servant_of_the_People"
+    },
+    "Opposition_Platform_–_For_Life": {
+      "name": "Opposition Platform — For Life",
+      "abbr": "OPZZh",
+      "leaning": "Big tent, Russophile",
+      "summary": "Viktor Medvedchuk's and Yuriy Boyko's pro-Russian party, the largest faction in the Odesa, Mykolaiv and Kherson oblast councils after 2020. It was suspended in March 2022 and banned by a court in June 2022.",
+      "founded": 2018, "dissolved": 2022,
+      "color": "#1c3f94",
+      "wikipedia": "https://en.wikipedia.org/wiki/Opposition_Platform_%E2%80%93_For_Life"
+    },
+    "For_the_Future_(political_party)": {
+      "name": "For the Future",
+      "abbr": "ZM",
+      "leaning": "Centre",
+      "summary": "Party associated with Ihor Kolomoyskyi's circle, which won seats on the Odesa and Mykolaiv oblast councils in 2020.",
+      "founded": 2019,
+      "wikipedia": "https://en.wikipedia.org/wiki/For_the_Future_(political_party)"
+    },
+    "Party_of_Shariy": {
+      "name": "Party of Shariy",
+      "abbr": "PSh",
+      "leaning": "Russophile, populism",
+      "summary": "Party of blogger Anatoliy Shariy, which won 6 seats on the Odesa Oblast Council in 2020; it was banned in 2022.",
+      "founded": 2019, "dissolved": 2022,
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Shariy"
+    },
+    "Proposition_(political_party)": {
+      "name": "Proposition",
+      "abbr": "Propozytsiia",
+      "leaning": "Centre, regionalism",
+      "summary": "A party of mayors founded in 2020, including Mykolaiv mayor Oleksandr Senkevych; it won 7 seats on the Mykolaiv Oblast Council in 2020.",
+      "founded": 2020,
+      "wikipedia": "https://en.wikipedia.org/wiki/Proposition_(political_party)"
+    },
+    "UKROP": {
+      "name": "UKROP (Ukrainian Association of Patriots)",
+      "abbr": "UKROP",
+      "leaning": "Right-wing, Ukrainian nationalism",
+      "summary": "Patriotic party linked to Ihor Kolomoyskyi and Hennadiy Korban, which won seats in Mykolaiv and Kherson oblast councils in 2015.",
+      "founded": 2015,
+      "wikipedia": "https://en.wikipedia.org/wiki/UKROP"
+    },
+    "x:New_State": {
+      "name": "New State (Nova Derzhava)",
+      "abbr": "ND",
+      "leaning": "Left-wing",
+      "summary": "Small party whose list included former members of the Communist Party; it won 4 seats on the Mykolaiv Oblast Council in 2015. Source: Wikipedia, Mykolaiv Oblast Council.",
+      "wikipedia": null
+    },
+    "Radical_Party_of_Oleh_Liashko": {
+      "name": "Radical Party of Oleh Liashko",
+      "abbr": "RPL",
+      "leaning": "Populism, Ukrainian nationalism",
+      "summary": "Oleh Liashko's populist party, which won 6 seats on the Kherson Oblast Council in 2015.",
+      "founded": 2010,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radical_Party_of_Oleh_Liashko"
+    },
+    "Self_Reliance_(political_party)": {
+      "name": "Self Reliance (Samopomich)",
+      "abbr": "Samopomich",
+      "leaning": "Centre-right, Christian democracy",
+      "summary": "Lviv mayor Andriy Sadovyi's party, which won 5 seats on the Kherson Oblast Council in 2015.",
+      "founded": 2012,
+      "wikipedia": "https://en.wikipedia.org/wiki/Self_Reliance_(political_party)"
+    },
+    "x:We_Have_to_Live_Here": {
+      "name": "We Have to Live Here (Kolykhaiev party)",
+      "abbr": "NZhT",
+      "leaning": "Regionalism",
+      "summary": "Local party of Kherson mayor Ihor Kolykhaiev, which won 13 seats on the Kherson Oblast Council in 2020 and joined its governing majority. Source: Wikipedia, Kherson Oblast Council.",
+      "founded": 2020,
+      "wikipedia": null
+    },
+    "x:Volodymyr_Saldo_Bloc": {
+      "name": "Volodymyr Saldo Bloc",
+      "abbr": "Saldo",
+      "leaning": "Pro-Russian, regionalism",
+      "summary": "Local list of former Kherson mayor Volodymyr Saldo, which won 5 seats in 2020; after Saldo became Russia's installed governor in 2022 the faction dissolved and a court banned the party. Source: Wikipedia, Kherson Oblast Council.",
+      "founded": 2020, "dissolved": 2022,
+      "wikipedia": null
+    },
+    "United_Russia": {
+      "name": "United Russia",
+      "abbr": "ER",
+      "leaning": "Big tent, Russian nationalism, Putinism",
+      "summary": "Russia's ruling party. Since 2014 it has dominated the Russian-installed, internationally unrecognised legislatures of occupied Crimea and Sevastopol, and since 2023 those set up in occupied Kherson Oblast.",
+      "founded": 2001,
+      "color": "#2c5aa0",
+      "wikipedia": "https://en.wikipedia.org/wiki/United_Russia"
+    },
+    "Liberal_Democratic_Party_of_Russia": {
+      "name": "Liberal Democratic Party of Russia",
+      "abbr": "LDPR",
+      "leaning": "Far-right, Russian ultranationalism",
+      "summary": "Russian nationalist party founded by Vladimir Zhirinovsky, represented in the Russian-installed bodies in Crimea and Sevastopol since 2014.",
+      "founded": 1989,
+      "color": "#e4b400",
+      "wikipedia": "https://en.wikipedia.org/wiki/Liberal_Democratic_Party_of_Russia"
+    },
+    "Communist_Party_of_the_Russian_Federation": {
+      "name": "Communist Party of the Russian Federation",
+      "abbr": "KPRF",
+      "leaning": "Left-wing to far-left, Russian nationalism",
+      "summary": "Russia's largest communist party, a loyal parliamentary opposition, represented in the Russian-installed bodies in Crimea and Sevastopol since 2019.",
+      "founded": 1993,
+      "color": "#b40000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Communist_Party_of_the_Russian_Federation"
+    },
+    "A_Just_Russia": {
+      "name": "A Just Russia — For Truth",
+      "abbr": "SRZP",
+      "leaning": "Centre-left, social democracy, Russian nationalism",
+      "summary": "Kremlin-loyal Russian left-of-centre party, holding a seat in the Russian-installed Crimean and Sevastopol bodies.",
+      "founded": 2006,
+      "wikipedia": "https://en.wikipedia.org/wiki/A_Just_Russia"
+    },
+    "New_People_(Russia)": {
+      "name": "New People",
+      "abbr": "NL",
+      "leaning": "Centre-right, liberalism",
+      "summary": "Russian party founded in 2020 that won 2 seats in the Russian-installed Sevastopol assembly in 2024.",
+      "founded": 2020,
+      "wikipedia": "https://en.wikipedia.org/wiki/New_People_(Russia)"
+    },
+    "Russian_Party_of_Pensioners_for_Social_Justice": {
+      "name": "Russian Party of Pensioners for Social Justice",
+      "abbr": "RPPSJ",
+      "leaning": "Centre-left, pensioners' interests",
+      "summary": "Small Russian party that won one seat in the Russian-installed Sevastopol assembly in 2019.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Party_of_Pensioners_for_Social_Justice"
+    }
+  },
+  "armedGroups": {
+    "Ukrainian_People's_Army": {
+      "name": "Army of the Ukrainian People's Republic",
+      "type": "National army",
+      "side": "Ukrainian People's Republic",
+      "summary": "The armed forces of the UNR and the Directorate in 1917-1921, including haidamak units and Free Cossack volunteers.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_People%27s_Army"
+    },
+    "Free_Cossacks": {
+      "name": "Free Cossacks",
+      "type": "Volunteer self-defence militia",
+      "side": "Ukrainian People's Republic",
+      "summary": "Territorial militia formed in 1917 that defended the Central Rada against Bolshevik forces, with branches in Kherson Governorate.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Free_Cossacks"
+    },
+    "Red_Guards_(Russia)": {
+      "name": "Red Guards",
+      "type": "Workers' and sailors' paramilitary",
+      "side": "Bolsheviks",
+      "summary": "Armed Bolshevik worker and sailor detachments of 1917-1918, which seized Odesa, Mykolaiv, Kherson and Sevastopol in early 1918.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Red_Guards_(Russia)"
+    },
+    "Red_Army": {
+      "name": "Red Army",
+      "type": "Regular army",
+      "side": "Soviet Russia / USSR",
+      "summary": "The army of Soviet Russia and the USSR from 1918 to 1946, which conquered southern Ukraine and Crimea in 1919-1920 and fought there in 1941-1944.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Red_Army"
+    },
+    "Imperial_German_Army": {
+      "name": "Imperial German Army",
+      "type": "Regular army (occupation force)",
+      "side": "German Empire",
+      "summary": "German troops entered southern Ukraine and Crimea in spring 1918 under the Brest-Litovsk treaty with the UNR and withdrew after November 1918.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Imperial_German_Army"
+    },
+    "Austro-Hungarian_Army": {
+      "name": "Austro-Hungarian Army",
+      "type": "Regular army (occupation force)",
+      "side": "Austria-Hungary",
+      "summary": "Austro-Hungarian forces occupied Odesa and much of Kherson Governorate in March-November 1918.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Austro-Hungarian_Army"
+    },
+    "French_Army": {
+      "name": "French Army (Allied intervention)",
+      "type": "Regular army (intervention force)",
+      "side": "Entente",
+      "summary": "French, Greek and other Allied troops landed at Odesa, Mykolaiv, Kherson and Sevastopol in December 1918 and evacuated in March-April 1919.",
+      "wikipedia": "https://en.wikipedia.org/wiki/French_Army"
+    },
+    "Volunteer_Army": {
+      "name": "Volunteer Army",
+      "type": "White army",
+      "side": "White movement",
+      "summary": "The core White army of Generals Alekseyev, Kornilov and Denikin, which held Odesa with Allied support in late 1918 and returned to the south in 1919.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Volunteer_Army"
+    },
+    "Armed_Forces_of_South_Russia": {
+      "name": "Armed Forces of South Russia",
+      "type": "White army group",
+      "side": "White movement",
+      "summary": "Denikin's combined White forces, which took Odesa, Mykolaiv, Kherson and Crimea in summer 1919 and retreated in early 1920.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Armed_Forces_of_South_Russia"
+    },
+    "Army_of_Wrangel": {
+      "name": "Russian Army of Wrangel",
+      "type": "White army",
+      "side": "White movement",
+      "summary": "Baron Pyotr Wrangel's army, which held Crimea and northern Taurida in 1920 and was evacuated from Sevastopol and other Crimean ports in November 1920.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Army_of_Wrangel"
+    },
+    "Nykyfor_Hryhoriv": {
+      "name": "Hryhoriv's insurgent forces",
+      "type": "Peasant insurgent army",
+      "side": "Independent otaman (UNR, then Red, then anti-Bolshevik)",
+      "summary": "Otaman Nykyfor Hryhoriv's peasant army from the Kherson steppe, which drove the Allies from Kherson, Mykolaiv and Odesa in March-April 1919 for the Bolsheviks and then rebelled against them in May 1919; it carried out major pogroms.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nykyfor_Hryhoriv"
+    },
+    "Revolutionary_Insurgent_Army_of_Ukraine": {
+      "name": "Revolutionary Insurgent Army of Ukraine (Makhnovshchina)",
+      "type": "Anarchist insurgent army",
+      "side": "Makhnovist anarchists",
+      "summary": "Nestor Makhno's anarchist army, which raided across the southern steppe and in November 1920 helped the Red Army break into Crimea through the Syvash.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Revolutionary_Insurgent_Army_of_Ukraine"
+    },
+    "Romanian_Land_Forces": {
+      "name": "Romanian Army",
+      "type": "Regular army",
+      "side": "Kingdom of Romania",
+      "summary": "Romanian troops entered Bessarabia in 1918 and garrisoned it until 1940; in 1941-1944 they besieged Odesa, administered Transnistria and fought in Crimea alongside the Wehrmacht.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Romanian_Land_Forces"
+    },
+    "Black_Sea_Fleet": {
+      "name": "Black Sea Fleet",
+      "type": "Navy fleet",
+      "side": "Russian Empire / USSR / Russian Federation",
+      "summary": "The fleet based at Sevastopol since 1783. Its sailors were a revolutionary force in 1917-1918; in Soviet times it dominated Crimea; after 1991 it was divided between Russia and Ukraine, and in 2014 it was used in Russia's seizure of Crimea.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Black_Sea_Fleet"
+    },
+    "Separate_Coastal_Army": {
+      "name": "Separate Coastal Army",
+      "type": "Soviet field army",
+      "side": "USSR",
+      "summary": "Soviet army formed to defend Odesa in 1941; after evacuating by sea it defended Sevastopol until July 1942.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Separate_Coastal_Army"
+    },
+    "Soviet_partisans": {
+      "name": "Soviet partisans",
+      "type": "Resistance / irregular forces",
+      "side": "USSR",
+      "summary": "Communist-led partisans who fought the Axis occupation, notably in the Odesa catacombs and the Crimean Mountains in 1941-1944.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Soviet_partisans"
+    },
+    "11th_Army_(Wehrmacht)": {
+      "name": "11th Army (Wehrmacht)",
+      "type": "German field army",
+      "side": "Nazi Germany",
+      "summary": "Erich von Manstein's army, which advanced through Mykolaiv and Kherson in 1941, conquered Crimea and took Sevastopol in July 1942.",
+      "wikipedia": "https://en.wikipedia.org/wiki/11th_Army_(Wehrmacht)"
+    },
+    "Einsatzgruppen": {
+      "name": "Einsatzgruppen (Einsatzgruppe D)",
+      "type": "SS mobile killing units",
+      "side": "Nazi Germany",
+      "summary": "SS death squads; Einsatzgruppe D, attached to the 11th Army, murdered the Jews of Mykolaiv, Kherson and Crimea in 1941-1942.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Einsatzgruppen"
+    },
+    "Schutzmannschaft": {
+      "name": "Schutzmannschaft (auxiliary police battalions)",
+      "type": "Collaborationist auxiliary police",
+      "side": "Nazi Germany",
+      "summary": "Auxiliary police battalions recruited from the local population in occupied Soviet territory, including Crimean Tatar battalions formed in Crimea in 1942.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Schutzmannschaft"
+    },
+    "NKVD": {
+      "name": "NKVD",
+      "type": "Soviet security and internal troops",
+      "side": "USSR",
+      "summary": "The Soviet interior ministry and secret police, which carried out the Great Terror and in May 1944 deported the entire Crimean Tatar nation to Central Asia.",
+      "wikipedia": "https://en.wikipedia.org/wiki/NKVD"
+    },
+    "Odessa_Military_District": {
+      "name": "Odessa Military District",
+      "type": "Military district",
+      "side": "USSR, then Ukraine",
+      "summary": "Soviet military district headquartered in Odesa, covering the southern oblasts; in 1992 it passed to Ukraine and later became the Southern Operational Command.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Odessa_Military_District"
+    },
+    "Soviet_Navy": {
+      "name": "Soviet Navy",
+      "type": "Navy",
+      "side": "USSR",
+      "summary": "The navy of the USSR, whose largest surface ships, including all its aircraft carriers, were built at the Mykolaiv shipyards.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Soviet_Navy"
+    },
+    "Ukrainian_Navy": {
+      "name": "Ukrainian Navy",
+      "type": "Navy",
+      "side": "Ukraine",
+      "summary": "Ukraine's navy, created in 1992 from part of the Black Sea Fleet and based at Sevastopol until 2014, then at Odesa; since 2022 it has fought the Russian fleet mainly with missiles and naval drones.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Navy"
+    },
+    "Russian_Armed_Forces": {
+      "name": "Russian Armed Forces",
+      "type": "Regular armed forces",
+      "side": "Russian Federation",
+      "summary": "Russia's military, whose unmarked troops seized Crimea in February-March 2014 and which invaded southern Ukraine in February 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Armed_Forces"
+    },
+    "x:Crimean_self-defence_units": {
+      "name": "Crimean 'self-defence' units",
+      "type": "Pro-Russian paramilitary",
+      "side": "Russia / Russian-installed Crimean authorities",
+      "summary": "Irregular pro-Russian militias, many recruited from Russian Unity supporters and ex-Berkut police, that blockaded Ukrainian bases alongside Russian troops in 2014 and were later legalised by the occupation authorities. Source: Wikipedia, 2014 Russian annexation of Crimea.",
+      "wikipedia": null
+    },
+    "48th_Assault_Battalion_(Ukraine)": {
+      "name": "Noman Çelebicihan Battalion (48th Assault Battalion)",
+      "type": "Crimean Tatar volunteer battalion",
+      "side": "Ukraine",
+      "summary": "Crimean Tatar volunteer unit formed in 2016 during the civic blockade of Crimea on the Kherson Oblast border, later integrated into the Ukrainian armed forces.",
+      "wikipedia": "https://en.wikipedia.org/wiki/48th_Assault_Battalion_(Ukraine)"
+    },
+    "Right_Sector": {
+      "name": "Right Sector",
+      "type": "Nationalist political movement with volunteer corps",
+      "side": "Ukraine",
+      "summary": "Far-right nationalist coalition formed during the Euromaidan; its activists took part in the 2 May 2014 clashes in Odesa, and its Ukrainian Volunteer Corps fought in Donbas.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Right_Sector"
+    },
+    "Territorial_Defence_Forces_(Ukraine)": {
+      "name": "Territorial Defence Forces",
+      "type": "Reserve component of the Armed Forces of Ukraine",
+      "side": "Ukraine",
+      "summary": "Locally raised brigades of the Ukrainian armed forces, mobilised in every oblast in February 2022; southern brigades defended Odesa and Mykolaiv and fought on the Kherson front.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Territorial_Defence_Forces_(Ukraine)"
+    },
+    "Russian_Ground_Forces": {
+      "name": "Russian Ground Forces",
+      "type": "Regular army",
+      "side": "Russian Federation",
+      "summary": "The land branch of the Russian military; its southern grouping advanced from Crimea in 2022, occupied Kherson and reached the outskirts of Mykolaiv.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Ground_Forces"
+    },
+    "Russian_Airborne_Forces": {
+      "name": "Russian Airborne Forces (VDV)",
+      "type": "Airborne troops",
+      "side": "Russian Federation",
+      "summary": "Russian paratroop divisions, including the 7th Air Assault Division, which spearheaded the 2022 seizure of the Kherson bridgeheads and later defended the Dnipro left bank.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Airborne_Forces"
+    },
+    "59th_Assault_Brigade": {
+      "name": "59th Brigade (formerly 59th Motorized Brigade)",
+      "type": "Ukrainian army brigade",
+      "side": "Ukraine",
+      "summary": "Brigade based in Odesa Oblast that defended Mykolaiv Oblast and took part in the 2022 Kherson counteroffensive.",
+      "wikipedia": "https://en.wikipedia.org/wiki/59th_Assault_Brigade"
+    },
+    "28th_Mechanized_Brigade": {
+      "name": "28th Mechanized Brigade",
+      "type": "Ukrainian army brigade",
+      "side": "Ukraine",
+      "summary": "Brigade based in Odesa Oblast that fought on the Mykolaiv-Kherson front in 2022.",
+      "wikipedia": "https://en.wikipedia.org/wiki/28th_Mechanized_Brigade"
+    },
+    "36th_Marine_Brigade": {
+      "name": "36th Marine Brigade",
+      "type": "Ukrainian marine brigade",
+      "side": "Ukraine",
+      "summary": "Marine brigade based at Mykolaiv after 2014, which fought in the 2022 defence of Mariupol and was later rebuilt.",
+      "wikipedia": "https://en.wikipedia.org/wiki/36th_Marine_Brigade"
+    },
+    "Ukrainian_Marine_Corps": {
+      "name": "Ukrainian Marine Corps",
+      "type": "Marine infantry branch",
+      "side": "Ukraine",
+      "summary": "Ukraine's naval infantry, headquartered in Mykolaiv Oblast; its brigades held the Krynky bridgehead on the Dnipro left bank in Kherson Oblast in 2023-2024.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Marine_Corps"
+    },
+    "Main_Directorate_of_Intelligence_(Ukraine)": {
+      "name": "Main Directorate of Intelligence (HUR)",
+      "type": "Military intelligence with special forces",
+      "side": "Ukraine",
+      "summary": "Ukraine's military intelligence agency, whose units raided the Kinburn spit, the Dnipro islands and the Crimean coast and struck Russian air defences in Crimea.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Main_Directorate_of_Intelligence_(Ukraine)"
+    },
+    "Security_Service_of_Ukraine": {
+      "name": "Security Service of Ukraine (SBU)",
+      "type": "Security service",
+      "side": "Ukraine",
+      "summary": "Ukraine's security agency, which claimed the October 2022 and July 2023 attacks on the Crimean Bridge and many naval-drone strikes on the Black Sea Fleet.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Security_Service_of_Ukraine"
+    },
+    "Atesh": {
+      "name": "Atesh",
+      "type": "Partisan movement",
+      "side": "Ukraine",
+      "summary": "Ukrainian and Crimean Tatar partisan movement founded in 2022, reporting sabotage and reconnaissance against Russian forces in occupied Crimea and southern Ukraine.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Atesh"
+    },
+    "Russian_Aerospace_Forces": {
+      "name": "Russian Aerospace Forces",
+      "type": "Air and space force",
+      "side": "Russian Federation",
+      "summary": "Russia's air force, which, together with missile and drone units, conducts the strikes on Odesa, Mykolaiv and Kherson.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Russian_Aerospace_Forces"
+    }
+  },
+  "oblasts": {
+    "UA-51": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Odesa passed from the Central Rada to the Bolshevik Odessa Soviet Republic (January-March 1918), then to Austro-Hungarian occupation under the UNR and the Hetmanate, and in December 1918 to a French-backed White administration. The Budjak (southern Bessarabia) was occupied by Romania in 1918; Bessarabia's Sfatul Țării voted for union with Romania in March 1918, and the area was ruled by Romanian governments until 1940. The 1917 Constituent Assembly figures below are vote shares; seat counts per list are not given in the source.",
+            "governing": ["Ukrainian_Socialist-Revolutionary_Party", "Ukrainian_Social_Democratic_Labour_Party", "Bolsheviks"],
+            "elections": [
+              {
+                "body": "1917 Constituent Assembly, Kherson Governorate (vote share, %)",
+                "year": 1917,
+                "total": 100,
+                "seats": [
+                  { "party": "Ukrainian_Socialist-Revolutionary_Party", "share": 42.98 },
+                  { "party": "Bolsheviks", "share": 13.18 },
+                  { "party": "Ukrainian_Social_Democratic_Labour_Party", "share": 10.18 },
+                  { "party": "Constitutional_Democratic_Party", "share": 8.66 }
+                ],
+                "source": { "title": "Kherson electoral district (1917)", "url": "https://en.wikipedia.org/wiki/Kherson_electoral_district" }
+              },
+              {
+                "body": "1917 Constituent Assembly, Bessarabia Governorate, incl. the Budjak (vote share, %)",
+                "year": 1917,
+                "total": 100,
+                "seats": [
+                  { "party": "Socialist_Revolutionary_Party", "share": 33.63 },
+                  { "party": "Bolsheviks", "share": 10.07 },
+                  { "party": "Constitutional_Democratic_Party", "share": 6.52 }
+                ],
+                "source": { "title": "Bessarabia electoral district (1917)", "url": "https://en.wikipedia.org/wiki/Bessarabia_electoral_district" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Ukrainian_People's_Army", "role": "UNR haidamak units fought Red Guards for control of Odesa in January 1918." },
+            { "group": "Red_Guards_(Russia)", "role": "Bolshevik workers and sailors seized Odesa in January 1918 and proclaimed the Odessa Soviet Republic." },
+            { "group": "Austro-Hungarian_Army", "role": "Austro-Hungarian troops occupied Odesa in March 1918 and garrisoned it until November." },
+            { "group": "French_Army", "role": "French and Greek troops landed in Odesa in December 1918 to support the Whites." },
+            { "group": "Volunteer_Army", "role": "White Volunteer Army units held Odesa together with the Allied intervention in winter 1918-1919." },
+            { "group": "Romanian_Land_Forces", "role": "The Romanian army occupied the Budjak in early 1918, beginning 22 years of Romanian rule." }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "Bolshevik rule returned in April 1919, the Whites held Odesa from August 1919 to February 1920, and Soviet rule was then restored under the Communist Party (Bolsheviks) of Ukraine; the left-wing Borotbists briefly shared Soviet institutions until merging with it in 1920. The Budjak stayed under Romanian administration.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)", "Borotbists"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Nykyfor_Hryhoriv", "role": "Hryhoriv's insurgents advanced on Odesa in April 1919, prompting the French evacuation." },
+            { "group": "Red_Army", "role": "The Red Army took Odesa in April 1919 and again, for good, in February 1920." },
+            { "group": "Armed_Forces_of_South_Russia", "role": "Denikin's forces captured Odesa in August 1919 and evacuated it in chaos in February 1920." },
+            { "group": "Romanian_Land_Forces", "role": "Romanian troops held the Dniester line, the new border with Soviet Ukraine." }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "One-party Soviet rule by the Communist Party (Bolsheviks) of Ukraine; the northern districts formed part of the Moldavian ASSR from 1924. The Romanian-ruled Budjak voted in Romanian parliamentary elections, but no district-level seat data were found.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Red_Army", "role": "Red Army units guarded the Dniester border and suppressed rural insurgents in the early 1920s." },
+            { "group": "Romanian_Land_Forces", "role": "The Romanian army crushed the pro-Soviet Tatarbunary uprising in the Budjak in September 1924." }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": {
+            "note": "One-party Soviet rule; Odesa Oblast was created in 1932 and its party leadership carried out grain requisitions during the Holodomor and the purges of 1937-1938. The Budjak remained Romanian.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "NKVD", "role": "The NKVD carried out mass arrests in Odesa, including the 'national operations' against Germans, Poles and Bulgarians." }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": {
+            "note": "The USSR annexed Bessarabia in June 1940 and attached the Budjak to the Ukrainian SSR as Akkerman (later Izmail) Oblast, extending one-party rule there.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Red_Army", "role": "Red Army troops occupied the Budjak in late June 1940." },
+            { "group": "NKVD", "role": "The NKVD deported 'anti-Soviet elements' from the newly annexed Budjak in 1940-1941." }
+          ]
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Odesa became the capital of Romanian-administered Transnistria, run by Governor Gheorghe Alexianu under Ion Antonescu's military dictatorship, which had no ruling party; the Budjak was re-annexed to Romania. Soviet structures operated only underground.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Separate_Coastal_Army", "role": "Defended Odesa during the 73-day siege of August-October 1941 before evacuating to Crimea." },
+            { "group": "Romanian_Land_Forces", "role": "Romanian troops besieged and occupied Odesa and carried out the October 1941 massacre of its Jews." },
+            { "group": "Soviet_partisans", "role": "Partisans hid in the Odesa catacombs and harassed the occupiers until 1944." },
+            { "group": "Red_Army", "role": "The 3rd Ukrainian Front retook Odesa on 10 April 1944." }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "One-party Soviet rule over Odesa and Izmail oblasts, merged in 1954.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Odessa_Military_District", "role": "Marshal Georgy Zhukov commanded the district from Odesa in 1946-1948." }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "One-party Soviet rule until 1990-1991, when the first semi-competitive council elections took place; the Communist Party was banned in August 1991. Seat data for the 1990 oblast council were not found.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Odessa_Military_District", "role": "The district headquarters in Odesa commanded Soviet ground forces across southern Ukraine and Moldavia." }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "Governors were presidential appointees and the oblast council (chaired by Ruslan Bodelan in 1990-1998) was dominated by non-partisan and pro-Kuchma officials; no single party governed. Seat data for the 1994, 1998 and 2002 councils were not found.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Odessa_Military_District", "role": "Passed to Ukraine in 1992 and became the main command for the south." }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The Party of Regions dominated the oblast council after the 2006 and 2010 elections and supplied the governors from 2010; exact seat totals for those councils were not found in the sources checked.",
+            "governing": ["Party_of_Regions"],
+            "elections": []
+          },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "After 2014 governors were appointed by President Poroshenko (Mikheil Saakashvili 2015-2016, Maksym Stepanov 2017-2019). The 2015 council had no majority party; the Opposition Bloc was the largest faction and the chair was Anatoliy Urbanskyi.",
+            "governing": ["European_Solidarity", "Opposition_Bloc"],
+            "elections": [
+              {
+                "body": "Odesa Oblast Council",
+                "year": 2015,
+                "total": 84,
+                "seats": [
+                  { "party": "Opposition_Bloc", "seats": 23 },
+                  { "party": "European_Solidarity", "seats": 22 },
+                  { "party": "x:Trust_the_Deeds", "seats": 12 },
+                  { "party": "Batkivshchyna", "seats": 11 },
+                  { "party": "Revival_(Ukraine)", "seats": 8 },
+                  { "party": "Our_Land_(Ukraine)", "seats": 8 }
+                ],
+                "source": { "title": "Odesa Oblast Council", "url": "https://en.wikipedia.org/wiki/Odesa_Oblast_Council" }
+              },
+              {
+                "body": "Odesa Oblast Council",
+                "year": 2020,
+                "total": 84,
+                "seats": [
+                  { "party": "Opposition_Platform_–_For_Life", "seats": 24 },
+                  { "party": "Servant_of_the_People", "seats": 16 },
+                  { "party": "x:Trust_the_Deeds", "seats": 11 },
+                  { "party": "European_Solidarity", "seats": 10 },
+                  { "party": "For_the_Future_(political_party)", "seats": 10 },
+                  { "party": "Batkivshchyna", "seats": 7 },
+                  { "party": "Party_of_Shariy", "seats": 6 }
+                ],
+                "source": { "title": "Odesa Oblast Council", "url": "https://en.wikipedia.org/wiki/Odesa_Oblast_Council" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Right_Sector", "role": "Right Sector activists took part in the 2 May 2014 street clashes in Odesa that ended in the Trade Unions House fire." },
+            { "group": "Ukrainian_Navy", "role": "The navy moved its headquarters to Odesa after losing Sevastopol in 2014." },
+            { "group": "28th_Mechanized_Brigade", "role": "The Odesa Oblast-based brigade rotated to the Donbas front." }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "Ukrainian government continued under a military administration headed by Governor Maksym Marchenko. The pro-Russian OPZZh faction dissolved in March 2022 and its deputies regrouped as 'Our Home is Ukraine', joining a pro-government majority with Servant of the People, For the Future and Batkivshchyna (per Wikipedia's current council composition).",
+            "governing": ["Servant_of_the_People", "For_the_Future_(political_party)", "Batkivshchyna"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Ukrainian_Navy", "role": "Coastal Neptune missiles fired from Odesa Oblast sank the cruiser Moskva on 14 April 2022." },
+            { "group": "Territorial_Defence_Forces_(Ukraine)", "role": "Odesa's territorial defence brigades fortified the city against a feared amphibious landing." },
+            { "group": "Black_Sea_Fleet", "role": "The Russian fleet blockaded Odesa's ports and seized Zmiinyi Island on 24 February 2022." },
+            { "group": "Russian_Aerospace_Forces", "role": "Russian missiles struck Odesa and the Serhiivka resort, killing 21 on 1 July 2022." }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Oleh Kiper became head of the Odesa Oblast Military Administration in 2023; wartime martial law suspended elections. Local politics centred on mayor Hennadiy Trukhanov's relations with Kyiv.",
+            "governing": ["Servant_of_the_People"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Ukrainian_Navy", "role": "Naval drones and missiles pushed the Black Sea Fleet east, enabling the 2023 Ukrainian shipping corridor from Odesa." },
+            { "group": "Russian_Aerospace_Forces", "role": "Russian missile and drone strikes repeatedly hit Odesa's ports, centre and the Danube ports of Izmail and Reni." }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "In October 2025 Trukhanov was stripped of Ukrainian citizenship over alleged Russian citizenship and President Zelenskyy created an Odesa city military administration under Serhiy Lysak; this account follows press reports and may be incomplete. The oblast stayed under the military administration of Oleh Kiper.",
+            "governing": ["Servant_of_the_People"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Russian_Aerospace_Forces", "role": "Strikes on energy, ports and bridges continued, including those of December 2025 that left over 120,000 without power." },
+            { "group": "Ukrainian_Navy", "role": "The navy and air defence protected the export corridor from Odesa-region ports." }
+          ]
+        }
+      }
+    },
+    "UA-48": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Mykolaiv saw a Bolshevik takeover in early 1918, German occupation under the UNR and the Hetmanate from March 1918, and a brief Allied presence in winter 1918-1919. The area lay in Kherson Governorate; the 1917 Constituent Assembly figures are vote shares.",
+            "governing": ["Ukrainian_Socialist-Revolutionary_Party", "Ukrainian_Social_Democratic_Labour_Party", "Bolsheviks"],
+            "elections": [
+              {
+                "body": "1917 Constituent Assembly, Kherson Governorate (vote share, %)",
+                "year": 1917,
+                "total": 100,
+                "seats": [
+                  { "party": "Ukrainian_Socialist-Revolutionary_Party", "share": 42.98 },
+                  { "party": "Bolsheviks", "share": 13.18 },
+                  { "party": "Ukrainian_Social_Democratic_Labour_Party", "share": 10.18 },
+                  { "party": "Constitutional_Democratic_Party", "share": 8.66 }
+                ],
+                "source": { "title": "Kherson electoral district (1917)", "url": "https://en.wikipedia.org/wiki/Kherson_electoral_district" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Red_Guards_(Russia)", "role": "Shipyard workers' Red Guards took Mykolaiv for the Bolsheviks in January 1918." },
+            { "group": "Imperial_German_Army", "role": "German troops occupied Mykolaiv in March 1918 and faced worker uprisings there." },
+            { "group": "Free_Cossacks", "role": "Free Cossack units were raised in the Kherson Governorate countryside to support the Central Rada." },
+            { "group": "French_Army", "role": "Allied warships and Greek and French troops held the port briefly in early 1919." }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "After Hryhoriv's forces handed Mykolaiv to the Bolsheviks in March 1919, it changed hands with the Whites (August 1919 to early 1920) before Soviet rule under the Communist Party (Bolsheviks) of Ukraine was restored.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Nykyfor_Hryhoriv", "role": "Hryhoriv's insurgents captured Mykolaiv in March 1919, and his anti-Bolshevik revolt began in this region in May 1919." },
+            { "group": "Armed_Forces_of_South_Russia", "role": "The Whites held Mykolaiv from August 1919 to early 1920." },
+            { "group": "Revolutionary_Insurgent_Army_of_Ukraine", "role": "Makhnovists broke through White lines near Perehonivka and raided the northern districts in autumn 1919." },
+            { "group": "Red_Army", "role": "The Red Army took Mykolaiv for good in early 1920." }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": { "note": "One-party Soviet rule by the Communist Party (Bolsheviks) of Ukraine; Mykolaiv was the centre of an okruha.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": []
+        },
+        "holodomor-terror": {
+          "politics": { "note": "One-party Soviet rule; Mykolaiv Oblast was created in 1937 amid purges of shipyard engineers and the aftermath of the Holodomor in its villages.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": [
+            { "group": "NKVD", "role": "The NKVD arrested shipyard engineers and party officials in the 1937-1938 purges." }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": { "note": "One-party Soviet rule; the shipyards built warships for the Soviet Navy.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": [
+            { "group": "Soviet_Navy", "role": "Mykolaiv yards built cruisers and submarines for the Black Sea Fleet." }
+          ]
+        },
+        "nazi-occupation": {
+          "politics": {
+            "note": "Mykolaiv was occupied in August 1941 and became the seat of the German Generalbezirk Nikolajew in Reichskommissariat Ukraine; the western districts around Domanivka belonged to Romanian Transnistria.",
+            "governing": ["Nazi_Party"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "11th_Army_(Wehrmacht)", "role": "The 11th Army captured Mykolaiv on 16 August 1941 and briefly had its headquarters there." },
+            { "group": "Einsatzgruppen", "role": "Einsatzgruppe D murdered the Jews of Mykolaiv in September 1941." },
+            { "group": "Romanian_Land_Forces", "role": "Romanian forces ran the camps of Bogdanovka and Domanivka, where tens of thousands of Jews were killed in 1941-1942." },
+            { "group": "Soviet_partisans", "role": "Underground groups such as the Mykolaiv Centre operated in the city." },
+            { "group": "Red_Army", "role": "Soviet troops, after Olshansky's marine landing in the port, liberated Mykolaiv on 28 March 1944." }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": { "note": "One-party Soviet rule; the shipyards were rebuilt as a centre of naval construction.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": [
+            { "group": "Soviet_Navy", "role": "Mykolaiv's yards resumed building large surface warships." }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": { "note": "One-party Soviet rule until 1990-1991; Mykolaiv was a closed city for foreigners because of its shipyards. Seat data for the 1990 oblast council were not found.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": [
+            { "group": "Soviet_Navy", "role": "The Black Sea Shipyard built all Soviet aircraft-carrying cruisers and carriers, including the Admiral Kuznetsov." }
+          ]
+        },
+        "independence": {
+          "politics": { "note": "Governors were presidential appointees and the council was led by non-partisan or pro-Kuchma officials; no party-level seat data for 1994-2002 were found.", "governing": [], "elections": [] },
+          "armedGroups": [
+            { "group": "Ukrainian_Navy", "role": "The unfinished carrier Varyag and other ships at Mykolaiv became a bargaining chip in the fleet division; Varyag was sold to China in 1998." }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": { "note": "The Party of Regions dominated the oblast council and supplied governors from 2010; exact seat totals for 2006 and 2010 were not found in the sources checked.", "governing": ["Party_of_Regions"], "elections": [] },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "Governors were appointed by Kyiv (Oleksiy Savchenko 2017-2019 and Vitaliy Kim from 2020). The Opposition Bloc led the 2015 council; after 2020 Wikipedia lists an OPZZh-Servant of the People majority under chair Hanna Zamazieieva.",
+            "governing": ["Opposition_Platform_–_For_Life", "Servant_of_the_People"],
+            "elections": [
+              {
+                "body": "Mykolaiv Oblast Council",
+                "year": 2015,
+                "total": 64,
+                "seats": [
+                  { "party": "Opposition_Bloc", "seats": 17 },
+                  { "party": "European_Solidarity", "seats": 15 },
+                  { "party": "Our_Land_(Ukraine)", "seats": 10 },
+                  { "party": "Batkivshchyna", "seats": 7 },
+                  { "party": "UKROP", "seats": 7 },
+                  { "party": "x:New_State", "seats": 4 },
+                  { "party": "Revival_(Ukraine)", "seats": 4 }
+                ],
+                "source": { "title": "Mykolaiv Oblast Council", "url": "https://en.wikipedia.org/wiki/Mykolaiv_Oblast_Council" }
+              },
+              {
+                "body": "Mykolaiv Oblast Council",
+                "year": 2020,
+                "total": 64,
+                "seats": [
+                  { "party": "Opposition_Platform_–_For_Life", "seats": 18 },
+                  { "party": "Servant_of_the_People", "seats": 16 },
+                  { "party": "Our_Land_(Ukraine)", "seats": 10 },
+                  { "party": "European_Solidarity", "seats": 8 },
+                  { "party": "Proposition_(political_party)", "seats": 7 },
+                  { "party": "For_the_Future_(political_party)", "seats": 5 }
+                ],
+                "source": { "title": "Mykolaiv Oblast Council", "url": "https://en.wikipedia.org/wiki/Mykolaiv_Oblast_Council" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "36th_Marine_Brigade", "role": "The marine brigade evacuated from Crimea was re-formed with its base in Mykolaiv." },
+            { "group": "Ukrainian_Marine_Corps", "role": "Ukraine's marine command was based in Mykolaiv Oblast after 2014." }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "Governor Vitaliy Kim (Servant of the People) led the oblast military administration through the 2022 defence; the OPZZh faction was dissolved after the party's suspension. Russia held the Snihurivka area until November 2022 and still holds the Kinburn spit.",
+            "governing": ["Servant_of_the_People"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "59th_Assault_Brigade", "role": "Helped stop the Russian advance at Mykolaiv's outskirts in March 2022." },
+            { "group": "Territorial_Defence_Forces_(Ukraine)", "role": "Local territorial defence units defended Mykolaiv city in 2022." },
+            { "group": "Russian_Ground_Forces", "role": "Russian forces attacked Mykolaiv and Voznesensk in March 2022 and shelled the city for months." },
+            { "group": "Russian_Aerospace_Forces", "role": "A missile destroyed part of the regional administration building on 29 March 2022, killing 37 people." },
+            { "group": "28th_Mechanized_Brigade", "role": "Fought on the Mykolaiv-Kherson front during the autumn 2022 counteroffensive." }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": { "note": "Vitaliy Kim continued as head of the military administration; the council was led by acting chair Anton Tabunshchik from 2023. Elections were suspended under martial law.", "governing": ["Servant_of_the_People"], "elections": [] },
+          "armedGroups": [
+            { "group": "Main_Directorate_of_Intelligence_(Ukraine)", "role": "Ukrainian special forces staged raids on the occupied Kinburn spit." },
+            { "group": "Russian_Aerospace_Forces", "role": "Russian drones and missiles continued to strike Mykolaiv and Ochakiv." }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": { "note": "Wartime governance under the oblast military administration continued; no elections were held. Information for 2026 may be incomplete.", "governing": ["Servant_of_the_People"], "elections": [] },
+          "armedGroups": [
+            { "group": "Russian_Aerospace_Forces", "role": "Russian drone and missile strikes on Mykolaiv's energy and port infrastructure continued." },
+            { "group": "Ukrainian_Marine_Corps", "role": "Marine units based in the oblast fought on the southern front and the Dnipro." }
+          ]
+        }
+      }
+    },
+    "UA-65": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "The right bank, with Kherson city, lay in Kherson Governorate and the left bank in Taurida Governorate's Dnieper uezd; vote shares for both 1917 districts are given. Kherson passed from the Central Rada to the Bolsheviks, then to German and Austro-Hungarian occupation under the Hetmanate in 1918, and to an Allied garrison in early 1919.",
+            "governing": ["Ukrainian_Socialist-Revolutionary_Party", "Ukrainian_Social_Democratic_Labour_Party", "Bolsheviks"],
+            "elections": [
+              {
+                "body": "1917 Constituent Assembly, Kherson Governorate (vote share, %)",
+                "year": 1917,
+                "total": 100,
+                "seats": [
+                  { "party": "Ukrainian_Socialist-Revolutionary_Party", "share": 42.98 },
+                  { "party": "Bolsheviks", "share": 13.18 },
+                  { "party": "Ukrainian_Social_Democratic_Labour_Party", "share": 10.18 },
+                  { "party": "Constitutional_Democratic_Party", "share": 8.66 }
+                ],
+                "source": { "title": "Kherson electoral district (1917)", "url": "https://en.wikipedia.org/wiki/Kherson_electoral_district" }
+              },
+              {
+                "body": "1917 Constituent Assembly, Taurida Governorate (left bank) (vote share, %)",
+                "year": 1917,
+                "total": 100,
+                "seats": [
+                  { "party": "Socialist_Revolutionary_Party", "share": 52.22 },
+                  { "party": "Milliy_Firqa", "share": 11.93 },
+                  { "party": "Ukrainian_Socialist-Revolutionary_Party", "share": 10.71 },
+                  { "party": "Constitutional_Democratic_Party", "share": 6.75 },
+                  { "party": "Bolsheviks", "share": 5.5 }
+                ],
+                "source": { "title": "Taurida electoral district (1917)", "url": "https://en.wikipedia.org/wiki/Taurida_electoral_district" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Red_Guards_(Russia)", "role": "Bolshevik detachments seized Kherson in January 1918." },
+            { "group": "Imperial_German_Army", "role": "German and Austro-Hungarian troops occupied Kherson in spring 1918 after heavy fighting in the city." },
+            { "group": "French_Army", "role": "A small Greek and French garrison held Kherson in winter 1918-1919." }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "Hryhoriv's forces took Kherson for the Bolsheviks in March 1919; Whites held the region from August 1919, and in 1920 Wrangel's army fought the Red Army on the left bank before Soviet rule was consolidated.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Nykyfor_Hryhoriv", "role": "Hryhoriv's insurgents stormed Kherson in March 1919, killing many Greek soldiers and civilians." },
+            { "group": "Armed_Forces_of_South_Russia", "role": "Denikin's forces held Kherson from August 1919 to early 1920." },
+            { "group": "Army_of_Wrangel", "role": "Wrangel's army occupied northern Taurida in 1920 and failed to destroy the Red bridgehead at Kakhovka." },
+            { "group": "Red_Army", "role": "The Red Army held the Kakhovka bridgehead in August-October 1920 and from there drove the Whites back into Crimea." },
+            { "group": "Revolutionary_Insurgent_Army_of_Ukraine", "role": "Makhnovist units operated on the left-bank steppe and joined the final push on Crimea in November 1920." }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": { "note": "One-party Soviet rule by the Communist Party (Bolsheviks) of Ukraine.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": []
+        },
+        "holodomor-terror": {
+          "politics": { "note": "One-party Soviet rule; the grain districts of the region suffered heavily in the Holodomor.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": [
+            { "group": "NKVD", "role": "The NKVD carried out arrests and executions during the Great Terror of 1937-1938." }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": { "note": "One-party Soviet rule; the area belonged to Mykolaiv Oblast until Kherson Oblast was formed in 1944.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": []
+        },
+        "nazi-occupation": {
+          "politics": { "note": "German occupation from August 1941 under Generalbezirk Nikolajew of Reichskommissariat Ukraine; Kherson was liberated in March 1944.", "governing": ["Nazi_Party"], "elections": [] },
+          "armedGroups": [
+            { "group": "11th_Army_(Wehrmacht)", "role": "The 11th Army took Kherson in August 1941 and crossed the Dnieper towards Crimea." },
+            { "group": "Einsatzgruppen", "role": "Einsatzgruppe D murdered the Jews of Kherson in September 1941." },
+            { "group": "Soviet_partisans", "role": "Partisans and underground groups operated in the Dnieper floodplain." },
+            { "group": "Red_Army", "role": "The Red Army retook Kherson on 13 March 1944." }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": { "note": "One-party Soviet rule; Kherson Oblast was created in 1944 and the Kakhovka dam and reservoir were built from 1950.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": []
+        },
+        "soviet-ukraine-late": {
+          "politics": { "note": "One-party Soviet rule until 1990-1991; seat data for the 1990 oblast council were not found.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": [
+            { "group": "Odessa_Military_District", "role": "Soviet army units in the oblast belonged to the Odessa Military District." }
+          ]
+        },
+        "independence": {
+          "politics": { "note": "Governors were presidential appointees; no party-level seat data for the 1994-2002 councils were found.", "governing": [], "elections": [] },
+          "armedGroups": []
+        },
+        "orange-to-euromaidan": {
+          "politics": { "note": "The Party of Regions led the oblast council and supplied governors from 2010; exact 2006 and 2010 seat totals were not found in the sources checked.", "governing": ["Party_of_Regions"], "elections": [] },
+          "armedGroups": []
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "After 2014 the oblast bordered occupied Crimea and governors were appointed by Kyiv. The 2015 council was led by the Poroshenko-aligned 'Solidarity' list and chair Vladyslav Manger (Batkivshchyna); after 2020 Wikipedia lists a majority of OPZZh, We Have to Live Here and Servant of the People.",
+            "governing": ["European_Solidarity", "Batkivshchyna"],
+            "elections": [
+              {
+                "body": "Kherson Oblast Council",
+                "year": 2015,
+                "total": 64,
+                "seats": [
+                  { "party": "European_Solidarity", "seats": 18 },
+                  { "party": "Opposition_Bloc", "seats": 13 },
+                  { "party": "Batkivshchyna", "seats": 9 },
+                  { "party": "Our_Land_(Ukraine)", "seats": 7 },
+                  { "party": "Radical_Party_of_Oleh_Liashko", "seats": 6 },
+                  { "party": "UKROP", "seats": 6 },
+                  { "party": "Self_Reliance_(political_party)", "seats": 5 }
+                ],
+                "source": { "title": "Kherson Oblast Council", "url": "https://en.wikipedia.org/wiki/Kherson_Oblast_Council" }
+              },
+              {
+                "body": "Kherson Oblast Council",
+                "year": 2020,
+                "total": 64,
+                "seats": [
+                  { "party": "Opposition_Platform_–_For_Life", "seats": 15 },
+                  { "party": "x:We_Have_to_Live_Here", "seats": 13 },
+                  { "party": "Servant_of_the_People", "seats": 11 },
+                  { "party": "European_Solidarity", "seats": 7 },
+                  { "party": "Our_Land_(Ukraine)", "seats": 7 },
+                  { "party": "Batkivshchyna", "seats": 6 },
+                  { "party": "x:Volodymyr_Saldo_Bloc", "seats": 5 }
+                ],
+                "source": { "title": "Kherson Oblast Council", "url": "https://en.wikipedia.org/wiki/Kherson_Oblast_Council" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "48th_Assault_Battalion_(Ukraine)", "role": "The Crimean Tatar battalion was formed during the 2015-2016 blockade of Crimea at the Chonhar and Kalanchak crossings." },
+            { "group": "Russian_Armed_Forces", "role": "In March 2014 Russian troops briefly occupied the Arabat Spit gas station near Strilkove, beyond the Crimean border." }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "Russia captured Kherson on 2 March 2022, suspended the elected council, and installed Volodymyr Saldo as head of a 'military-civilian administration'; the Russian-installed authorities held a sham 'referendum' in September 2022 and Russia claimed to annex the oblast, which is not internationally recognised. Ukraine liberated the right bank and Kherson city on 11 November 2022; Ukrainian governor Yaroslav Yanushevych then led the oblast military administration.",
+            "governing": ["Servant_of_the_People", "United_Russia"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Russian_Airborne_Forces", "role": "Russian airborne and army units seized the Antonivka bridge and Kherson city in late February-early March 2022." },
+            { "group": "Russian_Ground_Forces", "role": "Russian forces occupied the whole oblast and later withdrew to the left bank in November 2022." },
+            { "group": "59th_Assault_Brigade", "role": "Took part in the Kherson counteroffensive that liberated the right bank." },
+            { "group": "28th_Mechanized_Brigade", "role": "Fought in the 2022 Kherson counteroffensive on the Mykolaiv-Kherson axis." },
+            { "group": "Territorial_Defence_Forces_(Ukraine)", "role": "Kherson's territorial defence fought at the Antonivka bridge on 1 March 2022, suffering heavy losses." },
+            { "group": "Atesh", "role": "Partisan and underground networks reported sabotage in occupied Kherson Oblast." }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "The right bank was governed by Ukraine (oblast military administration under Oleksandr Prokudin from 2023); the left bank stayed under Russian occupation. In September 2023 the Russian-installed authorities held 'elections' to a 'Kherson Oblast Duma', which are not recognised internationally; the occupation election commission claimed United Russia won 74.86% of the vote. The vote share is given only as a Russian claim.",
+            "governing": ["Servant_of_the_People", "United_Russia"],
+            "elections": [
+              {
+                "body": "'Kherson Oblast Duma' (Russian-installed occupation body, not internationally recognised; claimed vote share, %)",
+                "year": 2023,
+                "total": 100,
+                "seats": [
+                  { "party": "United_Russia", "share": 74.86 }
+                ],
+                "source": { "title": "Sputnik via GlobalSecurity: United Russia wins local elections in occupied regions (Russian claim)", "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2023/09/ukraine-230910-sputnik02.htm" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Ukrainian_Marine_Corps", "role": "Ukrainian marines held a bridgehead at Krynky on the left bank from autumn 2023 to mid-2024." },
+            { "group": "Russian_Airborne_Forces", "role": "Russian airborne and marine units defended the left bank against the Krynky bridgehead." },
+            { "group": "Main_Directorate_of_Intelligence_(Ukraine)", "role": "Ukrainian special forces raided the Dnipro islands and left bank." },
+            { "group": "Russian_Aerospace_Forces", "role": "Russian artillery, glide bombs and drones struck Kherson city daily, including after the June 2023 destruction of the Kakhovka dam." }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "Ukraine governed the right bank through the oblast military administration, while the Russian-installed Saldo administration ran the occupied left bank. Kherson's oblast administration building was partly destroyed by a Russian airstrike on 5 June 2025. Details for 2026 may be incomplete.",
+            "governing": ["Servant_of_the_People", "United_Russia"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Russian_Aerospace_Forces", "role": "Russian drones conducted a sustained campaign against civilians and traffic in Kherson city and nearby villages." },
+            { "group": "Territorial_Defence_Forces_(Ukraine)", "role": "Ukrainian territorial defence and army units held the right bank of the Dnipro." }
+          ]
+        }
+      }
+    },
+    "UA-43": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "The Crimean Tatar Kurultai, elected in November 1917 and dominated by Milliy Firqa, met in Bakhchysarai on 26 November (9 December) 1917 and proclaimed the Crimean People's Republic under Noman Çelebicihan. Bolshevik sailors crushed it in January 1918 and set up the Taurida Soviet Republic (March-April 1918). German occupation followed, with the Crimean Regional Government of General Maciej Sulkevich (June-November 1918) and then the Kadet-led government of Solomon Krym (November 1918-April 1919). The 1917 figures are vote shares for Taurida Governorate; the Muslim list, led by Cafer Seydahmet, is shown under Milliy Firqa.",
+            "governing": ["Milliy_Firqa", "Bolsheviks", "Constitutional_Democratic_Party"],
+            "elections": [
+              {
+                "body": "1917 Constituent Assembly, Taurida Governorate (vote share, %)",
+                "year": 1917,
+                "total": 100,
+                "seats": [
+                  { "party": "Socialist_Revolutionary_Party", "share": 52.22 },
+                  { "party": "Milliy_Firqa", "share": 11.93 },
+                  { "party": "Ukrainian_Socialist-Revolutionary_Party", "share": 10.71 },
+                  { "party": "Constitutional_Democratic_Party", "share": 6.75 },
+                  { "party": "Bolsheviks", "share": 5.5 }
+                ],
+                "source": { "title": "Taurida electoral district (1917)", "url": "https://en.wikipedia.org/wiki/Taurida_electoral_district" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "Revolutionary sailors from Sevastopol defeated the Crimean People's Republic's Tatar squadrons in January 1918 and carried out mass killings of officers and civilians." },
+            { "group": "Red_Guards_(Russia)", "role": "Red Guard detachments held Simferopol and the coast for the Taurida Soviet Republic in early 1918." },
+            { "group": "Imperial_German_Army", "role": "German troops occupied Crimea in April-May 1918 and backed the Sulkevich government." },
+            { "group": "Volunteer_Army", "role": "White units based in Crimea supported the Krym government in winter 1918-1919." },
+            { "group": "French_Army", "role": "Allied troops and warships held Sevastopol until their evacuation in April 1919." }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": {
+            "note": "The Bolsheviks proclaimed the Crimean Soviet Socialist Republic in April 1919; from June 1919 the peninsula was the last White stronghold, ruled by Denikin and then Wrangel until November 1920. Soviet rule under the Russian Communist Party (Bolsheviks) followed, together with the Red Terror of 1920-1921.",
+            "governing": ["Communist_Party_of_the_Soviet_Union"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Armed_Forces_of_South_Russia", "role": "Denikin's forces retook Crimea in June 1919." },
+            { "group": "Army_of_Wrangel", "role": "Wrangel's army defended the Perekop isthmus and evacuated about 145,000 people from Crimean ports in November 1920." },
+            { "group": "Red_Army", "role": "The Southern Front under Mikhail Frunze stormed Perekop and Chonhar in November 1920." },
+            { "group": "Revolutionary_Insurgent_Army_of_Ukraine", "role": "Makhnovist cavalry crossed the Syvash with the Reds, then were attacked by them after victory." }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": {
+            "note": "The Crimean ASSR was created within the Russian SFSR on 18 October 1921, with policies of 'indigenisation' favouring Crimean Tatars. Rule was by the Communist Party; its Crimean Tatar chairman Veli Ibraimov was executed in 1928 and Milliy Firqa activists were repressed.",
+            "governing": ["Communist_Party_of_the_Soviet_Union"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Red_Army", "role": "Red Army garrisons enforced Soviet rule during the 1921-1922 famine in Crimea." }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": { "note": "One-party rule in the Crimean ASSR (Russian SFSR); collectivisation, deportation of 'kulaks' and the Great Terror decimated the Crimean Tatar elite.", "governing": ["Communist_Party_of_the_Soviet_Union"], "elections": [] },
+          "armedGroups": [
+            { "group": "NKVD", "role": "The NKVD arrested and executed Crimean Tatar intellectuals and officials in 1937-1938." }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": { "note": "One-party rule in the Crimean ASSR.", "governing": ["Communist_Party_of_the_Soviet_Union"], "elections": [] },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The fleet at Sevastopol prepared for war with Germany and Romania." }
+          ]
+        },
+        "nazi-occupation": {
+          "politics": { "note": "Crimea was occupied in 1941-1942 and placed under German military administration (nominally Generalbezirk Krim); the Soviet leadership worked underground or with the partisans. Liberation came in April-May 1944.", "governing": ["Nazi_Party"], "elections": [] },
+          "armedGroups": [
+            { "group": "11th_Army_(Wehrmacht)", "role": "Manstein's 11th Army broke through at Perekop in October 1941 and took Kerch and Sevastopol in 1942." },
+            { "group": "Romanian_Land_Forces", "role": "Romanian mountain and cavalry troops fought in Crimea and helped hold it until 1944." },
+            { "group": "Einsatzgruppen", "role": "Einsatzgruppe D murdered the Jews and Krymchaks of Crimea, including some 12,000 at Simferopol in December 1941." },
+            { "group": "Schutzmannschaft", "role": "The occupiers raised Crimean Tatar auxiliary battalions in 1942, later used by Soviet propaganda to justify the deportation." },
+            { "group": "Soviet_partisans", "role": "Partisans fought in the Crimean Mountains throughout the occupation." },
+            { "group": "Red_Army", "role": "The Crimean offensive of April-May 1944 retook the peninsula." }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": {
+            "note": "On 18-20 May 1944 the entire Crimean Tatar people, about 190,000 people, was deported to Central Asia on the State Defence Committee's orders, followed by Greeks, Bulgarians and Armenians; many died in exile. The Crimean ASSR was abolished on 30 June 1945 and became the Crimean Oblast of the Russian SFSR, which was transferred to the Ukrainian SSR in February 1954.",
+            "governing": ["Communist_Party_of_the_Soviet_Union", "Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "NKVD", "role": "NKVD troops carried out the deportation of the Crimean Tatars in three days in May 1944." },
+            { "group": "Black_Sea_Fleet", "role": "The fleet returned to its rebuilt base in Sevastopol." }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": {
+            "note": "Crimean Oblast was ruled by the Communist Party of Ukraine from 1954. Crimean Tatars began returning en masse from 1989; a January 1991 referendum backed restoring the Crimean ASSR. In June 1991 the second Qurultay met in Simferopol and elected the Mejlis under Mustafa Dzhemilev.",
+            "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The Soviet Black Sea Fleet dominated Crimea's economy and society." }
+          ]
+        },
+        "independence": {
+          "politics": {
+            "note": "The Autonomous Republic of Crimea elected its own Supreme Council (Verkhovna Rada of Crimea). In 1994 Yuriy Meshkov of the Russia Bloc won the Crimean presidency and the bloc won the parliament; Kyiv abolished the presidency in 1995. The Communists then dominated (chair Leonid Hrach, 1998-2002), and pro-Kuchma groups led after 2002. The Mejlis represented Crimean Tatars, who had 14 reserved seats in 1994.",
+            "governing": ["x:Russia_Bloc", "Communist_Party_of_Ukraine", "Mejlis_of_the_Crimean_Tatar_People"],
+            "elections": [
+              {
+                "body": "Supreme Council of Crimea",
+                "year": 1994,
+                "total": 100,
+                "seats": [
+                  { "party": "x:Russia_Bloc", "seats": 57 },
+                  { "party": "Qurultay_of_the_Crimean_Tatar_People", "seats": 16 },
+                  { "party": "Party_of_Economic_Revival", "seats": 3 },
+                  { "party": "Communist_Party_of_Ukraine", "seats": 2 },
+                  { "party": "Republican_Party_of_Crimea", "seats": 2 }
+                ],
+                "source": { "title": "1994 Crimean parliamentary election", "url": "https://en.wikipedia.org/wiki/1994_Crimean_parliamentary_election" }
+              },
+              {
+                "body": "Verkhovna Rada of Crimea",
+                "year": 1998,
+                "total": 100,
+                "seats": [
+                  { "party": "Communist_Party_of_Ukraine", "seats": 38 },
+                  { "party": "People's_Party_(Ukraine)", "seats": 5 },
+                  { "party": "Soyuz_(political_party)", "seats": 4 },
+                  { "party": "People's_Democratic_Party_(Ukraine)", "seats": 4 },
+                  { "party": "Party_of_Economic_Revival", "seats": 1 }
+                ],
+                "source": { "title": "1998 Crimean parliamentary election", "url": "https://en.wikipedia.org/wiki/1998_Crimean_parliamentary_election" }
+              },
+              {
+                "body": "Verkhovna Rada of Crimea",
+                "year": 2002,
+                "total": 100,
+                "seats": [
+                  { "party": "Communist_Party_of_Ukraine", "seats": 15 },
+                  { "party": "People's_Party_(Ukraine)", "seats": 11 },
+                  { "party": "People's_Democratic_Party_(Ukraine)", "seats": 8 },
+                  { "party": "Party_of_Regions", "seats": 3 },
+                  { "party": "Russian_Bloc", "seats": 3 },
+                  { "party": "Social_Democratic_Party_of_Ukraine_(united)", "seats": 3 }
+                ],
+                "source": { "title": "2002 Crimean parliamentary election", "url": "https://en.wikipedia.org/wiki/2002_Crimean_parliamentary_election" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The fleet was divided by the 1997 agreements, leaving Russia's share leased bases in Crimea." },
+            { "group": "Ukrainian_Navy", "role": "Ukraine's new navy took its share of the fleet and shared Sevastopol and other Crimean bases with Russia." }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": {
+            "note": "The Party of Regions dominated Crimean politics, leading the For Yanukovych! bloc in 2006 and winning 80 of 100 seats in 2010, when Vladimir Konstantinov became chairman. The Mejlis-backed Qurultai-Rukh list represented the Crimean Tatars.",
+            "governing": ["Party_of_Regions", "For_Yanukovych!"],
+            "elections": [
+              {
+                "body": "Verkhovna Rada of Crimea",
+                "year": 2006,
+                "total": 100,
+                "seats": [
+                  { "party": "For_Yanukovych!", "seats": 44 },
+                  { "party": "Soyuz_(political_party)", "seats": 10 },
+                  { "party": "Electoral_Bloc_of_Kunitsyn", "seats": 10 },
+                  { "party": "Communist_Party_of_Ukraine", "seats": 9 },
+                  { "party": "Qurultai-Rukh", "seats": 8 },
+                  { "party": "Yulia_Tymoshenko_Bloc", "seats": 8 },
+                  { "party": "People's_Opposition_Bloc_of_Natalia_Vitrenko", "seats": 7 },
+                  { "party": "Ne_Tak", "seats": 4 }
+                ],
+                "source": { "title": "2006 Crimean parliamentary election", "url": "https://en.wikipedia.org/wiki/2006_Crimean_parliamentary_election" }
+              },
+              {
+                "body": "Verkhovna Rada of Crimea",
+                "year": 2010,
+                "total": 100,
+                "seats": [
+                  { "party": "Party_of_Regions", "seats": 80 },
+                  { "party": "Communist_Party_of_Ukraine", "seats": 5 },
+                  { "party": "Qurultai-Rukh", "seats": 5 },
+                  { "party": "Soyuz_(political_party)", "seats": 5 },
+                  { "party": "Russian_Unity", "seats": 3 },
+                  { "party": "Strong_Ukraine", "seats": 2 }
+                ],
+                "source": { "title": "Verkhovna Rada of Crimea", "url": "https://en.wikipedia.org/wiki/Verkhovna_Rada_of_Crimea" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The 2010 Kharkiv Pact extended Russia's lease of its Crimean naval bases to 2042." },
+            { "group": "Ukrainian_Navy", "role": "The Ukrainian Navy remained headquartered in Sevastopol until 2014." }
+          ]
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "After armed men seized the Crimean parliament on 27 February 2014, Sergey Aksyonov (Russian Unity) was installed as premier and a 16 March 'referendum', held under Russian military control and not recognised internationally, preceded Russia's annexation. The Russian-installed State Council is not internationally recognised; its 'elections' are listed only as occupation-body results. Russian authorities banned the Mejlis in 2016 and barred Mustafa Dzhemilev and Refat Chubarov from Crimea; Ukraine still treats the Autonomous Republic of Crimea as occupied Ukrainian territory.",
+            "governing": ["United_Russia", "Russian_Unity"],
+            "elections": [
+              {
+                "body": "'State Council of Crimea' (Russian-installed, not internationally recognised)",
+                "year": 2014,
+                "total": 75,
+                "seats": [
+                  { "party": "United_Russia", "seats": 70 },
+                  { "party": "Liberal_Democratic_Party_of_Russia", "seats": 5 }
+                ],
+                "source": { "title": "2014 Crimean parliamentary election", "url": "https://en.wikipedia.org/wiki/2014_Crimean_parliamentary_election" }
+              },
+              {
+                "body": "'State Council of Crimea' (Russian-installed, not internationally recognised)",
+                "year": 2019,
+                "total": 75,
+                "seats": [
+                  { "party": "United_Russia", "seats": 60 },
+                  { "party": "Liberal_Democratic_Party_of_Russia", "seats": 10 },
+                  { "party": "Communist_Party_of_the_Russian_Federation", "seats": 5 }
+                ],
+                "source": { "title": "State Council of Crimea", "url": "https://en.wikipedia.org/wiki/State_Council_of_Crimea" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Russian_Armed_Forces", "role": "Unmarked Russian troops ('little green men') seized the parliament, airports and Ukrainian bases in February-March 2014." },
+            { "group": "x:Crimean_self-defence_units", "role": "Pro-Russian 'self-defence' militias blockaded Ukrainian military units and were later absorbed into Russian structures." },
+            { "group": "Ukrainian_Navy", "role": "Most Ukrainian ships and personnel in Crimea were captured or defected in March 2014." },
+            { "group": "Black_Sea_Fleet", "role": "The Russian fleet blocked Ukrainian ships in Donuzlav Bay and served as the base for the annexation." }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": {
+            "note": "Russia used occupied Crimea as the springboard for its invasion of southern Ukraine. Russian-installed head Sergey Aksyonov and the State Council, which are not internationally recognised, ran the peninsula under United Russia.",
+            "governing": ["United_Russia"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Russian_Ground_Forces", "role": "Russian forces invaded Kherson and Zaporizhzhia oblasts from Crimea on 24 February 2022." },
+            { "group": "Black_Sea_Fleet", "role": "The fleet blockaded Ukraine's coast and launched cruise missiles from Crimean waters." },
+            { "group": "Security_Service_of_Ukraine", "role": "The SBU was linked to the 8 October 2022 truck-bomb attack on the Crimean Bridge." },
+            { "group": "Atesh", "role": "Founded in 2022 by Crimean Tatars and Ukrainians, it reported sabotage against Russian forces in Crimea." }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Occupation governance continued. In September 2024 Russia held 'elections' to the State Council, which are not internationally recognised and are listed only as occupation-body results.",
+            "governing": ["United_Russia"],
+            "elections": [
+              {
+                "body": "'State Council of Crimea' (Russian-installed, not internationally recognised)",
+                "year": 2024,
+                "total": 75,
+                "seats": [
+                  { "party": "United_Russia", "seats": 68 },
+                  { "party": "Liberal_Democratic_Party_of_Russia", "seats": 3 },
+                  { "party": "Communist_Party_of_the_Russian_Federation", "seats": 3 },
+                  { "party": "A_Just_Russia", "seats": 1 }
+                ],
+                "source": { "title": "State Council of Crimea", "url": "https://en.wikipedia.org/wiki/State_Council_of_Crimea" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Ukrainian_Navy", "role": "Naval drones and missiles sank or damaged many Black Sea Fleet ships, forcing much of the fleet to relocate to Novorossiysk." },
+            { "group": "Security_Service_of_Ukraine", "role": "SBU sea drones damaged the Crimean Bridge again in July 2023." },
+            { "group": "Main_Directorate_of_Intelligence_(Ukraine)", "role": "HUR units raided the Crimean coast and struck air-defence and radar sites." },
+            { "group": "Black_Sea_Fleet", "role": "The fleet's headquarters in Sevastopol was hit by missiles in September 2023." },
+            { "group": "Atesh", "role": "The movement reported reconnaissance and sabotage against Russian bases in Crimea." }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": {
+            "note": "Crimea remained under Russian occupation with the Russian-installed Aksyonov administration; the State Council is not internationally recognised. The Mejlis continued to work from mainland Ukraine. 2026 information may be incomplete.",
+            "governing": ["United_Russia"],
+            "elections": []
+          },
+          "armedGroups": [
+            { "group": "Main_Directorate_of_Intelligence_(Ukraine)", "role": "Ukrainian drone and special-forces strikes on air-defence, airfields and fuel infrastructure in Crimea continued." },
+            { "group": "Russian_Armed_Forces", "role": "Russian forces garrisoned Crimea as a rear base and logistics hub for the southern front." },
+            { "group": "Atesh", "role": "Partisan reports of sabotage in Crimea continued." }
+          ]
+        }
+      }
+    },
+    "UA-40": {
+      "eras": {
+        "ukrainian-revolution": {
+          "politics": {
+            "note": "Sevastopol, the Black Sea Fleet's base, was dominated by revolutionary sailors' committees; the Bolsheviks took control in December 1917, and the city then passed to German occupation (May 1918) and Allied forces (November 1918-April 1919). Like the rest of Crimea it voted in the Taurida district in 1917 (vote shares). In April 1918 part of the fleet raised the Ukrainian flag before most ships sailed to Novorossiysk.",
+            "governing": ["Bolsheviks", "Constitutional_Democratic_Party"],
+            "elections": [
+              {
+                "body": "1917 Constituent Assembly, Taurida Governorate (vote share, %)",
+                "year": 1917,
+                "total": 100,
+                "seats": [
+                  { "party": "Socialist_Revolutionary_Party", "share": 52.22 },
+                  { "party": "Milliy_Firqa", "share": 11.93 },
+                  { "party": "Ukrainian_Socialist-Revolutionary_Party", "share": 10.71 },
+                  { "party": "Constitutional_Democratic_Party", "share": 6.75 },
+                  { "party": "Bolsheviks", "share": 5.5 }
+                ],
+                "source": { "title": "Taurida electoral district (1917)", "url": "https://en.wikipedia.org/wiki/Taurida_electoral_district" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "Bolshevik sailors massacred officers in Sevastopol in December 1917 and February 1918." },
+            { "group": "Imperial_German_Army", "role": "German troops took Sevastopol on 1 May 1918 and seized the remaining ships." },
+            { "group": "French_Army", "role": "Allied fleets held Sevastopol from November 1918 to April 1919." }
+          ]
+        },
+        "soviet-takeover": {
+          "politics": { "note": "Briefly Soviet in spring 1919, Sevastopol was Wrangel's capital and main port in 1920 and fell to the Red Army in November 1920, followed by mass executions.", "governing": ["Communist_Party_of_the_Soviet_Union"], "elections": [] },
+          "armedGroups": [
+            { "group": "Army_of_Wrangel", "role": "Wrangel's army and fleet evacuated from Sevastopol to Constantinople in November 1920." },
+            { "group": "Red_Army", "role": "The Red Army entered Sevastopol on 15 November 1920." }
+          ]
+        },
+        "soviet-ukraine-1920s": {
+          "politics": { "note": "One-party rule within the Crimean ASSR of the Russian SFSR.", "governing": ["Communist_Party_of_the_Soviet_Union"], "elections": [] },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The Soviet Black Sea naval forces were rebuilt at Sevastopol." }
+          ]
+        },
+        "holodomor-terror": {
+          "politics": { "note": "One-party rule; purges hit the fleet's command in 1937-1938.", "governing": ["Communist_Party_of_the_Soviet_Union"], "elections": [] },
+          "armedGroups": [
+            { "group": "NKVD", "role": "The NKVD purged Black Sea Fleet officers in 1937-1938." }
+          ]
+        },
+        "soviet-annexations": {
+          "politics": { "note": "One-party rule; Sevastopol was the main base of the Black Sea Fleet.", "governing": ["Communist_Party_of_the_Soviet_Union"], "elections": [] },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The fleet was headquartered in Sevastopol." }
+          ]
+        },
+        "nazi-occupation": {
+          "politics": { "note": "German military occupation followed the fall of Sevastopol on 4 July 1942 after a 250-day siege; the city was liberated on 9 May 1944.", "governing": ["Nazi_Party"], "elections": [] },
+          "armedGroups": [
+            { "group": "Separate_Coastal_Army", "role": "Defended Sevastopol with the fleet from October 1941 to July 1942." },
+            { "group": "Black_Sea_Fleet", "role": "The fleet supplied and finally evacuated part of the besieged garrison." },
+            { "group": "11th_Army_(Wehrmacht)", "role": "Manstein's army took Sevastopol in July 1942 using super-heavy siege artillery." },
+            { "group": "Red_Army", "role": "Soviet forces stormed Sapun Mountain and retook the city on 9 May 1944." }
+          ]
+        },
+        "postwar-ussr": {
+          "politics": { "note": "One-party rule; Sevastopol was made a city of republican (RSFSR) significance in 1948 and passed with Crimea to the Ukrainian SSR in 1954.", "governing": ["Communist_Party_of_the_Soviet_Union", "Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The fleet rebuilt its main base in the closed city." }
+          ]
+        },
+        "soviet-ukraine-late": {
+          "politics": { "note": "One-party rule by the Communist Party of Ukraine; Sevastopol was a closed naval city.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The Soviet Black Sea Fleet dominated the city." }
+          ]
+        },
+        "independence": {
+          "politics": { "note": "Sevastopol became a Ukrainian city with special status, governed by a presidentially appointed administration and an elected city council; pro-Russian and Communist forces were strong, but no party-level seat data for the city council were found.", "governing": ["Communist_Party_of_Ukraine"], "elections": [] },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "Russia's share of the fleet remained in Sevastopol under the 1997 lease agreements." },
+            { "group": "Ukrainian_Navy", "role": "The Ukrainian Navy had its headquarters in Sevastopol." }
+          ]
+        },
+        "orange-to-euromaidan": {
+          "politics": { "note": "The Party of Regions and its allies controlled the Sevastopol City Council after 2006; exact seat totals were not found.", "governing": ["Party_of_Regions"], "elections": [] },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The Kharkiv Pact of 2010 extended the fleet's lease to 2042." },
+            { "group": "Ukrainian_Navy", "role": "The Ukrainian Navy shared Sevastopol's bays with the Russian fleet." }
+          ]
+        },
+        "crimea-donbas-war": {
+          "politics": {
+            "note": "On 23 February 2014 a pro-Russian rally installed Aleksei Chaly as 'people's mayor'; Russia then annexed the city as a 'federal city'. The Legislative Assembly of Sevastopol, which replaced the city council, is Russian-installed and not internationally recognised; its 'elections' are listed only as occupation-body results.",
+            "governing": ["United_Russia"],
+            "elections": [
+              {
+                "body": "'Legislative Assembly of Sevastopol' (Russian-installed, not internationally recognised)",
+                "year": 2014,
+                "total": 24,
+                "seats": [
+                  { "party": "United_Russia", "seats": 22 },
+                  { "party": "Liberal_Democratic_Party_of_Russia", "seats": 2 }
+                ],
+                "source": { "title": "Legislative Assembly of Sevastopol", "url": "https://en.wikipedia.org/wiki/Legislative_Assembly_of_Sevastopol" }
+              },
+              {
+                "body": "'Legislative Assembly of Sevastopol' (Russian-installed, not internationally recognised)",
+                "year": 2019,
+                "total": 24,
+                "seats": [
+                  { "party": "United_Russia", "seats": 15 },
+                  { "party": "Communist_Party_of_the_Russian_Federation", "seats": 3 },
+                  { "party": "Liberal_Democratic_Party_of_Russia", "seats": 3 },
+                  { "party": "A_Just_Russia", "seats": 1 },
+                  { "party": "Russian_Party_of_Pensioners_for_Social_Justice", "seats": 1 }
+                ],
+                "source": { "title": "Legislative Assembly of Sevastopol", "url": "https://en.wikipedia.org/wiki/Legislative_Assembly_of_Sevastopol" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Russian_Armed_Forces", "role": "Russian marines and special forces blockaded Ukrainian naval units in Sevastopol in March 2014." },
+            { "group": "Black_Sea_Fleet", "role": "The fleet took over Ukrainian naval bases and ships in the city." },
+            { "group": "Ukrainian_Navy", "role": "The Ukrainian Navy lost its headquarters and most of its ships in Sevastopol." }
+          ]
+        },
+        "full-scale-invasion": {
+          "politics": { "note": "Russian-installed governor Mikhail Razvozhayev (United Russia) ran the city; the occupation bodies are not internationally recognised.", "governing": ["United_Russia"], "elections": [] },
+          "armedGroups": [
+            { "group": "Black_Sea_Fleet", "role": "The fleet headquarters in Sevastopol directed the naval blockade of Ukraine; its flagship Moskva was sunk in April 2022." },
+            { "group": "Ukrainian_Navy", "role": "Ukrainian naval drones attacked ships in Sevastopol bay from October 2022." }
+          ]
+        },
+        "war-of-attrition": {
+          "politics": {
+            "note": "Occupation governance continued under Razvozhayev. In September 2024 Russia held 'elections' to the Legislative Assembly, which are not internationally recognised.",
+            "governing": ["United_Russia"],
+            "elections": [
+              {
+                "body": "'Legislative Assembly of Sevastopol' (Russian-installed, not internationally recognised)",
+                "year": 2024,
+                "total": 24,
+                "seats": [
+                  { "party": "United_Russia", "seats": 20 },
+                  { "party": "New_People_(Russia)", "seats": 2 },
+                  { "party": "Communist_Party_of_the_Russian_Federation", "seats": 1 },
+                  { "party": "Liberal_Democratic_Party_of_Russia", "seats": 1 }
+                ],
+                "source": { "title": "Legislative Assembly of Sevastopol", "url": "https://en.wikipedia.org/wiki/Legislative_Assembly_of_Sevastopol" }
+              }
+            ]
+          },
+          "armedGroups": [
+            { "group": "Ukrainian_Navy", "role": "Missiles and drones struck the fleet headquarters (September 2023) and ships and submarines in Sevastopol's docks." },
+            { "group": "Black_Sea_Fleet", "role": "Much of the fleet withdrew from Sevastopol to Novorossiysk after repeated attacks." },
+            { "group": "Russian_Armed_Forces", "role": "Russian air defences around Sevastopol faced near-constant Ukrainian drone and missile attacks." }
+          ]
+        },
+        "war-2025-2026": {
+          "politics": { "note": "Sevastopol remained under Russian occupation with Russian-installed governor Razvozhayev; 2026 information may be incomplete.", "governing": ["United_Russia"], "elections": [] },
+          "armedGroups": [
+            { "group": "Main_Directorate_of_Intelligence_(Ukraine)", "role": "Ukrainian drone strikes on military targets in and around Sevastopol continued." },
+            { "group": "Black_Sea_Fleet", "role": "Remaining fleet units and naval infrastructure in Sevastopol continued to be targeted." }
+          ]
+        }
+      }
+    }
+  }
+}
