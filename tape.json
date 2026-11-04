@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-03T20:46:24Z",
+  "generatedAt": "2026-11-04T01:32:30Z",
   "source": "data/markets",
   "items": [
     {
       "sym": "2yusy.b",
       "name": "2-year Treasury yield",
       "group": null,
-      "date": "2026-10-30",
-      "close": 4.56,
-      "prevClose": 4.61,
-      "deltaPct": -1.0845986984815759,
+      "date": "2026-11-02",
+      "close": 4.59,
+      "prevClose": 4.56,
+      "deltaPct": 0.6578947368421018,
       "ok": true
     },
     {
@@ -18,8 +18,8 @@
       "group": null,
       "date": "2026-11-03",
       "close": 4.743,
-      "prevClose": 4.693,
-      "deltaPct": 1.0654165778819724,
+      "prevClose": 4.7,
+      "deltaPct": 0.914893617021284,
       "ok": true
     },
     {
@@ -28,8 +28,8 @@
       "group": null,
       "date": "2026-11-03",
       "close": 4.952,
-      "prevClose": 4.894,
-      "deltaPct": 1.1851246424192885,
+      "prevClose": 4.91,
+      "deltaPct": 0.8553971486761736,
       "ok": true
     },
     {
@@ -38,18 +38,18 @@
       "group": null,
       "date": "2026-11-03",
       "close": 5.324,
-      "prevClose": 5.269,
-      "deltaPct": 1.0438413361169019,
+      "prevClose": 5.28,
+      "deltaPct": 0.8333333333333304,
       "ok": true
     },
     {
       "sym": "usdeur",
       "name": "Euro in dollars",
       "group": null,
-      "date": "2026-11-02",
-      "close": 1.11569,
-      "prevClose": 1.1163,
-      "deltaPct": -0.05464480874316502,
+      "date": "2026-11-03",
+      "close": 1.11921,
+      "prevClose": 1.11569,
+      "deltaPct": 0.31549982522025566,
       "ok": true
     },
     {
@@ -66,10 +66,10 @@
       "sym": "^spx",
       "name": "S&P 500",
       "group": null,
-      "date": "2026-11-02",
-      "close": 7541.4,
-      "prevClose": 7580.07,
-      "deltaPct": -0.5101536001646423,
+      "date": "2026-11-03",
+      "close": 7568.92,
+      "prevClose": 7541.4,
+      "deltaPct": 0.36491898056063565,
       "ok": true
     },
     {
