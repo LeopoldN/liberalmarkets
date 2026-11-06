@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T21:20:00Z",
+  "generatedAt": "2026-11-06T01:41:52Z",
   "source": "data/markets",
   "items": [
     {
@@ -46,10 +46,10 @@
       "sym": "usdeur",
       "name": "Euro in dollars",
       "group": null,
-      "date": "2026-11-04",
-      "close": 1.12072,
-      "prevClose": 1.11921,
-      "deltaPct": 0.13491659295394864,
+      "date": "2026-11-05",
+      "close": 1.12349,
+      "prevClose": 1.12072,
+      "deltaPct": 0.24716253836820634,
       "ok": true
     },
     {
@@ -86,10 +86,10 @@
       "sym": "asts.us",
       "name": "AST SpaceMobile",
       "group": null,
-      "date": "2026-11-05",
-      "close": 30.2,
-      "prevClose": 35.62,
-      "deltaPct": -15.216170690623244,
+      "date": "2026-11-04",
+      "close": 35.62,
+      "prevClose": 37.15,
+      "deltaPct": -4.118438761776588,
       "ok": true
     }
   ]
