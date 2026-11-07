@@ -70,7 +70,13 @@
 "x:United_Alternative": {"name": "United Alternative", "abbr": "YeA", "leaning": "Regionalism", "summary": "Bukovinian regional party that won 9 seats in the Chernivtsi council in 2020. No English Wikipedia article; see the Chernivtsi Oblast Council article.", "founded": 2020, "dissolved": null, "color": "#6d4c41", "wikipedia": null},
 "x:Team_of_Oleksandr_Symchyshyn": {"name": "Team of Oleksandr Symchyshyn", "abbr": "KS", "leaning": "Regionalism, mayors' party", "summary": "List of Khmelnytskyi mayor Oleksandr Symchyshyn that tied for first place in the Khmelnytskyi council in 2020. No English Wikipedia article; see the Khmelnytskyi Oblast Council article.", "founded": 2020, "dissolved": null, "color": "#ff9800", "wikipedia": null},
 "x:Community_Platform": {"name": "Community Platform (Hromadska platforma)", "abbr": "HP", "leaning": "Regionalism", "summary": "Local party that won 10 seats in the Ivano-Frankivsk council in 2020. No English Wikipedia article; see the Ivano-Frankivsk Oblast Council article.", "founded": 2020, "dissolved": null, "color": "#9e9e9e", "wikipedia": null},
-"Dovira": {"name": "Dovira (Trust)", "abbr": "Dovira", "leaning": "Centre, regionalism", "summary": "Party associated with a group of independent MPs elected in 2019 that won seats in the Ternopil council in 2020.", "founded": 2019, "dissolved": null, "color": "#5c6bc0", "wikipedia": "https://en.wikipedia.org/wiki/Dovira"}
+"Dovira": {"name": "Dovira (Trust)", "abbr": "Dovira", "leaning": "Centre, regionalism", "summary": "Party associated with a group of independent MPs elected in 2019 that won seats in the Ternopil council in 2020.", "founded": 2019, "dissolved": null, "color": "#5c6bc0", "wikipedia": "https://en.wikipedia.org/wiki/Dovira"},
+"Liberal_Party_(Hungary)": {"name": "Liberal Party (Hungary)", "abbr": "SZP", "leaning": "Centre-right, liberalism, pro-Compromise", "summary": "Hungary's ruling party from 1875 to 1905, founded by Kálmán Tisza; it governed the Rusyn counties of the Kingdom of Hungary and pursued Magyarization.", "founded": 1875, "dissolved": 1906, "color": "#3a7ca5", "wikipedia": "https://en.wikipedia.org/wiki/Liberal_Party_(Hungary)"},
+"Party_of_National_Work": {"name": "National Party of Work", "abbr": "NMP", "leaning": "Centre-right, national liberalism", "summary": "Hungarian ruling party founded by István Tisza in 1910 as the successor of the Liberal Party, in government until 1917.", "founded": 1910, "dissolved": 1918, "color": "#2f6690", "wikipedia": "https://en.wikipedia.org/wiki/Party_of_National_Work"},
+"x:Indigenous_Autonomous_Party": {"name": "Indigenous Autonomous Party", "abbr": "", "leaning": "Hungarian minority opposition", "summary": "List set up at a meeting of opposition sympathizers in Berehove in February 1924, with Hungarian candidates, for the first election held in Subcarpathian Rus'. No dedicated English Wikipedia article; see the 1924 Užhorod by-election article.", "founded": 1924, "dissolved": null, "color": "#7f8c8d", "wikipedia": null},
+"Social_Democratic_Workers'_Party_in_Subcarpathian_Rus'": {"name": "Social Democratic Workers' Party in Subcarpathian Rus'", "abbr": "", "leaning": "Centre-left, social democracy", "summary": "Regional social democratic party that ran with the Czechoslovak Social Democrats in the 1924 vote and won one seat.", "founded": null, "dissolved": null, "color": "#c0392b", "wikipedia": "https://en.wikipedia.org/wiki/Social_Democratic_Workers%27_Party_in_Subcarpathian_Rus%27"},
+"Carpatho-Russian_Labour_Party_of_Small_Peasants_and_Landless": {"name": "Carpatho-Russian Labour Party of Small Peasants and Landless", "abbr": "", "leaning": "Agrarian, Russophile", "summary": "Subcarpathian party that contested the 1924 vote in coalition with the Czechoslovak National Social Party and won one seat.", "founded": null, "dissolved": null, "color": "#b7950b", "wikipedia": "https://en.wikipedia.org/wiki/Carpatho-Russian_Labour_Party_of_Small_Peasants_and_Landless"},
+"x:Soviet_of_Peasants_Deputies_(Bessarabia)": {"name": "Soviet of Peasants' Deputies (Bessarabia)", "abbr": "", "leaning": "Agrarian left", "summary": "Peasant list in the 1917 Russian Constituent Assembly election in Bessarabia, which took five of the district's seats. No dedicated English Wikipedia article; see the Bessarabia electoral district article.", "founded": 1917, "dissolved": 1918, "color": "#6c8e3f", "wikipedia": null}
 },
 "armedGroups": {
 "Ukrainian_Sich_Riflemen": {"name": "Ukrainian Sich Riflemen", "type": "Volunteer legion of the Austro-Hungarian Army", "side": "Austria-Hungary, then West Ukrainian People's Republic", "summary": "Ukrainian volunteer unit raised in Galicia in 1914; its men led the November 1918 seizure of Lviv and formed the core of the Ukrainian Galician Army.", "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Sich_Riflemen"},
@@ -126,11 +132,42 @@
 "Lviv_Battalion_(Ukraine)": {"name": "Lviv Battalion", "type": "Special police battalion (volunteer)", "side": "Ukraine", "summary": "Special-purpose police battalion raised in Lviv Oblast in 2014 under the Interior Ministry for service in the Donbas war zone.", "wikipedia": "https://en.wikipedia.org/wiki/Lviv_Battalion_(Ukraine)"},
 "49th_Assault_Battalion_(Ukraine)": {"name": "Carpathian Sich Battalion", "type": "Volunteer battalion", "side": "Ukraine", "summary": "Volunteer battalion formed in 2014 by nationalists from Zakarpattia and other regions, named after the 1939 Carpathian Sich; it later became the 49th Assault Battalion.", "wikipedia": "https://en.wikipedia.org/wiki/49th_Assault_Battalion_(Ukraine)"},
 "State_Border_Guard_Service_of_Ukraine": {"name": "State Border Guard Service of Ukraine", "type": "Border guard service", "side": "Ukraine", "summary": "Ukraine's border force, which in the western oblasts guards the borders with Poland, Slovakia, Hungary, Romania, Moldova and Belarus.", "wikipedia": "https://en.wikipedia.org/wiki/State_Border_Guard_Service_of_Ukraine"},
-"x:Bukovinian_Kurin": {"name": "Bukovinian Kurin", "type": "OUN-M volunteer battalion", "side": "OUN-M / German auxiliary", "summary": "Battalion of Bukovinian Ukrainians organised by the Melnyk faction of the OUN in 1941 under Petro Voinovsky, which marched east to Kyiv and was later absorbed into German-controlled police units. No dedicated English Wikipedia article; see the article on Petro Voinovsky.", "wikipedia": null}
+"x:Bukovinian_Kurin": {"name": "Bukovinian Kurin", "type": "OUN-M volunteer battalion", "side": "OUN-M / German auxiliary", "summary": "Battalion of Bukovinian Ukrainians organised by the Melnyk faction of the OUN in 1941 under Petro Voinovsky, which marched east to Kyiv and was later absorbed into German-controlled police units. No dedicated English Wikipedia article; see the article on Petro Voinovsky.", "wikipedia": null},
+"Imperial_Russian_Army": {"name": "Imperial Russian Army", "type": "Regular army of the Russian Empire", "side": "Russian Empire", "summary": "Tsarist army that garrisoned Volhynia and Podolia, occupied much of Galicia and Bukovina in 1914-1917 and launched the Brusilov Offensive of 1916 from the west of today's Ukraine.", "wikipedia": "https://en.wikipedia.org/wiki/Imperial_Russian_Army"},
+"Polish_Legions_in_World_War_I": {"name": "Polish Legions", "type": "Polish volunteer formation in the Austro-Hungarian Army", "side": "Austria-Hungary / Polish independence movement", "summary": "Polish volunteer brigades raised in 1914 under Austro-Hungarian command, with Józef Piłsudski commanding the First Brigade; they fought in the Carpathians, Bukovina and Volhynia.", "wikipedia": "https://en.wikipedia.org/wiki/Polish_Legions_in_World_War_I"},
+"Czechoslovak_Legion": {"name": "Czechoslovak Legion", "type": "Czech and Slovak volunteer force in the Russian Army", "side": "Russian Empire / Czechoslovak independence movement", "summary": "Volunteer force of Czechs and Slovaks fighting on the Entente side, which won the Battle of Zborov in today's Ternopil Oblast in July 1917.", "wikipedia": "https://en.wikipedia.org/wiki/Czechoslovak_Legion"},
+"300th_Mechanized_Regiment_(Ukraine)": {"name": "300th Mechanized Regiment", "type": "Ukrainian Ground Forces regiment", "side": "Ukraine", "summary": "Regiment garrisoned in Chernivtsi under the 13th Army Corps, renamed from the Soviet 145th Guards Training Regiment in 2000 and disbanded in 2013.", "wikipedia": "https://en.wikipedia.org/wiki/300th_Mechanized_Regiment_(Ukraine)"}
 },
 "oblasts": {
 "UA-46": {
   "eras": {
+    "national-revival": {
+      "politics": {
+        "note": "Galicia was an Austrian crownland run from Lviv by a viceroy and a Polish-dominated Diet, with no Ukrainian party in government. The Radicals (1890), National Democrats (1899) and Social Democrats (1899) all formed here and competed with Russophiles for Ukrainian voters; in 1908 the student Myroslav Sichynsky assassinated Viceroy Andrzej Potocki in Lviv in protest at the electoral system.",
+        "governing": [],
+        "elections": [
+          {
+            "body": "Austrian Reichsrat, Galicia (the 27 deputies elected by Ukrainians and Russophiles; only National Democrats itemised)",
+            "year": 1907,
+            "total": 27,
+            "seats": [ { "party": "Ukrainian_National_Democratic_Party", "seats": 17 } ],
+            "source": { "title": "National Democratic party (Encyclopedia of Ukraine)", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CN%5CA%5CNationalDemocraticparty.htm" }
+          },
+          {
+            "body": "Galician Diet (the 30 Ukrainophile deputies; only the Radicals itemised, one Russophile also elected)",
+            "year": 1913,
+            "total": 30,
+            "seats": [ { "party": "Ukrainian_Radical_Party", "seats": 6 } ],
+            "source": { "title": "Ukrainian Radical party (Encyclopedia of Ukraine)", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CU%5CK%5CUkrainianRadicalparty.htm" }
+          }
+        ]
+      },
+      "armedGroups": [
+        { "group": "Austro-Hungarian_Army", "role": "Lviv was a major garrison, and the Austro-Hungarian army lost the city in the Battle of Galicia in September 1914 before retaking it in June 1915." },
+        { "group": "Imperial_Russian_Army", "role": "Russian troops occupied Lviv from September 1914 to June 1915." },
+        { "group": "Ukrainian_Sich_Riflemen", "role": "The legion was formed in Lviv in 1914 and fought at Makivka in the Carpathians in 1915." }
+      ]
+    },
     "ukrainian-revolution": {
       "politics": {
         "note": "On 1 November 1918 the Ukrainian National Rada, dominated by Galician National Democrats under Yevhen Petrushevych, seized Lviv and proclaimed the West Ukrainian People's Republic (ZUNR). Polish forces retook the city within three weeks, so the ZUNR government sat in Ternopil and Stanislaviv; by July 1919 Poland controlled all of Eastern Galicia. Galicia was under Austria and did not vote in the 1917 Russian Constituent Assembly election.",
@@ -181,7 +218,15 @@
       "politics": {
         "note": "Under Poland's Sanation regime, UNDO under Vasyl Mudry struck the 1935 'normalization' agreement with the government, while the OUN underground escalated its campaign, leading to the 1936 Lviv trial of Stepan Bandera and others. This region lay outside the USSR and did not experience the Holodomor.",
         "governing": ["Nonpartisan_Bloc_for_Cooperation_with_the_Government", "Ukrainian_National_Democratic_Alliance"],
-        "elections": []
+        "elections": [
+          {
+            "body": "Polish Sejm (Poland-wide totals; opposition boycott; 19 of the minorities' 25 seats were Ukrainian)",
+            "year": 1935,
+            "total": 206,
+            "seats": [ { "party": "Nonpartisan_Bloc_for_Cooperation_with_the_Government", "seats": 181 }, { "party": "Bloc_of_National_Minorities", "seats": 25 } ],
+            "source": { "title": "1935 Polish parliamentary election", "url": "https://en.wikipedia.org/wiki/1935_Polish_parliamentary_election" }
+          }
+        ]
       },
       "armedGroups": [
         { "group": "Organisation_of_Ukrainian_Nationalists", "role": "OUN cells in Lviv organised assassinations, including that of Polish interior minister Bronisław Pieracki in 1934." },
@@ -344,6 +389,19 @@
 },
 "UA-07": {
   "eras": {
+    "national-revival": {
+      "politics": {
+        "note": "Volhynia was a province of the Russian Empire under an appointed governor, with no elected regional government. The Ukrainian movement was weak under tsarist restrictions, and the western part of the region came under Austro-German occupation in 1915.",
+        "governing": [],
+        "elections": []
+      },
+      "armedGroups": [
+        { "group": "Imperial_Russian_Army", "role": "Russian forces broke through at Lutsk in the Brusilov Offensive of June 1916." },
+        { "group": "Austro-Hungarian_Army", "role": "Austro-Hungarian troops took Lutsk in 1915 and lost it in June 1916." },
+        { "group": "Imperial_German_Army", "role": "German reinforcements helped hold Kovel against repeated Russian attacks in 1916." },
+        { "group": "Polish_Legions_in_World_War_I", "role": "The Polish Legions fought at Kostiuchnówka in July 1916." }
+      ]
+    },
     "ukrainian-revolution": {
       "politics": {
         "note": "Eastern Volhynia, including Lutsk, came under the Central Rada and the Ukrainian People's Republic, while the western part of the Volhynia Governorate was under German and Austrian occupation. In the November 1917 Constituent Assembly vote the Ukrainian SR list swept the governorate. Polish forces took Lutsk and Kovel in spring 1919.",
@@ -398,7 +456,15 @@
       "politics": {
         "note": "Voivode Henryk Józewski's 'Volhynia Experiment' (1928-1938) promoted loyal Ukrainian organisations and kept Galician nationalism out, while the communist underground stayed strong until the KPZU was dissolved in 1938. The policy was reversed after 1938. This region was outside the USSR and did not experience the Holodomor.",
         "governing": ["Nonpartisan_Bloc_for_Cooperation_with_the_Government"],
-        "elections": []
+        "elections": [
+          {
+            "body": "Polish Sejm (Poland-wide totals; opposition boycott; 19 of the minorities' 25 seats were Ukrainian)",
+            "year": 1935,
+            "total": 206,
+            "seats": [ { "party": "Nonpartisan_Bloc_for_Cooperation_with_the_Government", "seats": 181 }, { "party": "Bloc_of_National_Minorities", "seats": 25 } ],
+            "source": { "title": "1935 Polish parliamentary election", "url": "https://en.wikipedia.org/wiki/1935_Polish_parliamentary_election" }
+          }
+        ]
       },
       "armedGroups": [
         { "group": "Organisation_of_Ukrainian_Nationalists", "role": "The OUN gradually built networks in Volhynia in the 1930s despite Józewski's policy." }
@@ -553,6 +619,17 @@
 },
 "UA-56": {
   "eras": {
+    "national-revival": {
+      "politics": {
+        "note": "The area belonged to the Russian Volhynia Governorate under an appointed governor, with no elected regional government; Ukrainian organizations worked under tsarist restrictions.",
+        "governing": [],
+        "elections": []
+      },
+      "armedGroups": [
+        { "group": "Imperial_Russian_Army", "role": "Dubno fortress formed part of Russia's Volhynian defences, and Russian troops retook the town in the Brusilov Offensive." },
+        { "group": "Austro-Hungarian_Army", "role": "Austro-Hungarian troops held Dubno until the Brusilov Offensive of 1916." }
+      ]
+    },
     "ukrainian-revolution": {
       "politics": {
         "note": "The area belonged to the Volhynia Governorate, which voted overwhelmingly for the Ukrainian SR list in the 1917 Constituent Assembly election and came under the Central Rada and then the Hetmanate. In spring 1919 Rivne briefly served as a seat of the UNR Directorate before Polish forces advanced into Volhynia.",
@@ -607,7 +684,15 @@
       "politics": {
         "note": "Under voivode Henryk Józewski's 'Volhynia Experiment' the authorities favoured loyal Ukrainian cooperatives and organisations, while both communists and the OUN worked underground. The region was outside the USSR and did not experience the Holodomor.",
         "governing": ["Nonpartisan_Bloc_for_Cooperation_with_the_Government"],
-        "elections": []
+        "elections": [
+          {
+            "body": "Polish Sejm (Poland-wide totals; opposition boycott; 19 of the minorities' 25 seats were Ukrainian)",
+            "year": 1935,
+            "total": 206,
+            "seats": [ { "party": "Nonpartisan_Bloc_for_Cooperation_with_the_Government", "seats": 181 }, { "party": "Bloc_of_National_Minorities", "seats": 25 } ],
+            "source": { "title": "1935 Polish parliamentary election", "url": "https://en.wikipedia.org/wiki/1935_Polish_parliamentary_election" }
+          }
+        ]
       },
       "armedGroups": [
         { "group": "Organisation_of_Ukrainian_Nationalists", "role": "The OUN expanded its underground in the Rivne area in the late 1930s." }
@@ -692,7 +777,9 @@
           }
         ]
       },
-      "armedGroups": []
+      "armedGroups": [
+        { "group": "Armed_Forces_of_Ukraine", "role": "Generic garrison presence; no region-specific detail found.", "placeholder": true }
+      ]
     },
     "crimea-donbas-war": {
       "politics": {
@@ -757,11 +844,47 @@
 },
 "UA-61": {
   "eras": {
+    "national-revival": {
+      "politics": {
+        "note": "Most of the oblast lay in Austrian Galicia, where the National Democrats, Radicals and Russophiles competed for Ukrainian votes under a Polish-dominated Diet; the Kremenets area was in Russian Volhynia under an appointed governor. In neither part did a Ukrainian party hold government.",
+        "governing": [],
+        "elections": [
+          {
+            "body": "Austrian Reichsrat, Galicia (the 27 deputies elected by Ukrainians and Russophiles; only National Democrats itemised)",
+            "year": 1907,
+            "total": 27,
+            "seats": [ { "party": "Ukrainian_National_Democratic_Party", "seats": 17 } ],
+            "source": { "title": "National Democratic party (Encyclopedia of Ukraine)", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CN%5CA%5CNationalDemocraticparty.htm" }
+          },
+          {
+            "body": "Galician Diet (the 30 Ukrainophile deputies; only the Radicals itemised, one Russophile also elected)",
+            "year": 1913,
+            "total": 30,
+            "seats": [ { "party": "Ukrainian_Radical_Party", "seats": 6 } ],
+            "source": { "title": "Ukrainian Radical party (Encyclopedia of Ukraine)", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CU%5CK%5CUkrainianRadicalparty.htm" }
+          }
+        ]
+      },
+      "armedGroups": [
+        { "group": "Ukrainian_Sich_Riflemen", "role": "The Riflemen fought at Lysonia near Berezhany in 1916." },
+        { "group": "Czechoslovak_Legion", "role": "The Legion won the Battle of Zborov in July 1917." },
+        { "group": "Imperial_Russian_Army", "role": "Russian troops occupied much of the area in 1914-1917." },
+        { "group": "Austro-Hungarian_Army", "role": "Austro-Hungarian forces held the Strypa and Zolota Lypa lines against Russian attacks." }
+      ]
+    },
     "ukrainian-revolution": {
       "politics": {
         "note": "Most of the oblast was Austrian Galicia: after Polish troops took Lviv in November 1918, Ternopil served as the seat of the West Ukrainian People's Republic government until January 1919, under the Galician National Democrat-led Ukrainian National Rada. The north-eastern Kremenets area belonged to the Russian Volhynia Governorate, which voted overwhelmingly Ukrainian SR in 1917. In June 1919 the Galician Army's Chortkiv offensive briefly retook much of the region before the army crossed the Zbruch in July.",
         "governing": ["Ukrainian_National_Democratic_Party", "Ukrainian_Radical_Party"],
-        "elections": []
+        "elections": [
+          {
+            "body": "All-Russian Constituent Assembly, Volhynia electoral district (whole governorate; only the Kremenets area lies in today's oblast)",
+            "year": 1917,
+            "total": 10,
+            "seats": [ { "party": "Ukrainian_Socialist-Revolutionary_Party", "seats": 9 } ],
+            "source": { "title": "Volhynia electoral district (1917 Russian Constituent Assembly election)", "url": "https://en.wikipedia.org/wiki/Volhynia_electoral_district" }
+          }
+        ]
       },
       "armedGroups": [
         { "group": "Ukrainian_Galician_Army", "role": "The Galician Army launched the Chortkiv offensive from this region in June 1919 and crossed the Zbruch into Podolia in July." },
@@ -803,7 +926,15 @@
       "politics": {
         "note": "Under the Sanation regime UNDO pursued the 1935 'normalization' with Warsaw while the OUN underground grew among the young. The region was outside the USSR and did not experience the Holodomor, although it bordered Soviet Podolia across the Zbruch.",
         "governing": ["Nonpartisan_Bloc_for_Cooperation_with_the_Government", "Ukrainian_National_Democratic_Alliance"],
-        "elections": []
+        "elections": [
+          {
+            "body": "Polish Sejm (Poland-wide totals; opposition boycott; 19 of the minorities' 25 seats were Ukrainian)",
+            "year": 1935,
+            "total": 206,
+            "seats": [ { "party": "Nonpartisan_Bloc_for_Cooperation_with_the_Government", "seats": 181 }, { "party": "Bloc_of_National_Minorities", "seats": 25 } ],
+            "source": { "title": "1935 Polish parliamentary election", "url": "https://en.wikipedia.org/wiki/1935_Polish_parliamentary_election" }
+          }
+        ]
       },
       "armedGroups": [
         { "group": "Organisation_of_Ukrainian_Nationalists", "role": "OUN cells were active across the Ternopil region in the 1930s." },
@@ -956,6 +1087,33 @@
 },
 "UA-26": {
   "eras": {
+    "national-revival": {
+      "politics": {
+        "note": "The area lay in Austrian Galicia under a Polish-dominated Diet. The Radicals, led from Kolomyia by figures such as Kyrylo Trylovsky, and the National Democrats were the main Ukrainian parties, and the rural Pokuttia and Hutsul districts were early bases of the Sich gymnastic movement.",
+        "governing": [],
+        "elections": [
+          {
+            "body": "Austrian Reichsrat, Galicia (the 27 deputies elected by Ukrainians and Russophiles; only National Democrats itemised)",
+            "year": 1907,
+            "total": 27,
+            "seats": [ { "party": "Ukrainian_National_Democratic_Party", "seats": 17 } ],
+            "source": { "title": "National Democratic party (Encyclopedia of Ukraine)", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CN%5CA%5CNationalDemocraticparty.htm" }
+          },
+          {
+            "body": "Galician Diet (the 30 Ukrainophile deputies; only the Radicals itemised, one Russophile also elected)",
+            "year": 1913,
+            "total": 30,
+            "seats": [ { "party": "Ukrainian_Radical_Party", "seats": 6 } ],
+            "source": { "title": "Ukrainian Radical party (Encyclopedia of Ukraine)", "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CU%5CK%5CUkrainianRadicalparty.htm" }
+          }
+        ]
+      },
+      "armedGroups": [
+        { "group": "Austro-Hungarian_Army", "role": "Austro-Hungarian forces fought over Stanislau and Kolomyia through 1914-1916." },
+        { "group": "Imperial_Russian_Army", "role": "Russian troops occupied the area in 1914-1915 and took Stanislau and Kolomyia in the 1916 Brusilov Offensive." },
+        { "group": "Polish_Legions_in_World_War_I", "role": "The Polish Legions fought at Mołotków in October 1914." }
+      ]
+    },
     "ukrainian-revolution": {
       "politics": {
         "note": "From January to May 1919 Stanislaviv (today's Ivano-Frankivsk) was the capital of the West Ukrainian People's Republic; there the Ukrainian National Rada, led by Galician National Democrats under Yevhen Petrushevych, ratified the union with the Ukrainian People's Republic on 3 January 1919. Galicia lay under Austria and did not vote in the 1917 Russian Constituent Assembly election. In May 1919 Polish troops took Stanislaviv and Romanian troops occupied Pokuttia (Kolomyia, Sniatyn).",
@@ -1002,7 +1160,15 @@
       "politics": {
         "note": "Under the Sanation regime UNDO pursued the 1935 'normalization' with Warsaw, while the OUN gained support among young people. The region was outside the USSR and did not experience the Holodomor.",
         "governing": ["Nonpartisan_Bloc_for_Cooperation_with_the_Government", "Ukrainian_National_Democratic_Alliance"],
-        "elections": []
+        "elections": [
+          {
+            "body": "Polish Sejm (Poland-wide totals; opposition boycott; 19 of the minorities' 25 seats were Ukrainian)",
+            "year": 1935,
+            "total": 206,
+            "seats": [ { "party": "Nonpartisan_Bloc_for_Cooperation_with_the_Government", "seats": 181 }, { "party": "Bloc_of_National_Minorities", "seats": 25 } ],
+            "source": { "title": "1935 Polish parliamentary election", "url": "https://en.wikipedia.org/wiki/1935_Polish_parliamentary_election" }
+          }
+        ]
       },
       "armedGroups": [
         { "group": "Organisation_of_Ukrainian_Nationalists", "role": "OUN cells were active in Stanislaviv and the Carpathian foothills." }
@@ -1155,6 +1321,17 @@
 },
 "UA-21": {
   "eras": {
+    "national-revival": {
+      "politics": {
+        "note": "Subcarpathia belonged to the Kingdom of Hungary, governed from Budapest by the Liberal Party until 1905 and by István Tisza's Party of National Work from 1910; Rusyns had almost no political representation under a narrow franchise and Magyarization policies. A movement to Orthodoxy brought the Máramarossziget trials of 1913-1914.",
+        "governing": ["Liberal_Party_(Hungary)", "Party_of_National_Work"],
+        "elections": []
+      },
+      "armedGroups": [
+        { "group": "Austro-Hungarian_Army", "role": "Austro-Hungarian forces fought the Russian army in the Carpathian passes in the winter of 1914-1915." },
+        { "group": "Imperial_Russian_Army", "role": "Russian armies broke through the Uzhok and Verecke passes in 1914-1915 before being driven back." }
+      ]
+    },
     "ukrainian-revolution": {
       "politics": {
         "note": "The region was part of Hungary. After the Habsburg collapse rival Rusyn councils debated union with Hungary, Ukraine or Czechoslovakia; Hungary created a 'Ruska Kraina' autonomy in December 1918, a Hutsul Republic existed briefly around Yasinia, and in spring 1919 the Hungarian Soviet Republic held most of the area until Czechoslovak and Romanian troops advanced. In May 1919 the Central Ruthenian National Council in Uzhhorod accepted union with Czechoslovakia. The region did not vote in the 1917 Russian Constituent Assembly election.",
@@ -1182,7 +1359,15 @@
       "politics": {
         "note": "The region first voted in Czechoslovak parliamentary elections in 1924, when the Communist Party of Czechoslovakia became its strongest single party; the Agrarians, who led Czechoslovak governments, and Russophile autonomists were the other main forces. Per-region seat data for Subcarpathia are not available on Wikipedia.",
         "governing": ["Republican_Party_of_Farmers_and_Peasants", "Communist_Party_of_Czechoslovakia"],
-        "elections": []
+        "elections": [
+          {
+            "body": "Czechoslovak Chamber of Deputies, Subcarpathian Rus by-election (lists that won seats)",
+            "year": 1924,
+            "total": 9,
+            "seats": [ { "party": "Communist_Party_of_Czechoslovakia", "seats": 5 }, { "party": "x:Indigenous_Autonomous_Party", "seats": 1 }, { "party": "x:Autonomous_Agricultural_Union", "seats": 1 }, { "party": "Social_Democratic_Workers'_Party_in_Subcarpathian_Rus'", "seats": 1 }, { "party": "Carpatho-Russian_Labour_Party_of_Small_Peasants_and_Landless", "seats": 1 } ],
+            "source": { "title": "1924 Užhorod by-election", "url": "https://en.wikipedia.org/wiki/1924_U%C5%BEhorod_by-election" }
+          }
+        ]
       },
       "armedGroups": [
         { "group": "Czechoslovak_Army", "role": "Czechoslovak garrisons guarded the borders with Poland, Hungary and Romania." }
@@ -1353,11 +1538,30 @@
 },
 "UA-77": {
   "eras": {
+    "national-revival": {
+      "politics": {
+        "note": "Bukovina was a separate Austrian crownland with its own Diet in Czernowitz, in which Ukrainians, Romanians, Germans, Poles and Jews held seats; a 1910 settlement fixed national shares. The Khotyn district was part of Russian Bessarabia under an appointed governor.",
+        "governing": [],
+        "elections": []
+      },
+      "armedGroups": [
+        { "group": "Austro-Hungarian_Army", "role": "Austro-Hungarian forces fought for Czernowitz, which changed hands repeatedly in 1914-1917." },
+        { "group": "Imperial_Russian_Army", "role": "Russian troops occupied Czernowitz several times and took it in June 1916." },
+        { "group": "Polish_Legions_in_World_War_I", "role": "Polish Legion cavalry charged at Rokitna on the Bessarabian border in June 1915." }
+      ]
+    },
     "ukrainian-revolution": {
       "politics": {
         "note": "Northern Bukovina was Austrian: on 3 November 1918 a Ukrainian assembly in Chernivtsi voted to join the West Ukrainian People's Republic and briefly took over the city, but Romanian troops entered on 11 November and a General Congress of Bukovina dominated by Romanian deputies voted for union with Romania on 28 November. The Khotyn area, in Russian Bessarabia, rose against Romanian rule in the Khotyn Uprising of January 1919. Romania was then governed by the National Liberals under Ion I. C. Brătianu.",
         "governing": ["National_Liberal_Party_(Romania)"],
-        "elections": []
+        "elections": [
+          {
+            "body": "All-Russian Constituent Assembly, Bessarabia electoral district (vote share, whole governorate; only the Khotyn area lies in today's oblast)",
+            "year": 1917,
+            "seats": [ { "party": "Socialist_Revolutionary_Party", "share": 33.63 }, { "party": "x:Soviet_of_Peasants_Deputies_(Bessarabia)", "share": 27.22 }, { "party": "Bolsheviks", "share": 10.07 }, { "party": "Constitutional_Democratic_Party", "share": 6.52 } ],
+            "source": { "title": "Bessarabia electoral district", "url": "https://en.wikipedia.org/wiki/Bessarabia_electoral_district" }
+          }
+        ]
       },
       "armedGroups": [
         { "group": "Romanian_Land_Forces", "role": "Romanian troops occupied Chernivtsi in November 1918 and crushed the Khotyn Uprising in January-February 1919." },
@@ -1472,7 +1676,9 @@
           }
         ]
       },
-      "armedGroups": []
+      "armedGroups": [
+        { "group": "300th_Mechanized_Regiment_(Ukraine)", "role": "The regiment was garrisoned in Chernivtsi until it was disbanded in October 2013." }
+      ]
     },
     "crimea-donbas-war": {
       "politics": {
@@ -1536,6 +1742,17 @@
 },
 "UA-68": {
   "eras": {
+    "national-revival": {
+      "politics": {
+        "note": "The area belonged to the Russian Podolia and Volhynia governorates under appointed governors, with no elected regional government; Ukrainian cultural societies worked under tsarist restrictions, and Kamianets-Podilskyi was the provincial capital of Podolia.",
+        "governing": [],
+        "elections": []
+      },
+      "armedGroups": [
+        { "group": "Imperial_Russian_Army", "role": "The Zbruch frontier and Proskuriv served as bases for the Russian Southwestern Front." },
+        { "group": "Austro-Hungarian_Army", "role": "Austro-Hungarian troops briefly crossed the Zbruch into the borderland in 1914." }
+      ]
+    },
     "ukrainian-revolution": {
       "politics": {
         "note": "Most of the oblast lay in the Podolia Governorate (the north in Volhynia), which gave the Ukrainian SR-led bloc nearly four-fifths of the vote in the 1917 Constituent Assembly election. Under the Central Rada, Hetmanate and Directorate it stayed Ukrainian-held, and from June to November 1919 Kamianets-Podilskyi was the capital of the Ukrainian People's Republic, joined in July by the Galician army and ZUNR government from across the Zbruch.",

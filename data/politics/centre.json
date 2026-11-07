@@ -372,6 +372,234 @@
       "dissolved": 2012,
       "color": "#c0003c",
       "wikipedia": "https://en.wikipedia.org/wiki/Yulia_Tymoshenko_Bloc"
+    },
+    "UDAR": {
+      "name": "UDAR (Ukrainian Democratic Alliance for Reform)",
+      "abbr": "UDAR",
+      "leaning": "Centre-right, pro-European",
+      "summary": "Party led by Vitali Klitschko that won seats in Kyiv and Chernihiv oblast councils in 2010.",
+      "founded": 2010,
+      "dissolved": 2015,
+      "color": "#d62d20",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Democratic_Alliance_for_Reform"
+    },
+    "Reforms_and_Order_Party": {
+      "name": "Reforms and Order Party",
+      "abbr": "PRP",
+      "leaning": "Liberalism",
+      "summary": "Liberal party that won two seats in the Chernihiv Oblast Council in 2010.",
+      "founded": 1997,
+      "dissolved": 2013,
+      "color": "#7a9e3e",
+      "wikipedia": "https://en.wikipedia.org/wiki/Reforms_and_Order_Party"
+    },
+    "European_Party_of_Ukraine": {
+      "name": "European Party of Ukraine",
+      "abbr": "EPU",
+      "leaning": "Pro-European, liberalism",
+      "summary": "Party of Mykola Katerynchuk that won a seat in the Kyiv Oblast Council in 2010.",
+      "founded": 2006,
+      "dissolved": null,
+      "color": "#2d5fa8",
+      "wikipedia": "https://en.wikipedia.org/wiki/European_Party_of_Ukraine"
+    },
+    "Peasant_Party_of_Ukraine": {
+      "name": "Peasant Party of Ukraine",
+      "abbr": "SelPU",
+      "leaning": "Agrarianism, left-wing",
+      "summary": "Agrarian party with a seat in the Poltava Oblast Council after 2010.",
+      "founded": 1992,
+      "dissolved": null,
+      "color": "#8ba349",
+      "wikipedia": "https://en.wikipedia.org/wiki/Peasant_Party_of_Ukraine"
+    },
+    "Ukrainian_Republican_Party_Sobor": {
+      "name": "Ukrainian Republican Party \"Sobor\"",
+      "abbr": "URP Sobor",
+      "leaning": "National democracy",
+      "summary": "National-democratic party with a seat in the Vinnytsia Oblast Council after 2010.",
+      "founded": 2006,
+      "dissolved": null,
+      "color": "#5a7fb0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Republican_Party_%22Sobor%22"
+    },
+    "x:Justice_(Ukraine)": {
+      "name": "Justice (Spravedlyvist)",
+      "abbr": null,
+      "leaning": "Centre-left",
+      "summary": "Small Ukrainian party that won oblast council seats in Kyiv and Kirovohrad oblasts in 2010. No dedicated English Wikipedia article; source: uk.wikipedia oblast council election pages.",
+      "color": "#9a7b4f",
+      "wikipedia": null
+    },
+    "x:Third_Force_(Ukraine)": {
+      "name": "Third Force",
+      "abbr": null,
+      "leaning": "Unknown",
+      "summary": "Small party that won one seat in the Kyiv Oblast Council in 2010. No English Wikipedia article; source: uk.wikipedia election page.",
+      "color": "#888888",
+      "wikipedia": null
+    },
+    "x:Conscience_of_Ukraine": {
+      "name": "Conscience of Ukraine",
+      "abbr": null,
+      "leaning": "Regionalism",
+      "summary": "Party that won nine seats in the Poltava Oblast Council in 2010. No English Wikipedia article; source: uk.wikipedia election page.",
+      "color": "#7f6d9c",
+      "wikipedia": null
+    },
+    "x:Party_of_Free_Democrats": {
+      "name": "Party of Free Democrats",
+      "abbr": null,
+      "leaning": "Liberalism",
+      "summary": "Small party that won a constituency seat in the Cherkasy Oblast Council in 2010. No English Wikipedia article; source: uk.wikipedia election page.",
+      "color": "#888888",
+      "wikipedia": null
+    },
+    "x:For_Ukraine!": {
+      "name": "For Ukraine!",
+      "abbr": null,
+      "leaning": "Centrist",
+      "summary": "Party that won two seats in the Sumy Oblast Council in 2010. No English Wikipedia article checked; source: uk.wikipedia election page.",
+      "color": "#888888",
+      "wikipedia": null
+    },
+    "x:Ukrainian_Platform": {
+      "name": "Ukrainian Platform",
+      "abbr": null,
+      "leaning": "Unknown",
+      "summary": "Small party that won a seat in the Zhytomyr Oblast Council in 2010. No English Wikipedia article; source: uk.wikipedia election page.",
+      "color": "#888888",
+      "wikipedia": null
+    },
+    "x:All-Ukrainian_Chornobyl_People's_Party": {
+      "name": "All-Ukrainian Chornobyl People's Party",
+      "abbr": null,
+      "leaning": "Unknown",
+      "summary": "Small party that won five seats in the Zhytomyr Oblast Council in 2010. No English Wikipedia article; source: uk.wikipedia election page.",
+      "color": "#888888",
+      "wikipedia": null
+    },
+    "x:All-Ukrainian_Party_of_Spirituality_and_Patriotism": {
+      "name": "All-Ukrainian Party of Spirituality and Patriotism",
+      "abbr": null,
+      "leaning": "Unknown",
+      "summary": "Small party that won a seat in the Zhytomyr Oblast Council in 2010. No English Wikipedia article; source: uk.wikipedia election page.",
+      "color": "#888888",
+      "wikipedia": null
+    },
+    "x:Civil_Active_of_Kyiv": {
+      "name": "Civil Active of Kyiv",
+      "abbr": "HAK",
+      "leaning": "Local bloc",
+      "summary": "Kyiv electoral bloc that won seats in the city council in 2006 and 2008. No English Wikipedia article; source: uk.wikipedia election pages.",
+      "color": "#e9967a",
+      "wikipedia": null
+    },
+    "x:Vitali_Klitschko_Bloc": {
+      "name": "Vitali Klitschko Bloc",
+      "abbr": null,
+      "leaning": "Centre-right",
+      "summary": "Kyiv electoral bloc led by Vitali Klitschko that came third in the 2008 city council election. No English Wikipedia article; source: uk.wikipedia election page.",
+      "color": "#d62d20",
+      "wikipedia": null
+    },
+    "x:Mykola_Katerynchuk_Bloc": {
+      "name": "Mykola Katerynchuk Bloc",
+      "abbr": null,
+      "leaning": "Pro-European",
+      "summary": "Kyiv electoral bloc of the European Party of Ukraine that cleared the threshold in the 2008 city council election. No English Wikipedia article; source: uk.wikipedia election page.",
+      "color": "#2d5fa8",
+      "wikipedia": null
+    },
+    "PORA": {
+      "name": "PORA",
+      "abbr": "Pora",
+      "leaning": "Centre-right, liberal, civic activism",
+      "summary": "Youth civic campaign of the Orange Revolution that became a party in 2005 and won seats in the Lviv and Chernivtsi councils in 2006.",
+      "founded": 2005,
+      "dissolved": null,
+      "color": "#ffd600",
+      "wikipedia": "https://en.wikipedia.org/wiki/PORA"
+    },
+    "Lytvyn_Bloc": {
+      "name": "Lytvyn Bloc",
+      "abbr": null,
+      "leaning": "Centre, agrarianism",
+      "summary": "Electoral alliance led by parliamentary speaker Volodymyr Lytvyn's People's Party, which ran in the 2006 and 2007 elections.",
+      "founded": 2006,
+      "dissolved": 2012,
+      "color": "#00a86b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Lytvyn_Bloc"
+    },
+    "Ukrainian_People's_Bloc": {
+      "name": "Ukrainian People's Bloc of Kostenko and Plyushch",
+      "abbr": "UNB",
+      "leaning": "Centre-right, national democracy",
+      "summary": "Electoral alliance of the Ukrainian People's Party and Ivan Plyushch for the 2006 elections, which won seats in most western oblast councils.",
+      "founded": 2005,
+      "dissolved": 2006,
+      "color": "#1565c0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_People's_Bloc"
+    },
+    "Front_for_Change_(Ukraine)": {
+      "name": "Front for Change",
+      "abbr": null,
+      "leaning": "Centre-right, liberal conservatism, pro-European",
+      "summary": "Arseniy Yatsenyuk's party, which won a few council seats in 2010 and merged into Batkivshchyna in 2013.",
+      "founded": 2007,
+      "dissolved": 2013,
+      "color": "#58b947",
+      "wikipedia": "https://en.wikipedia.org/wiki/Front_for_Change_(Ukraine)"
+    },
+    "Strong_Ukraine": {
+      "name": "Strong Ukraine",
+      "abbr": null,
+      "leaning": "Centre, liberalism",
+      "summary": "Party of Serhiy Tihipko (formerly the Labour Party of Ukraine) that won seats in eastern councils in 2010 and merged into the Party of Regions in 2012; revived briefly in 2014.",
+      "founded": 1999,
+      "dissolved": null,
+      "color": "#a6ce39",
+      "wikipedia": "https://en.wikipedia.org/wiki/Strong_Ukraine"
+    },
+    "Ukrainian_People's_Party": {
+      "name": "Ukrainian People's Party",
+      "abbr": "UNP",
+      "leaning": "Centre-right, Ukrainian nationalism, conservatism",
+      "summary": "Rukh splinter party founded in 1999 by Hennadiy Udovenko and later led by Yuriy Kostenko, with its base in Galicia and Volhynia.",
+      "founded": 1999,
+      "dissolved": null,
+      "color": "#1565c0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_People's_Party"
+    },
+    "New_Politics_(Ukraine)": {
+      "name": "New Politics",
+      "abbr": null,
+      "leaning": "Centre",
+      "summary": "Party led by former deputy prime minister Volodymyr Semynozhenko, which won six seats in the Zaporizhzhia Oblast Council in 2015.",
+      "founded": 2001,
+      "dissolved": null,
+      "color": "#ffbb00",
+      "wikipedia": "https://en.wikipedia.org/wiki/New_Politics_(Ukraine)"
+    },
+    "People's_Opposition_Bloc_of_Natalia_Vitrenko": {
+      "name": "People's Opposition Bloc of Natalia Vitrenko",
+      "abbr": null,
+      "leaning": "Far-left, Russophilia",
+      "summary": "Electoral alliance led by Vitrenko's Progressive Socialist Party, which won seats in several eastern and southern oblast councils in 2006.",
+      "founded": 2005,
+      "dissolved": 2012,
+      "color": "#9b30ff",
+      "wikipedia": "https://en.wikipedia.org/wiki/People%27s_Opposition_Bloc_of_Natalia_Vitrenko"
+    },
+    "Party_of_Industrialists_and_Entrepreneurs_of_Ukraine": {
+      "name": "Party of Industrialists and Entrepreneurs of Ukraine",
+      "abbr": "PPPU",
+      "leaning": "Centre, business interests",
+      "summary": "Business-oriented party founded by Anatoliy Kinakh in 2000; it won single-member seats in some councils in 2010.",
+      "founded": 2000,
+      "dissolved": null,
+      "color": "#6b8e23",
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Industrialists_and_Entrepreneurs_of_Ukraine"
     }
   },
   "armedGroups": {
@@ -787,11 +1015,77 @@
       "side": "Nazi Germany",
       "summary": "German armed forces that conquered Ukraine in 1941 and were driven out by the Red Army in 1943-1944.",
       "wikipedia": "https://en.wikipedia.org/wiki/Wehrmacht"
+    },
+    "Imperial_Russian_Army": {
+      "name": "Imperial Russian Army",
+      "type": "Imperial army",
+      "side": "Russian Empire",
+      "summary": "The army of the Russian Empire until 1917, whose southern forces fell under the Odessa Military District.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Imperial_Russian_Army"
+    },
+    "Polish_insurgents_of_1863": {
+      "name": "Polish insurgents of the January Uprising",
+      "type": "Insurgent movement",
+      "side": "Polish National Government (1863-1864)",
+      "summary": "Polish insurgents who rose against Russian rule in 1863 and briefly appeared in Kiev and Volhynia governorates that spring.",
+      "wikipedia": "https://en.wikipedia.org/wiki/January_Uprising"
+    },
+    "Chyhyryn_Secret_Militia": {
+      "name": "Chyhyryn Secret Militia",
+      "type": "Secret peasant society",
+      "side": "Local peasants and Russian populists",
+      "summary": "Secret armed peasant society set up in 1877 in Chyhyryn county by the populists Yakov Stefanovich and Lev Deutsch, using a forged charter from the tsar.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Chigirin_affair"
+    },
+    "Berkut_(special_police_force)": {
+      "name": "Berkut",
+      "type": "Interior ministry riot police",
+      "side": "Ukraine (Yanukovych government)",
+      "summary": "Riot police of the Ukrainian Interior Ministry, used against Euromaidan protesters and disbanded in February 2014.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Berkut_(special_police_force)"
+    },
+    "40th_Tactical_Aviation_Brigade": {
+      "name": "40th Tactical Aviation Brigade",
+      "type": "Air force fighter brigade",
+      "side": "Ukraine",
+      "summary": "MiG-29 fighter brigade based at Vasylkiv Air Base in Kyiv Oblast.",
+      "wikipedia": "https://en.wikipedia.org/wiki/40th_Tactical_Aviation_Brigade"
+    },
+    "Ukrainian_Air_Force": {
+      "name": "Ukrainian Air Force",
+      "type": "Air force",
+      "side": "Ukraine",
+      "summary": "The air arm of the Armed Forces of Ukraine, commanded from Vinnytsia.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Air_Force"
+    },
+    "Right_Sector": {
+      "name": "Right Sector",
+      "type": "Nationalist political movement with volunteer corps",
+      "side": "Ukraine",
+      "summary": "Far-right nationalist coalition formed during the Euromaidan; its activists took part in the 2 May 2014 clashes in Odesa, and its Ukrainian Volunteer Corps fought in Donbas.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Right_Sector"
     }
   },
   "oblasts": {
     "UA-30": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "Kyiv was governed by imperial appointees under the Russian autocracy; after 1906 it sent deputies to the State Duma. It was home to the Old Hromada and, from 1908, the Society of Ukrainian Progressives, and the Ems Ukaz of 1876 banned most Ukrainian printing.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Kyiv housed the headquarters of the Kiev Military District, and army sappers rose in the failed Kyiv mutiny of November 1905."
+            },
+            {
+              "group": "Kiev_Military_District",
+              "role": "The imperial Kiev Military District was created in 1862 and commanded from the city."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Kyiv was the seat of the Central Rada (from March 1917), the Ukrainian People's Republic, the German-backed Hetmanate of Pavlo Skoropadsky (April-December 1918) and the Directorate (December 1918-February 1919). The Rada's governments were led by the Ukrainian Social Democrats and Ukrainian SRs; in the November 1917 Constituent Assembly vote, Ukrainian parties won only about 26% in the largely Russian- and Jewish-speaking city, against 77% in the surrounding Kiev Governorate.",
@@ -979,9 +1273,100 @@
               "Leonid_Chernovetskyi_Bloc",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Kyiv City Council",
+                "year": 2006,
+                "total": 120,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 41
+                  },
+                  {
+                    "party": "Leonid_Chernovetskyi_Bloc",
+                    "seats": 21
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 15
+                  },
+                  {
+                    "party": "PORA",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 9
+                  },
+                  {
+                    "party": "x:Civil_Active_of_Kyiv",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "seats": 6
+                  }
+                ],
+                "source": {
+                  "title": "Місцеві вибори в Києві (2006) (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Місцеві_вибори_в_Києві_(2006)"
+                }
+              },
+              {
+                "body": "Kyiv City Council, snap election (vote share %)",
+                "year": 2008,
+                "seats": [
+                  {
+                    "party": "Leonid_Chernovetskyi_Bloc",
+                    "share": 30.45
+                  },
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "share": 22.79
+                  },
+                  {
+                    "party": "x:Vitali_Klitschko_Bloc",
+                    "share": 10.61
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "share": 8.17
+                  },
+                  {
+                    "party": "x:Civil_Active_of_Kyiv",
+                    "share": 5.95
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "share": 3.95
+                  },
+                  {
+                    "party": "x:Mykola_Katerynchuk_Bloc",
+                    "share": 3.47
+                  }
+                ],
+                "source": {
+                  "title": "Місцеві вибори в Києві 2008 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Місцеві_вибори_в_Києві_2008"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Berkut_(special_police_force)",
+              "role": "Riot police units clashed with Euromaidan protesters in Kyiv and fired on them in February 2014."
+            },
+            {
+              "group": "Right_Sector",
+              "role": "Formed on the Maidan in late 2013 from far-right groups."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -1185,6 +1570,24 @@
     },
     "UA-32": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area was part of Kiev Governorate, ruled by imperial appointees. Zemstvo self-government reached Right-Bank Ukraine only in 1911 because many nobles there were Polish.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Polish_insurgents_of_1863",
+              "role": "An insurgent cavalry unit formed in Vasylkiv county in April 1863 and soon dispersed."
+            },
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Kiev Governorate was the heartland of the Central Rada; its peasant congresses backed the Ukrainian SRs and the Selianska Spilka. The Ukrainian Socialist Bloc won 77% here in the 1917 Constituent Assembly vote, one of the highest Ukrainian results anywhere. In 1918 German troops and Hetmanate officials restored landlord estates, which set off widespread peasant uprisings.",
@@ -1392,9 +1795,109 @@
               "Our_Ukraine_(political_party)",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Kyiv Oblast Council",
+                "year": 2006,
+                "total": 120,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 66
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 11
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Ukrainian_People's_Bloc",
+                    "seats": 6
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Київської обласної ради 2006 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Київської_обласної_ради_2006"
+                }
+              },
+              {
+                "body": "Kyiv Oblast Council (list and constituency seats combined)",
+                "year": 2010,
+                "total": 149,
+                "seats": [
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 96
+                  },
+                  {
+                    "party": "Front_for_Change_(Ukraine)",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Strong_Ukraine",
+                    "seats": 12
+                  },
+                  {
+                    "party": "UDAR",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Svoboda_(Ukraine)",
+                    "seats": 5
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 2
+                  },
+                  {
+                    "party": "x:Justice_(Ukraine)",
+                    "seats": 2
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 1
+                  },
+                  {
+                    "party": "x:Third_Force_(Ukraine)",
+                    "seats": 1
+                  },
+                  {
+                    "party": "European_Party_of_Ukraine",
+                    "seats": 1
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Київської обласної ради 2010 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Київської_обласної_ради_2010"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "72nd_Mechanized_Brigade",
+              "role": "The brigade was based at Bila Tserkva in the oblast."
+            },
+            {
+              "group": "40th_Tactical_Aviation_Brigade",
+              "role": "Flew from Vasylkiv Air Base south of Kyiv."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -1564,6 +2067,24 @@
     },
     "UA-18": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area lay in Volhynia and Kiev governorates, ruled by imperial appointees. Zemstvo self-government arrived only in 1911 because many nobles there were Polish.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Polish_insurgents_of_1863",
+              "role": "Fought small actions in the Zhytomyr area during the 1863 uprising."
+            },
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "The area belonged to Volhynia Governorate, where the Ukrainian SRs and peasant councils won over 70% in the 1917 Constituent Assembly vote. In February 1918 the Central Rada fled the Bolshevik capture of Kyiv to Zhytomyr and Sarny, and here it relied on the German advance under the Brest-Litovsk treaty.",
@@ -1772,9 +2293,109 @@
               "Party_of_Regions",
               "People's_Party_(Ukraine)"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Zhytomyr Oblast Council",
+                "year": 2006,
+                "total": 95,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 28
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 23
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "seats": 14
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 5
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Житомирської обласної ради 2006 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Житомирської_обласної_ради_2006"
+                }
+              },
+              {
+                "body": "Zhytomyr Oblast Council (list and constituency seats combined)",
+                "year": 2010,
+                "total": 112,
+                "seats": [
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 42
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 23
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 18
+                  },
+                  {
+                    "party": "Front_for_Change_(Ukraine)",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Strong_Ukraine",
+                    "seats": 5
+                  },
+                  {
+                    "party": "x:All-Ukrainian_Chornobyl_People's_Party",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 1
+                  },
+                  {
+                    "party": "x:All-Ukrainian_Party_of_Spirituality_and_Patriotism",
+                    "seats": 1
+                  },
+                  {
+                    "party": "x:Ukrainian_Platform",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Ukrainian_People's_Party",
+                    "seats": 1
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Житомирської обласної ради 2010 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Житомирської_обласної_ради_2010"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "95th_Air_Assault_Brigade",
+              "role": "The airmobile brigade was based in Zhytomyr."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -1948,6 +2569,19 @@
     },
     "UA-05": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area was part of Podolia Governorate, ruled by imperial appointees. Zemstvo self-government arrived only in 1911 because many nobles there were Polish.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Vinnytsia's garrison demonstrated against Front command orders in early November 1917."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "The area was the eastern half of Podolia Governorate, where the joint list of Ukrainian SRs, Selianska Spilka and the Ukrainian Social Democrats won 78.6% in the 1917 Constituent Assembly vote. Austro-Hungarian troops occupied Podolia in 1918. After losing Kyiv in February 1919, the Directorate moved to Vinnytsia, which was for a time its main seat.",
@@ -2160,9 +2794,93 @@
               "Our_Ukraine_(political_party)",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Vinnytsia Oblast Council",
+                "year": 2006,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 44
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 23
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 15
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 8
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 4
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Вінницької обласної ради 2006 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Вінницької_обласної_ради_2006"
+                }
+              },
+              {
+                "body": "Vinnytsia Oblast Council (list and constituency seats combined)",
+                "year": 2010,
+                "total": 132,
+                "seats": [
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 62
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 32
+                  },
+                  {
+                    "party": "Unity_of_Oleksandr_Omelchenko",
+                    "seats": 22
+                  },
+                  {
+                    "party": "Front_for_Change_(Ukraine)",
+                    "seats": 9
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 4
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Ukrainian_People's_Party",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Ukrainian_Republican_Party_Sobor",
+                    "seats": 1
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Вінницької обласної ради 2010 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Вінницької_обласної_ради_2010"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Ukrainian_Air_Force",
+              "role": "The Air Force Command was based in Vinnytsia."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -2316,6 +3034,24 @@
     },
     "UA-71": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area was part of Kiev Governorate, ruled by imperial appointees. Zemstvo self-government arrived only in 1911 because many nobles there were Polish.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Chyhyryn_Secret_Militia",
+              "role": "Populist-organised peasant society in Chyhyryn county, broken up by police in 1877."
+            },
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Most of today's oblast (Cherkasy, Chyhyryn, Zvenyhorodka and Uman counties) lay in Kiev Governorate, where the Ukrainian Socialist Bloc won 77% in the 1917 Constituent Assembly vote; the Zolotonosha area belonged to Poltava Governorate. The Free Cossack movement began here, and in June 1918 the Zvenyhorodka-Tarashcha peasant uprising broke out against the Germans and the Hetmanate.",
@@ -2436,7 +3172,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "nazi-occupation": {
           "politics": {
@@ -2473,7 +3215,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "soviet-ukraine-late": {
           "politics": {
@@ -2499,7 +3247,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "orange-to-euromaidan": {
           "politics": {
@@ -2509,9 +3263,94 @@
               "Our_Ukraine_(political_party)",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Cherkasy Oblast Council",
+                "year": 2006,
+                "total": 78,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 35
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 13
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 13
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 4
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Черкаської обласної ради 2006 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Черкаської_обласної_ради_2006"
+                }
+              },
+              {
+                "body": "Cherkasy Oblast Council (preliminary results; list and constituency seats combined)",
+                "year": 2010,
+                "total": 104,
+                "seats": [
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 57
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 21
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Front_for_Change_(Ukraine)",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 4
+                  },
+                  {
+                    "party": "New_Politics_(Ukraine)",
+                    "seats": 3
+                  },
+                  {
+                    "party": "x:Party_of_Free_Democrats",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Strong_Ukraine",
+                    "seats": 1
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Черкаської обласної ради 2010 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Черкаської_обласної_ради_2010"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -2665,6 +3504,20 @@
     },
     "UA-74": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area was part of Chernigov Governorate, whose zemstvo, established in 1865, was among the Russian Empire's earliest; national politics remained under imperial rule, with a State Duma only after 1906.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Chernigov Governorate gave the Ukrainian SRs about half the vote in the 1917 Constituent Assembly election, but the Bolsheviks won nearly 28%, one of their best results in Ukraine. The Bolshevik advance on Kyiv came through the governorate and was briefly held at Kruty in January 1918. The governorate then came under German occupation and the Hetmanate.",
@@ -2785,7 +3638,12 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "The Chernihiv Military Aviation School of Pilots was activated in the city in November 1940."
+            }
+          ]
         },
         "nazi-occupation": {
           "politics": {
@@ -2868,9 +3726,101 @@
               "Our_Ukraine_(political_party)",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Chernihiv Oblast Council",
+                "year": 2006,
+                "total": 91,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 35
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 17
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "seats": 4
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Чернігівської обласної ради (2006) (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Чернігівської_обласної_ради_(2006)"
+                }
+              },
+              {
+                "body": "Chernihiv Oblast Council (list and constituency seats combined)",
+                "year": 2010,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 45
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 21
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 11
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Front_for_Change_(Ukraine)",
+                    "seats": 4
+                  },
+                  {
+                    "party": "Strong_Ukraine",
+                    "seats": 4
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 3
+                  },
+                  {
+                    "party": "UDAR",
+                    "seats": 3
+                  },
+                  {
+                    "party": "Reforms_and_Order_Party",
+                    "seats": 2
+                  },
+                  {
+                    "party": "Strength_and_Honor",
+                    "seats": 2
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Чернігівської обласної ради 2010 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Чернігівської_обласної_ради_2010"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "1st_Heavy_Mechanized_Brigade",
+              "role": "The tank brigade was based at Honcharivske."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -3040,6 +3990,19 @@
     },
     "UA-59": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area straddled Kharkov, Chernigov and Poltava governorates, all of which had zemstvos from 1865; national politics remained under imperial rule, with a State Duma only after 1906.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "The Sumy Cadet Corps trained future officers from 1900."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "The area was split among Kharkov (Sumy, Lebedyn, Okhtyrka), Chernigov (Konotop, Hlukhiv) and Kursk (Putyvl) governorates. In Kharkov Governorate, the joint list of the all-Russian and Ukrainian SRs won 72.8% in the 1917 Constituent Assembly vote. Like the rest of Sloboda Ukraine, the area passed between the UNR, the Bolsheviks and the German-backed Hetmanate in 1917-1918.",
@@ -3140,7 +4103,12 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "NKVD",
+              "role": "Held Polish prisoners of war near Putyvl in the autumn of 1939."
+            }
+          ]
         },
         "nazi-occupation": {
           "politics": {
@@ -3177,7 +4145,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "soviet-ukraine-late": {
           "politics": {
@@ -3203,7 +4177,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "orange-to-euromaidan": {
           "politics": {
@@ -3213,9 +4193,106 @@
               "Yulia_Tymoshenko_Bloc",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Sumy Oblast Council",
+                "year": 2006,
+                "total": 90,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 42
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 16
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 11
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 7
+                  },
+                  {
+                    "party": "People's_Opposition_Bloc_of_Natalia_Vitrenko",
+                    "seats": 5
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Сумської обласної ради 2006 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Сумської_обласної_ради_2006"
+                }
+              },
+              {
+                "body": "Sumy Oblast Council (list and constituency seats combined)",
+                "year": 2010,
+                "total": 99,
+                "seats": [
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 50
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 23
+                  },
+                  {
+                    "party": "Front_for_Change_(Ukraine)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "x:Native_City_(Ridne_Misto)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Strong_Ukraine",
+                    "seats": 3
+                  },
+                  {
+                    "party": "x:For_Ukraine!",
+                    "seats": 2
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 1
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Agrarian_Party_of_Ukraine",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Party_of_Industrialists_and_Entrepreneurs_of_Ukraine",
+                    "seats": 1
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Сумської обласної ради 2010 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Сумської_обласної_ради_2010"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -3402,6 +4479,19 @@
     },
     "UA-53": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area was Poltava Governorate, whose zemstvo dates from 1865; national politics remained under imperial rule, with a State Duma only after 1906.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Troops put down the peasant revolts of 1902 in Poltava and Kharkiv governorates; Poltava also housed a cadet school founded in 1840."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Poltava Governorate was a stronghold of the Ukrainian movement. In the 1917 Constituent Assembly vote, the Ukrainian SR-Selianska Spilka list won 63.3% and a joint all-Russian/Ukrainian SR list another 17.3%. The governorate was occupied by German troops in 1918, and its landowner circles supported the Hetmanate of Pavlo Skoropadsky, himself a Poltava landowner.",
@@ -3519,7 +4609,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "nazi-occupation": {
           "politics": {
@@ -3602,9 +4698,105 @@
               "Our_Ukraine_(political_party)",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Poltava Oblast Council",
+                "year": 2006,
+                "total": 90,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 29
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 20
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 15
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 15
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "seats": 4
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Полтавської обласної ради 2006 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Полтавської_обласної_ради_2006"
+                }
+              },
+              {
+                "body": "Poltava Oblast Council (list and constituency seats combined)",
+                "year": 2010,
+                "total": 118,
+                "seats": [
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 56
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 19
+                  },
+                  {
+                    "party": "x:Conscience_of_Ukraine",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Front_for_Change_(Ukraine)",
+                    "seats": 8
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 7
+                  },
+                  {
+                    "party": "Strong_Ukraine",
+                    "seats": 5
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 3
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 2
+                  },
+                  {
+                    "party": "Peasant_Party_of_Ukraine",
+                    "seats": 1
+                  },
+                  {
+                    "party": "Ukrainian_People's_Party",
+                    "seats": 1
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Полтавської обласної ради 2010 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Полтавської_обласної_ради_2010"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "831st_Tactical_Aviation_Brigade",
+              "role": "The Su-27 brigade was based at Myrhorod."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -3778,6 +4970,19 @@
     },
     "UA-35": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area was part of Kherson Governorate, whose zemstvo dates from 1865; national politics remained under imperial rule, with a State Duma only after 1906.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Trained cavalry officers at the Yelisavetgrad junker school from 1865."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Most of the oblast (Yelisavetgrad and Oleksandriia counties) belonged to Kherson Governorate, where a combined list of Ukrainian SRs, all-Russian SRs and Jewish socialists won 43% in the 1917 Constituent Assembly vote and the Bolsheviks 13%. The region came under the Central Rada, then Austro-German occupation and the Hetmanate in 1918.",
@@ -3898,7 +5103,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Garrisoned the region under Soviet rule before the German invasion.",
+              "placeholder": true
+            }
+          ]
         },
         "nazi-occupation": {
           "politics": {
@@ -3931,7 +5142,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Soviet_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "soviet-ukraine-late": {
           "politics": {
@@ -3971,9 +5188,89 @@
               "Yulia_Tymoshenko_Bloc",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Kirovohrad Oblast Council",
+                "year": 2006,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "seats": 44
+                  },
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 18
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "seats": 12
+                  },
+                  {
+                    "party": "Lytvyn_Bloc",
+                    "seats": 10
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "seats": 9
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 7
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Кіровоградської обласної ради 2006 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Кіровоградської_обласної_ради_2006"
+                }
+              },
+              {
+                "body": "Kirovohrad Oblast Council (list and constituency seats combined)",
+                "year": 2010,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Party_of_Regions",
+                    "seats": 61
+                  },
+                  {
+                    "party": "Batkivshchyna",
+                    "seats": 14
+                  },
+                  {
+                    "party": "People's_Party_(Ukraine)",
+                    "seats": 10
+                  },
+                  {
+                    "party": "Front_for_Change_(Ukraine)",
+                    "seats": 6
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "seats": 5
+                  },
+                  {
+                    "party": "Strong_Ukraine",
+                    "seats": 3
+                  },
+                  {
+                    "party": "x:Justice_(Ukraine)",
+                    "seats": 1
+                  }
+                ],
+                "source": {
+                  "title": "Вибори до Кіровоградської обласної ради 2010 (uk.wikipedia)",
+                  "url": "https://uk.wikipedia.org/wiki/Вибори_до_Кіровоградської_обласної_ради_2010"
+                }
+              }
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Special_Operations_Center_\"East\"_(Ukraine)",
+              "role": "The 3rd Special Purpose Regiment, later reformed as this centre, moved to Kirovohrad in 2003."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {

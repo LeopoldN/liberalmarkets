@@ -497,7 +497,7 @@
     "holodomor-terror": {
       "control": "Ukrainian SSR (Odesa Oblast from 1932); Romania in the Budjak",
       "summary": "Odesa Oblast was formed in 1932 and suffered severely in the Holodomor, with many villages blacklisted. The Great Terror struck the city's intelligentsia and the large German and Bulgarian minorities in 'national operations'.",
-      "military": null,
+      "military": "The 51st Perekop Rifle Division, based in the Odesa and Tiraspol area, served in the 6th Rifle Corps of the Ukrainian (from 1935 Kiev) Military District; in July 1938 the corps passed to the new Odesa Army Group.",
       "places": [
         "Odesa"
       ],
@@ -619,7 +619,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "In 2009 the International Court of Justice settled the Ukrainian-Romanian maritime boundary around Zmiinyi Island, largely in Romania's favour. The oblast leaned towards the Party of Regions, but a sizeable Euromaidan movement formed in Odesa in 2013-2014.",
-      "military": null,
+      "military": "The Ukrainian Ground Forces' southern command was headquartered in Odesa, known from 2005 to 2013 as the Southern Operational Association. The EU Border Assistance Mission to Moldova and Ukraine, set up in 2005, was also based in the city.",
       "places": [
         "Zmiinyi Island"
       ],
@@ -1130,7 +1130,7 @@
     "soviet-ukraine-1920s": {
       "control": "Ukrainian SSR",
       "summary": "The shipyards were restored, the Naval yard being renamed after André Marty, and Mykolaiv was the centre of an okruha. Voznesensk and Pervomaisk (created in 1920 by merging Olviopol, Bohopil and Holta) grew as district towns.",
-      "military": null,
+      "military": "Mykolaiv's Black Sea Shipyard stood largely idle until the Soviet naval build-up of the 1930s. The 15th Sivash Rifle Division was honoured in May 1921 for helping the sowing campaign in Mykolaiv Governorate.",
       "places": [
         "Mykolaiv",
         "Pervomaisk"
@@ -1240,7 +1240,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "Mykolaiv's ports and grain terminals expanded with private investment, while the historic shipyards largely idled. The oblast voted mostly for the Party of Regions.",
-      "military": null,
+      "military": "The 79th Air Assault Brigade was based in Mykolaiv, and its soldiers served as peacekeepers abroad, including in Iraq and Kosovo.",
       "places": [
         "Mykolaiv"
       ],
@@ -1690,7 +1690,7 @@
     "national-revival": {
       "control": "Russian Empire",
       "summary": "Friedrich Falz-Fein founded the Askania-Nova reserve in the steppe in 1898. Kherson grew as a grain and timber port with a large Jewish population, and steppe estates produced wheat and wool for export.",
-      "military": null,
+      "military": "Kherson Governorate belonged to the Odessa Military District, created in 1862; the city's old fortress walls had been dismantled in 1835.",
       "places": [
         "Askania-Nova"
       ],
@@ -1736,7 +1736,8 @@
     "soviet-ukraine-1920s": {
       "control": "Ukrainian SSR",
       "summary": "The 1921-1923 famine struck the south severely. In the 1920s Jewish agricultural settlement was encouraged, and the Kalinindorf Jewish national district was created in 1927. Collectivization began in 1929.",
-      "military": null,
+      "military": "Units of the Red Army were garrisoned in the oblast.",
+      "placeholder": true,
       "places": [
         "Kalinindorf (Kalynivske)"
       ],
@@ -1750,8 +1751,9 @@
     "holodomor-terror": {
       "control": "Ukrainian SSR (Odesa, then Mykolaiv oblasts)",
       "summary": "The Holodomor ravaged the steppe villages; German and Mennonite colonists were also persecuted, and many were executed in the Great Terror. The area belonged to Odesa Oblast from 1932 and Mykolaiv Oblast from 1937.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the oblast.",
+      "placeholder": true,
+      "places": ["Kherson", "Askania-Nova"],
       "links": [
         {
           "title": "Holodomor",
@@ -1762,7 +1764,7 @@
     "soviet-annexations": {
       "control": "Ukrainian SSR",
       "summary": "Kherson's port and canning and shipbuilding industries expanded; the area was far from the new western borders.",
-      "military": null,
+      "military": "From October 1939 the area, then in Mykolaiv Oblast, belonged to the re-formed Odessa Military District. An airport opened at Kherson on the eve of the German invasion trained military pilots.",
       "places": [
         "Kherson"
       ],
@@ -1794,7 +1796,7 @@
     "postwar-ussr": {
       "control": "Ukrainian SSR (Kherson Oblast from 1944)",
       "summary": "Kherson Oblast was created on 30 March 1944. Construction of the Kakhovka hydroelectric dam began in 1950, and the new town of Nova Kakhovka was founded for its builders.",
-      "military": null,
+      "military": "In July 1945 Kherson Oblast passed to the new Taurida Military District, headquartered in Simferopol, which controlled troops in the Crimean, Kherson and Zaporizhzhia oblasts until 1956.",
       "places": [
         "Nova Kakhovka",
         "Kakhovka Dam"
@@ -1828,7 +1830,7 @@
     "independence": {
       "control": "Ukraine",
       "summary": "The oblast's irrigation agriculture and industry declined in the 1990s. Askania-Nova became a biosphere reserve, and the oblast stayed a largely rural region bordering Crimea.",
-      "military": null,
+      "military": "The 320th Separate Helicopter Regiment, forerunner of the 11th Army Aviation Brigade now based at Chornobaivka, swore allegiance to Ukraine on 12 January 1992 and became the 2nd Army Aviation Brigade of the Odessa Military District in 1994. In October 1993 its crews evacuated more than 2,000 civilians from Georgia's Kodori Valley.",
       "places": [
         "Askania-Nova"
       ],
@@ -1842,7 +1844,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "Kherson Oblast voted mainly for the Party of Regions but saw Euromaidan protests in 2013-2014; Henichesk and the Arabat Spit remained popular resort areas.",
-      "military": null,
+      "military": "The Chornobaivka helicopter unit became the 11th Aviation Regiment of the 79th Airmobile Brigade in 2003 and a separate brigade again in 2013; from 2012 its crews served with the UN mission in the DR Congo.",
       "places": [
         "Arabat Spit"
       ],
@@ -2371,7 +2373,7 @@
     "national-revival": {
       "control": "Russian Empire (Taurida Governorate)",
       "summary": "The southern coast became an imperial resort, with the tsars' Livadia Palace near Yalta; Chekhov lived in Yalta and Aivazovsky in Feodosia. Ismail Gasprinski's newspaper Terciman, published in Bakhchisarai from 1883, made Crimea a centre of Turkic modernist reform.",
-      "military": null,
+      "military": "Kerch Fortress, begun after the Crimean War to guard the Kerch Strait, was finished in 1872. In the Ottoman raid of 29 October 1914 warships attacked Sevastopol and Feodosia.",
       "places": [
         "Livadia Palace",
         "Yalta",
@@ -2437,7 +2439,7 @@
     "soviet-ukraine-1920s": {
       "control": "Crimean ASSR within the Russian SFSR",
       "summary": "The Crimean ASSR was created in October 1921 within Soviet Russia, not Ukraine. The famine of 1921-1923 killed perhaps 100,000 people. Under Veli Ibraimov Crimean Tatar culture was promoted, but he was executed in 1928, and collectivization and deportations of 'kulaks' followed.",
-      "military": null,
+      "military": "The Red Army's flying school at Kacha, named after Aleksandr Myasnikov from 1925, trained military pilots, and a higher gliding school operated on the Uzun-Syrt ridge near Koktebel from 1923.",
       "places": [
         "Simferopol"
       ],
@@ -2455,7 +2457,7 @@
     "holodomor-terror": {
       "control": "Crimean ASSR (Russian SFSR)",
       "summary": "Crimea suffered from the 1932-1933 famine, though less severely than Ukraine. The Great Terror decimated the Crimean Tatar intelligentsia and Soviet leadership of the republic, while Yalta and Artek developed as Soviet resorts.",
-      "military": null,
+      "military": "The Kacha flying school, commanded from 1933 to 1940 by Vasily Ivanov, became the Kacha Red Banner Military Aviation School in 1938.",
       "places": [
         "Artek",
         "Yalta"
@@ -2475,7 +2477,7 @@
       "control": "Crimean ASSR (Russian SFSR)",
       "summary": "Crimea remained a Soviet resort and military region far from the 1939-1940 annexations; airfields and coastal defences were expanded.",
       "military": "The 51st Army was formed in Crimea in August 1941 to defend the peninsula.",
-      "places": [],
+      "places": ["Simferopol", "Kerch"],
       "links": [
         {
           "title": "51st Army (Russia)",
@@ -2575,7 +2577,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine (Autonomous Republic of Crimea)",
       "summary": "Crimean politics were dominated by the Party of Regions and pro-Russian groups, with Crimean Tatars backing pro-Western parties. The 2010 Kharkiv Pact extended the Russian fleet's lease, and in early 2014 Crimean officials opposed the Euromaidan.",
-      "military": null,
+      "military": "Anti-NATO protests in Feodosia from 29 May to 4 June 2006 blocked preparations for a Ukrainian-US exercise. The Kharkiv Pact of April 2010 extended Russia's lease of its Black Sea Fleet bases to 2042.",
       "places": [
         "Simferopol"
       ],

@@ -436,6 +436,141 @@
       "leaning": "Centre-left, pensioners' interests",
       "summary": "Small Russian party that won one seat in the Russian-installed Sevastopol assembly in 2019.",
       "wikipedia": "https://en.wikipedia.org/wiki/Russian_Party_of_Pensioners_for_Social_Justice"
+    },
+    "Party_of_Pensioners_of_Ukraine": {
+      "name": "Party of Pensioners of Ukraine",
+      "abbr": "PPU",
+      "leaning": "Pensioners' interests",
+      "summary": "Small party registered in 1999 that won seats on the Odesa Oblast Council in 2006 and one seat in Sevastopol in 2010.",
+      "founded": 1999, "dissolved": null,
+      "color": "#8a6d3b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Pensioners_of_Ukraine"
+    },
+    "Party_of_Greens_of_Ukraine": {
+      "name": "Party of Greens of Ukraine",
+      "abbr": "PZU",
+      "leaning": "Green politics",
+      "summary": "Green party founded in 1990; Mykolaiv Oblast was the only region where it won oblast council seats in 2006.",
+      "founded": 1990, "dissolved": null,
+      "color": "#2e8b57",
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Greens_of_Ukraine"
+    },
+    "Communist_Party_of_Workers_and_Peasants": {
+      "name": "Communist Party of Workers and Peasants",
+      "abbr": "KPRS",
+      "leaning": "Far-left, communism",
+      "summary": "Splinter of the Communist Party of Ukraine formed in 2001; it won four seats on the Kherson Oblast Council in 2006.",
+      "founded": 2001, "dissolved": 2015,
+      "color": "#b22222",
+      "wikipedia": "https://en.wikipedia.org/wiki/Communist_Party_of_Workers_and_Peasants"
+    },
+    "Progressive_Socialist_Party_of_Ukraine": {
+      "name": "Progressive Socialist Party of Ukraine",
+      "abbr": "PSPU",
+      "leaning": "Far-left, pro-Russian",
+      "summary": "Natalia Vitrenko's pro-Russian party, later banned; it won three seats on the Sevastopol City Council in 2010.",
+      "founded": 1996, "dissolved": 2022,
+      "color": "#8b0000",
+      "wikipedia": "https://en.wikipedia.org/wiki/Progressive_Socialist_Party_of_Ukraine"
+    },
+    "x:Rodina_Party_(Ukraine)": {
+      "name": "Rodina Party",
+      "abbr": "Rodina",
+      "leaning": "Pro-Russian, regionalism",
+      "summary": "Pro-Russian Odesa party founded and led by Ihor Markov, which won three oblast council seats in 2010. Source: Ukrainian Wikipedia, 2010 Odesa Oblast Council election.",
+      "founded": null, "dissolved": null,
+      "color": "#1f4e9c",
+      "wikipedia": null
+    },
+    "x:Justice_(Spravedlyvist)": {
+      "name": "Justice (Spravedlyvist)",
+      "abbr": "Justice",
+      "leaning": "Unknown",
+      "summary": "List that won one single-member seat on the Kherson Oblast Council in 2010. Source: Ukrainian Wikipedia, 2010 Kherson Oblast Council election.",
+      "founded": null, "dissolved": null,
+      "color": "#5f9ea0",
+      "wikipedia": null
+    },
+    "x:Ivanov_Bloc_For_Sevastopol": {
+      "name": "Serhiy Ivanov Bloc 'For Sevastopol!'",
+      "abbr": "Ivanov Bloc",
+      "leaning": "Local bloc",
+      "summary": "Local electoral bloc that won seven seats on the Sevastopol City Council in 2006. Source: Ukrainian Wikipedia, 2006 Sevastopol City Council election.",
+      "founded": 2006, "dissolved": null,
+      "color": "#777777",
+      "wikipedia": null
+    },
+    "x:Kondratievskyi_Bloc": {
+      "name": "Kondratievskyi Bloc",
+      "abbr": "Kondratievskyi Bloc",
+      "leaning": "Local bloc",
+      "summary": "Local electoral bloc that won five seats on the Sevastopol City Council in 2006. Source: Ukrainian Wikipedia, 2006 Sevastopol City Council election.",
+      "founded": 2006, "dissolved": null,
+      "color": "#8b008b",
+      "wikipedia": null
+    },
+    "x:Party_of_Honor_(Ukraine)": {
+      "name": "Party of Honour",
+      "abbr": "Honour",
+      "leaning": "Unknown",
+      "summary": "List that won two seats on the Sevastopol City Council in 2010. Source: Ukrainian Wikipedia, 2010 Sevastopol City Council election.",
+      "founded": null, "dissolved": null,
+      "color": "#4682b4",
+      "wikipedia": null
+    },
+    "Our_Ukraine_(political_party)": {
+      "name": "Our Ukraine (People's Union)",
+      "abbr": "NU",
+      "leaning": "Centre-right, national democracy",
+      "summary": "Pro-Yushchenko party founded in 2005 on the basis of the Our Ukraine bloc; it lost most support after 2010.",
+      "founded": 2005, "dissolved": null,
+      "color": "#ff8c00",
+      "wikipedia": "https://en.wikipedia.org/wiki/Our_Ukraine_(political_party)"
+    },
+    "Lytvyn_Bloc": {
+      "name": "Lytvyn Bloc (People's Bloc of Lytvyn)",
+      "abbr": "BL",
+      "leaning": "Centre, agrarianism",
+      "summary": "Electoral alliance around Volodymyr Lytvyn's People's Party, contesting the 2006 and 2007 elections.",
+      "founded": 2005, "dissolved": 2012,
+      "color": "#00a86b",
+      "wikipedia": "https://en.wikipedia.org/wiki/Lytvyn_Bloc"
+    },
+    "Socialist_Party_of_Ukraine": {
+      "name": "Socialist Party of Ukraine",
+      "abbr": "SPU",
+      "leaning": "Centre-left to left-wing, democratic socialism",
+      "summary": "Oleksandr Moroz's party, founded in 1991, with a rural base in central and Podolian Ukraine; it joined the Orange coalition in 2004-2006.",
+      "founded": 1991, "dissolved": 2022,
+      "color": "#e91e63",
+      "wikipedia": "https://en.wikipedia.org/wiki/Socialist_Party_of_Ukraine"
+    },
+    "Ukrainian_Democratic_Alliance_for_Reform": {
+      "name": "UDAR (Ukrainian Democratic Alliance for Reform)",
+      "abbr": "UDAR",
+      "leaning": "Centre-right, liberal conservatism, pro-European",
+      "summary": "Vitali Klitschko's party, founded in 2010, which later merged with the Petro Poroshenko Bloc.",
+      "founded": 2010, "dissolved": null,
+      "color": "#e53935",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ukrainian_Democratic_Alliance_for_Reform"
+    },
+    "People's_Movement_of_Ukraine": {
+      "name": "People's Movement of Ukraine (Rukh)",
+      "abbr": "NRU",
+      "leaning": "Centre-right, Ukrainian nationalism, national democracy",
+      "summary": "Founded in 1989 as a civic movement for perestroika and independence and registered as a party in 1993; it led the Democratic Bloc that won the Galician oblast councils in 1990 under Viacheslav Chornovil.",
+      "founded": 1989, "dissolved": null,
+      "color": "#2471a3",
+      "wikipedia": "https://en.wikipedia.org/wiki/People's_Movement_of_Ukraine"
+    },
+    "Front_for_Change_(Ukraine)": {
+      "name": "Front for Change",
+      "abbr": "FZ",
+      "leaning": "Centre-right, liberal conservatism, pro-European",
+      "summary": "Arseniy Yatsenyuk's party (2009-2013), which came second in several western councils in 2010 before merging into Batkivshchyna.",
+      "founded": 2009, "dissolved": 2013,
+      "color": "#7cb342",
+      "wikipedia": "https://en.wikipedia.org/wiki/Front_for_Change_(Ukraine)"
     }
   },
   "armedGroups": {
@@ -704,11 +839,53 @@
       "side": "Russian Federation",
       "summary": "Russia's air force, which, together with missile and drone units, conducts the strikes on Odesa, Mykolaiv and Kherson.",
       "wikipedia": "https://en.wikipedia.org/wiki/Russian_Aerospace_Forces"
+    },
+    "Imperial_Russian_Army": {
+      "name": "Imperial Russian Army",
+      "type": "Imperial army",
+      "side": "Russian Empire",
+      "summary": "The army of the Russian Empire until 1917, whose southern forces fell under the Odessa Military District.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Imperial_Russian_Army"
+    },
+    "Taurida_Military_District": {
+      "name": "Taurida Military District",
+      "type": "Military district",
+      "side": "USSR",
+      "summary": "Soviet military district of 1945-1956, headquartered in Simferopol, controlling troops in the Crimean, Kherson and Zaporizhzhia oblasts.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Taurida_Military_District"
+    },
+    "Operational_Command_South": {
+      "name": "Operational Command South",
+      "type": "Army command",
+      "side": "Ukraine",
+      "summary": "Ukrainian Ground Forces command formed in 1998 from the Odessa Military District and headquartered in Odesa until it moved to Mykolaiv after 2015.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Operational_Command_South"
+    },
+    "79th_Air_Assault_Brigade": {
+      "name": "79th Air Assault Brigade",
+      "type": "Ukrainian air assault brigade",
+      "side": "Ukraine",
+      "summary": "Air assault brigade based in Mykolaiv, whose soldiers have served as peacekeepers and fought in the Donbas and in the defence of Mykolaiv.",
+      "wikipedia": "https://en.wikipedia.org/wiki/79th_Air_Assault_Brigade"
+    },
+    "11th_Army_Aviation_Brigade": {
+      "name": "11th Army Aviation Brigade",
+      "type": "Ukrainian army aviation brigade",
+      "side": "Ukraine",
+      "summary": "Helicopter brigade of the Ukrainian Ground Forces based at Chornobaivka near Kherson, named 'Kherson' in 2019.",
+      "wikipedia": "https://en.wikipedia.org/wiki/11th_Army_Aviation_Brigade"
     }
   },
   "oblasts": {
     "UA-51": {
       "eras": {
+        "national-revival": {
+          "politics": {"note": "Tsarist autocracy: the region had no governing party, and Odesa was run by a city governor appointed by the tsar. Southern Bessarabia returned to Russia in 1878. A Ukrainian Hromada appeared in the late 1860s, and the local Prosvita under Mykhailo Komarov worked from 1906 until the authorities disbanded it in 1910. Results of the 1906-1912 State Duma elections for this area were not found in usable form.", "governing": [], "elections": []},
+          "armedGroups": [
+            {"group": "Odessa_Military_District", "role": "Created in 1862 and headquartered in Odesa, it commanded the Russian Army in the southern governorates."},
+            {"group": "Black_Sea_Fleet", "role": "The mutinous crew of the battleship Potemkin brought the ship to Odesa in June 1905."}
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Odesa passed from the Central Rada to the Bolshevik Odessa Soviet Republic (January-March 1918), then to Austro-Hungarian occupation under the UNR and the Hetmanate, and in December 1918 to a French-backed White administration. The Budjak (southern Bessarabia) was occupied by Romania in 1918; Bessarabia's Sfatul Țării voted for union with Romania in March 1918, and the area was ruled by Romanian governments until 1940. The 1917 Constituent Assembly figures below are vote shares; seat counts per list are not given in the source.",
@@ -840,9 +1017,14 @@
           "politics": {
             "note": "The Party of Regions dominated the oblast council after the 2006 and 2010 elections and supplied the governors from 2010; exact seat totals for those councils were not found in the sources checked.",
             "governing": ["Party_of_Regions"],
-            "elections": []
+            "elections": [
+              {"body": "Odesa Oblast Council (sources list 119 of the 120 seats)", "year": 2006, "total": 120, "seats": [{"party": "Party_of_Regions", "seats": 49}, {"party": "Socialist_Party_of_Ukraine", "seats": 19}, {"party": "Yulia_Tymoshenko_Bloc", "seats": 14}, {"party": "Lytvyn_Bloc", "seats": 11}, {"party": "People's_Opposition_Bloc_of_Natalia_Vitrenko", "seats": 10}, {"party": "Our_Ukraine_(political_party)", "seats": 9}, {"party": "Party_of_Pensioners_of_Ukraine", "seats": 4}, {"party": "Revival_(Ukraine)", "seats": 3}], "source": {"title": "Вибори до Одеської обласної ради 2006", "url": "https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B4%D0%BE_%D0%9E%D0%B4%D0%B5%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%97_%D1%80%D0%B0%D0%B4%D0%B8_2006"}},
+              {"body": "Odesa Oblast Council (party lists and single-member districts combined)", "year": 2010, "total": 132, "seats": [{"party": "Party_of_Regions", "seats": 87}, {"party": "People's_Party_(Ukraine)", "seats": 12}, {"party": "Batkivshchyna", "seats": 7}, {"party": "Strong_Ukraine", "seats": 7}, {"party": "Front_for_Change_(Ukraine)", "seats": 7}, {"party": "Socialist_Party_of_Ukraine", "seats": 5}, {"party": "Communist_Party_of_Ukraine", "seats": 4}, {"party": "x:Rodina_Party_(Ukraine)", "seats": 3}], "source": {"title": "Вибори до Одеської обласної ради 2010", "url": "https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B4%D0%BE_%D0%9E%D0%B4%D0%B5%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%97_%D1%80%D0%B0%D0%B4%D0%B8_2010"}}
+            ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {"group": "Operational_Command_South", "role": "Headquartered in Odesa, it was the Ukrainian Ground Forces' command for the south of the country."}
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -925,6 +1107,13 @@
     },
     "UA-48": {
       "eras": {
+        "national-revival": {
+          "politics": {"note": "Tsarist autocracy: the region had no governing party. Until 1862 Mykolaiv was an exclusively military port, and it then became a county town of Kherson Governorate. Its shipyard workers joined socialist circles in the 1890s and the 1905 revolution, while Mykola Arkas led Ukrainian cultural work. Results of the 1906-1912 State Duma elections for this area were not found in usable form.", "governing": [], "elections": []},
+          "armedGroups": [
+            {"group": "Black_Sea_Fleet", "role": "The fleet's command was based in Mykolaiv from 1870 to 1900."},
+            {"group": "Odessa_Military_District", "role": "Mykolaiv and Kherson Governorate lay within the district from 1862."}
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Mykolaiv saw a Bolshevik takeover in early 1918, German occupation under the UNR and the Hetmanate from March 1918, and a brief Allied presence in winter 1918-1919. The area lay in Kherson Governorate; the 1917 Constituent Assembly figures are vote shares.",
@@ -966,7 +1155,9 @@
         },
         "soviet-ukraine-1920s": {
           "politics": { "note": "One-party Soviet rule by the Communist Party (Bolsheviks) of Ukraine; Mykolaiv was the centre of an okruha.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
-          "armedGroups": []
+          "armedGroups": [
+            {"group": "Red_Army", "role": "The 15th Sivash Rifle Division was honoured in May 1921 for helping the sowing campaign in Mykolaiv Governorate."}
+          ]
         },
         "holodomor-terror": {
           "politics": { "note": "One-party Soviet rule; Mykolaiv Oblast was created in 1937 amid purges of shipyard engineers and the aftermath of the Holodomor in its villages.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
@@ -1013,8 +1204,13 @@
           ]
         },
         "orange-to-euromaidan": {
-          "politics": { "note": "The Party of Regions dominated the oblast council and supplied governors from 2010; exact seat totals for 2006 and 2010 were not found in the sources checked.", "governing": ["Party_of_Regions"], "elections": [] },
-          "armedGroups": []
+          "politics": { "note": "The Party of Regions dominated the oblast council and supplied governors from 2010; exact seat totals for 2006 and 2010 were not found in the sources checked.", "governing": ["Party_of_Regions"], "elections": [
+            {"body": "Mykolaiv Oblast Council", "year": 2006, "total": 120, "seats": [{"party": "Party_of_Regions", "seats": 53}, {"party": "Yulia_Tymoshenko_Bloc", "seats": 18}, {"party": "People's_Opposition_Bloc_of_Natalia_Vitrenko", "seats": 14}, {"party": "Lytvyn_Bloc", "seats": 11}, {"party": "Communist_Party_of_Ukraine", "seats": 7}, {"party": "Our_Ukraine_(political_party)", "seats": 6}, {"party": "Socialist_Party_of_Ukraine", "seats": 6}, {"party": "Party_of_Greens_of_Ukraine", "seats": 5}], "source": {"title": "Вибори до Миколаївської обласної ради 2006", "url": "https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B4%D0%BE_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%97_%D1%80%D0%B0%D0%B4%D0%B8_2006"}},
+            {"body": "Mykolaiv Oblast Council (party lists and single-member districts combined)", "year": 2010, "total": 96, "seats": [{"party": "Party_of_Regions", "seats": 65}, {"party": "Communist_Party_of_Ukraine", "seats": 12}, {"party": "Batkivshchyna", "seats": 6}, {"party": "Front_for_Change_(Ukraine)", "seats": 5}, {"party": "People's_Party_(Ukraine)", "seats": 5}, {"party": "Strong_Ukraine", "seats": 2}, {"party": "Party_of_Greens_of_Ukraine", "seats": 1}], "source": {"title": "Вибори до Миколаївської обласної ради 2010", "url": "https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B4%D0%BE_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%97_%D1%80%D0%B0%D0%B4%D0%B8_2010"}}
+          ] },
+          "armedGroups": [
+            {"group": "79th_Air_Assault_Brigade", "role": "Based in Mykolaiv, the brigade sent soldiers on peacekeeping missions abroad."}
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -1089,6 +1285,12 @@
     },
     "UA-65": {
       "eras": {
+        "national-revival": {
+          "politics": {"note": "Tsarist autocracy: the region had no governing party. The right bank belonged to Kherson Governorate and the left bank to Taurida Governorate. Results of the 1906-1912 State Duma elections for this area were not found in usable form.", "governing": [], "elections": []},
+          "armedGroups": [
+            {"group": "Odessa_Military_District", "role": "The Kherson and Taurida governorates lay within the district from 1862."}
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "The right bank, with Kherson city, lay in Kherson Governorate and the left bank in Taurida Governorate's Dnieper uezd; vote shares for both 1917 districts are given. Kherson passed from the Central Rada to the Bolsheviks, then to German and Austro-Hungarian occupation under the Hetmanate in 1918, and to an Allied garrison in early 1919.",
@@ -1143,7 +1345,9 @@
         },
         "soviet-ukraine-1920s": {
           "politics": { "note": "One-party Soviet rule by the Communist Party (Bolsheviks) of Ukraine.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
-          "armedGroups": []
+          "armedGroups": [
+            {"group": "Red_Army", "role": "Generic garrison presence; no region-specific detail found.", "placeholder": true}
+          ]
         },
         "holodomor-terror": {
           "politics": { "note": "One-party Soviet rule; the grain districts of the region suffered heavily in the Holodomor.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
@@ -1153,7 +1357,9 @@
         },
         "soviet-annexations": {
           "politics": { "note": "One-party Soviet rule; the area belonged to Mykolaiv Oblast until Kherson Oblast was formed in 1944.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
-          "armedGroups": []
+          "armedGroups": [
+            {"group": "Odessa_Military_District", "role": "Covered the area, then in Mykolaiv Oblast, from October 1939."}
+          ]
         },
         "nazi-occupation": {
           "politics": { "note": "German occupation from August 1941 under Generalbezirk Nikolajew of Reichskommissariat Ukraine; Kherson was liberated in March 1944.", "governing": ["Nazi_Party"], "elections": [] },
@@ -1166,7 +1372,9 @@
         },
         "postwar-ussr": {
           "politics": { "note": "One-party Soviet rule; Kherson Oblast was created in 1944 and the Kakhovka dam and reservoir were built from 1950.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
-          "armedGroups": []
+          "armedGroups": [
+            {"group": "Taurida_Military_District", "role": "Controlled troops in Kherson Oblast from 1945 to 1956 from its headquarters in Simferopol."}
+          ]
         },
         "soviet-ukraine-late": {
           "politics": { "note": "One-party Soviet rule until 1990-1991; seat data for the 1990 oblast council were not found.", "governing": ["Communist_Party_of_Ukraine_(Soviet_Union)"], "elections": [] },
@@ -1176,11 +1384,18 @@
         },
         "independence": {
           "politics": { "note": "Governors were presidential appointees; no party-level seat data for the 1994-2002 councils were found.", "governing": [], "elections": [] },
-          "armedGroups": []
+          "armedGroups": [
+            {"group": "11th_Army_Aviation_Brigade", "role": "Its predecessor, the 320th Separate Helicopter Regiment, swore allegiance to Ukraine in January 1992."}
+          ]
         },
         "orange-to-euromaidan": {
-          "politics": { "note": "The Party of Regions led the oblast council and supplied governors from 2010; exact 2006 and 2010 seat totals were not found in the sources checked.", "governing": ["Party_of_Regions"], "elections": [] },
-          "armedGroups": []
+          "politics": { "note": "The Party of Regions led the oblast council and supplied governors from 2010; exact 2006 and 2010 seat totals were not found in the sources checked.", "governing": ["Party_of_Regions"], "elections": [
+            {"body": "Kherson Oblast Council", "year": 2006, "total": 85, "seats": [{"party": "Party_of_Regions", "seats": 30}, {"party": "Yulia_Tymoshenko_Bloc", "seats": 19}, {"party": "Our_Ukraine_(political_party)", "seats": 9}, {"party": "Communist_Party_of_Ukraine", "seats": 7}, {"party": "Lytvyn_Bloc", "seats": 6}, {"party": "People's_Opposition_Bloc_of_Natalia_Vitrenko", "seats": 5}, {"party": "Socialist_Party_of_Ukraine", "seats": 5}, {"party": "Communist_Party_of_Workers_and_Peasants", "seats": 4}], "source": {"title": "Вибори до Херсонської обласної ради 2006", "url": "https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B4%D0%BE_%D0%A5%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%97_%D1%80%D0%B0%D0%B4%D0%B8_2006"}},
+            {"body": "Kherson Oblast Council (party lists and single-member districts combined)", "year": 2010, "total": 84, "seats": [{"party": "Party_of_Regions", "seats": 58}, {"party": "Communist_Party_of_Ukraine", "seats": 9}, {"party": "Batkivshchyna", "seats": 6}, {"party": "Strong_Ukraine", "seats": 3}, {"party": "Front_for_Change_(Ukraine)", "seats": 3}, {"party": "Ukrainian_Democratic_Alliance_for_Reform", "seats": 2}, {"party": "People's_Party_(Ukraine)", "seats": 1}, {"party": "People's_Movement_of_Ukraine", "seats": 1}, {"party": "x:Justice_(Spravedlyvist)", "seats": 1}], "source": {"title": "Вибори до Херсонської обласної ради 2010", "url": "https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B4%D0%BE_%D0%A5%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D0%BD%D0%BE%D1%97_%D1%80%D0%B0%D0%B4%D0%B8_2010"}}
+          ] },
+          "armedGroups": [
+            {"group": "11th_Army_Aviation_Brigade", "role": "The Chornobaivka helicopter unit served within the 79th Airmobile Brigade from 2003 and was again a brigade from 2013."}
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -1277,6 +1492,13 @@
     },
     "UA-43": {
       "eras": {
+        "national-revival": {
+          "politics": {"note": "Tsarist autocracy: Crimea formed part of Taurida Governorate and had no governing party. Ismail Gasprinsky's newspaper Terciman, founded in 1883, made Bakhchysarai a centre of Crimean Tatar reform; Milliy Firqa emerged only in 1917. Results of the 1906-1912 State Duma elections for this area were not found in usable form.", "governing": [], "elections": []},
+          "armedGroups": [
+            {"group": "Black_Sea_Fleet", "role": "Ottoman warships attacked Sevastopol and Feodosia in the raid of 29 October 1914."},
+            {"group": "Imperial_Russian_Army", "role": "Garrisoned Kerch Fortress, built after the Crimean War to guard the Kerch Strait."}
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "The Crimean Tatar Kurultai, elected in November 1917 and dominated by Milliy Firqa, met in Bakhchysarai on 26 November (9 December) 1917 and proclaimed the Crimean People's Republic under Noman Çelebicihan. Bolshevik sailors crushed it in January 1918 and set up the Taurida Soviet Republic (March-April 1918). German occupation followed, with the Crimean Regional Government of General Maciej Sulkevich (June-November 1918) and then the Kadet-led government of Solomon Krym (November 1918-April 1919). The 1917 figures are vote shares for Taurida Governorate; the Muslim list, led by Cafer Seydahmet, is shown under Milliy Firqa.",
@@ -1557,6 +1779,12 @@
     },
     "UA-40": {
       "eras": {
+        "national-revival": {
+          "politics": {"note": "Tsarist autocracy: Sevastopol, within Taurida Governorate, had no governing party and was dominated by the naval command. Socialist agitation in the fleet led to the uprising of November 1905. Results of the 1906-1912 State Duma elections for this area were not found in usable form.", "governing": [], "elections": []},
+          "armedGroups": [
+            {"group": "Black_Sea_Fleet", "role": "Sailors of the cruiser Ochakov mutinied under Lieutenant Pyotr Schmidt in November 1905."}
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Sevastopol, the Black Sea Fleet's base, was dominated by revolutionary sailors' committees; the Bolsheviks took control in December 1917, and the city then passed to German occupation (May 1918) and Allied forces (November 1918-April 1919). Like the rest of Crimea it voted in the Taurida district in 1917 (vote shares). In April 1918 part of the fleet raised the Ukrainian flag before most ships sailed to Novorossiysk.",
@@ -1637,7 +1865,10 @@
           ]
         },
         "orange-to-euromaidan": {
-          "politics": { "note": "The Party of Regions and its allies controlled the Sevastopol City Council after 2006; exact seat totals were not found.", "governing": ["Party_of_Regions"], "elections": [] },
+          "politics": { "note": "The Party of Regions and its allies controlled the Sevastopol City Council after 2006; exact seat totals were not found.", "governing": ["Party_of_Regions"], "elections": [
+            {"body": "Sevastopol City Council (source gives 75 seats; the party figures sum to 76)", "year": 2006, "total": 76, "seats": [{"party": "Party_of_Regions", "seats": 45}, {"party": "People's_Opposition_Bloc_of_Natalia_Vitrenko", "seats": 9}, {"party": "x:Ivanov_Bloc_For_Sevastopol", "seats": 7}, {"party": "Russian_Bloc", "seats": 5}, {"party": "Communist_Party_of_Ukraine", "seats": 5}, {"party": "x:Kondratievskyi_Bloc", "seats": 5}], "source": {"title": "Вибори до Севастопольської міської ради 2006", "url": "https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B4%D0%BE_%D0%A1%D0%B5%D0%B2%D0%B0%D1%81%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BC%D1%96%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%80%D0%B0%D0%B4%D0%B8_2006"}},
+            {"body": "Sevastopol City Council (party lists and single-member districts combined)", "year": 2010, "total": 76, "seats": [{"party": "Party_of_Regions", "seats": 46}, {"party": "Russian_Bloc", "seats": 9}, {"party": "Communist_Party_of_Ukraine", "seats": 8}, {"party": "Strong_Ukraine", "seats": 4}, {"party": "Progressive_Socialist_Party_of_Ukraine", "seats": 3}, {"party": "People's_Party_(Ukraine)", "seats": 3}, {"party": "x:Party_of_Honor_(Ukraine)", "seats": 2}, {"party": "Party_of_Pensioners_of_Ukraine", "seats": 1}], "source": {"title": "Вибори до Севастопольської міської ради 2010", "url": "https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D0%B1%D0%BE%D1%80%D0%B8_%D0%B4%D0%BE_%D0%A1%D0%B5%D0%B2%D0%B0%D1%81%D1%82%D0%BE%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%BC%D1%96%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D1%80%D0%B0%D0%B4%D0%B8_2010"}}
+          ] },
           "armedGroups": [
             { "group": "Black_Sea_Fleet", "role": "The Kharkiv Pact of 2010 extended the fleet's lease to 2042." },
             { "group": "Ukrainian_Navy", "role": "The Ukrainian Navy shared Sevastopol's bays with the Russian fleet." }

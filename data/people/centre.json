@@ -1,0 +1,1915 @@
+{
+ "oblasts": {
+  "UA-30": {
+   "national-revival": [
+    {
+     "name": "Mykola Lysenko",
+     "role": "Composer",
+     "note": "Settled in Kyiv in 1867 and opened a music and drama school there in 1904, making the city the centre of Ukrainian national music.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Lysenko"
+    },
+    {
+     "name": "Volodymyr Antonovych",
+     "role": "Historian",
+     "note": "Taught at Kyiv University and led the city's Ukrainian Hromada circle for decades.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Antonovych"
+    },
+    {
+     "name": "Sholem Aleichem",
+     "role": "Yiddish writer",
+     "note": "Lived in Kyiv from the late 1880s until the 1905 pogrom drove him abroad.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sholem_Aleichem"
+    },
+    {
+     "name": "Igor Sikorsky",
+     "role": "Aviation engineer",
+     "note": "Born in Kyiv in 1889, he built his first experimental helicopters and aeroplanes in the city before the First World War.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Igor_Sikorsky"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Mykhailo Hrushevsky",
+     "role": "Historian, head of the Central Rada",
+     "note": "Chaired the Central Rada in Kyiv from 1917 until the German-backed coup of April 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Hrushevsky"
+    },
+    {
+     "name": "Pavlo Skoropadskyi",
+     "role": "Hetman of Ukraine",
+     "note": "Proclaimed hetman in Kyiv in April 1918 and ruled from the city until the Directorate took it in December.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavlo_Skoropadskyi"
+    },
+    {
+     "name": "Volodymyr Vynnychenko",
+     "role": "Writer, head of government",
+     "note": "Headed the General Secretariat in Kyiv in 1917 and later led the Directorate that retook the city.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Vynnychenko"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Mikhail Bulgakov",
+     "role": "Physician, writer",
+     "note": "Practised medicine in Kyiv during the repeated changes of power in 1918-1919, the setting of his novel The White Guard.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Bulgakov"
+    },
+    {
+     "name": "Vasyl Lypkivsky",
+     "role": "Metropolitan",
+     "note": "Consecrated in Kyiv's St Sophia in October 1921 as first metropolitan of the Ukrainian Autocephalous Orthodox Church.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasyl_Lypkivsky"
+    },
+    {
+     "name": "Ahatanhel Krymsky",
+     "role": "Orientalist",
+     "note": "Kept the Ukrainian Academy of Sciences running in Kyiv as its permanent secretary through the civil war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ahatanhel_Krymsky"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Les Kurbas",
+     "role": "Theatre director",
+     "note": "Founded the Berezil theatre in Kyiv in 1922, before it moved to Kharkiv in 1926.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Les_Kurbas"
+    },
+    {
+     "name": "Mykola Zerov",
+     "role": "Poet, translator",
+     "note": "Led the neoclassicist poets in Kyiv and taught at the city's institutes in the 1920s.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Zerov"
+    },
+    {
+     "name": "Kazimir Malevich",
+     "role": "Painter",
+     "note": "Born in Kyiv, he taught at the Kyiv Art Institute in the late 1920s.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kazimir_Malevich"
+    },
+    {
+     "name": "Alexander Dovzhenko",
+     "role": "Film director",
+     "note": "Made Arsenal and Earth at the Kyiv film studio around 1929-1930.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Alexander_Dovzhenko"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Pavel Postyshev",
+     "role": "Communist Party official",
+     "note": "Sent to Ukraine in 1933 to enforce grain collection; he led the Kyiv oblast party until 1937.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Postyshev",
+     "iron": true
+    },
+    {
+     "name": "Oleksandr Bohomolets",
+     "role": "Pathophysiologist",
+     "note": "Headed the Ukrainian Academy of Sciences in Kyiv from 1930.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Alexander_A._Bogomolets"
+    },
+    {
+     "name": "Mykhailo Semenko",
+     "role": "Futurist poet",
+     "note": "Arrested in Kyiv in 1937 and shot in the Great Terror.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhail_Semenko"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Nikita Khrushchev",
+     "role": "First Secretary, Ukrainian SSR",
+     "note": "Ran the Ukrainian party from Kyiv from 1938 and oversaw the Sovietisation of western Ukraine.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nikita_Khrushchev",
+     "iron": true
+    },
+    {
+     "name": "Georgy Zhukov",
+     "role": "Commander, Kiev Special Military District",
+     "note": "Led the district from Kyiv in 1940 and took Bessarabia that June.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Georgy_Zhukov"
+    },
+    {
+     "name": "Mikhail Kirponos",
+     "role": "Commander, Kiev Special Military District",
+     "note": "Commanded the district from Kyiv from early 1941 until the German invasion.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Kirponos"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Olena Teliha",
+     "role": "Poet",
+     "note": "Came to occupied Kyiv with the OUN in 1941 and was shot by the Germans at Babyn Yar in 1942.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Olena_Teliha"
+    },
+    {
+     "name": "Dina Pronicheva",
+     "role": "Actress, Babyn Yar survivor",
+     "note": "Escaped the massacre at Babyn Yar in September 1941 and testified about it after the war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Dina_Pronicheva"
+    },
+    {
+     "name": "Mykola Trusevych",
+     "role": "Footballer",
+     "note": "Dynamo Kyiv goalkeeper who played in the 1942 'Death Match' and died in the Syrets camp in 1943.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D1%83%D1%81%D0%B5%D0%B2%D0%B8%D1%87_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Paul Blobel",
+     "role": "SS officer",
+     "note": "Commanded Sonderkommando 4a, which carried out the Babyn Yar massacre; he was executed for war crimes in 1951.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Paul_Blobel",
+     "iron": true
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Viktor Nekrasov",
+     "role": "Writer",
+     "note": "Lived in Kyiv and won a Stalin Prize for In the Trenches of Stalingrad (1946).",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viktor_Platonovich_Nekrasov"
+    },
+    {
+     "name": "Sergey Lebedev",
+     "role": "Computer scientist",
+     "note": "Built MESM, the first working computer in continental Europe, in Kyiv by 1950-1951.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergey_Lebedev_(scientist)"
+    },
+    {
+     "name": "Evgeny Paton",
+     "role": "Welding engineer",
+     "note": "Founded the electric welding institute in Kyiv; the all-welded Paton Bridge opened there in 1953.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Evgeny_Paton"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Volodymyr Shcherbytsky",
+     "role": "First Secretary, Ukrainian SSR",
+     "note": "Ran Soviet Ukraine from Kyiv from 1972 to 1989.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Shcherbytsky",
+     "iron": true
+    },
+    {
+     "name": "Valeriy Lobanovskyi",
+     "role": "Football manager",
+     "note": "Coached Dynamo Kyiv to the Cup Winners' Cup in 1975 and 1986.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Valeriy_Lobanovskyi"
+    },
+    {
+     "name": "Alla Horska",
+     "role": "Painter, dissident",
+     "note": "A leading figure of Kyiv's Sixtiers, found murdered in 1970 in circumstances never officially solved.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Alla_Horska"
+    },
+    {
+     "name": "Viktor Glushkov",
+     "role": "Cybernetician",
+     "note": "Founded the Institute of Cybernetics in Kyiv.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Victor_Glushkov"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Leonid Kravchuk",
+     "role": "First president of Ukraine",
+     "note": "Led the Verkhovna Rada in Kyiv at independence and was elected president in December 1991.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leonid_Kravchuk"
+    },
+    {
+     "name": "Oleksandr Omelchenko",
+     "role": "Mayor of Kyiv",
+     "note": "Headed the city from 1996 and won its first direct mayoral election in 1999.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Omelchenko"
+    },
+    {
+     "name": "Georgiy Gongadze",
+     "role": "Journalist",
+     "note": "Founder of Ukrainska Pravda in Kyiv, abducted in 2000 and found murdered.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Georgiy_Gongadze"
+    },
+    {
+     "name": "Patriarch Filaret",
+     "role": "Church leader",
+     "note": "Led the Kyiv Patriarchate of the Ukrainian Orthodox Church from 1995.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Patriarch_Filaret_(Denysenko)"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Leonid Chernovetskyi",
+     "role": "Mayor of Kyiv",
+     "note": "Won the mayoralty in 2006 and again in 2008.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leonid_Chernovetskyi"
+    },
+    {
+     "name": "Mustafa Nayyem",
+     "role": "Journalist",
+     "note": "His Facebook post of 21 November 2013 helped draw the first Euromaidan crowd to Kyiv's central square.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mustafa_Nayyem"
+    },
+    {
+     "name": "Ruslana",
+     "role": "Singer",
+     "note": "A familiar voice on the Maidan stage during the 2013-2014 protests.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ruslana"
+    },
+    {
+     "name": "Serhiy Nigoyan",
+     "role": "Protester",
+     "note": "Shot on Hrushevskoho Street in January 2014, among the first Euromaidan protesters killed.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Nigoyan"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Vitali Klitschko",
+     "role": "Mayor of Kyiv",
+     "note": "The former boxing champion was elected mayor in May 2014 and re-elected in 2015 and 2020.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vitali_Klitschko"
+    },
+    {
+     "name": "Epiphanius I of Ukraine",
+     "role": "Metropolitan of Kyiv",
+     "note": "Elected primate of the Orthodox Church of Ukraine at the December 2018 council in Kyiv.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Epiphanius_I_of_Ukraine"
+    },
+    {
+     "name": "Pavel Sheremet",
+     "role": "Journalist",
+     "note": "Killed by a car bomb in central Kyiv in July 2016.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Sheremet"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Volodymyr Zelenskyy",
+     "role": "President of Ukraine",
+     "note": "Stayed in Kyiv as Russian forces closed on the capital in February 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy"
+    },
+    {
+     "name": "Oleksandr Syrskyi",
+     "role": "Commander of Ground Forces",
+     "note": "Led the defence of Kyiv in 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Syrskyi"
+    },
+    {
+     "name": "Mykola Zhyrnov",
+     "role": "Lieutenant general",
+     "note": "Commander of the Kyiv garrison defence at the start of the 2022 invasion.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%96%D0%B8%D1%80%D0%BD%D0%BE%D0%B2_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Serhiy Popko",
+     "role": "Head of the Kyiv City Military Administration",
+     "note": "Ran the capital's wartime administration through the missile attacks of 2023-2024.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Popko"
+    },
+    {
+     "name": "Kyrylo Budanov",
+     "role": "Head of military intelligence",
+     "note": "Led the GUR from Kyiv, and its headquarters in the city was attacked by Russia in 2023.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kyrylo_Budanov"
+    },
+    {
+     "name": "Mykola Oleshchuk",
+     "role": "Commander of the Air Force",
+     "note": "Oversaw the Patriot defence that intercepted Kinzhal missiles over Kyiv in May 2023.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Oleshchuk"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Tymur Tkachenko",
+     "role": "Head of the Kyiv City Military Administration",
+     "note": "Appointed in December 2024, he led the city's military administration through the 2025 strikes."
+    },
+    {
+     "name": "Yuliia Svyrydenko",
+     "role": "Prime Minister of Ukraine",
+     "note": "Headed the government from July 2025, when the Cabinet of Ministers building in Kyiv was hit that September.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yulia_Svyrydenko"
+    }
+   ]
+  },
+  "UA-18": {
+   "national-revival": [
+    {
+     "name": "Lesya Ukrainka",
+     "role": "Poet",
+     "note": "Born in Zviahel (Novohrad-Volynskyi) in 1871.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Lesya_Ukrainka"
+    },
+    {
+     "name": "Joseph Conrad",
+     "role": "Novelist",
+     "note": "Born to a Polish family in Berdychiv in 1857.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Conrad"
+    },
+    {
+     "name": "Volodymyr Korolenko",
+     "role": "Writer",
+     "note": "Born in Zhytomyr in 1853, he drew on his Volhynian childhood in his fiction.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Korolenko"
+    },
+    {
+     "name": "Sergei Korolev",
+     "role": "Rocket engineer",
+     "note": "Born in Zhytomyr in 1907.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergei_Korolev"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Oleksandr Shumsky",
+     "role": "Revolutionary politician",
+     "note": "Born in the Zhytomyr region, he sat on the Central Rada as a Ukrainian Socialist Revolutionary.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Shumsky"
+    },
+    {
+     "name": "Borys Lyatoshynsky",
+     "role": "Composer",
+     "note": "Zhytomyr-born; he was starting his career during the revolution.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Borys_Lyatoshynsky"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Yurii Tiutiunnyk",
+     "role": "UPR general",
+     "note": "Led the Second Winter Campaign, which ended at Bazar in November 1921.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yurii_Tiutiunnyk"
+    },
+    {
+     "name": "Semyon Budyonny",
+     "role": "Red cavalry commander",
+     "note": "His First Cavalry Army raided Zhytomyr and Berdychiv in June 1920 during the Polish-Soviet War.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Semyon_Budyonny"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Viktor Kosenko",
+     "role": "Composer",
+     "note": "Taught and performed in Zhytomyr from 1918 to 1929.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viktor_Kosenko"
+    },
+    {
+     "name": "Teofil Skalski",
+     "role": "Catholic priest",
+     "note": "Administered the Zhytomyr Catholic diocese until his arrest in 1926.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Teofil_Skalski"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Sviatoslav Richter",
+     "role": "Pianist",
+     "note": "Born in Zhytomyr in 1915, he trained in Moscow by the time the war broke out.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sviatoslav_Richter"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Heinrich Himmler",
+     "role": "Reichsführer-SS",
+     "note": "Ran his Hegewald field headquarters near Zhytomyr from 1942.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Heinrich_Himmler",
+     "iron": true
+    },
+    {
+     "name": "Vasily Grossman",
+     "role": "War correspondent",
+     "note": "Born in Berdychiv; his mother was killed in the massacre of its Jews in 1941.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasily_Grossman"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Ihor Hordiichuk",
+     "role": "General",
+     "note": "Led the 2014 Savur-Mohyla operation; Zhytomyr's Ukrainian Air Assault history.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ihor_Hordiichuk"
+    },
+    {
+     "name": "Mykhailo Zabrodskyi",
+     "role": "Brigade commander",
+     "note": "Commanded the Zhytomyr-based 95th Brigade on its 2014 raid across the Donbas.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Zabrodskyi"
+    },
+    {
+     "name": "Serhii Sukhomlyn",
+     "role": "Mayor of Zhytomyr",
+     "note": "Elected mayor in 2015.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A1%D1%83%D1%85%D0%BE%D0%BC%D0%BB%D0%B8%D0%BD_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Serhii Sukhomlyn",
+     "role": "Mayor of Zhytomyr",
+     "note": "Led the city through Russian airstrikes in 2022.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A1%D1%83%D1%85%D0%BE%D0%BC%D0%BB%D0%B8%D0%BD_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Vitalii Bunechko",
+     "role": "Governor of Zhytomyr Oblast",
+     "note": "Headed the oblast's military administration from 2021.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D1%83%D0%BD%D0%B5%D1%87%D0%BA%D0%BE_%D0%92%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Volodymyr Lytvyn",
+     "role": "Speaker of the Verkhovna Rada",
+     "note": "Born in Sloboda-Romanivka in the oblast; he became parliament's chairman in 2002.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Lytvyn"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Vira Sheludchenko",
+     "role": "Mayor of Zhytomyr",
+     "note": "Elected mayor in 2006.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A8%D0%B5%D0%BB%D1%83%D0%B4%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%92%D1%96%D1%80%D0%B0_%D0%99%D0%BE%D1%81%D0%B8%D0%BF%D1%96%D0%B2%D0%BD%D0%B0"
+    },
+    {
+     "name": "Leonid Stadnyk",
+     "role": "Veterinarian",
+     "note": "Lived in Podoliantsi in Zhytomyr Oblast and was listed as the world's tallest man in 2007.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leonid_Stadnyk"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Vitalii Bunechko",
+     "role": "Head of Zhytomyr Oblast Military Administration",
+     "note": "Headed the oblast's administration as defences went up along the Belarus border.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D1%83%D0%BD%D0%B5%D1%87%D0%BA%D0%BE_%D0%92%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Vitalii Bunechko",
+     "role": "Head of Zhytomyr Oblast Military Administration",
+     "note": "Continued to run the oblast through 2025.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D1%83%D0%BD%D0%B5%D1%87%D0%BA%D0%BE_%D0%92%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Sergei Korolev",
+     "role": "Rocket engineer",
+     "note": "Zhytomyr-born engineer arrested in the 1938 purge and sent to the Kolyma camps.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergei_Korolev"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Sergei Korolev",
+     "role": "Chief rocket designer",
+     "note": "Zhytomyr-born engineer who led Soviet rocket design after the war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergei_Korolev"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Borys Lyatoshynsky",
+     "role": "Composer",
+     "note": "Zhytomyr-born founder of modern Ukrainian symphonic music, who died in 1968.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Borys_Lyatoshynsky"
+    }
+   ]
+  },
+  "UA-32": {
+   "national-revival": [
+    {
+     "name": "Pavlo Chubynsky",
+     "role": "Ethnographer, poet",
+     "note": "Born near Boryspil, he wrote the verses that became Ukraine's national anthem.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavlo_Chubynsky"
+    },
+    {
+     "name": "Vikentiy Khvoyka",
+     "role": "Archaeologist",
+     "note": "Excavated at Trypillia south of Kyiv from the 1890s, giving the culture its name.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vikentiy_Khvoyka"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Yevhen Konovalets",
+     "role": "Commander of the Sich Riflemen",
+     "note": "Launched the November 1918 anti-Hetman uprising from Bila Tserkva.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yevhen_Konovalets"
+    },
+    {
+     "name": "Andriy Melnyk",
+     "role": "Sich Riflemen officer",
+     "note": "Served as chief of staff of the Sich Riflemen in the 1918 Bila Tserkva rising.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Andriy_Melnyk_(officer)"
+    },
+    {
+     "name": "Lonhyn Tsehelsky",
+     "role": "Western Ukrainian diplomat",
+     "note": "Signed the preliminary Act of Unification at Fastiv on 1 December 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Lonhyn_Tsehelsky"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Danylo Terpylo",
+     "role": "Otaman Zeleny",
+     "note": "Trypillia-born peasant leader whose insurgents fought the Bolsheviks and Whites around Trypillia in 1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Danylo_Terpylo"
+    },
+    {
+     "name": "Yona Yakir",
+     "role": "Red Army commander",
+     "note": "Held Soviet commands on Ukrainian fronts in the 1919 fighting around Kyiv.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Iona_Yakir"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Hryhorii Kosynka",
+     "role": "Writer",
+     "note": "Born in Shcherbanivka near Obukhiv, he wrote short stories of the Ukrainian village.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Hryhorii_Kosynka"
+    },
+    {
+     "name": "Hanna Sobachko-Shostak",
+     "role": "Folk artist",
+     "note": "Painted in the village of Skoptsi and joined its folk art workshop.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%93%D0%B0%D0%BD%D0%BD%D0%B0_%D0%A1%D0%BE%D0%B1%D0%B0%D1%87%D0%BA%D0%BE-%D0%A8%D0%BE%D1%81%D1%82%D0%B0%D0%BA"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Maria Prymachenko",
+     "role": "Folk artist",
+     "note": "From Bolotnia in the Kyiv region, she came to attention at Kyiv's 1936 exhibition of folk art.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Maria_Prymachenko"
+    },
+    {
+     "name": "Mykola Demchenko",
+     "role": "Party official",
+     "note": "First secretary of the Kyiv oblast party committee from 1932 during the famine.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D0%BC%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%9D%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Nikolai Vatutin",
+     "role": "Commander, 1st Ukrainian Front",
+     "note": "Launched the November 1943 offensive to retake Kyiv from the Lyutezh bridgehead.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nikolai_Vatutin"
+    },
+    {
+     "name": "Pavel Rybalko",
+     "role": "Tank commander",
+     "note": "His 3rd Guards Tank Army fought at the Bukrin and Lyutezh bridgeheads in 1943.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Rybalko"
+    },
+    {
+     "name": "Kirill Moskalenko",
+     "role": "Commander, 38th Army",
+     "note": "Led his army out of the Lyutezh bridgehead north of Kyiv in November 1943.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kirill_Moskalenko"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Kateryna Bilokur",
+     "role": "Folk painter",
+     "note": "Painted in Bohdanivka in the Kyiv region; her work was shown at the 1954 Paris exhibition.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kateryna_Bilokur"
+    },
+    {
+     "name": "Pavlo Popovych",
+     "role": "Future cosmonaut",
+     "note": "Born in Uzyn in 1930, he trained at a vocational school in Bila Tserkva after the war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Popovich"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Viktor Bryukhanov",
+     "role": "Chornobyl plant director",
+     "note": "Ran the Chornobyl Nuclear Power Plant until the 1986 explosion and was later jailed.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viktor_Bryukhanov"
+    },
+    {
+     "name": "Vladimir Pravik",
+     "role": "Firefighter",
+     "note": "Pripyat firefighter who led the first response to the 1986 reactor fire and died of radiation.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Pravik"
+    },
+    {
+     "name": "Anatoly Dyatlov",
+     "role": "Chornobyl deputy chief engineer",
+     "note": "Supervised the test that preceded the 1986 explosion and was later jailed.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anatoly_Dyatlov"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Viktor Yanukovych",
+     "role": "President of Ukraine",
+     "note": "His Mezhyhirya estate near Vyshhorod became a symbol of corruption after he fled in 2014.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viktor_Yanukovych"
+    },
+    {
+     "name": "Yevhenii Zhovtiak",
+     "role": "Governor of Kyiv Oblast",
+     "note": "Headed the oblast after the Orange Revolution.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%96%D0%BE%D0%B2%D1%82%D1%8F%D0%BA_%D0%84%D0%B2%D0%B3%D0%B5%D0%BD%D1%96%D0%B9_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Anatolii Prysiazhniuk",
+     "role": "Governor of Kyiv Oblast",
+     "note": "Headed the oblast under Yanukovych.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D1%81%D1%8F%D0%B6%D0%BD%D1%8E%D0%BA_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9_%D0%99%D0%BE%D1%81%D0%B8%D0%BF%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Anatolii Fedoruk",
+     "role": "Mayor of Bucha",
+     "note": "Led the town through the 2022 occupation and its aftermath.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D1%83%D0%BA_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Oleksandr Markushyn",
+     "role": "Mayor of Irpin",
+     "note": "Led the town during the 2022 battle for it."
+    },
+    {
+     "name": "Oleksandr Pavliuk",
+     "role": "General",
+     "note": "Headed the Kyiv Oblast Military Administration in early 2022 and later commanded Ground Forces.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Pavliuk"
+    },
+    {
+     "name": "Yurii Prylypko",
+     "role": "Mayor of Hostomel",
+     "note": "Killed by Russian forces in March 2022 while delivering aid."
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Ruslan Kravchenko",
+     "role": "Head of Kyiv Oblast Military Administration",
+     "note": "Headed the oblast's military administration from 2023.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ruslan_Kravchenko"
+    },
+    {
+     "name": "Mykola Kalashnyk",
+     "role": "Head of Kyiv Oblast Military Administration",
+     "note": "Headed the oblast's wartime administration from 2024.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Kalashnyk"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Anatolii Zasukha",
+     "role": "Governor of Kyiv Oblast",
+     "note": "Led the oblast administration from the late 1990s.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D1%81%D1%83%D1%85%D0%B0_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Volodymyr Shandra",
+     "role": "Governor of Kyiv Oblast",
+     "note": "Headed the oblast in 2014-2015.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A8%D0%B0%D0%BD%D0%B4%D1%80%D0%B0_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Hennadii Dykyi",
+     "role": "Mayor of Bila Tserkva",
+     "note": "Won the mayoralty in 2015.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%94%D0%B8%D0%BA%D0%B8%D0%B9_%D0%93%D0%B5%D0%BD%D0%BD%D0%B0%D0%B4%D1%96%D0%B9_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Mykola Kalashnyk",
+     "role": "Head of Kyiv Oblast Military Administration",
+     "note": "Continued to run the oblast through the 2025-2026 strikes.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BB%D0%B0%D1%88%D0%BD%D0%B8%D0%BA_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Oleksandr Markushyn",
+     "role": "Mayor of Irpin",
+     "note": "Led the rebuilding of a town badly damaged in 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Markushyn"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Ivan Kozlovsky",
+     "role": "Opera tenor",
+     "note": "Kyiv-region-born tenor, a star of Moscow's Bolshoi Theatre in these years.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Kozlovsky"
+    }
+   ]
+  },
+  "UA-05": {
+   "national-revival": [
+    {
+     "name": "Nikolay Pirogov",
+     "role": "Surgeon",
+     "note": "Retired to his Vyshnia estate near Vinnytsia in 1861 and died there in 1881.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nikolay_Pirogov"
+    },
+    {
+     "name": "Mykhailo Kotsiubynsky",
+     "role": "Writer",
+     "note": "Born in Vinnytsia in 1864, he taught in the Podolia region before moving to Chernihiv.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Kotsiubynsky"
+    },
+    {
+     "name": "Mykola Leontovych",
+     "role": "Composer",
+     "note": "Podolian-born choral composer who wrote Shchedryk while teaching in Tulchyn.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Leontovych"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Serhiy Ostapenko",
+     "role": "UNR prime minister",
+     "note": "Headed the Directorate's government from February 1919 in the Vinnytsia period.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Ostapenko"
+    },
+    {
+     "name": "Volodymyr Chekhivsky",
+     "role": "UNR prime minister",
+     "note": "Led the Directorate's government as it fell back from Kyiv in early 1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Chekhivsky"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Symon Petliura",
+     "role": "Head of the Directorate",
+     "note": "Met Polish leader Piłsudski in Vinnytsia in May 1920 during the joint offensive towards Kyiv.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Symon_Petliura"
+    },
+    {
+     "name": "Mykola Leontovych",
+     "role": "Composer",
+     "note": "Murdered by a Soviet Cheka agent near Tulchyn in January 1921.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Leontovych"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Adolf Hitler",
+     "role": "German dictator",
+     "note": "Directed the war from the Werwolf headquarters near Vinnytsia in 1942-1943.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Werwolf_(Wehrmacht_headquarters)",
+     "iron": true
+    },
+    {
+     "name": "Ivan Bevz",
+     "role": "Underground leader",
+     "note": "Led the Soviet underground in occupied Vinnytsia and was executed by the Germans in 1942.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D0%B5%D0%B2%D0%B7_%D0%86%D0%B2%D0%B0%D0%BD_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Mykhailo Stelmakh",
+     "role": "Writer",
+     "note": "Born in Diakivtsi, he wrote his prize-winning novels of the Podolian village after the war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Stelmakh"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Vladimir Mikhtyuk",
+     "role": "43rd Rocket Army commander",
+     "note": "Commanded the army from its Vinnytsia headquarters at the end of the Soviet era.",
+     "wikipedia": "https://en.wikipedia.org/wiki/43rd_Rocket_Army"
+    },
+    {
+     "name": "Vasyl Stus",
+     "role": "Poet, dissident",
+     "note": "Born in Rakhnivka in the Vinnytsia region in 1938; he died in a Soviet labour camp in 1985.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasyl_Stus"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Petro Poroshenko",
+     "role": "Businessman, politician",
+     "note": "Built his confectionery business around Vinnytsia and entered parliament from the region in 1998.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Petro_Poroshenko"
+    },
+    {
+     "name": "Volodymyr Groysman",
+     "role": "City councillor",
+     "note": "Won a Vinnytsia city council seat in 2002, starting his political career.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Groysman"
+    },
+    {
+     "name": "Dmytro Dvorkis",
+     "role": "Mayor of Vinnytsia",
+     "note": "Headed the city council for a decade after independence."
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Volodymyr Groysman",
+     "role": "Mayor of Vinnytsia",
+     "note": "Elected mayor at 28 in 2006 and known for municipal reforms.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Groysman"
+    },
+    {
+     "name": "Oleksandr Dombrovskyi",
+     "role": "Governor of Vinnytsia Oblast",
+     "note": "Headed the oblast administration from 2005 to 2010.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Dombrovskyi"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Serhiy Morhunov",
+     "role": "Mayor of Vinnytsia",
+     "note": "Elected mayor in 2015.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D0%B3%D1%83%D0%BD%D0%BE%D0%B2_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Valerii Korovii",
+     "role": "Governor of Vinnytsia Oblast",
+     "note": "Headed the oblast administration from 2015.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%B2%D1%96%D0%B9_%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D1%96%D0%B9_%D0%92%D1%96%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Serhii Borzov",
+     "role": "Governor of Vinnytsia Oblast",
+     "note": "Led the oblast's military administration during the July 2022 Vinnytsia missile strike.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D1%80%D0%B7%D0%BE%D0%B2_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Mykola Oleshchuk",
+     "role": "Commander of the Air Force",
+     "note": "Commanded the Air Force, whose command sits in Vinnytsia, when the invasion began.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Oleshchuk"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Anatolii Kryvonozhko",
+     "role": "Commander of the Air Force",
+     "note": "Took command of the Air Force, which is headquartered in Vinnytsia, in 2024.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anatolii_Kryvonozhko"
+    },
+    {
+     "name": "Yurii Ihnat",
+     "role": "Air Force spokesman",
+     "note": "Became the public voice of the Air Force's Vinnytsia command during the war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yurii_Ihnat"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Natalia Zabolotna",
+     "role": "Head of Vinnytsia Oblast Military Administration",
+     "note": "Headed the oblast's military administration."
+    },
+    {
+     "name": "Serhiy Morhunov",
+     "role": "Mayor of Vinnytsia",
+     "note": "Continued as the city's mayor under martial law.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D0%B3%D1%83%D0%BD%D0%BE%D0%B2_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Volodymyr Cherniavsky",
+     "role": "Communist Party official",
+     "note": "Led the Vinnytsia oblast party organisation until his arrest in 1937.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%BD%D1%8F%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%86%D0%BB%D0%BB%D1%96%D1%87"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Danylo Zabolotny",
+     "role": "Microbiologist",
+     "note": "Podilia-born plague researcher who led the Ukrainian Academy of Sciences from 1928.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Danylo_Zabolotny"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Mykhailo Stelmakh",
+     "role": "Writer",
+     "note": "Vinnytsia-region-born village teacher and writer who went to war in 1941.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Stelmakh"
+    }
+   ]
+  },
+  "UA-71": {
+   "national-revival": [
+    {
+     "name": "Yakov Stefanovich",
+     "role": "Populist revolutionary",
+     "note": "Organised the Chyhyryn conspiracy among local peasants in 1877 using a forged tsarist charter.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yakov_Stefanovich"
+    },
+    {
+     "name": "Ivan Nechuy-Levytsky",
+     "role": "Novelist",
+     "note": "Born in Stebliv in the Kaniv region; his fiction described the Ukrainian countryside of the Dnieper.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Nechuy-Levytsky"
+    },
+    {
+     "name": "Mykhailo Maksymovych",
+     "role": "Scholar",
+     "note": "Spent his last decades at Mykhailova Hora near Prokhorivka, dying there in 1873.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Maksymovych"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Serhiy Yefremov",
+     "role": "Politician, literary historian",
+     "note": "Born in Palchyk near Zvenyhorodka, he served as deputy head of the Central Rada.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Yefremov"
+    },
+    {
+     "name": "Yurii Tiutiunnyk",
+     "role": "Military leader",
+     "note": "Organised Free Cossacks in the Zvenyhorod region in 1917.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yurii_Tiutiunnyk"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Vasyl Chuchupak",
+     "role": "Kholodny Yar otaman",
+     "note": "Led the insurgents of the Kholodny Yar Republic until his death in 1920.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A7%D1%83%D1%87%D1%83%D0%BF%D0%B0%D0%BA_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C_%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Yurii Horlis-Horsky",
+     "role": "Insurgent, writer",
+     "note": "Fought in Kholodny Yar and later wrote the memoir of the same name.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D0%BB%D1%96%D1%81-%D0%93%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%AE%D1%80%D1%96%D0%B9_%D0%AE%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Mykola Bazhan",
+     "role": "Poet",
+     "note": "Educated in Uman, where he began writing, before moving on in the 1920s.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Bazhan"
+    },
+    {
+     "name": "Pavlo Kurinnyi",
+     "role": "Archaeologist",
+     "note": "Worked on museums and archaeology around Uman in the 1920s.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9A%D1%83%D1%80%D1%96%D0%BD%D0%BD%D0%B8%D0%B9_%D0%9F%D0%B5%D1%82%D1%80%D0%BE_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Maria Demchenko",
+     "role": "Stakhanovite farmer",
+     "note": "Beet-harvesting champion from Starosillia, Cherkasy region, celebrated by Soviet propaganda in 1935.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D0%BC%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9C%D0%B0%D1%80%D1%96%D1%8F_%D0%A1%D0%BE%D1%84%D1%80%D0%BE%D0%BD%D1%96%D0%B2%D0%BD%D0%B0"
+    },
+    {
+     "name": "Ivan Chernyakhovsky",
+     "role": "Red Army officer",
+     "note": "Uman-born officer who rose through the Red Army in the 1930s.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Chernyakhovsky"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Pavel Ponedelin",
+     "role": "Soviet general",
+     "note": "Commanded the 12th Army, encircled and captured at Uman in August 1941.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Ponedelin"
+    },
+    {
+     "name": "Ivan Konev",
+     "role": "Soviet marshal",
+     "note": "Commanded the 2nd Ukrainian Front in the Korsun-Cherkasy pocket of early 1944.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Konev"
+    },
+    {
+     "name": "Wilhelm Stemmermann",
+     "role": "German general",
+     "note": "Commanded the troops trapped in the Korsun pocket and died during the breakout in February 1944.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Wilhelm_Stemmermann",
+     "iron": true
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Vasyl Symonenko",
+     "role": "Poet, journalist",
+     "note": "Worked for newspapers in Cherkasy until his death there in 1963.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasyl_Symonenko"
+    },
+    {
+     "name": "Viacheslav Chornovil",
+     "role": "Dissident journalist",
+     "note": "Born in Yerky in the Cherkasy region in 1937; he became a leading Soviet-era dissident.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viacheslav_Chornovil"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Anatolii Bondarenko",
+     "role": "Mayor of Cherkasy",
+     "note": "Elected mayor in 2015.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D0%BD%D0%B4%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Oleksandr Velbivets",
+     "role": "Governor of Cherkasy Oblast",
+     "note": "Headed the oblast's administration in 2019 before the Oblast Council split.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D1%8C%D0%B1%D1%96%D0%B2%D0%B5%D1%86%D1%8C_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Oleksandr Skichko",
+     "role": "Head of Cherkasy Oblast Administration",
+     "note": "Headed the oblast through the opening stage of the invasion.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A1%D0%BA%D1%96%D1%87%D0%BA%D0%BE_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Anatolii Bondarenko",
+     "role": "Mayor of Cherkasy",
+     "note": "Led the city through the opening of the invasion.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D0%BD%D0%B4%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Ihor Taburets",
+     "role": "Head of Cherkasy Oblast Military Administration",
+     "note": "Headed the oblast administration from 2023, including after the Uman strike.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B1%D1%83%D1%80%D0%B5%D1%86%D1%8C_%D0%86%D0%B3%D0%BE%D1%80_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Iryna Pletnyova",
+     "role": "Mayor of Uman",
+     "note": "Led the town during the April 2023 missile strike."
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Ihor Taburets",
+     "role": "Head of Cherkasy Oblast Military Administration",
+     "note": "Kept reporting on the drone and missile attacks on the oblast.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B1%D1%83%D1%80%D0%B5%D1%86%D1%8C_%D0%86%D0%B3%D0%BE%D1%80_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Anatolii Bondarenko",
+     "role": "Mayor of Cherkasy",
+     "note": "Continued as mayor during the 2025-2026 strikes.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D0%BD%D0%B4%D0%B0%D1%80%D0%B5%D0%BD%D0%BA%D0%BE_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Oleksandr Cherevko",
+     "role": "Governor of Cherkasy Oblast",
+     "note": "Headed the oblast after the Orange Revolution.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A7%D0%B5%D1%80%D0%B5%D0%B2%D0%BA%D0%BE_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Serhii Tulub",
+     "role": "Governor of Cherkasy Oblast",
+     "note": "Headed the oblast in 2010-2014.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A2%D1%83%D0%BB%D1%83%D0%B1_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Serhii Odarych",
+     "role": "Mayor of Cherkasy",
+     "note": "Won the mayoralty in 2009.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B0%D1%80%D0%B8%D1%87_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%92%D1%96%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Oleksandr Korniychuk",
+     "role": "Playwright",
+     "note": "Cherkasy-region-born dramatist who headed Soviet Ukraine's writers' union from 1938.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Korniychuk"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Oleksandr Korniychuk",
+     "role": "Playwright, minister",
+     "note": "Cherkasy-region-born dramatist, briefly Soviet Ukraine's foreign minister from 1944.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Korniychuk"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Anatoliy Hrytsenko",
+     "role": "Analyst, politician",
+     "note": "Cherkasy-region-born air force officer who ran the Razumkov Centre from 1999.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anatoliy_Hrytsenko"
+    }
+   ]
+  },
+  "UA-74": {
+   "national-revival": [
+    {
+     "name": "Mykhailo Kotsiubynsky",
+     "role": "Writer",
+     "note": "Moved to Chernihiv in 1898 and worked in its zemstvo statistical office, writing Fata Morgana there.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Kotsiubynsky"
+    },
+    {
+     "name": "Panteleimon Kulish",
+     "role": "Writer",
+     "note": "Spent his last years on his farm at Motronivka near Borzna, dying there in 1897.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Panteleimon_Kulish"
+    },
+    {
+     "name": "Borys Hrinchenko",
+     "role": "Writer, lexicographer",
+     "note": "Worked for the Chernihiv zemstvo from 1894 to 1902.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Borys_Hrinchenko"
+    },
+    {
+     "name": "Leonid Hlibov",
+     "role": "Fabulist",
+     "note": "Lived and worked in Chernihiv, where he died in 1893.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leonid_Hlibov"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Mykola Shchors",
+     "role": "Red commander",
+     "note": "Born in Snovsk, he led Bolshevik partisans along the Chernihiv front in 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Shchors"
+    },
+    {
+     "name": "Ilya Shrah",
+     "role": "Lawyer, Central Rada member",
+     "note": "Chernihiv zemstvo politician and Central Rada member.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A8%D1%80%D0%B0%D0%B3_%D0%86%D0%BB%D0%BB%D1%8F_%D0%9B%D1%8E%D0%B4%D0%B2%D0%B8%D0%B3%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Nikolai Podvoisky",
+     "role": "Soviet military commissar",
+     "note": "Chernihiv-born Bolshevik who was people's commissar of military affairs in Soviet Ukraine in 1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nikolai_Podvoisky"
+    },
+    {
+     "name": "Vasyl Ellan-Blakytny",
+     "role": "Borotbist poet",
+     "note": "Chernihiv-region native and leader of the Borotbists who merged into the Ukrainian Bolshevik party in 1920.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasyl_Ellan-Blakytny"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Mykhailo Zhuk",
+     "role": "Painter",
+     "note": "Moved to Chernihiv in 1925 and taught there.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Zhuk"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Oleksii Fedorov",
+     "role": "Party secretary",
+     "note": "Headed the Chernihiv party committee from 1938.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D1%96%D0%B9_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Oleksii Fedorov",
+     "role": "Partisan commander",
+     "note": "Stayed behind in 1941 and led partisans in the Chernihiv forests.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D1%96%D0%B9_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Mykola Popudrenko",
+     "role": "Partisan commander",
+     "note": "Led partisans in Chernihiv Oblast until killed in 1943.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BF%D1%83%D0%B4%D1%80%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%9C%D0%B8%D0%BA%D0%B8%D1%82%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Pyotr Baranovsky",
+     "role": "Architectural restorer",
+     "note": "Rebuilt the wartime-ruined Piatnytska Church in Chernihiv after the war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pyotr_Baranovsky"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Levko Lukyanenko",
+     "role": "Dissident",
+     "note": "Born in Khrypkivka, he helped found the Ukrainian Helsinki Group in 1976.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Levko_Lukianenko"
+    },
+    {
+     "name": "Leonid Kizim",
+     "role": "Cosmonaut",
+     "note": "Trained at the Chernihiv Higher Military Aviation School.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leonid_Kizim"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Oleksandr Sokolov",
+     "role": "Mayor of Chernihiv",
+     "note": "Led the city as mayor from 2002 to 2015."
+    },
+    {
+     "name": "Viktor Yushchenko",
+     "role": "President of Ukraine",
+     "note": "Championed the Baturyn memorial to Mazepa's capital.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viktor_Yushchenko"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Vladyslav Atroshenko",
+     "role": "Mayor of Chernihiv",
+     "note": "Elected mayor in 2015.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladyslav_Atroshenko"
+    },
+    {
+     "name": "Oleh Liashko",
+     "role": "Radical Party leader",
+     "note": "Chernihiv-born leader of the party that tied for first in the 2015 oblast council.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleh_Liashko"
+    },
+    {
+     "name": "Valerii Kulich",
+     "role": "Governor of Chernihiv Oblast",
+     "note": "Headed the oblast administration during the Donbas war.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D1%96%D1%87_%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D1%96%D0%B9_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Viacheslav Chaus",
+     "role": "Governor of Chernihiv Oblast",
+     "note": "Led the region through the 2022 siege of Chernihiv.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vyacheslav_Chaus"
+    },
+    {
+     "name": "Vladyslav Atroshenko",
+     "role": "Mayor of Chernihiv",
+     "note": "Stayed in the besieged city in 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladyslav_Atroshenko"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Viacheslav Chaus",
+     "role": "Governor of Chernihiv Oblast",
+     "note": "Reported on shelling of the northern border districts.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vyacheslav_Chaus"
+    },
+    {
+     "name": "Oleksandr Lomako",
+     "role": "Acting mayor of Chernihiv",
+     "note": "Took over the city from the end of 2023."
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Viacheslav Chaus",
+     "role": "Governor of Chernihiv Oblast",
+     "note": "Led the region through continuing attacks in 2025.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vyacheslav_Chaus"
+    },
+    {
+     "name": "Oleksandr Lomako",
+     "role": "Acting mayor of Chernihiv",
+     "note": "Kept running the city during the 2025 drone and missile attacks."
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Pavlo Markitan",
+     "role": "Communist Party official",
+     "note": "Headed the Chernihiv oblast party committee during the 1930s.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D0%BA%D1%96%D1%82%D0%B0%D0%BD_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE_%D0%9F%D0%B8%D0%BB%D0%B8%D0%BF%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Levko Lukianenko",
+     "role": "Dissident, drafter",
+     "note": "Chernihiv-region former political prisoner who drafted the 1991 Act of Independence.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Levko_Lukianenko"
+    }
+   ]
+  },
+  "UA-59": {
+   "national-revival": [
+    {
+     "name": "Anton Chekhov",
+     "role": "Writer",
+     "note": "Spent the summers of 1888 and 1889 at the Luka estate near Sumy.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anton_Chekhov"
+    },
+    {
+     "name": "Pavlo Kharytonenko",
+     "role": "Sugar industrialist",
+     "note": "Inherited the sugar empire that made Sumy prosperous and paid for its churches and the Natalivka estate.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A5%D0%B0%D1%80%D0%B8%D1%82%D0%BE%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Heorhiy Narbut",
+     "role": "Artist",
+     "note": "Born near Hlukhiv in 1886 and educated at its gymnasium.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Heorhiy_Narbut"
+    },
+    {
+     "name": "Oleksandr Oles",
+     "role": "Poet",
+     "note": "Born in Bilopillia in 1878.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Oles"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Yevhen Onatsky",
+     "role": "Journalist, diplomat",
+     "note": "Hlukhiv-born member of the Central Rada.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9E%D0%BD%D0%B0%D1%86%D1%8C%D0%BA%D0%B8%D0%B9_%D0%84%D0%B2%D0%B3%D0%B5%D0%BD_%D0%94%D0%BE%D0%BC%D0%B5%D1%82%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Mykola Khvylovyi",
+     "role": "Writer",
+     "note": "Born in Trostianets and joined Red forces in 1919 after serving through the revolution.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Khvylovy"
+    },
+    {
+     "name": "Heorhiy Narbut",
+     "role": "Artist",
+     "note": "Hlukhiv-area native who designed Ukrainian banknotes and state emblems in 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Heorhiy_Narbut"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Sydir Kovpak",
+     "role": "Local official",
+     "note": "Chaired Putyvl's executive committee from 1937 to the German invasion.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sydir_Kovpak"
+    },
+    {
+     "name": "Ivan Kozhedub",
+     "role": "Aviator",
+     "note": "Born at Obrazhiivka near Shostka, he learned to fly at the Shostka aeroclub before the war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Kozhedub"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Sydir Kovpak",
+     "role": "Partisan commander",
+     "note": "Led partisans out of the Spadshchansky forest near Putyvl in 1941-1943.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sydir_Kovpak"
+    },
+    {
+     "name": "Semyon Rudnev",
+     "role": "Partisan commissar",
+     "note": "Kovpak's commissar in the Putyvl partisan unit, killed in 1943.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Semyon_Rudnev"
+    },
+    {
+     "name": "Zygmunt Berling",
+     "role": "Polish commander",
+     "note": "His Soviet-backed Polish forces formed and trained in Sumy in early 1944.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Zygmunt_Berling"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Viktor Yushchenko",
+     "role": "Banker",
+     "note": "Born in Khoruzhivka in 1954, he started his career in the region before moving into banking.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viktor_Yushchenko"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Viktor Yushchenko",
+     "role": "President of Ukraine",
+     "note": "Born in Khoruzhivka in the oblast, he became president after the Orange Revolution.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viktor_Yushchenko"
+    },
+    {
+     "name": "Hennadii Minaiev",
+     "role": "Mayor of Sumy",
+     "note": "Led the city from 2006."
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Oleksandr Lysenko",
+     "role": "Mayor of Sumy",
+     "note": "Elected mayor in 2015."
+    },
+    {
+     "name": "Dmytro Zhyvytskyi",
+     "role": "Governor of Sumy Oblast",
+     "note": "Appointed head of the oblast administration in 2021."
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Dmytro Zhyvytskyi",
+     "role": "Governor of Sumy Oblast",
+     "note": "Led the region through the 2022 Russian advance on Sumy."
+    },
+    {
+     "name": "Oleksandr Lysenko",
+     "role": "Mayor of Sumy",
+     "note": "Stayed in the city during the 2022 battle of Sumy."
+    },
+    {
+     "name": "Yurii Bova",
+     "role": "Mayor of Trostianets",
+     "note": "Led the town through its 2022 occupation.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D0%B2%D0%B0_%D0%AE%D1%80%D1%96%D0%B9_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Volodymyr Artiukh",
+     "role": "Head of Sumy Oblast Military Administration",
+     "note": "Headed the oblast's administration from 2024, including during the Kursk fighting."
+    },
+    {
+     "name": "Oleksandr Syrskyi",
+     "role": "Commander-in-Chief",
+     "note": "Directed the August 2024 cross-border operation launched from Sumy Oblast.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Syrskyi"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Oleh Hryhorov",
+     "role": "Head of Sumy Oblast Military Administration",
+     "note": "Appointed in April 2025 as Russian forces pushed into northern Sumy Oblast.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleh_Hryhorov"
+    },
+    {
+     "name": "Artem Kobzar",
+     "role": "Acting mayor of Sumy",
+     "note": "Ran the city during the 2025 strikes, including Palm Sunday."
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Mykola Khvylovyi",
+     "role": "Writer",
+     "note": "Trostianets-born; he joined Soviet forces during the civil war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Khvylovy"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Ostap Vyshnia",
+     "role": "Satirist",
+     "note": "Born at Chechva near Okhtyrka; he became the Ukrainian SSR's leading humourist in the 1920s.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ostap_Vyshnia"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Mykola Lavryk",
+     "role": "Governor of Sumy Oblast",
+     "note": "Served as an oblast leader.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9B%D0%B0%D0%B2%D1%80%D0%B8%D0%BA_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Ostap Vyshnia",
+     "role": "Satirist",
+     "note": "Sumy-region-born humorist arrested in 1933 and held for a decade in the camps.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ostap_Vyshnia"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Ivan Kozhedub",
+     "role": "Fighter ace",
+     "note": "Sumy-region-born pilot, the top Allied ace of the war, who stayed in the air force.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Kozhedub"
+    }
+   ]
+  },
+  "UA-53": {
+   "national-revival": [
+    {
+     "name": "Panas Myrny",
+     "role": "Novelist",
+     "note": "Worked as an official in Poltava from 1871 while writing his novels.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Panas_Myrny"
+    },
+    {
+     "name": "Vasyl Krychevsky",
+     "role": "Architect",
+     "note": "Designed the Poltava zemstvo building, a founding work of the Ukrainian Art Nouveau.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasyl_Krychevsky"
+    },
+    {
+     "name": "Olena Pchilka",
+     "role": "Writer",
+     "note": "Born in Hadiach in 1849, she was a folklorist and mother of Lesya Ukrainka.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Olena_Pchilka"
+    },
+    {
+     "name": "Yuri Kondratyuk",
+     "role": "Rocket scientist",
+     "note": "Born in Poltava in 1897; his calculations on moon flight came from these years.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yuri_Kondratyuk"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Symon Petliura",
+     "role": "Military leader",
+     "note": "Born in Poltava in 1879, he became the leading military figure of the Ukrainian People's Republic.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Symon_Petliura"
+    },
+    {
+     "name": "Serhii Shemet",
+     "role": "Monarchist politician",
+     "note": "Lubny landowner who co-founded the Ukrainian Democratic-Agrarian Party in 1917.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A8%D0%B5%D0%BC%D0%B5%D1%82_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Volodymyr Korolenko",
+     "role": "Writer",
+     "note": "Lived in Poltava from 1900; in 1920 he protested Bolshevik terror in letters to Lunacharsky.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Korolenko"
+    },
+    {
+     "name": "Panas Myrny",
+     "role": "Novelist",
+     "note": "Stayed in Poltava until his death there in January 1920.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Panas_Myrny"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Anton Makarenko",
+     "role": "Educator",
+     "note": "Ran the Gorky Colony for orphaned children near Poltava from 1920 to 1926.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anton_Makarenko"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Vasyl Barka",
+     "role": "Writer",
+     "note": "Born in the Poltava region, he wrote The Yellow Prince, the first major novel on the Holodomor.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasyl_Barka"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Oles Honchar",
+     "role": "Writer",
+     "note": "Grew up in Sukha in the Poltava region.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oles_Honchar"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Fedor von Bock",
+     "role": "German field marshal",
+     "note": "Ran Army Group South from Poltava in 1942.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Fedor_von_Bock",
+     "iron": true
+    },
+    {
+     "name": "Olena Ubiivovk",
+     "role": "Underground member",
+     "note": "Led a Poltava resistance group and was shot by the Germans in 1942.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A3%D0%B1%D0%B8%D0%B9%D0%B2%D0%BE%D0%B2%D0%BA_%D0%9E%D0%BB%D0%B5%D0%BD%D0%B0_%D0%9A%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D1%82%D0%B8%D0%BD%D1%96%D0%B2%D0%BD%D0%B0"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Robert L. Walsh",
+     "role": "US Air Force general",
+     "note": "Commanded the American Eastern Command at Poltava during Operation Frantic in 1944."
+    }
+   ],
+   "independence": [
+    {
+     "name": "Kostiantyn Zhevaho",
+     "role": "Businessman, MP",
+     "note": "Built the Ferrexpo iron-ore business around Horishni Plavni and entered parliament from the region.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kostyantin_Zhevago"
+    },
+    {
+     "name": "Andriy Danylko",
+     "role": "Entertainer",
+     "note": "Poltava-born comic known as Verka Serduchka.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Andriy_Danylko"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Oleksandr Mamay",
+     "role": "Mayor of Poltava",
+     "note": "Won the mayoralty in 2010.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BC%D0%B0%D0%B9_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Andriy Danylko",
+     "role": "Entertainer",
+     "note": "Poltava-born entertainer who came second at Eurovision 2007 as Verka Serduchka.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Andriy_Danylko"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Valerii Holovko",
+     "role": "Governor of Poltava Oblast",
+     "note": "Headed the oblast administration from 2015."
+    },
+    {
+     "name": "Vitalii Maletskyi",
+     "role": "Mayor of Kremenchuk",
+     "note": "Elected mayor in 2015."
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Dmytro Lunin",
+     "role": "Governor of Poltava Oblast",
+     "note": "Led the region through the 2022 Kremenchuk shopping-centre strike.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Dmytro_Lunin"
+    },
+    {
+     "name": "Vitalii Maletskyi",
+     "role": "Mayor of Kremenchuk",
+     "note": "Led the city's response to the June 2022 missile strike."
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Philip Pronin",
+     "role": "Head of Poltava Oblast Military Administration",
+     "note": "Headed the oblast administration."
+    },
+    {
+     "name": "Kateryna Yamshchykova",
+     "role": "Acting mayor of Poltava",
+     "note": "Ran the city as Russian strikes hit it in 2024."
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Volodymyr Kohut",
+     "role": "Head of Poltava Oblast Military Administration",
+     "note": "Headed the oblast from the end of 2024.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Kohut"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Borys Oliynyk",
+     "role": "Poet, politician",
+     "note": "Born in Zachepylivka in the oblast in 1935.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Borys_Oliynyk"
+    },
+    {
+     "name": "Oleksandr Bilash",
+     "role": "Composer",
+     "note": "Born in Hradyzk in 1931.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Bilash"
+    }
+   ]
+  },
+  "UA-35": {
+   "national-revival": [
+    {
+     "name": "Marko Kropyvnytskyi",
+     "role": "Dramatist, actor",
+     "note": "Founded the first professional Ukrainian theatre troupe in Yelisavetgrad in 1882.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Marko_Kropyvnytskyi"
+    },
+    {
+     "name": "Ivan Karpenko-Karyi",
+     "role": "Playwright",
+     "note": "Born near Yelisavetgrad, he worked in its civic offices before helping found the Ukrainian theatre.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Karpenko-Karyi"
+    },
+    {
+     "name": "Heinrich Neuhaus",
+     "role": "Pianist",
+     "note": "Born in Yelisavetgrad in 1888.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Heinrich_Neuhaus"
+    },
+    {
+     "name": "Leon Trotsky",
+     "role": "Revolutionary",
+     "note": "Born at Yanovka near Bereslavka in 1879.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leon_Trotsky"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Nykyfor Hryhoriv",
+     "role": "Otaman",
+     "note": "Led the anti-Hetman uprising around Oleksandriia in late 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nykyfor_Hryhoriv"
+    },
+    {
+     "name": "Yuriy Yanovsky",
+     "role": "Writer",
+     "note": "Born near Yelisavetgrad and schooled there until 1919.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%AF%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%AE%D1%80%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    },
+    {
+     "name": "Karol Szymanowski",
+     "role": "Composer",
+     "note": "Lived in Yelisavetgrad from 1917 to 1919 after his family's estate was destroyed.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Karol_Szymanowski"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Nestor Makhno",
+     "role": "Anarchist commander",
+     "note": "Defeated Denikin's forces at Peregonovka and killed Hryhoriv at Sentove in the region in 1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nestor_Makhno"
+    },
+    {
+     "name": "Kostiantyn Pestushko",
+     "role": "Insurgent otaman",
+     "note": "Led the Steppe Division around Yelisavetgrad until his death in 1921.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D1%81%D1%82%D1%83%D1%88%D0%BA%D0%BE_%D0%9A%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D1%82%D0%B8%D0%BD_%D0%AE%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Grigory Zinoviev",
+     "role": "Bolshevik leader",
+     "note": "Born in Yelisavetgrad; the city was renamed Zinovievsk after him in 1924.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Grigory_Zinoviev"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Pavel Rotmistrov",
+     "role": "Soviet tank commander",
+     "note": "Led the 5th Guards Tank Army in the January 1944 offensive for Kirovohrad.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Rotmistrov"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Yevhen Marchuk",
+     "role": "KGB officer",
+     "note": "Born in Dolynivka in the oblast in 1941, he rose through the Soviet Ukrainian KGB.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yevhen_Marchuk"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Yevhen Marchuk",
+     "role": "Prime Minister",
+     "note": "Kirovohrad-region native who served as Ukraine's prime minister in 1995-1996.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yevhen_Marchuk"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Andrii Raikovych",
+     "role": "Mayor of Kropyvnytskyi",
+     "note": "Elected mayor in 2015.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B9%D0%BA%D0%BE%D0%B2%D0%B8%D1%87_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Andrii Raikovych",
+     "role": "Head of Kirovohrad Oblast Military Administration",
+     "note": "Moved from the mayor's office to lead the oblast at the start of the invasion.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B9%D0%BA%D0%BE%D0%B2%D0%B8%D1%87_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Andrii Raikovych",
+     "role": "Head of Kirovohrad Oblast Military Administration",
+     "note": "Reported on strikes on the oblast.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B9%D0%BA%D0%BE%D0%B2%D0%B8%D1%87_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Andrii Raikovych",
+     "role": "Head of Kirovohrad Oblast Military Administration",
+     "note": "Reported on the 2025 drone attacks on the oblast.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B9%D0%BA%D0%BE%D0%B2%D0%B8%D1%87_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Serhii Larin",
+     "role": "Governor of Kirovohrad Oblast",
+     "note": "Headed the oblast after 2010.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%9B%D0%B0%D1%80%D1%96%D0%BD_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Mykola Sadovsky",
+     "role": "Theatre director",
+     "note": "Kirovohrad-region-born founder of Ukrainian theatre companies, who died in Kyiv in 1933."
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Arseny Tarkovsky",
+     "role": "Poet, translator",
+     "note": "Yelysavethrad-born poet working in Moscow when he volunteered for the front in 1941.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Arseny_Tarkovsky"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Yuriy Yanovsky",
+     "role": "Novelist",
+     "note": "Kirovohrad-region-born writer who lived in Kyiv until his death in 1954.",
+     "wikipedia": "https://uk.wikipedia.org/wiki/%D0%AF%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%AE%D1%80%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+    }
+   ]
+  }
+ }
+}

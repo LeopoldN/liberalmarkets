@@ -12,7 +12,7 @@
   // Wikipedia titles for regions whose article isn't "<Name>" with underscores
   const WIKI_FALLBACK = { "UA-30": "Kyiv", "UA-40": "Sevastopol", "UA-43": "Autonomous_Republic_of_Crimea" };
 
-  const R = { data: {}, politics: {}, parties: {}, groups: {}, camps: null, cards: {}, wiki: new Map(), iso: null, renderT: 0, tab: "held" };
+  const R = { data: {}, politics: {}, parties: {}, groups: {}, camps: null, cards: {}, people: {}, wiki: new Map(), iso: null, renderT: 0, tab: "held" };
   const PARTY_FALLBACK = ["--pol-1", "--pol-2", "--pol-3", "--pol-4", "--pol-5", "--pol-6"];
   const $ = (id) => document.getElementById(id);
   const M = window.UkraineMap;
@@ -28,12 +28,14 @@
   const getJson = (url) => fetch(url, { cache: "no-store" }).then((r) => (r.ok ? r.json() : null));
 
   async function loadData() {
-    const [hist, pol, camps, cards] = await Promise.all([
+    const [hist, pol, camps, cards, people] = await Promise.all([
       Promise.allSettled(GROUPS.map((g) => getJson(`data/oblasts/${g}.json`))),
       Promise.allSettled(GROUPS.map((g) => getJson(`data/politics/${g}.json`))),
       getJson("data/politics/conflict-camps.json").catch(() => null),
       getJson("data/oblasts/postcards.json").catch(() => null),
+      Promise.allSettled(GROUPS.map((g) => getJson(`data/people/${g}.json`))),
     ]);
+    people.forEach((r) => { if (r.status === "fulfilled" && r.value && r.value.oblasts) Object.assign(R.people, r.value.oblasts); });
     R.camps = camps;
     R.cards = (cards && cards.oblasts) || {};
     hist.forEach((r) => { if (r.status === "fulfilled" && r.value && r.value.oblasts) Object.assign(R.data, r.value.oblasts); });
@@ -58,13 +60,14 @@
     return feature ? feature.properties.name.replace(/ /g, "_") : null;
   }
 
-  function wikiSummary(title) {
+  function wikiSummary(title, lang = "en") {
     if (!title) return Promise.resolve(null);
-    if (!R.wiki.has(title)) {
-      R.wiki.set(title, fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`)
+    const key = `${lang}:${title}`;
+    if (!R.wiki.has(key)) {
+      R.wiki.set(key, fetch(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`)
         .then((r) => (r.ok ? r.json() : null)).catch(() => null));
     }
-    return R.wiki.get(title);
+    return R.wiki.get(key);
   }
 
   /* ---------------- rendering ---------------- */
@@ -523,6 +526,7 @@
       { id: "held", label: "Held by", html: heldHtml(iso, p, entry, eras, era) },
       { id: "conflict", label: "Conflict", html: conflictBlock(entry && entry.military, pol && pol.armedGroups, { eraId: era && era.id, place: p.short || p.name, year: era ? String(era.startYear) : "" }) },
       { id: "politics", label: "Politics", html: politicsBlock(pol && pol.politics, { place: p.center && p.center !== "—" ? p.center : p.name, year: era ? String(era.startYear) : "", iso, eraId: era && era.id, oblast: p.name }) },
+      { id: "people", label: "People", html: peopleHtml(iso, era) },
       { id: "history", label: "History", html: postcardHtml(iso, p, d, overview) },
       { id: "timeline", label: "Timeline", html: timeline },
     ].filter((t) => t.html);
@@ -554,6 +558,7 @@
     bindSeals(iso);
     bindTree();
     bindPostcards(iso);
+    bindPeople(iso);
     bindHeld();
 
     const title = wikiTitle(iso, f);
@@ -808,6 +813,38 @@
         const url = a.content_urls && a.content_urls.desktop && a.content_urls.desktop.page;
         about.querySelector(".hb-about-b").innerHTML = `${art ? `<img src="${esc(art)}" alt="">` : ""}<div><p class="rg-text">${esc(a.extract)}</p>${extLink(url, "Read on Wikipedia")}</div>`;
         about.hidden = false;
+      });
+    });
+  }
+
+  /* ---------------- people: a parsuna gallery ----------------
+     The parsuna was Ukraine's Cossack-baroque portrait: a stiff, dignified likeness in a gilded
+     frame with an inscription. Portraits come from Wikipedia, everything is readable without a
+     click, and a person marked `iron` (a perpetrator) is documented without the gold. */
+  const BUST = `<svg class="pn-bust" viewBox="0 0 80 100" aria-hidden="true"><path d="M40 16a17 17 0 1 1 0 34a17 17 0 0 1 0-34zM10 100c0-26 13-42 30-42s30 16 30 42z"/></svg>`;
+  const personTitle = (url) => { const m = /\/wiki\/(.+)$/.exec(url || ""); return m ? decodeURIComponent(m[1]) : null; };
+
+  function peopleHtml(iso, era) {
+    const list = (era && R.people[iso] && R.people[iso][era.id]) || [];
+    if (!list.length) return "";
+    return `<div class="pn-wall">${list.map((p) => `<article class="pn${p.iron ? " iron" : ""}">
+      <div class="pn-frame"><div class="pn-mat" data-wiki="${esc(personTitle(p.wikipedia) || "")}" data-lang="${/\/\/uk\./.test(p.wikipedia || "") ? "uk" : "en"}">${BUST}</div></div>
+      <div class="pn-plate">
+        ${safeUrl(p.wikipedia) ? `<a class="pn-n" href="${esc(p.wikipedia)}" target="_blank" rel="noopener">${esc(p.name)}</a>` : `<span class="pn-n">${esc(p.name)}</span>`}
+        ${p.role ? `<span class="pn-r">${esc(p.role)}</span>` : ""}
+      </div>
+      ${p.note ? `<p class="pn-note">${esc(p.note)}</p>` : ""}
+    </article>`).join("")}</div>`;
+  }
+
+  function bindPeople(iso) {
+    view.querySelectorAll(".pn-mat").forEach((mat) => {
+      wikiSummary(mat.dataset.wiki || null, mat.dataset.lang).then((w) => {
+        const src = w && w.thumbnail && safeUrl(w.thumbnail.source);
+        if (!src || R.iso !== iso || !mat.isConnected) return;
+        const img = new Image();
+        img.alt = ""; img.src = src;
+        img.addEventListener("load", () => { mat.textContent = ""; mat.append(img); });
       });
     });
   }

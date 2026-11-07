@@ -240,7 +240,7 @@
       "control": "Ukrainian SSR (capital at Kharkiv)",
       "summary": "Kyiv was a provincial centre while Kharkiv served as capital, but it remained the centre of the Ukrainization-era Academy of Sciences, the Ukrainian Autocephalous Orthodox Church and the avant-garde (Dovzhenko's films, the Berezil theatre's beginnings).",
       "military": "The Kyiv Military District headquarters sat in the city.",
-      "places": [],
+      "places": ["Saint Sophia Cathedral", "Dovzhenko Film Studios", "Kyiv Art Institute"],
       "links": [ { "title": "Ukrainization", "url": "https://en.wikipedia.org/wiki/Ukrainization" } ]
     },
     "holodomor-terror": {
@@ -257,7 +257,7 @@
       "control": "Ukrainian SSR (capital)",
       "summary": "Kyiv was the administrative centre directing the Sovietisation of newly annexed western Ukraine in 1939-1941. The city had about 900,000 inhabitants on the eve of the German invasion.",
       "military": "The Kiev Special Military District organised the 1939 invasion of eastern Poland.",
-      "places": [],
+      "places": ["Verkhovna Rada building", "Cabinet of Ministers building", "Bykivnia graves"],
       "links": [ { "title": "Kiev Special Military District", "url": "https://en.wikipedia.org/wiki/Kiev_Military_District" } ]
     },
     "nazi-occupation": {
@@ -319,7 +319,7 @@
       "control": "Independent Ukraine; never captured",
       "summary": "Russia's February 2022 assault aimed to seize Kyiv; Russian forces reached the north-western suburbs but withdrew by early April. From October 2022 Kyiv suffered waves of missile and Shahed drone strikes on energy infrastructure, causing blackouts.",
       "military": "The Kyiv Territorial Defence and regular forces defended the city in the battle of Kyiv (2022); air defence including Patriot systems (from 2023) protected it.",
-      "places": [],
+      "places": ["Kyiv TV Tower", "Babyn Yar", "Klitschko Bridge"],
       "links": [
         { "title": "Battle of Kyiv (2022)", "url": "https://en.wikipedia.org/wiki/Battle_of_Kyiv_(2022)" },
         { "title": "Russian strikes against Ukrainian infrastructure", "url": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure" }
@@ -336,7 +336,7 @@
       "control": "Independent Ukraine",
       "summary": "Kyiv suffered some of the war's deadliest strikes on the city in 2025, including attacks in June, July and August that killed over twenty people each, and the Cabinet of Ministers building was hit in September 2025. Strikes in January 2026 left more than half of residential buildings without heat or power in frosts of about -15 °C, while peace negotiations continued.",
       "military": "The city relied on layered air defence and interceptor drones against mass drone and missile raids; no ground threat existed in this period.",
-      "places": [],
+      "places": ["Cabinet of Ministers building", "Sviatoshynskyi District", "Darnytskyi District"],
       "links": [ { "title": "Kyiv strikes (2022–present)", "url": "https://en.wikipedia.org/wiki/Kyiv_strikes_(2022%E2%80%93present)" }, { "title": "Russian strikes against Ukrainian infrastructure", "url": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure" } ]
     }
   },
@@ -510,7 +510,7 @@
     "national-revival": {
       "control": "Russian Empire (Kiev and Poltava governorates)",
       "summary": "Railways through Fastiv and Bila Tserkva encouraged sugar refining and grain trade; Chornobyl was a famous centre of Hasidic Judaism. Peasant unrest flared in 1905, and many Jewish shtetls were hit by pogroms.",
-      "military": null,
+      "military": "During the January Uprising of 1863 a Polish insurgent cavalry unit of about 40 riders formed in Vasylkiv county in April and soon dispersed.",
       "places": ["Chornobyl", "Fastiv"],
       "links": [ { "title": "Chernobyl (Hasidic dynasty)", "url": "https://en.wikipedia.org/wiki/Lineage_and_scions_of_the_Chernobyl_dynasty" } ]
     },
@@ -532,14 +532,14 @@
       "control": "Ukrainian SSR (Kyiv Okruha and neighbouring okruhas)",
       "summary": "The area was organised into okruhas around Kyiv and Bila Tserkva. NEP brought recovery to the farming villages, while Ukrainization reached local schools.",
       "military": "Remnant insurgent groups were suppressed in the early 1920s.",
-      "places": [],
+      "places": ["Bila Tserkva", "Fastiv", "Boryspil"],
       "links": [ { "title": "New Economic Policy", "url": "https://en.wikipedia.org/wiki/New_Economic_Policy" } ]
     },
     "holodomor-terror": {
       "control": "Ukrainian SSR (Kyiv Oblast, created 1932)",
       "summary": "Kyiv Oblast, created in 1932 and then much larger than today, had one of the highest Holodomor death rates; whole villages were blacklisted. Collectivisation and dekulakisation emptied many households.",
       "military": "The NKVD carried out mass arrests and executions in district centres during the Great Terror.",
-      "places": [],
+      "places": ["Bila Tserkva", "Vasylkiv", "Kyiv Fortified Region"],
       "links": [ { "title": "Holodomor", "url": "https://en.wikipedia.org/wiki/Holodomor" } ]
     },
     "soviet-annexations": {
@@ -580,7 +580,7 @@
     "orange-to-euromaidan": {
       "control": "Independent Ukraine",
       "summary": "Commuter towns around Kyiv grew quickly with new housing. Residents of the oblast joined the Orange Revolution and Euromaidan protests in the capital; Yanukovych's Mezhyhirya estate near Vyshhorod became a symbol of corruption after 2014.",
-      "military": null,
+      "military": "The 72nd Mechanized Brigade was based at Bila Tserkva and the 40th Tactical Aviation Brigade flew from Vasylkiv Air Base.",
       "places": ["Mezhyhirya"],
       "links": [ { "title": "Mezhyhirya Residence", "url": "https://en.wikipedia.org/wiki/Mezhyhirya_Residence" } ]
     },
@@ -811,14 +811,14 @@
       "control": "Ukrainian SSR (Kyiv Oblast, Zhytomyr Oblast from 1937)",
       "summary": "The Holodomor struck the southern districts hardest; the Polish district was abolished in 1935 and tens of thousands of Poles and Germans were deported from the border strip to Kazakhstan. The Polish Operation of the NKVD in 1937-38 executed many more.",
       "military": "The Stalin Line's Korosten, Novohrad-Volynskyi and Ostropil fortified regions were built along the frontier.",
-      "places": [],
+      "places": ["Dovbysh (Marchlewsk)", "Korosten Fortified Region", "Novohrad-Volynskyi Fortified Region"],
       "links": [ { "title": "Polish Operation of the NKVD", "url": "https://en.wikipedia.org/wiki/Polish_Operation_of_the_NKVD" }, { "title": "Stalin Line", "url": "https://en.wikipedia.org/wiki/Stalin_Line" } ]
     },
     "soviet-annexations": {
       "control": "Ukrainian SSR (Zhytomyr Oblast)",
       "summary": "With the annexation of eastern Poland in 1939, the oblast ceased to be a border region; Red Army units staged here for the invasion of Polish Volhynia.",
       "military": "Troops of the Kiev Special Military District crossed into Poland from the region in September 1939.",
-      "places": [],
+      "places": ["Zhytomyr", "Korosten", "Berdychiv"],
       "links": [ { "title": "Soviet invasion of Poland", "url": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Poland" } ]
     },
     "nazi-occupation": {
@@ -832,7 +832,7 @@
       "control": "Ukrainian SSR (Zhytomyr Oblast)",
       "summary": "Towns were rebuilt and agriculture collectivised again; the region's Jewish life was largely destroyed. Linen production and granite quarrying around Korosten developed.",
       "military": "Isolated UPA groups operated in the northern forests into the late 1940s.",
-      "places": [],
+      "places": ["Korosten", "Zhytomyr"],
       "links": [ { "title": "Zhytomyr Oblast", "url": "https://en.wikipedia.org/wiki/Zhytomyr_Oblast" } ]
     },
     "soviet-ukraine-late": {
@@ -846,21 +846,21 @@
       "control": "Independent Ukraine",
       "summary": "The oblast remained largely agrarian and post-industrial, with population decline in its villages. Chornobyl-affected districts continued to receive compensation and partial resettlement.",
       "military": "Zhytomyr became home to air assault forces, including the 95th Air Assault Brigade.",
-      "places": [],
+      "places": ["Zhytomyr", "Narodychi", "Korosten"],
       "links": [ { "title": "95th Air Assault Brigade", "url": "https://en.wikipedia.org/wiki/95th_Air_Assault_Brigade" } ]
     },
     "orange-to-euromaidan": {
       "control": "Independent Ukraine",
       "summary": "The oblast voted strongly for Viktor Yushchenko in 2004 and sent many protesters to the Euromaidan in Kyiv in 2013-14.",
-      "military": null,
-      "places": [],
+      "military": "The 95th Airmobile Brigade remained based in Zhytomyr.",
+      "places": ["Zhytomyr", "Berdychiv"],
       "links": [ { "title": "Orange Revolution", "url": "https://en.wikipedia.org/wiki/Orange_Revolution" } ]
     },
     "crimea-donbas-war": {
       "control": "Independent Ukraine",
       "summary": "Zhytomyr's units fought in the Donbas from 2014; the region absorbed displaced persons from the east. Amber mining in the northern forests caused environmental damage.",
       "military": "The 95th Air Assault Brigade made a deep raid across the Donbas front in summer 2014.",
-      "places": [],
+      "places": ["Zhytomyr", "Olevsk"],
       "links": [ { "title": "War in Donbas", "url": "https://en.wikipedia.org/wiki/War_in_Donbas" } ]
     },
     "full-scale-invasion": {
@@ -874,7 +874,7 @@
       "control": "Independent Ukraine",
       "summary": "The oblast was a rear area hosting displaced people and training units, with fortifications along the Belarusian border. Periodic drone and missile strikes hit Zhytomyr and energy sites.",
       "military": "Defensive lines and minefields were built along the Belarus border sector.",
-      "places": [],
+      "places": ["Zhytomyr", "Ovruch", "Olevsk"],
       "links": [ { "title": "Belarus–Ukraine border", "url": "https://en.wikipedia.org/wiki/Belarus%E2%80%93Ukraine_border" } ]
     },
     "war-2025-2026": {
@@ -1054,7 +1054,7 @@
     "national-revival": {
       "control": "Russian Empire (Podolia Governorate)",
       "summary": "Railways and sugar mills transformed the economy; the surgeon Nikolai Pirogov spent his last years at Vyshnia near Vinnytsia, and writer Mykhailo Kotsiubynsky was born in Vinnytsia in 1864. Composer Mykola Leontovych wrote 'Shchedryk' while teaching in Tulchyn.",
-      "military": null,
+      "military": "Troops of the Vinnytsia garrison demonstrated against orders of the Southwestern Front command in early November 1917.",
       "places": ["Pirogov estate", "Tulchyn"],
       "links": [ { "title": "Mykhailo Kotsiubynsky", "url": "https://en.wikipedia.org/wiki/Mykhailo_Kotsiubynsky" }, { "title": "Mykola Leontovych", "url": "https://en.wikipedia.org/wiki/Mykola_Leontovych" }, { "title": "Nikolay Pirogov", "url": "https://en.wikipedia.org/wiki/Nikolay_Pirogov" } ]
     },
@@ -1062,7 +1062,7 @@
       "control": "Ukrainian People's Republic, then the Hetmanate",
       "summary": "The region was under the Central Rada and then, with Austro-Hungarian troops present, under Skoropadsky's Hetmanate. Peasant revolts against the restoration of estates broke out in 1918.",
       "military": "Austro-Hungarian garrisons occupied Podolia in 1918; local insurgents fought them and the Hetman's guard.",
-      "places": [],
+      "places": ["Vinnytsia", "Tulchyn", "Haisyn"],
       "links": [ { "title": "Ukrainian State", "url": "https://en.wikipedia.org/wiki/Ukrainian_State" } ]
     },
     "soviet-takeover": {
@@ -1076,7 +1076,7 @@
       "control": "Ukrainian SSR (Vinnytsia, Tulchyn and other okruhas)",
       "summary": "The region was a border area with Romanian-ruled Bessarabia across the Dniester. NEP restored agriculture and Ukrainization spread in schools and the press.",
       "military": "The Mohyliv-Yampil fortified region on the Dniester began to be built at the end of the 1920s.",
-      "places": [],
+      "places": ["Mohyliv-Podilskyi", "Yampil", "Tulchyn"],
       "links": [ { "title": "Ukrainian Soviet Socialist Republic", "url": "https://en.wikipedia.org/wiki/Ukrainian_Soviet_Socialist_Republic" } ]
     },
     "holodomor-terror": {
@@ -1090,7 +1090,7 @@
       "control": "Ukrainian SSR",
       "summary": "With the annexation of Bessarabia in 1940 the Dniester ceased to be a border river, and Vinnytsia lost its frontier role.",
       "military": "Troops from the region took part in the occupation of Bessarabia in June 1940.",
-      "places": [],
+      "places": ["Mohyliv-Podilskyi", "Yampil"],
       "links": [ { "title": "Soviet occupation of Bessarabia and Northern Bukovina", "url": "https://en.wikipedia.org/wiki/Soviet_occupation_of_Bessarabia_and_Northern_Bukovina" } ]
     },
     "nazi-occupation": {
@@ -1103,8 +1103,8 @@
     "postwar-ussr": {
       "control": "Ukrainian SSR (Vinnytsia Oblast)",
       "summary": "Agriculture and sugar refining were rebuilt and the 1946-47 famine struck the villages. The Pirogov estate museum opened, and Vinnytsia grew as an industrial city.",
-      "military": null,
-      "places": [],
+      "military": "A Soviet long-range bomber air army, redesignated the 43rd Air Army in 1949, moved its headquarters to Vinnytsia in 1946.",
+      "places": ["Pirogov estate", "Vinnytsia"],
       "links": [ { "title": "Soviet famine of 1946–1947", "url": "https://en.wikipedia.org/wiki/Soviet_famine_of_1946%E2%80%931947" } ]
     },
     "soviet-ukraine-late": {
@@ -1118,14 +1118,14 @@
       "control": "Independent Ukraine",
       "summary": "The 43rd Rocket Army's nuclear missiles were removed under the 1994 Budapest arrangements. Vinnytsia became the base of Petro Poroshenko's Roshen confectionery business and of a political circle that included later prime minister Volodymyr Groysman.",
       "military": "Vinnytsia became the headquarters of the Ukrainian Air Force Command.",
-      "places": [],
+      "places": ["Vinnytsia", "Roshen confectionery factory, Vinnytsia"],
       "links": [ { "title": "Budapest Memorandum", "url": "https://en.wikipedia.org/wiki/Budapest_Memorandum" }, { "title": "Roshen", "url": "https://en.wikipedia.org/wiki/Roshen" } ]
     },
     "orange-to-euromaidan": {
       "control": "Independent Ukraine",
       "summary": "Vinnytsia under mayor Volodymyr Groysman (from 2006) was known for municipal reforms. The oblast backed the Orange Revolution and Euromaidan.",
-      "military": null,
-      "places": [],
+      "military": "Vinnytsia remained the headquarters of the Ukrainian Air Force Command.",
+      "places": ["Vinnytsia", "Roshen Fountain"],
       "links": [ { "title": "Volodymyr Groysman", "url": "https://en.wikipedia.org/wiki/Volodymyr_Groysman" } ]
     },
     "crimea-donbas-war": {
@@ -1153,7 +1153,7 @@
       "control": "Independent Ukraine (rear region)",
       "summary": "Vinnytsia Oblast remained far from the front but endured recurring drone and missile attacks on energy and rail infrastructure during the 2025-2026 strike campaigns, causing power outages.",
       "military": "No ground fighting; air defence protected Vinnytsia and military command sites.",
-      "places": [],
+      "places": ["Vinnytsia", "Zhmerynka", "Koziatyn"],
       "links": [ { "title": "Vinnytsia strikes (2022–present)", "url": "https://en.wikipedia.org/wiki/Vinnytsia_strikes_(2022%E2%80%93present)" } ]
     }
   },
@@ -1326,7 +1326,7 @@
     "national-revival": {
       "control": "Russian Empire (Kiev Governorate)",
       "summary": "Shevchenko was reburied on Chernecha Hill (Taras Hill) at Kaniv in 1861, which became a national pilgrimage site. Railways linked Cherkasy, Smila and Uman to the sugar industry, and Uman became a Hasidic pilgrimage centre around the grave of Rabbi Nachman.",
-      "military": null,
+      "military": "In 1877 populists organised a secret armed peasant militia in Chyhyryn county, using a forged charter from the tsar; about a thousand peasants took part before police broke it up.",
       "places": ["Taras Hill, Kaniv", "Uman"],
       "links": [ { "title": "Taras Hill", "url": "https://en.wikipedia.org/wiki/Taras_Hill" }, { "title": "Rosh Hashanah kibbutz", "url": "https://en.wikipedia.org/wiki/Rosh_Hashanah_kibbutz" } ]
     },
@@ -1347,22 +1347,24 @@
     "soviet-ukraine-1920s": {
       "control": "Ukrainian SSR (Cherkasy, Uman and other okruhas)",
       "summary": "The region recovered under the NEP; Uman's Jewish community remained large and the Shevchenko memorial at Kaniv was developed. The territory was divided among several okruhas.",
-      "military": null,
-      "places": [],
+      "military": "Kholodny Yar insurgents held out into 1922, when Soviet security agents lured their atamans to Zvenyhorodka and arrested them.",
+      "places": ["Uman", "Taras Hill, Kaniv", "Cherkasy"],
       "links": [ { "title": "New Economic Policy", "url": "https://en.wikipedia.org/wiki/New_Economic_Policy" } ]
     },
     "holodomor-terror": {
       "control": "Ukrainian SSR (Kyiv and Vinnytsia oblasts)",
       "summary": "The villages of today's Cherkasy Oblast, then in Kyiv Oblast, suffered extreme mortality in the Holodomor. The Great Terror struck local intelligentsia and clergy.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
+      "places": ["Uman", "Cherkasy", "Smila"],
       "links": [ { "title": "Holodomor", "url": "https://en.wikipedia.org/wiki/Holodomor" } ]
     },
     "soviet-annexations": {
       "control": "Ukrainian SSR",
       "summary": "The region was a collectivised farming area in the interior of the Ukrainian SSR, with sugar and food industries at Smila and Cherkasy.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
+      "places": ["Smila", "Cherkasy"],
       "links": [ { "title": "Ukrainian Soviet Socialist Republic", "url": "https://en.wikipedia.org/wiki/Ukrainian_Soviet_Socialist_Republic" } ]
     },
     "nazi-occupation": {
@@ -1375,28 +1377,32 @@
     "postwar-ussr": {
       "control": "Ukrainian SSR (Cherkasy Oblast created 1954)",
       "summary": "Towns and villages were rebuilt after heavy wartime destruction. Cherkasy Oblast was formed in January 1954 from parts of Kyiv, Vinnytsia, Kirovohrad and Poltava oblasts.",
-      "military": null,
+      "military": "Units of the Soviet Army were garrisoned in the oblast.",
+      "placeholder": true,
       "places": ["Cherkasy"],
       "links": [ { "title": "Cherkasy Oblast", "url": "https://en.wikipedia.org/wiki/Cherkasy_Oblast" } ]
     },
     "soviet-ukraine-late": {
       "control": "Ukrainian SSR (Cherkasy Oblast)",
       "summary": "The Kremenchuk Reservoir (1959-61) and Kaniv Reservoir flooded dozens of Dnieper villages; Cherkasy grew into an industrial city with chemical plants such as Azot. Shevchenko's grave at Kaniv was a site of officially tolerated and dissident commemoration.",
-      "military": null,
+      "military": "Units of the Soviet Army were garrisoned in the oblast.",
+      "placeholder": true,
       "places": ["Kremenchuk Reservoir"],
       "links": [ { "title": "Kremenchuk Reservoir", "url": "https://en.wikipedia.org/wiki/Kremenchuk_Reservoir" } ]
     },
     "independence": {
       "control": "Independent Ukraine",
       "summary": "Uman's annual Rosh Hashanah pilgrimage grew to tens of thousands of Hasidic visitors. The region's agriculture and food industry were privatised.",
-      "military": null,
+      "military": "Units of the Ukrainian Armed Forces were garrisoned in the oblast.",
+      "placeholder": true,
       "places": ["Uman"],
       "links": [ { "title": "Uman", "url": "https://en.wikipedia.org/wiki/Uman" } ]
     },
     "orange-to-euromaidan": {
       "control": "Independent Ukraine",
       "summary": "In January 2014 Euromaidan protesters occupied the regional administration in Cherkasy, one of several regional seizures. The oblast voted strongly for Yushchenko in 2004.",
-      "military": null,
+      "military": "Units of the Ukrainian Armed Forces were garrisoned in the oblast.",
+      "placeholder": true,
       "places": ["Cherkasy"],
       "links": [ { "title": "2014 Euromaidan regional state administration occupations", "url": "https://en.wikipedia.org/wiki/2014_Euromaidan_regional_state_administration_occupations" } ]
     },
@@ -1404,20 +1410,20 @@
       "control": "Independent Ukraine",
       "summary": "Volunteers and mobilised soldiers from the oblast fought in the Donbas, and a memorial culture to the fallen developed in its villages. Kholodny Yar became a symbol for volunteer units.",
       "military": "Territorial defence battalions raised in Cherkasy Oblast in 2014 served in the east.",
-      "places": [],
+      "places": ["Kholodny Yar", "Cherkasy"],
       "links": [ { "title": "War in Donbas", "url": "https://en.wikipedia.org/wiki/War_in_Donbas" } ]
     },
     "full-scale-invasion": {
       "control": "Independent Ukraine (rear region)",
       "summary": "The oblast was not occupied but received many displaced people. Russian missiles struck Uman, Cherkasy and Smila, targeting infrastructure.",
       "military": "Territorial defence brigades from Cherkasy deployed to the front.",
-      "places": [],
+      "places": ["Uman", "Cherkasy", "Smila"],
       "links": [ { "title": "Russian strikes against Ukrainian infrastructure", "url": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure" } ]
     },
     "war-of-attrition": {
       "control": "Independent Ukraine (rear region)",
       "summary": "On 28 April 2023 a Russian cruise missile hit an apartment block in Uman, killing 23 people including six children. Cherkasy and its industrial sites were repeatedly attacked by drones.",
-      "military": null,
+      "military": "A Russian cruise missile struck a residential building in Uman on 28 April 2023; the oblast's 118th Territorial Defence Brigade served on the eastern and southern fronts.",
       "places": ["Uman"],
       "links": [ { "title": "2023 Uman missile strike", "url": "https://en.wikipedia.org/wiki/2023_Uman_missile_strike" } ]
     },
@@ -1425,7 +1431,7 @@
       "control": "Independent Ukraine (rear region)",
       "summary": "Drone and missile attacks continued against Cherkasy, Smila and energy facilities during the 2025-2026 campaigns against the power grid. Uman's Rosh Hashanah pilgrimage continued under wartime restrictions.",
       "military": "No ground fighting; air defence and mobile fire groups defended against drones.",
-      "places": [],
+      "places": ["Cherkasy", "Smila", "Uman"],
       "links": [ { "title": "Russian strikes against Ukrainian infrastructure", "url": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure" } ]
     }
   },
@@ -1598,7 +1604,8 @@
     "national-revival": {
       "control": "Russian Empire (Chernigov Governorate)",
       "summary": "Chernihiv's zemstvo was known for liberal and Ukrainophile activity, and the writer Mykhailo Kotsiubynsky lived and worked there from 1898. Railways through Bakhmach and Nizhyn fostered trade in tobacco and grain.",
-      "military": null,
+      "military": "Units of the Imperial Russian Army were garrisoned in the area.",
+      "placeholder": true,
       "places": ["Chernihiv"],
       "links": [ { "title": "Mykhailo Kotsiubynsky", "url": "https://en.wikipedia.org/wiki/Mykhailo_Kotsiubynsky" } ]
     },
@@ -1619,22 +1626,24 @@
     "soviet-ukraine-1920s": {
       "control": "Ukrainian SSR (Chernihiv and Nizhyn okruhas)",
       "summary": "The north-eastern districts of Chernigov Governorate (Starodub, Novozybkov) were transferred to the Russian SFSR in 1919-1926, setting the modern border. Ukrainization advanced in local schools.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
+      "places": ["Chernihiv", "Nizhyn"],
       "links": [ { "title": "Ukrainization", "url": "https://en.wikipedia.org/wiki/Ukrainization" } ]
     },
     "holodomor-terror": {
       "control": "Ukrainian SSR (Chernihiv Oblast created 1932)",
       "summary": "The Holodomor killed many in the southern forest-steppe districts, while Polissian villages fared somewhat better. Clergy, intellectuals and former Ukrainian activists were purged in 1937-38.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
+      "places": ["Chernihiv", "Nizhyn"],
       "links": [ { "title": "Holodomor", "url": "https://en.wikipedia.org/wiki/Holodomor" } ]
     },
     "soviet-annexations": {
       "control": "Ukrainian SSR",
       "summary": "The oblast was a collectivised agricultural region on the Russian and Belarusian borders, with flax and potato farming in Polissia.",
-      "military": null,
-      "places": [],
+      "military": "The Chernihiv Military Aviation School of Pilots was activated on 6 November 1940.",
+      "places": ["Chernihiv", "Chernihiv Air Base"],
       "links": [ { "title": "Ukrainian Soviet Socialist Republic", "url": "https://en.wikipedia.org/wiki/Ukrainian_Soviet_Socialist_Republic" } ]
     },
     "nazi-occupation": {
@@ -1647,8 +1656,8 @@
     "postwar-ussr": {
       "control": "Ukrainian SSR (Chernihiv Oblast)",
       "summary": "Chernihiv and the towns were rebuilt, and restoration of the Kyivan Rus' churches began. Collective farms recovered slowly from wartime losses.",
-      "military": null,
-      "places": [],
+      "military": "The Chernihiv pilots' school was disbanded in 1946 and revived in the city in February 1951 as a military aviation school.",
+      "places": ["Chernihiv", "Transfiguration Cathedral, Chernihiv", "Pyatnytska Church, Chernihiv"],
       "links": [ { "title": "Chernihiv Oblast", "url": "https://en.wikipedia.org/wiki/Chernihiv_Oblast" } ]
     },
     "soviet-ukraine-late": {
@@ -1668,7 +1677,7 @@
     "orange-to-euromaidan": {
       "control": "Independent Ukraine",
       "summary": "President Viktor Yushchenko, who championed the Baturyn memorial, made Mazepa's capital a symbol of national memory. Chernihiv residents joined the Euromaidan protests.",
-      "military": null,
+      "military": "The 1st Tank Brigade was based at Honcharivske.",
       "places": ["Baturyn"],
       "links": [ { "title": "Viktor Yushchenko", "url": "https://en.wikipedia.org/wiki/Viktor_Yushchenko" } ]
     },
@@ -1870,7 +1879,7 @@
     "national-revival": {
       "control": "Russian Empire (Kharkov, Chernigov and Poltava governorates)",
       "summary": "The Kharytonenko sugar dynasty made Sumy a centre of the sugar industry and funded churches and the Natalivka estate; Anton Chekhov spent summers at the Luka estate near Sumy in 1888-89. Railways reached Sumy, Konotop and Romny.",
-      "military": null,
+      "military": "The Sumy Cadet Corps, a military school for officers' sons, was founded in 1900.",
       "places": ["Sumy", "Luka estate"],
       "links": [ { "title": "Sumy", "url": "https://en.wikipedia.org/wiki/Sumy" }, { "title": "Anton Chekhov", "url": "https://en.wikipedia.org/wiki/Anton_Chekhov" } ]
     },
@@ -1885,27 +1894,29 @@
       "control": "Bolsheviks, briefly Denikin's Whites (1919)",
       "summary": "Red Army units took the region in early 1919; the Whites held it from August to November 1919 before final Soviet control. Peasant insurgents resisted grain requisitions.",
       "military": "The front of the Russian Civil War passed through Sumy in 1919.",
-      "places": [],
+      "places": ["Sumy", "Konotop"],
       "links": [ { "title": "Russian Civil War", "url": "https://en.wikipedia.org/wiki/Russian_Civil_War" } ]
     },
     "soviet-ukraine-1920s": {
       "control": "Ukrainian SSR (Sumy, Konotop, Hlukhiv, Romny okruhas)",
       "summary": "The border with the Russian SFSR was settled in the 1920s, leaving large Ukrainian-speaking areas just across it in Kursk Governorate. Sumy's industries were nationalised.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
+      "places": ["Sumy", "Konotop", "Hlukhiv", "Romny"],
       "links": [ { "title": "Ukrainian Soviet Socialist Republic", "url": "https://en.wikipedia.org/wiki/Ukrainian_Soviet_Socialist_Republic" } ]
     },
     "holodomor-terror": {
       "control": "Ukrainian SSR (Kharkiv and Chernihiv oblasts; Sumy Oblast from 1939)",
       "summary": "The Holodomor took a heavy toll in the region, then mostly in Kharkiv and Chernihiv oblasts. Sumy Oblast was created in January 1939.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
+      "places": ["Sumy", "Hlukhiv", "Konotop"],
       "links": [ { "title": "Holodomor", "url": "https://en.wikipedia.org/wiki/Holodomor" } ]
     },
     "soviet-annexations": {
       "control": "Ukrainian SSR (Sumy Oblast)",
       "summary": "The new Sumy Oblast developed machine-building in Sumy and gunpowder and film production in Shostka.",
-      "military": null,
+      "military": "In autumn 1939 the NKVD held Polish prisoners of war in a camp at the Sofronievsky Monastery near Putyvl.",
       "places": ["Shostka"],
       "links": [ { "title": "Shostka", "url": "https://en.wikipedia.org/wiki/Shostka" } ]
     },
@@ -1919,8 +1930,9 @@
     "postwar-ussr": {
       "control": "Ukrainian SSR (Sumy Oblast)",
       "summary": "Postwar reconstruction expanded Sumy's machine-building works, including the Frunze plant and an electron microscope factory (Selmi). The 1946-47 famine affected villages.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Soviet Army were garrisoned in the oblast.",
+      "placeholder": true,
+      "places": ["Sumy", "Selmi plant, Sumy", "Frunze plant, Sumy"],
       "links": [ { "title": "Sumy", "url": "https://en.wikipedia.org/wiki/Sumy" } ]
     },
     "soviet-ukraine-late": {
@@ -1933,14 +1945,16 @@
     "independence": {
       "control": "Independent Ukraine",
       "summary": "The oblast became a border region with Russia; its industries struggled in the 1990s. Hlukhiv's architectural heritage became a national reserve.",
-      "military": null,
+      "military": "Units of the Ukrainian Armed Forces were garrisoned in the oblast.",
+      "placeholder": true,
       "places": ["Hlukhiv"],
       "links": [ { "title": "Russia–Ukraine border", "url": "https://en.wikipedia.org/wiki/Russia%E2%80%93Ukraine_border" } ]
     },
     "orange-to-euromaidan": {
       "control": "Independent Ukraine",
       "summary": "Viktor Yushchenko, born in Khoruzhivka in the oblast, became president after the Orange Revolution. The oblast voted heavily for him in 2004.",
-      "military": null,
+      "military": "Units of the Ukrainian Armed Forces were garrisoned in the oblast.",
+      "placeholder": true,
       "places": ["Khoruzhivka"],
       "links": [ { "title": "Viktor Yushchenko", "url": "https://en.wikipedia.org/wiki/Viktor_Yushchenko" } ]
     },
@@ -2164,21 +2178,23 @@
     "soviet-ukraine-1920s": {
       "control": "Ukrainian SSR (Poltava, Kremenchuk, Lubny and other okruhas)",
       "summary": "The NEP brought agricultural recovery, and Poltava remained a centre of Ukrainian culture; Kremenchuk was an important industrial town.",
-      "military": null,
-      "places": [],
+      "military": "The Red Army's 25th Rifle Division carried the name Poltava and then Kremenchuk in 1921-1922.",
+      "places": ["Poltava", "Kremenchuk", "Lubny", "Kovalivka"],
       "links": [ { "title": "New Economic Policy", "url": "https://en.wikipedia.org/wiki/New_Economic_Policy" } ]
     },
     "holodomor-terror": {
       "control": "Ukrainian SSR (Kharkiv Oblast; Poltava Oblast from 1937)",
       "summary": "The Poltava region was among the worst-hit by the Holodomor, with mortality in some districts over a quarter of the population. Poltava Oblast was created in 1937.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
+      "places": ["Poltava", "Kremenchuk", "Lubny"],
       "links": [ { "title": "Holodomor", "url": "https://en.wikipedia.org/wiki/Holodomor" } ]
     },
     "soviet-annexations": {
       "control": "Ukrainian SSR (Poltava Oblast)",
       "summary": "The oblast was a collectivised farming region with growing industry in Kremenchuk, including rail-car and automotive repair works.",
-      "military": null,
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
       "places": ["Kremenchuk"],
       "links": [ { "title": "Kremenchuk", "url": "https://en.wikipedia.org/wiki/Kremenchuk" } ]
     },
@@ -2213,7 +2229,7 @@
     "orange-to-euromaidan": {
       "control": "Independent Ukraine",
       "summary": "The 300th anniversary of the Battle of Poltava in 2009 highlighted competing Ukrainian and Russian memories of Mazepa. The oblast supported the Orange Revolution and Euromaidan.",
-      "military": null,
+      "military": "The 831st Tactical Aviation Brigade flew Su-27 fighters from Myrhorod Air Base.",
       "places": ["Poltava battlefield"],
       "links": [ { "title": "Ivan Mazepa", "url": "https://en.wikipedia.org/wiki/Ivan_Mazepa" } ]
     },
@@ -2415,7 +2431,7 @@
     "national-revival": {
       "control": "Russian Empire (Kherson Governorate)",
       "summary": "In 1882 Marko Kropyvnytsky founded the first professional Ukrainian theatre troupe in Yelisavetgrad, with Ivan Karpenko-Karyi, Mykola Sadovsky and Panas Saksahansky. The town was also the starting point of the 1881 wave of anti-Jewish pogroms, and Leon Trotsky was born in 1879 at a farm near Bereslavka.",
-      "military": null,
+      "military": "The Yelisavetgrad cavalry junker school opened in 1865, training junior officers for the Kiev, Kharkiv and Odesa military districts.",
       "places": ["Kropyvnytskyi"],
       "links": [ { "title": "Marko Kropyvnytskyi", "url": "https://en.wikipedia.org/wiki/Marko_Kropyvnytskyi" }, { "title": "Pogroms in the Russian Empire", "url": "https://en.wikipedia.org/wiki/Pogroms_in_the_Russian_Empire" } ]
     },
@@ -2436,21 +2452,23 @@
     "soviet-ukraine-1920s": {
       "control": "Ukrainian SSR (Zinovievsk Okruha)",
       "summary": "Yelisavetgrad was renamed Zinovievsk in 1924 and became an agricultural machinery centre (Chervona Zirka plant). NEP restored the grain economy.",
-      "military": null,
-      "places": [],
+      "military": "Otaman Kostiantyn Pestushko's insurgents fought Soviet forces in the Yelisavetgrad steppe until his death in 1921.",
+      "places": ["Kropyvnytskyi", "Chervona Zirka plant"],
       "links": [ { "title": "Kropyvnytskyi", "url": "https://en.wikipedia.org/wiki/Kropyvnytskyi" } ]
     },
     "holodomor-terror": {
       "control": "Ukrainian SSR (Odesa and Mykolaiv oblasts; Kirovohrad Oblast from 1939)",
       "summary": "The region's grain villages suffered heavily in the Holodomor. The city was renamed Kirovo in 1934 and Kirovohrad in 1939, when Kirovohrad Oblast was created.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
+      "places": ["Kropyvnytskyi", "Oleksandriia"],
       "links": [ { "title": "Holodomor", "url": "https://en.wikipedia.org/wiki/Holodomor" } ]
     },
     "soviet-annexations": {
       "control": "Ukrainian SSR (Kirovohrad Oblast)",
       "summary": "The new oblast developed agricultural machine-building in Kirovohrad and brown-coal mining around Oleksandriia.",
-      "military": null,
+      "military": "Units of the Red Army were garrisoned in the area.",
+      "placeholder": true,
       "places": ["Oleksandriia"],
       "links": [ { "title": "Oleksandriia", "url": "https://en.wikipedia.org/wiki/Oleksandriia" } ]
     },
@@ -2464,8 +2482,9 @@
     "postwar-ussr": {
       "control": "Ukrainian SSR (Kirovohrad Oblast)",
       "summary": "The towns were rebuilt and the Chervona Zirka plant resumed production of seeders. The 1946-47 famine affected the grain districts.",
-      "military": null,
-      "places": [],
+      "military": "Units of the Soviet Army were garrisoned in the oblast.",
+      "placeholder": true,
+      "places": ["Kropyvnytskyi", "Chervona Zirka plant"],
       "links": [ { "title": "Soviet famine of 1946–1947", "url": "https://en.wikipedia.org/wiki/Soviet_famine_of_1946%E2%80%931947" } ]
     },
     "soviet-ukraine-late": {
@@ -2479,14 +2498,14 @@
       "control": "Independent Ukraine",
       "summary": "The oblast remained agrarian, with uranium mining important for Ukraine's nuclear power. Population declined in rural districts.",
       "military": "Kanatove became a base of the Ukrainian Air Force's flight training.",
-      "places": [],
+      "places": ["Kropyvnytskyi", "Smolino mine"],
       "links": [ { "title": "Kirovohrad Oblast", "url": "https://en.wikipedia.org/wiki/Kirovohrad_Oblast" } ]
     },
     "orange-to-euromaidan": {
       "control": "Independent Ukraine",
       "summary": "The oblast largely supported Yushchenko in 2004; Euromaidan protesters rallied in Kirovohrad in 2013-14.",
-      "military": null,
-      "places": [],
+      "military": "Ukraine's 3rd Special Purpose Regiment moved to Kirovohrad from Crimea in July 2003 and remained based there.",
+      "places": ["Kropyvnytskyi", "Kanatove"],
       "links": [ { "title": "Euromaidan", "url": "https://en.wikipedia.org/wiki/Euromaidan" } ]
     },
     "crimea-donbas-war": {
@@ -2506,15 +2525,15 @@
     "war-of-attrition": {
       "control": "Independent Ukraine (rear region)",
       "summary": "The oblast was a rear logistics area for the southern front, periodically hit by drones and missiles aimed at airfields, energy and rail facilities.",
-      "military": null,
-      "places": [],
+      "military": "Russian missiles repeatedly targeted the airfield near Kropyvnytskyi, including a strike in September 2024.",
+      "places": ["Kanatove", "Oleksandriia"],
       "links": [ { "title": "Russian strikes against Ukrainian infrastructure", "url": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure" } ]
     },
     "war-2025-2026": {
       "control": "Independent Ukraine (rear region)",
       "summary": "Drone attacks on Kropyvnytskyi, Oleksandriia and energy infrastructure continued in 2025-2026, causing outages; the oblast stayed far from the ground front, which in parts of Dnipropetrovsk Oblast moved somewhat closer during 2025.",
       "military": "No ground fighting; air defence and mobile groups countered Shahed drones.",
-      "places": [],
+      "places": ["Kropyvnytskyi", "Oleksandriia"],
       "links": [ { "title": "Russian strikes against Ukrainian infrastructure", "url": "https://en.wikipedia.org/wiki/Russian_strikes_against_Ukrainian_infrastructure" } ]
     }
   },

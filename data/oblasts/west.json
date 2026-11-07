@@ -1038,7 +1038,7 @@
     "soviet-ukraine-1920s": {
       "control": "Second Polish Republic (Wołyń Voivodeship, capital Łuck)",
       "summary": "Lutsk became the capital of the Wołyń Voivodeship. Polish military settlers received land, Ukrainian peasants remained the majority, and the Communist Party of Western Ukraine had a following.",
-      "military": null,
+      "military": "The Polish 27th Infantry Division was headquartered at Kovel, with units at Lutsk and Volodymyr.",
       "places": [
         "Lutsk"
       ],
@@ -1143,7 +1143,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "Volyn voted strongly for Yushchenko in 2004. During Euromaidan the regional governor was humiliated by protesters in Lutsk in January 2014.",
-      "military": null,
+      "military": "The 51st Guards Mechanized Brigade remained based at Volodymyr-Volynskyi.",
       "places": [
         "Lutsk"
       ],
@@ -1625,7 +1625,7 @@
     "holodomor-terror": {
       "control": "Second Polish Republic",
       "summary": "Across the border in Soviet Ukraine the Holodomor raged, while the area under Poland was spared. Józewski's policies alternated with Polonization; the writer Ulas Samchuk, from Derman, published here.",
-      "military": null,
+      "military": "The Polish 13th Kresowa Infantry Division was based at Rivne, and Border Protection Corps battalions at Ostroh and Hoshcha guarded the Soviet frontier.",
       "places": [
         "Derman"
       ],
@@ -1688,7 +1688,7 @@
     "soviet-ukraine-late": {
       "control": "Ukrainian SSR",
       "summary": "Rivne grew as an industrial center with the Azot chemical plant. The Rivne Nuclear Power Plant opened at Kuznetsovsk (now Varash) in 1980, and northern districts received Chernobyl fallout in 1986.",
-      "military": null,
+      "military": "The headquarters of the Soviet 13th Army was at Rivne, within the Carpathian Military District.",
       "places": [
         "Rivne Nuclear Power Plant",
         "Varash"
@@ -1703,7 +1703,7 @@
     "independence": {
       "control": "Ukraine",
       "summary": "The oblast voted for national-democratic parties; illegal amber mining spread in the northern Polesian forests, and the Ostroh Academy was revived as a university in 1994.",
-      "military": null,
+      "military": "The 13th Army passed to Ukraine in 1992 and became the 13th Army Corps on 27 December 1993.",
       "places": [
         "Ostroh Academy",
         "Klesiv"
@@ -1718,7 +1718,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "Rivne strongly backed the Orange Revolution in 2004 and the Euromaidan in 2013-2014, when protesters occupied the regional administration.",
-      "military": null,
+      "military": "Units of the Ukrainian Armed Forces were garrisoned in the oblast.",
       "places": [
         "Rivne"
       ],
@@ -1727,7 +1727,8 @@
           "title": "Orange Revolution",
           "url": "https://en.wikipedia.org/wiki/Orange_Revolution"
         }
-      ]
+      ],
+      "placeholder": true
     },
     "crimea-donbas-war": {
       "control": "Ukraine",
@@ -2201,7 +2202,7 @@
     "soviet-ukraine-1920s": {
       "control": "Second Polish Republic (Tarnopol Voivodeship; Kremenets in Wołyń Voivodeship)",
       "summary": "The area formed the Tarnopol Voivodeship, with a Ukrainian rural majority and Polish and Jewish towns; the Kremenets Lyceum reopened in 1920.",
-      "military": null,
+      "military": "The Polish 12th Infantry Division was garrisoned in Ternopil.",
       "places": [
         "Ternopil",
         "Kremenets"
@@ -2217,7 +2218,10 @@
       "control": "Second Polish Republic",
       "summary": "Villages in the area were hit hard by the 1930 'pacification' after OUN sabotage. The Zbruch border separated it from the Holodomor in Soviet Ukraine.",
       "military": "Polish police and cavalry carried out the pacification raids; OUN cells were active.",
-      "places": [],
+      "places": [
+        "Ternopil",
+        "Zbruch River"
+      ],
       "links": [
         {
           "title": "Pacification of Ukrainians in Eastern Galicia",
@@ -2271,7 +2275,7 @@
     "soviet-ukraine-late": {
       "control": "Ukrainian SSR",
       "summary": "Ternopil grew with a combine-harvester plant and medical institute. The underground Greek Catholic church survived, and in 1989-1990 the oblast elected a democratic council.",
-      "military": null,
+      "military": "The Soviet 26th Artillery Division was based in Ternopil.",
       "places": [
         "Ternopil"
       ],
@@ -2285,8 +2289,11 @@
     "independence": {
       "control": "Ukraine",
       "summary": "The oblast was a stronghold of national-democratic politics; many residents sought work abroad as local industry declined.",
-      "military": null,
-      "places": [],
+      "military": "Ukraine inherited the Ternopil artillery garrison, where a regiment of the 26th Artillery Division became the basis of the 11th Artillery Brigade.",
+      "places": [
+        "Ternopil",
+        "Zarvanytsia"
+      ],
       "links": [
         {
           "title": "Ternopil Oblast",
@@ -2297,7 +2304,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "Ternopil gave Yushchenko over 90 percent in 2004. In 2009 the nationalist Svoboda party won the oblast council election, and protesters took the regional administration during Euromaidan.",
-      "military": null,
+      "military": "The 11th Guards Artillery Brigade's camp in Ternopil later passed to the 44th Artillery Brigade, formed in 2014.",
       "places": [
         "Ternopil"
       ],
@@ -2339,7 +2346,7 @@
     "war-of-attrition": {
       "control": "Ukraine (rear area)",
       "summary": "Strikes targeted energy and industrial infrastructure in Ternopil and its surroundings during Russia's long-range campaign.",
-      "military": null,
+      "military": "Russian drones hit Ternopil's energy infrastructure in November and December 2024, cutting power to parts of the city.",
       "places": [
         "Ternopil"
       ],
@@ -2761,7 +2768,7 @@
     "soviet-ukraine-1920s": {
       "control": "Second Polish Republic (Stanisławów Voivodeship)",
       "summary": "The area formed the Stanisławów Voivodeship, with Ukrainian village cooperatives, Polish administration and large Jewish urban communities; the Hutsul highlands became a tourist destination.",
-      "military": null,
+      "military": "The Polish 11th Carpathian Infantry Division was headquartered in Stanisławów.",
       "places": [
         "Stanisławów",
         "Yaremche"
@@ -2777,7 +2784,10 @@
       "control": "Second Polish Republic",
       "summary": "The area escaped the Soviet famine; OUN networks grew among youth, and the 1930 pacification struck local villages.",
       "military": "OUN underground cells and Polish police operations.",
-      "places": [],
+      "places": [
+        "Stanislaviv",
+        "Kolomyia"
+      ],
       "links": [
         {
           "title": "Organisation of Ukrainian Nationalists",
@@ -2788,7 +2798,7 @@
     "soviet-annexations": {
       "control": "Soviet Union (Stanislav Oblast, Ukrainian SSR)",
       "summary": "The Soviets created Stanislav Oblast in December 1939; deportations targeted Poles and Ukrainian activists, and prisoners were shot in Stanislav in June 1941.",
-      "military": null,
+      "military": "Polish troops held Kuty until 20 September 1939 as the government and army high command left for Romania.",
       "places": [
         "Stanislav"
       ],
@@ -2845,7 +2855,7 @@
     "independence": {
       "control": "Ukraine",
       "summary": "The oblast supported national-democratic parties; Bukovel became Ukraine's largest ski resort in the 2000s, and the Carpathian National Nature Park protected the highlands.",
-      "military": null,
+      "military": "The Soviet 38th Army passed to Ukraine as an army corps, which was disbanded in 2002.",
       "places": [
         "Bukovel"
       ],
@@ -2859,7 +2869,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "The oblast voted overwhelmingly for Yushchenko in 2004, and protesters seized the regional administration during Euromaidan in January 2014.",
-      "military": null,
+      "military": "MiG-29 fighters of the 114th Tactical Aviation Brigade remained at the Ivano-Frankivsk airfield.",
       "places": [
         "Ivano-Frankivsk"
       ],
@@ -3341,7 +3351,7 @@
     "soviet-ukraine-1920s": {
       "control": "Czechoslovakia (Subcarpathian Ruthenia)",
       "summary": "Under Czechoslovakia the region gained schools, roads and a new administrative quarter in Uzhhorod, though promised autonomy was delayed. Ukrainophile, Russophile and Rusynophile currents competed.",
-      "military": null,
+      "military": "The Czechoslovak 12th Division was headquartered in Uzhhorod from January 1920.",
       "places": [
         "Uzhhorod"
       ],
@@ -3457,7 +3467,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "Politics were dominated by local clans; Hungary's 2010 citizenship law drew many ethnic Hungarians to take Hungarian passports. The region saw smaller Euromaidan protests than elsewhere in the west.",
-      "military": null,
+      "military": "The division at Mukachevo was reorganized as the 128th Brigade in June 2004 and became a mountain brigade in 2013.",
       "places": [
         "Berehove"
       ],
@@ -3518,7 +3528,7 @@
     "war-2025-2026": {
       "control": "Ukraine (rear area)",
       "summary": "On 21 August 2025 Russian missiles struck the US-owned Flex electronics plant in Mukachevo, injuring more than a dozen workers, one of the few attacks on the region. Hungarian-Ukrainian tensions continued. Information on 2026 is limited.",
-      "military": null,
+      "military": "On 13 May 2026 Russia sent 11 drones against Zakarpattia in the region's heaviest attack of the war, hitting Uzhhorod for the first time.",
       "places": [
         "Mukachevo"
       ],
@@ -3913,7 +3923,7 @@
     "soviet-ukraine-1920s": {
       "control": "Kingdom of Romania",
       "summary": "Romanian authorities closed Ukrainian schools, Romanianized Chernivtsi University and administration, and imposed a state of siege in Bessarabian districts.",
-      "military": null,
+      "military": "Units of the Romanian Army were garrisoned in the oblast.",
       "places": [
         "Chernivtsi University"
       ],
@@ -3922,13 +3932,17 @@
           "title": "Greater Romania",
           "url": "https://en.wikipedia.org/wiki/Greater_Romania"
         }
-      ]
+      ],
+      "placeholder": true
     },
     "holodomor-terror": {
       "control": "Kingdom of Romania",
       "summary": "The Dniester border separated the area from the Holodomor in the Soviet Moldavian ASSR and Ukraine. Romanian royal dictatorship from 1938 further restricted minorities; Ukrainian nationalist youth groups operated underground.",
-      "military": null,
-      "places": [],
+      "military": "The Romanian 8th Infantry Division, which had occupied Bukovina in 1918, was headquartered at Cernăuți by 1939.",
+      "places": [
+        "Chernivtsi",
+        "Dniester River"
+      ],
       "links": [
         {
           "title": "Kingdom of Romania",
@@ -3991,7 +4005,7 @@
     "soviet-ukraine-late": {
       "control": "Ukrainian SSR",
       "summary": "Chernivtsi University occupied the former Metropolitans' Residence, and the city produced pop stars Sofia Rotaru and Volodymyr Ivasiuk, whose mysterious death in 1979 sparked protests. A 1988 outbreak of child hair loss blamed on chemical pollution caused alarm.",
-      "military": null,
+      "military": "The Soviet 66th Guards Training Motor Rifle Division was based in Chernivtsi.",
       "places": [
         "Chernivtsi University"
       ],
@@ -4005,7 +4019,7 @@
     "independence": {
       "control": "Ukraine",
       "summary": "The 1997 Ukrainian-Romanian treaty settled the border; the oblast's Romanian minority, concentrated around Hertsa and Hlyboka, gained cultural rights, and cross-border trade grew.",
-      "military": null,
+      "military": "The Chernivtsi training regiment of the former 66th Division was redesignated the 300th Mechanized Regiment in October 2000.",
       "places": [
         "Hertsa",
         "Hlyboka"
@@ -4020,7 +4034,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "The Residence of Bukovinian and Dalmatian Metropolitans was inscribed on the UNESCO World Heritage List in 2011. The oblast supported the Orange Revolution and Euromaidan.",
-      "military": null,
+      "military": "The 300th Mechanized Regiment stayed in Chernivtsi under the 13th Army Corps until it was disbanded on 30 October 2013.",
       "places": [
         "Residence of Bukovinian and Dalmatian Metropolitans"
       ],
@@ -4034,7 +4048,7 @@
     "crimea-donbas-war": {
       "control": "Ukraine",
       "summary": "Men from the oblast were mobilized and volunteered for the Donbas war, while Chernivtsi hosted displaced families.",
-      "military": null,
+      "military": "The 87th Air Assault Battalion of the 80th Brigade was formed on the base of the disbanded 300th Regiment.",
       "places": [
         "Chernivtsi"
       ],
@@ -4048,7 +4062,7 @@
     "full-scale-invasion": {
       "control": "Ukraine (rear area)",
       "summary": "Chernivtsi received large numbers of displaced people, and crossings to Romania at Porubne and Moldova at Mamalyha became major refugee routes. The oblast was rarely struck in 2022.",
-      "military": null,
+      "military": "A Russian missile hit the Dniester hydroelectric station at Novodnistrovsk on 31 October 2022.",
       "places": [
         "Porubne border crossing"
       ],
@@ -4062,7 +4076,7 @@
     "war-of-attrition": {
       "control": "Ukraine (rear area)",
       "summary": "The oblast remained one of the safest in Ukraine, though occasional drones and missiles reached it during attacks on western Ukraine; Russian drones repeatedly strayed into neighboring Romanian and Moldovan airspace.",
-      "military": null,
+      "military": "Russian forces tried to hit the Dniester hydroelectric station with missiles in March 2024.",
       "places": [
         "Chernivtsi"
       ],
@@ -4076,7 +4090,7 @@
     "war-2025-2026": {
       "control": "Ukraine (rear area)",
       "summary": "Massed raids on western Ukraine hit Chernivtsi more often in 2025, including a June 2025 attack that reportedly killed at least two people in the city. Information on 2026 is limited.",
-      "military": null,
+      "military": "A Russian strike on Chernivtsi on 12 July 2025 killed two people, and attacks on the Novodnistrovsk hydropower complex in March 2026 spilled oil into the Dniester.",
       "places": [
         "Chernivtsi"
       ],
@@ -4443,7 +4457,7 @@
     "ukrainian-revolution": {
       "control": "Ukrainian People's Republic and Hetmanate",
       "summary": "The area belonged to the UNR and Skoropadsky's Hetmanate; the Kamianets-Podilskyi Ukrainian State University opened in October 1918 under Ivan Ohienko.",
-      "military": null,
+      "military": "The UNR Army's Proskuriv offensive of June 1919 seized western Podolia, including Kamianets-Podilskyi.",
       "places": [
         "Kamianets-Podilskyi University"
       ],
@@ -4581,7 +4595,7 @@
     "orange-to-euromaidan": {
       "control": "Ukraine",
       "summary": "The oblast backed Yushchenko in 2004; on 19 February 2014 a shooting at the SBU building in Khmelnytskyi killed a protester during Euromaidan.",
-      "military": null,
+      "military": "Su-24 bombers at Starokostiantyniv remained the oblast's main air force unit.",
       "places": [
         "Khmelnytskyi"
       ],

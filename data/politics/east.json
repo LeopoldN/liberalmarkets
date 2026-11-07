@@ -471,6 +471,73 @@
       "dissolved": null,
       "color": "#2862b3",
       "wikipedia": "https://en.wikipedia.org/wiki/United_Russia"
+    },
+    "For_United_Ukraine": {
+      "name": "For United Ukraine!",
+      "abbr": "ZaYedU",
+      "leaning": "Centre, pro-presidential",
+      "summary": "Pro-Kuchma electoral bloc formed for the 2002 parliamentary election, which came first in Donetsk Oblast and broke up soon after the vote.",
+      "wikipedia": "https://en.wikipedia.org/wiki/For_United_Ukraine",
+      "founded": 2001,
+      "dissolved": 2002,
+      "color": "#2e86c1"
+    },
+    "Progressive_Socialist_Party_of_Ukraine": {
+      "name": "Progressive Socialist Party of Ukraine",
+      "abbr": "PSPU",
+      "leaning": "Far-left, pro-Russian",
+      "summary": "Natalia Vitrenko's party, split from the Socialist Party in 1996, which entered parliament in 1998.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Progressive_Socialist_Party_of_Ukraine",
+      "founded": 1996,
+      "dissolved": null,
+      "color": "#922b21"
+    },
+    "Party_of_Greens_of_Ukraine": {
+      "name": "Party of Greens of Ukraine",
+      "abbr": "PZU",
+      "leaning": "Green politics",
+      "summary": "Environmentalist party that cleared the threshold in the 1998 parliamentary election.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Party_of_Greens_of_Ukraine",
+      "founded": 1990,
+      "dissolved": null,
+      "color": "#27ae60"
+    },
+    "Free_Donbas": {
+      "name": "Free Donbas",
+      "abbr": "SD",
+      "leaning": "Russian-backed separatist",
+      "summary": "Movement allowed to run in the unrecognized 'Donetsk People's Republic' votes of 2014 and 2018 as the junior list to Donetsk Republic.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Free_Donbas",
+      "founded": 2014,
+      "dissolved": null,
+      "color": "#a93226"
+    },
+    "x:Luhansk_Economic_Union": {
+      "name": "Luhansk Economic Union",
+      "abbr": "LEU",
+      "leaning": "Russian-backed separatist",
+      "summary": "Junior list in the unrecognized 'Luhansk People's Republic' votes of 2014 and 2018. Source: Wikipedia, 2014 Donbas general elections.",
+      "wikipedia": null,
+      "founded": 2014,
+      "dissolved": null,
+      "color": "#b9770e"
+    },
+    "Our_Ukraine_(political_party)": {
+      "name": "Our Ukraine",
+      "abbr": "NU",
+      "leaning": "Centre-right, national democracy, pro-European",
+      "summary": "Party and electoral bloc of Viktor Yushchenko; its governors ran the oblasts after the 2004 Orange Revolution, but its support collapsed by 2010.",
+      "founded": 2005,
+      "color": "#ff8c00",
+      "wikipedia": "https://en.wikipedia.org/wiki/Our_Ukraine_(political_party)"
+    },
+    "Social_Democratic_Party_of_Ukraine_(united)": {
+      "name": "Social Democratic Party of Ukraine (united)",
+      "abbr": "SDPU(o)",
+      "leaning": "Centre, oligarchic, pro-Kuchma",
+      "summary": "Party linked to Viktor Medvedchuk and the Kyiv business clan, which won 3 seats in the 2002 Crimean parliament.",
+      "founded": 1990,
+      "wikipedia": "https://en.wikipedia.org/wiki/Social_Democratic_Party_of_Ukraine_(united)"
     }
   },
   "armedGroups": {
@@ -802,11 +869,70 @@
       "side": "Russia",
       "summary": "Russian internal troops used to police occupied territories, including the guard of the occupied Zaporizhzhia Nuclear Power Plant in Enerhodar.",
       "wikipedia": "https://en.wikipedia.org/wiki/National_Guard_of_Russia"
+    },
+    "Imperial_Russian_Army": {
+      "name": "Imperial Russian Army",
+      "type": "Imperial land army",
+      "side": "Russian Empire",
+      "summary": "The land army of the Russian Empire, which garrisoned the Ukrainian governorates, organised them into military districts from the 1860s and was used against strikers and insurgents in the 1905 revolution.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Imperial_Russian_Army"
+    },
+    "x:Workers'_combat_squads_of_1905": {
+      "name": "Workers' combat squads of 1905",
+      "type": "Workers' militia",
+      "side": "Revolutionary workers",
+      "summary": "Armed squads (druzhiny) formed by factory, mine and railway workers during the 1905 revolution, which fought troops in Kharkiv, Horlivka, Yekaterinoslav and Oleksandrivsk that December. Source: Russian and Ukrainian Wikipedia articles on the December 1905 uprisings.",
+      "wikipedia": null
+    },
+    "x:Union_of_Poor_Peasants": {
+      "name": "Union of Poor Peasants",
+      "type": "Anarchist group",
+      "side": "Anarchists",
+      "summary": "Local anarchist group in Huliaipole around the 1905 revolution, to which the young Nestor Makhno belonged. Source: Wikipedia, Nestor Makhno.",
+      "wikipedia": null
+    },
+    "Kharkov_Military_District": {
+      "name": "Kharkov Military District",
+      "type": "Military district",
+      "side": "Russian Empire, then USSR",
+      "summary": "Military district headquartered in Kharkiv, first formed in 1864 and abolished in 1888, revived briefly in the civil war, and re-established in May 1935 when the Ukrainian Military District was split.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Kharkov_Military_District"
+    },
+    "55th_Artillery_Brigade_(Ukraine)": {
+      "name": "55th Artillery Brigade \"Zaporozhian Sich\"",
+      "type": "Artillery brigade",
+      "side": "Ukraine",
+      "summary": "Ukrainian Ground Forces artillery brigade garrisoned in Zaporizhzhia, formed in October 2005 from the 2nd Tactical Artillery Group and the 20th Artillery Regiment.",
+      "wikipedia": "https://en.wikipedia.org/wiki/55th_Artillery_Brigade_(Ukraine)"
+    },
+    "Odessa_Military_District": {
+      "name": "Odessa Military District",
+      "type": "Military district",
+      "side": "USSR, then Ukraine",
+      "summary": "Soviet military district headquartered in Odesa, covering the southern oblasts; in 1992 it passed to Ukraine and later became the Southern Operational Command.",
+      "wikipedia": "https://en.wikipedia.org/wiki/Odessa_Military_District"
     }
   },
   "oblasts": {
     "UA-63": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "Kharkiv Governorate was run by tsar-appointed governors, with elected zemstvo assemblies from the 1860s and indirect State Duma elections after 1905; no party governed. The Revolutionary Ukrainian Party was founded in the city in 1900, and Mensheviks led most of the workers' strikes around 1905. Governorate-level party results for the Duma elections could not be sourced.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "The Kharkov Military District of the imperial army was based in the city until 1888, and in December 1905 troops shelled the Helferich-Sade works."
+            },
+            {
+              "group": "x:Workers'_combat_squads_of_1905",
+              "role": "Workers' squads held the Helferich-Sade works in Kharkiv in the December 1905 rising."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Kharkiv Governorate was the Bolshevik base in Ukraine: the Kharkiv Congress of Soviets proclaimed the Ukrainian People's Republic of Soviets in December 1917 against the Kyiv Central Rada, and Kharkiv was capital of the Donetsk-Krivoy Rog Soviet Republic in February-April 1918. German and UNR troops then installed the non-party Hetmanate of Pavlo Skoropadsky until December 1918, when the Directorate and then the Bolsheviks returned.",
@@ -1012,7 +1138,78 @@
           "politics": {
             "note": "Governors were appointed by the president and the oblast council was elected in 1994, 1998 and 2002 mostly from non-party and 'party of power' candidates; the Communist Party of Ukraine remained strong in parliamentary voting. Seat-by-party results for these councils could not be sourced.",
             "governing": [],
-            "elections": []
+            "elections": [
+              {
+                "body": "Verkhovna Rada party-list vote in Kharkiv Oblast (vote share %, main lists; the Socialist figure is the joint Socialist-Peasant bloc)",
+                "year": 1998,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 35.49
+                  },
+                  {
+                    "party": "Progressive_Socialist_Party_of_Ukraine",
+                    "share": 10.08
+                  },
+                  {
+                    "party": "People's_Democratic_Party_(Ukraine)",
+                    "share": 6.05
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 5.91
+                  },
+                  {
+                    "party": "Party_of_Greens_of_Ukraine",
+                    "share": 5.42
+                  },
+                  {
+                    "party": "Hromada_(political_party)",
+                    "share": 2.49
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 1998",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-1998.html"
+                }
+              },
+              {
+                "body": "Verkhovna Rada party-list vote in Kharkiv Oblast (vote share %, main lists)",
+                "year": 2002,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 30.69
+                  },
+                  {
+                    "party": "For_United_Ukraine",
+                    "share": 15.38
+                  },
+                  {
+                    "party": "Social_Democratic_Party_of_Ukraine_(united)",
+                    "share": 10.36
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "share": 5.92
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 4.58
+                  },
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "share": 1.85
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 2002",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-2002.html"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -1112,7 +1309,12 @@
               }
             ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "The Land Forces' 61st ammunition depot near Lozova caught fire and exploded in August 2008."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -1289,6 +1491,20 @@
     },
     "UA-09": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The area was split between Yekaterinoslav Governorate, Kharkiv Governorate's Starobilsk uyezd and the Don Host Oblast, all under appointed tsarist officials, so no party governed. Social Democrats organised among Luhansk metalworkers before and during 1905. Party results for the Duma elections could not be sourced at this level.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "The area was split between Yekaterinoslav Governorate (Luhansk, Slovianoserbsk), Kharkov Governorate (Starobilsk) and the Don Host Oblast. Luhansk's soviet was Bolshevik-led and joined the Donetsk-Krivoy Rog Soviet Republic in February 1918; from April 1918 German troops and the Hetmanate held the west, Krasnov's Don Cossacks the east.",
@@ -1371,7 +1587,12 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "The 11th Military School of Pilots opened in Luhansk in October 1930."
+            }
+          ]
         },
         "holodomor-terror": {
           "politics": {
@@ -1467,7 +1688,78 @@
               "Communist_Party_of_Ukraine",
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Verkhovna Rada party-list vote in Luhansk Oblast (vote share %, main lists; the Socialist figure is the joint Socialist-Peasant bloc)",
+                "year": 1998,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 45.97
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 5.2
+                  },
+                  {
+                    "party": "Party_of_Greens_of_Ukraine",
+                    "share": 4.73
+                  },
+                  {
+                    "party": "Progressive_Socialist_Party_of_Ukraine",
+                    "share": 4.41
+                  },
+                  {
+                    "party": "Hromada_(political_party)",
+                    "share": 3.79
+                  },
+                  {
+                    "party": "People's_Democratic_Party_(Ukraine)",
+                    "share": 3.23
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 1998",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-1998.html"
+                }
+              },
+              {
+                "body": "Verkhovna Rada party-list vote in Luhansk Oblast (vote share %, main lists)",
+                "year": 2002,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 39.68
+                  },
+                  {
+                    "party": "For_United_Ukraine",
+                    "share": 14.38
+                  },
+                  {
+                    "party": "Social_Democratic_Party_of_Ukraine_(united)",
+                    "share": 9.48
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "share": 3.62
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 3.15
+                  },
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "share": 1.51
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 2002",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-2002.html"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -1535,7 +1827,13 @@
               }
             ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -1543,7 +1841,42 @@
             "governing": [
               "x:Peace_for_Luhansk_Region"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "'Luhansk People's Republic' People's Council (Russian-backed occupation body, not internationally recognised)",
+                "year": 2014,
+                "total": 50,
+                "seats": [
+                  {
+                    "party": "x:Peace_for_Luhansk_Region",
+                    "seats": 35
+                  },
+                  {
+                    "party": "x:Luhansk_Economic_Union",
+                    "seats": 15
+                  }
+                ],
+                "source": {
+                  "title": "Wikipedia: 2014 Donbas general elections",
+                  "url": "https://en.wikipedia.org/wiki/2014_Donbas_general_elections"
+                }
+              },
+              {
+                "body": "'Luhansk People's Republic' People's Council (Russian-backed occupation body, not internationally recognised; claimed vote share, %)",
+                "year": 2018,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "x:Peace_for_Luhansk_Region",
+                    "share": 74.13
+                  }
+                ],
+                "source": {
+                  "title": "Wikipedia: 2018 Donbas general elections",
+                  "url": "https://en.wikipedia.org/wiki/2018_Donbas_general_elections"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -1602,7 +1935,23 @@
             "governing": [
               "United_Russia"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "'People's Council of the Luhansk People's Republic' (Russian-installed occupation body, not internationally recognised; claimed vote share, %)",
+                "year": 2023,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "United_Russia",
+                    "share": 74.63
+                  }
+                ],
+                "source": {
+                  "title": "Novaya Gazeta Europe: United Russia set to win big in regional elections (11 September 2023; Russian claims)",
+                  "url": "https://novayagazeta.eu/articles/2023/09/11/united-russia-set-to-win-big-in-regional-elections-as-final-votes-counted-two-drones-downed-over-russias-belgorod-region-en-news"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -1638,6 +1987,23 @@
     },
     "UA-14": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The Bakhmut and Mariupol uyezds belonged to Yekaterinoslav Governorate under an appointed governor, and no party governed. Workers' soviets appeared at Yuzivka and Mariupol in the autumn of 1905. Party results for the Duma elections could not be sourced at this level.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Soldiers fired on workers at Horlivka in December 1905, and a Cossack detachment from Yenakiieve helped crush the uprising."
+            },
+            {
+              "group": "x:Workers'_combat_squads_of_1905",
+              "role": "Armed squads of Donbas workers stormed the army barracks at Horlivka on 17 December 1905."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Most of the oblast lay in Yekaterinoslav Governorate (Bakhmut and Mariupol uyezds), the east in the Don Host Oblast. Bolshevik-led mining soviets made it the core of the Donetsk-Krivoy Rog Soviet Republic (February-April 1918), after which German and UNR troops installed the Hetmanate until late 1918.",
@@ -1720,7 +2086,12 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "The 80th Rifle Division, titled 'Proletariat of Donbas', had regiments named after Mariupol and Artemivsk."
+            }
+          ]
         },
         "holodomor-terror": {
           "politics": {
@@ -1745,7 +2116,12 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Kharkov_Military_District",
+              "role": "Stalino Oblast was part of this Red Army district on the eve of the German invasion."
+            }
+          ]
         },
         "nazi-occupation": {
           "politics": {
@@ -1814,7 +2190,78 @@
             "governing": [
               "Party_of_Regions"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Verkhovna Rada party-list vote in Donetsk Oblast (vote share %, main lists; the Socialist figure is the joint Socialist-Peasant bloc)",
+                "year": 1998,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 35.45
+                  },
+                  {
+                    "party": "Progressive_Socialist_Party_of_Ukraine",
+                    "share": 4.24
+                  },
+                  {
+                    "party": "Party_of_Greens_of_Ukraine",
+                    "share": 4.0
+                  },
+                  {
+                    "party": "People's_Democratic_Party_(Ukraine)",
+                    "share": 3.44
+                  },
+                  {
+                    "party": "Hromada_(political_party)",
+                    "share": 2.68
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 1.78
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 1998",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-1998.html"
+                }
+              },
+              {
+                "body": "Verkhovna Rada party-list vote in Donetsk Oblast (vote share %, main lists)",
+                "year": 2002,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "For_United_Ukraine",
+                    "share": 36.83
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 29.78
+                  },
+                  {
+                    "party": "Social_Democratic_Party_of_Ukraine_(united)",
+                    "share": 4.66
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "share": 2.59
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 1.82
+                  },
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "share": 1.4
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 2002",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-2002.html"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -1886,7 +2333,13 @@
               }
             ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Armed_Forces_of_Ukraine",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -1895,7 +2348,46 @@
               "Donetsk_Republic_(movement)",
               "Opposition_Bloc"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "'Donetsk People's Republic' People's Council (Russian-backed occupation body, not internationally recognised)",
+                "year": 2014,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Donetsk_Republic_(movement)",
+                    "seats": 68
+                  },
+                  {
+                    "party": "Free_Donbas",
+                    "seats": 32
+                  }
+                ],
+                "source": {
+                  "title": "Wikipedia: 2014 Donbas general elections",
+                  "url": "https://en.wikipedia.org/wiki/2014_Donbas_general_elections"
+                }
+              },
+              {
+                "body": "'Donetsk People's Republic' People's Council (Russian-backed occupation body, not internationally recognised; claimed vote share, %)",
+                "year": 2018,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Donetsk_Republic_(movement)",
+                    "share": 72.5
+                  },
+                  {
+                    "party": "Free_Donbas",
+                    "share": 26.0
+                  }
+                ],
+                "source": {
+                  "title": "Kommersant: results of the November 2018 votes in the 'DPR' and 'LPR' (12 November 2018)",
+                  "url": "https://www.kommersant.ru/doc/3797896"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -1966,7 +2458,23 @@
             "governing": [
               "United_Russia"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "'People's Council of the Donetsk People's Republic' (Russian-installed occupation body, not internationally recognised; claimed vote share, %)",
+                "year": 2023,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "United_Russia",
+                    "share": 78.03
+                  }
+                ],
+                "source": {
+                  "title": "Novaya Gazeta Europe: United Russia set to win big in regional elections (11 September 2023; Russian claims)",
+                  "url": "https://novayagazeta.eu/articles/2023/09/11/united-russia-set-to-win-big-in-regional-elections-as-final-votes-counted-two-drones-downed-over-russias-belgorod-region-en-news"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -2018,6 +2526,24 @@
     },
     "UA-12": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "Yekaterinoslav was the seat of a governorate under a tsar-appointed governor, with a zemstvo and from 1906 indirect State Duma elections; no party governed. A workers' soviet and Social Democrats led the December 1905 Chechelivka rising, and a Prosvita society opened in the city at the end of 1905. Party results for the Duma elections could not be sourced at this level.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            },
+            {
+              "group": "x:Workers'_combat_squads_of_1905",
+              "role": "Workers' squads held Yekaterinoslav's Chechelivka district and neighbouring settlements in December 1905."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "Yekaterinoslav changed hands between the Central Rada, whose leading parties were the Ukrainian SRs and Social Democrats, and the Bolsheviks, who included Kryvyi Rih in the Donetsk-Krivoy Rog Soviet Republic; Austro-Hungarian and German troops installed the Hetmanate from April to December 1918.",
@@ -2113,7 +2639,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "holodomor-terror": {
           "politics": {
@@ -2142,7 +2674,12 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Odessa_Military_District",
+              "role": "Dnipropetrovsk Oblast was moved into this new Red Army district in October 1939."
+            }
+          ]
         },
         "nazi-occupation": {
           "politics": {
@@ -2212,7 +2749,78 @@
               "Hromada_(political_party)",
               "People's_Democratic_Party_(Ukraine)"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "Verkhovna Rada party-list vote in Dnipropetrovsk Oblast (vote share %, main lists; the Socialist figure is the joint Socialist-Peasant bloc)",
+                "year": 1998,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Hromada_(political_party)",
+                    "share": 35.34
+                  },
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 25.62
+                  },
+                  {
+                    "party": "Party_of_Greens_of_Ukraine",
+                    "share": 4.84
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 3.17
+                  },
+                  {
+                    "party": "People's_Democratic_Party_(Ukraine)",
+                    "share": 3.02
+                  },
+                  {
+                    "party": "Progressive_Socialist_Party_of_Ukraine",
+                    "share": 1.73
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 1998",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-1998.html"
+                }
+              },
+              {
+                "body": "Verkhovna Rada party-list vote in Dnipropetrovsk Oblast (vote share %, main lists)",
+                "year": 2002,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 31.86
+                  },
+                  {
+                    "party": "For_United_Ukraine",
+                    "share": 11.43
+                  },
+                  {
+                    "party": "Social_Democratic_Party_of_Ukraine_(united)",
+                    "share": 9.38
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "share": 6.35
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 4.42
+                  },
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "share": 4.32
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 2002",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-2002.html"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -2300,7 +2908,12 @@
               }
             ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "93rd_Mechanized_Brigade",
+              "role": "The brigade is garrisoned at Cherkaske in Dnipropetrovsk Oblast."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -2474,6 +3087,27 @@
     },
     "UA-23": {
       "eras": {
+        "national-revival": {
+          "politics": {
+            "note": "The north (Oleksandrivsk uyezd) belonged to Yekaterinoslav Governorate and the south (Melitopol and Berdiansk uyezds) to Taurida, both under appointed governors, and no party governed. A workers' soviet appeared in Oleksandrivsk in 1905 and anarchists organised in Huliaipole. Party results for the Duma elections could not be sourced at this level.",
+            "governing": [],
+            "elections": []
+          },
+          "armedGroups": [
+            {
+              "group": "Imperial_Russian_Army",
+              "role": "Imperial troops put down the armed uprising in Oleksandrivsk on 11-14 December 1905."
+            },
+            {
+              "group": "x:Workers'_combat_squads_of_1905",
+              "role": "Railway and factory workers rose in arms in Oleksandrivsk in December 1905."
+            },
+            {
+              "group": "x:Union_of_Poor_Peasants",
+              "role": "This anarchist group was active in Huliaipole around the 1905 revolution, and the young Nestor Makhno was imprisoned for his part in it."
+            }
+          ]
+        },
         "ukrainian-revolution": {
           "politics": {
             "note": "The north (Oleksandrivsk uyezd) belonged to Yekaterinoslav Governorate and the south (Melitopol and Berdiansk uyezds) to Taurida. Authority shifted between the Central Rada, the Bolsheviks and the Austro-German-backed Hetmanate, while Makhno's anarchists organised free soviets around Huliaipole outside any party system.",
@@ -2593,7 +3227,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "holodomor-terror": {
           "politics": {
@@ -2618,7 +3258,13 @@
             ],
             "elections": []
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "Red_Army",
+              "role": "Generic garrison presence; no region-specific detail found.",
+              "placeholder": true
+            }
+          ]
         },
         "nazi-occupation": {
           "politics": {
@@ -2677,7 +3323,78 @@
           "politics": {
             "note": "Councils were elected in 1994, 1998 and 2002 largely from non-party and pro-presidential candidates, and governors were presidential appointees; the Communist Party of Ukraine was strong in parliamentary voting. Seat-by-party results could not be sourced.",
             "governing": [],
-            "elections": []
+            "elections": [
+              {
+                "body": "Verkhovna Rada party-list vote in Zaporizhzhia Oblast (vote share %, main lists; the Socialist figure is the joint Socialist-Peasant bloc)",
+                "year": 1998,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 32.01
+                  },
+                  {
+                    "party": "Party_of_Greens_of_Ukraine",
+                    "share": 7.75
+                  },
+                  {
+                    "party": "Progressive_Socialist_Party_of_Ukraine",
+                    "share": 6.49
+                  },
+                  {
+                    "party": "People's_Democratic_Party_(Ukraine)",
+                    "share": 6.17
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 5.21
+                  },
+                  {
+                    "party": "Hromada_(political_party)",
+                    "share": 2.95
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 1998",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-1998.html"
+                }
+              },
+              {
+                "body": "Verkhovna Rada party-list vote in Zaporizhzhia Oblast (vote share %, main lists)",
+                "year": 2002,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "Communist_Party_of_Ukraine",
+                    "share": 33.4
+                  },
+                  {
+                    "party": "Social_Democratic_Party_of_Ukraine_(united)",
+                    "share": 10.68
+                  },
+                  {
+                    "party": "Our_Ukraine_(political_party)",
+                    "share": 7.93
+                  },
+                  {
+                    "party": "For_United_Ukraine",
+                    "share": 7.91
+                  },
+                  {
+                    "party": "Socialist_Party_of_Ukraine",
+                    "share": 3.28
+                  },
+                  {
+                    "party": "Yulia_Tymoshenko_Bloc",
+                    "share": 2.37
+                  }
+                ],
+                "source": {
+                  "title": "Electoral Geography 2.0: Ukraine, Legislative Election 2002",
+                  "url": "https://www.electoralgeography.com/new/en/countries/u/ukraine/ukraine-legislative-election-2002.html"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {
@@ -2773,7 +3490,12 @@
               }
             ]
           },
-          "armedGroups": []
+          "armedGroups": [
+            {
+              "group": "55th_Artillery_Brigade_(Ukraine)",
+              "role": "The Separate Artillery Brigade was formed in Zaporizhzhia in October 2005."
+            }
+          ]
         },
         "crimea-donbas-war": {
           "politics": {
@@ -2913,7 +3635,23 @@
               "Servant_of_the_People",
               "United_Russia"
             ],
-            "elections": []
+            "elections": [
+              {
+                "body": "'Zaporizhzhia Oblast Legislative Assembly' (Russian-installed occupation body, not internationally recognised; claimed vote share, %)",
+                "year": 2023,
+                "total": 100,
+                "seats": [
+                  {
+                    "party": "United_Russia",
+                    "share": 83.01
+                  }
+                ],
+                "source": {
+                  "title": "Novaya Gazeta Europe: United Russia set to win big in regional elections (11 September 2023; Russian claims)",
+                  "url": "https://novayagazeta.eu/articles/2023/09/11/united-russia-set-to-win-big-in-regional-elections-as-final-votes-counted-two-drones-downed-over-russias-belgorod-region-en-news"
+                }
+              }
+            ]
           },
           "armedGroups": [
             {

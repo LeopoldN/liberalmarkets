@@ -635,6 +635,23 @@ button { font: inherit; color: inherit; }
 .hb-about-b > div { display: grid; gap: 6px; align-content: start; min-width: 0; }
 .hb-about-b img { flex: none; width: 110px; max-height: 110px; object-fit: contain; border-radius: 3px; background: #efe9dc; }
 
+/* ---------- people: a parsuna gallery ---------- */
+.pn-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 22px 18px; }
+.pn { min-width: 0; }
+.pn-frame { padding: 9px; aspect-ratio: 4 / 5; border-radius: 2px; background: conic-gradient(from 45deg, #7d5a14, #ecd07a, #8d6a1c, #f4e09a, #7d5a14, #e4c56a, #7d5a14); box-shadow: 0 6px 12px rgba(40, 25, 10, .4), inset 0 0 0 1px rgba(90, 60, 10, .7), inset 0 0 0 3px rgba(255, 240, 190, .35); }
+.pn.iron .pn-frame { background: linear-gradient(145deg, #3b3a38, #1d1c1b 55%, #33312e); box-shadow: 0 6px 12px rgba(40, 25, 10, .4), inset 0 0 0 1px #000; }
+.pn-mat { position: relative; display: grid; place-items: end center; width: 100%; height: 100%; overflow: hidden; background: radial-gradient(circle at 50% 35%, #4a3520, #17100a); box-shadow: 0 0 0 1px rgba(0, 0, 0, .7); }
+.pn-mat img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; filter: sepia(.38) saturate(.9) contrast(1.05); } /* the warmth of old varnish */
+.pn.iron .pn-mat img { filter: grayscale(1) contrast(1.05); }
+.pn-mat::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 22px rgba(20, 10, 0, .55); }
+.pn-bust { width: 66%; fill: rgba(232, 214, 170, .22); }
+.pn-plate { display: grid; gap: 1px; margin: 8px 6px 0; padding: 5px 8px 6px; text-align: center; border-radius: 1px; background: linear-gradient(180deg, #ecd9a0, #cfae5f); box-shadow: 0 1px 2px rgba(40, 25, 10, .4), inset 0 0 0 1px rgba(90, 60, 10, .45); color: #2e2114; }
+.pn.iron .pn-plate { background: linear-gradient(180deg, #55524d, #3a3835); color: #f0ece4; }
+.pn-n { font-family: var(--serif); font-size: var(--fs-sm); font-weight: 500; line-height: 1.2; color: inherit; text-decoration: none; }
+a.pn-n:hover { text-decoration: underline; }
+.pn-r { font-family: var(--serif); font-size: 10.5px; font-style: italic; line-height: 1.2; opacity: .85; }
+.pn-note { margin: 8px 2px 0; font-size: var(--fs-sm); line-height: 1.45; color: var(--text-2); }
+
 /* ---------- history: both sides of a postcard ---------- */
 .pc-front { margin-bottom: 18px; }
 .pc-stack { position: relative; width: min(100%, 520px); aspect-ratio: 3 / 2; margin: 8px auto 0; }

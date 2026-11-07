@@ -1,0 +1,1492 @@
+{
+ "oblasts": {
+  "UA-51": {
+   "national-revival": [
+    {
+     "name": "Ilya Mechnikov",
+     "role": "Biologist, Nobel laureate",
+     "note": "He taught at Novorossiya University in Odesa, the city where he built his early scientific career.",
+     "wikipedia": "https://en.wikipedia.org/wiki/%C3%89lie_Metchnikoff"
+    },
+    {
+     "name": "Leon Pinsker",
+     "role": "Physician, Zionist leader",
+     "note": "An Odesa physician, he wrote the proto-Zionist pamphlet Auto-Emancipation in 1882 and died in the city in 1891.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leon_Pinsker"
+    },
+    {
+     "name": "Hayim Nahman Bialik",
+     "role": "Hebrew poet",
+     "note": "He lived and published in Odesa, then the leading centre of Hebrew letters in the Russian Empire.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Hayim_Nahman_Bialik"
+    },
+    {
+     "name": "Sergei Utochkin",
+     "role": "Cyclist and aviator",
+     "note": "The Odesa-born sportsman became one of the first Russian pilots.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergei_Utochkin"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Ivan Lypa",
+     "role": "Physician, UNR politician",
+     "note": "Named commissar of Odesa in 1917 after leading the city's Ukrainian movement and its Prosvita circle.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Lypa"
+    },
+    {
+     "name": "Philippe d'Anselme",
+     "role": "French general",
+     "note": "He commanded the Allied intervention force at Odesa in the winter of 1918-1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Philippe_Henri_Joseph_d'Anselme"
+    },
+    {
+     "name": "Jeanne Labourbe",
+     "role": "French Bolshevik activist",
+     "note": "She agitated among French troops in Odesa and was shot there in March 1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Jeanne_Labourbe"
+    },
+    {
+     "name": "Vera Kholodnaya",
+     "role": "Silent-film star",
+     "note": "Russia's first screen star was working in Odesa when she died there in February 1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vera_Kholodnaya"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Mishka Yaponchik",
+     "role": "Gangster and Red commander",
+     "note": "The Odesa underworld leader raised a regiment for the Red Army in 1919 and was killed that July.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mishka_Yaponchik"
+    },
+    {
+     "name": "Ivan Bunin",
+     "role": "Writer, later Nobel laureate",
+     "note": "He lived through the Civil War in Odesa and sailed from there into exile in early 1920.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Bunin"
+    },
+    {
+     "name": "Iona Yakir",
+     "role": "Red Army commander",
+     "note": "His 45th and 58th divisions were cut off around Odesa in 1919 before he led them north through the encirclement.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Iona_Yakir"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Sergei Eisenstein",
+     "role": "Film director",
+     "note": "He filmed Battleship Potemkin in Odesa in 1925, including its famous steps sequence.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergei_Eisenstein"
+    },
+    {
+     "name": "Alexander Dovzhenko",
+     "role": "Film director",
+     "note": "He entered cinema at the Odesa studio in 1926.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Alexander_Dovzhenko"
+    },
+    {
+     "name": "Vladimir Filatov",
+     "role": "Ophthalmologist",
+     "note": "The eye surgeon developed his corneal transplantation and tissue-therapy work in Odesa.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Filatov"
+    },
+    {
+     "name": "Grigory Kotovsky",
+     "role": "Red cavalry commander",
+     "note": "The Civil War commander was shot dead near Odesa in 1925.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Grigory_Kotovsky"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Trofim Lysenko",
+     "role": "Agronomist",
+     "note": "He worked at the Breeding and Genetics Institute in Odesa from 1929, where his rejection of genetics gained official backing.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Trofim_Lysenko"
+    },
+    {
+     "name": "Emil Gilels",
+     "role": "Pianist",
+     "note": "The Odesa-born pianist trained in the city in the early 1930s before rising to national fame.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Emil_Gilels"
+    },
+    {
+     "name": "Sviatoslav Richter",
+     "role": "Pianist",
+     "note": "He grew up in Odesa, where his father taught at the conservatory.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sviatoslav_Richter"
+    },
+    {
+     "name": "Pyotr Stolyarsky",
+     "role": "Violin teacher",
+     "note": "The Odesa teacher trained a generation of Soviet violinists in the city.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pyotr_Stolyarsky"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Yakov Cherevichenko",
+     "role": "Red Army commander",
+     "note": "He commanded the Odessa Military District from 1940 to June 1941.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yakov_Cherevichenko"
+    },
+    {
+     "name": "Pyotr Stolyarsky",
+     "role": "Violin teacher",
+     "note": "He was named People's Artist of the Ukrainian SSR in 1939 while teaching in Odesa.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pyotr_Stolyarsky"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Gheorghe Alexianu",
+     "role": "Governor of Transnistria",
+     "note": "He ran the Romanian occupation regime from Odesa from 1941 to 1944 and was tried and executed after the war.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Gheorghe_Alexianu",
+     "iron": true
+    },
+    {
+     "name": "Ion Antonescu",
+     "role": "Romanian dictator",
+     "note": "His government besieged Odesa and held it as the capital of Transnistria, where the October 1941 massacre took place.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ion_Antonescu"
+    },
+    {
+     "name": "Gavriil Zhukov",
+     "role": "Soviet naval commander",
+     "note": "The naval officer commanded the Odessa Defense Region during the 1941 siege.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Gavriil_Zhukov"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Georgy Zhukov",
+     "role": "Marshal of the Soviet Union",
+     "note": "Stalin moved him out of Moscow to command the Odessa Military District from 1946 to 1948.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Georgy_Zhukov"
+    },
+    {
+     "name": "Aleksey Kirichenko",
+     "role": "Communist Party official",
+     "note": "He was First Secretary of the Odesa Oblast party committee in the later 1940s, during the 1946-1947 famine.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Aleksey_Kirichenko"
+    },
+    {
+     "name": "Mikhail Zhvanetsky",
+     "role": "Satirist",
+     "note": "The Odesa-born writer grew up in the postwar city and began his career there.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Zhvanetsky"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Kira Muratova",
+     "role": "Film director",
+     "note": "She made most of her films at the Odesa Film Studio, where Soviet censors repeatedly restricted her work.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kira_Muratova"
+    },
+    {
+     "name": "Sviatoslav Karavanskyi",
+     "role": "Linguist and dissident",
+     "note": "The Odesa-born dissident spent decades in Soviet camps.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sviatoslav_Karavanskyi"
+    },
+    {
+     "name": "Kuksha of Odessa",
+     "role": "Orthodox monk, saint",
+     "note": "He spent his last years at the Holy Dormition Monastery in Odesa, from 1960 until his death in 1964.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kuksha_of_Odessa"
+    },
+    {
+     "name": "Rouslan Bodelan",
+     "role": "Communist Party official",
+     "note": "He headed the Odesa regional executive committee as Soviet rule ended in 1991.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Rouslan_Bodelan"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Rouslan Bodelan",
+     "role": "Governor, then mayor",
+     "note": "He was the oblast's first governor in 1995-1998 and mayor of Odesa from 1998 to 2005.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Rouslan_Bodelan"
+    },
+    {
+     "name": "Eduard Hurvits",
+     "role": "Mayor of Odesa",
+     "note": "He was mayor from 1994 to 1998 and fought a long dispute with Bodelan for control of the city.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Eduard_Hurvits"
+    },
+    {
+     "name": "Serhii Kivalov",
+     "role": "Jurist and politician",
+     "note": "The Odesa legal academic was an MP for the oblast and headed the Central Election Commission in 2004.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhii_Kivalov"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Vasyl Tsushko",
+     "role": "Governor of Odesa Oblast",
+     "note": "The Socialist politician became governor in February 2005 after the Orange Revolution.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasyl_Tsushko"
+    },
+    {
+     "name": "Mykola Skoryk",
+     "role": "Oblast council chairman",
+     "note": "The Party of Regions politician chaired the council from 2006 to 2010 and was governor from November 2013.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Skoryk"
+    },
+    {
+     "name": "Oleksiy Kostusyev",
+     "role": "Mayor of Odesa",
+     "note": "He won the mayoralty for the Party of Regions in 2010 and held it until 2013.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksiy_Kostusyev"
+    },
+    {
+     "name": "Ihor Markov",
+     "role": "Pro-Russian politician",
+     "note": "The Odesa businessman founded the Rodina Party and sat in parliament with the Party of Regions faction.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ihor_Markov"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Mikheil Saakashvili",
+     "role": "Governor of Odesa Oblast",
+     "note": "The former Georgian president was appointed governor in 2015 and resigned in 2016.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikheil_Saakashvili"
+    },
+    {
+     "name": "Gennadiy Trukhanov",
+     "role": "Mayor of Odesa",
+     "note": "He was elected in 2014 and re-elected in 2015 and 2020.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Gennadiy_Trukhanov"
+    },
+    {
+     "name": "Serhii Sternenko",
+     "role": "Activist",
+     "note": "The former head of Right Sector's Odesa branch survived several assassination attempts; a 2021 conviction in a 2015 abduction case was largely overturned on appeal.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhii_Sternenko"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Maksym Marchenko",
+     "role": "Governor of Odesa Oblast",
+     "note": "The former commander of the 28th Mechanized Brigade became governor on 1 March 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Maksym_Marchenko"
+    },
+    {
+     "name": "Oleksiy Neizhpapa",
+     "role": "Commander of the Ukrainian Navy",
+     "note": "He led the navy from its Odesa command during the blockade and the sinking of the Moskva.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksiy_Neizhpapa"
+    },
+    {
+     "name": "Gennadiy Trukhanov",
+     "role": "Mayor of Odesa",
+     "note": "He stayed in office and led the city through the first year of the invasion.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Gennadiy_Trukhanov"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Oleh Kiper",
+     "role": "Governor of Odesa Oblast",
+     "note": "The former prosecutor became head of the oblast administration on 30 May 2023.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleh_Kiper"
+    },
+    {
+     "name": "Oleksiy Goncharenko",
+     "role": "Member of parliament",
+     "note": "The Odesa-educated MP remained one of the city's best-known national politicians.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksiy_Goncharenko"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Serhiy Lysak",
+     "role": "Head of Odesa city administration",
+     "note": "He was appointed on 15 October 2025 to lead the new city military administration.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Lysak"
+    },
+    {
+     "name": "Gennadiy Trukhanov",
+     "role": "Former mayor of Odesa",
+     "note": "He was removed in October 2025 when he lost his Ukrainian citizenship over alleged Russian citizenship.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Gennadiy_Trukhanov"
+    },
+    {
+     "name": "Demyan Hanul",
+     "role": "Activist",
+     "note": "The Odesa activist and Street Front leader was shot dead in the city on 14 March 2025.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Demyan_Hanul"
+    }
+   ]
+  },
+  "UA-48": {
+   "national-revival": [
+    {
+     "name": "Mykola Arkas",
+     "role": "Composer and historian",
+     "note": "He led Ukrainian cultural life in Mykolaiv and wrote his History of Ukraine in 1908.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Arkas"
+    },
+    {
+     "name": "Aleksandra Sokolovskaya",
+     "role": "Marxist revolutionary",
+     "note": "She was active in Mykolaiv's socialist circles in the 1890s, where she met her future husband, Leon Trotsky.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Aleksandra_Sokolovskaya"
+    },
+    {
+     "name": "Menachem Mendel Schneerson",
+     "role": "Rabbi, later Chabad Rebbe",
+     "note": "The future Lubavitcher Rebbe was born in Mykolaiv in 1902 and lived there until 1907.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Menachem_Mendel_Schneerson"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Iosif Sklyar",
+     "role": "Bolshevik leader",
+     "note": "He chaired the Bolshevik city committee in Mykolaiv in 1917 and the provincial soviet executive from January 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Iosif_Sklyar"
+    },
+    {
+     "name": "Pinkhus Rovner",
+     "role": "Bolshevik revolutionary",
+     "note": "A former Mykolaiv shipyard worker, he took part in the city's March 1918 uprising against the German advance.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pinkhus_Rovner"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Nykyfor Hryhoriv",
+     "role": "Otaman",
+     "note": "His forces took the Mykolaiv area for the Bolsheviks in March 1919 before he turned against them.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nykyfor_Hryhoriv"
+    },
+    {
+     "name": "Iosif Sklyar",
+     "role": "Bolshevik leader",
+     "note": "He was killed in the Mykolaiv district in the summer of 1919 during fighting with Hryhoriv's forces.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Iosif_Sklyar"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Ivan Nosenko",
+     "role": "Shipbuilder",
+     "note": "He studied at the Mykolaiv shipbuilding technical school in 1924-1928 and rose through the city's Marty yard.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Nosenko"
+    },
+    {
+     "name": "Nikolai Yegipko",
+     "role": "Naval officer",
+     "note": "The Mykolaiv-born sailor did shipyard work after the Civil War before rejoining the navy in 1925.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nikolai_Yegipko"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Ivan Nosenko",
+     "role": "Shipbuilder",
+     "note": "He held senior engineering posts at the Marty yard in Mykolaiv until 1935.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Nosenko"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Ivan Nosenko",
+     "role": "People's Commissar of Shipbuilding",
+     "note": "The former Mykolaiv shipbuilder became Soviet commissar for the industry in 1940.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Nosenko"
+    },
+    {
+     "name": "Galina Petrova",
+     "role": "Student, later combat medic",
+     "note": "The future Hero of the Soviet Union was born in Mykolaiv and finished secondary school in 1940.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Galina_Petrova"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Konstantin Olshansky",
+     "role": "Soviet marine officer",
+     "note": "He led the March 1944 landing in occupied Mykolaiv's port and was killed there, later being named a Hero of the Soviet Union.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Konstantin_Olshansky"
+    },
+    {
+     "name": "Modest Isopescu",
+     "role": "Romanian prefect",
+     "note": "As prefect of Golta County he oversaw the camps at Bogdanovka and Domanivka, and he was later convicted as a war criminal.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Modest_Isopescu"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Ivan Nosenko",
+     "role": "Soviet shipbuilding minister",
+     "note": "The former Mykolaiv shipbuilder ran Soviet shipbuilding until his death in 1956.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Nosenko"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Leonid Sharayev",
+     "role": "Communist Party official",
+     "note": "He was First Secretary of the Mykolaiv Oblast party committee from 1980 to 1990.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leonid_Sharayev"
+    },
+    {
+     "name": "Anatoliy Kinakh",
+     "role": "Shipbuilding engineer",
+     "note": "He worked at Mykolaiv's Okean shipyard from 1981 and was elected to parliament in 1990.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anatoliy_Kinakh"
+    },
+    {
+     "name": "Klim Churyumov",
+     "role": "Astronomer",
+     "note": "The Mykolaiv-born scientist co-discovered comet 67P/Churyumov-Gerasimenko in 1969.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Klim_Churyumov"
+    },
+    {
+     "name": "Mykola Vinhranovsky",
+     "role": "Poet and film-maker",
+     "note": "The writer was born in Pervomaisk, now in Mykolaiv Oblast, and rose with the 1960s generation.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Vinhranovsky"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Anatoliy Kinakh",
+     "role": "Oblast leader, later prime minister",
+     "note": "He chaired the Mykolaiv Oblast Council from 1994 to 1996, before becoming Ukraine's prime minister in 2001.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anatoliy_Kinakh"
+    },
+    {
+     "name": "Yuri Gidzenko",
+     "role": "Cosmonaut",
+     "note": "Born in what is now Mykolaiv Oblast, he flew to Mir and the International Space Station in this era.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yuri_Gidzenko"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Serhiy Ryzhkov",
+     "role": "Engineer and university rector",
+     "note": "The Mykolaiv-born ecologist led the Admiral Makarov National University of Shipbuilding.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Ryzhkov"
+    },
+    {
+     "name": "Oleh Voloshyn",
+     "role": "Diplomat and journalist",
+     "note": "The Mykolaiv-born diplomat was spokesman for Ukraine's Foreign Ministry from 2010 to 2013.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleh_Voloshyn"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Vadym Merikov",
+     "role": "Governor of Mykolaiv Oblast",
+     "note": "He held the post from July 2014 to June 2016.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vadym_Merikov"
+    },
+    {
+     "name": "Oleksandr Senkevych",
+     "role": "Mayor of Mykolaiv",
+     "note": "He was elected mayor in 2015.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Senkevych"
+    },
+    {
+     "name": "Yurii Biriukov",
+     "role": "Businessman and volunteer",
+     "note": "The Mykolaiv-born businessman founded the Phoenix Wings volunteer aid group in 2014.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yurii_Biriukov"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Vitalii Kim",
+     "role": "Governor of Mykolaiv Oblast",
+     "note": "He led the oblast's civil defence through the 2022 battle for Mykolaiv.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vitalii_Kim"
+    },
+    {
+     "name": "Dmytro Marchenko",
+     "role": "Ukrainian general",
+     "note": "The general, born in the oblast's town of Voznesensk, led the defence of Mykolaiv in 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Dmytro_Marchenko"
+    },
+    {
+     "name": "Oleksiy Vadaturskyy",
+     "role": "Agribusiness founder",
+     "note": "The founder of the grain trader Nibulon was killed in a Russian missile strike on Mykolaiv on 31 July 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksiy_Vadaturskyy"
+    },
+    {
+     "name": "Ihor Bedzai",
+     "role": "Naval aviator",
+     "note": "The Mykolaiv native and deputy commander of the Ukrainian Navy was killed when Russian forces shot down his helicopter in 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ihor_Bedzai"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Vitalii Kim",
+     "role": "Governor of Mykolaiv Oblast",
+     "note": "He ran the oblast military administration as strikes continued and Russia held the Kinburn spit.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vitalii_Kim"
+    },
+    {
+     "name": "Oleksandr Senkevych",
+     "role": "Mayor of Mykolaiv",
+     "note": "He led the city as it worked to restore the water supply cut in 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Senkevych"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Vitalii Kim",
+     "role": "Governor of Mykolaiv Oblast",
+     "note": "He headed the oblast until 2026, when he left for national government as Minister of Veterans' Affairs.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vitalii_Kim"
+    },
+    {
+     "name": "Oleksandr Senkevych",
+     "role": "Mayor of Mykolaiv",
+     "note": "He continued as mayor under wartime rule.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Senkevych"
+    }
+   ]
+  },
+  "UA-65": {
+   "national-revival": [
+    {
+     "name": "Simon Frug",
+     "role": "Russian-Jewish poet",
+     "note": "The poet was born in 1860 at a Jewish farming colony in Kherson Governorate.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Simon_Frug"
+    },
+    {
+     "name": "Dora Brilliant",
+     "role": "Socialist-Revolutionary terrorist",
+     "note": "The Kherson-born revolutionary made bombs for the SR Combat Organisation.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Dora_Brilliant"
+    },
+    {
+     "name": "Olga Taratuta",
+     "role": "Anarchist",
+     "note": "The Ukrainian Jewish revolutionary, a founder of the Anarchist Black Cross, was born in the Kherson region.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Olga_Taratuta"
+    },
+    {
+     "name": "Moshe Sharett",
+     "role": "Later prime minister of Israel",
+     "note": "He was born in Kherson in 1894 and left for Ottoman Palestine as a boy.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Moshe_Sharett"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Mykola Kulish",
+     "role": "Writer, soviet leader",
+     "note": "From early 1918 the future playwright headed the Oleshky council of workers' and peasants' deputies.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Kulish"
+    },
+    {
+     "name": "Oksana Petrusenko",
+     "role": "Opera singer",
+     "note": "She performed at the Kherson Musical Drama Theatre between 1918 and 1921.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oksana_Petrusenko"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Nykyfor Hryhoriv",
+     "role": "Otaman",
+     "note": "He drove the Allied garrison from Kherson in March 1919 and then rose against the Bolsheviks.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nykyfor_Hryhoriv"
+    },
+    {
+     "name": "Vasily Blyukher",
+     "role": "Red Army commander",
+     "note": "His 51st Division held the Kakhovka bridgehead against Wrangel in 1920.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasily_Blyukher"
+    },
+    {
+     "name": "Dmitry Karbyshev",
+     "role": "Red Army military engineer",
+     "note": "He oversaw the fortification of the Kakhovka bridgehead in 1920.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Dmitry_Karbyshev"
+    },
+    {
+     "name": "Mykola Kulish",
+     "role": "Red Army organiser",
+     "note": "He formed a peasant regiment in Kherson in 1919, which defended the city against Denikin.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Kulish"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Mykola Kulish",
+     "role": "Playwright",
+     "note": "He worked in education in the Oleshky area, and the region's famine informed his play 97.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Kulish"
+    },
+    {
+     "name": "Georgy Arbatov",
+     "role": "Later Soviet political scientist",
+     "note": "The future adviser to Soviet leaders was born in Kherson in 1923.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Georgy_Arbatov"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Mykola Kulish",
+     "role": "Playwright",
+     "note": "The writer from Chaplynka was arrested in the 1930s purges and shot in 1937.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Kulish"
+    },
+    {
+     "name": "Pavel Dubinda",
+     "role": "Fish-farm worker, later war hero",
+     "note": "Born in the Kherson region, he worked on a fish farm before joining the navy in 1936.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Dubinda"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Boris Lavrenyov",
+     "role": "Writer",
+     "note": "The Kherson-born author was by now a prominent Soviet playwright.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Boris_Lavrenyov"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Vasily Margelov",
+     "role": "Soviet general",
+     "note": "His 49th Guards Rifle Division captured Kherson in March 1944 and took the city's name.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasily_Margelov"
+    },
+    {
+     "name": "Otto Ohlendorf",
+     "role": "SS commander",
+     "note": "His Einsatzgruppe D carried out mass killings across southern Ukraine, including this region.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Otto_Ohlendorf",
+     "iron": true
+    },
+    {
+     "name": "Pavel Dubinda",
+     "role": "Soviet soldier",
+     "note": "The Kherson-region native became one of only four men to be both a full holder of the Order of Glory and a Hero of the Soviet Union.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Dubinda"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Alexander Dovzhenko",
+     "role": "Film director",
+     "note": "His last screenplay, Poem About a Sea, was dedicated to the building of the Kakhovka Reservoir.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Alexander_Dovzhenko"
+    },
+    {
+     "name": "Pavel Dubinda",
+     "role": "War hero",
+     "note": "He worked in the Antarctic whaling fleet after the war and spent the rest of his life in Kherson.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pavel_Dubinda"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Vitaly Zholobov",
+     "role": "Cosmonaut",
+     "note": "The Kherson Oblast native flew as flight engineer on Soyuz 21 in 1976.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vitaly_Zholobov"
+    },
+    {
+     "name": "Valeriy Borzov",
+     "role": "Sprinter",
+     "note": "The double Olympic champion of 1972 came up through athletics in Nova Kakhovka.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Valeriy_Borzov"
+    },
+    {
+     "name": "Mykhailo Kushnerenko",
+     "role": "Soviet politician",
+     "note": "He became chairman of the Kherson Oblast Council in 1990.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Kushnerenko"
+    },
+    {
+     "name": "Sergei Garmash",
+     "role": "Actor",
+     "note": "The film and stage actor was born in Kherson in 1958.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergei_Garmash"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Mykhailo Kushnerenko",
+     "role": "Oblast leader",
+     "note": "He chaired the oblast council until 1994 and served as governor in 1997-1998.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Kushnerenko"
+    },
+    {
+     "name": "Vitaly Zholobov",
+     "role": "Cosmonaut and politician",
+     "note": "He led the oblast from 1994 to 1996 and was governor in 1995-1996.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vitaly_Zholobov"
+    },
+    {
+     "name": "Vladimir Saldo",
+     "role": "Mayor of Kherson",
+     "note": "He became mayor in 2002.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Saldo",
+     "iron": true
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Vladimir Saldo",
+     "role": "Mayor of Kherson",
+     "note": "He served as mayor until 2012 and then as an MP.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Saldo",
+     "iron": true
+    },
+    {
+     "name": "Mykola Kostyak",
+     "role": "Governor of Kherson Oblast",
+     "note": "He led the oblast administration from June 2010 until February 2014.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Kostyak"
+    },
+    {
+     "name": "Yuriy Odarchenko",
+     "role": "Batkivshchyna politician",
+     "note": "The Kherson politician sat in parliament from 2006.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yuriy_Odarchenko"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Yuriy Odarchenko",
+     "role": "Governor of Kherson Oblast",
+     "note": "He was appointed on 2 March 2014 as Russia seized neighbouring Crimea.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yuriy_Odarchenko"
+    },
+    {
+     "name": "Andrii Gordieiev",
+     "role": "Governor of Kherson Oblast",
+     "note": "He held the post from 2016 to 2019.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Andrii_Gordieiev"
+    },
+    {
+     "name": "Kateryna Handziuk",
+     "role": "Anti-corruption activist",
+     "note": "She died in November 2018 of injuries from an acid attack in Kherson, a case that drew national protests.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kateryna_Handziuk"
+    },
+    {
+     "name": "Volodymyr Mykolaienko",
+     "role": "Mayor of Kherson",
+     "note": "He served as mayor from 2015 to 2020.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Mykolaienko"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Ihor Kolykhaiev",
+     "role": "Mayor of Kherson",
+     "note": "The elected mayor stayed in the occupied city until Russian forces detained him in 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ihor_Kolykhaiev"
+    },
+    {
+     "name": "Vladimir Saldo",
+     "role": "Russian-installed administrator",
+     "note": "The former mayor headed the occupation administration from April 2022 and is regarded in Ukraine as a collaborator.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Saldo",
+     "iron": true
+    },
+    {
+     "name": "Kirill Stremousov",
+     "role": "Russian-installed official",
+     "note": "He was deputy head of the occupation administration and died in November 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Kirill_Stremousov",
+     "iron": true
+    },
+    {
+     "name": "Yurii Kerpatenko",
+     "role": "Conductor",
+     "note": "The Kherson musician was killed in 2022 in occupied Kherson; Ukrainian officials say he had refused to work with the occupiers.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yurii_Kerpatenko"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Oleksandr Prokudin",
+     "role": "Head of Kherson oblast administration",
+     "note": "He has led Ukraine's administration of the oblast since 7 February 2023.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Prokudin"
+    },
+    {
+     "name": "Vladimir Saldo",
+     "role": "Russian-installed governor",
+     "note": "He has run the occupied left bank, with Russia naming him governor in 2023.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Saldo",
+     "iron": true
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Oleksandr Prokudin",
+     "role": "Head of Kherson oblast administration",
+     "note": "He continued to head the Ukrainian-held right bank under daily shelling and drone attacks.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleksandr_Prokudin"
+    },
+    {
+     "name": "Roman Kostenko",
+     "role": "Member of parliament",
+     "note": "The Kherson-born MP, who fought in the 2022 southern counteroffensive, remained a prominent voice for the region.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Roman_Kostenko"
+    }
+   ]
+  },
+  "UA-43": {
+   "national-revival": [
+    {
+     "name": "Ismail Gasprinsky",
+     "role": "Crimean Tatar reformer",
+     "note": "From Bakhchysarai he published the newspaper Terciman from 1883 and spread Jadidist school reform.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ismail_Gasprinsky"
+    },
+    {
+     "name": "Ivan Aivazovsky",
+     "role": "Marine painter",
+     "note": "The Feodosia-born artist lived and worked in his home town until his death in 1900.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Aivazovsky"
+    },
+    {
+     "name": "Anton Chekhov",
+     "role": "Writer and physician",
+     "note": "He settled in Yalta in his last years for his health.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anton_Chekhov"
+    },
+    {
+     "name": "Lesya Ukrainka",
+     "role": "Poet",
+     "note": "The Ukrainian poet spent long periods in Crimea seeking treatment for tuberculosis.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Lesya_Ukrainka"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Noman Çelebicihan",
+     "role": "Crimean Tatar leader",
+     "note": "He headed the Crimean People's Republic in December 1917 and was killed by Bolshevik sailors in February 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Noman_Chelebidjikhan"
+    },
+    {
+     "name": "Cafer Seydahmet",
+     "role": "Crimean Tatar politician",
+     "note": "A founder of Milliy Firqa, he led the republic's army and foreign affairs.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Cafer_Seydahmet_K%C4%B1r%C4%B1mer"
+    },
+    {
+     "name": "Maciej Sulkiewicz",
+     "role": "General, premier",
+     "note": "The Lithuanian Tatar general led the German-backed Crimean Regional Government in 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Maciej_Sulkiewicz"
+    },
+    {
+     "name": "Solomon Krym",
+     "role": "Karaite politician",
+     "note": "He headed the Kadet-led Crimean government from November 1918 to April 1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Solomon_Krym"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Yakov Slashchov",
+     "role": "White general",
+     "note": "He held the Perekop Isthmus against the Red Army in the winter of 1919-1920.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yakov_Slashchov"
+    },
+    {
+     "name": "Dmitry Ulyanov",
+     "role": "Bolshevik, Lenin's brother",
+     "note": "He headed the short-lived Crimean Soviet government in 1919.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Dmitry_Ilyich_Ulyanov"
+    },
+    {
+     "name": "Béla Kun",
+     "role": "Hungarian communist",
+     "note": "As a Crimean revolutionary committee leader he oversaw the Red Terror after November 1920.",
+     "wikipedia": "https://en.wikipedia.org/wiki/B%C3%A9la_Kun"
+    },
+    {
+     "name": "Rosalia Zemlyachka",
+     "role": "Bolshevik party official",
+     "note": "She worked with Kun in the mass executions in Crimea in 1920-1921.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Rosalia_Zemlyachka"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Veli İbraimov",
+     "role": "Chairman of Crimean ASSR",
+     "note": "He chaired the republic's executive until he was executed in 1928.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Veli_%C4%B0braimov"
+    },
+    {
+     "name": "Usein Bodaninsky",
+     "role": "Crimean Tatar historian",
+     "note": "He was the first director of the Bakhchysarai Palace Museum.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Usein_Bodaninsky"
+    },
+    {
+     "name": "Maximilian Voloshin",
+     "role": "Poet",
+     "note": "He opened his Koktebel house as a gathering place for writers and artists.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Maximilian_Voloshin"
+    },
+    {
+     "name": "Alexander Grin",
+     "role": "Writer",
+     "note": "He lived in Feodosia and wrote some of his best-known romantic fiction there.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Alexander_Grin"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Usein Bodaninsky",
+     "role": "Crimean Tatar historian",
+     "note": "He was shot in Simferopol on 17 April 1938 during the Great Terror.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Usein_Bodaninsky"
+    },
+    {
+     "name": "Osman Aqçoqraqlı",
+     "role": "Crimean Tatar scholar",
+     "note": "The writer and archaeologist was executed on 17 April 1938.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Osman_Aq%C3%A7oqraql%C4%B1"
+    },
+    {
+     "name": "Asan Sabri Ayvazov",
+     "role": "Crimean Tatar politician",
+     "note": "The veteran journalist and Milliy Firqa figure was executed in Simferopol on 17 April 1938.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Asan_Sabri_Ayvazov"
+    },
+    {
+     "name": "Amet-khan Sultan",
+     "role": "Trainee pilot",
+     "note": "The Alupka-born pilot trained at a flying club before joining the Red Army in 1939.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Amet-khan_Sultan"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Amet-khan Sultan",
+     "role": "Red Air Force pilot",
+     "note": "He trained at the Kacha flying school, graduating in 1940.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Amet-khan_Sultan"
+    },
+    {
+     "name": "Fyodor Kuznetsov",
+     "role": "Soviet general",
+     "note": "He commanded the 51st Army, formed in Crimea in August 1941.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Fyodor_Kuznetsov"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Erich von Manstein",
+     "role": "German field marshal",
+     "note": "His 11th Army conquered Crimea in 1941-1942.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Erich_von_Manstein",
+     "iron": true
+    },
+    {
+     "name": "Otto Ohlendorf",
+     "role": "SS commander",
+     "note": "His Einsatzgruppe D carried out the mass murder of Jews and others in Crimea.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Otto_Ohlendorf",
+     "iron": true
+    },
+    {
+     "name": "Alime Abdenanova",
+     "role": "Crimean Tatar Red Army scout",
+     "note": "She led a reconnaissance group in occupied Crimea and was executed in April 1944.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Alime_Abdenanova"
+    },
+    {
+     "name": "Ilya Selvinsky",
+     "role": "Poet",
+     "note": "His poem I Saw It! was one of the first literary accounts of the Bagerovo massacre near Kerch.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ilya_Selvinsky"
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Ivan Serov",
+     "role": "Soviet security officer",
+     "note": "He helped lead the deportation of the Crimean Tatars in May 1944.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Serov",
+     "iron": true
+    },
+    {
+     "name": "Bogdan Kobulov",
+     "role": "Soviet security officer",
+     "note": "He helped lead the deportation of the Crimean Tatars in May 1944.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Bogdan_Kobulov"
+    },
+    {
+     "name": "Luke of Simferopol",
+     "role": "Archbishop and surgeon",
+     "note": "He served as Archbishop of Crimea from 1946 and was later canonised.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Luke_Voyno-Yasenetsky"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Mustafa Dzhemilev",
+     "role": "Crimean Tatar dissident",
+     "note": "He was deported from Crimea as an infant and led the movement for the people's return, becoming the first Mejlis head in 1991.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mustafa_Dzhemilev"
+    },
+    {
+     "name": "Musa Mamut",
+     "role": "Crimean Tatar activist",
+     "note": "He set himself on fire in Crimea in 1978 in protest at the ban on Crimean Tatars returning.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Musa_Mamut"
+    },
+    {
+     "name": "Mykola Bahrov",
+     "role": "Communist Party official",
+     "note": "He headed Crimea's party committee and became chairman of the Supreme Council in 1991.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykola_Bahrov"
+    },
+    {
+     "name": "Mikhail Gorbachev",
+     "role": "Soviet leader",
+     "note": "He was held at his Foros dacha in Crimea during the August 1991 coup.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Gorbachev"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Yuriy Meshkov",
+     "role": "President of Crimea",
+     "note": "The pro-Russian leader was the only holder of the post, from 1994 to 1995.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yuriy_Meshkov"
+    },
+    {
+     "name": "Leonid Hrach",
+     "role": "Communist leader",
+     "note": "He chaired the Crimean parliament from 1998 to 2002.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Leonid_Hrach"
+    },
+    {
+     "name": "Serhiy Kunitsyn",
+     "role": "Prime Minister of Crimea",
+     "note": "He first held the post in 1998-2001.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Kunitsyn"
+    },
+    {
+     "name": "Refat Chubarov",
+     "role": "Crimean Tatar leader",
+     "note": "He became a leading member of the Mejlis and a Ukrainian MP.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Refat_Chubarov"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Vasyl Dzharty",
+     "role": "Prime Minister of Crimea",
+     "note": "He headed the Crimean government from March 2010 until his death in August 2011.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vasyl_Dzharty"
+    },
+    {
+     "name": "Anatolii Mohyliov",
+     "role": "Prime Minister of Crimea",
+     "note": "He held the post from November 2011 until armed men seized parliament in February 2014.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Anatolii_Mohyliov"
+    },
+    {
+     "name": "Vladimir Konstantinov",
+     "role": "Crimean parliament chairman",
+     "note": "He became chairman in 2010, after the Party of Regions won the Crimean parliament.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Konstantinov_(politician)"
+    },
+    {
+     "name": "Mustafa Dzhemilev",
+     "role": "Mejlis chairman",
+     "note": "He led the Crimean Tatars' representative body through this period.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mustafa_Dzhemilev"
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Sergey Aksyonov",
+     "role": "Russian-installed leader",
+     "note": "He was installed as premier after armed men took the parliament in February 2014.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergey_Aksyonov",
+     "iron": true
+    },
+    {
+     "name": "Oleh Sentsov",
+     "role": "Film-maker",
+     "note": "The Crimean director was jailed by Russia after opposing the annexation and was released in a 2019 exchange.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Oleh_Sentsov"
+    },
+    {
+     "name": "Nariman Dzhelyal",
+     "role": "Mejlis deputy chairman",
+     "note": "He stayed in Crimea as the Mejlis's senior figure there until his arrest in 2021.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nariman_Dzhelyal"
+    },
+    {
+     "name": "Jamala",
+     "role": "Singer",
+     "note": "The Crimean Tatar singer won Eurovision 2016 with 1944, a song about the deportation.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Jamala"
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Sergey Aksyonov",
+     "role": "Russian-installed leader",
+     "note": "He ran occupied Crimea as it served as a base for the invasion.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergey_Aksyonov",
+     "iron": true
+    },
+    {
+     "name": "Tamila Tasheva",
+     "role": "Presidential representative",
+     "note": "She was the Ukrainian president's Permanent Representative in Crimea.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Tamila_Tasheva"
+    },
+    {
+     "name": "Nariman Dzhelyal",
+     "role": "Crimean Tatar political prisoner",
+     "note": "A Russian-installed court sentenced him in 2022 in a case Ukraine calls politically motivated.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nariman_Dzhelyal"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Rustem Umerov",
+     "role": "Defence minister",
+     "note": "The Crimean Tatar politician, an adviser to Dzhemilev and Crimea Platform co-chair, became defence minister in September 2023.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Rustem_Umerov"
+    },
+    {
+     "name": "Ayder Muzhdabaev",
+     "role": "Journalist",
+     "note": "The Crimean Tatar journalist is deputy director of the ATR television channel.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ayder_Muzhdabaev"
+    },
+    {
+     "name": "Vladyslav Yesypenko",
+     "role": "Journalist, prisoner",
+     "note": "The RFE/RL contributor stayed jailed in occupied Crimea throughout these years.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladyslav_Yesypenko"
+    },
+    {
+     "name": "Server Mustafayev",
+     "role": "Human rights defender",
+     "note": "The Crimean Solidarity coordinator remained imprisoned by Russia.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Server_Mustafayev"
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Vladyslav Yesypenko",
+     "role": "Journalist",
+     "note": "He was freed on 24 June 2025 after more than four years in Russian detention.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Vladyslav_Yesypenko"
+    },
+    {
+     "name": "Sergey Aksyonov",
+     "role": "Russian-installed leader",
+     "note": "He continued to run occupied Crimea.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergey_Aksyonov",
+     "iron": true
+    },
+    {
+     "name": "Refat Chubarov",
+     "role": "Mejlis chairman",
+     "note": "He led the Mejlis from mainland Ukraine, barred from Crimea by Russian authorities.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Refat_Chubarov"
+    }
+   ]
+  },
+  "UA-40": {
+   "national-revival": [
+    {
+     "name": "Pyotr Schmidt",
+     "role": "Naval lieutenant, mutineer",
+     "note": "He led the Sevastopol uprising of November 1905 and was executed in 1906.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pyotr_Schmidt"
+    },
+    {
+     "name": "Grigoriy Chukhnin",
+     "role": "Admiral",
+     "note": "As Black Sea Fleet commander he put down the 1905 mutinies and was killed in 1906.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Grigoriy_Pavlovich_Chukhnin"
+    },
+    {
+     "name": "Alexander Kolchak",
+     "role": "Admiral",
+     "note": "He commanded the Black Sea Fleet at Sevastopol from 1916 until 1917.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Alexander_Kolchak"
+    }
+   ],
+   "ukrainian-revolution": [
+    {
+     "name": "Mikhail Sablin",
+     "role": "Admiral",
+     "note": "The Sevastopol-born commander raised the Ukrainian flag on the fleet in April 1918.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Sablin"
+    },
+    {
+     "name": "Yuri Gaven",
+     "role": "Bolshevik organiser",
+     "note": "The Latvian revolutionary was sent to Sevastopol in 1917 and helped organise the seizure of power in Crimea.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Yuri_Gaven"
+    }
+   ],
+   "soviet-takeover": [
+    {
+     "name": "Pyotr Wrangel",
+     "role": "White commander",
+     "note": "He ruled from Sevastopol in 1920 and organised the evacuation of his army in November.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Pyotr_Wrangel"
+    },
+    {
+     "name": "Ivan Papanin",
+     "role": "Bolshevik partisan organiser",
+     "note": "The Sevastopol-born future polar explorer was sent to Crimea in 1920 to organise partisans against Wrangel.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Papanin"
+    }
+   ],
+   "soviet-ukraine-1920s": [
+    {
+     "name": "Ivan Yumashev",
+     "role": "Naval officer",
+     "note": "He commanded the Black Sea destroyer Dzerzhinsky from 1927 to 1931.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Yumashev"
+    }
+   ],
+   "holodomor-terror": [
+    {
+     "name": "Nikolai Kuznetsov",
+     "role": "Naval officer",
+     "note": "He commanded the Black Sea cruiser Chervona Ukraina in 1933-1936.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nikolai_Kuznetsov_(admiral)"
+    },
+    {
+     "name": "Ivan Yumashev",
+     "role": "Fleet commander",
+     "note": "He commanded the Black Sea Fleet in 1938-1939, during the purges of its leadership.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Yumashev"
+    }
+   ],
+   "soviet-annexations": [
+    {
+     "name": "Filipp Oktyabrsky",
+     "role": "Black Sea Fleet commander",
+     "note": "He took command of the fleet in March 1939.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Filipp_Oktyabrsky"
+    },
+    {
+     "name": "Nikolai Kulakov",
+     "role": "Political officer",
+     "note": "He sat on the Black Sea Fleet's Military Council at the outbreak of war in 1941.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nikolai_Kulakov"
+    }
+   ],
+   "nazi-occupation": [
+    {
+     "name": "Ivan Petrov",
+     "role": "Soviet general",
+     "note": "He commanded the Separate Coastal Army in the defence of Sevastopol.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Ivan_Petrov_(army_general)"
+    },
+    {
+     "name": "Lyudmila Pavlichenko",
+     "role": "Sniper",
+     "note": "She fought at Odesa and Sevastopol, where she was wounded in 1942.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Lyudmila_Pavlichenko"
+    },
+    {
+     "name": "Nina Onilova",
+     "role": "Machine gunner",
+     "note": "She was mortally wounded in the fighting for Sevastopol in March 1942.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Nina_Onilova"
+    },
+    {
+     "name": "Erwin Jaenecke",
+     "role": "German general",
+     "note": "He commanded the 17th Army trapped in Crimea in 1944.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Erwin_Jaenecke",
+     "iron": true
+    }
+   ],
+   "postwar-ussr": [
+    {
+     "name": "Filipp Oktyabrsky",
+     "role": "Black Sea Fleet commander",
+     "note": "He commanded the fleet again in the rebuilding years to 1948.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Filipp_Oktyabrsky"
+    },
+    {
+     "name": "Sergey Gorshkov",
+     "role": "Admiral",
+     "note": "He took command of the Black Sea Fleet in August 1951.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergey_Gorshkov"
+    }
+   ],
+   "soviet-ukraine-late": [
+    {
+     "name": "Mikhail Khronopulo",
+     "role": "Admiral",
+     "note": "He was the penultimate commander of the Soviet Black Sea Fleet.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Khronopulo"
+    },
+    {
+     "name": "Lyudmila Aksyonova",
+     "role": "Athlete",
+     "note": "The Sevastopol-born 400 m runner won Olympic team bronze in 1976.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Lyudmila_Aksyonova"
+    },
+    {
+     "name": "Aleksandr Nosatov",
+     "role": "Naval officer",
+     "note": "The Sevastopol-born officer began his Soviet Navy career in this period.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Aleksandr_Nosatov"
+    }
+   ],
+   "independence": [
+    {
+     "name": "Boris Kozhin",
+     "role": "First Ukrainian Navy commander",
+     "note": "He commanded the new navy from April 1992 to October 1993.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Boris_Kozhin"
+    },
+    {
+     "name": "Mykhailo Yezhel",
+     "role": "Ukrainian Navy commander",
+     "note": "He led the navy from 1996 to 2003.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mykhailo_Yezhel"
+    }
+   ],
+   "orange-to-euromaidan": [
+    {
+     "name": "Serhiy Kunitsyn",
+     "role": "Governor of Sevastopol",
+     "note": "He headed the city administration from 2006 to 2010.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Kunitsyn"
+    },
+    {
+     "name": "Valeriy Saratov",
+     "role": "Governor of Sevastopol",
+     "note": "The Party of Regions politician held the post from 2010 to 2011.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Valeriy_Saratov"
+    },
+    {
+     "name": "Volodymyr Yatsuba",
+     "role": "Governor of Sevastopol",
+     "note": "He held the post from 2011 until the events of 2014.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Volodymyr_Yatsuba"
+    },
+    {
+     "name": "Aleksandr Vitko",
+     "role": "Russian Black Sea Fleet commander",
+     "note": "He took command of the fleet in April 2013.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Aleksandr_Vitko",
+     "iron": true
+    }
+   ],
+   "crimea-donbas-war": [
+    {
+     "name": "Aleksei Chaly",
+     "role": "Pro-Russian businessman",
+     "note": "A rally proclaimed him 'people's mayor' in February 2014 and he then led the Russian-installed assembly.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Aleksei_Chaly",
+     "iron": true
+    },
+    {
+     "name": "Serhiy Hayduk",
+     "role": "Ukrainian Navy commander",
+     "note": "He was named navy commander in March 2014 and was detained by pro-Russian forces in Sevastopol that month.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Serhiy_Hayduk"
+    },
+    {
+     "name": "Denis Berezovsky",
+     "role": "Defecting admiral",
+     "note": "He switched allegiance to Russia days after being made navy commander in 2014.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Denis_Berezovsky"
+    },
+    {
+     "name": "Dmitry Ovsyannikov",
+     "role": "Russian-installed governor",
+     "note": "He held the post from 2017 to 2019.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Dmitry_Ovsyannikov",
+     "iron": true
+    }
+   ],
+   "full-scale-invasion": [
+    {
+     "name": "Mikhail Razvozhayev",
+     "role": "Russian-installed governor",
+     "note": "He has run occupied Sevastopol since 2020.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Razvozhayev",
+     "iron": true
+    },
+    {
+     "name": "Igor Osipov",
+     "role": "Black Sea Fleet commander",
+     "note": "He commanded the fleet in the opening stage of the invasion, including the loss of the Moskva.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Igor_Osipov"
+    },
+    {
+     "name": "Viktor Sokolov",
+     "role": "Black Sea Fleet commander",
+     "note": "He took over the fleet in August 2022.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Viktor_Sokolov_(naval_officer)"
+    }
+   ],
+   "war-of-attrition": [
+    {
+     "name": "Sergei Pinchuk",
+     "role": "Black Sea Fleet commander",
+     "note": "The Sevastopol-born admiral took command in 2024 after Ukrainian strikes on the fleet.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergei_Pinchuk"
+    },
+    {
+     "name": "Mikhail Razvozhayev",
+     "role": "Russian-installed governor",
+     "note": "He ran the city through repeated Ukrainian strikes on the port.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Razvozhayev",
+     "iron": true
+    }
+   ],
+   "war-2025-2026": [
+    {
+     "name": "Mikhail Razvozhayev",
+     "role": "Russian-installed governor",
+     "note": "He continued to administer occupied Sevastopol.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Mikhail_Razvozhayev",
+     "iron": true
+    },
+    {
+     "name": "Sergei Pinchuk",
+     "role": "Black Sea Fleet commander",
+     "note": "He continued to command the fleet; press reports in 2025 of his removal were not confirmed.",
+     "wikipedia": "https://en.wikipedia.org/wiki/Sergei_Pinchuk"
+    }
+   ]
+  }
+ }
+}
