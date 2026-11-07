@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-11-06T19:14:56.072Z",
+  "generatedAt": "2026-11-07T17:42:13.295Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Why the prognosis for healthcare stocks is uncertain ahead of Congress’ new makeup",
+      "link": "https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html",
+      "pubDate": "Sat, 07 Nov 2026 16:02:33 GMT"
+    },
+    {
+      "title": "Berkshire Hathaway more than doubles buybacks in third quarter as earnings decline",
+      "link": "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html",
+      "pubDate": "Sat, 07 Nov 2026 15:23:46 GMT"
+    },
     {
       "title": "Americans are on a &apos;treadmill of high inflation&apos; and more rate hikes are likely, Fed&apos;s Daly says",
       "link": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
@@ -16,7 +26,7 @@
     {
       "title": "Nasdaq drops into correction territory — here’s what typically happens next",
       "link": "https://www.cnbc.com/2026/11/05/nasdaq-drops-into-correction-territory-heres-what-typically-happens-next.html",
-      "pubDate": "Fri, 06 Nov 2026 13:47:43 GMT"
+      "pubDate": "Fri, 06 Nov 2026 20:42:28 GMT"
     },
     {
       "title": "Top Democrats call to rein in AI buildout after midterms sweep: &apos;National data center moratorium now&apos;",
@@ -82,16 +92,6 @@
       "title": "Aon CEO warns AI data center insurance risks could threaten financing",
       "link": "https://www.cnbc.com/2026/10/29/aon-ai-data-center-insurance-financing.html",
       "pubDate": "Thu, 29 Oct 2026 20:12:29 GMT"
-    },
-    {
-      "title": "Kalshi valuation jumps to $40 billion in latest funding round",
-      "link": "https://www.cnbc.com/2026/10/29/kalshi-40-billion-valuation-funding-round.html",
-      "pubDate": "Thu, 29 Oct 2026 12:05:18 GMT"
-    },
-    {
-      "title": "It&apos;s a &apos;socialist&apos; bank — and North Dakota Republicans love it",
-      "link": "https://www.cnbc.com/2026/10/29/bank-north-dakota-socialism-election.html",
-      "pubDate": "Fri, 30 Oct 2026 22:12:36 GMT"
     }
   ]
 }
