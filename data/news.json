@@ -1,12 +1,42 @@
 {
-  "generatedAt": "2026-11-04T19:39:23.566Z",
+  "generatedAt": "2026-11-06T19:14:56.072Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Americans are on a &apos;treadmill of high inflation&apos; and more rate hikes are likely, Fed&apos;s Daly says",
+      "link": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
+      "pubDate": "Fri, 06 Nov 2026 19:05:00 GMT"
+    },
+    {
+      "title": "The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%",
+      "link": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
+      "pubDate": "Fri, 06 Nov 2026 17:09:53 GMT"
+    },
+    {
+      "title": "Nasdaq drops into correction territory — here’s what typically happens next",
+      "link": "https://www.cnbc.com/2026/11/05/nasdaq-drops-into-correction-territory-heres-what-typically-happens-next.html",
+      "pubDate": "Fri, 06 Nov 2026 13:47:43 GMT"
+    },
+    {
+      "title": "Top Democrats call to rein in AI buildout after midterms sweep: &apos;National data center moratorium now&apos;",
+      "link": "https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html",
+      "pubDate": "Thu, 05 Nov 2026 20:17:16 GMT"
+    },
+    {
+      "title": "Barkin sees interest rate hikes ahead, but at a gradual pace",
+      "link": "https://www.cnbc.com/2026/11/05/barkin-sees-interest-rate-hikes-ahead-but-at-a-gradual-pace.html",
+      "pubDate": "Thu, 05 Nov 2026 16:34:33 GMT"
+    },
+    {
+      "title": "What the Democratic midterms sweep changes for U.S.-China relations",
+      "link": "https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html",
+      "pubDate": "Thu, 05 Nov 2026 12:57:10 GMT"
+    },
+    {
       "title": "10-year Treasury yield slides as traders mull over Democrats&apos; midterm victories, oil prices drop",
       "link": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
-      "pubDate": "Wed, 04 Nov 2026 17:11:00 GMT"
+      "pubDate": "Wed, 04 Nov 2026 21:18:44 GMT"
     },
     {
       "title": "Blackstone president calls for more equity to fund AI buildout as debt risks mount",
@@ -62,36 +92,6 @@
       "title": "It&apos;s a &apos;socialist&apos; bank — and North Dakota Republicans love it",
       "link": "https://www.cnbc.com/2026/10/29/bank-north-dakota-socialism-election.html",
       "pubDate": "Fri, 30 Oct 2026 22:12:36 GMT"
-    },
-    {
-      "title": "Bond investor Jeff Gundlach on Fed&apos;s rate pause: &apos;What are you waiting for?&apos;",
-      "link": "https://www.cnbc.com/2026/10/28/bond-investor-jeff-gundlach-talks-feds-rate-pause-with-cnbc.html",
-      "pubDate": "Wed, 28 Oct 2026 19:53:50 GMT"
-    },
-    {
-      "title": "Here is what changed in the new Fed statement",
-      "link": "https://www.cnbc.com/2026/10/28/fed-statement-redline-october-2026.html",
-      "pubDate": "Wed, 28 Oct 2026 18:06:50 GMT"
-    },
-    {
-      "title": "Fed holds rates steady despite concerns over inflation",
-      "link": "https://www.cnbc.com/2026/10/28/fed-interest-rate-decision-october-2026.html",
-      "pubDate": "Wed, 28 Oct 2026 19:43:48 GMT"
-    },
-    {
-      "title": "Margin debt growth slows sharply as stock market warning signs build",
-      "link": "https://www.cnbc.com/2026/10/27/margin-debt-growth-cools-after-2026-surge-may-signal-market-top.html",
-      "pubDate": "Tue, 27 Oct 2026 18:53:18 GMT"
-    },
-    {
-      "title": "One week out, prediction markets see Democrats as favored to sweep Congress",
-      "link": "https://www.cnbc.com/2026/10/27/2026-midterms-prediction-markets-democrats-congress.html",
-      "pubDate": "Tue, 27 Oct 2026 16:15:21 GMT"
-    },
-    {
-      "title": "Fed expected to hold rates steady, but Warsh may point way to more hikes",
-      "link": "https://www.cnbc.com/2026/10/27/federal-reserve-rates-kevin-warsh.html",
-      "pubDate": "Tue, 27 Oct 2026 15:52:26 GMT"
     }
   ]
 }
