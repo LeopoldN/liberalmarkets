@@ -1,8 +1,18 @@
 {
-  "generatedAt": "2026-11-08T17:52:09.798Z",
+  "generatedAt": "2026-11-09T22:14:06.695Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Jensen Huang exit odds are low on prediction markets after Nvidia probe",
+      "link": "https://www.cnbc.com/2026/11/09/jensen-huang-nvidia-exit-prediction-markets.html",
+      "pubDate": "Mon, 09 Nov 2026 18:46:01 GMT"
+    },
+    {
+      "title": "Goldman CEO Solomon says AI financing remains strong despite market jitters",
+      "link": "https://www.cnbc.com/2026/11/09/goldman-ceo-ai-financing-market.html",
+      "pubDate": "Mon, 09 Nov 2026 18:14:47 GMT"
+    },
     {
       "title": "Why the prognosis for healthcare stocks is uncertain ahead of Congress’ new makeup",
       "link": "https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html",
@@ -82,16 +92,6 @@
       "title": "Coinbase net income surges 66% in third quarter, benefiting from bitcoin investment gains",
       "link": "https://www.cnbc.com/2026/10/29/coinbase-coin-earnings-q3-2026-.html",
       "pubDate": "Thu, 29 Oct 2026 21:38:16 GMT"
-    },
-    {
-      "title": "Some Polymarket user funds stolen by hackers; exchange referring matter to U.K. authorities",
-      "link": "https://www.cnbc.com/2026/10/29/polymarket-reports-outage-on-international-exchange-halts-trading.html",
-      "pubDate": "Fri, 30 Oct 2026 20:18:49 GMT"
-    },
-    {
-      "title": "Aon CEO warns AI data center insurance risks could threaten financing",
-      "link": "https://www.cnbc.com/2026/10/29/aon-ai-data-center-insurance-financing.html",
-      "pubDate": "Thu, 29 Oct 2026 20:12:29 GMT"
     }
   ]
 }
