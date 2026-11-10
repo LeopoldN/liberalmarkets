@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-11-09T22:14:06.695Z",
+  "generatedAt": "2026-11-10T19:36:58.195Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "U.S. gas prices fall below $4 for the first time since July",
+      "link": "https://www.cnbc.com/2026/11/10/us-gas-prices-below-four-dollars.html",
+      "pubDate": "Tue, 10 Nov 2026 16:29:09 GMT"
+    },
+    {
+      "title": "Polymarket says annualized revenue has topped $1.8 billion",
+      "link": "https://www.cnbc.com/2026/11/10/polymarket-annualized-revenue-us-growth.html",
+      "pubDate": "Tue, 10 Nov 2026 13:00:01 GMT"
+    },
+    {
+      "title": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
+      "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
+      "pubDate": "Tue, 10 Nov 2026 17:13:44 GMT"
+    },
     {
       "title": "Jensen Huang exit odds are low on prediction markets after Nvidia probe",
       "link": "https://www.cnbc.com/2026/11/09/jensen-huang-nvidia-exit-prediction-markets.html",
@@ -77,21 +92,6 @@
       "title": "Binance’s $6.3 billion hack raises questions about crypto wallet safety",
       "link": "https://www.cnbc.com/2026/10/31/binance-hack-crypto-wallet-safety.html",
       "pubDate": "Sat, 31 Oct 2026 12:47:08 GMT"
-    },
-    {
-      "title": "Halloween gets pricier as chocolate costs climb — Hershey may feel the pinch",
-      "link": "https://www.cnbc.com/2026/10/30/halloween-gets-pricier-as-chocolate-costs-rise-hershey-could-feel-it.html",
-      "pubDate": "Fri, 30 Oct 2026 16:55:41 GMT"
-    },
-    {
-      "title": "Fed officials are already saying they’ll need to get back to hiking rates",
-      "link": "https://www.cnbc.com/2026/10/30/musalem-fed-monetary-policy-tightening.html",
-      "pubDate": "Fri, 30 Oct 2026 21:53:10 GMT"
-    },
-    {
-      "title": "Coinbase net income surges 66% in third quarter, benefiting from bitcoin investment gains",
-      "link": "https://www.cnbc.com/2026/10/29/coinbase-coin-earnings-q3-2026-.html",
-      "pubDate": "Thu, 29 Oct 2026 21:38:16 GMT"
     }
   ]
 }
