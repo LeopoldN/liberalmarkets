@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-11-10T19:36:58.195Z",
+  "generatedAt": "2026-11-11T19:29:32.770Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Prediction markets tied to clinical trials and drug approvals draw lawmakers&apos; ire",
+      "link": "https://www.cnbc.com/2026/11/11/kalsi-polymarket-prediction-market-senators-hhs-drug-approval.html",
+      "pubDate": "Wed, 11 Nov 2026 19:16:23 GMT"
+    },
+    {
+      "title": "Fed&apos;s Goolsbee calls inflation report &apos;borderline disturbing&apos; as central bank weighs more hikes",
+      "link": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html",
+      "pubDate": "Wed, 11 Nov 2026 16:49:02 GMT"
+    },
+    {
+      "title": "Alibaba announces plans to list T-Head, its Nvidia chip rival",
+      "link": "https://www.cnbc.com/2026/11/11/alibaba-pr.html",
+      "pubDate": "Wed, 11 Nov 2026 07:47:54 GMT"
+    },
     {
       "title": "U.S. gas prices fall below $4 for the first time since July",
       "link": "https://www.cnbc.com/2026/11/10/us-gas-prices-below-four-dollars.html",
@@ -49,6 +64,11 @@
       "pubDate": "Fri, 06 Nov 2026 17:09:53 GMT"
     },
     {
+      "title": "Outside groups urge congressional Dems to target corporate interests over Trump",
+      "link": "https://www.cnbc.com/2026/11/06/democrats-corporate-oversight-trump.html",
+      "pubDate": "Fri, 06 Nov 2026 19:52:46 GMT"
+    },
+    {
       "title": "Nasdaq drops into correction territory — here’s what typically happens next",
       "link": "https://www.cnbc.com/2026/11/05/nasdaq-drops-into-correction-territory-heres-what-typically-happens-next.html",
       "pubDate": "Fri, 06 Nov 2026 20:42:28 GMT"
@@ -72,26 +92,6 @@
       "title": "10-year Treasury yield slides as traders mull over Democrats&apos; midterm victories, oil prices drop",
       "link": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
       "pubDate": "Wed, 04 Nov 2026 21:18:44 GMT"
-    },
-    {
-      "title": "Blackstone president calls for more equity to fund AI buildout as debt risks mount",
-      "link": "https://www.cnbc.com/2026/11/03/equity-ai-debt-blackstone-pimco-financing.html",
-      "pubDate": "Tue, 03 Nov 2026 06:46:36 GMT"
-    },
-    {
-      "title": "Texas governor race tightens in prediction markets, but Abbott remains favored",
-      "link": "https://www.cnbc.com/2026/11/02/texas-governor-prediction-markets-abbott-hinojosa.html",
-      "pubDate": "Tue, 03 Nov 2026 13:33:11 GMT"
-    },
-    {
-      "title": "Stock market after midterm elections: What S&P 500 history shows",
-      "link": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
-      "pubDate": "Tue, 03 Nov 2026 18:21:05 GMT"
-    },
-    {
-      "title": "Binance’s $6.3 billion hack raises questions about crypto wallet safety",
-      "link": "https://www.cnbc.com/2026/10/31/binance-hack-crypto-wallet-safety.html",
-      "pubDate": "Sat, 31 Oct 2026 12:47:08 GMT"
     }
   ]
 }
