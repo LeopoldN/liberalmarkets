@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-10T21:12:14Z",
+  "generatedAt": "2026-11-11T01:21:35Z",
   "source": "data/markets",
   "items": [
     {
       "sym": "2yusy.b",
       "name": "2-year Treasury yield",
       "group": null,
-      "date": "2026-11-06",
-      "close": 4.51,
-      "prevClose": 4.46,
-      "deltaPct": 1.1210762331838486,
+      "date": "2026-11-09",
+      "close": 4.56,
+      "prevClose": 4.51,
+      "deltaPct": 1.1086474501108556,
       "ok": true
     },
     {
@@ -18,8 +18,8 @@
       "group": null,
       "date": "2026-11-10",
       "close": 4.807,
-      "prevClose": 4.659,
-      "deltaPct": 3.176647349216588,
+      "prevClose": 4.67,
+      "deltaPct": 2.9336188436830835,
       "ok": true
     },
     {
@@ -28,8 +28,8 @@
       "group": null,
       "date": "2026-11-10",
       "close": 4.983,
-      "prevClose": 4.864,
-      "deltaPct": 2.4465460526315708,
+      "prevClose": 4.88,
+      "deltaPct": 2.110655737704903,
       "ok": true
     },
     {
@@ -38,18 +38,18 @@
       "group": null,
       "date": "2026-11-10",
       "close": 5.35,
-      "prevClose": 5.256,
-      "deltaPct": 1.7884322678843212,
+      "prevClose": 5.26,
+      "deltaPct": 1.7110266159695797,
       "ok": true
     },
     {
       "sym": "usdeur",
       "name": "Euro in dollars",
       "group": null,
-      "date": "2026-11-09",
-      "close": 1.11473,
-      "prevClose": 1.1154,
-      "deltaPct": -0.060068136991209276,
+      "date": "2026-11-10",
+      "close": 1.12225,
+      "prevClose": 1.11473,
+      "deltaPct": 0.6746028186197517,
       "ok": true
     },
     {
@@ -86,10 +86,10 @@
       "sym": "asts.us",
       "name": "AST SpaceMobile",
       "group": null,
-      "date": "2026-11-10",
-      "close": 33.69,
-      "prevClose": 36.89,
-      "deltaPct": -8.674437516942268,
+      "date": "2026-11-09",
+      "close": 36.89,
+      "prevClose": 32.33,
+      "deltaPct": 14.104546860501088,
       "ok": true
     }
   ]
