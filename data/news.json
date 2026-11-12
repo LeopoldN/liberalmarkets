@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-11-11T19:29:32.770Z",
+  "generatedAt": "2026-11-12T19:48:06.593Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
+      "link": "https://www.cnbc.com/2026/11/12/in-policy-switch-fed-says-its-october-2027-meeting-will-not-see-a-vote-on-interest-rates.html",
+      "pubDate": "Thu, 12 Nov 2026 19:05:25 GMT"
+    },
+    {
+      "title": "Oil prices rise after Trump says no Iran deal needed: &apos;We&apos;ve got their Strait&apos;",
+      "link": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html",
+      "pubDate": "Thu, 12 Nov 2026 19:04:21 GMT"
+    },
+    {
+      "title": "China&apos;s Ministry of State Security thrust into the spotlight by Nvidia CEO affair",
+      "link": "https://www.cnbc.com/2026/11/12/china-ministry-state-security-nvidia-ceo.html",
+      "pubDate": "Thu, 12 Nov 2026 07:28:48 GMT"
+    },
     {
       "title": "Prediction markets tied to clinical trials and drug approvals draw lawmakers&apos; ire",
       "link": "https://www.cnbc.com/2026/11/11/kalsi-polymarket-prediction-market-senators-hhs-drug-approval.html",
@@ -77,21 +92,6 @@
       "title": "Top Democrats call to rein in AI buildout after midterms sweep: &apos;National data center moratorium now&apos;",
       "link": "https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html",
       "pubDate": "Thu, 05 Nov 2026 20:17:16 GMT"
-    },
-    {
-      "title": "Barkin sees interest rate hikes ahead, but at a gradual pace",
-      "link": "https://www.cnbc.com/2026/11/05/barkin-sees-interest-rate-hikes-ahead-but-at-a-gradual-pace.html",
-      "pubDate": "Thu, 05 Nov 2026 16:34:33 GMT"
-    },
-    {
-      "title": "What the Democratic midterms sweep changes for U.S.-China relations",
-      "link": "https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html",
-      "pubDate": "Thu, 05 Nov 2026 12:57:10 GMT"
-    },
-    {
-      "title": "10-year Treasury yield slides as traders mull over Democrats&apos; midterm victories, oil prices drop",
-      "link": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
-      "pubDate": "Wed, 04 Nov 2026 21:18:44 GMT"
     }
   ]
 }
