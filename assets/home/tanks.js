@@ -20,6 +20,7 @@ function paletteFor(dark) {
 export function startTanks({ isDark }) {
   const tanks = [...document.querySelectorAll(".tank")];
   if (!tanks.length || !window.ResizeObserver || !window.IntersectionObserver) return null;
+  if (tanks[0].dataset.scene) return startSpace(tanks, isDark);
 
   const kinds = pickKinds();
   const tall = window.innerHeight > 820;
@@ -43,6 +44,36 @@ export function startTanks({ isDark }) {
       for (const engine of engines) engine.setTheme(palette);
     },
     setEnabled(on) {
+      for (const engine of engines) on ? engine.play() : engine.pause();
+    },
+  };
+}
+
+/**
+ * Pages can swap the aquarium for another scene with data-scene on each .tank
+ * (e.g. "launch" and "orbit" on the ASTS article). The scene code loads only there.
+ */
+function startSpace(tanks, isDark) {
+  let engines = [];
+  let enabled = true;
+  import("../space/engine.js").then(({ SpaceEngine }) => {
+    engines = tanks.map(
+      (tank) =>
+        new SpaceEngine(tank.querySelector("canvas"), {
+          scene: tank.dataset.scene,
+          cellSize: 6,
+          theme: paletteFor(isDark()),
+        }),
+    );
+    if (!enabled) for (const engine of engines) engine.pause();
+  });
+  return {
+    setTheme() {
+      const palette = paletteFor(isDark());
+      for (const engine of engines) engine.setTheme(palette);
+    },
+    setEnabled(on) {
+      enabled = on;
       for (const engine of engines) on ? engine.play() : engine.pause();
     },
   };

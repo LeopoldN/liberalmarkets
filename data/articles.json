@@ -2,6 +2,17 @@
   "_note": "Newest first.",
   "articles": [
     {
+      "id": "asts-update-nov-26",
+      "title": "ASTS Update: lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "dek": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "topic": "Equities",
+      "author": "Nicholas Leopold",
+      "dateISO": "2026-11-12",
+      "minutes": 5,
+      "href": "asts-update-nov-26.html",
+      "keywords": "AST SpaceMobile ASTS BlueBird Blacklift satellites launch"
+    },
+    {
       "id": "elon-time",
       "title": "Elon Musk’s missed promises at Tesla and SpaceX",
       "dek": "Fifteen years of public claims that turned out wrong, from full self-driving “next year” to people on Mars.",

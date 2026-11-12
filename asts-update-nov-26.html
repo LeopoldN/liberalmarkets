@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="AST SpaceMobile news update. By Nicholas Leopold, 12 November 2026.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fff1e5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+  <title>ASTS Update · Liberal Markets</title>
+  <link rel="icon" type="image/svg+xml" href="assets/liberalmarketslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..500&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+  <script>
+    // Apply saved preferences before first paint so nothing flashes.
+    (function () {
+      var d = document.documentElement;
+      try {
+        var theme = localStorage.getItem("lm-theme");
+        if (theme === "light" || theme === "dark") d.dataset.theme = theme;
+        if (localStorage.getItem("lm-fish") === "off") d.dataset.fish = "off";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/home/home.css">
+  <script type="module" src="assets/home/home.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <div class="bar__inner">
+      <a class="wordmark" href="index.html">Liberal Markets</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="articles.html" aria-current="page">Articles</a>
+        <a href="trumptracker.html">Trump Tracker</a>
+        <a href="markets.html">Markets</a>
+        <a href="games.html">Games</a>
+        <a href="fishbowl.html" aria-label="Fish Bowl"><span class="nav__full">Fish Bowl</span><span class="nav__fish" aria-hidden="true">&gt;&lt;&gt;</span></a>
+      </nav>
+      <div class="controls">
+        <button class="control" type="button" data-search-open aria-haspopup="dialog">Search <kbd>/</kbd></button>
+        <button class="control" type="button" data-theme-toggle>Night</button>
+        <button class="control control--fish" type="button" data-fish-toggle aria-pressed="true">Fish</button>
+      </div>
+    </div>
+    <div class="ticker" role="region" aria-label="Latest headlines">
+      <span class="ticker__label">Latest</span>
+      <div class="ticker__viewport">
+        <div class="ticker__track" data-wire></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="tank tank--left" data-scene="launch" aria-hidden="true"><canvas></canvas></div>
+  <div class="tank tank--right" data-scene="orbit" aria-hidden="true"><canvas></canvas></div>
+
+  <main id="main" class="page page--story">
+    <article class="story">
+      <header class="story__head">
+        <p class="story__kicker">
+          <a href="articles.html?topic=Equities">Equities</a>
+          <span>AST SpaceMobile</span>
+        </p>
+        <h1 class="story__title">ASTS Update: lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+        <p class="story__dek">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <p class="story__byline">
+          <span class="story__author">By Nicholas Leopold</span>
+          <time datetime="2026-11-12">12 November 2026</time>
+          <span>5 min read</span>
+        </p>
+      </header>
+
+      <div class="story__body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <h2><span class="story__part">Part 1</span>Lorem ipsum dolor</h2>
+
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+        <blockquote>
+          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+        </blockquote>
+
+        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+
+        <h2><span class="story__part">Part 2</span>Consectetur adipiscing elit</h2>
+
+        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+
+        <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Sed do eiusmod tempor</li>
+        </ul>
+
+        <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+
+        <h2><span class="story__part">Part 3</span>Sed do eiusmod tempor</h2>
+
+        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+
+        <hr>
+
+        <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+      </div>
+
+      <p class="story__also">Also: <a href="asts.html">track an ASTS position</a> or <a href="model.html">run the numbers through a DCF</a>.</p>
+    </article>
+
+    <!-- Fills itself from data/articles.json and stays hidden until there is another article to show. -->
+    <section class="block" aria-labelledby="next-title" data-next-section hidden>
+      <header class="block__head">
+        <h2 id="next-title">Read next</h2>
+        <a href="articles.html">All articles →</a>
+      </header>
+      <ol class="articles" data-next></ol>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot__inner">
+      <span class="wordmark wordmark--small">Liberal Markets</span>
+      <p>Headlines from CNBC. Economic data from FRED. The margins are drawn with the method of <a href="https://github.com/stackedlol/ascii-sharks">ascii-sharks</a> (MIT).</p>
+    </div>
+  </footer>
+
+  <div class="search" data-search hidden>
+    <div class="search__scrim" data-search-close></div>
+    <div class="search__panel" role="dialog" aria-modal="true" aria-label="Search Liberal Markets">
+      <label class="search__field">
+        <span class="visually-hidden">Search</span>
+        <input id="site-search" type="search" placeholder="Search stories, tools, games, indicators" autocomplete="off" spellcheck="false" aria-controls="search-results" data-search-input>
+        <kbd>esc</kbd>
+      </label>
+      <ul class="search__results" id="search-results" role="listbox" data-search-results></ul>
+    </div>
+  </div>
+</body>
+</html>

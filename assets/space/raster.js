@@ -114,6 +114,7 @@ export class Raster {
     this.dens = new Float32Array(n);
     this.cellStyle = new Uint8Array(n);
     this.cellChar = new Uint16Array(n);
+    this.cellLayer = new Uint8Array(n);
     this.order = new Int32Array(n);
     this.counts = new Int32Array(TONES + INKS + 1);
   }
@@ -123,6 +124,7 @@ export class Raster {
     this.sm.fill(0);
     this.dens.fill(0);
     this.cellStyle.fill(EMPTY);
+    this.cellLayer.fill(0);
   }
 
   /**
@@ -155,6 +157,13 @@ export class Raster {
     this.sc[k] = chr;
   }
 
+  /** Write all four sub-samples of one cell (scenery drawn cell by cell). */
+  cell(col, row, z, mat, v, chr) {
+    if (col < 0 || row < 0 || col >= this.cols || row >= this.rows) return;
+    const base = (row * this.cols + col) * 4;
+    for (let s = 0; s < 4; s++) this.write(base + s, z, mat, v, 0, chr);
+  }
+
   /** Add smoke density around a point (px), falling off over radius (px). */
   splat(x, y, radius, amount) {
     const { cw, ch, cols, rows, dens } = this;
@@ -180,6 +189,15 @@ export class Raster {
     if (this.cellStyle[i] !== EMPTY) return;
     this.cellStyle[i] = TONES + clamp(Math.round(alpha * INKS) - 1, 0, INKS - 1);
     this.cellChar[i] = chr;
+  }
+
+  /** Like ink(), but also draws over background scenery (Earth, ground). */
+  inkOver(col, row, chr, alpha) {
+    if (col < 0 || row < 0 || col >= this.cols || row >= this.rows) return;
+    const i = row * this.cols + col;
+    if (this.cellLayer[i] > 1) return;
+    this.cellStyle[i] = EMPTY;
+    this.ink(col, row, chr, alpha);
   }
 
   tone(v) {
@@ -217,9 +235,9 @@ export class Raster {
         style = this.inkStyle(0.12 + v * (edge ? 0.25 : 0.45));
         break;
       case M.PANEL:
-        // d = 1 on the seams between folding sections.
-        chr = edge ? COLON : d > 0.5 ? (v > 0.5 ? DOT : PLUS) : pick(R_PANEL, 1 - v);
-        style = this.tone(d > 0.5 ? v * 0.7 + 0.2 : v);
+        // d = 1 on the seams between folding sections, 0.3 between antenna tiles.
+        chr = edge ? COLON : d > 0.5 ? DOT : d > 0.1 ? PLUS : pick(R_PANEL, 1 - v);
+        style = this.tone(d > 0.5 ? v * 0.6 + 0.3 : d > 0.1 ? v * 0.85 + 0.08 : v);
         break;
       case M.SOLAR:
         chr = edge ? COLON : d > 0.5 ? DOT : (i / this.cols) % 2 < 1 ? EQ : DASH;
@@ -276,15 +294,29 @@ export class Raster {
           if (bg < 0 || sz[k] > sz[bg]) bg = k;
         }
       }
-      if (fgHits >= 3 && this.glyph(i, fg, fgHits)) continue;
+      const layer = this.cellLayer;
+      if (fgHits >= 3 && this.glyph(i, fg, fgHits)) {
+        layer[i] = 3;
+        continue;
+      }
       const dn = dens[i];
       if (dn > 0.14) {
         this.smoke(i, dn, light);
+        layer[i] = 2;
         continue;
       }
-      if (fgHits > 0 && this.glyph(i, fg, fgHits)) continue;
-      if (bgHits > 0 && this.glyph(i, bg, bgHits)) continue;
-      if (dn > 0.05) this.smoke(i, dn, light);
+      if (fgHits > 0 && this.glyph(i, fg, fgHits)) {
+        layer[i] = 3;
+        continue;
+      }
+      if (bgHits > 0 && this.glyph(i, bg, bgHits)) {
+        layer[i] = 1;
+        continue;
+      }
+      if (dn > 0.05) {
+        this.smoke(i, dn, light);
+        layer[i] = 2;
+      }
     }
   }
 
