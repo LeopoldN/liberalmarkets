@@ -208,6 +208,7 @@ export function drawBody(raster, body, view) {
       const v = clamp(0.08 + 0.86 * lam + spec, 0, 1);
       let d = 0;
       if (p.stripes) d = ((h * len) / stripe) % 1 < 0.3 ? 1 : 0;
+      else if (p.rings) d = (((h - p.h0) / p.rings) % 1) * p.rings * len < raster.ch * 0.55 ? 1 : 0;
       raster.write(k, z, p.mat, v, d);
       return;
     }

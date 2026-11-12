@@ -29,15 +29,14 @@ const INKS = 16;
 const EMPTY = 255;
 
 // Sparse glyphs on bright skin, dense glyphs in shadow, as with the sharks.
-const HULL_RAMP = "`.:-=+*#%@";
+const HULL_RAMP = ":=+*#%@";
 const PANEL_RAMP = ":=+*#%%@";
 const BUS_RAMP = ".:;=+x#%@";
 const FLAME_RAMP = ":;*%#@@";
 const VAC_RAMP = ".':|!";
 const SMOKE_RAMP = ".,:;~=+*o%#@";
-const OCEAN = "-~";
-const LAND = ":;%#";
-const CLOUD = "o*@";
+const LAND = ":;+%#";
+const CLOUD = "~=*";
 
 const code = (s) => [...s].map((c) => c.charCodeAt(0));
 const R_HULL = code(HULL_RAMP);
@@ -46,7 +45,6 @@ const R_BUS = code(BUS_RAMP);
 const R_FLAME = code(FLAME_RAMP);
 const R_VAC = code(VAC_RAMP);
 const R_SMOKE = code(SMOKE_RAMP);
-const R_OCEAN = code(OCEAN);
 const R_LAND = code(LAND);
 const R_CLOUD = code(CLOUD);
 const DOT = 46; // .
@@ -219,8 +217,9 @@ export class Raster {
     let style = 0;
     switch (m) {
       case M.HULL:
-        chr = edge ? (hits === 1 ? DOT : COLON) : pick(R_HULL, 1 - v);
-        style = this.tone(v);
+        // d = 1 on the ring welds between tank sections.
+        chr = edge ? (hits === 1 ? DOT : COLON) : d > 0.5 ? DASH : pick(R_HULL, 1 - v);
+        style = this.tone(d > 0.5 ? v * 0.55 : v * 0.78);
         break;
       case M.DARK:
         chr = edge ? COLON : v > 0.55 ? PLUS : pick(R_HULL, 0.72 + (1 - v) * 0.28);
@@ -257,11 +256,19 @@ export class Raster {
         style = this.inkStyle(v);
         break;
       case M.EARTH: {
-        // d: 0 ocean, 1 land, 2 cloud. v: daylight.
+        // d: 0 ocean, 1 land, 2 cloud. v: daylight. Open water stays airy.
         if (v < 0.06) return false;
-        const ramp = d > 1.5 ? R_CLOUD : d > 0.5 ? R_LAND : R_OCEAN;
-        chr = edge ? DOT : d > 0.5 ? pick(ramp, 1 - v) : ramp[(i * 7 + (i / this.cols | 0)) % 2];
-        style = this.tone(d > 1.5 ? 0.35 + v * 0.65 : d > 0.5 ? v * 0.7 : v * 0.55);
+        if (d < 0.5) {
+          if (((i * 2654435761) >>> 0) % 5 < 3) return false;
+          chr = v > 0.6 ? DASH : DOT;
+          style = this.tone(v * 0.5);
+        } else if (d < 1.5) {
+          chr = edge ? DOT : pick(R_LAND, 1 - v);
+          style = this.tone(v * 0.72);
+        } else {
+          chr = edge ? DOT : pick(R_CLOUD, v * 0.8);
+          style = this.tone(0.3 + v * 0.5);
+        }
         break;
       }
       default:

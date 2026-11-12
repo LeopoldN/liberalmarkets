@@ -21,12 +21,12 @@ const BOOSTER = [
   { h0: 0.575, h1: 0.597, r0: 1.5, r1: 1.5, inner: 1.0, mat: M.DARK }, // grid fins
   { h0: 0.0, h1: 0.13, r0: 1.04, r1: 0.94, inner: 0.8, mat: M.DARK }, // folded legs
   { h0: -0.028, h1: 0.0, r0: 0.96, r1: 0.62, mat: M.DARK }, // engine bells
-  { h0: 0.0, h1: 0.6, r0: 1, r1: 1, mat: M.HULL },
+  { h0: 0.0, h1: 0.6, r0: 1, r1: 1, mat: M.HULL, rings: 0.1 },
   { h0: 0.6, h1: 0.662, r0: 1, r1: 1, mat: M.DARK }, // interstage
 ];
 const UPPER = [
   { h0: 0.575, h1: 0.662, r0: 0.82, r1: 0.32, mat: M.DARK }, // vacuum nozzle
-  { h0: 0.662, h1: 0.79, r0: 1, r1: 1, mat: M.HULL },
+  { h0: 0.662, h1: 0.79, r0: 1, r1: 1, mat: M.HULL, rings: 0.064 },
   { h0: 0.79, h1: 0.8, r0: 0.9, r1: 0.9, mat: M.DARK }, // payload adapter
   { h0: 0.8, h1: 0.94, r0: 0.98, r1: 0.98, mat: M.BUS, stripes: true }, // folded BlueBirds
 ];
@@ -53,8 +53,8 @@ export class LaunchScene {
     this.H = H;
     this.cw = cw;
     this.ch = ch;
-    this.r = clamp(W * 0.042, 6, 12);
-    this.len = Math.min(this.r * 25, H * 0.46);
+    this.r = clamp(W * 0.062, 9, 20);
+    this.len = Math.min(this.r * 17, H * 0.45);
     this.X = Math.round(W * 0.42);
     this.baseY = H - Math.max(ch * 4, H * 0.1);
     this.padH = ch * 0.9;
@@ -226,15 +226,15 @@ export class LaunchScene {
         smoke.spawn({
           x: X + dir * rand(r * 0.5, r * 2.5),
           y: rand(0, this.padH * 1.5),
-          vx: dir * rand(70, 210),
-          vy: rand(4, 50),
-          life: rand(3.2, 6.5),
-          s0: rand(3, 6),
-          s1: rand(16, 34),
-          amt: 0.75,
-          drag: 1.1,
-          buoy: 15,
-          turb: 34,
+          vx: dir * rand(70, 230),
+          vy: rand(4, 60),
+          life: rand(4, 8),
+          s0: rand(4, 8),
+          s1: rand(22, 48),
+          amt: 0.7,
+          drag: 1.0,
+          buoy: 20,
+          turb: 40,
         });
       }
     }
@@ -246,15 +246,15 @@ export class LaunchScene {
       smoke.spawn({
         x: X + rand(-r * 0.4, r * 0.4),
         y: y - rand(0, len * 0.08),
-        vx: rand(-14, 14) * (1 + thin * 3),
-        vy: -rand(20, 60),
-        life: rand(2.6, 4.2) * (1 - thin * 0.5),
-        s0: r * 0.7,
-        s1: r * (2.4 + thin * 5),
-        amt: 0.95 * (1 - thin * 0.82) * this.throttle,
-        drag: 1.4,
-        buoy: 3,
-        turb: 18,
+        vx: rand(-40, 40) * (1 + thin * 2),
+        vy: -rand(10, 50),
+        life: rand(2.2, 3.6) * (1 - thin * 0.4),
+        s0: r * 1.3,
+        s1: r * (5.6 + thin * 5),
+        amt: 0.75 * (1 - thin * 0.82) * this.throttle,
+        drag: 1.2,
+        buoy: 4,
+        turb: 30,
       });
     }
     this.prevNozzle = y;
@@ -286,8 +286,8 @@ export class LaunchScene {
       drawPlume(raster, { x: X, y: this.y, ang: 0, r, len, z: 10 }, view, {
         at: -0.028,
         base: 0.95,
-        length: len * (0.16 + 0.34 * thin) * this.throttle,
-        spread: 0.5 + 3.5 * thin,
+        length: len * (0.46 + 0.4 * thin) * this.throttle,
+        spread: 0.35 + 3.2 * thin,
         diamonds: 1 - thin,
         mat: M.FLAME,
         floor: 0,
@@ -396,7 +396,7 @@ export class LaunchScene {
       } else if (streak > ch * 0.2) {
         raster.ink(c, row, CH(":"), a);
       } else {
-        raster.ink(c, row, s.mag > 0.93 ? CH("*") : s.mag > 0.75 ? CH("+") : CH("."), a);
+        raster.ink(c, row, s.mag > 0.97 ? CH("*") : s.mag > 0.9 ? CH("+") : CH("."), a);
       }
     }
   }

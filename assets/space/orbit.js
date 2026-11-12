@@ -72,7 +72,7 @@ export class OrbitScene {
     this.H = H;
     this.cw = cw;
     this.ch = ch;
-    this.R = Math.max(W * 1.8, 560);
+    this.R = Math.max(W * 0.95, 300);
     this.earthTop = H - Math.max(H * 0.15, ch * 8);
     this.ecx = W * 0.5;
     this.ecy = this.earthTop + this.R;
@@ -111,7 +111,7 @@ export class OrbitScene {
       drift: rand(5, 9) * depth,
       spin: rand(0, Math.PI * 2),
       spinRate: rand(0.035, 0.08) * (Math.random() < 0.5 ? -1 : 1),
-      tilt: showBack ? rand(1.95, 2.1) : rand(1.05, 1.2),
+      tilt: showBack ? rand(2.3, 2.55) : rand(0.6, 0.85),
       ph: rand(0, 6.28),
       unfold: 0,
       unfoldAt: Infinity,
@@ -161,7 +161,7 @@ export class OrbitScene {
     const D = this.freeSpot(0.3, 0.62);
     const ang = rand(2.2, 2.45); // nose down and to the right
     const dir = { x: Math.sin(ang), y: -Math.cos(ang) }; // screen-space direction of the nose
-    const len = clamp(this.W * 0.42, 90, 170);
+    const len = clamp(this.W * 0.5, 110, 200);
     const sat = this.makeSat(D);
     this.stage = { D, ang, dir, len, t: 0, sat, released: false, backV: 0, off: 0 };
     this.sats.push(sat);
@@ -257,7 +257,7 @@ export class OrbitScene {
       const bx = st.nose.x - st.dir.x * len;
       const by = st.nose.y - st.dir.y * len;
       const view = { sx: (x) => x, sy: (y) => this.H - y, wx: (x) => x, wy: (y) => this.H - y };
-      drawBody(raster, { x: bx, y: this.H - by, ang: st.ang, r: len * 0.1, len, z: 2500, parts: STAGE }, view);
+      drawBody(raster, { x: bx, y: this.H - by, ang: st.ang, r: len * 0.17, len, z: 2500, parts: STAGE }, view);
     }
     this.smoke.deposit(raster, (x) => x, (y) => this.H - y);
     raster.resolve(0.6);
@@ -268,7 +268,9 @@ export class OrbitScene {
   drawEarth(raster) {
     const { R, ecx, ecy, earthTop, time, W, H, cw, ch } = this;
     const L = [0.78, 0.22, 0.58];
-    const rot = time * 0.0035;
+    const rot = time * 0.012;
+    const cr = Math.cos(rot);
+    const sr = Math.sin(rot);
     raster.scan(0, earthTop - 2, W, H, (k, px, py) => {
       const nx = (px - ecx) / R;
       const ny = (ecy - py) / R;
@@ -278,22 +280,28 @@ export class OrbitScene {
       const lam = nx * L[0] + ny * L[1] + nz * L[2];
       const day = clamp(lam * 1.6 + 0.02, 0, 1);
       if (day < 0.06) return;
-      const lat = Math.asin(clamp(ny, -1, 1));
-      const lon = Math.atan2(nx, nz) + rot;
-      const cloud = fbm(lon * 5.5 + time * 0.004, lat * 12, 9);
-      const land = fbm(lon * 2.4, lat * 4.2, 21);
-      const d = cloud > 0.6 ? 2 : land > 0.57 ? 1 : 0;
+      // Texture from the rotated sphere point itself, so features foreshorten toward the limb.
+      const X = nx * cr + nz * sr;
+      const Z = -nx * sr + nz * cr;
+      const cloud = fbm(X * 5.2 + time * 0.01, Z * 4.4 + ny * 3.1, 9);
+      const land = fbm(X * 2.6 + 40, Z * 2.6 + ny * 1.7, 21);
+      const d = cloud > 0.6 ? 2 : land > 0.56 ? 1 : 0;
       raster.write(k, -1e5, M.EARTH, day, d);
     });
-    // The limb: one hairline of glyphs that follows the curve.
+    // The limb: one hairline of glyphs that follows the curve, filled down steep stretches.
+    const rowAt = (x) => {
+      const dx = x - ecx;
+      return Math.abs(dx) >= R ? null : Math.floor((ecy - Math.sqrt(R * R - dx * dx) - ch * 0.35) / ch);
+    };
     for (let c = 0; c < raster.cols; c++) {
       const x = (c + 0.5) * cw;
+      const row = rowAt(x);
+      if (row === null) continue;
+      const next = rowAt(x + (x < ecx ? -cw : cw)) ?? row;
       const dx = x - ecx;
-      if (Math.abs(dx) >= R) continue;
-      const y = ecy - Math.sqrt(R * R - dx * dx) - ch * 0.35;
       const slope = (dx / Math.sqrt(R * R - dx * dx)) * (cw / ch);
       const chr = slope < -0.35 ? CH("/") : slope > 0.35 ? CH("\\") : CH("_");
-      raster.cell(c, Math.floor(y / ch), -9e4, M.BGINK, 0.55, chr);
+      for (let r = row; r <= Math.max(row, next - 1); r++) raster.cell(c, r, -9e4, M.BGINK, 0.55, chr);
     }
   }
 
@@ -360,7 +368,7 @@ export class OrbitScene {
           else {
             const fa = (a * 3) % 1;
             const fb = (b * 3) % 1;
-            if (Math.min(fa, 1 - fa) * (L1 / 3) < 1.1 || Math.min(fb, 1 - fb) * (L2 / 3) < 1.1) d = 0.3;
+            if (L1 > 45 && L2 > 45 && (Math.min(fa, 1 - fa) * (L1 / 3) < 1.1 || Math.min(fb, 1 - fb) * (L2 / 3) < 1.1)) d = 0.3;
           }
           raster.write(k, z, mat, shade, d);
         });
@@ -402,7 +410,7 @@ export class OrbitScene {
       if (Math.hypot(x - ecx, s.y - ecy) < R + ch) continue;
       const tw = 0.7 + 0.3 * Math.sin(s.ph + this.time * s.f);
       const a = (0.16 + 0.6 * s.mag) * tw;
-      raster.ink(Math.floor(x / cw), Math.floor(s.y / ch), s.mag > 0.94 ? CH("*") : s.mag > 0.78 ? CH("+") : CH("."), a);
+      raster.ink(Math.floor(x / cw), Math.floor(s.y / ch), s.mag > 0.97 ? CH("*") : s.mag > 0.9 ? CH("+") : CH("."), a);
     }
   }
 
@@ -431,7 +439,7 @@ export class OrbitScene {
         const x = fx + (p.x - fx) * t;
         const y = fy + (p.y - fy) * t;
         const shimmer = 0.5 + 0.5 * Math.sin(this.time * 6 - k * 0.7);
-        raster.inkOver(Math.floor(x / cw), Math.floor(y / ch), CH("."), 0.18 + 0.22 * shimmer);
+        raster.inkOver(Math.floor(x / cw), Math.floor(y / ch), CH(":"), 0.28 + 0.3 * shimmer);
       }
     }
     raster.inkOver(Math.floor(p.x / cw), Math.floor(p.y / ch), CH("+"), 0.7);
