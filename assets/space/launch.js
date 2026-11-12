@@ -1,10 +1,13 @@
 // The left margin: a two-stage launch carrying folded BlueBirds. Pad venting, ignition into
 // the flame trench, liftoff past the tower, a climb that thins the air (the plume widens and
-// the stars come out), staging with a booster flip, fairing separation, and the upper stage
-// leaving the top of the frame. Then the pad again.
+// the stars come out), staging with a booster flip, fairing separation, engine cut-off with
+// the Earth rising into view, then the payload release: a BlueBird drifts clear of the stage
+// and unfolds from its stowed block into the full array while two more open behind it.
+// Then the pad again.
 import { clamp } from "../aquarium/math.js";
 import { M } from "./raster.js";
 import { Smoke, drawBody, drawPlume, rand, ease, vnoise } from "./shapes.js";
+import { drawBlueBird, drawEarth, behindEarth } from "./bluebird.js";
 
 const T_IGNITE = 4.2;
 const T_LIFT = T_IGNITE + 1.5;
@@ -12,7 +15,11 @@ const T_MECO = T_LIFT + 12;
 const T_SEP = T_MECO + 0.9;
 const T_SES = T_SEP + 1.7;
 const T_FAIRING = T_SES + 3.2;
-const T_LOOSE = T_FAIRING + 2.6; // the camera stops following
+const T_SECO = T_FAIRING + 3.2; // second engine cut-off: we're in orbit
+const T_RELEASE = T_SECO + 3.4; // the camera holds still and the payload comes free
+const T_UNFOLD = T_RELEASE + 3.0;
+const UNFOLD_SECONDS = 14;
+const T_DONE = T_UNFOLD + UNFOLD_SECONDS + 8;
 
 const CH = (s) => s.charCodeAt(0);
 
@@ -30,6 +37,9 @@ const UPPER = [
   { h0: 0.79, h1: 0.8, r0: 0.9, r1: 0.9, mat: M.DARK }, // payload adapter
   { h0: 0.8, h1: 0.94, r0: 0.98, r1: 0.98, mat: M.BUS, stripes: true }, // folded BlueBirds
 ];
+const UPPER_TWO_LEFT = [...UPPER.slice(0, 3), { h0: 0.8, h1: 0.88, r0: 0.98, r1: 0.98, mat: M.BUS, stripes: true }];
+const UPPER_ONE_LEFT = [...UPPER.slice(0, 3), { h0: 0.8, h1: 0.84, r0: 0.98, r1: 0.98, mat: M.BUS, stripes: true }];
+const UPPER_EMPTY = UPPER.slice(0, 3);
 // Fairing, measured from its own base (h = 0.79 on the stack).
 const FAIRING_BASE = 0.79;
 const fairing = (side) => [
@@ -78,9 +88,9 @@ export class LaunchScene {
     this.prevNozzle = this.y;
     this.booster = null;
     this.halves = null;
-    this.gone = false;
-    this.endAt = Infinity;
-    this.announced = false;
+    this.endAt = T_DONE;
+    this.birds = [];
+    this.released = 0;
   }
 
   /** Reduced motion: the frame just after liftoff, cloud and all. */
@@ -114,27 +124,36 @@ export class LaunchScene {
       const bucket = 1 - 0.22 * ease((T - T_LIFT - 4.5) / 1) * (1 - ease((T - T_LIFT - 7) / 1));
       this.throttle = spool * bucket;
     } else this.throttle = Math.max(0, 1 - (T - T_MECO) / 0.3);
-    this.vac = T > T_SES ? ease((T - T_SES) / 0.5) : 0;
+    this.vac = T < T_SES ? 0 : T < T_SECO ? ease((T - T_SES) / 0.5) : Math.max(0, 1 - (T - T_SECO) / 0.4);
 
     // Ascent.
     const vMax = H * 1.6;
     if (T >= T_LIFT && T < T_MECO) {
       const a = len * (0.15 + 0.035 * (T - T_LIFT)) * (0.6 + 0.4 * this.throttle);
       this.vy = Math.min(vMax, this.vy + a * dt);
-    } else if (T >= T_SES) {
+    } else if (T >= T_SES && T < T_SECO) {
       this.vy += H * 0.3 * this.vac * dt;
+    } else if (T >= T_SECO && T < T_RELEASE) {
+      // Coasting in orbit: the camera matches speed, so the stars stop streaming.
+      this.vy *= Math.exp(-dt * 1.4);
+    } else if (T >= T_RELEASE) {
+      // After release the empty stage backs away, down and out of the frame.
+      this.vy -= H * 0.09 * dt;
     }
     this.y += this.vy * dt;
 
-    // Camera keeps the stack's middle near mid-frame, then lets it go.
-    if (T < T_LOOSE) {
-      const target = Math.max(0, this.y + len * 0.5 - this.baseY + H * 0.52);
+    // Camera keeps the stack near mid-frame (shifting up to the payload after staging),
+    // then holds still for the deployment.
+    if (T < T_RELEASE) {
+      const focus = 0.5 + 0.38 * ease((T - T_SEP) / (T_SECO + 1 - T_SEP));
+      const target = Math.max(0, this.y + len * focus - this.baseY + H * (0.52 - 0.08 * ease((T - T_SECO) / 3)));
       this.camV = (target - this.camAlt) / dt;
       this.camAlt = target;
     } else {
-      this.camV *= Math.exp(-dt * 1.1);
-      this.camAlt += this.camV * dt;
+      this.camV = 0;
     }
+
+    this.deploy(dt);
 
     // Staging: the booster falls behind and flips.
     if (T >= T_SEP && !this.booster) {
@@ -175,16 +194,61 @@ export class LaunchScene {
     this.smoke.step(dt, this.time, 0);
     this.smoke.cull(this.camAlt - H * 0.3);
 
-    // The stack has left the frame: tell the orbit margin, then wait and go again.
-    if (!this.gone && T > T_LOOSE && this.view.sy(this.y) < -20) {
-      this.gone = true;
-      this.endAt = T + 4.5;
-      if (!this.announced) {
-        this.announced = true;
-        this.onPayload?.();
-      }
-    }
     if (T > this.endAt + 1.4) this.reset();
+  }
+
+  /** Payload release and the BlueBirds unfolding. Positions here are screen px. */
+  deploy(dt) {
+    const { T, W, H, r, len, X } = this;
+    if (T < T_RELEASE) return;
+    const noseY = this.view.sy(this.y + len * 0.86);
+    const S = clamp(W * 0.8, 150, H * 0.5);
+    // Hero first, then two smaller ones from the same stack.
+    const plan = [
+      { at: 0, size: S, depth: 1, n: 6, tiles: 3, to: [W * 0.47, H * 0.37], unfoldAt: T_UNFOLD, dur: UNFOLD_SECONDS },
+      { at: 1.1, size: S * 0.36, depth: 0.5, n: 4, tiles: 2, to: [W * 0.24, H * 0.66], unfoldAt: T_UNFOLD + 2, dur: 10 },
+      { at: 1.9, size: S * 0.32, depth: 0.45, n: 4, tiles: 2, to: [W * 0.76, H * 0.71], unfoldAt: T_UNFOLD + 3.4, dur: 10 },
+    ];
+    while (this.released < plan.length && T >= T_RELEASE + plan[this.released].at) {
+      const p = plan[this.released++];
+      this.birds.push({
+        ...p,
+        x: X,
+        y: noseY,
+        from: [X, noseY],
+        t0: T,
+        sizeOpen: p.size,
+        stowed: 2 * r * 0.95, // the block starts exactly as wide as the payload stack
+        spin: 0,
+        spinRate: rand(0.04, 0.06) * (this.released % 2 ? 1 : -1),
+        tilt: 1.3,
+        ph: rand(0, 6.28),
+        unfold: 0,
+      });
+      this.puff(X, this.y + len * 0.86, 8, 25);
+      if (this.released === 1) this.onPayload?.();
+    }
+    for (const b of this.birds) {
+      const k = ease((T - b.t0) / 3);
+      b.x = b.from[0] + (b.to[0] - b.from[0]) * k + Math.sin((T - b.t0) * 0.11 + b.ph) * 4 * k;
+      b.y = b.from[1] + (b.to[1] - b.from[1]) * k;
+      b.unfold = clamp((T - b.unfoldAt) / b.dur, 0, 1);
+      // Drift closer while it clears the stage: the block grows from payload width to full scale.
+      const grow = ease((T - b.t0) / (b.unfoldAt - b.t0 + 1));
+      const stowedSize = b.stowed * b.n;
+      b.size = stowedSize + (b.sizeOpen - stowedSize) * grow;
+      b.tilt = 1.3 + (0.55 - 1.3) * ease(b.unfold / 0.6);
+      b.spin += b.spinRate * dt * (0.25 + ease(b.unfold));
+    }
+  }
+
+  /** The Earth's limb rises into the bottom of the frame once the engine cuts off. */
+  get earth() {
+    const { W, H, ch } = this;
+    const R = Math.max(W * 0.95, 300);
+    const rise = ease((this.T - T_SECO) / 4);
+    const top = H + ch * 2 - (H * 0.15 + ch * 2) * rise;
+    return { R, cx: W * 0.5, cy: top + R };
   }
 
   localToWorld(x, y, ang, lx, lh) {
@@ -263,6 +327,7 @@ export class LaunchScene {
   render(raster) {
     const { T, r, len, X, view, H, W } = this;
     raster.alpha = Math.min(1, T / 1.2) * (1 - clamp((T - this.endAt) / 1.4, 0, 1));
+    if (T > T_SECO) drawEarth(raster, this.earth, this.time);
     const thin = ease((this.y - H * 0.6) / (H * 4.5));
     const t = this.time;
 
@@ -273,7 +338,10 @@ export class LaunchScene {
       const b = this.booster;
       drawBody(raster, { x: b.x, y: b.y, ang: b.ang, r, len, z: 8, parts: BOOSTER }, view);
     }
-    const upper = { x: X, y: this.y, ang: 0, r, len, z: 9, parts: UPPER };
+    const left = this.released;
+    const parts = left === 0 ? UPPER : left === 1 ? UPPER_TWO_LEFT : left === 2 ? UPPER_ONE_LEFT : UPPER_EMPTY;
+    const upper = { x: X, y: this.y, ang: 0, r, len, z: 9, parts };
+    for (const b of this.birds) drawBlueBird(raster, b, t);
     drawBody(raster, upper, view);
     if (!this.halves) {
       for (const side of [-1, 1]) drawBody(raster, { x: X, y: this.y + len * FAIRING_BASE, ang: 0, r, len, z: 11, parts: fairing(side) }, view);
@@ -383,8 +451,10 @@ export class LaunchScene {
     const { cw, ch, H, stars } = this;
     const vis = 0.45 + 0.55 * ease(this.camAlt / (H * 3));
     const speed = Math.abs(this.camV) / 60; // px per frame
+    const earth = this.T > T_SECO ? this.earth : null;
     for (const s of stars) {
       const sy = (((s.y + this.camAlt * s.par) % H) + H) % H;
+      if (earth && behindEarth(earth, s.x, sy, ch)) continue;
       const tw = 0.75 + 0.25 * Math.sin(s.ph + this.time * s.f);
       const a = vis * (0.18 + 0.6 * s.mag) * tw;
       const c = Math.floor(s.x / cw);

@@ -4,11 +4,9 @@
 // Point at the margin and the nearest BlueBird beams down to you.
 import { clamp } from "../aquarium/math.js";
 import { M } from "./raster.js";
-import { Smoke, drawBody, drawQuad, faceShade, fbm, rand, ease } from "./shapes.js";
+import { Smoke, drawBody, rand, ease } from "./shapes.js";
+import { drawBlueBird, drawEarth, behindEarth } from "./bluebird.js";
 
-const N = 4; // folding sections per side
-const ALPHA_MAX = (86 * Math.PI) / 180;
-const BETA_MAX = (88 * Math.PI) / 180;
 const UNFOLD_SECONDS = 10;
 const CH = (s) => s.charCodeAt(0);
 
@@ -17,43 +15,6 @@ const STAGE = [
   { h0: 0.3, h1: 0.93, r0: 1, r1: 1, mat: M.HULL },
   { h0: 0.93, h1: 1, r0: 0.95, r1: 0.7, mat: M.DARK },
 ];
-
-/** One accordion: hinge positions for `angle` (0 flat), centred. */
-function chain(w, angle) {
-  const X = [0];
-  const Z = [0];
-  for (let i = 0; i < N; i++) {
-    X.push(X[i] + w * Math.cos(angle));
-    Z.push(Z[i] + (i % 2 ? -1 : 1) * w * Math.sin(angle));
-  }
-  const cx = X[N] / 2;
-  const cz = (w * Math.sin(angle)) / 2;
-  return { X: X.map((v) => v - cx), Z: Z.map((v) => v - cz) };
-}
-
-/** Rotation matrix: spin about the panel normal, then tilt about x, then roll about y. */
-function attitude(spin, tilt, roll) {
-  const cs = Math.cos(spin), ss = Math.sin(spin);
-  const ct = Math.cos(tilt), st = Math.sin(tilt);
-  const cr = Math.cos(roll), sr = Math.sin(roll);
-  // Rz(spin)
-  const a = [cs, -ss, 0, ss, cs, 0, 0, 0, 1];
-  // Rx(tilt)
-  const b = [1, 0, 0, 0, ct, -st, 0, st, ct];
-  // Ry(roll)
-  const c = [cr, 0, sr, 0, 1, 0, -sr, 0, cr];
-  return mul(c, mul(b, a));
-}
-
-function mul(p, q) {
-  const o = new Array(9);
-  for (let r = 0; r < 3; r++) {
-    for (let k = 0; k < 3; k++) o[r * 3 + k] = p[r * 3] * q[k] + p[r * 3 + 1] * q[3 + k] + p[r * 3 + 2] * q[6 + k];
-  }
-  return o;
-}
-
-const apply = (m, x, y, z) => [m[0] * x + m[1] * y + m[2] * z, m[3] * x + m[4] * y + m[5] * z, m[6] * x + m[7] * y + m[8] * z];
 
 export class OrbitScene {
   W = 0;
@@ -248,8 +209,8 @@ export class OrbitScene {
 
   render(raster) {
     raster.alpha = 1;
-    this.drawEarth(raster);
-    for (const s of this.sats) this.drawSat(raster, s);
+    drawEarth(raster, this.earth, this.time);
+    for (const s of this.sats) drawBlueBird(raster, s, this.time);
     const st = this.stage;
     if (st && st.nose) {
       const len = st.len;
@@ -265,149 +226,15 @@ export class OrbitScene {
     this.drawBeam(raster);
   }
 
-  drawEarth(raster) {
-    const { R, ecx, ecy, earthTop, time, W, H, cw, ch } = this;
-    const L = [0.78, 0.22, 0.58];
-    const rot = time * 0.012;
-    const cr = Math.cos(rot);
-    const sr = Math.sin(rot);
-    raster.scan(0, earthTop - 2, W, H, (k, px, py) => {
-      const nx = (px - ecx) / R;
-      const ny = (ecy - py) / R;
-      const d2 = nx * nx + ny * ny;
-      if (d2 >= 1) return;
-      const nz = Math.sqrt(1 - d2);
-      const lam = nx * L[0] + ny * L[1] + nz * L[2];
-      const day = clamp(lam * 1.6 + 0.02, 0, 1);
-      if (day < 0.06) return;
-      // Texture from the rotated sphere point itself, so features foreshorten toward the limb.
-      const X = nx * cr + nz * sr;
-      const Z = -nx * sr + nz * cr;
-      const cloud = fbm(X * 5.2 + time * 0.01, Z * 4.4 + ny * 3.1, 9);
-      const land = fbm(X * 2.6 + 40, Z * 2.6 + ny * 1.7, 21);
-      const d = cloud > 0.6 ? 2 : land > 0.56 ? 1 : 0;
-      raster.write(k, -1e5, M.EARTH, day, d);
-    });
-    // The limb: one hairline of glyphs that follows the curve, filled down steep stretches.
-    const rowAt = (x) => {
-      const dx = x - ecx;
-      return Math.abs(dx) >= R ? null : Math.floor((ecy - Math.sqrt(R * R - dx * dx) - ch * 0.35) / ch);
-    };
-    for (let c = 0; c < raster.cols; c++) {
-      const x = (c + 0.5) * cw;
-      const row = rowAt(x);
-      if (row === null) continue;
-      const next = rowAt(x + (x < ecx ? -cw : cw)) ?? row;
-      const dx = x - ecx;
-      const slope = (dx / Math.sqrt(R * R - dx * dx)) * (cw / ch);
-      const chr = slope < -0.35 ? CH("/") : slope > 0.35 ? CH("\\") : CH("_");
-      for (let r = row; r <= Math.max(row, next - 1); r++) raster.cell(c, r, -9e4, M.BGINK, 0.55, chr);
-    }
-  }
-
-  drawSat(raster, s) {
-    const t = this.time;
-    const u = s.unfold;
-    const w = s.size / N;
-    const beta = (1 - ease(u / 0.5)) * BETA_MAX;
-    const alpha = (1 - ease((u - 0.5) / 0.5)) * ALPHA_MAX;
-    const gamma = (alpha / ALPHA_MAX) * (Math.PI / 2);
-    const cu = chain(w, alpha);
-    const cv = chain(w, beta);
-    const settle = u >= 1 ? 0 : Math.sin(u * 40) * 0.04 * u;
-    const tilt = s.tilt + 0.1 * Math.sin(t * 0.21 + s.ph) + settle;
-    const roll = 0.16 * Math.sin(t * 0.15 + s.ph * 1.7);
-    const m = attitude(s.spin, tilt, roll);
-    const cg = Math.cos(gamma);
-    const sg = Math.sin(gamma);
-    const zBase = 1000 * s.depth;
-
-    // A panel point: section (i, j), local (a, b) in 0..1.
-    const point = (i, a, j, b) => {
-      const su = i % 2 ? -1 : 1;
-      const x0 = cu.X[i] + a * w * Math.cos(alpha);
-      const z0 = cu.Z[i] + su * a * w * Math.sin(alpha);
-      const x1 = x0 * cg + z0 * sg;
-      const zz = -x0 * sg + z0 * cg;
-      const bj = (j % 2 ? -1 : 1) * beta;
-      const y = cv.X[j] + b * w * Math.cos(bj) - zz * Math.sin(bj);
-      const z = cv.Z[j] + b * w * Math.sin(bj) + zz * Math.cos(bj);
-      return apply(m, x1, y, z);
-    };
-
-    let minX = Infinity;
-    let maxX = -Infinity;
-    let minY = Infinity;
-    for (let i = 0; i < N; i++) {
-      for (let j = 0; j < N; j++) {
-        const p = point(i, 0, j, 0);
-        const p1 = point(i, 1, j, 0);
-        const p2 = point(i, 0, j, 1);
-        const e1 = [p1[0] - p[0], p1[1] - p[1], p1[2] - p[2]];
-        const e2 = [p2[0] - p[0], p2[1] - p[1], p2[2] - p[2]];
-        const nx = e1[1] * e2[2] - e1[2] * e2[1];
-        const ny = e1[2] * e2[0] - e1[0] * e2[2];
-        const nz = e1[0] * e2[1] - e1[1] * e2[0];
-        const [shade, front] = faceShade(nx, ny, nz);
-        const mat = front ? M.PANEL : M.SOLAR;
-        const ox = s.x + p[0];
-        const oy = s.y - p[1];
-        const L1 = Math.hypot(e1[0], e1[1]);
-        const L2 = Math.hypot(e2[0], e2[1]);
-        for (const q of [[ox, oy], [ox + e1[0], oy - e1[1]], [ox + e2[0], oy - e2[1]], [ox + e1[0] + e2[0], oy - e1[1] - e2[1]]]) {
-          minX = Math.min(minX, q[0]);
-          maxX = Math.max(maxX, q[0]);
-          minY = Math.min(minY, q[1]);
-        }
-        drawQuad(raster, ox, oy, e1[0], -e1[1], e2[0], -e2[1], (k, a, b) => {
-          const z = zBase + p[2] + a * e1[2] + b * e2[2];
-          const ea = Math.min(a, 1 - a) * L1;
-          const eb = Math.min(b, 1 - b) * L2;
-          let d = 0;
-          if (ea < 1.6 || eb < 1.6) d = 1;
-          else {
-            const fa = (a * 3) % 1;
-            const fb = (b * 3) % 1;
-            if (L1 > 45 && L2 > 45 && (Math.min(fa, 1 - fa) * (L1 / 3) < 1.1 || Math.min(fb, 1 - fb) * (L2 / 3) < 1.1)) d = 0.3;
-          }
-          raster.write(k, z, mat, shade, d);
-        });
-      }
-    }
-    s.hullX = [minX, maxX];
-    s.hullY = minY;
-
-    // The bus: a box on the solar side of the array.
-    const bs = s.size * 0.2;
-    const bt = s.size * 0.09;
-    const cz = -bt / 2 - 1;
-    const faces = [
-      [[-bs / 2, -bs / 2, cz + bt / 2], [bs, 0, 0], [0, bs, 0]],
-      [[-bs / 2, -bs / 2, cz - bt / 2], [bs, 0, 0], [0, bs, 0]],
-      [[-bs / 2, -bs / 2, cz - bt / 2], [bs, 0, 0], [0, 0, bt]],
-      [[-bs / 2, bs / 2, cz - bt / 2], [bs, 0, 0], [0, 0, bt]],
-      [[-bs / 2, -bs / 2, cz - bt / 2], [0, bs, 0], [0, 0, bt]],
-      [[bs / 2, -bs / 2, cz - bt / 2], [0, bs, 0], [0, 0, bt]],
-    ];
-    for (const [o, a, b] of faces) {
-      const p = apply(m, ...o);
-      const e1 = apply(m, ...a);
-      const e2 = apply(m, ...b);
-      const nx = e1[1] * e2[2] - e1[2] * e2[1];
-      const ny = e1[2] * e2[0] - e1[0] * e2[2];
-      const nz = e1[0] * e2[1] - e1[1] * e2[0];
-      const [shade] = faceShade(nx, ny, nz);
-      drawQuad(raster, s.x + p[0], s.y - p[1], e1[0], -e1[1], e2[0], -e2[1], (k, a2, b2) => {
-        raster.write(k, zBase + p[2] + a2 * e1[2] + b2 * e2[2], M.BUS, shade * 0.9);
-      });
-    }
+  get earth() {
+    return { R: this.R, cx: this.ecx, cy: this.ecy };
   }
 
   drawStars(raster) {
     const { cw, ch, W, stars, R, ecx, ecy } = this;
     for (const s of stars) {
       const x = (((s.x - this.time * 1.2 * s.par) % W) + W) % W;
-      if (Math.hypot(x - ecx, s.y - ecy) < R + ch) continue;
+      if (behindEarth(this.earth, x, s.y, ch)) continue;
       const tw = 0.7 + 0.3 * Math.sin(s.ph + this.time * s.f);
       const a = (0.16 + 0.6 * s.mag) * tw;
       raster.ink(Math.floor(x / cw), Math.floor(s.y / ch), s.mag > 0.97 ? CH("*") : s.mag > 0.9 ? CH("+") : CH("."), a);

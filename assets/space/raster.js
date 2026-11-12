@@ -52,6 +52,7 @@ const COLON = 58; // :
 const PLUS = 43;
 const EQ = 61;
 const DASH = 45;
+const HASH = 35;
 
 const pick = (ramp, v) => ramp[clamp(Math.floor(v * ramp.length), 0, ramp.length - 1)];
 
@@ -234,13 +235,13 @@ export class Raster {
         style = this.inkStyle(0.12 + v * (edge ? 0.25 : 0.45));
         break;
       case M.PANEL:
-        // d = 1 on the seams between folding sections, 0.3 between antenna tiles.
-        chr = edge ? COLON : d > 0.5 ? DOT : d > 0.1 ? PLUS : pick(R_PANEL, 1 - v);
-        style = this.tone(d > 0.5 ? v * 0.6 + 0.3 : d > 0.1 ? v * 0.85 + 0.08 : v);
+        // d = 1 on the seams between folding sections, 0.7 on the array's rim, 0.3 between tiles.
+        chr = edge ? COLON : d > 0.9 ? DOT : d > 0.5 ? HASH : d > 0.1 ? PLUS : pick(R_PANEL, 1 - v);
+        style = this.tone(d > 0.9 ? v * 0.6 + 0.3 : d > 0.5 ? v * 0.45 : d > 0.1 ? v * 0.85 + 0.08 : v);
         break;
       case M.SOLAR:
-        chr = edge ? COLON : d > 0.5 ? DOT : (i / this.cols) % 2 < 1 ? EQ : DASH;
-        style = this.tone(v);
+        chr = edge ? COLON : d > 0.9 ? DOT : d > 0.5 ? HASH : d > 0.1 ? PLUS : (i / this.cols) % 2 < 1 ? EQ : DASH;
+        style = this.tone(d > 0.5 && d < 0.9 ? v * 0.45 : v);
         break;
       case M.BUS:
         chr = edge ? COLON : d > 0.5 ? DASH : pick(R_BUS, 1 - v);

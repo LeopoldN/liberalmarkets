@@ -61,7 +61,7 @@ function startSpace(tanks, isDark) {
       (tank) =>
         new SpaceEngine(tank.querySelector("canvas"), {
           scene: tank.dataset.scene,
-          cellSize: 6,
+          cellSize: 5,
           theme: paletteFor(isDark()),
         }),
     );
