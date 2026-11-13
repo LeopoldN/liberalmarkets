@@ -3,14 +3,14 @@
   "articles": [
     {
       "id": "asts-update-nov-26",
-      "title": "ASTS Update: lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "dek": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "title": "ASTS Quarterly Update: This Too Shall Pass",
+      "dek": "The market is pricing a delay as if it were a failure. Blacklift, while risky, is the right answer to AST’s biggest constraint: launch capacity.",
       "topic": "Equities",
       "author": "Nicholas Leopold",
-      "dateISO": "2026-11-12",
-      "minutes": 5,
+      "dateISO": "2026-11-13",
+      "minutes": 13,
       "href": "asts-update-nov-26.html",
-      "keywords": "AST SpaceMobile ASTS BlueBird Blacklift satellites launch"
+      "keywords": "AST SpaceMobile ASTS BlueBird Blacklift Firefly satellites launch Q3 2026 earnings J-LEO DPAS valuation"
     },
     {
       "id": "elon-time",

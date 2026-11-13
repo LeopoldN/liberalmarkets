@@ -621,6 +621,59 @@ kbd {
   border-top: 1px solid var(--line-strong);
 }
 
+/* Data tables in an article: hairline rows in the sans, scrolling sideways on a phone. */
+.story__table {
+  margin: 1.8em 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.story__grid {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid var(--line-strong);
+  font: 400 14px/1.4 var(--sans);
+  font-variant-numeric: tabular-nums;
+}
+.story__grid th,
+.story__grid td {
+  padding: 10px 14px 10px 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.story__grid th:last-child,
+.story__grid td:last-child { padding-right: 0; }
+.story__grid thead th {
+  font: 400 11px/1.35 var(--mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  vertical-align: bottom;
+}
+.story__grid tbody th { font-weight: 500; min-width: 9em; }
+.story__grid .num { text-align: right; white-space: nowrap; }
+.story__grid thead .num { white-space: normal; }
+
+.story__facts { padding-left: 0; list-style: none; }
+.story__facts li {
+  margin: 0;
+  padding: 0.6em 0;
+  border-bottom: 1px solid var(--line);
+}
+.story__facts li:first-child { border-top: 1px solid var(--line); }
+.story__facts strong { font-weight: 600; }
+
+.story__said {
+  padding-left: 0;
+  list-style: none;
+  font-style: italic;
+}
+.story__said li {
+  margin-bottom: 0.7em;
+  padding-left: 1em;
+  border-left: 1px solid var(--line-strong);
+}
+
 .story__also {
   max-width: 34em;
   margin: 48px 0 0;
