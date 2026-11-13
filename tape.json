@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T21:43:24Z",
+  "generatedAt": "2026-11-13T02:00:23Z",
   "source": "data/markets",
   "items": [
     {
@@ -46,10 +46,10 @@
       "sym": "usdeur",
       "name": "Euro in dollars",
       "group": null,
-      "date": "2026-11-11",
-      "close": 1.11689,
-      "prevClose": 1.12225,
-      "deltaPct": -0.47761194029850573,
+      "date": "2026-11-12",
+      "close": 1.10952,
+      "prevClose": 1.11689,
+      "deltaPct": -0.6598680263947054,
       "ok": true
     },
     {
@@ -57,9 +57,9 @@
       "name": "Brent crude",
       "group": null,
       "date": "2026-11-11",
-      "close": 92.76,
-      "prevClose": 91.49,
-      "deltaPct": 1.3881298502568695,
+      "close": 92.14,
+      "prevClose": 90.16,
+      "deltaPct": 2.196095829636202,
       "ok": true
     },
     {
@@ -86,10 +86,10 @@
       "sym": "asts.us",
       "name": "AST SpaceMobile",
       "group": null,
-      "date": "2026-11-12",
-      "close": 34.5,
-      "prevClose": 36.62,
-      "deltaPct": -5.789186237028943,
+      "date": "2026-11-11",
+      "close": 36.62,
+      "prevClose": 33.69,
+      "deltaPct": 8.696942712971211,
       "ok": true
     }
   ]
