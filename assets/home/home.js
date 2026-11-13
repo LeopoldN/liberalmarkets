@@ -36,7 +36,9 @@ const fishBtn = document.querySelector("[data-fish-toggle]");
 function syncFish() {
   const on = root.dataset.fish !== "off";
   fishBtn?.setAttribute("aria-pressed", String(on));
-  fishBtn?.setAttribute("aria-label", on ? "Fish on. Hide the aquarium" : "Fish off. Show the aquarium");
+  // Pages with other margins (the space ones) rename the button; the label follows its text.
+  const name = fishBtn?.textContent.trim() || "Fish";
+  fishBtn?.setAttribute("aria-label", on ? `${name} on. Hide the margin animations` : `${name} off. Show the margin animations`);
   tanks?.setEnabled(on);
 }
 
