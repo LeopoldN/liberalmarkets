@@ -31,6 +31,7 @@
   --bar-h: 64px;
   --ticker-h: 38px;
   --tank-w: 0px;
+  --margin-w: 0px;
   color-scheme: light;
 }
 
@@ -78,12 +79,14 @@
   color-scheme: dark;
 }
 
-/* Wide screens open the margins into aquariums. */
+/* Wide screens open the margins into aquariums. The column and the bar keep the same
+   width with the margins on or off, so the toggle doesn't move the nav or the text. */
 @media (min-width: 1180px) {
-  :root:not([data-fish="off"]) {
+  :root {
     --column: clamp(680px, 100vw - 520px, 820px);
-    --tank-w: calc((100vw - var(--column)) / 2 - 24px);
+    --margin-w: calc((100vw - var(--column)) / 2 - 24px);
   }
+  :root:not([data-fish="off"]) { --tank-w: var(--margin-w); }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -196,7 +199,7 @@ kbd {
   align-items: center;
   gap: 32px;
   height: var(--bar-h);
-  width: min(100% - 2 * var(--gutter), var(--column) + 2 * var(--tank-w));
+  width: min(100% - 2 * var(--gutter), var(--column) + 2 * var(--margin-w));
   margin: 0 auto;
 }
 

@@ -3,7 +3,7 @@
 // the stars come out), staging with a booster flip, fairing separation, engine cut-off with
 // the Earth rising into view, then the payload release: a BlueBird drifts clear of the stage
 // and unfolds from its stowed block into the full array while two more open behind it.
-// Then the pad again.
+// Then it stays there: the BlueBirds drift over the Earth until you click to launch again.
 import { clamp } from "../aquarium/math.js";
 import { M } from "./raster.js";
 import { Smoke, drawBody, drawPlume, rand, ease, vnoise } from "./shapes.js";
@@ -19,7 +19,7 @@ const T_SECO = T_FAIRING + 3.2; // second engine cut-off: we're in orbit
 const T_RELEASE = T_SECO + 3.4; // the camera holds still and the payload comes free
 const T_UNFOLD = T_RELEASE + 3.0;
 const UNFOLD_SECONDS = 14;
-const T_DONE = T_UNFOLD + UNFOLD_SECONDS + 8;
+const T_DONE = T_UNFOLD + UNFOLD_SECONDS + 2; // after this a click replays the launch
 
 const CH = (s) => s.charCodeAt(0);
 
@@ -88,7 +88,7 @@ export class LaunchScene {
     this.prevNozzle = this.y;
     this.booster = null;
     this.halves = null;
-    this.endAt = T_DONE;
+    this.endAt = Infinity; // set by a replay click: fade out, then back to the pad
     this.birds = [];
     this.released = 0;
   }
@@ -101,6 +101,7 @@ export class LaunchScene {
 
   click(x, y) {
     if (this.T < T_IGNITE - 0.6) this.T = T_IGNITE - 0.6;
+    else if (this.T > T_DONE && this.endAt === Infinity) this.endAt = this.T;
   }
 
   // View transforms: world (y up, metres-as-px) ↔ screen px.
@@ -231,7 +232,7 @@ export class LaunchScene {
     for (const b of this.birds) {
       const k = ease((T - b.t0) / 3);
       b.x = b.from[0] + (b.to[0] - b.from[0]) * k + Math.sin((T - b.t0) * 0.11 + b.ph) * 4 * k;
-      b.y = b.from[1] + (b.to[1] - b.from[1]) * k;
+      b.y = b.from[1] + (b.to[1] - b.from[1]) * k + Math.sin((T - b.t0) * 0.17 + b.ph * 2) * 3 * k;
       b.unfold = clamp((T - b.unfoldAt) / b.dur, 0, 1);
       // Drift closer while it clears the stage: the block grows from payload width to full scale.
       const grow = ease((T - b.t0) / (b.unfoldAt - b.t0 + 1));
