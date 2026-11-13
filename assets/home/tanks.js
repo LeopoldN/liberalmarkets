@@ -17,6 +17,13 @@ function paletteFor(dark) {
   return paper ? { ...base, bg: paper } : base;
 }
 
+/** Figures sit in the reading column, so on paper their light tones are pulled darker. */
+function figurePalette(dark) {
+  const palette = paletteFor(dark);
+  if (dark) return palette;
+  return { ...palette, hi: palette.hi.map((h, k) => Math.round(palette.lo[k] + (h - palette.lo[k]) * 0.7)) };
+}
+
 export function startTanks({ isDark }) {
   const tanks = [...document.querySelectorAll(".tank")];
   if (!tanks.length || !window.ResizeObserver || !window.IntersectionObserver) return null;
@@ -55,6 +62,7 @@ export function startTanks({ isDark }) {
  */
 function startSpace(tanks, isDark) {
   let engines = [];
+  let figures = [];
   let enabled = true;
   import("../space/engine.js").then(({ SpaceEngine }) => {
     engines = tanks.map(
@@ -66,11 +74,22 @@ function startSpace(tanks, isDark) {
         }),
     );
     if (!enabled) for (const engine of engines) engine.pause();
+    // Figures inside the article (canvas[data-figure-scene]) are content, so the margin
+    // toggle leaves them running.
+    figures = [...document.querySelectorAll("canvas[data-figure-scene]")].map(
+      (canvas) =>
+        new SpaceEngine(canvas, {
+          scene: canvas.dataset.figureScene,
+          cellSize: canvas.clientWidth < 520 ? 4 : 5,
+          theme: figurePalette(isDark()),
+        }),
+    );
   });
   return {
     setTheme() {
       const palette = paletteFor(isDark());
       for (const engine of engines) engine.setTheme(palette);
+      for (const engine of figures) engine.setTheme(figurePalette(isDark()));
     },
     setEnabled(on) {
       enabled = on;

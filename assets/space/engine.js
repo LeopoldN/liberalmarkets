@@ -4,6 +4,7 @@
 import { Raster } from "./raster.js";
 import { LaunchScene } from "./launch.js";
 import { OrbitScene } from "./orbit.js";
+import { ProfileScene } from "./profile.js";
 
 const STEP = 1 / 60;
 const MAX_STEPS = 4;
@@ -25,11 +26,11 @@ export class SpaceEngine {
     if (cellSize) this.raster.cellSize = cellSize;
     this.raster.setTheme(theme);
     this.raster.setFontFamily(getComputedStyle(canvas).fontFamily);
-    this.scene = scene === "orbit" ? new OrbitScene() : new LaunchScene();
+    this.scene = scene === "orbit" ? new OrbitScene() : scene === "profile" ? new ProfileScene() : new LaunchScene();
     if (scene === "orbit") {
       this.onPayload = () => this.scene.payloadArrived();
       bus.addEventListener("payload", this.onPayload);
-    } else {
+    } else if (scene === "launch") {
       this.scene.onPayload = () => bus.dispatchEvent(new Event("payload"));
     }
     this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
