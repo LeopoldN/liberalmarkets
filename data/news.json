@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-11-12T19:48:06.593Z",
+  "generatedAt": "2026-11-13T19:30:59.826Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Lutnick faces questions over Nvidia spy scandal. His sons’ firm has deep ties to the chipmaker",
+      "link": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
+      "pubDate": "Fri, 13 Nov 2026 19:11:13 GMT"
+    },
+    {
+      "title": "Chicago Fed&apos;s Goolsbee says central bank &apos;has definitely got work to do&apos; on inflation",
+      "link": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
+      "pubDate": "Fri, 13 Nov 2026 14:22:07 GMT"
+    },
+    {
+      "title": "How the Jensen Huang affair changes the outlook for U.S.-China relations",
+      "link": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-us-china-relations.html",
+      "pubDate": "Fri, 13 Nov 2026 02:56:35 GMT"
+    },
     {
       "title": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
       "link": "https://www.cnbc.com/2026/11/12/in-policy-switch-fed-says-its-october-2027-meeting-will-not-see-a-vote-on-interest-rates.html",
@@ -11,7 +26,7 @@
     {
       "title": "Oil prices rise after Trump says no Iran deal needed: &apos;We&apos;ve got their Strait&apos;",
       "link": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html",
-      "pubDate": "Thu, 12 Nov 2026 19:04:21 GMT"
+      "pubDate": "Fri, 13 Nov 2026 00:01:19 GMT"
     },
     {
       "title": "China&apos;s Ministry of State Security thrust into the spotlight by Nvidia CEO affair",
@@ -77,21 +92,6 @@
       "title": "The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%",
       "link": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
       "pubDate": "Fri, 06 Nov 2026 17:09:53 GMT"
-    },
-    {
-      "title": "Outside groups urge congressional Dems to target corporate interests over Trump",
-      "link": "https://www.cnbc.com/2026/11/06/democrats-corporate-oversight-trump.html",
-      "pubDate": "Fri, 06 Nov 2026 19:52:46 GMT"
-    },
-    {
-      "title": "Nasdaq drops into correction territory — here’s what typically happens next",
-      "link": "https://www.cnbc.com/2026/11/05/nasdaq-drops-into-correction-territory-heres-what-typically-happens-next.html",
-      "pubDate": "Fri, 06 Nov 2026 20:42:28 GMT"
-    },
-    {
-      "title": "Top Democrats call to rein in AI buildout after midterms sweep: &apos;National data center moratorium now&apos;",
-      "link": "https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html",
-      "pubDate": "Thu, 05 Nov 2026 20:17:16 GMT"
     }
   ]
 }
