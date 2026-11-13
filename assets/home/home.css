@@ -745,12 +745,25 @@ kbd {
   font: 500 12px/1 var(--mono);
   text-align: center;
 }
-.run__v--out { color: var(--claret); }
+.run__bar--est { background: var(--hist); opacity: 0.5; }
+.run__v--est { left: auto; right: 14%; color: var(--ink-2); text-align: right; }
+.story__body .run__key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-2);
+}
+.run__key li { display: flex; align-items: center; gap: 8px; }
+.run__swatch { width: 12px; height: 12px; border-radius: 2px; background: var(--ink); }
+.run__swatch--est { background: var(--hist); opacity: 0.5; }
 .run__launch {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 90%;
   border-left: 1px dashed var(--claret);
 }
 .run__launch span {
@@ -773,6 +786,8 @@ kbd {
 
 /* Blacklift on its side. */
 .fig__stage { position: relative; --spread: 1; }
+.fig__canvas--3d { cursor: grab; touch-action: pan-y; }
+.fig__canvas--3d:active { cursor: grabbing; }
 .fig__marks span {
   position: absolute;
   bottom: 2px;

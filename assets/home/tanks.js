@@ -63,6 +63,7 @@ export function startTanks({ isDark }) {
 function startSpace(tanks, isDark) {
   let engines = [];
   let figures = [];
+  const models = [];
   let enabled = true;
   import("../space/engine.js").then(({ SpaceEngine }) => {
     engines = tanks.map(
@@ -76,20 +77,34 @@ function startSpace(tanks, isDark) {
     if (!enabled) for (const engine of engines) engine.pause();
     // Figures inside the article (canvas[data-figure-scene]) are content, so the margin
     // toggle leaves them running.
-    figures = [...document.querySelectorAll("canvas[data-figure-scene]")].map(
-      (canvas) =>
-        new SpaceEngine(canvas, {
-          scene: canvas.dataset.figureScene,
-          cellSize: canvas.clientWidth < 520 ? 4 : 5,
-          theme: figurePalette(isDark()),
-        }),
-    );
+    const ascii = (canvas) =>
+      new SpaceEngine(canvas, {
+        scene: canvas.dataset.figureScene,
+        cellSize: canvas.clientWidth < 520 ? 4 : 5,
+        theme: figurePalette(isDark()),
+      });
+    for (const canvas of document.querySelectorAll("canvas[data-figure-scene]")) {
+      const stage = canvas.closest("[data-model]");
+      if (!stage) {
+        figures.push(ascii(canvas));
+        continue;
+      }
+      // A 3D model where WebGL works; the ASCII drawing otherwise.
+      import("../space/blacklift3d.js")
+        .then(({ mountBlacklift }) => mountBlacklift(stage, { dark: isDark() }))
+        .catch(() => null)
+        .then((model) => {
+          if (model) models.push(model);
+          else figures.push(ascii(canvas));
+        });
+    }
   });
   return {
     setTheme() {
       const palette = paletteFor(isDark());
       for (const engine of engines) engine.setTheme(palette);
       for (const engine of figures) engine.setTheme(figurePalette(isDark()));
+      for (const model of models) model.setTheme(isDark());
     },
     setEnabled(on) {
       enabled = on;
