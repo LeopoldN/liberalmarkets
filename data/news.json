@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-11-13T19:30:59.826Z",
+  "generatedAt": "2026-11-14T17:54:20.741Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
-      "title": "Lutnick faces questions over Nvidia spy scandal. His sons’ firm has deep ties to the chipmaker",
+      "title": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
+      "link": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
+      "pubDate": "Sat, 14 Nov 2026 15:50:43 GMT"
+    },
+    {
+      "title": "Eric Trump-backed robot soldier startup can&apos;t pay staff after founder borrowed $4.6 million from company to buy home",
+      "link": "https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html",
+      "pubDate": "Sat, 14 Nov 2026 12:00:01 GMT"
+    },
+    {
+      "title": "Lutnick faces questions over Nvidia spy scandal. His sons&apos; firm has deep ties to the chipmaker",
       "link": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
-      "pubDate": "Fri, 13 Nov 2026 19:11:13 GMT"
+      "pubDate": "Fri, 13 Nov 2026 23:42:18 GMT"
     },
     {
       "title": "Chicago Fed&apos;s Goolsbee says central bank &apos;has definitely got work to do&apos; on inflation",
@@ -82,16 +92,6 @@
       "title": "Berkshire Hathaway more than doubles buybacks in third quarter as earnings decline",
       "link": "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html",
       "pubDate": "Sat, 07 Nov 2026 15:23:46 GMT"
-    },
-    {
-      "title": "Americans are on a &apos;treadmill of high inflation&apos; and more rate hikes are likely, Fed&apos;s Daly says",
-      "link": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
-      "pubDate": "Fri, 06 Nov 2026 19:05:00 GMT"
-    },
-    {
-      "title": "The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%",
-      "link": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
-      "pubDate": "Fri, 06 Nov 2026 17:09:53 GMT"
     }
   ]
 }
