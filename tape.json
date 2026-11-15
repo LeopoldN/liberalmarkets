@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T01:31:59Z",
+  "generatedAt": "2026-11-15T01:10:13Z",
   "source": "data/markets",
   "items": [
     {
@@ -56,10 +56,10 @@
       "sym": "cb.f",
       "name": "Brent crude",
       "group": null,
-      "date": "2026-11-12",
-      "close": 95.82,
-      "prevClose": 92.14,
-      "deltaPct": 3.993922292164087,
+      "date": "2026-11-13",
+      "close": 95.84,
+      "prevClose": 95.82,
+      "deltaPct": 0.020872469213117917,
       "ok": true
     },
     {
@@ -76,20 +76,20 @@
       "sym": "xauusd",
       "name": "Gold",
       "group": null,
-      "date": "2026-11-12",
-      "close": 3885.3,
-      "prevClose": 4000.5,
-      "deltaPct": -2.8796400449943693,
+      "date": "2026-11-13",
+      "close": 3886.3,
+      "prevClose": 3885.3,
+      "deltaPct": 0.02573803824672538,
       "ok": true
     },
     {
       "sym": "asts.us",
       "name": "AST SpaceMobile",
       "group": null,
-      "date": "2026-11-12",
-      "close": 34.5,
-      "prevClose": 36.62,
-      "deltaPct": -5.789186237028943,
+      "date": "2026-11-13",
+      "close": 32.6,
+      "prevClose": 34.5,
+      "deltaPct": -5.507246376811592,
       "ok": true
     }
   ]
