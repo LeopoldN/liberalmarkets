@@ -1,45 +1,45 @@
 {
-  "generatedAt": "2026-11-16T01:13:48Z",
+  "generatedAt": "2026-11-16T23:38:57Z",
   "source": "data/markets",
   "items": [
     {
       "sym": "2yusy.b",
       "name": "2-year Treasury yield",
       "group": null,
-      "date": "2026-11-12",
-      "close": 4.86,
-      "prevClose": 4.73,
-      "deltaPct": 2.74841437632134,
+      "date": "2026-11-13",
+      "close": 4.88,
+      "prevClose": 4.86,
+      "deltaPct": 0.411522633744843,
       "ok": true
     },
     {
       "sym": "5yusy.b",
       "name": "5-year Treasury yield",
       "group": null,
-      "date": "2026-11-13",
-      "close": 4.981,
-      "prevClose": 4.95,
-      "deltaPct": 0.6262626262626192,
+      "date": "2026-11-16",
+      "close": 4.935,
+      "prevClose": 4.98,
+      "deltaPct": -0.9036144578313365,
       "ok": true
     },
     {
       "sym": "10yusy.b",
       "name": "10-year Treasury yield",
       "group": null,
-      "date": "2026-11-13",
-      "close": 5.154,
-      "prevClose": 5.1,
-      "deltaPct": 1.0588235294117787,
+      "date": "2026-11-16",
+      "close": 5.121,
+      "prevClose": 5.15,
+      "deltaPct": -0.5631067961165082,
       "ok": true
     },
     {
       "sym": "30yusy.b",
       "name": "30-year Treasury yield",
       "group": null,
-      "date": "2026-11-13",
-      "close": 5.481,
-      "prevClose": 5.43,
-      "deltaPct": 0.939226519337022,
+      "date": "2026-11-16",
+      "close": 5.467,
+      "prevClose": 5.47,
+      "deltaPct": -0.054844606946991004,
       "ok": true
     },
     {
@@ -47,9 +47,9 @@
       "name": "Euro in dollars",
       "group": null,
       "date": "2026-11-13",
-      "close": 1.10502,
-      "prevClose": 1.10952,
-      "deltaPct": -0.40558079169371597,
+      "close": 1.1034,
+      "prevClose": 1.1056,
+      "deltaPct": -0.1989869753979745,
       "ok": true
     },
     {
@@ -66,10 +66,10 @@
       "sym": "^spx",
       "name": "S&P 500",
       "group": null,
-      "date": "2026-11-13",
-      "close": 7561.67,
-      "prevClose": 7592.4,
-      "deltaPct": -0.4047468521152675,
+      "date": "2026-11-16",
+      "close": 7416.59,
+      "prevClose": 7561.67,
+      "deltaPct": -1.91862379606621,
       "ok": true
     },
     {
@@ -86,10 +86,10 @@
       "sym": "asts.us",
       "name": "AST SpaceMobile",
       "group": null,
-      "date": "2026-11-13",
-      "close": 32.6,
-      "prevClose": 34.5,
-      "deltaPct": -5.507246376811592,
+      "date": "2026-11-16",
+      "close": 28.58,
+      "prevClose": 32.6,
+      "deltaPct": -12.331288343558288,
       "ok": true
     }
   ]
