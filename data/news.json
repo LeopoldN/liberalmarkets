@@ -1,22 +1,37 @@
 {
-  "generatedAt": "2026-11-15T18:44:21.354Z",
+  "generatedAt": "2026-11-16T21:54:45.944Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Fed Chairman Kevin Warsh stresses importance of AI to economy, but says it could ‘disappoint’",
+      "link": "https://www.cnbc.com/2026/11/16/fed-ai-task-force-kevin-warsh.html",
+      "pubDate": "Mon, 16 Nov 2026 18:46:07 GMT"
+    },
+    {
+      "title": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
+      "link": "https://www.cnbc.com/2026/11/16/us-crude-oil-declines-to-87-a-barrel-on-recovering-middle-east-exports.html",
+      "pubDate": "Mon, 16 Nov 2026 20:51:28 GMT"
+    },
+    {
+      "title": "China’s slowdown deepens in October as industrial output, retail sales, investment miss estimates",
+      "link": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html",
+      "pubDate": "Mon, 16 Nov 2026 03:53:59 GMT"
+    },
+    {
       "title": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
       "link": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
-      "pubDate": "Sat, 14 Nov 2026 15:50:43 GMT"
+      "pubDate": "Mon, 16 Nov 2026 12:13:23 GMT"
     },
     {
       "title": "Eric Trump-backed robot soldier startup can&apos;t pay staff after founder borrowed $4.6 million from company to buy home",
       "link": "https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html",
-      "pubDate": "Sat, 14 Nov 2026 12:00:01 GMT"
+      "pubDate": "Mon, 16 Nov 2026 17:14:13 GMT"
     },
     {
-      "title": "Lutnick faces questions over Nvidia spy scandal. His sons&apos; firm has deep ties to the chipmaker",
+      "title": "Lutnick faces questions over Nvidia spy scandal. His sons&apos; firm has ties to the chipmaker",
       "link": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
-      "pubDate": "Fri, 13 Nov 2026 23:42:18 GMT"
+      "pubDate": "Mon, 16 Nov 2026 12:14:46 GMT"
     },
     {
       "title": "Chicago Fed&apos;s Goolsbee says central bank &apos;has definitely got work to do&apos; on inflation",
@@ -77,21 +92,6 @@
       "title": "Jensen Huang exit odds are low on prediction markets after Nvidia probe",
       "link": "https://www.cnbc.com/2026/11/09/jensen-huang-nvidia-exit-prediction-markets.html",
       "pubDate": "Mon, 09 Nov 2026 18:46:01 GMT"
-    },
-    {
-      "title": "Goldman CEO Solomon says AI financing remains strong despite market jitters",
-      "link": "https://www.cnbc.com/2026/11/09/goldman-ceo-ai-financing-market.html",
-      "pubDate": "Mon, 09 Nov 2026 18:14:47 GMT"
-    },
-    {
-      "title": "Why the prognosis for healthcare stocks is uncertain ahead of Congress’ new makeup",
-      "link": "https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html",
-      "pubDate": "Sat, 07 Nov 2026 16:02:33 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway more than doubles buybacks in third quarter as earnings decline",
-      "link": "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html",
-      "pubDate": "Sat, 07 Nov 2026 15:23:46 GMT"
     }
   ]
 }
