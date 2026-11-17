@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-11-16T21:54:45.944Z",
+  "generatedAt": "2026-11-17T20:45:31.518Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "U.S. companies from Nvidia to Apple face a growing China dilemma",
+      "link": "https://www.cnbc.com/2026/11/17/us-tech-firms-china-ties-political-pressure.html",
+      "pubDate": "Tue, 17 Nov 2026 08:52:45 GMT"
+    },
+    {
+      "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
+      "link": "https://www.cnbc.com/2026/11/16/berkshire-hathaway-raised-its-stake-in-delta-air-in-the-third-quarter.html",
+      "pubDate": "Mon, 16 Nov 2026 23:01:19 GMT"
+    },
+    {
+      "title": "JPMorgan Chase says temporary software bug is affecting consumer banking",
+      "link": "https://www.cnbc.com/2026/11/16/jpmorgan-chase-technical-issue.html",
+      "pubDate": "Mon, 16 Nov 2026 22:14:47 GMT"
+    },
     {
       "title": "Fed Chairman Kevin Warsh stresses importance of AI to economy, but says it could ‘disappoint’",
       "link": "https://www.cnbc.com/2026/11/16/fed-ai-task-force-kevin-warsh.html",
@@ -11,7 +26,7 @@
     {
       "title": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
       "link": "https://www.cnbc.com/2026/11/16/us-crude-oil-declines-to-87-a-barrel-on-recovering-middle-east-exports.html",
-      "pubDate": "Mon, 16 Nov 2026 20:51:28 GMT"
+      "pubDate": "Mon, 16 Nov 2026 22:19:02 GMT"
     },
     {
       "title": "China’s slowdown deepens in October as industrial output, retail sales, investment miss estimates",
@@ -77,21 +92,6 @@
       "title": "U.S. gas prices fall below $4 for the first time since July",
       "link": "https://www.cnbc.com/2026/11/10/us-gas-prices-below-four-dollars.html",
       "pubDate": "Tue, 10 Nov 2026 16:29:09 GMT"
-    },
-    {
-      "title": "Polymarket says annualized revenue has topped $1.8 billion",
-      "link": "https://www.cnbc.com/2026/11/10/polymarket-annualized-revenue-us-growth.html",
-      "pubDate": "Tue, 10 Nov 2026 13:00:01 GMT"
-    },
-    {
-      "title": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
-      "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
-      "pubDate": "Tue, 10 Nov 2026 17:13:44 GMT"
-    },
-    {
-      "title": "Jensen Huang exit odds are low on prediction markets after Nvidia probe",
-      "link": "https://www.cnbc.com/2026/11/09/jensen-huang-nvidia-exit-prediction-markets.html",
-      "pubDate": "Mon, 09 Nov 2026 18:46:01 GMT"
     }
   ]
 }
