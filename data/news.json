@@ -1,8 +1,43 @@
 {
-  "generatedAt": "2026-11-17T20:45:31.518Z",
+  "generatedAt": "2026-11-18T20:21:36.437Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
+      "link": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
+      "pubDate": "Wed, 18 Nov 2026 19:41:59 GMT"
+    },
+    {
+      "title": "I watched Trump, Xi and Putin gather in China. Here are my top takeaways",
+      "link": "https://www.cnbc.com/2026/11/18/trump-xi-putin-apec-shenzhen-china.html",
+      "pubDate": "Wed, 18 Nov 2026 19:47:05 GMT"
+    },
+    {
+      "title": "Tech outages are causing people to panic-buy. Costco is benefiting, Mizuho says",
+      "link": "https://www.cnbc.com/2026/11/18/tech-outage-costco-panic-buying.html",
+      "pubDate": "Wed, 18 Nov 2026 16:33:14 GMT"
+    },
+    {
+      "title": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
+      "link": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html",
+      "pubDate": "Wed, 18 Nov 2026 15:13:39 GMT"
+    },
+    {
+      "title": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi",
+      "link": "https://www.cnbc.com/2026/11/18/putin-apec-eu-trump-xi-meeting.html",
+      "pubDate": "Wed, 18 Nov 2026 08:29:35 GMT"
+    },
+    {
+      "title": "Three things to watch as Trump, Xi and Putin meet in China",
+      "link": "https://www.cnbc.com/2026/11/18/apec-trump-xi-putin-shenzhen.html",
+      "pubDate": "Wed, 18 Nov 2026 06:04:39 GMT"
+    },
+    {
+      "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
+      "link": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
+      "pubDate": "Wed, 18 Nov 2026 06:18:11 GMT"
+    },
     {
       "title": "U.S. companies from Nvidia to Apple face a growing China dilemma",
       "link": "https://www.cnbc.com/2026/11/17/us-tech-firms-china-ties-political-pressure.html",
@@ -57,41 +92,6 @@
       "title": "How the Jensen Huang affair changes the outlook for U.S.-China relations",
       "link": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-us-china-relations.html",
       "pubDate": "Fri, 13 Nov 2026 02:56:35 GMT"
-    },
-    {
-      "title": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
-      "link": "https://www.cnbc.com/2026/11/12/in-policy-switch-fed-says-its-october-2027-meeting-will-not-see-a-vote-on-interest-rates.html",
-      "pubDate": "Thu, 12 Nov 2026 19:05:25 GMT"
-    },
-    {
-      "title": "Oil prices rise after Trump says no Iran deal needed: &apos;We&apos;ve got their Strait&apos;",
-      "link": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html",
-      "pubDate": "Fri, 13 Nov 2026 00:01:19 GMT"
-    },
-    {
-      "title": "China&apos;s Ministry of State Security thrust into the spotlight by Nvidia CEO affair",
-      "link": "https://www.cnbc.com/2026/11/12/china-ministry-state-security-nvidia-ceo.html",
-      "pubDate": "Thu, 12 Nov 2026 07:28:48 GMT"
-    },
-    {
-      "title": "Prediction markets tied to clinical trials and drug approvals draw lawmakers&apos; ire",
-      "link": "https://www.cnbc.com/2026/11/11/kalsi-polymarket-prediction-market-senators-hhs-drug-approval.html",
-      "pubDate": "Wed, 11 Nov 2026 19:16:23 GMT"
-    },
-    {
-      "title": "Fed&apos;s Goolsbee calls inflation report &apos;borderline disturbing&apos; as central bank weighs more hikes",
-      "link": "https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html",
-      "pubDate": "Wed, 11 Nov 2026 16:49:02 GMT"
-    },
-    {
-      "title": "Alibaba announces plans to list T-Head, its Nvidia chip rival",
-      "link": "https://www.cnbc.com/2026/11/11/alibaba-pr.html",
-      "pubDate": "Wed, 11 Nov 2026 07:47:54 GMT"
-    },
-    {
-      "title": "U.S. gas prices fall below $4 for the first time since July",
-      "link": "https://www.cnbc.com/2026/11/10/us-gas-prices-below-four-dollars.html",
-      "pubDate": "Tue, 10 Nov 2026 16:29:09 GMT"
     }
   ]
 }
