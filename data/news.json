@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-11-18T20:21:36.437Z",
+  "generatedAt": "2026-11-19T20:25:44.035Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Trump praises ‘great relationship’ with Putin after meeting, as Ukraine war takes center stage",
+      "link": "https://www.cnbc.com/2026/11/19/trump-xi-putin-china-apec-.html",
+      "pubDate": "Thu, 19 Nov 2026 09:02:00 GMT"
+    },
     {
       "title": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
       "link": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
@@ -87,11 +92,6 @@
       "title": "Chicago Fed&apos;s Goolsbee says central bank &apos;has definitely got work to do&apos; on inflation",
       "link": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
       "pubDate": "Fri, 13 Nov 2026 14:22:07 GMT"
-    },
-    {
-      "title": "How the Jensen Huang affair changes the outlook for U.S.-China relations",
-      "link": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-us-china-relations.html",
-      "pubDate": "Fri, 13 Nov 2026 02:56:35 GMT"
     }
   ]
 }
