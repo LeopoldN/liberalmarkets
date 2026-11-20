@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-11-19T20:25:44.035Z",
+  "generatedAt": "2026-11-20T19:56:58.978Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Prediction markets outlook for stocks in 2026 dims amid AI sell-off",
+      "link": "https://www.cnbc.com/2026/11/20/sp-500-8000-kalshi-odds-ai-selloff.html",
+      "pubDate": "Fri, 20 Nov 2026 19:32:32 GMT"
+    },
+    {
+      "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
+      "link": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
+      "pubDate": "Fri, 20 Nov 2026 15:20:54 GMT"
+    },
+    {
+      "title": "The bull market has a new problem. The &apos;smart money&apos; is selling",
+      "link": "https://www.cnbc.com/2026/11/20/equity-issuance-bull-market-problem.html",
+      "pubDate": "Fri, 20 Nov 2026 14:15:29 GMT"
+    },
+    {
+      "title": "U.S.-China trade, Taiwan and tech tensions remain unresolved as Trump returns from Asia",
+      "link": "https://www.cnbc.com/2026/11/20/apec-summit-trump-xi-china-trade-taiwan.html",
+      "pubDate": "Fri, 20 Nov 2026 13:29:50 GMT"
+    },
     {
       "title": "Trump praises ‘great relationship’ with Putin after meeting, as Ukraine war takes center stage",
       "link": "https://www.cnbc.com/2026/11/19/trump-xi-putin-china-apec-.html",
@@ -72,26 +92,6 @@
       "title": "China’s slowdown deepens in October as industrial output, retail sales, investment miss estimates",
       "link": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html",
       "pubDate": "Mon, 16 Nov 2026 03:53:59 GMT"
-    },
-    {
-      "title": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
-      "link": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
-      "pubDate": "Mon, 16 Nov 2026 12:13:23 GMT"
-    },
-    {
-      "title": "Eric Trump-backed robot soldier startup can&apos;t pay staff after founder borrowed $4.6 million from company to buy home",
-      "link": "https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html",
-      "pubDate": "Mon, 16 Nov 2026 17:14:13 GMT"
-    },
-    {
-      "title": "Lutnick faces questions over Nvidia spy scandal. His sons&apos; firm has ties to the chipmaker",
-      "link": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
-      "pubDate": "Mon, 16 Nov 2026 12:14:46 GMT"
-    },
-    {
-      "title": "Chicago Fed&apos;s Goolsbee says central bank &apos;has definitely got work to do&apos; on inflation",
-      "link": "https://www.cnbc.com/2026/11/13/chicago-feds-goolsbee-says-central-bank-has-definitely-got-work-to-do-on-inflation.html",
-      "pubDate": "Fri, 13 Nov 2026 14:22:07 GMT"
     }
   ]
 }
