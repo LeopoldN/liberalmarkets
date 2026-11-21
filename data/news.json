@@ -1,17 +1,22 @@
 {
-  "generatedAt": "2026-11-20T19:56:58.978Z",
+  "generatedAt": "2026-11-21T19:02:31.791Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "How China is using summits to expand its global influence",
+      "link": "https://www.cnbc.com/2026/11/21/china-xi-trump-putin-global-diplomacy-shenzhen.html",
+      "pubDate": "Sat, 21 Nov 2026 06:00:02 GMT"
+    },
+    {
       "title": "Prediction markets outlook for stocks in 2026 dims amid AI sell-off",
       "link": "https://www.cnbc.com/2026/11/20/sp-500-8000-kalshi-odds-ai-selloff.html",
-      "pubDate": "Fri, 20 Nov 2026 19:32:32 GMT"
+      "pubDate": "Fri, 20 Nov 2026 19:59:03 GMT"
     },
     {
       "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
       "link": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
-      "pubDate": "Fri, 20 Nov 2026 15:20:54 GMT"
+      "pubDate": "Fri, 20 Nov 2026 21:10:48 GMT"
     },
     {
       "title": "The bull market has a new problem. The &apos;smart money&apos; is selling",
@@ -87,11 +92,6 @@
       "title": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports",
       "link": "https://www.cnbc.com/2026/11/16/us-crude-oil-declines-to-87-a-barrel-on-recovering-middle-east-exports.html",
       "pubDate": "Mon, 16 Nov 2026 22:19:02 GMT"
-    },
-    {
-      "title": "China’s slowdown deepens in October as industrial output, retail sales, investment miss estimates",
-      "link": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html",
-      "pubDate": "Mon, 16 Nov 2026 03:53:59 GMT"
     }
   ]
 }
