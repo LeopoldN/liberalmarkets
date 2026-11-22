@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T02:38:13Z",
+  "generatedAt": "2026-11-22T01:28:10Z",
   "source": "data/markets",
   "items": [
     {
@@ -56,10 +56,10 @@
       "sym": "cb.f",
       "name": "Brent crude",
       "group": null,
-      "date": "2026-11-19",
-      "close": 91.98,
-      "prevClose": 91.95,
-      "deltaPct": 0.032626427406201586,
+      "date": "2026-11-20",
+      "close": 92.57,
+      "prevClose": 91.98,
+      "deltaPct": 0.6414437921287153,
       "ok": true
     },
     {
@@ -76,10 +76,10 @@
       "sym": "xauusd",
       "name": "Gold",
       "group": null,
-      "date": "2026-11-19",
-      "close": 3685.5,
-      "prevClose": 3741.9,
-      "deltaPct": -1.5072556722520614,
+      "date": "2026-11-20",
+      "close": 3515.4,
+      "prevClose": 3685.5,
+      "deltaPct": -4.61538461538461,
       "ok": true
     },
     {
