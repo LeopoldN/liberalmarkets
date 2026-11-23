@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-11-22T19:26:14.831Z",
+  "generatedAt": "2026-11-23T23:45:16.641Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Fed&apos;s John Williams indicates higher interest rates likely &apos;over time&apos; to address inflation",
+      "link": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html",
+      "pubDate": "Mon, 23 Nov 2026 21:02:17 GMT"
+    },
+    {
+      "title": "‘This establishes a bottom’: Jensen Huang’s return seen as likely to stop market sell-off, for now",
+      "link": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo-market-rally.html",
+      "pubDate": "Mon, 23 Nov 2026 18:00:47 GMT"
+    },
+    {
       "title": "Employees at Eric Trump-backed robot startup lose health benefits as company&apos;s cash crunch deepens",
       "link": "https://www.cnbc.com/2026/11/22/foundation-future-industries-health-benefits-payroll-base-group.html",
-      "pubDate": "Sun, 22 Nov 2026 18:55:05 GMT"
+      "pubDate": "Mon, 23 Nov 2026 23:28:19 GMT"
     },
     {
       "title": "How China is using summits to expand its global influence",
@@ -71,7 +81,7 @@
     {
       "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
       "link": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
-      "pubDate": "Wed, 18 Nov 2026 06:18:11 GMT"
+      "pubDate": "Mon, 23 Nov 2026 06:06:55 GMT"
     },
     {
       "title": "U.S. companies from Nvidia to Apple face a growing China dilemma",
@@ -82,16 +92,6 @@
       "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
       "link": "https://www.cnbc.com/2026/11/16/berkshire-hathaway-raised-its-stake-in-delta-air-in-the-third-quarter.html",
       "pubDate": "Mon, 16 Nov 2026 23:01:19 GMT"
-    },
-    {
-      "title": "JPMorgan Chase says temporary software bug is affecting consumer banking",
-      "link": "https://www.cnbc.com/2026/11/16/jpmorgan-chase-technical-issue.html",
-      "pubDate": "Mon, 16 Nov 2026 22:14:47 GMT"
-    },
-    {
-      "title": "Fed Chairman Kevin Warsh stresses importance of AI to economy, but says it could ‘disappoint’",
-      "link": "https://www.cnbc.com/2026/11/16/fed-ai-task-force-kevin-warsh.html",
-      "pubDate": "Mon, 16 Nov 2026 18:46:07 GMT"
     }
   ]
 }
