@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-11-23T23:45:16.641Z",
+  "generatedAt": "2026-11-24T22:17:01.203Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Kalshi daily volume of ‘perps’ trading begins to top its prediction markets",
+      "link": "https://www.cnbc.com/2026/11/24/kalshi-perps-volume-prediction-markets.html",
+      "pubDate": "Tue, 24 Nov 2026 18:34:55 GMT"
+    },
+    {
+      "title": "Utah drops criminal charges against Kalshi founders after company suspended operations in state",
+      "link": "https://www.cnbc.com/2026/11/24/utah-drops-charges-against-kalshi-after-it-halted-operations-in-state.html",
+      "pubDate": "Tue, 24 Nov 2026 20:45:57 GMT"
+    },
+    {
       "title": "Fed&apos;s John Williams indicates higher interest rates likely &apos;over time&apos; to address inflation",
       "link": "https://www.cnbc.com/2026/11/23/john-williams-fed-inflation-rate-hikes.html",
-      "pubDate": "Mon, 23 Nov 2026 21:02:17 GMT"
+      "pubDate": "Tue, 24 Nov 2026 13:33:26 GMT"
     },
     {
       "title": "‘This establishes a bottom’: Jensen Huang’s return seen as likely to stop market sell-off, for now",
@@ -82,16 +92,6 @@
       "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
       "link": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
       "pubDate": "Mon, 23 Nov 2026 06:06:55 GMT"
-    },
-    {
-      "title": "U.S. companies from Nvidia to Apple face a growing China dilemma",
-      "link": "https://www.cnbc.com/2026/11/17/us-tech-firms-china-ties-political-pressure.html",
-      "pubDate": "Tue, 17 Nov 2026 08:52:45 GMT"
-    },
-    {
-      "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
-      "link": "https://www.cnbc.com/2026/11/16/berkshire-hathaway-raised-its-stake-in-delta-air-in-the-third-quarter.html",
-      "pubDate": "Mon, 16 Nov 2026 23:01:19 GMT"
     }
   ]
 }
