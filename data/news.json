@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-11-24T22:17:01.203Z",
+  "generatedAt": "2026-11-25T21:33:19.668Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
     {
+      "title": "Prediction markets push OpenAI IPO expectations later into 2027",
+      "link": "https://www.cnbc.com/2026/11/25/openai-ipo-odds-2027-prediction-markets.html",
+      "pubDate": "Wed, 25 Nov 2026 17:08:03 GMT"
+    },
+    {
+      "title": "Liesman: Nvidia whiplash tests Kevin Warsh’s push to read market signals",
+      "link": "https://www.cnbc.com/2026/11/25/nvidia-kevin-warsh-fed-market-signals.html",
+      "pubDate": "Wed, 25 Nov 2026 12:26:41 GMT"
+    },
+    {
+      "title": "Jensen Huang&apos;s Nvidia return shows the U.S.-China AI race is about more than chips",
+      "link": "https://www.cnbc.com/2026/11/25/jensen-huang-nvidia-ai-talent-race.html",
+      "pubDate": "Wed, 25 Nov 2026 14:29:00 GMT"
+    },
+    {
       "title": "Kalshi daily volume of ‘perps’ trading begins to top its prediction markets",
       "link": "https://www.cnbc.com/2026/11/24/kalshi-perps-volume-prediction-markets.html",
-      "pubDate": "Tue, 24 Nov 2026 18:34:55 GMT"
+      "pubDate": "Tue, 24 Nov 2026 23:03:24 GMT"
     },
     {
       "title": "Utah drops criminal charges against Kalshi founders after company suspended operations in state",
@@ -77,21 +92,6 @@
       "title": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
       "link": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html",
       "pubDate": "Wed, 18 Nov 2026 15:13:39 GMT"
-    },
-    {
-      "title": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi",
-      "link": "https://www.cnbc.com/2026/11/18/putin-apec-eu-trump-xi-meeting.html",
-      "pubDate": "Wed, 18 Nov 2026 08:29:35 GMT"
-    },
-    {
-      "title": "Three things to watch as Trump, Xi and Putin meet in China",
-      "link": "https://www.cnbc.com/2026/11/18/apec-trump-xi-putin-shenzhen.html",
-      "pubDate": "Wed, 18 Nov 2026 06:04:39 GMT"
-    },
-    {
-      "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
-      "link": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
-      "pubDate": "Mon, 23 Nov 2026 06:06:55 GMT"
     }
   ]
 }
