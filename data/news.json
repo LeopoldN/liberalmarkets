@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-11-25T21:33:19.668Z",
+  "generatedAt": "2026-11-26T21:21:01.826Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "Buyer beware? Nvidia&apos;s volatile swings expose risks of single-stock ETFs",
+      "link": "https://www.cnbc.com/2026/11/26/nvidias-volatile-swings-expose-risks-of-single-stock-etfs.html",
+      "pubDate": "Thu, 26 Nov 2026 16:00:01 GMT"
+    },
+    {
+      "title": "Semiconductor chips are the new oil. Here&apos;s why",
+      "link": "https://www.cnbc.com/2026/11/26/semiconductor-chips-are-the-new-oil-heres-why.html",
+      "pubDate": "Thu, 26 Nov 2026 17:52:15 GMT"
+    },
+    {
+      "title": "Robots could be doing household chores in just 1-2 years, Chinese EV firm says",
+      "link": "https://www.cnbc.com/2026/11/26/china-ev-xpeng-humanoid-robots-household-chores.html",
+      "pubDate": "Thu, 26 Nov 2026 07:30:11 GMT"
+    },
+    {
+      "title": "Beware higher correlation but nab high U.S. credit yields, fund managers say",
+      "link": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html",
+      "pubDate": "Thu, 26 Nov 2026 05:36:01 GMT"
+    },
     {
       "title": "Prediction markets push OpenAI IPO expectations later into 2027",
       "link": "https://www.cnbc.com/2026/11/25/openai-ipo-odds-2027-prediction-markets.html",
@@ -72,26 +92,6 @@
       "title": "Trump praises ‘great relationship’ with Putin after meeting, as Ukraine war takes center stage",
       "link": "https://www.cnbc.com/2026/11/19/trump-xi-putin-china-apec-.html",
       "pubDate": "Thu, 19 Nov 2026 09:02:00 GMT"
-    },
-    {
-      "title": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",
-      "link": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
-      "pubDate": "Wed, 18 Nov 2026 19:41:59 GMT"
-    },
-    {
-      "title": "I watched Trump, Xi and Putin gather in China. Here are my top takeaways",
-      "link": "https://www.cnbc.com/2026/11/18/trump-xi-putin-apec-shenzhen-china.html",
-      "pubDate": "Wed, 18 Nov 2026 19:47:05 GMT"
-    },
-    {
-      "title": "Tech outages are causing people to panic-buy. Costco is benefiting, Mizuho says",
-      "link": "https://www.cnbc.com/2026/11/18/tech-outage-costco-panic-buying.html",
-      "pubDate": "Wed, 18 Nov 2026 16:33:14 GMT"
-    },
-    {
-      "title": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike",
-      "link": "https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html",
-      "pubDate": "Wed, 18 Nov 2026 15:13:39 GMT"
     }
   ]
 }
