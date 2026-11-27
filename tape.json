@@ -1,45 +1,45 @@
 {
-  "generatedAt": "2026-11-27T03:42:17Z",
+  "generatedAt": "2026-11-27T23:13:12Z",
   "source": "data/markets",
   "items": [
     {
       "sym": "2yusy.b",
       "name": "2-year Treasury yield",
       "group": null,
-      "date": "2026-11-24",
-      "close": 4.63,
+      "date": "2026-11-25",
+      "close": 4.61,
       "prevClose": 4.63,
-      "deltaPct": 0.0,
+      "deltaPct": -0.4319654427645703,
       "ok": true
     },
     {
       "sym": "5yusy.b",
       "name": "5-year Treasury yield",
       "group": null,
-      "date": "2026-11-25",
-      "close": 4.66,
-      "prevClose": 4.69,
-      "deltaPct": -0.6396588486140775,
+      "date": "2026-11-27",
+      "close": 4.746,
+      "prevClose": 4.65,
+      "deltaPct": 2.0645161290322678,
       "ok": true
     },
     {
       "sym": "10yusy.b",
       "name": "10-year Treasury yield",
       "group": null,
-      "date": "2026-11-25",
-      "close": 4.848,
-      "prevClose": 4.91,
-      "deltaPct": -1.2627291242362615,
+      "date": "2026-11-27",
+      "close": 4.936,
+      "prevClose": 4.85,
+      "deltaPct": 1.773195876288658,
       "ok": true
     },
     {
       "sym": "30yusy.b",
       "name": "30-year Treasury yield",
       "group": null,
-      "date": "2026-11-25",
-      "close": 5.235,
-      "prevClose": 5.3,
-      "deltaPct": -1.2264150943396168,
+      "date": "2026-11-27",
+      "close": 5.325,
+      "prevClose": 5.24,
+      "deltaPct": 1.6221374045801484,
       "ok": true
     },
     {
@@ -66,10 +66,10 @@
       "sym": "^spx",
       "name": "S&P 500",
       "group": null,
-      "date": "2026-11-25",
-      "close": 7182.78,
-      "prevClose": 7201.09,
-      "deltaPct": -0.25426706234751295,
+      "date": "2026-11-27",
+      "close": 7297.49,
+      "prevClose": 7182.78,
+      "deltaPct": 1.5970139695215435,
       "ok": true
     },
     {
@@ -86,10 +86,10 @@
       "sym": "asts.us",
       "name": "AST SpaceMobile",
       "group": null,
-      "date": "2026-11-25",
-      "close": 26.02,
-      "prevClose": 23.6,
-      "deltaPct": 10.254237288135592,
+      "date": "2026-11-27",
+      "close": 26.85,
+      "prevClose": 26.02,
+      "deltaPct": 3.1898539584934715,
       "ok": true
     }
   ]
