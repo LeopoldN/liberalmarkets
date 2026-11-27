@@ -1,8 +1,13 @@
 {
-  "generatedAt": "2026-11-26T21:21:01.826Z",
+  "generatedAt": "2026-11-27T21:01:19.315Z",
   "source": "CNBC Finance RSS",
   "feed": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
   "items": [
+    {
+      "title": "The S&P 500 is in a correction. Bear markets and recessions don&apos;t always follow",
+      "link": "https://www.cnbc.com/2026/11/27/the-sp-500-is-in-a-correction-bear-markets-and-recessions-dont-always-follow.html",
+      "pubDate": "Fri, 27 Nov 2026 13:21:56 GMT"
+    },
     {
       "title": "Buyer beware? Nvidia&apos;s volatile swings expose risks of single-stock ETFs",
       "link": "https://www.cnbc.com/2026/11/26/nvidias-volatile-swings-expose-risks-of-single-stock-etfs.html",
@@ -31,7 +36,7 @@
     {
       "title": "Liesman: Nvidia whiplash tests Kevin Warsh’s push to read market signals",
       "link": "https://www.cnbc.com/2026/11/25/nvidia-kevin-warsh-fed-market-signals.html",
-      "pubDate": "Wed, 25 Nov 2026 12:26:41 GMT"
+      "pubDate": "Fri, 27 Nov 2026 13:29:43 GMT"
     },
     {
       "title": "Jensen Huang&apos;s Nvidia return shows the U.S.-China AI race is about more than chips",
@@ -87,11 +92,6 @@
       "title": "U.S.-China trade, Taiwan and tech tensions remain unresolved as Trump returns from Asia",
       "link": "https://www.cnbc.com/2026/11/20/apec-summit-trump-xi-china-trade-taiwan.html",
       "pubDate": "Fri, 20 Nov 2026 13:29:50 GMT"
-    },
-    {
-      "title": "Trump praises ‘great relationship’ with Putin after meeting, as Ukraine war takes center stage",
-      "link": "https://www.cnbc.com/2026/11/19/trump-xi-putin-china-apec-.html",
-      "pubDate": "Thu, 19 Nov 2026 09:02:00 GMT"
     }
   ]
 }
