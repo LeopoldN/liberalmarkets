@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T23:13:12Z",
+  "generatedAt": "2026-11-28T03:24:23Z",
   "source": "data/markets",
   "items": [
     {
@@ -46,20 +46,20 @@
       "sym": "usdeur",
       "name": "Euro in dollars",
       "group": null,
-      "date": "2026-11-26",
-      "close": 1.09701,
-      "prevClose": 1.09623,
-      "deltaPct": 0.07115295147916978,
+      "date": "2026-11-27",
+      "close": 1.09721,
+      "prevClose": 1.09701,
+      "deltaPct": 0.018231374372157383,
       "ok": true
     },
     {
       "sym": "cb.f",
       "name": "Brent crude",
       "group": null,
-      "date": "2026-11-25",
-      "close": 94.61,
-      "prevClose": 91.8,
-      "deltaPct": 3.0610021786492414,
+      "date": "2026-11-27",
+      "close": 90.84,
+      "prevClose": 94.61,
+      "deltaPct": -3.984779621604473,
       "ok": true
     },
     {
@@ -76,10 +76,10 @@
       "sym": "xauusd",
       "name": "Gold",
       "group": null,
-      "date": "2026-11-25",
-      "close": 3535.8,
-      "prevClose": 3561.9,
-      "deltaPct": -0.732754990314155,
+      "date": "2026-11-27",
+      "close": 3668.5,
+      "prevClose": 3535.8,
+      "deltaPct": 3.753040330335411,
       "ok": true
     },
     {
